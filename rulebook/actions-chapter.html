@@ -1,0 +1,339 @@
+        <div class="section" id="action-types">
+        	<h4>Action Types</h4>
+        	<div class="section sub-section" id="standard-action">
+            	<h4>Standard Action</h4>
+            	<p>Most basic non-combat actions are standard actions. A standard action may require a basic check, a resisted check, or an extended check.</p>
+			</div>
+			
+			<div class="section sub-section" id="combat-action">
+	            <h4>Combat Action</h4>
+    	        <p>Most basic actions during a fight are combat actions. You can do a single combat action each time it is your turn, but you can take multiple combat actions during a single round if you have enough speed for each action.</p>
+        	    <p>Combat actions have an associated speed cost, when you attempt a combat action deduct the speed cost from your current speed. In one round you can do any number of combat actions with total speed cost that is less than your current speed value. Each combat action takes an entire turn in the round.</p>
+            	<p>If a combat action does not result in movement you can move 1 space on normal terrain either just before or just after you do a combat action, doing so does not increase the speed cost of the action.</p>
+	            <p>If it is your first turn in a round and you do not have enough speed to execute a specific combat action you can convert it into a full action with a speed cost of your current speed total.</p>
+			</div>
+			
+			<div class="section sub-section" id="move-action">
+	            <h4>Move Action</h4>
+    	        <p>Move actions typically move your character around in combat. They have an associated speed cost per space moved. Multiple move actions can be done in any combination and in any order on your turn, for example you could start running, jump over something, and then continue running in one turn.</p>
+			</div>
+
+			<div class="section sub-section" id="defensive-action">
+            	<h4>Defensive Action</h4>
+	            <p>Defensive actions do not happen on your turn. Instead, you can declare a defensive action anytime you are attacked. The speed cost of the defensive action is deducted when you roll the action. The only limit on the number of defensive actions you can take in a round is your speed. On any defensive action that does not result in movement you can move 1 space on normal terrain either just before or just after a defensive action happens, doing so does not increase the speed cost of the action.</p>
+	            <p>Unlike combat actions that can be converted to full actions if you do not have enough speed, you can only do a defensive action if you have enough speed.</p>
+			</div>
+			
+			<div class="section sub-section" id="full-action">
+	            <h4>Full Action</h4>
+    	        <p>Full actions are treated just like combat actions that take longer. You can only do full actions on your first turn in a round and this action prevents you from doing other actions in the round.</p>
+        	    <p>On any full action that does not cause you to move, you can move 1 space on normal terrain either just before or just after a full action happens, doing so does not increase the speed cost of the action.</p>
+			</div>
+			
+			<div class="section sub-section" id="extended-action">
+            	<h4>Extended Action</h4>
+	            <p>Extended actions are used when you wish to spend extra time and effort on an action that would be too difficult to do in a single turn or round. Any action can be converted to an extended action to represent extra time and effort. </p>
+    	        <p>When doing an extended action the GM will set a target number of successes and an interval time. The interval time is determined by how long the action takes to do, a turn or a round for actions in combat, a minute for things that take little time, an hour for actions that take a long time, or even a day or week for long term projects. You roll once every interval, adding all the successes from all previous intervals to the current roll. You can stop at any time and the total number of successes rolled in every interval indicates how well the action was performed. If an extended action is stopped and then resumed later, the GM will decide if the previous successes rolled can continue to apply or if you must start over from scratch (for example, trying to <em>do</em> something usually requires starting over while trying to <em>make</em> something will allow you to pick up where you left off).</p>
+        	    <p>When using extended actions in combat deduct the speed cost of the action every interval, or reduce your speed to 0 if the speed cost is above your current speed. Each interval you can move 1 space as a part of the extended action, however, some tasks might require you to stay stationary in order to complete them.</p>
+			</div>
+
+			<div class="section sub-section" id="free-action">
+            	<h4>Free Action</h4>
+            	<p>A free action is anything you can do in a split second. Free actions have no speed cost and multiple free actions can be done in a round. You can do a free action at any time, even if it is not your turn.</p>
+            </div>
+		</div> <!-- #action-types -->
+
+        <div class="section" id="basic-combat-actions">
+        	<h4>Basic Combat Actions</h4>
+        	<div class="section sub-section" id="basic-attack">
+				<h4>Basic Attack<br>
+				<small>Combat Action - Variable Speed Cost</small></h4>
+				<p>This action has three parts, the attack roll to determine if it hits, the location roll to see where it hits, and a damage roll to see how hard it hits.</p>
+				<p>The attack roll for melee attacks is <strong>Finesse + Melee</strong> or <strong>Strength + Unarmed</strong>. The attack roll for ranged attacks is <strong>Perception +</strong> either <strong>Firearms</strong> or <strong>Ballistics</strong>. This roll is resisted by the target's passive defense rating or the result of the target's dodge roll if they use a dodge action. You only need to tie your target's passive defense to hit, but if the target makes a dodge roll you need to beat this roll by at least 1 success to hit. If you miss the action ends now with no effect other than deducting its normal speed cost.</p>
+				<p>For the location roll roll a single d6. Numbers 1-5 indicate the bodily location hit and rolling a 6 indicates a critical hit. On a critical hit reroll the die to determine where the critical hit lands, if you roll a 6 again keep rerolling until you roll a location between 1 and 5. Each time you rolled a 6 on the location roll increases the critical hit level by 1.</p>
+				<p>Each extra success you get on the attack roll above the number you needed to hit grants you an adjustment to the location roll. Each adjustment lets you move the location hit to an adjacent location, and each remaining adjustment after moving to the desired location increases the critical level by 1.</p>
+				<p>The damage roll of a melee attack is <strong>Strength + the weapon's damage stat</strong>. The damage roll for a ranged weapon is determined entirely by the weapon's damage stat. The total amount of damage done is equal to the number of successes rolled in the damage roll plus the critical level.</p>
+				<p>The speed cost of an attack is determined by weapon used. Unarmed attacks cost 2 speed while heavier more powerful weapons require more. See chapter 7 for weapon statistics.</p>
+				<p>Ranged weapons also have a range. The range for a thrown weapon is equal to your strength. The attack roll on any attack within this range is treated normally and the attack roll for anything outside of that range is rolled with all automatic successes replaced with dice.</p>
+				<p>Any attack made using your off hand (this might happen if your main hand is disabled or if you are dual wielding) is rolled with all automatic successes replaced with dice. If you are attacking a target outside of your weapon's range with your off hand replace all automatic successes with dice and don't add the dice from your attributes to the attack roll.</p>
+			</div>
+			
+			<div class="section sub-section" id="dodge">
+	            <h4>Dodge<br>
+				<small>Defensive Action - Speed Cost: 3</small></h4>
+				<p>Any time you are the target of an attack you can choose if you want to attempt to dodge the attack or not. A dodge attempt increases your chances of avoiding the attack but has a speed cost. Unlike combat actions which must be done on your turn in the initiative order, dodging is a defensive action that can be done anytime you are the target of an attack.</p>
+				<p>Normally when you are the target of an attack the attacker must only tie your passive defense to hit you. When you dodge you roll your dodge attempt and the attacker must beat the number of successes rolled by at least 1.</p>
+				<p>The dodge roll for melee attacks is <strong>Agility + Defense</strong>. The dodge roll for ranged attacks is <strong>Wits + Defense</strong>.</p>
+			</div>
+			
+			<div class="section sub-section" id="draw-weapon">
+				<h4>Draw Weapon<br>
+				<small>Combat Action - Speed Cost: 3</small></h4>
+				<p>The circumstances at the start of the fight determine whether you have your weapons in hand or stowed. This action must be done before a sheathed weapon can be used. The speed cost of this action is typically 3, however, with pistols or small melee weapons it is only 2. This action can also be used to put a weapon away or switch to a different weapon (switching from one weapon to another only takes a single draw action). Dropping a weapon to the ground instead of putting it away is a free action.</p>
+			</div>
+			
+			<div class="section sub-section" id="move">
+            	<h4>Move<br>
+	            <small>Move Action - Speed Cost: 1 per space</small></h4>
+    	        <p>The most basic form of movement, it is simply running from one location to another. Spend 1 point of speed for each space crossed.</p>
+			</div>
+
+			<div class="section sub-section" id="reload">
+            	<h4>Reload<br>
+	            <small>Combat Action - Speed cost: 6</small></h4>
+    	        <p>This action reloads a weapon with an empty clip. This action assumes the clip is easily accessible in a small pocket or on a belt or bandolier. If the clip is stashed in a bag or some other container on your person reloading becomes a full action. Some weapons have special properties that will either speed up or slow down this action.</p>
+			</div>
+			
+			<div class="section sub-section" id="rest">
+				<h4>Rest<br>
+				<small>Full Action - Speed Cost: none</small></h4>
+				<p>When doing this action you can do no more than move one space in the round. After this using this action you will regain twice as much speed as normal at the start of the next round.</p>
+				<p>If you don't have any injuries above your wound max and your endurance has been lowered for any reason this action will also raise your endurance by 1 point closer to it's normal value.</p>
+			</div>
+        </div> <!-- #basic-combat-actions -->
+
+        <div class="section" id="special-move-actions">
+        	<h4>Special Move Actions</h4>
+			<div class="section sub-section" id="balance">
+				<h4>Balance<br>
+				<small>Move Action - Speed Cost: 2 per space</small></h4>
+				<p>You can cross rough terrain or move on a narrow surface without rolling if you only move 1 space per round. If you wish to move faster than this you must roll <strong>Perception + Athletics</strong>. Each success you get get adds 1 to the number of spaces you can cross while balancing on any difficult surface this turn. For example, if you rolled a single success you could cross 2 spaces this round, 1 for the success you rolled and 1 for the space you can cross without rolling. Each space crossed costs 2 points of speed.</p>
+				<p>This roll reflects a moderately difficult surface such as a balance beam or moving across large uneven rubble. Crossing a less difficult surface would not require a roll, however if it is more difficult than normal terrain it may still have a speed cost of 2. A very difficult surface, like a tightrope, would require 2 successes for each space crossed.</p>
+				<p>Rolling no successes would mean you cannot move this turn as you struggle for balance. Rolling no successes two rounds in a row in the middle of balancing would result in falling. You can avoid falling by not attempting a second balance roll immediately after failing one. Falling on rough terrain just means you are prone and have to get back up, falling while on a ledge will result in you falling all the way to the ground below.</p>
+			</div>
+
+			<div class="section sub-section" id="climb">
+				<h4>Climb<br>
+				<small>Move Action -  Speed Cost: 2 per space</small></h4>
+				<p>When presented with a climbable surface you can always cross 1 vertical space without rolling. If you wish to try to climb faster toll your <strong>Agility + Athletics</strong>. Each success you get on this roll adds 1 to number of vertical spaces you can cross while climbing this turn. For example, if you rolled a single success you climb 2 vertical spaces this round, 1 for the success you rolled and 1 for the space you can cross without rolling. Each space crossed has a speed cost of 2.</p>
+				<p>This roll reflects a moderately difficult climb such as a scaling a drainpipe up the side of a building. An easy climb like a ladder requires no roll but it still has the speed cost of 2 per space like any climb. A very difficult climb, such as trying to climb a wall with very few handholds, would require 2 successes for each space crossed. A very difficult climb might also prevent you from being able to climb a space without rolling, requiring you to roll and potentially fail.</p>
+				<p>Rolling no successes would mean you cannot move this turn as you struggle to climb. Rolling no successes two turns in a row in the middle of a climb would result in falling.</p>
+			</div>
+
+			<div class="section sub-section" id="jump">
+        	    <h4>Jump<br>
+      			<small>Move Action - Speed Cost: 1 per space crossed</small></h4>
+				<p>You can jump over 1 horizontal space without rolling as part of a move. Any time the jump gets larger than that you must roll <strong>Strength + Athletics</strong>.</p>
+				<p>When jumping from a stationary position every 2 successes you get on the jump roll lets you cross an additional horizontal space. For example, jumping over 3 spaces requires 4 successes; 1 space you can cross without rolling and 2 successes are needed for each additional space. If the jump roll doesn't turn up the number of successes needed to cross an obstacle you can abort the jump and remain in your space, this still uses up as much speed as if you had succeeded at the jump you intended.</p>
+				<p>You can get a running start by moving at least 3 spaces in the same direction as the jump immediately before the jump. This movement does not need to be on the same turn or in the same round as the jump, it just needs to be the last thing you've done before the jump attempt. If you have a running start you can jump over 2 spaces without rolling and if you roll each success lets you jump over one additional space for every success you get on the jump roll. For example, jumping 3 spaces with a running start would only require a single success added to the 2 spaces you can cross without rolling.</p>
+				<p>If you roll fewer successes than you needed to jump over an obstacle after you got a running start you need to make a <strong>Wits</strong> roll. If you get one or more successes you can decide to stop before the obstacle instead of continuing with the jump and falling. The GM will determine the consequences for falling. Even if you stop, a failed jump still takes up as much speed as a successful jump.</p>
+				<p>If you are trying to jump over a vertical obstacle a running start will allow you to clear a single vertical space. If you do not have a running start you cannot clear a space without rolling. When you do roll, every 2 successes adds 1 vertical space to what you can jump over in addition to what you can jump without rolling.</p>
+			</div>
+
+			<div class="section sub-section" id="sprint">
+	            <h4>Sprint<br>
+    	        <small>Full Action - Speed Cost: current speed total</small></h4>
+        	    <p>Spend all of your current speed and move any number of spaces in a roughly straight line up to double your current speed.</p>
+			</div>
+
+			<div class="section sub-section" id="swim">
+				<h4>Swim<br>
+				<small>Move Action - Speed Cost: 2 per space</small></h4>
+				<p>You can swim across a single space per round without rolling. To swim faster roll your <strong>Agility + Athletics</strong>. Each success you lets you cross another space in addition to the single space you can swim across without rolling. Each space crossed costs 2 points of speed.</p>
+				<p>This roll reflects a typical swim in fairly calm water. A more difficult swim, such as swimming in rough water with tall waves might require 2 successes for each space crossed. A very difficult swim may also deny you the ability to cross a space without rolling, requiring you to roll and possibly fail.</p>
+				<p>Rolling no successes would mean you cannot move this round as you struggle to stay on afloat. If you roll no successes 2 rounds in a row you start to sink. While you are sinking you cannot breath and can't attempt any actions other than trying to return to the surface. To return to the surface you must get 1 success on a of roll <strong>Agility + Athletics </strong>as a full action. Typically, drowning doesn't happen in the timescales that combat deals with, but if you are stuck underwater for you must follow the rules regarding drowning in chapter 3.</p>
+            </div>
+        </div> <!-- #special-move-actions -->
+
+        <div class="section" id="special-combat-actions">
+        	<h4>Special Combat Actions</h4>
+        	<p>The following section describes several special actions you can take in combat. In any of these action descriptions that mentions a normal attack or dodge roll, these rolls are treated will all of the benefits of styles or artifact functions that specifically improve attack and dodge rolls. However, if the action description specifies a roll that is not a normal attack roll, this roll does not gain the benefits of any styles or artifact functions that specifically improve attack and dodge rolls.</p>
+			<div class="section sub-section" id="aim">
+				<h4>Aim<br>
+				<small>Extended Action - Speed Cost: 2</small></h4>
+				<p>This action turns a basic ranged attack action into an extended action with an interval of a single turn, allowing you to take extra time to line up shots against difficult targets.</p>
+				<p>Make a roll of <strong>Perception + Ballistics</strong> once each turn. Each time you roll add the results to the results of the previous rolls. You can only use the aim action for a number of intervals in a row up to your <strong>Perception</strong> score. After aiming, the next attack that you make with the ranged weapon you were aiming will be rolled normally with an number of extra successes equal to the total number of successes you accumulated while aiming.</p>
+				<p>If you use any other action than continuing to aim or attacking with the weapon you are aiming with, the number of successes you've accumulated by aiming are lost.</p>
+			</div>
+
+			<div class="section sub-section" id="auto-fire">
+				<h4>Auto Fire<br>
+				<small>Full Action - Speed Cost: 8</small></h4>
+				<p>This action allows you to empty the entire clip of an automatic weapon into a target. When doing this add 9 extra dice to both the attack roll and the damage roll. Roll location and critical levels normally. After rolling damage, divide the total damage dealt evenly between the location hit by the attack and all adjacent locations (round down if the damage does not divide evenly).</p>
+				<p>For example, if you hit location 5 (upper body) for 8 damage, both it and the adjacent location 4 (lower body) would take 4 damage; or if you hit location 3 (main arm) for 10 damage, it and the adjacent locations 4 (lower body) and 2 (off arm) would all take 3 damage and the remaining 1 point of damage that did not divide evenly wold be ignored.</p>
+				<p>This action can only be done with a fully automatic weapon that has at least three quarters of it's ammo remaining and depletes all remaining ammo. This action only depletes half of the ammo of a weapon with the extended magazine trait.</p>
+			</div>
+
+			<div class="section sub-section" id="charge">
+				<h4>Charge<br>
+				<small>Combat Action - Speed Cost: number of spaces crossed + a melee attack's normal speed cost</small></h4>
+				<p>This action allows you to move to a target and hit it with a melee attack as a single action. It can only target enemies that are at least 3 spaces away from you but closer than your current speed total and accessible via a straight line over normal terrain. Using this action moves you to the nearest open space adjacent to your target and lets you make a single melee attack as part of a single action.</p>
+				<p>This action has the same speed cost as moving to the target and hitting it normally, but it allows slower characters without enough speed to do so in a round to charge as a full action.</p>
+			</div>
+
+			<div class="section sub-section" id="defensive-stance">
+	            <h4>Defensive Stance<br>
+    	        <small>Combat Action - Variable Speed Cost</small></h4>
+        	    <p>As a combat action with no speed cost you can adopt a defensive stance until your next turn in the initiative order or until you opt to end this action. While in a defensive stance you can choose how much speed you want to spend on each incoming attack. For each point of speed you spend treat your passive defense as 1 point higher against that attack.</p>
+            	<p>This action is not treated as a defensive action and as such can only be started on your turn.</p>
+			</div>
+
+			<div class="section sub-section" id="disarm">
+	            <h4>Disarm <br>
+    	        <small>Combat Action - Speed Cost: 6</small></h4>
+        	    <p>Roll <strong>Finesse + Unarmed</strong> if you're unarmed or roll <strong>Finesse + Melee</strong> if you are wielding a melee weapon. If you get a number of successes you roll is greater than the sum of the target's <strong>Strength + Melee</strong> scores (this is not a resisted check, you must beat the sum of their scores, not the results of a roll), then the opponent's weapon falls to the floor. Picking a weapon up from the floor is a combat action with a speed cost of 3. If you score 3 more successes than you needed to knock the weapon to the floor, then you can choose whether the opponent's weapon falls to the floor or is in your hands ready for use, if you already have a melee weapon out the stolen weapon goes into your off hand.</p>
+			</div>
+
+			<div class="section sub-section" id="dual-wield">
+	            <h4>Dual Wield<br>
+    	        <small>Combat Action - Variable Speed Cost</small></h4>
+        	    <p>If you are wielding a weapon in each hand this action will allow you to attack with both as a single action. Roll a normal attack with each weapon, however, the attack roll for both weapons is rolled disadvantaged with each automatic success replaced with a die (normally only off hand weapons have this disadvantage applied and main hand weapons do not, using both weapons as a single Dual Wield action applies this disadvantage to both).</p>
+            	<p>The speed cost of dual wielding is the same as the total cost of using both weapons as two separate actions, but this action allows you to use them both on one turn or as a full action if you do not have enough speed. During this action, both weapons are considered to have the same range as the weapon with the lower range.</p>
+            	<p>You cannot use this action with any weapon that has Bow, Mounted, or any of the Explosive traits. You can only use this action if both weapons you are holding can reasonably be used with a single hand. For example, wielding two knives or pistols is possible while wielding two sledge hammers or assault rifles is not(however, if you have any ranks of the style <em>Super Strength</em> you can dual wield with any weapon that isn't a Bow, Mounted, or Explosive). Both weapons must be either both ranged weapons or both melee weapons, you cannot use this action with mix of ranged and melee weapons.</p>
+            	<p>The style <em>Ambidexterity</em> reduces the disadvantage penalties and speed costs of this action.</p>
+			</div>
+
+			<div class="section sub-section" id="first-aid">
+            	<h4>First Aid<br>
+	            <small>Extended Action - Speed Cost: 6</small></h4>
+	            <p>First Aid can help the healing process and prevent downed characters from bleeding to death. First aid is an extended action with a speed cost of 6. Every 3 successes you get on a roll of <strong>Intelligence + Medicine</strong> causes the target's endurance to move 1 point closer to normal.</p>
+        	    <p>The first aid action can also patch up disabled or destroyed body parts. Make an extended first aid check against a target number of 6. Once the number of successes has been met the destroyed body part is treated as disabled or the disabled body part is treated as normal. This does not actually heal any points of damage, it just allows you to use a disabled body part. If this part is damaged again it goes back to being treated as disabled or destroyed.</p>
+    	        <p>In order to attempt first aid, you must be carrying the appropriate equipment and be adjacent to the target of the healing. The target must remain in an adjacent space and cannot take standard or defensive actions without interrupting the first aid attempt. You can use a combat action with a speed cost of 2 to roll <strong>Wits + Medicine</strong> in order to attempt to locate improvised first aid equipment such as cloth for bandages or sticks to use as splints. The number of successes the GM will require for this action to work depends on where you are and severity of the wounds. If you do manage to locate it you'll need to use move actions to move to the improvised supplies, free them from anything they may be attached to, and bring them back to the person in need of first aid.</p>
+			</div>
+
+			<div class="section sub-section" id="point-blank-shot">
+	            <h4>Point Blank Shot<br>
+    	        <small>Combat Action - Speed Cost: 4</small></h4>
+        	    <p>Any firearm with the trait <strong>Small</strong> or the trait <strong>Sawn</strong> can be used as melee weapons on adjacent targets with devastating effects. The attack roll for this maneuver is <strong>Finesse + Melee</strong>, however, if the weapon has the trait <strong>Sawn</strong> you may choose to use either this attack roll or the weapon's normal attack roll. Roll location normally. All dice on the damage roll are replaced with automatic successes.</p>
+			</div>
+
+			<div class="section sub-section" id="spray">
+            	<h4>Spray<br>
+         	   <small>Full Action - Speed Cost: 8</small></h4>
+	            <p>By using a fully automatic weapon you can spray bullets at up to 6 adjacent targets. Make 1 attack roll with 3 extra dice in it. Compare this roll to each target's passive defense or dodge roll to see if that target is hit. Roll one location for each target hit. Make one damage roll, every target hit receives this much damage in the location that was hit.</p>
+    	        <p>This action can only be done with a fully automatic weapon that has at least 3 quarters of it's ammo remaining and depletes remaining ammo. A weapon with the long clip trait only uses half of its ammo in this action.</p>
+			</div>
+
+			<div class="section sub-section" id="stealth-attack">
+	            <h4>Stealth Attack<br>
+    	        <small>Combat Action - Speed Cost: weapon speed + 2</small></h4>
+        	    <p>Any time an opponent is denied the ability to make active dodge attempts against you (this happens if the target is unaware of your presence, is flanked, is blind, or is otherwise unable to defend) you can attempt a stealth attack. When using a stealth attack, add an extra die and an extra success to your damage roll.</p>
+            	<p>When executing a stealth attack with a ranged weapon you must be within 3 spaces of your opponent.</p>
+	            <p>The style <em>Stealth Attack</em> makes this action more potent.</p>
+			</div>
+
+			<div class="section sub-section" id="suppress">
+	            <h4>Suppressing Fire<br>
+    	        <small>Full Action - Speed Cost: 8</small></h4>
+        	    <p>When you use this action you will spend the rest of the round emptying a firearms's magazine in one direction. Choose a line starting from your character and going off at any angle, any space this line crosses is a targeted area and if your gun has the auto trait every space adjacent to the normal targeted area is also a targeted area. Any enemy that starts a turn in a targeted space may be targeted by a normally rolled attack as a free action with no additional speed cost. The target can attempt to dodge normally.</p>
+            	<p>Additionally, any enemy that moves into a targeted space is automatically hit and may not attempt to dodge, roll damage and location normally.</p>
+	            <p>Enemies behind full cover or enemies that use the Take Cover action are not hit by this suppressing fire. Enemies do not know exactly where this line is, only that it is roughly in the area you are pointing the gun. After using this action your weapon's magazine is depleted, unless it has the long clip trait, in which case it is halved.</p>
+			</div>
+
+			<div class="section sub-section" id="take-cover">
+	            <h4>Take Cover<br>
+    	        <small>Combat Action - Speed Cost: 1</small></h4>
+        	    <p>If you are in partial cover, you can use this action to duck behind it. This causes the cover to act as complete cover and all attackers that are on the other side of this cover cannot target you with attacks. You remain protected this way until you move or takes another action.</p>
+            	<p>Like all combat actions, this action allows you to move 1 space before or after it, if you are adjacent to, but not in, cover you can move a space before taking this action to get into the cover.</p>
+	            <p>If this is the only action you take in a round it counts as resting, treat it as a full action and then at the start of the next round regain twice as much speed as normal.</p>
+    	        <p>Cover only protects you from opponents that it blocks the line of sight to, an enemy may take actions to move to a new location that your cover does not protect from.</p>
+			</div>
+
+			<div class="section sub-section" id="trip">
+	            <h4>Trip<br>
+    	        <small>Combat Action - Speed Cost: 6</small></h4>
+        	    <p>Roll <strong>Finesse + Unarmed</strong> if you are unarmed or <strong>Finesse + Melee</strong> if you are using a melee weapon. If you get more successes than the sum of the target's <strong>Agility + Athletics</strong> scores (this is not a resisted check, you must beat their total score, not the results of a roll), then the target is tripped. This attack does no damage but the target is knocked prone. Standing up again is a move action that costs 3 speed.</p>
+            </div>
+
+			<div class="section sub-section" id="wait">
+	            <h4>Wait<br>
+    	        <small>Combat Action - Speed Cost: 1</small></h4>
+        	    <p>Wait til a more opportune time to act by spending a single point of speed and then lowering your initiative slot to any lower number. If other characters also act on that number you decide where you go in that order. This change to your initiative lasts for the rest of combat. You cannot use this action to interrupt another character's action, you may only change your initiative to go just before they do or just after they do. If the only action you take in a round is waiting, you also gain the benefits of the Rest action. For the purposes of determining when a round ends, this action counts as taking no action, as such if everyone either waits or takes no action in a turn the round ends. Like all other combat actions you may move a single space while waiting.</p>
+            </div>
+        </div> <!-- #special-combat-actions -->
+
+        <div class="section" id="grappling-actions">
+        	<h4>Grappling Actions</h4>
+            <p>Wrestling, tackling, pushing opponents around, and other forms of grappling have their own set of actions. Once a grapple has been initiated a roll will determine which opponent has the advantage in the grapple. The opponent in the disadvantaged position can only attempt Escape, Reversal, or Rest actions, and the opponent with the advantage only use actions from the following list of advantaged grappling actions.</p>
+            <p>For the duration of the grapple both opponents occupy the same space. Neither character can attempt to dodge attacks, however, neither person is vulnerable to stealth attacks due to being unable to dodge. If a ranged attack targets either character in a grapple roll a d6, on a success the attack hits the intended target, on a failure the attack hits the other character in the grapple.</p>
+
+			<div class="section sub-section" id="initiate-grapple">
+	            <h4>Grapple<br>
+    	        <small>Combat Action - Speed Cost: 4</small></h4>
+        	    <p>To start a grapple you must enter the target's space, you can move a single space as part of this action to do so. At the start of the grapple both opponents roll <strong>Strength + Unarmed</strong>, the winner of this roll now has the advantage in this grapple.</p>
+            	<p>If attempting to grapple a target that is denied the ability to actively dodge an attack (an unaware or flanked opponent) this targets's initial grapple roll is replaced with a roll of just <strong>Strength</strong>.</p>
+			</div>
+			
+			<div class="section sub-section" id="tackle">
+	            <h4>Tackle<br>
+    	        <small>Combat Action - Speed Cost: number of spaces crossed</small></h4>
+        	    <p>You can also start a grapple by tackling you target. Tackling functions like the Charge action; it can target anyone at least 3 spaces away but within a number of spaces equal to your current speed and accessible via a straight line over even terrain. Tackling someone moves you into their space.</p>
+        	    <p>When you tackle both you and your target make resisted <strong>Strength + Unarmed</strong> checks. If the tackler wins, a grapple begins with the tackler in the advantage, but both opponents are knocked prone. If the tackler loses, only the tackler is knocked prone and the defender is in the advantage.</p>
+			</div>
+
+			<div class="section sub-section" id="advantaged-grappling">
+        	    <h4>Advantaged Grappling Actions</h4>
+			
+				<div class="section sub-section" id="choke">
+					<h4>Choke<br>
+					<small>Extended action - Speed Cost: 6</small></h4>
+					<p>This attack drains the target's endurance instead of doing normal damage. During each round you intend to choke the target roll your <strong>Strength + Unarmed</strong> against a target number equal to your opponent's Stamina rating. Each success above the target number drains one point of endurance. As soon as you stop this action, or are forced to stop this action by the target reversing the grapple, the target's endurance returns to it's previous value at the start of the next round.</p>
+					<p>If the target's endurance drops to 0 it becomes unconscious. If you continue choking an unconscious target it will lose one point of endurance per round (you no longer have to roll). If the target's endurance reaches the negative of its normal value the target dies. If you stop choking an unconscious opponent their endurance will return by one point per round until it reaches its normal rating, at this point the target regains consciousness.</p>
+				</div>
+
+				<div class="section sub-section" id="point-blank-attack">
+					<h4>Point Blank Attack<br>
+					<small>Combat Action - Speed Cost: 4</small></h4>
+					<p>This action lets you use weapons with the <strong>Small</strong> trait inside the grapple. You may only attempt this action if you already had the weapon in your hand when the grapple started. You and your target make resisted <strong>Strength + Melee</strong> checks. If you win the roll the attack hits, but if you lose the roll by more than 3 your opponent has wrestled control of the weapon away from you and may either drop it or hold on to it. If the weapon is a small melee weapon roll location and damage normally, if the weapon is a small firearm roll location normally and deal maximum damage.</p>
+				</div>
+				
+				<div class="section sub-section" id="push">
+					<h4>Push<br>
+					<small>Move Action - Speed Cost: 2 per space moved</small></h4>
+					<p>This action lets you force the target into another space. Make resisted <strong>Strength + Unarmed Combat</strong> rolls against a your opponent. Beating your opponent allows you to move the target 1 space, each additional success lets you move the target an additional space. Each space moved has a speed cost of 2. If you rolled more successes than you needed to push the target as far as you did, then after pushing you may release the target into any adjacent square. This allows you to release the target into a hazard if you wish.</p>
+				</div>
+			
+				<div class="section sub-section" id="release">
+					<h4>Release<br>
+					<small>Free Action - Speed Cost: 1</small></h4>
+					<p>This ends the grapple, both characters can now act normally. The other character is now in an adjacent space of your choosing.</p>
+				</div>
+			
+				<div class="section sub-section" id="tackle">
+					<h4>Rest<br>
+					<small>Full action - No Speed Cost</small></h4>
+					<p>Resting functions the same way it does outside of a grapple except that you cannot move. Regain double your normal speed at the start of the next round after using this action.</p>
+				</div>
+
+				<div class="section sub-section" id="takedown">
+					<h4>Takedown<br>
+					<small>Combat Action - Speed Cost: 5</small></h4>
+					<p>Both opponents make resisted  <strong>Strength + Unarmed Combat</strong> rolls, if you win this roll you have pinned your opponent and you both go to the ground, all rules about being prone apply to both characters. Standing up again is a move action that costs 2 speed. As long as you are both prone and you remain in the advantaged position you have the opponent pinned and you gain a bonus of 1 automatic success to any roll you make as part of a grappling action.</p>
+				</div>
+			
+				<div class="section sub-section" id="throttle">
+					<h4>Throttle<br>
+					<small>Combat Action - Speed Cost: 4</small></h4>
+					<p>Roll a location and your <strong>Strength</strong> score. Each success on the strength roll does one point of damage to the location rolled.</p>
+				</div>
+				
+				<div class="section sub-section" id="throw">
+					<h4>Throw<br>
+					<small>Combat Action - Speed Cost: 4</small></h4>
+					<p>This action ends the grapple and moves the target into a different space of your choice. Roll your <strong>Strength</strong> score, each success you get lets you throw the target 1 space. If you rolled 3 successes you could move the target into any space within 3 spaces of you. </p>
+					<p>If the path the target is thrown crosses an occupied space, both the thrown target and the character in the space end up prone in the occupied space and are dealt 1 point of damage to a random location. If the path crosses an easily breakable obstacle (glass, light furniture), the target smashes through it and is dealt 1 point of damage to a random location. If the path crosses an unbreakable object (walls, heavy furniture) the character stops in a space adjacent to the object and is dealt 2 points of damage to a random location.</p>
+				</div>
+			</div><!-- end advantaged grappling -->
+			
+			<div class="section sub-section" id="disadvantaged-grappling">
+				<h4>Disadvantaged Grappling Actions</h4>
+			
+				<div class="section sub-section" id="tackle">
+					<h4>Escape<br>
+					<small>Extended Action - Speed Cost: 3</small></h4>
+					<p>To attempt to escape make a extended check of <strong>Agility + Unarmed</strong>. Once this extended check has accumulated more successes than the sum of your opponent's <strong>Strength + Unarmed</strong> traits you succeed and exit the grapple into an adjacent space of your choosing and can now act normally.</p>
+				</div>
+
+				<div class="section sub-section" id="tackle">
+					<h4>Reversal<br>
+					<small>Combat Action - Speed Cost: 4</small></h4>
+					<p>This action allows you to attempt to gain the upper hand in a grapple. Both characters make resisted <strong>Strength + Unarmed Combat</strong> rolls, if you win your character is now in the advantaged position.</p>
+				</div>
+
+				<div class="section sub-section" id="tackle">
+					<h4>Rest<br> 
+					<small>Full Action - Speed Cost: 0</small></h4>
+					<p>Resting functions the same way it does outside of a grapple except that you cannot move. Regain double your normal speed at the start of the next round after using this action.</p>
+				</div>
+            <!-- end disadvantaged grappling -->
+		</div><!-- #grapping-actions -->

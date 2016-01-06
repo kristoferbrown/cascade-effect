@@ -1,0 +1,297 @@
+<div id="controls">
+		<div class="reload-bar">
+			<a id="reload"></a>
+		</div>
+		<div id="title-bar">
+			<h2 id="title-name">Character Name</h2>
+		</div>
+		<a id="show-skill-view" class="current view-link"><span class="icon"></span><span class="view-label">Skills</span></a>
+		<a id="show-combat-view" class="view-link"><span class="icon"></span><span class="view-label">Combat</span></a>
+		<a id="show-status-view" class="view-link"><span class="icon"></span><span class="view-label">Status</span></a>
+		<a id="show-styles-view" class="view-link"><span class="icon"></span><span class="view-label">Styles</span></a>
+		<a id="show-artifacts-view" class="view-link"><span class="icon"></span><span class="view-label">Gear</span></a>
+		<div id="available-points" class="row"  style="display:none;">
+			<span>Style Points:</span> <span class="available-value">0</span>
+			<span class="detail style-total">Total Styles: <span class="style-quotient">0</span></span>
+			<div id="style-controller">
+				<a class="button extra-long" id="earn-points">Earn Points</a>
+				<a class="button extra-long" id="spend-points">Use Points</a>
+				<div class="sub-controller">
+					<a class="button cancel long">Cancel</a>	
+					<a class="button next finish long">Save</a>	
+				</div>						
+			</div>
+		</div>
+	</div>
+
+	<div id="container-overflow">
+		<div id="container">
+			
+			<div id="skill-view" class="view">
+				<div id="attributes" class="sheet-section">
+					<h3 class="hidden">Attributes</h3>
+				</div>
+				<div id="skills" class="sheet-section">
+					<h3>Skills</h3>
+				</div>
+				<div id="skillNotes" class="sheet-section notes">
+					<h3>Notes</h3>
+					<a id="edit-skill-notes" class="button long edit-notes">Edit</a>
+					<a id="save-skill-notes" class="button long finish save-notes">Save</a>
+					<div class="row notes-wrap"></div>
+					<textarea class="notes-input"></textarea>
+				</div>
+			</div> <!-- end #skill-view -->
+			
+			<div id="combat-view" class="view">
+				<div id="defenses" class="sheet-section">
+					<h3>Defenses</h3>
+					<span class="row passive-row" id="passive-defense">
+						<span class="defense-title">Passive Defense</span>
+						<span class="roll"></span>
+					</span>
+					<a class="defense-row row AGI-shade color" id="melee-dodge">
+						<span class="defense-title">Melee Dodge</span>
+						<span class="roll">
+							<span class="dice"></span> + <span class="bonus"></span>
+						</span>
+						<span class="detail-row speed-row"><span class="icon speed-icon"></span>Speed cost <span class="detail">3</span></span>
+					</a>
+					<a class="defense-row row WIT-shade color" id="ranged-dodge">
+						<span class="defense-title">Ranged Dodge</span>
+						<span class="roll">
+							<span class="dice"></span> + <span class="bonus"></span>
+						</span>
+						<span class="detail-row speed-row"><span class="icon speed-icon"></span>Speed cost <span class="detail">3</span></span>
+					</a>
+				</div>
+				<div id="attacks" class="sheet-section">
+					<h3>Attacks</h3>
+				</div>
+				<div id="combat-skills" class="sheet-section">
+					<h3>Combat Skills</h3>
+				</div>
+				
+				<div id="combatNotes" class="sheet-section notes">
+					<h3>Combat Notes</h3>
+					<a id="edit-combat-notes" class="button long edit-notes">Edit</a>
+					<a id="save-combat-notes" class="button long finish save-notes">Save</a>
+					<div class="row notes-wrap"></div>
+					<textarea class="notes-input"></textarea>
+				</div>
+				
+			</div> <!-- end #combat-view -->
+			
+			<div id="status-view" class="view">
+				
+				<div id="status" class="sheet-section">
+					<h3>Status</h3>
+					<div id="woundmax" class="row wound-max  STM-tint color">
+						<span class="desc-title">Wound Max</span>
+						<span class="detail"></span>
+					</div>
+					<div id="endurance" class="row regen STM-tint color">
+						<span class="desc-title">Endurance</span>
+						<span class="detail"><a id="regen-minus" class="button">-</a><span style="display:none;" class="notice regen-alert"></span><span class="current-regen"></span> / <span class="max-regen"></span><a id="regen-plus" class="button">+</a></span>
+					</div>
+				</div> <!--end #status div -->
+				
+				<div id="wounds" class="sheet-section">
+					<h3>Body</h3>
+					<div id="upper" class="body-row STM-tint color">
+						<span class="body-title-wrap">
+							<span class="desc-title">5: Upper Body</span>
+						</span>
+						<div class="row-controller">
+							<a id="5wound" class="button wound">Wound</a>
+							<a id="5heal" class="button heal">Heal</a>
+						</div>
+						<span class="current-wounds">0</span>
+						<div class="wound-dots">
+							<span class="wounded dot-row"></span><span class="disabled dot-row"></span><span class="destroyed dot-row"></span>
+						</div>
+						<div class="armor-row detail-row color">
+							<span class="armor-title"></span>
+							<div class="armor-value-row detail-row">Armor<span class="armor-value detail"></span></div>
+							<div class="penalty detail-row" style="display:none;">Perception Penalty</div>
+						</div>
+					</div>
+					<div id="lower" class="body-row STM-tint color">
+						<span class="body-title-wrap">
+							<span class="desc-title">4: Lower Body</span>
+						</span>
+						<div class="row-controller">
+							<a id="4wound" class="button wound">Wound</a>
+							<a id="4heal" class="button heal">Heal</a>
+						</div>
+						<span class="current-wounds">0</span>
+						<div class="wound-dots">
+							<span class="wounded dot-row"></span><span class="disabled dot-row"></span><span class="destroyed dot-row"></span>
+						</div>
+						<div class="armor-row detail-row color">
+							<span class="armor-title"></span>
+							<div class="armor-value-row detail-row">Armor<span class="armor-value detail"></span></div>
+							<div class="penalty detail-row" style="display:none;">Agility Penalty</div>
+						</div>
+					</div>
+					<div id="main" class="body-row STM-tint color">
+						<span class="body-title-wrap">
+							<span class="desc-title">3: Main Arm</span>
+						</span>
+						<div class="row-controller">
+							<a id="3wound" class="button wound">Wound</a>
+							<a id="3heal" class="button heal">Heal</a>
+						</div>						
+						<span class="current-wounds">0</span>
+						<div class="wound-dots">
+							<span class="wounded dot-row"></span><span class="disabled dot-row"></span><span class="destroyed dot-row"></span>
+						</div>
+						<div class="armor-row detail-row color">
+							<span class="armor-title"></span>
+							<div class="armor-value-row detail-row">Armor<span class="armor-value detail"></span></div>
+							<div class="penalty detail-row" style="display:none;">Finesse Penalty</div>
+						</div>
+					</div>
+					<div id="off" class="body-row STM-tint color">
+						<span class="body-title-wrap">
+							<span class="desc-title">2: Off Arm</span>
+						</span>
+						<div class="row-controller">
+							<a id="2wound" class="button wound">Wound</a>
+							<a id="2heal" class="button heal">Heal</a>
+						</div>
+						<span class="current-wounds">0</span>
+						<div class="wound-dots">
+							<span class="wounded dot-row"></span><span class="disabled dot-row"></span><span class="destroyed dot-row"></span>
+						</div>
+						<div class="armor-row detail-row color">
+							<span class="armor-title"></span>
+							<div class="armor-value-row detail-row">Armor<span class="armor-value detail"></span></div>
+							<div class="penalty detail-row" style="display:none;">Off Arm Finesse Penalty</div>
+						</div>
+					</div>
+					<div id="legs" class="body-row STM-tint color">
+						<span class="body-title-wrap">
+							<span class="desc-title">1: Legs</span>
+						</span>
+						<div class="row-controller">
+							<a id="1wound" class="button wound">Wound</a>
+							<a id="1heal" class="button heal">Heal</a>
+						</div>
+						<span class="current-wounds">0</span>
+						<div class="wound-dots">
+							<span class="wounded dot-row"></span><span class="disabled dot-row"></span><span class="destroyed dot-row"></span>
+						</div>
+						<div class="armor-row detail-row color">
+							<span class="armor-title"></span>
+							<div class="armor-value-row detail-row">Armor<span class="armor-value detail"></span></div>
+							<div class="penalty detail-row" style="display:none;">Speed Penalty 1</div>
+						</div>
+					</div>
+					<a class="row" id="edit-armor"><span>Edit Armor...</span></a>
+				</div> <!-- end #wounds -->
+
+				<div id="statusNotes" class="sheet-section notes">
+					<h3>Status Notes</h3>
+					<a id="edit-status-notes" class="button long edit-notes">Edit</a>
+					<a id="save-status-notes" class="button long finish save-notes">Save</a>
+					<div class="row notes-wrap"></div>
+					<textarea class="notes-input"></textarea>
+				</div>
+
+			</div> <!-- end #status-view-->
+			
+			<div id="styles-view" class="view">
+
+				<div id="classes" class="sheet-section">
+					<h3>Style Classes</h3>
+					<div id="style-class-list"></div>
+				</div>
+
+				<div id="arcane" class="sheet-section">
+					<h3>Arcane Styles</h3>
+					<div class="row style-hide">Invest in Willpower, Charisma, or Intelligence specialty styles to unlock arcane styles.</div>
+				</div>
+				
+				<div id="styleNotes" class="sheet-section notes">
+					<h3>Style Notes</h3>
+					<a id="edit-style-notes" class="button long edit-notes">Edit</a>
+					<a id="save-style-notes" class="button long finish save-notes">Save</a>
+					<div class="row notes-wrap"></div>
+					<textarea class="notes-input"></textarea>
+				</div>
+				
+			</div> <!-- end #styles-view -->
+
+			<div id="artifacts-view" class="view">
+				<div id="cast" class="sheet-section">
+					<h3>Installed Cast Functions</h3>
+					<a id="edit-cast" class="row edit cast">Edit cast functions...</a>
+				</div>
+
+				<div id="components" class="sheet-section">
+					<h3>Component Artifacts</h3>
+					<div id="component-list"></div>
+					<a id="new-artifact" class="row edit-cast">Add new artifact...</a>
+				</div>
+
+				<div id="artifactNotes" class="sheet-section notes">
+					<h3>Other Equipment</h3>
+					<a id="edit-artifact-notes" class="button long edit-notes">Edit</a>
+					<a id="save-artifact-notes" class="button long finish save-notes">Save</a>
+					<div class="row notes-wrap"></div>
+					<textarea class="notes-input"></textarea>
+				</div>
+			</div> <!-- end #artifacts-view -->
+			
+			<div class="clear"></div>
+			
+		</div> <!-- end #container -->
+	</div> <!-- end #container-overflow -->
+
+	<div id="monitor">
+		<span class="button toggler"></span>
+		<div id="monitor-inner">
+			<span id="dice-roller"></span>
+			<div id="speed-mon" class="monitor-row">
+				<div class="labels">
+					<span class="trait-name">Speed</span>
+					<span class="current"></span>/<span class="total"></span>
+					<span class="notice" style="display:none;"></span>
+				</div>
+				<div class="controls">
+					<a id="new-round" class="new-round button">New Round</a>
+					<a class="speed-minus button">-</a>
+					<a class="speed-plus button">+</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div id="crisis-mon" class="monitor-row">
+				<div class="labels">
+					<span class="trait-name">Entanglement</span>
+					<span class="current"></span>/<span class="total"></span>
+				</div>
+				<div class="controls">
+					<a class="crisis-minus button">-</a>
+					<a class="crisis-plus button">+</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div> <!-- end #monitor -->
+	
+	<div id="results">
+		<div class="die-results"></div>
+		<div class="roll-totals"></div>
+		<div class="total-result"></div>
+		<div class="location-results">
+			<div class="location-hit"></div>
+			<div class="critical"></div>
+		</div>
+		<div class="damage-results">
+			<div class="dam-die-results"></div>
+			<div class="dam-roll-totals"></div>
+			<div class="dam-total-result"></div>
+		</div>
+		<div class="no-speed alert"></div>
+	</div><!-- end #results -->

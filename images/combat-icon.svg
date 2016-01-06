@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="1181px" height="1181px" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <g>
+        <g id="combat">
+            <g>
+                <path d="M797.584,631.551L1027.25,861.222L860.222,1028.25L630.551,798.584L797.584,631.551Z" style="fill:white;"/>
+            </g>
+            <g>
+                <path d="M550.551,383.518L383.518,550.551L153.848,320.881L320.881,153.848L550.551,383.518Z" style="fill:white;"/>
+            </g>
+            <path d="M590.551,757.584L316.591,1031.54L149.558,864.511L986.919,27.15L987.255,360.881Z" style="fill:white;"/>
+        </g>
+    </g>
+</svg>

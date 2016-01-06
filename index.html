@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cascade Effect</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="styles/fonts.css">
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="libs/jquery.js"></script>
+<script src="libs/touch.js"></script>
+<script src="libs/resize.js"></script>
+<script src="libs/tinysort.js"></script>
+<script src="rulebook/rulebook.js"></script>
+<script src="scripts/create.js"></script>
+<script src="scripts/prep.js"></script>
+<script src="scripts/buttons.js"></script>
+<script src="scripts/rolls.js"></script>
+<script src="scripts/styles.js"></script>
+<script src="scripts/scripts.js"></script>
+</head>
+<body>
+
+<div id="root-menu">
+	
+	<a class="show-semiskewed semiskewed-settings" id="semiskewed-settings"></a>
+	
+	<div class="root-section" id="root-characters">
+		<h3>Characters</h3>
+		<div id="character-list"></div>
+		<a id="new-character" class="row">Create a new character...</a>
+		<a id="import-character" class="row">Import a character...</a>
+	</div>
+	
+	<div class="root-section" id="root-rulebook">
+		<h3>Rulebook</h3>
+		<div id="rulebook-chapters"></div>
+	</div>
+	
+	<div class="root-section hide-semiskewed" id="root-misc">
+		<h3>Miscellaneous</h3>
+		<a id="change-settings" class="row">Settings</a>
+		<a href="rulebook/print.html" target="_blank" class="row">Printable Rulebook<span class="detail"></span></a>
+		<!--<a href="pdfs/char-sheet.pdf" target="_blank" class="row">Printable Character Sheet<span class="detail">.pdf</span></a>
+		<a href="pdfs/char-sheet-bw.pdf" target="_blank" class="row">B&amp;W Character Sheet<span class="detail">.pdf</span></a>-->
+	</div>
+
+	<!--<div class="root-section" id="root-testing">
+		<h3>Cascade Effect is in testing.</h3>
+		<a href="changelog.html" class="row">Version 0.5.09 alpha change log</a>
+	</div>-->
+
+</div> <!-- end #root-menu -->
+
+<div id="settings-view">
+
+	<a class="show-semiskewed semiskewed-home"></a>
+
+	<div class="root-section" >
+		<h3>Visual Settings</h3>
+		<a id="setting-skewed" class="row">Skew<span class="detail false"></span><span class="detail-row">Enable the skewing effect on all elements, just the header and footer, or nothing.</span></a>
+		<a id="setting-theme" class="row">Theme<span class="detail paper"></span><span class="detail-row">Choose whether you prefer the light colored Paper theme or the dark colored Slate theme.</span></a>
+		<a id="setting-colorful" class="row">Colorful<span class="detail false"></span><span class="detail-row">Enable this to see items colored according to the most relevant attribute.</span></a>
+		<a id="setting-iconic" class="row">Show Icons<span class="detail false"></span><span class="detail-row">Enable to display small icons labelling many combat traits.</span></a>
+		<a id="setting-skillorder" class="row">Skill Order<span class="detail attribute"></span><span class="detail-row">Displays the skill list either in alphabetical order, or grouped by default attribute.</span></a>
+		<a id="setting-comskilllocation" class="row">Combat Skill Location<span class="detail combat-view"></span><span class="detail-row">Displays the combat skill list on the combat view, the skill view, or both.</span></a>
+	</div>
+	<div class="root-section">
+		<h3>Gameplay Settings</h3>
+		<a id="setting-tiered" class="row">Tiered Costs<span class="detail false"></span><span class="detail-row">When enabled higher ranking styles cost more, when disabled all styles cost one point. Your GM will decide this setting for your group.</span></a>
+	</div>
+	<div class="root-section">	
+		<h3>Other Settings</h3>
+		<a id="setting-first-run" class="row">First Run<span class="detail false"></span><span class="detail-row">Enable this to see help screens again.</span></a>
+		<a id="cancel-settings" class="button cancel long">Cancel</a>
+		<a id="save-settings" class="next finish button long">Save</a>
+	</div>
+</div> <!--  end #settings-view -->
+
+<div id="character-creation">
+
+	<a class="show-semiskewed semiskewed-home"></a>
+
+	<div id="create-step-1" class="step-container root-section">
+		<h3  class="starting">Basics</h3>
+		<p class="starting">Name your character and write a word or two for a character concept that describes this character. If You can't think of a good name and concept now, you'll be given another chance to fill these in at the end of character creation.</p>
+		
+		<h3  class="ending" style="display:none;">Final Step</h3>
+		<p class="ending" style="display:none;">Make sure that you like your character's name and concept before hitting finish.</p>
+
+		<span class="row">
+			<label for="create-name">Name</label>
+			<input type="text" id="create-name" />
+		</span>
+		<span class="row">
+			<label for="create-concept">Concept</label>
+			<input type="text" id="create-concept" />
+		</span>
+		<a id="cancel-create" class="button cancel long">Cancel</a>
+		<a id="create-fin-prev" class="button previous cancel long" style="display:none;">Back</a>
+		<a id="create-finish-step-1" class="next arrow button long">Next</a>
+	</div> <!-- end #create-step-1 -->
+	
+	<div style="display:none;" class="step-container create-step-4 root-section">
+		<h3>Bonus Points</h3>
+		<p>You have 3 bonus points to spend on any trait you like.</p>
+		<span class="row counter"><span class="indicator">3</span> points left.</span>	
+	</div> <!-- end .create-step-4 -->
+	
+	<div id="create-step-2" style="display:none;" class="step-container root-section">
+		<h3>Attributes</h3>
+		<p>Distribute 12 points between these attributes.</p>
+		<p>Attributes below one point represent a fairly serious disability, so each one has been given a point automatically. Check with your GM before reducing an attribute to zero.</p>
+		<div id="create-attributes">
+			<span class="row counter"><span class="indicator">3</span> points left.</span>
+		</div> <!-- end #create-attributes -->
+		<a id="create-step-2-prev" class="button previous cancel long">Back</a>
+		<a id="create-finish-step-2" class="next arrow button dim long">Next</a>
+	</div><!-- end #create-step-2 -->
+
+	<div id="create-step-3" style="display:none;" class="step-container  root-section">
+		<h3>Skills</h3>
+		<p>Distribute 6 points between these skills.</p>
+		<div id="create-skills">
+			<span class="row counter"><span class="indicator">6</span> points left.</span>
+		</div> <!-- end #create-skills -->
+		<a id="create-custom-skill" class="row">Add a custom skill...</a>
+		<div class="clear"></div>
+		<a id="create-step-3-prev" class="button previous cancel long">Back</a>
+		<a id="create-finish-step-3" class="next arrow button dim long">Next</a>
+	</div><!-- end #create-step-3 -->
+
+	<div style="display:none;" class="step-container create-step-4">
+		<a id="create-step-4-prev" class="button previous cancel long">Back</a>
+		<a id="create-finish-step-4" class="next arrow button dim long">Next</a>
+	</div> <!-- end .create-step-4 -->
+	
+	<a id="finish-character" style="display:none;" class="next button finish long">Finish</a>
+	
+</div><!-- end #character-creation -->
+
+<div id="character-sheet">
+	<div id="controls">
+		<div class="reload-bar">
+			<a id="reload"></a>
+		</div>
+		<div id="title-bar">
+			<h2 id="title-name">Character Name</h2>
+		</div>
+		<a id="show-skill-view" class="current view-link"><span class="icon"></span><span class="view-label">Skills</span></a>
+		<a id="show-combat-view" class="view-link"><span class="icon"></span><span class="view-label">Combat</span></a>
+		<a id="show-status-view" class="view-link"><span class="icon"></span><span class="view-label">Status</span></a>
+		<a id="show-styles-view" class="view-link"><span class="icon"></span><span class="view-label">Styles</span></a>
+		<a id="show-artifacts-view" class="view-link"><span class="icon"></span><span class="view-label">Gear</span></a>
+		<div id="available-points" class="row"  style="display:none;">
+			<span>Style Points:</span> <span class="available-value">0</span>
+			<span class="detail style-total">Total Styles: <span class="style-quotient">0</span></span>
+			<div id="style-controller">
+				<a class="button extra-long" id="earn-points">Earn Points</a>
+				<a class="button extra-long" id="spend-points">Use Points</a>
+				<div class="sub-controller">
+					<a class="button cancel long">Cancel</a>	
+					<a class="button next finish long">Save</a>	
+				</div>						
+			</div>
+		</div>
+	</div>
+
+	<div id="container-overflow">
+		<div id="container">
+			
+			<div id="skill-view" class="view">
+				<div id="attributes" class="sheet-section">
+					<h3 class="hidden">Attributes</h3>
+				</div>
+				<div id="skills" class="sheet-section">
+					<h3>Skills</h3>
+				</div>
+				<div id="skillNotes" class="sheet-section notes">
+					<h3>Notes</h3>
+					<a id="edit-skill-notes" class="button long edit-notes">Edit</a>
+					<a id="save-skill-notes" class="button long finish save-notes">Save</a>
+					<div class="row notes-wrap"></div>
+					<textarea class="notes-input"></textarea>
+				</div>
+			</div> <!-- end #skill-view -->
+			
+			<div id="combat-view" class="view">
+				<div id="defenses" class="sheet-section">
+					<h3>Defenses</h3>
+					<span class="row passive-row" id="passive-defense">
+						<span class="defense-title">Passive Defense</span>
+						<span class="roll"></span>
+					</span>
+					<a class="defense-row row AGI-shade color" id="melee-dodge">
+						<span class="defense-title">Melee Dodge</span>
+						<span class="roll">
+							<span class="dice"></span> + <span class="bonus"></span>
+						</span>
+						<span class="detail-row speed-row"><span class="icon speed-icon"></span>Speed cost <span class="detail">3</span></span>
+					</a>
+					<a class="defense-row row WIT-shade color" id="ranged-dodge">
+						<span class="defense-title">Ranged Dodge</span>
+						<span class="roll">
+							<span class="dice"></span> + <span class="bonus"></span>
+						</span>
+						<span class="detail-row speed-row"><span class="icon speed-icon"></span>Speed cost <span class="detail">3</span></span>
+					</a>
+				</div>
+				<div id="attacks" class="sheet-section">
+					<h3>Attacks</h3>
+				</div>
+				<div id="combat-skills" class="sheet-section">
+					<h3>Combat Skills</h3>
+				</div>
+				
+				<div id="combatNotes" class="sheet-section notes">
+					<h3>Combat Notes</h3>
+					<a id="edit-combat-notes" class="button long edit-notes">Edit</a>
+					<a id="save-combat-notes" class="button long finish save-notes">Save</a>
+					<div class="row notes-wrap"></div>
+					<textarea class="notes-input"></textarea>
+				</div>
+				
+			</div> <!-- end #combat-view -->
+			
+			<div id="status-view" class="view">
+				
+				<div id="status" class="sheet-section">
+					<h3>Status</h3>
+					<div id="woundmax" class="row wound-max  STM-tint color">
+						<span class="desc-title">Wound Max</span>
+						<span class="detail"></span>
+					</div>
+					<div id="endurance" class="row regen STM-tint color">
+						<span class="desc-title">Endurance</span>
+						<span class="detail"><a id="regen-minus" class="button">-</a><span style="display:none;" class="notice regen-alert"></span><span class="current-regen"></span> / <span class="max-regen"></span><a id="regen-plus" class="button">+</a></span>
+					</div>
+				</div> <!--end #status div -->
+				
+				<div id="wounds" class="sheet-section">
+					<h3>Body</h3>
+					<div id="upper" class="body-row STM-tint color">
+						<span class="body-title-wrap">
+							<span class="desc-title">5: Upper Body</span>
+						</span>
+						<div class="row-controller">
+							<a id="5wound" class="button wound">Wound</a>
+							<a id="5heal" class="button heal">Heal</a>
+						</div>
+						<span class="current-wounds">0</span>
+						<div class="wound-dots">
+							<span class="wounded dot-row"></span><span class="disabled dot-row"></span><span class="destroyed dot-row"></span>
+						</div>
+						<div class="armor-row detail-row color">
+							<span class="armor-title"></span>
+							<div class="armor-value-row detail-row">Armor<span class="armor-value detail"></span></div>
+							<div class="penalty detail-row" style="display:none;">Perception Penalty</div>
+						</div>
+					</div>
+					<div id="lower" class="body-row STM-tint color">
+						<span class="body-title-wrap">
+							<span class="desc-title">4: Lower Body</span>
+						</span>
+						<div class="row-controller">
+							<a id="4wound" class="button wound">Wound</a>
+							<a id="4heal" class="button heal">Heal</a>
+						</div>
+						<span class="current-wounds">0</span>
+						<div class="wound-dots">
+							<span class="wounded dot-row"></span><span class="disabled dot-row"></span><span class="destroyed dot-row"></span>
+						</div>
+						<div class="armor-row detail-row color">
+							<span class="armor-title"></span>
+							<div class="armor-value-row detail-row">Armor<span class="armor-value detail"></span></div>
+							<div class="penalty detail-row" style="display:none;">Agility Penalty</div>
+						</div>
+					</div>
+					<div id="main" class="body-row STM-tint color">
+						<span class="body-title-wrap">
+							<span class="desc-title">3: Main Arm</span>
+						</span>
+						<div class="row-controller">
+							<a id="3wound" class="button wound">Wound</a>
+							<a id="3heal" class="button heal">Heal</a>
+						</div>						
+						<span class="current-wounds">0</span>
+						<div class="wound-dots">
+							<span class="wounded dot-row"></span><span class="disabled dot-row"></span><span class="destroyed dot-row"></span>
+						</div>
+						<div class="armor-row detail-row color">
+							<span class="armor-title"></span>
+							<div class="armor-value-row detail-row">Armor<span class="armor-value detail"></span></div>
+							<div class="penalty detail-row" style="display:none;">Finesse Penalty</div>
+						</div>
+					</div>
+					<div id="off" class="body-row STM-tint color">
+						<span class="body-title-wrap">
+							<span class="desc-title">2: Off Arm</span>
+						</span>
+						<div class="row-controller">
+							<a id="2wound" class="button wound">Wound</a>
+							<a id="2heal" class="button heal">Heal</a>
+						</div>
+						<span class="current-wounds">0</span>
+						<div class="wound-dots">
+							<span class="wounded dot-row"></span><span class="disabled dot-row"></span><span class="destroyed dot-row"></span>
+						</div>
+						<div class="armor-row detail-row color">
+							<span class="armor-title"></span>
+							<div class="armor-value-row detail-row">Armor<span class="armor-value detail"></span></div>
+							<div class="penalty detail-row" style="display:none;">Off Arm Finesse Penalty</div>
+						</div>
+					</div>
+					<div id="legs" class="body-row STM-tint color">
+						<span class="body-title-wrap">
+							<span class="desc-title">1: Legs</span>
+						</span>
+						<div class="row-controller">
+							<a id="1wound" class="button wound">Wound</a>
+							<a id="1heal" class="button heal">Heal</a>
+						</div>
+						<span class="current-wounds">0</span>
+						<div class="wound-dots">
+							<span class="wounded dot-row"></span><span class="disabled dot-row"></span><span class="destroyed dot-row"></span>
+						</div>
+						<div class="armor-row detail-row color">
+							<span class="armor-title"></span>
+							<div class="armor-value-row detail-row">Armor<span class="armor-value detail"></span></div>
+							<div class="penalty detail-row" style="display:none;">Speed Penalty 1</div>
+						</div>
+					</div>
+					<a class="row" id="edit-armor"><span>Edit Armor...</span></a>
+				</div> <!-- end #wounds -->
+
+				<div id="statusNotes" class="sheet-section notes">
+					<h3>Status Notes</h3>
+					<a id="edit-status-notes" class="button long edit-notes">Edit</a>
+					<a id="save-status-notes" class="button long finish save-notes">Save</a>
+					<div class="row notes-wrap"></div>
+					<textarea class="notes-input"></textarea>
+				</div>
+
+			</div> <!-- end #status-view-->
+			
+			<div id="styles-view" class="view">
+
+				<div id="classes" class="sheet-section">
+					<h3>Style Classes</h3>
+					<div id="style-class-list"></div>
+				</div>
+
+				<div id="arcane" class="sheet-section">
+					<h3>Arcane Styles</h3>
+					<div class="row style-hide">Invest in Willpower, Charisma, or Intelligence specialty styles to unlock arcane styles.</div>
+				</div>
+				
+				<div id="styleNotes" class="sheet-section notes">
+					<h3>Style Notes</h3>
+					<a id="edit-style-notes" class="button long edit-notes">Edit</a>
+					<a id="save-style-notes" class="button long finish save-notes">Save</a>
+					<div class="row notes-wrap"></div>
+					<textarea class="notes-input"></textarea>
+				</div>
+				
+			</div> <!-- end #styles-view -->
+
+			<div id="artifacts-view" class="view">
+				<div id="cast" class="sheet-section">
+					<h3>Installed Cast Functions</h3>
+					<a id="edit-cast" class="row edit cast">Edit cast functions...</a>
+				</div>
+
+				<div id="components" class="sheet-section">
+					<h3>Component Artifacts</h3>
+					<div id="component-list"></div>
+					<a id="new-artifact" class="row edit-cast">Add new artifact...</a>
+				</div>
+
+				<div id="artifactNotes" class="sheet-section notes">
+					<h3>Other Equipment</h3>
+					<a id="edit-artifact-notes" class="button long edit-notes">Edit</a>
+					<a id="save-artifact-notes" class="button long finish save-notes">Save</a>
+					<div class="row notes-wrap"></div>
+					<textarea class="notes-input"></textarea>
+				</div>
+			</div> <!-- end #artifacts-view -->
+			
+			<div class="clear"></div>
+			
+		</div> <!-- end #container -->
+	</div> <!-- end #container-overflow -->
+
+	<div id="monitor">
+		<span class="button toggler"></span>
+		<div id="monitor-inner">
+			<span id="dice-roller"></span>
+			<div id="speed-mon" class="monitor-row">
+				<div class="labels">
+					<span class="trait-name">Speed</span>
+					<span class="current"></span>/<span class="total"></span>
+					<span class="notice" style="display:none;"></span>
+				</div>
+				<div class="controls">
+					<a id="new-round" class="new-round button">New Round</a>
+					<a class="speed-minus button">-</a>
+					<a class="speed-plus button">+</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div id="crisis-mon" class="monitor-row">
+				<div class="labels">
+					<span class="trait-name">Entanglement</span>
+					<span class="current"></span>/<span class="total"></span>
+				</div>
+				<div class="controls">
+					<a class="crisis-minus button">-</a>
+					<a class="crisis-plus button">+</a>
+				</div>
+				<div class="clear"></div>
+			</div>
+		</div>
+	</div> <!-- end #monitor -->
+	
+	<div id="results">
+		<div class="die-results"></div>
+		<div class="roll-totals"></div>
+		<div class="total-result"></div>
+		<div class="location-results">
+			<div class="location-hit"></div>
+			<div class="critical"></div>
+		</div>
+		<div class="damage-results">
+			<div class="dam-die-results"></div>
+			<div class="dam-roll-totals"></div>
+			<div class="dam-total-result"></div>
+		</div>
+		<div class="no-speed alert"></div>
+	</div><!-- end #results -->
+
+</div> <!-- end #character-sheet -->
+
+<div id="modal-shade"></div>
+<div id="modal"></div>
+
+</body>
+</html>
