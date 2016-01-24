@@ -1227,9 +1227,14 @@ function sheetPrep(characterClicked) {
 		$('#speed-mon .speed-plus').addClass('dim');
 	}
 	$('#speed-mon .current').empty().append(character.status.currentSpeed);
-	$('#crisis-mon .total').empty().append(styledWil + (character.styles.classes.Willpower.spec1[1] * 3) + styledGuts + 3);
+	if (character.styles.classes.Charisma.spec1[1] > 1) {
+		//cha/wil entanglement swap from Analyze Cascade rank 2
+		$('#crisis-mon .total').empty().append(styledCha + (character.styles.classes.Willpower.spec1[1] * 3) + styledGuts + 3);
+	} else {
+		$('#crisis-mon .total').empty().append(styledWil + (character.styles.classes.Willpower.spec1[1] * 3) + styledGuts + 3);
+	}
 	$('#crisis-mon .current').empty().append(character.status.currentEntanglement);
-	if (character.status.currentEntanglement > (styledWil + (character.styles.classes.Willpower.spec1[1] * 3) + styledGuts + 3)) {
+	if (character.status.currentEntanglement > parseInt($('#crisis-mon .total').text())) {
 		$('#crisis-mon .labels').addClass('alert');
 	}
 
