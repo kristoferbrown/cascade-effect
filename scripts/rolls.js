@@ -802,9 +802,20 @@ function monHold(event) {
 		}
 	} else if (event.currentTarget.id === 'crisis-mon') {
 		if (character.styles.classes.Willpower.spec1[1] > 0) {
-			$('#modal h3').after('<p class="etymology">Willpower: '+styledWil+' + Guts: '+$('#Guts').first().find('.point').not('.empty').length+' + <em>Entanglement</em> Style: '+(character.styles.classes.Willpower.spec1[1]*3)+'+ 3 = '+$('#crisis-mon .total').text()+'</p>');
+			//character has Entanglement+
+			if (character.styles.classes.Charisma.spec1[1] > 1) {
+				//character has Analyze Cascade 2
+				$('#modal h3').after('<p class="etymology">Charisma: '+styledCha+' + Guts: '+$('#Guts').first().find('.point').not('.empty').length+' + <em>Entanglement</em> Style: '+(character.styles.classes.Willpower.spec1[1]*3)+'+ 3 = '+$('#crisis-mon .total').text()+'</p>');			
+			} else {
+				$('#modal h3').after('<p class="etymology">Willpower: '+styledWil+' + Guts: '+$('#Guts').first().find('.point').not('.empty').length+' + <em>Entanglement</em> Style: '+(character.styles.classes.Willpower.spec1[1]*3)+'+ 3 = '+$('#crisis-mon .total').text()+'</p>');
+			}			
 		} else {
-			$('#modal h3').after('<p class="etymology">Willpower: '+styledWil+' + Guts: '+$('#Guts').first().find('.point').not('.empty').length+' + 3 = '+$('#crisis-mon .total').text()+'</p>');
+			if (character.styles.classes.Charisma.spec1[1] > 1) {
+				//character has Analyze Cascade 2
+				$('#modal h3').after('<p class="etymology">Charisma: '+styledCha+' + Guts: '+$('#Guts').first().find('.point').not('.empty').length+' + 3 = '+$('#crisis-mon .total').text()+'</p>');
+			} else {
+				$('#modal h3').after('<p class="etymology">Willpower: '+styledWil+' + Guts: '+$('#Guts').first().find('.point').not('.empty').length+' + 3 = '+$('#crisis-mon .total').text()+'</p>');
+			}
 		}
 	}
 	$('#modal, #modal-shade').show();
