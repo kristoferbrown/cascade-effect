@@ -282,6 +282,7 @@
 					<p><strong>Rank 3</strong> grants the following capabilities:
 						<ul>
 							<li><strong>Detect Anomaly</strong>: You can immediately tell if anything you see originates from, or is manipulated from, somewhere outside of natural physical space. This ability can detect if something came from a different worldline, was assembled by Yau based entity, is controlled <em>Surrogate Proxy</em>, <em>Delegate Proxy</em>, or <em>Telethesia</em>, was created by <em>Coalesce Avatar</em> or <em>Propagate Avatar</em>, or has an otherwise unnatural origin.</li>
+							<li><strong>Eavesdrop</strong>: Anytime someone uses the style <em>Ally Communication</em> or the style <em>Telethesia</em> within a kilometer you will immediately become aware of the identities of the participants and, if you wish, the content of the information being transmitted. This ability does not allow you to modify or participate in the any communication that you happen to overhear.</li>
 							<li><strong>Enstylization Quotient</strong>: You can tell just by looking at someone how many styles they have and what style class they have the most ranks in.</li>
 							<li><strong>Predict Event</strong>: You can predict roughly where and when the next cascade event or worldline incursion within a few kilometers will occur, as well as what the nature of the event will be.</li>
 						</ul>
@@ -370,18 +371,19 @@
 
 		<div class="section" id="aux-styles">
 			<h4>Auxiliary Styles</h4>
-			<p>Auxiliary styles have requirements as to what auxiliary nodes they can fit into. Each one will list the style classes and minimum tier that it is available to. For example, if an auxiliary style's availability is listed as "Wits Tier 1 or Charisma Tier 2," then it can be slotted into any auxiliary node in the Wits style class and the 2nd or 3rd tier node in the Charisma style class.</p>
-			<p>Many of these styles also list a prerequisite style that you must have ranks in before you can acquire that style. If the prerequisite lists a style but not a rank, you just need at least one rank in it, but if it lists a specific rank you must have at least that many ranks in the prerequisite.</p>
-			<p>Unless the description says otherwise auxiliary styles cannot be acquired more than once.</p>
+			<p>Auxiliary nodes are unlocked by buying the first rank of each tier of a core style. Each auxiliary node can either be used to improve one of the skills related to the style or to acquire an auxiliary style.</p>
+			<p>Each auxiliary style has availability requirements that dictate what style classes and tiers can acquire them. For example, if an auxiliary style's availability is listed as "Wits tier 1 or Charisma tier 2," then it can be slotted into any auxiliary node of the Wits style class and the 2nd or 3rd tier node of the Charisma style class.</p>
+			<p>Many auxiliary styles also have a prerequisite style that you must have ranks in before you can acquire that style. If the prerequisite lists a style but not a rank, you just need at least one rank in it, but if it lists a specific rank you must have at least that many ranks in the prerequisite.</p>
+			<p>Unless the description says otherwise, auxiliary styles cannot be acquired more than once.</p>
 
 			<div class="section sub-section aux-style" id="Ally_percent_20Communication-desc">
 				<h4>Ally Communication<br>
-				<small><strong>Availability:</strong> Wits Tier 1 or Charisma Tier 1</small></h4>
+				<small><strong>Availability:</strong> Wits tier 1 or Charisma tier 1</small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/ally-communication.svg" class="block-image style-track"></p>
-				<p>You can communicate telepathically with other willing participants. This style can be taken more than once and all ranks you have in it add together to determine your total rank. Additionally, some other styles provide bonuses that count as ranks of <em>Ally Communication</em>, your total number of ranks in this style and those bonuses stack together to determine your capability with this style. For example, you could take this style once and max it out at 3 ranks, take it again and put 1 rank into it, and have 2 other styles that grant bonus ranks; this would add up to 6 total ranks in this style.</p>
-				<p>Activating this style costs a point of entanglement and it stays active for the rest of the scene. Choose the participants when activating this style, these participants stay in telepathic contact with you and each other for the full duration of the effect. Different participants cannot be chosen without reactivating the effect. Telepathic communication occurs at the same speed and bandwidth of normal speech.</p>
+				<p>You can spend a point of Entanglement as a free action to enable telepathic communication between willing participants. Choose the participants when activating this style, these participants stay in telepathic contact with you and each other for the rest of the scene. Different participants cannot be chosen without activating the effect again. Telepathic communication occurs at the same speed and bandwidth of normal speech. Telepathic communication is undetectable by all means other than the Eavesdrop ability granted by the style <em>Analyze Cascade</em>.</p>
+				<p>This style can be taken more than once and all ranks you have in it add together to determine your total rank. Additionally, some other styles provide bonuses that count as ranks of Ally Communication, your total number of ranks in this style and those bonuses stack together to determine your capability with this style. For example, you could take this style once and max it out at 3 ranks, take it again and put 1 rank into it, and have 2 other styles that grant bonus ranks; this would add up to 6 total ranks in this style.</p>
 				<p><strong>Rank 1:</strong> You can communicate telepathically with a person within 3 spaces of you.</p>
-				<p><strong>Rank 2:</strong> You and up to 3 people that you can currently see can communicate.</p>
+				<p><strong>Rank 2:</strong> You and up to 3 people that you can currently see can communicate telepathically.</p>
 				<p><strong>Rank 3:</strong> You and up to 6 people that are within 3 kilometers of you can communicate telepathically.</p>
 				<p><strong>Rank 4:</strong> You and up to 9 people that are within 30 kilometers of you can communicate telepathically.</p>
 				<p><strong>Rank 5:</strong> You and up to 12 people that are within 300 kilometers of you can communicate telepathically.</p>
@@ -393,64 +395,64 @@
 
 			<div class="section sub-section aux-style" id="Blink-desc">
 				<h4>Blink<br>
-				<small><strong>Availability:</strong> Willpower Tier 2<br>
+				<small><strong>Availability:</strong> Willpower tier 2<br>
 				<strong>Prerequisite:</strong> <em>Sublimation rank 5</em></small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/blink.svg" class="block-image style-track"></p>
-				<p>This style allows you to spend a point of Entanglement to quickly enter the Yau, move, and then exit the Yau in a different space. Traveling to any space within range of this style is a combat action with a speed cost of three, however, if you travel a greater number of spaces than your current speed you must use a full action. Anything you can pass through while in the Yau you can pass through when using this action. Using this style requires you to recover briefly, because of this you can not use it more than once every 3 rounds.</p>
-				<p><strong>Rank 1:</strong> The maximum distance traveled using this style is 3 spaces.</p>
-				<p><strong>Rank 2:</strong> The maximum distance you can teleport with this style is equal to your Perception score + 3.</p>
-				<p><strong>Rank 3:</strong> You can now travel to any space you can see with this style.</p>
+				<p>This style allows you to spend a point of Entanglement to quickly enter the Yau, move, and then exit the Yau in a different space. Teleporting in this manner allows you to move to any space within range as a combat action with a speed cost of 3.  Using this style requires you to recover briefly, because of this you can not use it more than once per round.</p>
+				<p><strong>Rank 1:</strong> You can teleport within a range equal to 3 plus your <strong>Charisma</strong> score. You cannot teleport through walls or obstacles.</p>
+				<p><strong>Rank 2:</strong> You can teleport within a range equal to 6 plus double your <strong>Charisma</strong> score. You can teleport through any obstacle that your ranks in <em>Sublimation</em> would allow you to pass through while in the Yau.</p>
+				<p><strong>Rank 3:</strong> You can teleport within a range equal to 6 plus double your <strong>Charisma</strong> score. Once you teleport, you cannot be targeted by anyone until after your next turn (even if you opt not to act on your next turn).</p>
 			</div>
 
 			<div class="section sub-section aux-style" id="Combat_percent_20Healing-desc">
 				<h4>Combat Healing<br>
-				<small><strong>Availability:</strong> Willpower Tier 2, Charisma Tier 2, or Wits 2<br>
+				<small><strong>Availability:</strong> Willpower tier 2, Charisma tier 2, or Wits tier 2<br>
 				<strong>Prerequisites</strong>: <em>Heal</em></small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/combat-heal.svg" class="block-image style-track"></p>
 				<p class="centered"><img src="images/style-desc/auxiliary/heal.svg" class="block-image style-track"></p>
 				<p>This style improves the speed and flexibility of the style <em>Heal</em>.</p>
 				<p><strong>Rank 1:</strong> Using <em>Heal</em> on yourself or others is a combat action that costs 6 speed. You no longer need to touch the target you heal, but they must still be adjacent to you.</p>
 				<p><strong>Rank 2:</strong> Using <em>Heal</em> on yourself or others is a combat action that costs 4 speed. You can heal anyone within 3 spaces of you.</p>
-				<p><strong>Rank 3:</strong> Using <em>Heal</em> on yourself or others is a combat action that costs 3 speed. You can heal anyone within a number of spaces equal to your Perception + 3.</p>
+				<p><strong>Rank 3:</strong> Using <em>Heal</em> on yourself or others is a combat action that costs 3 speed. You can heal anyone within a number of spaces equal to 3 plus your <strong>Charisma</strong>.</p>
 			</div>		
 
 			<div class="section sub-section aux-style" id="Diffuse_percent_20Regeneration-desc">
 				<h4>Diffuse Regeneration<br>
-				<small><strong>Availability:</strong> Tier 1 Stamina<br>
+				<small><strong>Availability:</strong> Stamina tier 1<br>
 				<strong>Prerequisites</strong>: <em>Regeneration</em></small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/diffuse-regeneration.svg" class="block-image style-track"></p>
 				<p class="centered"><img src="images/style-desc/auxiliary/heal.svg" class="block-image style-track"></p>
-				<p>This style allows you to share the effects of <em>Regeneration</em> with those nearby. If you spend a point of entanglement to activate this style, then the next time you would heal damage due to <em>Regeneration</em> everyone, be they friend or foe, that has remained close enough to you for the entire time you spent healing heals the same amount you do. For example, if you have 2 ranks in <em>Regeneration</em>, then everyone that spends an entire minute near you will heal at the end of that minute. Activating this style in combat is a combat action with a speed cost of 2.</p>
-				<p><strong>Rank 1:</strong> Healing is shared with anyone that spends the entire healing interval adjacent to you.</p>
-				<p><strong>Rank 2:</strong> Healing is shared with anyone that spends the entire healing interval within 3 spaces of you.</p>
-				<p><strong>Rank 3:</strong> Healing is shared with anyone that spends the entire healing interval in a reasonably sized room with you.</p>
+				<p>This style allows you to share the effects of <em>Regeneration</em> with those nearby. Spending a point of Entanglement to activate this style is a combat action with a speed cost of 1. When you do activate it, everyone within range of you, be they friend of foe, will now also heal the same amount you do the next time your healing interval would cause you to heal. When you activate this style, anyone in the process of bleeding to death in range immediately stabilizes.</p>
+				<p><strong>Rank 1:</strong> Your next healing interval is shared with anyone adjacent to you. They must stay adjacent from when you from when you activate this style until the healing interval ends to receive the healing.</p>
+				<p><strong>Rank 2:</strong> Your next healing interval is shared with anyone within 3 spaces of you. Once you activate this style, anyone affected by it may leave the affected area and still receive healing the next time your healing interval ends.</p>
+				<p><strong>Rank 3:</strong> Your next healing interval is shared with anyone within 9 spaces of you. Once you activate this style, anyone that does not leave the affected area will continue to heal every time your healing interval ends. </p>
 			</div>
 
 			<div class="section sub-section aux-style" id="Evasion-desc">
 				<h4>Evasion<br>
-				<small><strong>Availability:</strong> Agility Tier 1</small></h4>
+				<small><strong>Availability:</strong> Agility tier 1</small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/evasion-flash-strike.svg" class="block-image style-track"></p>
-				<p>This style lets you focus on defense for a round while using a point of entanglement to improve your defensive capabilities. Until rank 3 using this style is a full round action with a speed cost equal to your current speed. Any time you do this action you may also move a number of spaces equal to the amount of speed you spent.</p>
-				<p><strong>Rank 1</strong>: After activating this style as a full action add your <strong>Agility</strong> score to your passive defense rating for the rest of the round.</p>
-				<p><strong>Rank 2</strong>: In addition to the passive defense bonus, while this style is active anyone attempting to target you with an attack must spend an extra point of speed to do so.</p>
-				<p><strong>Rank 3</strong>: As per rank 2 of this style, however, at this rank activating this style is a combat action. Spend any amount of speed greater than 3 to move that many spaces and gain the effects of this style for the rest of the round. In addition, until the end of the round whenever you are hit with an attack you can spend extra speed as a free action to decrease the severity of the attack. Each extra point of speed you spend this way either decreases the critical hit level by one or lets you adjust the location where you were hit by one. You must decide if you wish to do this after the location and critical level was rolled but before the damage roll.</p>
+				<p>This style lets you focus on defense for a round while using a point of Entanglement to improve your defensive capabilities. Until rank 2, using this style is a full action with a speed cost equal to your current speed. Any time you use this action you may also move a number of spaces equal to the amount of speed you spent.</p>
+				<p><strong>Rank 1</strong>: Activating this style adds your <strong>Agility<strong> score to your passive defense rating for the rest of the round.</p>
+				<p><strong>Rank 2</strong>: Activating this style is now a move action. Spend any amount of speed greater than 3 to move up to that many spaces and gain the effects of this style. All effects last either until the round ends or until you take any action other than a move action or a defensive action. While this style is active, anyone attempting to target you with an attack must spend an extra point of Speed to do so.</p>
+				<p><strong>Rank 3</strong>: If you are hit with an attack while this style is active you can spend any amount of Speed and/or Entanglement to decrease the severity of the attack. Each point you spend this way either decreases the critical hit level by one or lets you adjust the location where you were hit by one. This adjustment is made after the attack has been completely rolled and all location adjustments the attacker scored have been factored in.</p>
 			</div>
 
 			<div class="section sub-section aux-style" id="Evocation_percent_20Extensibility-desc">
 				<h4>Evocation Extensibility<br>
-				<small><strong>Availability:</strong> Willpower Tier 1 or Charisma Tier 2<br>
+				<small><strong>Availability:</strong> Willpower tier 1 or Charisma tier 2<br>
 				<strong>Prerequisite:</strong> <em>Evocation</em></small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/evocation-extensibility.svg" class="block-image style-track"></p>
-				<p>You can spend extra Entanglement when making an evocation attack to increase the damage output, and at higher ranks the range and radius, of the attack. You can spend multiple points at once to increase range, radius, damage or all three, but each individual point only increases just the range, just the radius, or just the damage. The more Entanglement you spend to enhance an Evocation attack the more loud and noticeable it becomes.</p>
+				<p>You can spend extra Entanglement when making an evocation attack to increase its damage output, and at higher ranks its range or radius. You can spend multiple points at once to increase range, radius, damage, or all three, but each individual point only increases just the range, just the radius, or just the damage. The more Entanglement you spend to enhance an Evocation attack the more flashy, loud, and noticeable it becomes.</p>
 				<p>The maximum number of extra points of Entanglement that you can spend to extend a single evocation attack is equal to your <strong>Willpower</strong> score.</p>
-				<p><strong>Rank 1:</strong> Each extra point of Entanglement you spend when making an evocation attack increases the damage by 1+1.</p>
-				<p><strong>Rank 2:</strong> Each extra point of Entanglement you spend when making an evocation attack increases the damage by 2+2. Additionally, you can spend extra Entanglement to increase the range within which you can target people with the attack instead of the damage. Each extra point spent on range doubles the previous range; normally the range is 3, 1 extra point doubles it to 6, 2 extra points doubles again to 12, 3 points to 24, and so on.</p>
-				<p><strong>Rank 3:</strong> Each extra point of Entanglement you spend when making an evocation attack increases the damage by 3+3. Additionally, you can spend extra Entanglement to increase the radius effected by the attack. Spending 1 extra point causes the attack to effect everything in a space, spending 2 would also effect all adjacent spaces, spending 3 would increase the effect to cover all spaces adjacent to the spaces effected by 2 points, and so on. All targets in the effected area are dealt the same amount of damage to all bodily locations. Make one damage roll for the attack and divide the damage evenly by the number of bodily locations, 5. Always round up if this does not divide evenly, for example, if you make a damage roll of 2 would round up to 1 point of damage dealt to all locations, 5 would divide evenly to 2 points per location, and 13 would round up to 3 points per location.</p>
+				<p><strong>Rank 1:</strong> Each extra point of Entanglement you spend when making an evocation attack increases the damage by <strong>1+1</strong>.</p>
+				<p><strong>Rank 2:</strong> Each extra point of Entanglement you spend when making an evocation attack increases the damage by <strong>2+2</strong>. Additionally, you can spend Entanglement to increase the range within which you can target people with the attack instead of the damage. Each extra point spent on range doubles the previous range. For example, if your normal the range is 3, 1 extra point doubles it to 6, 2 extra points doubles again to 12, 3 points to 24, and so on.</p>
+				<p><strong>Rank 3:</strong> Each extra point of Entanglement you spend when making an evocation attack increases the damage by <strong>3+3</strong>. Additionally, you can spend extra Entanglement to increase the radius of the attack. The radius of the attack is equal to the amount of Entanglement you spend. All targets inside the radius are dealt the same amount of damage to all bodily locations. Make one damage roll for the attack and divide the damage evenly by the number of bodily locations, 5. Always round up if this does not divide evenly, for example, if you make a damage roll of 3 would round up to 1 point of damage dealt to all locations, 10 would divide evenly into 2 points per location, and 13 would round up to 3 points per location.</p>
 			</div>
 
 			<div class="section sub-section aux-style" id="Filter-desc">
 				<h4>Filter<br>
-				<small><strong>Availability:</strong> Willpower Tier 1<br>
+				<small><strong>Availability:</strong> Willpower tier 1<br>
 				<strong>Prerequisite:</strong> <em>Abjuration</em></small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/filter-ward-extensibility.svg" class="block-image style-track"></p>
 				<p>Your can spend extra Entanglement to add filtering properties to the barriers you make. Each rank lets you specify certain things that are either the only things that can pass through the barrier or the only things that are blocked by the barrier. This filter cannot directly cause damage, if a blocked object is inside an object that can pass the two objects are both blocked. If you have any ranks in this style you can also choose if your barrier is visible or invisible when creating it.</p>
@@ -461,7 +463,7 @@
 
 			<div class="section sub-section aux-style" id="Flash_percent_20Strike-desc">
 				<h4>Flash Strike<br>
-				<small><strong>Availability:</strong> Agility Tier 1</small></h4>
+				<small><strong>Availability:</strong> Agility tier 1</small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/evasion-flash-strike.svg" class="block-image style-track"></p>
 				<p>This style lets you dash to and strike a target so fast that it appears as if you vanished from one spot and appeared in another. Doing so is an action that costs a point of entanglement and acts as an improved version of the charge action, however the range of the charge is limited to a number of spaces equal to your Agility.</p>
 				<p><strong>Rank 1</strong>: When using a flash strike action the speed cost of the action is equal to the speed cost of the melee attack you make at the end of the charge, regardless of how many spaces you had to cross to get to the target.</p>
@@ -471,14 +473,14 @@
 			
 			<div class="section sub-section aux-style" id="Focus_percent_20Strike-desc">
 				<h4>Focus Strike<br>
-				<small><strong>Availability:</strong> Strength Tier 1 or Willpower Tier 2</small></h4>
+				<small><strong>Availability:</strong> Strength tier 1 or Willpower tier 2</small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/focus-strike.svg" class="block-image style-track"></p>
 				<p>This style lets spend a point of Entanglement when making a melee or unarmed attack to improve it's damage output. Make a normal melee or unarmed attack and add 1 die per rank you have in this style to the damage roll if using a melee weapon, or add 1 automatic success per rank you have in this style to the damage roll if it is an unarmed attack.</p>
 			</div>
 
 			<div class="section sub-section aux-style" id="function_oparen_Cast_cloparen_-desc">
 				<h4>function(Cast)<br>
-				<small><strong>Availability:</strong> Intelligence Tier 2<br>
+				<small><strong>Availability:</strong> Intelligence tier 2<br>
 				<strong>Prerequisites</strong>: <em>function(Primary)</em></small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/function-secondary-cast.svg" class="block-image style-track"></p>
 				<p class="centered"><img src="images/style-desc/auxiliary/function.svg" class="block-image style-track"></p>
@@ -490,7 +492,7 @@
 
 			<div class="section sub-section aux-style" id="function_oparen_Primary_cloparen_-desc">
 				<h4>function(Primary)<br>
-				<small><strong>Availability:</strong> Intelligence Tier 1<br>
+				<small><strong>Availability:</strong> Intelligence tier 1<br>
 				<strong>Prerequisites</strong>: One rank of <em>Analyze Cascade</em></small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/function-primary.svg" class="block-image style-track"></p>
 				<p class="centered"><img src="images/style-desc/auxiliary/function.svg" class="block-image style-track"></p>
@@ -504,7 +506,7 @@
 
 			<div class="section sub-section aux-style" id="function_oparen_Secondary_cloparen_-desc">
 				<h4>function(Secondary)<br>
-				<small><strong>Availability:</strong> Intelligence Tier 2<br>
+				<small><strong>Availability:</strong> Intelligence tier 2<br>
 				<strong>Prerequisites</strong>: <em>function(Primary)</em></small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/function-secondary-cast.svg" class="block-image style-track"></p>
 				<p class="centered"><img src="images/style-desc/auxiliary/function.svg" class="block-image style-track"></p>
@@ -516,7 +518,7 @@
 
 			<div class="section sub-section aux-style" id="Heal-desc">
 				<h4>Heal<br>
-				<small><strong>Availability:</strong> Willpower Tier 1 or Charisma Tier 1<br>
+				<small><strong>Availability:</strong> Willpower tier 1 or Charisma tier 1<br>
 				<strong>Prerequisites</strong>: <em>Regeneration</em></small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/heal-availability.svg" class="block-image style-track"></p>
 				<p class="centered"><img src="images/style-desc/auxiliary/heal.svg" class="block-image style-track"></p>
@@ -526,7 +528,7 @@
 
 			<div class="section sub-section aux-style" id="Healing_percent_20Field-desc">
 				<h4>Healing Field<br>
-				<small><strong>Availability:</strong> Willpower Tier 2 or Charisma Tier 2<br>
+				<small><strong>Availability:</strong> Willpower tier 2 or Charisma tier 2<br>
 				<strong>Prerequisites</strong>: <em>Heal</em></small></small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/combat-healing-field.svg" class="block-image style-track"></p>
 				<p class="centered"><img src="images/style-desc/auxiliary/heal.svg" class="block-image style-track"></p>
@@ -538,7 +540,7 @@
 
 			<div class="section sub-section aux-style" id="Leadership-desc">
 				<h4>Leadership<br>
-				<small><strong>Availability:</strong> Wits Tier 1 or Charisma Tier 1</small></h4>
+				<small><strong>Availability:</strong> Wits tier 1 or Charisma tier 1</small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/leadership.svg" class="block-image style-track"></p>
 				<p>You can analyze tactical situations and command your allies into advantageous situations. You can use a combat action with a speed cost of 3 to shout out a command to your allies.</p>
 				<p><strong>Rank 1:</strong> When issuing a command choose 1 ally and 1 enemy. This ally is considered to be flanking the enemy for the rest of the current round and the next round. Alternatively, you can issue a command to advance or delay an ally or an enemy's turn in the initiative order by a one slot for the rest of combat. For example a character acting second each turn could be changed to be acting either first or third in every turn.</p>
@@ -548,7 +550,7 @@
 			
 			<div class="section sub-section aux-style" id="Occult_percent_20Spectra-desc">
 				<h4>Occult Spectra<br>
-				<small><strong>Availability:</strong> Perception Tier 1</small></h4>
+				<small><strong>Availability:</strong> Perception tier 1</small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/occult-spectra.svg" class="block-image style-track"></p>
 				<p>Each rank of this style functions the same as the sensory powers granted by the first rank of a different one of each of the three arcane styles <em>Chromodynamism</em>, <em>Electromagnetism</em>, and <em>Gravitonertia</em>. However, when you spend a point of Entanglement to activate this style you gain the sensory benefits of all of the ranks you have at once. These extra senses remain available to you for the rest of the scene.</p>
 				<p><strong>Rank 1:</strong> When activating this style you gain the senses described in the first rank of the style <em>Electromagnetism</em> allowing you to sense the entire electromagnetic spectrum.</p>
@@ -558,7 +560,7 @@
 			
 			<div class="section sub-section aux-style" id="Regeneration-desc">
 				<h4>Regeneration<br>
-				<small><strong>Availability:</strong> Willpower Tier 1 or Charisma Tier 1</small></h4>
+				<small><strong>Availability:</strong> Willpower tier 1 or Charisma tier 1</small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/regeneration.svg" class="block-image style-track"></p>
 				<p class="centered"><img src="images/style-desc/auxiliary/heal.svg" class="block-image style-track"></p>
 				<p>This style is equivalent to Stamina's tier 3 specialty style, <em>Regeneration</em>. Either version of this style fulfils the same prerequisites.</p>
@@ -569,7 +571,7 @@
 
 			<div class="section sub-section aux-style" id="Retrogradient-desc">
 				<h4>Retrogradient<br>
-				<small><strong>Availability:</strong> Stamina Tier 1</small></h4>
+				<small><strong>Availability:</strong> Stamina tier 1</small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/retrogradient.svg" class="block-image style-track"></p>
 				<p>This style allows you to use a defensive action with a speed cost of 1 and an Entanglement cost of 1 to project a defensive field around yourself that lowers the damage of incoming attacks. The greater the distance an attack has to travel through this field the more it's damage is reduced. Due to this effect ranged attacks are reduced much more than others.</p>
 				<p><strong>Rank 1:</strong> This action lowers the damage of the incoming ranged or ballistics attack by 1 point.</p>
@@ -579,7 +581,7 @@
 			
 			<div class="section sub-section aux-style" id="Stealth_percent_20Attacks-desc">
 				<h4>Stealth Attacks<br>
-				<small><strong>Availability:</strong> Finesse Tier 1 or Wits Tier 1</small></h4>
+				<small><strong>Availability:</strong> Finesse tier 1 or Wits tier 1</small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/stealth-attacks.svg" class="block-image style-track"></p>
 				<p>Normally stealth attacks simply deal an extra 1+1 damage, with this style they deal more damage, are more precise, and can be done at greater range.</p>
 				<p><strong>Rank 1:</strong> Your stealth attack actions deal 2+1 extra damage. When using one you may opt not make a location roll and instead decide the location that was hit, but doing so prevents you from scoring critical hits.</p>
@@ -589,7 +591,7 @@
 			
 			<div class="section sub-section aux-style" id="Sublimation_percent_20Storage-desc">
 				<h4>Sublimation Storage<br>
-				<small><strong>Availability:</strong> Willpower Tier 1 or Intelligence Tier 2<br>
+				<small><strong>Availability:</strong> Willpower tier 1 or Intelligence tier 2<br>
 				<strong>Prerequisite:</strong> <em>Sublimation</em></small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/sublimation-storage.svg" class="block-image style-track"></p>
 				<p>This style lets you store more things in the Yau and retrieve them faster. Retrieving an item puts it where you need it to be for you to immediately use it, for example a weapon would appear in your hand or a garment would appear already worn on your body.</p>
@@ -600,7 +602,7 @@
 			
 			<div class="section sub-section aux-style" id="Ward_percent_20Extensibility-desc">
 				<h4>Ward Extensibility<br>
-				<small><strong>Availability:</strong> Willpower Tier 1<br>
+				<small><strong>Availability:</strong> Willpower tier 1<br>
 				<strong>Prerequisite:</strong> <em>Abjuration</em></small></h4>
 				<p class="centered"><img src="images/style-desc/auxiliary/filter-ward-extensibility.svg" class="block-image style-track"></p>
 				<p>You can spend extra Entanglement when creating a barrier to increase its durability, duration, or size. You can spend multiple points at once to durability, duration, size, or all three, but each individual point only increases just the durability, just the duration, or just the size. There is no limit to the number of extra points of Entanglement that you can spend on a single barrier.</p>
@@ -641,7 +643,7 @@
 				<h4>Evocation </h4>
 				<p class="centered"><img src="images/style-desc/arcane/evocation.svg" class="block-image style-track"></p>
 				<p>Unlocked by Willpower.</p><p>This style can be enhanced by the auxiliary style <em>Evocation Extensibility</em>.</p>
-				<p>This style allows you to use a combat action that costs 1 point of Entanglement to execute an evocation attack that blasts the target with a torrent of energy. This attack can target any enemy you can see within 3 spaces and always hits the target in the bodily location of your choice, but cannot critical. You cannot be hurt by you own evocation attacks but an ally can be.</p>
+				<p>This style allows you to use a combat action that costs 1 point of Entanglement to execute an evocation attack that blasts the target with a torrent of energy. This attack can target any enemy you can see within either 3 spaces or a number of spaces equal to your <strong>Charisma</strong> score (whichever is greater). Evocation attacks always hit their target in the bodily location of your choice, but cannot critical. You cannot be hurt by you own evocation attacks but an ally can be.</p>
 				<p>The cosmetic appearance of evocation attacks is different for every character, when first acquiring this style decide what your character's evocation attacks look like. Whether your evocation attacks are subtle or flashy, the higher the rank of this style you are using the more noticeable the attack is. It may be possible discretely use a rank 1 or 2 evocation attack, but the rank 8 or 9 version is always loud, overt, and impossible to hide.</p>
 				<p>When doing an evocation attack you can decide what rank you want to use. In order to make the use of this style less noticeable, you can opt to use this style at the damage output of any of the ranks lower than the highest rank you possess. Doing so still utilizes the improved speed and range of the any higher ranks you have.</p>
 				<h5>Tier 1: Evocation Attacks</h5>
@@ -663,7 +665,7 @@
 			<div class="section sub-section style-class" id="sublimation">
 				<h4>Sublimation</h4>
 				<p class="centered"><img src="images/style-desc/arcane/sublimation.svg" class="block-image style-track"></p>
-				<p>Unlocked by Willpower.</p><p>This style can be enhanced by the auxiliary style <em>Sublimation Storage</em>.</p>
+				<p>Unlocked by Willpower.</p><p>This style can be enhanced by the auxiliary styles <em>Sublimation Storage</em> and <em>Blink</em>.</p>
 				<p>This style allows you to enter the Yau; a parallel realm that mirrors normal space. Unless listed otherwise, all Yau related actions take a minute of concentration cannot be done in combat. Entering the Yau costs 1 point of Entanglement. While in the Yau you can pass through objects that are mobile (crowds, traffic) but not stationary objects (walls, infrequently used doors). The effects of this style can be enhanced with the auxiliary styles <em>Blink</em> and <em>Sublimation Storage</em>.</p>
 				
 				<h5>Tier 1: Access Yau</h5>
