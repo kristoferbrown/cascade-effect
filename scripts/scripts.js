@@ -69,13 +69,15 @@ window.onhashchange = function(event) {
 
 //setting up all click handlers that can be set up on document ready
 function addListeners() {
-	$('.character-row').tap(function(){
+	$('.character-row').click(function(event){
 		$("#character-sheet").css("pointer-events", "none");
 		sheetPrep(this);
 		clearTimeout(modalTimer);
 		modalTimer = setTimeout(function(){
 			$("#character-sheet").css("pointer-events", "auto");
 		}, 200);
+	}).children('.unmodal').click(function(){
+		return false;
 	});
 	$('#new-character').click(function(){
 		beginCharacterCreation();

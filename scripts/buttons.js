@@ -1100,7 +1100,7 @@ function charHold(event) {
 	$('#char-unmodal').append('<a class="row delete-character" id="delete-' + charID + '">Delete Character</a>');
 	$('#char-unmodal').append('<a class="cancel-char-taphold button cancel close-options bottom-corners long">Hide Options</a>');
 	$('#modal').append('<a class="cancel-char-taphold button cancel long">Close</a>');
-	$('.cancel-char-taphold').tap(function(event){
+	$('.cancel-char-taphold').click(function(event){
 		event.stopPropagation();
 		$('#char-unmodal').slideUp();
 		$('#modal').empty().hide();
