@@ -70,14 +70,7 @@ window.onhashchange = function(event) {
 //setting up all click handlers that can be set up on document ready
 function addListeners() {
 	$('.character-row').click(function(event){
-		$("#character-sheet").css("pointer-events", "none");
-		sheetPrep(this);
-		clearTimeout(modalTimer);
-		modalTimer = setTimeout(function(){
-			$("#character-sheet").css("pointer-events", "auto");
-		}, 200);
-	}).children('.unmodal').click(function(){
-		return false;
+		startSheetPrep(event.currentTarget);
 	});
 	$('#new-character').click(function(){
 		beginCharacterCreation();
@@ -399,4 +392,13 @@ function modalHidden(which) {
 	} else if (which === 'results' && window.location.hash.indexOf('/results') > 0) {
 		window.location.hash = window.location.hash.substr(0, window.location.hash.lastIndexOf("/results"));
 	}
+}
+
+function startSheetPrep(clicked) {
+	$("#character-sheet").css("pointer-events", "none");
+	sheetPrep(clicked);
+	clearTimeout(modalTimer);
+	modalTimer = setTimeout(function(){
+		$("#character-sheet").css("pointer-events", "auto");
+	}, 200);
 }

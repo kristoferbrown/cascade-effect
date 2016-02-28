@@ -1090,24 +1090,22 @@ function editArmorFinish(location) {
 }
 
 function charHold(event) {
-	event.stopPropagation();
 	var charID = event.currentTarget.id,
 		characterToEdit = characters[charID];
 	$('#char-unmodal').remove();
 	$('#modal').empty();
-	$('#character-list #'+charID).append('<div class="unmodal" id="char-unmodal" style="display:none;"></div>');
-	$('#char-unmodal').append('<a class="row export-character" id="export-' + charID + '">Export Character</a>');
+	$('#character-list #'+charID).slideUp().after('<div class="unmodal" id="char-unmodal" style="display:none;"></div>');
+	$('#char-unmodal').append('<h4>'+$('#character-list #'+charID+' .character-row-name').text()+' Options</h4><a class="row export-character" id="export-' + charID + '">Export Character</a>');
 	$('#char-unmodal').append('<a class="row delete-character" id="delete-' + charID + '">Delete Character</a>');
 	$('#char-unmodal').append('<a class="cancel-char-taphold button cancel close-options bottom-corners long">Hide Options</a>');
 	$('#modal').append('<a class="cancel-char-taphold button cancel long">Close</a>');
 	$('.cancel-char-taphold').click(function(event){
-		event.stopPropagation();
 		$('#char-unmodal').slideUp();
+		$('#character-list #'+charID).slideDown();
 		$('#modal').empty().hide();
 	});
 	
 	$('#char-unmodal .delete-character').click(function(event){
-		event.stopPropagation();
 		$('#char-unmodal .delete-character').empty().append('Are you sure?<p>Click the Delete button to erase this character. You cannot undo this.</p>').append('<a class="button armed long really-delete floatright">Delete</a>');
 		$('#char-unmodal .delete-character .armed.really-delete').click(function(event){
 			deleteCharacter(charID);
@@ -1115,9 +1113,9 @@ function charHold(event) {
 	});
 	
 	$('#char-unmodal .export-character').click(function(event){
-		event.stopPropagation();
 		$('#char-unmodal').slideUp();
 		$('#modal .cancel-char-taphold').before('<textarea rows="8" cols="39" id="exported-character">' + JSON.stringify(characterToEdit) + '</textarea>');
+		$('#character-list #'+charID).slideDown();
 		$('#modal, #modal-shade').show();
 	});
 		
@@ -1127,7 +1125,7 @@ function charHold(event) {
 function deleteCharacter(charID) {
 	characters[charID] = {meta: {id: parseInt(charID), deleted: true}};
 	localStorage.characters = JSON.stringify(characters);
-	$('#character-list #' + charID + ', #modal, #modal-shade').css({ opacity: 0, transition: 'opacity 0.5s'}).slideUp();
+	$('#character-list #' + charID + ', #char-unmodal, #modal, #modal-shade').css({ opacity: 0, transition: 'opacity 0.5s'}).slideUp();
 }
 
 function editNotes(event) {

@@ -86,6 +86,7 @@ a.row {background:#fff; transition:all 0.3s ease;}
 .unmodal h3, #attk-unmodal h3, #dattk-unmodal h3 {font-size:16px;}
 .unmodal h4, #attk-unmodal h4, #dattk-unmodal h4 {font-size:16px; margin:12px 0;}
 .unmodal p, #attk-unmodal p, #dattk-unmodal p {font-size:12px;}
+.unmodal#char-unmodal {margin: 6px; padding: 6px; background: #eee;}
 .unmodal#char-unmodal p, .unmodal#custom-unmodal p {margin:6px;}
 .unmodal#char-unmodal .row, .unmodal#custom-unmodal .row {margin:6px;}
 
