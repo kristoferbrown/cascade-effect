@@ -52,10 +52,10 @@ var validator = 'valid',
 	newCharacter;
 
 characterPrototype.skills = {
-	Toughness:  ['Strength', 'STR', 0],
 	Stealth:    ['Finesse', 'FIN', 0],
 	Alertness:  ['Perception', 'PER', 0],
 	Investigate:['Perception', 'PER', 0],
+	Toughness:  ['Stamina', 'STM', 0],
 	Athletics:  ['Agility', 'AGI', 0],
 	Drive:      ['Wits', 'WIT', 0],
 	Survival:   ['Wits', 'WIT', 0],
@@ -75,11 +75,11 @@ characterPrototype.unrolledSkills = {
 };
 characterPrototype.combatSkills = {
 	Unarmed:    ['Strength', 'STR', 0],
-	Defense:    ['Finesse', 'FIN', 0],
 	Melee:      ['Finesse', 'FIN', 0],
 	Firearms:   ['Perception', 'PER', 0],
 	Ballistics: ['Perception', 'PER', 0],
-	Initiative: ['Wits', 'WIT', 0]	
+	Defense:    ['Agility', 'AGI', 0],
+	Initiative: ['Wits', 'WIT', 0]
 };
 characterPrototype.status = {
 	currentEndurance: 0,

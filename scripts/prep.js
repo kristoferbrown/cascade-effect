@@ -79,7 +79,7 @@ function rootPrep() {
 	} else if (settings.comskilllocation === undefined) {
 		settings.comskilllocation = 'combat-view';
 		localStorage.settings = JSON.stringify(settings);
-	}
+	}	
 	//theme audit, remove all but the first if statement after beta
 	if (settings.theme) {
 		if (settings.theme === 'paper') {$('body').addClass('paper');} else {$('#setting-theme .detail').toggleClass('paper slate');}
@@ -172,6 +172,13 @@ function sheetPrep(characterClicked) {
 	//test if character is deprecated, update character to current model if possible. delete these if statements when we go to beta
 	if (!character.status.body.upper.functions) {
 		alert('Womp womp, the character you loaded is deprecated and will no longer work properly. Reload the app and create a new character.');
+	}
+	if (character.skills.Toughness[0] === 'Strength') {
+		character.skills.Toughness[0] = 'Stamina';
+		character.skills.Toughness[1] = 'STM';
+		character.combatSkills.Defense[0] = 'Agility'
+		character.combatSkills.Defense[1] = 'AGI'
+		saveCharacterObject(false);
 	}
 	if (character.styles.classes.Willpower.spec2[0] === 'Unlock Arcana') {
 		//still has deprecated unlock arcana nodes, remove them
@@ -960,10 +967,11 @@ function sheetPrep(characterClicked) {
 			tinysort('div#skills>.row');
 		}
 	} else if (settings.comskilllocation === 'skill-view' || settings.comskilllocation === 'both') {
-		$('#skills #Unarmed').insertAfter('#skills #Toughness');
-		$('#skills #Defense, #skills #Melee').insertBefore('#skills #Stealth');
+		$('#skills #Unarmed').insertBefore('#skills #Stealth');
+		$('#skills #Melee').insertBefore('#skills #Stealth');
 		$('#skills #Ballistics').insertAfter('#skills #Alertness');
 		$('#skills #Firearms').insertBefore('#skills #Investigate');
+		$('#skills #Defense').insertAfter('#skills #Athletics');
 		$('#skills #Initiative').insertAfter('#skills #Drive');
 	}
 	if (settings.comskilllocation === 'skill-view') {
