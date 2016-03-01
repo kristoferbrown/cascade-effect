@@ -360,7 +360,8 @@ function listArcana(prep, trait, event) {
 		wilArray = ['','',''],
 		chaArray = ['','',''],
 		intArray = ['','',''],
-		castArcana;
+		castArcana,
+		refreshBinders = false;
 	
 	//set up arrays to append later
 	wilArray[0] = '<div style="display:none;" id="evocation" class="row Willpower-arcane no-dots arcane color WIL-tint">Evocation<span class="detail"><div class="hidden trait-value" style="display:none;">'+character.styles.arcane.evocation+'</div></span></div>';
@@ -426,15 +427,18 @@ function listArcana(prep, trait, event) {
 	//populate willpower arcana
 	if ($('#arcane .WIL-tint').length === 0) {
 		if (wilAvailable > 0 || trait === 'Willpower') {
+			refreshBinders = true;
 			$('#arcane').append(wilArray[0]);
 			$('#arcane').append(wilArray[1]);
 			$('#arcane').append(wilArray[2]);
 		} else if (prep && wilAvailable === 0) {
+			refreshBinders = true;
 			if (character.styles.arcane.evocation > 0) {$('#arcane').append(wilArray[0]);$('#evocation').addClass('permanent');}
 			if (character.styles.arcane.abjuration > 0) {$('#arcane').append(wilArray[1]);$('#abjuration').addClass('permanent');}
 			if (character.styles.arcane.sublimation > 0) {$('#arcane').append(wilArray[2]);$('#sublimation').addClass('permanent');}
 		}
 	} else if ($('#arcane .WIL-tint').length === 1 && nAvailable > 0) {
+		refreshBinders = true;
 		arcaneTrait = $('#arcane .'+trait+'-arcane').attr('id');
 		if (arcaneTrait === 'evocation') {
 			$('#evocation').after(wilArray[1]);
@@ -453,6 +457,7 @@ function listArcana(prep, trait, event) {
 			}
 		});
 	} else if ($('#arcane .WIL-tint').length === 2 && $(event.target).parent().children('.tentative').length === 0) {
+		refreshBinders = true;
 		if ($('#arcane #evocation').length === 0) {$('#arcane .Willpower-arcane').last().after(wilArray[0]);}
 		if ($('#arcane #abjuration').length === 0) {$('#arcane .Willpower-arcane').last().after(wilArray[1]);}
 		if ($('#arcane #sublimation').length === 0) {$('#arcane .Willpower-arcane').last().after(wilArray[2]);}
@@ -460,15 +465,18 @@ function listArcana(prep, trait, event) {
 	//populate intelligence arcana
 	if ($('#arcane .INT-tint').length === 0) {
 		if (intAvailable > 0 || trait === 'Intelligence') {
+			refreshBinders = true;
 			$('#arcane').append(intArray[0]);
 			$('#arcane').append(intArray[1]);
 			$('#arcane').append(intArray[2]);
 		} else if (prep && intAvailable === 0) {
+			refreshBinders = true;
 			if (character.styles.arcane.chromodynamism > 0) {$('#arcane').append(intArray[0]);$('#chromodynamism').addClass('permanent');}
 			if (character.styles.arcane.electromagnetism > 0) {$('#arcane').append(intArray[1]);$('#electromagnetism').addClass('permanent');}
 			if (character.styles.arcane.gravitonertia > 0) {$('#arcane').append(intArray[2]);$('#gravitonertia').addClass('permanent');}
 		}
 	} else if ($('#arcane .INT-tint').length === 1 && nAvailable > 0) {
+		refreshBinders = true;
 		arcaneTrait = $('#arcane .'+trait+'-arcane').attr('id');
 		if (arcaneTrait === 'chromodynamism') {
 			$('#chromodynamism').after(intArray[1]);
@@ -487,6 +495,7 @@ function listArcana(prep, trait, event) {
 			}
 		});
 	} else if ($('#arcane .INT-tint').length === 2 && $(event.target).parent().children('.tentative').length === 0) {
+		refreshBinders = true;
 		if ($('#arcane #chromodynamism').length === 0) {$('#arcane .Intelligence-arcane').last().after(intArray[0]);}
 		if ($('#arcane #electromagnetism').length === 0) {$('#arcane .Intelligence-arcane').last().after(intArray[1]);}
 		if ($('#arcane #gravitonertia').length === 0) {$('#arcane .Intelligence-arcane').last().after(intArray[2]);}
@@ -494,15 +503,18 @@ function listArcana(prep, trait, event) {
 	//populate charisma arcana
 	if ($('#arcane .CHA-tint').length === 0) {
 		if (chaAvailable > 0 || trait === 'Charisma') {
+			refreshBinders = true;
 			$('#arcane').append(chaArray[0]);
 			$('#arcane').append(chaArray[1]);
 			$('#arcane').append(chaArray[2]);
 		} else if (prep && chaAvailable === 0) {
+			refreshBinders = true;
 			if (character.styles.arcane.pneumaplegia > 0) {$('#arcane').append(chaArray[0]);$('#pneumaplegia').addClass('permanent');}
 			if (character.styles.arcane.schizosomata > 0) {$('#arcane').append(chaArray[1]);$('#schizosomata').addClass('permanent');}
 			if (character.styles.arcane.telethesia > 0) {$('#arcane').append(chaArray[2]);$('#telethesia').addClass('permanent');}
 		}
 	} else if ($('#arcane .CHA-tint').length === 1 && nAvailable > 0) {
+		refreshBinders = true;
 		arcaneTrait = $('#arcane .'+trait+'-arcane').attr('id');
 		if (arcaneTrait === 'pneumaplegia') {
 			$('#pneumaplegia').after(chaArray[1]);
@@ -521,51 +533,56 @@ function listArcana(prep, trait, event) {
 			}
 		});
 	} else if ($('#arcane .CHA-tint').length === 2 && $(event.target).parent().children('.tentative').length === 0) {
+		refreshBinders = true;
 		if ($('#arcane #pneumaplegia').length === 0) {$('#arcane .Charisma-arcane').last().after(chaArray[0]);}
 		if ($('#arcane #schizosomata').length === 0) {$('#arcane .Charisma-arcane').last().after(chaArray[1]);}
 		if ($('#arcane #telethesia').length === 0) {$('#arcane .Charisma-arcane').last().after(chaArray[2]);}
 	}
 	//add buttons and dots to each arcane row
-	$.each($('#arcane .row'), function( key, value ) {
-		//set up local vars to determine how many dots are available
-		var arcAttribute,
-			arcSpec2,
-			arcSpec3,
-			arcAvailable;
-		if ($(this).hasClass('Willpower-arcane')) {arcAttribute = 'Willpower';}
-		else if ($(this).hasClass('Intelligence-arcane')) {arcAttribute = 'Intelligence';}
-		else {arcAttribute = 'Charisma';}
-		arcSpec2 = parseInt($('#'+arcAttribute+'-spec2 .detail .trait-value').text());
-		arcSpec3 = parseInt($('#'+arcAttribute+'-spec3 .detail .trait-value').text());
-		arcAvailable = arcSpec2 * 3;
-		if (arcSpec3 > arcSpec2) {arcAvailable = arcSpec3 * 3;} else {arcAvailable = arcSpec2 * 3;}
-		
-		//remove old elements so we can update relist them with updated availability
-		$(this).children('.detail').children('.button').remove();
-		$(this).children('.detail').children('.point').remove();
-		
-		//relist dots and buttons
-		$(this).children('.detail').append('<a class="button minus dead-slide">-</a>');
-		for (var i = 0; i < 9; i++) {
-			if (i < character.styles.arcane[$(this).attr('id')]) {
-				$(this).children('.detail').append('<span class="filled point"></span>');
-			} else if (i < parseInt($(this).children('.detail').children('.hidden').text())) {
-				$(this).children('.detail').append('<span class="tentative filled point"></span>');
-			} else if (i < arcAvailable) {
-				$(this).children('.detail').append('<span class="empty point"></span>');
-			} else {
-				$(this).children('.detail').append('<span class="unavailable empty point"></span>');
+	if (refreshBinders) {
+		$.each($('#arcane .row'), function( key, value ) {
+			//set up local vars to determine how many dots are available
+			var arcAttribute,
+				arcSpec2,
+				arcSpec3,
+				arcAvailable;
+			if ($(this).hasClass('Willpower-arcane')) {arcAttribute = 'Willpower';}
+			else if ($(this).hasClass('Intelligence-arcane')) {arcAttribute = 'Intelligence';}
+			else {arcAttribute = 'Charisma';}
+			arcSpec2 = parseInt($('#'+arcAttribute+'-spec2 .detail .trait-value').text());
+			arcSpec3 = parseInt($('#'+arcAttribute+'-spec3 .detail .trait-value').text());
+			arcAvailable = arcSpec2 * 3;
+			if (arcSpec3 > arcSpec2) {arcAvailable = arcSpec3 * 3;} else {arcAvailable = arcSpec2 * 3;}
+			
+			//remove old elements so we can update relist them with updated availability
+			$(this).children('.detail').children('.button').remove();
+			$(this).children('.detail').children('.point').remove();
+			
+			//relist dots and buttons
+			$(this).children('.detail').append('<a class="button minus dead-slide">-</a>');
+			for (var i = 0; i < 9; i++) {
+				if (i < character.styles.arcane[$(this).attr('id')]) {
+					$(this).children('.detail').append('<span class="filled point"></span>');
+				} else if (i < parseInt($(this).children('.detail').children('.hidden').text())) {
+					$(this).children('.detail').append('<span class="tentative filled point"></span>');
+				} else if (i < arcAvailable) {
+					$(this).children('.detail').append('<span class="empty point"></span>');
+				} else {
+					$(this).children('.detail').append('<span class="unavailable empty point"></span>');
+				}
 			}
-		}
-		$(this).children('.detail').append('<a class="button plus dead-slide">+</a>');
-		$(this).removeClass('no-dots');
-	});
+			$(this).children('.detail').append('<a class="button plus dead-slide">+</a>');
+			$(this).removeClass('no-dots');
+		});
+	}
 	
 	if (!prep) {
 		$('.dead-slide').addClass('alive');
-		$('#styles-view .button.dead-slide').off().tap(function(event) {
-			adjustStyle(event);
-		});
+		if (refreshBinders) {
+			$('#styles-view .button.dead-slide').off().tap(function(event) {
+				adjustStyle(event);
+			});
+		}
 		$('.aux-customize').off().click(function(event){
 			customizeAux(event);
 		});
