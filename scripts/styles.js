@@ -171,7 +171,11 @@ function adjustStyle(event) {
 
 		//its an empty aux node, reset it instead of decrementing
 		if (tentativeCurrent === 0 && charCurrent === 0 && $(event.currentTarget).parent().parent().hasClass('aux-row')) {
-			$(event.currentTarget).parent().parent().parent().append('<div id="'+$(event.currentTarget).parent().parent().attr('id')+'" class="row aux-row color '+trait+'-shade"><span class="aux-label">Auxiliary Node</span><a class="long detail aux-customize button">Customize</a></div>');
+			if ($(event.currentTarget).parent().parent().hasClass('retroactive')) {
+				$(event.currentTarget).parent().parent().parent().append('<div id="'+$(event.currentTarget).parent().parent().attr('id')+'" class="row aux-row retroactive color '+trait+'-shade"><span class="aux-label">Auxiliary Node</span><a class="long detail aux-customize button">Customize</a></div>');
+			} else {
+				$(event.currentTarget).parent().parent().parent().append('<div id="'+$(event.currentTarget).parent().parent().attr('id')+'" class="row aux-row color '+trait+'-shade"><span class="aux-label">Auxiliary Node</span><a class="long detail aux-customize button">Customize</a></div>');
+			}
 			$(event.currentTarget).parent().parent().remove();
 			if ($(event.currentTarget).parent().parent().hasClass('has-requirements')) {
 				$('#'+event.target.parentElement.parentElement.className.split('requires-')[1].split(' ')[0]).removeClass('is-required');
@@ -728,7 +732,7 @@ function customizeAux(event) {
 		$('#aux-unmodal').slideUp();
 		styleTimer = setTimeout(styleCleanUp, 300);
 	});
-	$('#aux-unmodal .row.aux-custom').tap(function(){
+	$('#aux-unmodal .row.aux-custom').off().click(function(){
 		$('#style-unmodal').remove()
 		$('#aux-'+trait+'-'+tier).children('.aux-label').attr('id', encodeInput($(this).text())).text($(this).text());
 		$('#aux-'+trait+'-'+tier).children('.button').remove();
@@ -739,7 +743,7 @@ function customizeAux(event) {
 		} else if ($(this).hasClass('aux-style')) {
 			$('#aux-'+trait+'-'+tier).addClass('aux-style');
 		}
-		$('#aux-'+trait+'-'+tier).addClass('retroactive').append('<span class="detail"><span class="hidden trait-value" style="display:none;">0</span><a class="button minus dead-slide">-</a><span class="empty point"></span><span class="empty point"></span><span class="empty point"></span><a class="button plus dead-slide">+</a></span>');
+		$('#aux-'+trait+'-'+tier).append('<span class="detail"><span class="hidden trait-value" style="display:none;">0</span><a class="button minus dead-slide">-</a><span class="empty point"></span><span class="empty point"></span><span class="empty point"></span><a class="button plus dead-slide">+</a></span>');
 		$('#styles-view .button.dead-slide').off().tap(function(event) {
 			adjustStyle(event);
 		});
