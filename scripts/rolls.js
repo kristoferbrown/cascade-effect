@@ -9,7 +9,9 @@ function roll(clicked, manualDice, manualBonus, event) {
 		currentAmmo,
 		newAmmo,
 		explode = false,
-		doubleAttack = false;
+		doubleAttack = false,
+		reroll = false,
+		damReroll;
 	
 	//reset containers
 	$('#results').finish();
@@ -159,24 +161,22 @@ function roll(clicked, manualDice, manualBonus, event) {
 				//$('#results .die-results').append(dieResult);
 			}
 		} else {
-			for (var i = 0; i < dice; i++) {	
+			for (var i = 1; i <= dice; i++) {	
 				var dieResult = Math.floor(Math.random()* 6)+1;
-		
-				if ((i+1) < dice && dieResult > 3) {
-					$('#results .die-results').append('<span class="dice-result-icon die-value-'+ dieResult +'"></span>');
-					//$('#results .die-results').append('<strong>'+ dieResult +'</strong>, ');		
-				} else if ((i+1) < dice) {
-					$('#results .die-results').append('<span class="dice-result-icon die-value-'+ dieResult +'"></span>');
-					//$('#results .die-results').append(dieResult +', ');
-				} else if (dieResult > 3) {
-					$('#results .die-results').append('<span class="dice-result-icon die-value-'+ dieResult +'"></span>');
-					//$('#results .die-results').append('<strong>'+ dieResult +'</strong>');		
-				} else {
-					$('#results .die-results').append('<span class="dice-result-icon die-value-'+ dieResult +'"></span>');
-					//$('#results .die-results').append(dieResult);
-				}
+				//show die
+				$('#results .die-results').append('<span class="dice-result-icon die-value-'+ dieResult +'"></span>');
+				//increment success tally
 				if (dieResult > 3) {
 					rolledSuccesses++;
+				}
+				//did a 6 explode
+				if (dieResult === 6) {
+					reroll = true;
+				}
+				//it's the last die and we earned a reroll, add another die and disable reroll
+				if (i === dice && reroll) {
+					dice++;
+					reroll = false;
 				}
 			}
 		}
@@ -251,24 +251,21 @@ function attackRoll(clicked, event) {
 	}
 
 	// roll damage dice and append values to results container
-	for (var i = 0; i < damDice; i++) {
+	for (var i = 1; i <= damDice; i++) {
 		var damDieResult = Math.floor(Math.random()* 6)+1;
 		
-		if ((i+1) < damDice && damDieResult > 3) {
-			//$('#results .dam-die-results').append('<strong>'+ damDieResult +'</strong>, ');
-			$('#results .dam-die-results').append('<span class="dice-result-icon die-value-'+ damDieResult +'"></span>');
-		} else if ((i+1) < damDice) {
-			//$('#results .dam-die-results').append(damDieResult +', ');
-			$('#results .dam-die-results').append('<span class="dice-result-icon die-value-'+ damDieResult +'"></span>');
-		} else if (damDieResult > 3) {
-			//$('#results .dam-die-results').append('<strong>'+ damDieResult +'</strong>');
-			$('#results .dam-die-results').append('<span class="dice-result-icon die-value-'+ damDieResult +'"></span>');
-		} else {
-			//$('#results .dam-die-results').append(damDieResult);
-			$('#results .dam-die-results').append('<span class="dice-result-icon die-value-'+ damDieResult +'"></span>');
-		}
+		$('#results .dam-die-results').append('<span class="dice-result-icon die-value-'+ damDieResult +'"></span>');
 		if (damDieResult > 3) {
 			damRolledSuccesses++;
+		}
+		//did a 6 explode
+		if (damDieResult === 6) {
+			damReroll = true;
+		}
+		//it's the last die and we earned a reroll, add another die and disable reroll
+		if (i === damDice && damReroll) {
+			damDice++;
+			damReroll = false;
 		}
 	}
 
@@ -345,10 +342,14 @@ function explosiveRoll(clicked, dice, bonus) {
 		damageBonus = parseInt($(clicked).children('.damage-row').children().children('.bonus').text()),
 		normalToHitResult = bonus,
 		normalDamResult = damageBonus,
+		normalReroll = false,
+		normalDamReroll = false,
 		splashDice = dice + bonus,
 		splashDamage =  damageDice + damageBonus,
 		splashToHitResult = 0,
-		splashDamResult = 0;
+		splashDamResult = 0,
+		splashReroll = false,
+		splashDamReroll = false;
 	if ($(clicked).children('.attack-keyword-list').children('#light-explosive-desc-taphold').length > 0) {light = true;}
 	$('#modal').empty().append('<div id="explode-results"></div>');
 	//set up full zone if needed
@@ -356,24 +357,56 @@ function explosiveRoll(clicked, dice, bonus) {
 		$('#modal #explode-results').append('<div id="full-damage-zone" class="zone-wrapper"><h3>Full Damage Zone</h3><span class="full-dam-total-result full-zone"><span class="total">'+splashDamage+'</span> damage</span></div>');
 	}
 	//compute rolls
-	for (var i = 0; i < dice; i++) {	
-		if ((Math.floor(Math.random()* 6)+1) > 3) {
+	for (var i = 1; i <= dice; i++) {
+		var thisRollResult = Math.floor(Math.random()* 6)+1;
+		if (thisRollResult > 3) {
 			normalToHitResult++;
 		}
+		if (thisRollResult === 6) {
+			normalReroll = true;
+		}
+		if (i === dice && normalReroll) {
+			dice++;
+			normalReroll = false;
+		}
 	}
-	for (var i = 0; i < damageDice; i++) {	
-		if ((Math.floor(Math.random()* 6)+1) > 3) {
+	for (var i = 1; i <= damageDice; i++) {	
+		var thisRollResult = Math.floor(Math.random()* 6)+1;
+		if (thisRollResult > 3) {
 			normalDamResult++;
 		}
-	}
-	for (var i = 0; i < splashDice; i++) {	
-		if ((Math.floor(Math.random()* 6)+1) > 3) {
-			splashToHitResult++;
+		if (thisRollResult === 6) {
+			normalDamReroll = true;
+		}
+		if (i === damageDice && normalDamReroll) {
+			damageDice++;
+			normalDamReroll = false;
 		}
 	}
-	for (var i = 0; i < splashDamage; i++) {	
-		if ((Math.floor(Math.random()* 6)+1) > 3) {
+	for (var i = 1; i <= splashDice; i++) {	
+		var thisRollResult = Math.floor(Math.random()* 6)+1;
+		if (thisRollResult > 3) {
+			splashToHitResult++;
+		}
+		if (thisRollResult === 6) {
+			splashReroll = true;
+		}
+		if (i === splashDice && splashReroll) {
+			splashDice++;
+			splashReroll = false;
+		}
+	}
+	for (var i = 1; i <= splashDamage; i++) {	
+		var thisRollResult = Math.floor(Math.random()* 6)+1;
+		if (thisRollResult > 3) {
 			splashDamResult++;
+		}
+		if (thisRollResult === 6) {
+			splashDamReroll = true;
+		}
+		if (i === splashDamage && splashDamReroll) {
+			splashDamage++;
+			splashDamReroll = false;
 		}
 	}
 	//append results
