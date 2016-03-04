@@ -175,6 +175,9 @@ function roll(clicked, manualDice, manualBonus, event) {
 				}
 				//it's the last die and we earned a reroll, add another die and disable reroll
 				if (i === dice && reroll) {
+					if ($('#results .die-results hr').length === -0) {
+						$('#results .die-results').append('<hr class="reroll-rule"><span class="reroll-label">Rerolls:</span>');
+					}
 					dice++;
 					reroll = false;
 				}
@@ -238,7 +241,8 @@ function attackRoll(clicked, event) {
 		rolledLocation,
 		criticalLevel = 0,
 		damRolledSuccesses = 0,
-		damRollResults = 0;
+		damRollResults = 0,
+		damReroll = false;
 	
 	$('.total-result .tohit').remove();
 	$('.total-result').prepend('<span class="icon tohit"></span>');
@@ -264,6 +268,9 @@ function attackRoll(clicked, event) {
 		}
 		//it's the last die and we earned a reroll, add another die and disable reroll
 		if (i === damDice && damReroll) {
+			if ($('#results .dam-die-results hr').length === -0) {
+				$('#results .dam-die-results').append('<hr class="reroll-rule"><span class="reroll-label">Rerolls:</span>');
+			}
 			damDice++;
 			damReroll = false;
 		}

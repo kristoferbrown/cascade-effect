@@ -427,7 +427,7 @@ a.row {background:#fff; transition:all 0.3s ease;}
 #monitor.hidden .toggler:after {content:"show +";}
 #monitor.hidden {transform:none!important; -webkit-transform:none!important; bottom:0!important;}
 
-#results {display:none; position:fixed; left:20%; top:100px; padding:1.5%; width:60%; border:1px solid #ccc; z-index:999; text-align:center; border-radius:5px; background:#fff; box-shadow:0 3px 24px 8px #000;}
+#results {display:none; position:fixed; left:20%; top:10%; padding:1.5%; width:60%; border:1px solid #ccc; z-index:999; text-align:center; border-radius:5px; background:#fff; box-shadow:0 3px 24px 8px #000;}
 #results h4, .double-result h4:nth-child(odd) {margin: 0; font-size: 20px; background: #222; color: #fff; padding: 6px 0; max-height: 42px; overflow: hidden;}
 #results .die-results, #results .dam-die-results, #modal .die-results, #modal .dam-die-results {padding:10px 0 0 0; text-align:center; font-size:14px; color:#ccc;}
 #results .die-results strong, #results .dam-die-results strong, #modal .die-results strong, #modal .dam-die-results strong {color:#666;}
@@ -439,8 +439,10 @@ a.row {background:#fff; transition:all 0.3s ease;}
 #results .zero-att-penalty, #modal .zero-att-penalty {font-size:11px; color:#f00;}
 #results .spray-results {font-size:12px; text-align:left; color:#666;}
 #results .spray-results strong {color:#000;}
+#results hr.reroll-rule {border:none;}
+#results .reroll-label {vertical-align:middle;}
 .damage-results.bordered {border-top:1px solid #ccc; margin:6px 0 0 0;}
-.dice-result-icon {display:inline-block; width:24px; height:24px;}
+.dice-result-icon {display:inline-block; width:24px; height:24px; vertical-align:middle;}
 .dice-result-icon.die-value-1 {background:url(../images/die1.svg) no-repeat center center; background-size:contain;}
 .dice-result-icon.die-value-2 {background:url(../images/die2.svg) no-repeat center center; background-size:contain;}
 .dice-result-icon.die-value-3 {background:url(../images/die3.svg) no-repeat center center; background-size:contain;}
