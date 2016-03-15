@@ -384,21 +384,18 @@ function listArcana(prep, trait, event) {
 	if (character.styles.arcane.evocation > 0){wilAvailable--;}
 	if (character.styles.arcane.abjuration > 0){wilAvailable--;}
 	if (character.styles.arcane.sublimation > 0){wilAvailable--;}
-	//if (castArcana === 'Evocation' || castArcana === 'Abjuration' || castArcana === 'Sublimation'){wilAvailable++;}
 	
 	if (character.styles.classes.Charisma.spec2[1] > 0){chaAvailable++;}
 	if (character.styles.classes.Charisma.spec3[1] > 0){chaAvailable++;}
 	if (character.styles.arcane.pneumaplegia > 0){chaAvailable--;}
 	if (character.styles.arcane.schizosomata > 0){chaAvailable--;}
 	if (character.styles.arcane.telethesia > 0){chaAvailable--;}
-	//if (castArcana === 'Pneumaplegia' || castArcana === 'Schizosomata' || castArcana === 'Telethesia'){chaAvailable++;}
 	
 	if (character.styles.classes.Intelligence.spec2[1] > 0){intAvailable++;}
 	if (character.styles.classes.Intelligence.spec3[1] > 0){intAvailable++;}
 	if (character.styles.arcane.chromodynamism > 0){intAvailable--;}
 	if (character.styles.arcane.electromagnetism > 0){intAvailable--;}
 	if (character.styles.arcane.gravitonertia > 0){intAvailable--;}
-	//if (castArcana === 'Chromodynamism' || castArcana === 'Electromagnetism' || castArcana === 'Gravitonertia'){intAvailable++;}
 	
 	totalAvailable =  wilAvailable + chaAvailable + intAvailable;	
 	
@@ -662,7 +659,7 @@ function customizeAux(event) {
 			Agility: {'aux':['Evasion', 'Flash Strike'],'skills':['Toughness','Athletics','Stealth','Drive'],'comSkills':['Defense','Initiative']},
 			Wits: {'aux':['Ally Communication', {'name':'Combat Healing','availability':2,'requirements':['Heal',1,'aux']}, 'Leadership', 'Stealth Attacks'],'skills':['Stealth','Investigate','Drive','Survival','Charm','Manipulate'],'comSkills':['Defense', 'Initiative']},
 			Willpower: {'aux':[{'name':'Blink','availability':2,'requirements':['sublimation',5,'arcane']},{'name':'Combat Healing','availability':2,'requirements':['Heal',1,'aux']},{'name':'Evocation Extensibility','availability':1,'requirements':['evocation',1,'arcane']},{'name':'Filter','availability':1,'requirements':['abjuration',1,'arcane']},{'name':'Focus Strike','availability':2},{'name':'Heal','availability':1,'requirements':['Stamina-spec3',1,'auxSpec','Regeneration']},{'name':'Healing Field','availability':2,'requirements':['Heal',1,'aux']},'Regeneration',{'name':'Sublimation Storage','availability':1,'requirements':['sublimation',1,'arcane']},{'name':'Ward Extensibility','availability':1,'requirements':['abjuration',1,'arcane']}],'skills':['Toughness','Guts','Survival'],'comSkills':[false]},
-			Intelligence: {'aux':[{'name':'function(Cast)','availability':2,'requirements':['function_oparen_Primary_cloparen_',1,'aux']},{'name':'function(Primary)','availability':1,'requirements':['Intelligence-spec1',1,'spec']},{'name':'function(Secondary)','availability':2,'requirements':['function_oparen_Primary_cloparen_',1,'aux']},{'name':'Sublimation Storage','availability':2,'requirements':['sublimation',1,'arcane']}],'skills':['Hardware','Humanities','Medicine','Science','Software','Survival','Languages'],'comSkills':[false]},
+			Intelligence: {'aux':[{'name':'Embed Cast','availability':2,'requirements':['Embed_percent_20Function',1,'aux']},{'name':'Embed Function','availability':1,'requirements':['Intelligence-spec1',1,'spec']},{'name':'Embed Parameter','availability':2,'requirements':['Embed_percent_20Function',1,'aux']},{'name':'Sublimation Storage','availability':2,'requirements':['sublimation',1,'arcane']}],'skills':['Hardware','Humanities','Medicine','Science','Software','Survival','Languages'],'comSkills':[false]},
 			Charisma: {'aux':['Ally Communication',{'name':'Combat Healing','availability':2,'requirements':['Heal',1,'aux']},{'name':'Evocation Extensibility','availability':2,'requirements':['evocation',1,'arcane']},{'name':'Heal','availability':1,'requirements':['Stamina-spec3',1,'auxSpec','Regeneration']},{'name':'Healing Field','availability':2,'requirements':['Heal',1,'aux']},'Leadership','Regeneration'],'skills':['Stealth','Investigate','Guts','Charm','Manipulate'],'comSkills':[false]}
 		};
 	auxList[trait].skills = auxList[trait].skills.concat(character.addenda.customSkills[trait]);
