@@ -160,6 +160,8 @@ a.row {background:#fff; transition:all 0.3s ease;}
 #rulebook-chapters .section.open .section {border-color:#888!important;}
 #rulebook-chapters .section.open .section.open .section {border-color:#aaa!important;}
 #rulebook-chapters .section.open .section.open .section.open .section {border-color:#ccc!important;}
+#rulebook-chapters .section .weapon-stat-table {position:relative; top:-3px; font-size:11px;}
+#rulebook-chapters .section .weapon-stat-table .weapon-stat {display: block;}
 
 #settings-view {display:none;}
 #settings-view .detail {display:block; width:30px; height:50px;}
