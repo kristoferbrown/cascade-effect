@@ -750,7 +750,7 @@ function customizeAux(event) {
 		$('#aux-'+trait+'-'+tier).children('.detail').children('.button.minus').empty().addClass('reset-node cancel');
 		//add requirement classes to the prereq styles and to the selected style
 		if ($(this).hasClass('has-requirements')) {
-			$(this).parent().parent().addClass($(this).attr('class'));
+			$(this).parent().parent().addClass($(this).attr('class')).removeClass('aux-custom');
 			if ($(this).hasClass('aux-requirements')) {
 				$('#'+this.className.split('requires-')[1].split(' ')[0]+'.aux-label').parent().addClass('is-required required-by-'+encodeInput($(this).text()));
 			} else if ($(this).hasClass('arcane-requirements') || $(this).hasClass('spec-requirements')) {

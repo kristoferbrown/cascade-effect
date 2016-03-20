@@ -389,7 +389,7 @@ a.row {background:#fff; transition:all 0.3s ease;}
 #styles-view .requirement-alert {clear: both; padding: 12px; margin: 24px 0 0 0; background-color: rgba(0,0,0,0.3);}
 #styles-view .requirement-alert:before {content: "!"; display: block; float: left; width: 30px; height: 25px; background-color: #f00; font-size: 20px; font-weight: bold; border-radius: 110px; text-align: center; padding: 5px 0 0 0; margin:-8px 0 0 -5px;}
 #styles-view .block-image.style-track {width: 110%; margin: 0 0 0 -5%; background: #fff;}
-#styles-view .aux-custom #style-unmodal {margin-top:6px;}
+#styles-view #style-unmodal {margin-top:12px;}
 
 #artifacts-view {position:absolute; left:600%; top:100px; width:100%;}
 #artifacts-view .row-label.primary {display:block; padding:3px 0 12px 0;}
