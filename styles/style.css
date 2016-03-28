@@ -494,7 +494,7 @@ a.row {background:#fff; transition:all 0.3s ease;}
 
 #reloading {text-align: center; margin: 75px 0 0 0; padding:0 0 200px 0; transform: skewY(-12deg); -webkit-transform: skewY(-12deg); font-size: 20px; background:url(../images/spinner.gif) no-repeat center bottom; background-size:190px;}
 
-body.print {background:url(../images/logo.svg) no-repeat 0 6px #fff; background-size:contain; margin-top:15%;}
+body.print {background:url(../images/logo.svg) no-repeat 0 6px #fff; background-size:contain; margin-top:15%; -webkit-user-select:text; -moz-user-select:text; user-select:text;}
 .print .print-guide {padding:12px;}
 .print p, .print ul, .print ol, .print table, .print h5, .print .section {display:block!important;}
 .print .chapter-text h4 {cursor:default!important;}
