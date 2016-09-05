@@ -639,11 +639,7 @@ function skillHold(skill) {
 			}
 			roll = roll + bonus;
 			bonus = 0;
-			if (defaultAtt) {
-				$('#skill-unmodal').append('<a class="row third modal-att-row invisible-att-row '+key+'-tint color '+key+'"><div class="manual-key">'+ key +'</div><div class="skillhold-roll">'+ roll +' + '+ bonus +'</div></a>');
-			} else {
-				$('#skill-unmodal').append('<a class="row third modal-att-row '+key+'-tint color '+key+'"><div class="manual-key">'+ key +'</div><div class="skillhold-roll">'+ roll +' + '+ bonus +'</div></a>');
-			}
+			$('#skill-unmodal').append('<a class="row third modal-att-row '+key+'-tint color '+key+'"><div class="manual-key">'+ key +'</div><div class="skillhold-roll">'+ roll +' + '+ bonus +'</div></a>');
 		});
 		$('.modal-att-row').click(function(event){
 			$('#skill-unmodal').hide();
