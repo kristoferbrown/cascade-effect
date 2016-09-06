@@ -689,7 +689,8 @@ body.colorful .color .detail-row {color:#eee!important;}
 body.colorful .color .point {background-color:#222; height:8px; width:8px; border:2px solid #fff;}
 body.colorful .color .point.tentative {background-color:#888; height:8px; width:8px; border:2px solid #fff;}
 body.colorful .color .point.empty {width:8px; height:8px; border:2px solid #fff; background-color:#fff;}
-
+body.colorful .color.row .section {color: #ddd!important;}
+body.colorful .color.row .section strong {color: #fff!important;}
 body.colorful #attributes {color:#fff!important;}
 body.colorful #character-sheet .row.color, body.colorful #character-sheet .body-row.color {color:#fff;}
 body.colorful #character-sheet .skill-row .skill-attribute-label {color:#fff;}
