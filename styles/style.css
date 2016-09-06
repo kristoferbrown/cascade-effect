@@ -6,6 +6,7 @@ h3 {margin:12px; padding:0; clear:both; text-align:left; font-size:18px;}
 h4 {margin:0 0 12px 0; font-size:16px;}
 h5 {font-size:14px;}
 a {color:inherit; text-decoration:none; cursor:pointer;}
+strong {-webkit-text-stroke: 0.1px; text-stroke: 0.1px;}
 .clear {clear:both; display:block;}
 .floatright {float:right!important;}
 .floatleft {float:left!important;}
@@ -105,7 +106,6 @@ a.row {background:#fff; transition:all 0.3s ease;}
 #root-menu #import-unmodal textarea {width:95%; margin:0 0 0 6px;}
 
 #rulebook-chapters .row:after {content:"+"; float:right;}
-#rulebook-chapters strong {text-shadow:0 0 0 #000;}
 #rulebook-chapters .inset {border:none!important; margin:12px!important; color:#fff;}
 #rulebook-chapters .inset h4 {color:#fff;}
 /*#rulebook-chapters .open {background:linear-gradient(#fff 40px,#222 160px);}*/
