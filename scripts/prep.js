@@ -257,6 +257,8 @@ function sheetPrep(characterClicked) {
 	if (character.status.body.upper.armor[1] === 3 && character.status.body.upper.functions.primary < 3) {styledPer--;}
 	if (character.status.body.lower.armor[1] === 3 && character.status.body.lower.functions.primary < 3) {styledAgi--;}
 	if (character.status.body.main.armor[1] === 3 && character.status.body.main.functions.primary < 3) {styledFin--;}
+	if (character.status.body.main.armor[1] === 2 && character.status.body.main.functions.primary < 3) {styledFin--;}
+	if (character.status.body.main.armor[1] === 3 && character.status.body.main.functions.primary < 3) {styledFin--;}
 	
 	//finalize att values
 	if (styledStr > 9) {techStr = styledStr - 9;styledStr = 9;}
@@ -1226,8 +1228,8 @@ function sheetPrep(characterClicked) {
 	if (styledSkills.skills.Guts){styledGuts = character.skills.Guts[2] + styledSkills.skills.Guts}
 	if (styledSkills.skills.Athletics){styledAthletics = character.skills.Athletics[2] + styledSkills.skills.Athletics}
 	if (styledAthletics === 1 || styledAthletics === 2) {athSpeed = 1} else if (styledAthletics === 3 || styledAthletics === 4) {athSpeed = 2} else if (styledAthletics > 4) {athSpeed = 3} else {athSpeed = 0}
-	if (character.status.body.legs.armor[1] >= 2 && character.status.body.legs.functions.primary < 3) {styledAthletics--;}
-	if (character.status.body.legs.armor[1] === 3 && character.status.body.legs.functions.primary < 3) {styledAthletics--;}
+	if (character.status.body.legs.armor[1] >= 2 && character.status.body.legs.functions.primary < 3) {athSpeed--;}
+	if (character.status.body.legs.armor[1] === 3 && character.status.body.legs.functions.primary < 3) {athSpeed--;}
 	$('#speed-mon .total').empty().append(styledAgi + (character.styles.classes.Agility.spec1[1] * 3) + athSpeed + 3);
 	if (parseInt($('#speed-mon .total').text()) < 3) {$('#speed-mon .total').empty().append('3')}
 	if (character.status.currentSpeed >= parseInt($('#speed-mon .total').text())) {
