@@ -11,7 +11,8 @@ function roll(clicked, manualDice, manualBonus, event) {
 		explode = false,
 		doubleAttack = false,
 		reroll = false,
-		damReroll;
+		damReroll,
+		lowAtt = false;
 	
 	//reset containers
 	$('#results').finish();
@@ -150,37 +151,29 @@ function roll(clicked, manualDice, manualBonus, event) {
 	
 	if (currentAmmo !== 'empty' && clicked.id !== 'evocation-attack' && clicked.id !== 'entropic-attack' && clicked.id !== 'photonic-attack' && clicked.id !== 'kinetic-attack' && !explode) {
 		// roll dice and append values to results container
-		if (dice === 0) {
+		if (dice <= 0) {
+			dice = 1;
+			lowAtt = true;
+		}
+		for (var i = 1; i <= dice; i++) {	
 			var dieResult = Math.floor(Math.random()* 6)+1;
-			if (dieResult > 4) {
-				//$('#results .die-results').append('<strong>'+ dieResult +'</strong>');
-				$('#results .die-results').append('<span class="dice-result-icon die-value-'+ dieResult +'"></span>');
+			//show die
+			$('#results .die-results').append('<span class="dice-result-icon die-value-'+ dieResult +'"></span>');
+			//increment success tally
+			if ((dieResult > 3 && lowAtt === false) || dieResult > 4) {
 				rolledSuccesses++;
-			} else {
-				$('#results .die-results').append('<span class="dice-result-icon die-value-'+ dieResult +'"></span>');
-				//$('#results .die-results').append(dieResult);
 			}
-		} else {
-			for (var i = 1; i <= dice; i++) {	
-				var dieResult = Math.floor(Math.random()* 6)+1;
-				//show die
-				$('#results .die-results').append('<span class="dice-result-icon die-value-'+ dieResult +'"></span>');
-				//increment success tally
-				if (dieResult > 3) {
-					rolledSuccesses++;
+			//did a 6 explode
+			if (dieResult === 6) {
+				reroll = true;
+			}
+			//it's the last die and we earned a reroll, add another die and disable reroll
+			if (i === dice && reroll) {
+				if ($('#results .die-results hr').length === -0) {
+					$('#results .die-results').append('<hr class="reroll-rule"><span class="reroll-label">Rerolls:</span>');
 				}
-				//did a 6 explode
-				if (dieResult === 6) {
-					reroll = true;
-				}
-				//it's the last die and we earned a reroll, add another die and disable reroll
-				if (i === dice && reroll) {
-					if ($('#results .die-results hr').length === -0) {
-						$('#results .die-results').append('<hr class="reroll-rule"><span class="reroll-label">Rerolls:</span>');
-					}
-					dice++;
-					reroll = false;
-				}
+				dice++;
+				reroll = false;
 			}
 		}
 		//populate results container
@@ -201,7 +194,7 @@ function roll(clicked, manualDice, manualBonus, event) {
 			$('#results .die-results').before('<h4>'+decodeInput($(clicked).attr('id'))+'</h4>');
 		}
 		if (clicked.id) {$('#results').removeClass().addClass('results-'+clicked.id);}
-		if (dice === 0) {$('#results .die-results').prepend('<div class="zero-att-penalty">Low Attribute Penalty!</div>');}
+		if (lowAtt) {$('#results .die-results').prepend('<div class="zero-att-penalty">Low Attribute Penalty!</div>');}
 		$('#results .roll-totals').append(rolledSuccesses +' rolled');
 		if (bonus != 0) { $('#results .roll-totals').append(' + '+ bonus +' bonus'); }
 		$('#results .total-result').append('<span class="total">'+ rollResults +'</span><br> total successes');
@@ -449,12 +442,12 @@ function attHold(event) {
 	if (event.currentTarget.id === 'Finesse' && character.status.body.main.armor[1] === 3) {armorPenalty = 1;}
 
 	//populate etymology
-	if (character.styles.classes[event.currentTarget.id].core > 0 || artifactBonus > 0 || armorPenalty > 0) {
+	if ((character.styles.classes[event.currentTarget.id].core > 0 || artifactBonus > 0 || armorPenalty > 0) && (character.coreAttributes[event.currentTarget.id] + character.styles.classes[event.currentTarget.id].core + artifactBonus - armorPenalty) >= 0) {
 		$('#att-unmodal').empty().append('<p class="trait-description etymology">Base Value: '+ character.coreAttributes[event.currentTarget.id] +'</p>');
 		if (character.styles.classes[event.currentTarget.id].core > 0) {$('#att-unmodal .etymology').append(' + Styles: ' + character.styles.classes[event.currentTarget.id].core);}
 		if (artifactBonus > 0) {$('#att-unmodal .etymology').append(' + Artifacts: '+ artifactBonus);}
 		if (armorPenalty > 0) {$('#att-unmodal .etymology').append(' - Armor Penalty: '+ armorPenalty);}
-		$('#att-unmodal .etymology').append(' = <strong>'+ (character.coreAttributes[event.currentTarget.id] + character.styles.classes[event.currentTarget.id].core + artifactBonus + armorPenalty) +'</strong>');
+		$('#att-unmodal .etymology').append(' = <strong>'+ (character.coreAttributes[event.currentTarget.id] + character.styles.classes[event.currentTarget.id].core + artifactBonus - armorPenalty) +'</strong>');
 	}
 
 	//populate description and close button
@@ -831,10 +824,14 @@ function statHold(event) {
 function monHold(event) {
 	$('#modal').empty().append(taxonomy.status[this.id.split('-')[0]]);
 	if (event.currentTarget.id === 'speed-mon') {
+		var speedTotalShown = styledAgi + athSpeed + (character.styles.classes.Agility.spec1[1]*3) + 3;
 		if (character.styles.classes.Agility.spec1[1] > 0) {
-			$('#modal h3').after('<p class="etymology">Agility: '+styledAgi+' + Odd Athletics Points: '+athSpeed+' + <em>Super Speed</em> Style: '+(character.styles.classes.Agility.spec1[1]*3)+'+ 3 = '+$('#speed-mon .total').text()+'</p>');
+			$('#modal h3').after('<p class="etymology">Agility: '+styledAgi+' + Odd Athletics Points: '+athSpeed+' + <em>Super Speed</em> Style: '+(character.styles.classes.Agility.spec1[1]*3)+'+ 3 = '+speedTotalShown+'</p>');
 		} else {
-			$('#modal h3').after('<p class="etymology">Agility: '+styledAgi+' + Odd Athletics Points: '+athSpeed+' + 3 = '+$('#speed-mon .total').text()+'</p>');
+			$('#modal h3').after('<p class="etymology">Agility: '+styledAgi+' + Odd Athletics Points: '+athSpeed+' + 3 = '+speedTotalShown+'</p>');
+		}
+		if (speedTotalShown < 3) {
+			$('#modal .etymology').after('<p>Your speed total is below the minimum value, because of this it has been set to the minimum of 3.</p>')
 		}
 	} else if (event.currentTarget.id === 'crisis-mon') {
 		if (character.styles.classes.Willpower.spec1[1] > 0) {

@@ -254,11 +254,11 @@ function sheetPrep(characterClicked) {
 	} else if (armorAugment[0] === 'Agility') {
 		styledAgi = styledAgi + armorAugment[1];
 	}
-	if (character.status.body.upper.armor[1] === 3 && character.status.body.upper.functions.primary < 3) {styledPer--;}
-	if (character.status.body.lower.armor[1] === 3 && character.status.body.lower.functions.primary < 3) {styledAgi--;}
-	if (character.status.body.main.armor[1] === 3 && character.status.body.main.functions.primary < 3) {styledFin--;}
-	if (character.status.body.main.armor[1] === 2 && character.status.body.main.functions.primary < 3) {styledFin--;}
-	if (character.status.body.main.armor[1] === 3 && character.status.body.main.functions.primary < 3) {styledFin--;}
+	if (character.status.body.upper.armor[1] === 3 && character.status.body.upper.functions.primary < 3 && styledPer > 0) {styledPer--;}
+	if (character.status.body.lower.armor[1] === 3 && character.status.body.lower.functions.primary < 3 && styledAgi > 0) {styledAgi--;}
+	if (character.status.body.main.armor[1] === 3 && character.status.body.main.functions.primary < 3 && styledFin > 0) {styledFin--;}
+	if (character.status.body.main.armor[1] === 2 && character.status.body.main.functions.primary < 3 && styledFin > 0) {styledFin--;}
+	if (character.status.body.main.armor[1] === 3 && character.status.body.main.functions.primary < 3 && styledFin > 0) {styledFin--;}
 	
 	//finalize att values
 	if (styledStr > 9) {techStr = styledStr - 9;styledStr = 9;}
@@ -366,12 +366,16 @@ function sheetPrep(characterClicked) {
 			techniqueLevel = 0;
 		}
 		techSkillBonus = styledBonus + techniqueLevel;
-		
+
 		//check for style adjustments
 		if (key === 'Alertness') {
 			skillAttributeValue = skillAttributeValue + character.styles.classes.Perception.spec1[1];
 		}
-		
+
+		if (skillAttributeValue < 0) {
+			skillAttributeValue = 0;
+		}
+
 		//pupulate the skill row
 		$('#skills').append('<a class="skill-row row '+ value[1] +'-shade color" id="'+ key +'"><span class="skill-name">'+ decodeInput(key) + '</span></a>');
 		$('.skill-row#'+key).append('<span class="skill-dots '+ key +'"></span>');
@@ -1230,6 +1234,7 @@ function sheetPrep(characterClicked) {
 	if (styledAthletics === 1 || styledAthletics === 2) {athSpeed = 1} else if (styledAthletics === 3 || styledAthletics === 4) {athSpeed = 2} else if (styledAthletics > 4) {athSpeed = 3} else {athSpeed = 0}
 	if (character.status.body.legs.armor[1] >= 2 && character.status.body.legs.functions.primary < 3) {athSpeed--;}
 	if (character.status.body.legs.armor[1] === 3 && character.status.body.legs.functions.primary < 3) {athSpeed--;}
+	if (athSpeed < 0) {athSpeed = 0};
 	$('#speed-mon .total').empty().append(styledAgi + (character.styles.classes.Agility.spec1[1] * 3) + athSpeed + 3);
 	if (parseInt($('#speed-mon .total').text()) < 3) {$('#speed-mon .total').empty().append('3')}
 	if (character.status.currentSpeed >= parseInt($('#speed-mon .total').text())) {
