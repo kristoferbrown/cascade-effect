@@ -944,6 +944,11 @@ function sheetPrep(characterClicked) {
 		if (key === 'Initiative') {
 			skillBonus = value[2] + character.styles.classes.Wits.spec3[1];
 		}
+
+		if (skillAttributeValue < 0) {
+			skillAttributeValue = 0;
+		}
+
 		//populate
 		if (settings.comskilllocation === 'skill-view' || settings.comskilllocation === 'both'){
 			$('#skills').append('<a class="skill-row row  '+ value[1] +'-shade color" id="'+ key +'"><span class="skill-name">'+ key + '</span></a>');
