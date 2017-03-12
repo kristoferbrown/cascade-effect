@@ -108,7 +108,6 @@ a.row {background:#fff; transition:all 0.3s ease;}
 #rulebook-chapters .row:after {content:"+"; float:right;}
 #rulebook-chapters .inset {border:none!important; margin:12px!important; color:#fff;}
 #rulebook-chapters .inset h4 {color:#fff;}
-/*#rulebook-chapters .open {background:linear-gradient(#fff 40px,#222 160px);}*/
 #rulebook-chapters .open .row {border-bottom:none;}
 #rulebook-chapters .open .row:after {content:"-"; float:right;}
 #rulebook-chapters .chapter-text {display:none; font-size:13px; margin:0; /*padding:12px 0;*/}
@@ -126,7 +125,6 @@ a.row {background:#fff; transition:all 0.3s ease;}
 #rulebook-chapters .section li {margin: 12px 0;}
 #rulebook-chapters .section .sub-heading-row {display:block; padding:0 12px; background:#fff; }
 #rulebook-chapters .section.open {padding:0 0 10px 0;}
-/*#rulebook-chapters .section.open h4 {background:linear-gradient(#fff, #eee);}*/
 #rulebook-chapters .section.open .section h4{display:block; background:#fff;}
 #rulebook-chapters .section.open .section.open h4 {display:block; background:linear-gradient(#fff, #eee);}
 #rulebook-chapters .section.open .section .section h4 {display:block; background:#fff;}
@@ -140,11 +138,12 @@ a.row {background:#fff; transition:all 0.3s ease;}
 #rulebook-chapters .section.open .block-image {display:block; margin:0 auto; width:95%;}
 #rulebook-chapters .descriptor-container {float:left; margin:12px;}
 #rulebook-chapters .style-track {max-height:150px;}
-#rulebook-chapters #setting-classified {background:#333!important; color:#fff!important; border-color: #000!important;}
+#rulebook-chapters #setting-classified {background:#333!important; color:#eee!important; border-color: #000!important;}
 #rulebook-chapters #setting-classified h4 {background:#000!important; color:#eee!important;}
 #rulebook-chapters #setting-classified .section {background:#333!important;}
 #rulebook-chapters #setting-classified p, #rulebook-chapters #setting-classified ul {padding-top: 12px;}
 #rulebook-chapters #setting-classified.section:before, #rulebook-chapters #setting-classified .section:before {background:#000!important;}
+#rulebook-chapters #setting-classified strong {color: #fff;}
 
 /*rulebook square styles, all commented out sections of the above #rulebook-chapters block are also changes for rulebook squares*/
 #rulebook-chapters .chapter-container {position:relative; box-shadow: 0 1px 2px 0px rgba(0,0,0,0.9); margin-bottom: 3px; background: #fff;}
