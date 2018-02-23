@@ -859,7 +859,7 @@ function actionHold(event) {
 	} else if (event.currentTarget.id === 'focus-strike-desc') {
 		$('#attk-unmodal .action-unmodal').empty().append('<p>This action lets you deal increased damage by spending Entanglement as per the style <em>Focus Strike</em>. Each rank you have in that style adds either a die of damage to melee attacks or a success of damage to unarmed attacks.</p>');
 	} else if (event.currentTarget.id === 'whirlwind-strike-desc') {
-		$('#attk-unmodal .action-unmodal').empty().append('<p>This action lets you target everyone that is in a space that you could designate as a <em>Zone of Denial</em> (meaning 3 adjacent spaces at rank 1 and all adjacent spaces at rank 3) with a single attack. Make a normal attack roll with its normal speed cost, every selected target must defend against this roll or be dealt its damage to a random location.</p>');
+		$('#attk-unmodal .action-unmodal').empty().append('<p>This action lets you target everyone adjacent to you with a single attack. Make a normal attack roll with its normal speed cost, every selected target must defend against this roll or be dealt its damage to a random location.</p>');
 	} else {
 		$('#attk-unmodal .action-unmodal').load('rulebook/actions-chapter.html #'+event.currentTarget.id.split('-desc')[0]+' p' );
 	}

@@ -702,7 +702,7 @@ function defHold(event) {
 	
 	//list if zone def
 	if (attString === 'Finesse') {
-		$('#def-unmodal .trait-description').append('<p>Due to your ranks in the style <em>Zone of Denial</em>, the normal Agility portion of this roll has been replace by your superior Finesse score.</p>');
+		$('#def-unmodal .trait-description').append('<p>Due to your ranks in the style <em>Deft Combat</em>, the normal Agility portion of this roll has been replace by your superior Finesse score.</p>');
 	}
 	
 	//add disadvantaged roll button

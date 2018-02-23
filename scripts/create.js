@@ -195,7 +195,7 @@ characterPrototype.styles.classes.Strength.spec1[0] = 'Super Strength';
 characterPrototype.styles.classes.Strength.spec2[0] = 'Power Attack';
 characterPrototype.styles.classes.Strength.spec3[0] = 'Damage +';
 
-characterPrototype.styles.classes.Finesse.spec1[0] = 'Zone of Denial';
+characterPrototype.styles.classes.Finesse.spec1[0] = 'Deft Combat';
 characterPrototype.styles.classes.Finesse.spec2[0] = 'Ambidexterity';
 characterPrototype.styles.classes.Finesse.spec3[0] = 'Melee +';
 
