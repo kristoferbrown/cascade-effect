@@ -99,16 +99,6 @@ function rootPrep() {
 				for (var prop in value.styles.classes) {
 					var quotient = value.coreAttributes[prop] + value.styles.classes[prop].core + value.styles.classes[prop].spec1[1] + value.styles.classes[prop].spec2[1] + value.styles.classes[prop].spec3[1] + value.styles.classes[prop].aux1.value + value.styles.classes[prop].aux2.value + value.styles.classes[prop].aux3.value,
 						opacityNumber = quotient/27;
-						if (prop === 'Willpower') {
-							quotient = quotient + value.styles.arcane.abjuration + value.styles.arcane.evocation + value.styles.arcane.sublimation;
-							opacityNumber = quotient/30;
-						} else if (prop === 'Intelligence') {
-							quotient = quotient + value.styles.arcane.chromodynamism + value.styles.arcane.electromagnetism + value.styles.arcane.gravitonertia;
-							opacityNumber = quotient/30;
-						} else if (prop === 'Charisma') {
-							quotient = quotient + value.styles.arcane.pneumaplegia + value.styles.arcane.schizosomata + value.styles.arcane.telethesia;
-							opacityNumber = quotient/30;
-						}
 						$('#character-list #'+key+' .nonogram .'+prop+'-primary').css('opacity', opacityNumber);
 				}
 			}
@@ -170,42 +160,8 @@ function sheetPrep(characterClicked) {
 	$('#title-name').text(character.meta.name);
 	
 	//test if character is deprecated, update character to current model if possible. delete these if statements when we go to beta
-	if (!character.status.body.upper.functions) {
-		alert('Womp womp, the character you loaded is deprecated and will no longer work properly. Reload the app and create a new character.');
-	}
-	if (character.skills.Toughness[0] === 'Strength') {
-		character.skills.Toughness[0] = 'Stamina';
-		character.skills.Toughness[1] = 'STM';
-		character.combatSkills.Defense[0] = 'Agility'
-		character.combatSkills.Defense[1] = 'AGI'
-		saveCharacterObject(false);
-	}
-	if (character.styles.classes.Willpower.spec2[0] === 'Unlock Arcana') {
-		//still has deprecated unlock arcana nodes, remove them
-		character.styles.classes.Willpower.spec2[0] = 'Sustain Extropy';
-		character.styles.classes.Willpower.spec3[0] = 'Cohesion Extropy';
-		character.styles.classes.Charisma.spec2[0] = 'Surrogate Proxy';
-		character.styles.classes.Charisma.spec3[0] = 'Delegate Proxy';
-		character.styles.classes.Intelligence.spec2[0] = 'Coalesce Avatar';
-		character.styles.classes.Intelligence.spec3[0] = 'Propagate Avatar';
-		saveCharacterObject(false);
-	}
-	if (character.styles.arcane.paradigm >= 0 || character.styles.arcane.mitigate >= 0) {
-		if (character.styles.arcane.paradigm >= 0) {
-			character.styles.arcane.pneumaplegia = character.styles.arcane.paradigm;
-			delete character.styles.arcane.paradigm;
-		} else {
-			character.styles.arcane.pneumaplegia = character.styles.arcane.mitigate;
-			delete character.styles.arcane.mitigate;
-		}
-		character.styles.arcane.schizosomata = character.styles.arcane.shift;
-		character.styles.arcane.telethesia = character.styles.arcane.telepathy;
-		delete character.styles.arcane.shift;
-		delete character.styles.arcane.telepathy;
-		saveCharacterObject(false);
-	}
-	if (character.styles.classes.Wits.spec1[0] === 'Stealth Attacks') {
-		character.styles.classes.Wits.spec1[0] = 'Priority';
+	if (character.styles.arcane) {
+		alert('Womp womp, this character was created before version 0.6.0 and uses a deprecated data model for arcane styles. If this is a problem for you please tell the author to write a script that adapts old characters to the new model.');
 	}
 	
 	//create styled attribute vars for later use
@@ -474,7 +430,8 @@ function sheetPrep(characterClicked) {
 	$('.attack-row#unarmed').append('<span class="detail-row speed-row"><span class="icon speed-icon"></span>Speed cost<span class="detail">2</span></span>');
 
 	//create evocation attack, if necessary
-	if (character.styles.arcane.evocation > 0) {
+	//@todo: auxarc this bit
+	/*if (character.styles.arcane.evocation > 0) {
 		$('#attacks').append('<a class="attack-row row WIL-shade color" id="evocation-attack"><span class="attack-name">Evocation</span><span class="detail dot-row"></span></a>');
 		$('.attack-row#evocation-attack').append('<span class="detail-row damage-row">Damage<span class="detail roll"><span class="dice"></span> + <span class="bonus"></span></span></span><span class="detail-row speed-row"><span class="icon speed-icon"></span>Speed cost<span class="detail">8</span></span><span class="detail-row range-row">Maximum Range<span class="detail">3</span></span>');
 		//evocation dot loop
@@ -579,7 +536,8 @@ function sheetPrep(characterClicked) {
 			}
 		}
 	}
-	
+	*/
+
 	// create other attack rolls
 	$.each(character.attacks, function( key, value ) {
 		var diceTotal,
@@ -1170,9 +1128,6 @@ function sheetPrep(characterClicked) {
 		}
 	});
 
-	//list available arcana
-	listArcana(true, 'none', 'nonEvent');
-	
 	//list enstylization quotient
 	styleAudit();
 
@@ -1311,7 +1266,7 @@ function sheetPrep(characterClicked) {
 		$('#monitor-inner .monitor-row, #dice-roller').bind('taphold', monHold);
 		$('#attacks .attack-row').bind('taphold', attackHold);
 		$('#double-attacks .attack-row').bind('taphold', doubleHold);
-		$('#style-class-list .style-class-core, #arcane .row,  #extension .row').bind('taphold', styleHold);
+		$('#style-class-list .style-class-core').bind('taphold', styleHold);
 		$('#cast .detail-row, #cast .row-label.primary').bind('taphold', castHold);
 		$('#component-list .detail-row, #component-list .row-label.primary').bind('taphold', componentHold);	
 	}, 200);

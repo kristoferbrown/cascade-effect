@@ -553,7 +553,7 @@ function attackHold(attack) {
 		toggleMonitor();
 	}
 	
-	//populate	
+	//populate
 	$('#attacks #'+attackId).slideToggle();
 	$('#attacks #'+attackId).before('<div id="attk-unmodal" class="'+$('#attacks #'+attackId).attr('class')+'" style="display:none;"></div>');
 	if (attackToEdit !== undefined) {
@@ -607,20 +607,21 @@ function attackHold(attack) {
 			$('#attk-unmodal').slideDown();
 		}
 	} else {
+		// @Todo: replace these with auxarc based attacks!
 		if (attackId === 'evocation-attack') {
-			$('#attk-unmodal').empty().append('<h4>Evocation Attack</h4><p class="trait-description">This attack is granted by your ranks in the arcane style <em>Evocation</em>. Evocation attacks cost a point of Entanglment, can only target anything within range, and always hit in the location of your choice.</p><div class="description-container" style="display:none;"></div>');
+			$('#attk-unmodal').empty().append('<h4>Evocation Attack</h4><p class="trait-description">This attack is granted by your ranks in the style <em>Evocation</em>. Evocation attacks cost a point of Entanglment, can only target anything within range, and always hit in the location of your choice.</p><div class="description-container" style="display:none;"></div>');
 			attackHoldActions(attack, attackId, attackToEdit);
 			$('#attk-unmodal').slideDown();
 		} else if (attackId === 'entropic-attack') {
-			$('#attk-unmodal').empty().append('<h4>Entropic Attack</h4><p class="trait-description">This attack is granted by your ranks in the arcane style <em>Chromodynamism</em>. Entropic attacks cost a point of Entanglement and can only target anything within a short range and always hit. The target of this attack will be dealt a point of damage to every location after each turn they take for a set number of turns.</p><div class="description-container" style="display:none;"></div>');
+			$('#attk-unmodal').empty().append('<h4>Entropic Attack</h4><p class="trait-description">This attack is granted by your ranks in the style <em>Chromodynamism</em>. Entropic attacks cost a point of Entanglement and can only target anything within a short range and always hit. The target of this attack will be dealt a point of damage to every location after each turn they take for a set number of turns.</p><div class="description-container" style="display:none;"></div>');
 			attackHoldActions(attack, attackId, attackToEdit);
 			$('#attk-unmodal').slideDown();
 		} else if (attackId === 'kinetic-attack') {
-			$('#attk-unmodal').empty().append('<h4>Kinetic Attack</h4><p class="trait-description">This attack is granted by your ranks in the arcane style <em>Gravitonertia</em>. Kinetic attacks cost a point of Entanglement, can only target anything within range, and automatically hit in the location of your choice.</p><div class="description-container" style="display:none;"></div>');
+			$('#attk-unmodal').empty().append('<h4>Kinetic Attack</h4><p class="trait-description">This attack is granted by your ranks in the style <em>Gravitonertia</em>. Kinetic attacks cost a point of Entanglement, can only target anything within range, and automatically hit in the location of your choice.</p><div class="description-container" style="display:none;"></div>');
 			attackHoldActions(attack, attackId, attackToEdit);
 			$('#attk-unmodal').slideDown();
 		} else if (attackId === 'photonic-attack') {
-			$('#attk-unmodal').empty().append('<h4>Photonic Attack</h4><p class="trait-description">This attack is granted by your ranks in the arcane style <em>Electromagnetism</em>. Photonic attacks cost a point of Entanglement, can only target anything within range.</p><div class="description-container" style="display:none;"></div>');
+			$('#attk-unmodal').empty().append('<h4>Photonic Attack</h4><p class="trait-description">This attack is granted by your ranks in the style <em>Electromagnetism</em>. Photonic attacks cost a point of Entanglement, can only target anything within range.</p><div class="description-container" style="display:none;"></div>');
 			if (character.styles.arcane.electromagnetism < 3) {
 				$('#attk-unmodal').append('<p>At this rank this attack automatically deals damage to the location of your choice.</p>');
 			} else if (character.styles.arcane.electromagnetism < 5) {
@@ -745,7 +746,6 @@ function attackHoldActions(attack, attackId, attackToEdit) {
 	}
 		
 	if (attackId === 'evocation-attack') {
-		actionsList.push(['Use Lower Rank','Tap to select which rank...']);
 		if (character.addenda.auxSet.indexOf('Evocation_percent_20Extensibility') !== -1) {
 			actionsList.push(['Extend Damage','Tap to select amount...']);
 		}

@@ -300,6 +300,7 @@ function attackRoll(clicked, event) {
 	}
 	
 	if (clicked.id === 'entropic-attack') {
+		//@TODO: auxarc this attack
 		$('.damage-results').hide().after('<div class="action-roll-result">Deal 1 damage after each turn for <span class="alert">'+character.styles.arcane.chromodynamism+'</span> turns.</span>');
 	}
 } 
@@ -954,9 +955,6 @@ function styleHold(event) {
 		descriptionId = false;
 		$(appendLocation).append('<div class="unmodal" id="style-unmodal" style="display:none;"></div>');
 		$('#style-unmodal').empty().append('<p>Each point in this style raises the skill with the same name by a point.</p>').slideDown();
-	} else if ($(event.target).hasClass('arcane')) {
-		//arcane style row
-		descriptionId = '#'+event.target.id;
 	} else if ($(event.target).hasClass('aux-row') || $(event.target).hasClass('aux-label')) {
 		//static aux node description
 		descriptionId = false;
@@ -1060,7 +1058,7 @@ function executeAction (event) {
 	$(event.currentTarget).children('.detail-row').remove();
 	$(event.currentTarget).find('.action-unmodal').remove();
 	resultsTitle = $(event.currentTarget).text();
-	if ($(event.currentTarget).text() !== 'Power Attack' && $(event.currentTarget).text() !== 'Use Lower Rank' && $(event.currentTarget).text() !== 'Extend Damage') {
+	if ($(event.currentTarget).text() !== 'Power Attack' && $(event.currentTarget).text() !== 'Extend Damage') {
 		$('#attacks .attack-row').not('#attk-unmodal').slideDown();
 		//$('#attk-unmodal').slideUp();
 	}
@@ -1311,40 +1309,6 @@ function executeAction (event) {
 		}
 		$(attack).children('.damage-row').find('.dice').text(misc[1]);
 		$(attack).children('.damage-row').find('.bonus').text(misc[2]);
-	} else if ($(event.currentTarget).text() === 'Use Lower Rank') {
-		//execute reduced evocation
-		misc[0] = parseInt($(attack).children('.damage-row').find('.dice').text());   //damage dice
-		misc[1] = parseInt($(attack).children('.damage-row').find('.bonus').text());  //damage bonus
-
-		$('#attk-unmodal').empty().append('<h3>Reduced Evocation</h3><p>You can use evocation more discretely by reducing the damage output to lower ranks. Normally your Evocation attacks deal '+misc[0]+' + '+misc[1]+' damage, choose which rank to use instead below.</p><div class="reduced-evocation-list"></div>');
-		for (var i = 0; i < (character.styles.arcane.evocation - 1); i++) {
-			if (i < 3) {
-				$('#attk-unmodal .reduced-evocation-list').append('<a id="evocation-level-'+(i+1)+'" class="row color WIL-primary evocation-level">Damage: <span class="dice">'+(i+1)+'</span> + <span class="bonus">0</span></a>');
-			} else if (i < 6) {
-				$('#attk-unmodal .reduced-evocation-list').append('<a id="evocation-level-'+(i+1)+'" class="row color WIL-primary evocation-level">Damage: <span class="dice">3</span> + <span class="bonus">'+(i-2)+'</span></a>');
-			} else if (i === 6) {
-				//do nothing, this rank has the same damage as the previous rank
-			} else if (i === 7) {
-				$('#attk-unmodal .reduced-evocation-list').append('<a id="evocation-level-'+(i+1)+'" class="row color WIL-primary evocation-level">Damage: <span class="dice">'+(styledWil - techWil)+'</span> + <span class="bonus">'+(3 + techWil)+'</span></a>');
-			}
-		}
-		$('#attk-unmodal').append('<a id="cancel-action-options" class="button cancel long">Cancel</a>');
-		$('#cancel-action-options').off().tap(function(){$('#attk-unmodal').slideUp();$('.attack-row').not(('#skill-unmodal, #attk-unmodal, #dattack-unmodal, .unmodal')).slideDown();});
-		$('html, body').animate({
-	    	scrollTop: $("#attk-unmodal").offset().top - 70
-		}, 300);
-		$('#attk-unmodal .evocation-level').off().click(function() {			
-			misc[2] = parseInt($(this).find('.dice').text());
-			misc[3] = parseInt($(this).find('.bonus').text());
-			$('#modal, #modal-shade').hide();
-			$(attack).children('.damage-row').find('.dice').text(misc[2]);
-			$(attack).children('.damage-row').find('.bonus').text(misc[3]);
-			attack.id = 'evocation-attack';
-			roll(attack, false, false, event);
-			$(attack).children('.damage-row').find('.dice').text(misc[0]);
-			$(attack).children('.damage-row').find('.bonus').text(misc[1]);
-			$('#attacks .attack-row').not('#attk-unmodal').slideDown();
-		});
 	} else if ($(event.currentTarget).text() === 'Extend Damage') {
 		//execute extended evocation
 		misc[0] = parseInt($(attack).children('.damage-row').find('.dice').text());   //damage dice

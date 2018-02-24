@@ -7,15 +7,15 @@ var validator = 'valid',
 		concept: ''
 	},
 	coreAttributes: {
-		Strength:     1,
-		Finesse:      1,
+		Strength:	 1,
+		Finesse:	  1,
 		Perception:   1,
-		Stamina:      1,
-		Agility:      1,
-		Wits:         1,
-		Willpower:    1,
+		Stamina:	  1,
+		Agility:	  1,
+		Wits:		 1,
+		Willpower:	1,
 		Intelligence: 1,
-		Charisma:     1
+		Charisma:	 1
 	},
 	skills: {},
 	unrolledSkills: {},
@@ -29,15 +29,15 @@ var validator = 'valid',
 	},
 	addenda: {
 		customSkills: {
-			Strength:     [],
-			Finesse:      [],
+			Strength:	 [],
+			Finesse:	  [],
 			Perception:   [],
-			Stamina:      [],
-			Agility:      [],
-			Wits:         [],
-			Willpower:    [],
+			Stamina:	  [],
+			Agility:	  [],
+			Wits:		 [],
+			Willpower:	[],
 			Intelligence: [],
-			Charisma:     []
+			Charisma:	 []
 		},
 		auxSet: []
 	},
@@ -52,20 +52,20 @@ var validator = 'valid',
 	newCharacter;
 
 characterPrototype.skills = {
-	Stealth:    ['Finesse', 'FIN', 0],
+	Stealth:	['Finesse', 'FIN', 0],
 	Alertness:  ['Perception', 'PER', 0],
 	Investigate:['Perception', 'PER', 0],
 	Toughness:  ['Stamina', 'STM', 0],
 	Athletics:  ['Agility', 'AGI', 0],
-	Drive:      ['Wits', 'WIT', 0],
+	Drive:	  ['Wits', 'WIT', 0],
 	Survival:   ['Wits', 'WIT', 0],
-	Guts:       ['Willpower', 'WIL', 0],
+	Guts:	   ['Willpower', 'WIL', 0],
 	Hardware:   ['Intelligence', 'INT', 0],
 	Humanities: ['Intelligence', 'INT', 0],
 	Medicine:   ['Intelligence', 'INT', 0],
-	Science:    ['Intelligence', 'INT', 0],
+	Science:	['Intelligence', 'INT', 0],
 	Software:   ['Intelligence', 'INT', 0],
-	Charm:      ['Charisma', 'CHA', 0],
+	Charm:	  ['Charisma', 'CHA', 0],
 	Manipulate: ['Charisma', 'CHA', 0]
 };
 characterPrototype.unrolledSkills = {
@@ -74,11 +74,11 @@ characterPrototype.unrolledSkills = {
 	Resources:  0
 };
 characterPrototype.combatSkills = {
-	Unarmed:    ['Strength', 'STR', 0],
-	Melee:      ['Finesse', 'FIN', 0],
+	Unarmed:	['Strength', 'STR', 0],
+	Melee:	  ['Finesse', 'FIN', 0],
 	Firearms:   ['Perception', 'PER', 0],
 	Ballistics: ['Perception', 'PER', 0],
-	Defense:    ['Agility', 'AGI', 0],
+	Defense:	['Agility', 'AGI', 0],
 	Initiative: ['Wits', 'WIT', 0]
 };
 characterPrototype.status = {
@@ -147,25 +147,14 @@ characterPrototype.styles = {
 	available: 0,
 	classes: {
 		Strength: {},
-		Finesse:      {},
+		Finesse:	  {},
 		Perception:   {},
-		Stamina:      {},
-		Agility:      {},
-		Wits:         {},
-		Willpower:    {},
+		Stamina:	  {},
+		Agility:	  {},
+		Wits:		 {},
+		Willpower:	{},
 		Intelligence: {},
-		Charisma:     {}
-	},
-	arcane: {
-		evocation:        0,
-		abjuration:       0,
-		sublimation:      0,
-		electromagnetism: 0,
-		gravitonertia:    0,
-		chromodynamism:   0,
-		pneumaplegia:     0,
-		telethesia:       0,
-		schizosomata:     0
+		Charisma:	 {}
 	}
 };
 $.each(characterPrototype.styles.classes, function(key, value) {
@@ -216,16 +205,16 @@ characterPrototype.styles.classes.Wits.spec2[0] = 'Passive Defense';
 characterPrototype.styles.classes.Wits.spec3[0] = 'Precognition';
 
 characterPrototype.styles.classes.Willpower.spec1[0] = 'Entanglement +';
-characterPrototype.styles.classes.Willpower.spec2 = ['Sustain Extropy', 0, '']
-characterPrototype.styles.classes.Willpower.spec3 = ['Cohesion Extropy', 0, '']
+characterPrototype.styles.classes.Willpower.spec2[0] = 'Persistence';
+characterPrototype.styles.classes.Willpower.spec3[0] = 'Extropy';
 
 characterPrototype.styles.classes.Intelligence.spec1[0] = 'Analyze Cascade';
-characterPrototype.styles.classes.Intelligence.spec2 = ['Coalesce Avatar', 0, '']
-characterPrototype.styles.classes.Intelligence.spec3 = ['Propagate Avatar', 0, '']
+characterPrototype.styles.classes.Intelligence.spec2[0] = 'Embed Function';
+characterPrototype.styles.classes.Intelligence.spec3[0] = 'Embed Cast';
 
 characterPrototype.styles.classes.Charisma.spec1[0] = 'Induce Cascade';
-characterPrototype.styles.classes.Charisma.spec2 = ['Surrogate Proxy', 0, '']
-characterPrototype.styles.classes.Charisma.spec3 = ['Delegate Proxy', 0, '']
+characterPrototype.styles.classes.Charisma.spec2[0] = 'Healing';
+characterPrototype.styles.classes.Charisma.spec3[0] = 'Combat Healing';
 
 function beginCharacterCreation() {
 	$('#root-menu').hide();
@@ -578,7 +567,7 @@ function finishCharacter() {
 	
 	//check if stored characters object exists and set new character id
 	if (localStorage.characters) {
-		existingCharacters = JSON.parse(localStorage.characters);		
+		existingCharacters = JSON.parse(localStorage.characters);
 		newCharacter.meta.id = Object.keys(existingCharacters).length + 1;
 	} else {
 		existingCharacters = {};
@@ -646,10 +635,10 @@ function importCharacter() {
 
 function parseCharacter(characterToImport) {
 	var parsedCharacter;
-			
+
 	try {
 		parsedCharacter = JSON.parse(characterToImport);
-		parsedCharacter.meta.id =  Object.keys(characters).length + 1;
+		parsedCharacter.meta.id = Object.keys(characters).length + 1;
 		characters[parsedCharacter.meta.id] = parsedCharacter;
 		
 		validateCharacterObject(parsedCharacter.coreAttributes, 'an attribute', 0, 3);
@@ -657,8 +646,6 @@ function parseCharacter(characterToImport) {
 		validateCharacterObject(parsedCharacter.combatSkills, 'a combat skill', 0, 3);
 		validateCharacterObject(parsedCharacter.unrolledSkills, 'an unrolled skill', 0, 3);
 		validateCharacterObject(parsedCharacter.attacks, 'a value in an attack', 0, 9);
-		validateCharacterObject(parsedCharacter.styles.arcane, 'an arcane style', 0, 9);
-		validateCharacterObject(parsedCharacter.styles.extension, 'an extension style', 0, 9);
 		validateCharacterObject(parsedCharacter.styles, 'a style', 0, 3);
 	}
 	catch(error) {
@@ -672,40 +659,40 @@ function parseCharacter(characterToImport) {
 	} else {
 		$('#modal p.error').remove();
 		$('#modal').append('<p class="error">Your character data is invalid because ' + validator + ' Please edit it and try again.</p>');
-		validator =  'valid';
-	}	
+		validator = 'valid';
+	}
 }
 
 function validateCharacterObject(object, errorDesc, min, max) {
 	//if global validator is true loops through all non inherited properties in object, if any property is an invalid number set global validator to false
 
 	if (validator === 'valid') {
-	    for (prop in object) {
-    	    if (object.hasOwnProperty(prop)) {
-     
-	        	// if this property is an object, get recursively call this function on it
-    	        if (typeof object[prop] == 'object' && typeof object[prop] !== null) {
+		for (prop in object) {
+			if (object.hasOwnProperty(prop)) {
+	 
+				// if this property is an object, get recursively call this function on it
+				if (typeof object[prop] == 'object' && typeof object[prop] !== null) {
 					validateCharacterObject(object[prop], errorDesc, min, max);
-            	} else {
+				} else {
 
-	                // if it's not an object or array check if it is a number
-    	            if (typeof object[prop] == 'number') {
+					// if it's not an object or array check if it is a number
+					if (typeof object[prop] == 'number') {
 
-	                   	if (object[prop] < min) {
-    	                	validator = errorDesc + ' is too low.';
+					if (object[prop] < min) {
+							validator = errorDesc + ' is too low.';
 						}
 						if (prop === 'core' || prop === 'permanence' || prop === 'avatar' || prop === 'proxy' || prop === 'pneumaplegia' || prop === 'telethesia' || prop === 'schizosomata' || prop === 'chromodynamism' || prop === 'electromagnetism' || prop === 'gravitonertia' || prop === 'abjuration' || prop === 'evocation' || prop === 'sublimation') {
 							if (object[prop] > 9) {
 								validator = errorDesc + ' is too high.';
-        	           		} 	
+							}
 						} else if (prop !== 'range' && prop !== 'ammoCurrent' && prop !== 'ammoMax' && prop !== 'available') {
 							if (object[prop] > max) {
 								validator = errorDesc + ' is too high.';
-        	           		} 			
+							}
 						}
-                	}
-            	}
-        	}
-    	}
-    }
+					}
+				}
+			}
+		}
+	}
 }
