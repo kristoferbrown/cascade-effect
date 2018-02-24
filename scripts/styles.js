@@ -1,5 +1,4 @@
-var styleTimer,
-	styleAfter;
+var styleAfter;
 
 function earnStyles() {
 	$('#earn-unmodal').remove();
@@ -164,10 +163,6 @@ function adjustStyle(event) {
 				$(event.currentTarget).parent().parent().parent().append('<div id="'+$(event.currentTarget).parent().parent().attr('id')+'" class="row aux-row color '+trait+'-shade"><span class="aux-label">Auxiliary Node</span><a class="long detail aux-customize button">Customize</a></div>');
 			}
 			$(event.currentTarget).parent().parent().remove();
-			if ($(event.currentTarget).parent().parent().hasClass('has-requirements')) {
-				$('#'+event.target.parentElement.parentElement.className.split('requires-')[1].split(' ')[0]).removeClass('is-required');
-				$('#'+event.target.parentElement.parentElement.className.split('requires-')[1].split(' ')[0]+' .requirement-alert').remove();
-			}
 			$('.aux-customize').off().click(function(event){
 				customizeAux(event);
 			});
@@ -255,7 +250,6 @@ function saveTentative() {
 }
 
 function listSpec(tier, key, value, active) {
-	//@todo: audit new spec taphold descriptions
 	if (tier === 'spec1') {
 		$('#'+key+'-style-class').append('<div class="sub-row" id="'+key+'-specialties"></div><div class="sub-row" id="'+key+'-aux"></div>');
 	}
@@ -310,7 +304,6 @@ function listSpec(tier, key, value, active) {
 	}
 	$('#'+key+'-style-class .'+tier).slideDown(300);
 	$('#'+key+'-aux .row').last().slideDown(300);
-	styleTimer = setTimeout(styleCleanUp, 300);
 }
 
 function hideSpec(tier, trait, event) {
@@ -326,15 +319,8 @@ function hideSpec(tier, trait, event) {
 		$('#available-points .available-value').empty().append(newAvailable);
 }
 
-function styleCleanUp() {
-	//@Todo: check if this is still needed after auxarc update
-	clearTimeout(styleTimer);
-	$('#styles-view .to-remove').remove();
-}
-
 function customizeAux(event) {
-	// @TODO: break auxarc lists into parent arcana groupings, check if there is any architecture around prereqs/availability we can remove
-	// @TODO: audit auxarc taphold descriptions
+	// @TODO: break auxarc lists into parent arcana groupings
 	var trait = $(event.target).parent().attr('id').split('-')[1],
 		tier = $(event.target).parent().attr('id').split('-')[2],
 		originalEvent = event,
@@ -388,7 +374,6 @@ function customizeAux(event) {
 		$(event.target).parent().children().slideDown();
 		$('.aux-customize').fadeIn()
 		$('#aux-unmodal').slideUp();
-		styleTimer = setTimeout(styleCleanUp, 300);
 	});
 	$('#aux-unmodal .row.aux-custom').off().click(function(){
 		$('#style-unmodal').remove()
@@ -409,23 +394,105 @@ function customizeAux(event) {
 			$('.dead-slide').addClass('alive');
 		}
 		$('#aux-'+trait+'-'+tier).children('.detail').children('.button.minus').empty().addClass('reset-node cancel');
-		//add requirement classes to the prereq styles and to the selected style
-		if ($(this).hasClass('has-requirements')) {
-			$(this).parent().parent().addClass($(this).attr('class')).removeClass('aux-custom');
-			if ($(this).hasClass('aux-requirements')) {
-				$('#'+this.className.split('requires-')[1].split(' ')[0]+'.aux-label').parent().addClass('is-required required-by-'+encodeInput($(this).text()));
-			} else if ($(this).hasClass('arcane-requirements') || $(this).hasClass('spec-requirements')) {
-				$('#'+this.className.split('requires-')[1].split(' ')[0]).addClass('is-required required-by-'+encodeInput($(this).text()));
-			}
-		}
 		//show hide everything
 		$(event.target).parent().children().slideDown();
 		$('.aux-label').fadeIn();
 		$('.aux-customize').fadeIn()
 		$('#aux-unmodal').slideUp();
-		styleTimer = setTimeout(styleCleanUp, 300);
 	});
 	
 	$('#aux-unmodal').slideDown();
-	styleTimer = setTimeout(styleCleanUp, 300);
+}
+
+function styleHold(event) {
+	var descriptionId,
+		afterInstead = false,
+		appendLocation = event.target;
+
+	//scroll calculation
+	if ($('#style-unmodal').is(':visible') && $('#style-unmodal').position().top < $(event.target).position().top) {
+		var height = $(window).scrollTop() - $('#style-unmodal').height();
+		$('#style-unmodal').remove();
+		window.scrollTo(0, height);
+		$('html, body').animate({ scrollTop: $(event.target).offset().top - 200}, 300);
+	} else {
+		$('html, body').animate({ scrollTop: $(event.target).offset().top - 200}, 300);
+		$('#style-unmodal').remove();
+	}
+	if (!$('#monitor').hasClass('hidden')) {
+		toggleMonitor();
+	}
+	
+	$('#styles-view .description-open').removeClass('description-open');
+	//set up description ids and locations or static text descriptions
+	if ($(event.target).hasClass('specialty')) {
+		//specialty style row
+		descriptionId = '#'+event.target.id+'-desc';
+	} else if ($(event.target).hasClass('style-class-core')) {
+		//core style anywhere
+		appendLocation = $(event.currentTarget).find('.core-detail');
+		afterInstead = true;
+		descriptionId = '#'+event.target.id+'-desc';
+	} else if ($(event.target).hasClass('style-class-title')) {
+		//core style label
+		appendLocation = $(event.currentTarget).find('.core-detail');
+		afterInstead = true;
+		descriptionId = '#'+$(event.target).parent().attr('id')+'-desc';
+	} else if ($(event.target).hasClass('aux-style') && $(event.target).hasClass('aux-custom')) {
+		//customize aux selections
+		if (event.target.id.indexOf('spec1') !== -1) {
+			descriptionId = '#'+event.target.id.split('spec1-')[1]+'-desc';
+		} else if (event.target.id.indexOf('spec2') !== -1) {
+			descriptionId = '#'+event.target.id.split('spec2-')[1]+'-desc';
+		} else if (event.target.id.indexOf('spec3') !== -1) {
+			descriptionId = '#'+event.target.id.split('spec3-')[1]+'-desc';
+		}
+	} else if ($(event.target).hasClass('aux-style') && $(event.target).hasClass('aux-row')) {
+		//aux row
+		descriptionId = '#'+$(event.target).children('.aux-label').attr('id')+'-desc';
+	} else if ($(event.target).hasClass('aux-label') && $(event.target).parent().hasClass('aux-style')) {
+		// aux row label
+		descriptionId = '#'+$(event.target).attr('id')+'-desc';
+	} else if ($(event.target).hasClass('aux-skill') || $(event.target).hasClass('aux-com-skill')) {
+		//static description for aux skills
+		descriptionId = false;
+		$(appendLocation).append('<div class="unmodal" id="style-unmodal" style="display:none;"></div>');
+		$('#style-unmodal').empty().append('<p>Each point in this style raises the skill with the same name by a point.</p>').slideDown();
+	} else if ($(event.target).hasClass('aux-label') && ($(event.target).parent().hasClass('aux-skill') || $(event.target).parent().hasClass('aux-com-skill')) ) {
+		//static description for aux skills
+		descriptionId = false;
+		$(appendLocation).append('<div class="unmodal" id="style-unmodal" style="display:none;"></div>');
+		$('#style-unmodal').empty().append('<p>Each point in this style raises the skill with the same name by a point.</p>').slideDown();
+	} else if ($(event.target).hasClass('aux-row') || $(event.target).hasClass('aux-label')) {
+		//static aux node description
+		descriptionId = false;
+		$(event.target).closest('.aux-row').append('<div class="unmodal" id="style-unmodal" style="display:none;"></div>');
+		$('#style-unmodal').empty().append('<p>This slot can be used to improve one of the skills related to this attribute or to gain one of the auxiliary styles related to this attribute.</p>').slideDown();
+	}
+	
+	//append and populate the unmodal
+	if (descriptionId) {
+		if (afterInstead) {
+			$(appendLocation).after('<div class="unmodal" id="style-unmodal" style="display:none;"></div>');
+		} else {
+			$(appendLocation).append('<div class="unmodal" id="style-unmodal" style="display:none;"></div>');
+		}	
+		$('#style-unmodal').empty().append('<img src="images/spin-large.gif">').slideDown();
+		$('#style-unmodal').load('rulebook/styles-chapter.html '+descriptionId, function () {
+			$('#style-unmodal h4').remove();
+			$('#style-unmodal').append('<a id="cancel-style-options" class="button cancel long close-options">Hide Description</a>');
+			$('#cancel-style-options').off().tap(function(event){
+				event.stopPropagation();
+				$('#style-unmodal').slideUp();
+				$('html, body').animate({ scrollTop: $(event.currentTarget).parent().parent().offset().top - 200}, 300);
+			});
+		});
+	} else {
+		$('#style-unmodal').append('<a id="cancel-style-options" class="button cancel long close-options">Hide Description</a>');
+		$('#cancel-style-options').off().tap(function(event){
+			event.stopPropagation();
+			$('#style-unmodal').slideUp();
+			$('html, body').animate({ scrollTop: $(event.currentTarget).parent().parent().offset().top - 200}, 300);
+		});	
+	}
 }
