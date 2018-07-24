@@ -209,8 +209,8 @@ characterPrototype.styles.classes.Willpower.spec2[0] = 'Persistence';
 characterPrototype.styles.classes.Willpower.spec3[0] = 'Extropy';
 
 characterPrototype.styles.classes.Intelligence.spec1[0] = 'Analyze Cascade';
-characterPrototype.styles.classes.Intelligence.spec2[0] = 'Polymath';
-characterPrototype.styles.classes.Intelligence.spec3[0] = 'Episemiotics';
+characterPrototype.styles.classes.Intelligence.spec2[0] = 'Episemiotics';
+characterPrototype.styles.classes.Intelligence.spec3[0] = 'Polymath';
 
 characterPrototype.styles.classes.Charisma.spec1[0] = 'Induce Cascade';
 characterPrototype.styles.classes.Charisma.spec2[0] = 'Healing';
