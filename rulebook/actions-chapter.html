@@ -155,7 +155,7 @@
 				<small>Combat Action - Variable Speed Cost</small></h4>
 				<p>If you are wielding a weapon in each hand this action will allow you to attack with both as a single action. Roll a normal basic attack with each weapon, however, the attack roll for both weapons is rolled with the disadvantage of having each automatic success replaced with a die (normally only off hand weapons have this disadvantage and main hand weapons do not, but using both weapons as a single Dual Wield action applies this disadvantage to both).</p>
 				<p>The speed cost of dual wielding is the same as the total cost of using both weapons as two separate actions, but this action allows you to use them both on one turn or as a full action if you do not have enough speed. During this action, both weapons are considered to have the same range as the weapon with the lower range.</p>
-				<p>You cannot use this action with any weapon that has Bow, Mounted, or any of the Explosive traits. You can only use this action if both weapons you are holding can reasonably be used with a single hand. For example, wielding two knives or pistols is possible while wielding two sledgehammers or assault rifles is not (however, if you have any ranks of the style <em>Super Strength</em> you can dual wield with any weapon that isn't a Bow, Mounted, or an Explosive). Both weapons must be either both ranged weapons or both melee weapons, you cannot use this action with mix of ranged and melee weapons.</p>
+				<p>You cannot use this action with any weapon that has Bow, Mounted, or any of the Explosive traits. You can only use this action if both weapons you are holding can reasonably be used with a single hand. For example, wielding two knives or pistols is possible while wielding two sledgehammers or assault rifles is not (however, if you have any ranks of the style <em>Basal Strength</em> you can dual wield with any weapon that isn't a Bow, Mounted, or an Explosive). Both weapons must be either both ranged weapons or both melee weapons, you cannot use this action with mix of ranged and melee weapons.</p>
 				<p>The style <em>Ambidexterity</em> reduces the disadvantage penalties and speed costs of this action.</p>
 			</div>
 
@@ -219,96 +219,58 @@
 
 		<div class="section" id="grappling-actions">
 			<h4>Grappling Actions</h4>
-			<p>Wrestling, tackling, pushing opponents around, and other forms of grappling have their own set of actions. Once a grapple has been initiated a roll will determine which opponent has the advantage in the grapple. The opponent in the disadvantaged position can only attempt Escape, Reversal, or Rest actions, and the opponent with the advantage can only use actions from the following list of advantaged grappling actions.</p>
-			<p>For the duration of the grapple, both opponents occupy the same space. Neither character can attempt to dodge outside attacks, however, neither person is vulnerable to stealth attacks because of this. If a ranged attack targets either character in a grapple roll a single die, on a success the attack hits the intended target, on a failure the attack hits the other character in the grapple.</p>
+			<p>Wrestling, tackling, restraining, pushing opponents around, and other forms of grappling have their own set of actions. While grappling you can only use actions from this list. This restriction denies all grappling opponents the ability to dodge. Attempt to start a grapple by using the Grapple action.</p>
 
 			<div class="section sub-section" id="initiate-grapple">
 				<h4>Grapple<br>
-				<small>Combat Action - Speed Cost: 4</small></h4>
-				<p>To start a grapple you must enter the target's space, you can move a single space as part of this action to do so. At the start of the grapple, both opponents roll <strong>Strength + Unarmed</strong>, the winner of this roll now has the advantage in this grapple and the loser now has the disadvantage.</p>
-				<p>If attempting to grapple a target that is denied the ability to use defensive actions (such as an unaware or flanked opponent), this targets's initial grapple roll is replaced with a roll is rolled with all automatic successes replaced by dice.</p>
+				<small>Combat Action - Speed Cost: 4 (+ number of spaces crossed)</small></h4>
+				<p>You attempt to initiate a grapple. Both you and the target make opposed <strong>Strength + Unarmed Combat</strong> rolls, the winner of this roll decides if a grapple begins. When the grapple begins you enter the target's space. Until the grapple ends, both opponents share the same space, cannot move normally, and can only take actions from the grappling actions list.</p>
+				<p>If you are not adjacent to the target, you can increase the cost of this action by the number of spaces you need to cross to reach the target. By doing this, you cross the distance and attempt to tackle the target. When tackling, if the winner of the roll decides to begin the grapple, both opponents are now prone and the loser takes a point of damage on a random location.</p>
 			</div>
 			
+			<div class="section sub-section" id="choke">
+				<h4>Choke<br>
+				<small>Extended action - Speed Cost: 6</small></h4>
+				<p>This attack drains the target's Endurance instead of doing normal damage. During each full round interval, roll your <Strong>Strength + Unarmed Combat</Strong> against a target number equal to your opponent's Stamina score. Each success above the target number drains one point of Endurance from the target. As soon as you stop this extended action, or are forced to stop by the grapple ending or the opponent pinning you, the target's Endurance returns to its previous value at the start of the next round.</p>
+				<p>If the target's Endurance drops to 0 it immediately becomes unconscious. If you continue choking an unconscious target it will lose one point of endurance per round (you no longer have to roll).</p>
+			</div>
+
+			<div class="section sub-section" id="escape">
+				<h4>Escape<br>
+				<small>Extended Action - Speed Cost: 4</small></h4>
+				<p>If both opponents wish to end the grapple, it simply ends with no roll as soon as one of them starts this action.  Otherwise, to escape you must make an extended roll of <strong>Agility + Unarmed Combat</strong> with an interval of a turn. Once this extended roll has accumulated more successes than the sum of your opponent's Strength and Unarmed Combat scores you succeed and exit the grapple into an adjacent space of your choosing.</p>
+			</div>
+
+			<div class="section sub-section" id="external-action">
+				<h4>External Action<br>
+				<small>Combat Action - Speed Cost: Normal Cost + 2</small></h4>
+				<p>Attempt any non-grappling combat action, including attacking your opponent or another adjacent target. This action has its speed cost increased by 2 and is rolled with the disadvantage of having all automatic successes replaced by dice.</p>
+				<p>Move, Defensive, Full, or Extended actions cannot be done this way.</p>
+			</div>
+
+			<div class="section sub-section" id="pin">
+				<h4>Pin<br>
+				<small>Combat Action - Speed Cost: 5</small></h4>
+				<p>Both opponents make opposed <strong>Strength + Unarmed Combat</strong> rolls. If you win this roll you have pinned your opponent against a surface or have locked them into a hold. While the opponent remains pinned, they can only take the Escape, Pin, or Rest actions and at any time you may opt to end the grapple and release the target into any safe adjacent space.</p>
+				<p>A pinned opponent may still attempt the Pin action in order to reverse the grapple and pin their opponent.</p>
+			</div>
+
+			<div class="section sub-section" id="push">
+				<h4>Push<br>
+				<small>Move Action - Speed Cost: 2 per space moved</small></h4>
+				<p>This action lets you force the grapple into another space. Make opposed <strong>Strength + Unarmed Combat</strong> rolls against your opponent. Each success you beat your opponent by lets you move them a space. Each space moved has a speed cost of 2. If you rolled more successes than you needed to push the target as far as you did, then after pushing you may release your opponent into any adjacent square of your choosing. Releasing your opponent this way allows you to push them into a hazard, but will end the grapple immediately.</p>
+			</div>
+
 			<div class="section sub-section" id="tackle">
-				<h4>Tackle<br>
-				<small>Combat Action - Speed Cost: number of spaces crossed</small></h4>
-				<p>You can also start a grapple by tackling your target. Tackling functions like the Charge action; it can target anyone at least 3 spaces away but within a number of spaces equal to your current speed and accessible via a straight line over even terrain. Tackling someone moves you into their space.</p>
-				<p>When you tackle, both you and your target make resisted <strong>Strength + Unarmed</strong> checks. The winner of this roll has the advantaged position and the loser has the disadvantaged position. If either participant won the roll by more than 3 successes, the loser takes a point of damage on a random location.</p>
+				<h4>Rest<br>
+				<small>Full action - No Speed Cost</small></h4>
+				<p>Resting functions the same way inside grapple as it does outside one, with the exception that you cannot move as a part of this action. Regain double the normal speed at the start of the next round after using this action.</p>
 			</div>
 
-			<div class="section sub-section" id="advantaged-grappling">
-				<h4>Advantaged Grappling Actions</h4>
-			
-				<div class="section sub-section" id="choke">
-					<h4>Choke<br>
-					<small>Extended action - Speed Cost: 6</small></h4>
-					<p>This attack drains the target's endurance instead of doing normal damage. During each full round interval, roll your <strong>Strength + Unarmed</strong> against a target number equal to your opponent's <strong>Stamina</strong> rating. Each success above the target number drains one point of Endurance from the target. As soon as you stop this action, or are forced to stop by the target reversing or ending the grapple, the target's Endurance returns to its previous value at the start of the next round.</p>
-					<p>If the target's Endurance drops to 0 it immediately becomes unconscious. If you continue choking an unconscious target it will lose one point of endurance per round (you no longer have to roll). If the target's endurance reaches the negative of its normal value the target dies. If you stop choking an unconscious opponent their Endurance will return by one point per round until consciousness is regained.</p>
-				</div>
-				
-				<div class="section sub-section" id="pin">
-					<h4>Pin<br>
-					<small>Combat Action - Speed Cost: 5</small></h4>
-					<p>Both opponents make resisted <strong>Strength + Unarmed</strong> rolls, if you win this roll you have gotten your opponent pinned against a floor or wall or have locked them into a submission hold. As long as you remain in the advantaged position you gain a bonus of 1 automatic success to any roll you make as part of a grappling action. Anytime that you have this bonus you cannot take any further Pin actions.</p>
-				</div>
-
-				<div class="section sub-section" id="point-blank-attack">
-					<h4>Point Blank Attack<br>
-					<small>Combat Action - Speed Cost: 4</small></h4>
-					<p>This action lets you use weapons with the Small trait inside the grapple. You may only attempt this action if you already had the weapon in your hand when the grapple started. You and your target make resisted <strong>Strength + Melee</strong> checks. If you win the roll the attack hits, but if you lose the roll by more than 3 your opponent has wrestled control of the weapon away from you and may either drop it or hold on to it. If the weapon is a melee weapon roll location and damage normally, if the weapon is a firearm roll location normally and deal maximum damage.</p>
-				</div>
-				
-				<div class="section sub-section" id="push">
-					<h4>Push<br>
-					<small>Move Action - Speed Cost: 2 per space moved</small></h4>
-					<p>This action lets you force the target into another space. Make resisted <strong>Strength + Unarmed</strong> rolls against your opponent. Each success you beat your opponent by lets you move them a space. Each space moved has a speed cost of 2. If you rolled more successes than you needed to push the target as far as you did, then after pushing you may release your opponent into any adjacent square of your choosing. This allows you to release them into a hazard if you wish.</p>
-				</div>
-			
-				<div class="section sub-section" id="release">
-					<h4>Release<br>
-					<small>Free Action - Speed Cost: 1</small></h4>
-					<p>This ends the grapple, both characters can now act normally. The other character is now in an adjacent space of their choosing.</p>
-				</div>
-			
-				<div class="section sub-section" id="tackle">
-					<h4>Rest<br>
-					<small>Full action - No Speed Cost</small></h4>
-					<p>Resting functions the same way it does outside of a grapple except that you cannot move. Regain double your normal speed at the start of the next round after using this action.</p>
-				</div>
-			
-				<div class="section sub-section" id="throttle">
-					<h4>Throttle<br>
-					<small>Combat Action - Speed Cost: 4</small></h4>
-					<p>Roll a location and your <strong>Strength</strong> score. Each success on the strength roll does one point of damage to the location rolled.</p>
-				</div>
-				
-				<div class="section sub-section" id="throw">
-					<h4>Throw<br>
-					<small>Combat Action - Speed Cost: 4</small></h4>
-					<p>This action ends the grapple and moves the target into a different space of your choosing. Roll your <strong>Strength</strong> score, each success you get lets you throw the target 1 space. For example, if you rolled 3 successes you could move the target into any space within 3 spaces of you.</p>
-					<p>If the path the target is thrown crosses an occupied space, both the thrown target and the character in the occupied space end up prone in the occupied space and are dealt 1 point of damage to a random location. If the path crosses an easily breakable obstacle (glass, light furniture), the target smashes through it and is dealt 1 point of damage to a random location. If the path crosses an unbreakable object (walls, heavy furniture) the character stops in a space adjacent to the object and is dealt 2 points of damage to a random location. See the Hazards section of chapter 3 to determine the results of throwing an opponent into other hazards (such as fire or large drops).</p>
-				</div>
-			</div><!-- end advantaged grappling -->
-			
-			<div class="section sub-section" id="disadvantaged-grappling">
-				<h4>Disadvantaged Grappling Actions</h4>
-			
-				<div class="section sub-section" id="tackle">
-					<h4>Escape<br>
-					<small>Extended Action - Speed Cost: 4</small></h4>
-					<p>With this action you can eventually escape a grapple, even when the opponent's grappling ability is superior to yours. Make an extended roll of <strong>Agility + Unarmed</strong> with an interval of a turn. Once this extended roll has accumulated more successes than the sum of your opponent's Strength + Unarmed scores you succeed and exit the grapple into an adjacent space of your choosing and can now act normally.</p>
-				</div>
-
-				<div class="section sub-section" id="tackle">
-					<h4>Reversal<br>
-					<small>Combat Action - Speed Cost: 4</small></h4>
-					<p>This action allows you to attempt to gain the upper hand in a grapple. Both characters make resisted <strong>Strength + Unarmed</strong> rolls, if you win your character is now in the advantaged position.</p>
-				</div>
-
-				<div class="section sub-section" id="tackle">
-					<h4>Rest<br> 
-					<small>Full Action - Speed Cost: 0</small></h4>
-					<p>Resting functions the same way it does outside of a grapple except that you cannot move. Regain double your normal speed at the start of the next round after using this action.</p>
-				</div>
-			<!-- end disadvantaged grappling -->
+			<div class="section sub-section" id="throw">
+				<h4>Throw<br>
+				<small>Combat Action - Speed Cost: 4</small></h4>
+				<p>The grapple ends and you roll <strong>Strength</strong>. You throw the target into any space within a range equal to the results of this roll.</p>
+				<p>If the path the target is thrown crosses an occupied space, both the thrown target and the character in the occupied space end up prone in the occupied space and are dealt 1 point of damage to a random location. If the path crosses an easily breakable obstacle (such as glass or light furniture), the target smashes through it and is dealt 1 point of damage to a random location. If the path crosses an unbreakable object (such as a wall or heavy furniture) the character stops in a space adjacent to the object and is dealt 2 points of damage to a random location.</p>
+			</div>
 		</div><!-- #grapping-actions -->
