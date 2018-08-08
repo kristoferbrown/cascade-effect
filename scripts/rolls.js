@@ -508,7 +508,7 @@ function skillHold(skill) {
 			$('#skill-unmodal .etymology').append(' = <strong>'+ (character.skills[skill.currentTarget.id][2] + styledSkills.skills[skill.currentTarget.id]) +'</strong>');
 		}
 		if (skill.currentTarget.id === 'Alertness' && character.styles.classes.Perception.spec1[1] > 0) {
-			$('#skill-unmodal').append('<p class="trait-description etymology"> The style <em>Super Senses</em> has added '+ character.styles.classes.Perception.spec1[1] +' dice to rolls with this skill.');
+			$('#skill-unmodal').append('<p class="trait-description etymology"> The style <em>Chromaception</em> has added '+ character.styles.classes.Perception.spec1[1] +' dice to rolls with this skill.');
 		}
 		if (technAtt > 0) {
 			$('#skill-unmodal').append('<p class="trait-description etymology">Due to your high '+ character.skills[skill.currentTarget.id][0] +' score, rolls made with this attribute trade '+ technAtt +' dice for '+ technAtt +' successes.</p>');

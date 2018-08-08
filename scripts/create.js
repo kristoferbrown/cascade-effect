@@ -180,15 +180,15 @@ $.each(characterPrototype.styles.classes, function(key, value) {
 		}
 	}
 });
-characterPrototype.styles.classes.Strength.spec1[0] = 'Super Strength';
-characterPrototype.styles.classes.Strength.spec2[0] = 'Power Attack';
+characterPrototype.styles.classes.Strength.spec1[0] = 'Unencumber';
+characterPrototype.styles.classes.Strength.spec2[0] = 'Adrenal Strength';
 characterPrototype.styles.classes.Strength.spec3[0] = 'Damage +';
 
 characterPrototype.styles.classes.Finesse.spec1[0] = 'Deft Combat';
 characterPrototype.styles.classes.Finesse.spec2[0] = 'Ambidexterity';
 characterPrototype.styles.classes.Finesse.spec3[0] = 'Melee +';
 
-characterPrototype.styles.classes.Perception.spec1[0] = 'Super Senses';
+characterPrototype.styles.classes.Perception.spec1[0] = 'Chromaception';
 characterPrototype.styles.classes.Perception.spec2[0] = 'Precision';
 characterPrototype.styles.classes.Perception.spec3[0] = 'Ranged +';
 
