@@ -242,9 +242,9 @@ function beginCharacterCreation() {
 	$('.c-att-row.Stamina-primary').append('<span class="clear"></span><div class="descriptor-container"><div class="top-descriptor">Defensive</div><div class="bottom-descriptor">Unarmed</div></div><span class="detail-row">Ability to continue acting despite exhaustion and injuries.</span>');
 	$('.c-att-row.Agility-primary').append('<span class="clear"></span><div class="descriptor-container"><div class="top-descriptor">Defensive</div><div class="bottom-descriptor">Melee</div></div><span class="detail-row">Quickness and skill when moving your entire body or dodge melee attacks.</span>');
 	$('.c-att-row.Wits-primary').append('<span class="clear"></span><div class="descriptor-container"><div class="top-descriptor">Defensive</div><div class="bottom-descriptor">Ranged</div></div><span class="detail-row">How fast you can think and react under pressure or avoid ranged attacks.</span>');
-	$('.c-att-row.Willpower-primary').append('<span class="clear"></span><div class="descriptor-container"><div class="top-descriptor">Mental</div><div class="bottom-descriptor">Extropy</div></div><span class="detail-row">Ability to ignore coercion, temptation, and fear.</span>');
-	$('.c-att-row.Intelligence-primary').append('<span class="clear"></span><div class="descriptor-container"><div class="top-descriptor">Mental</div><div class="bottom-descriptor">Avatar</div></div><span class="detail-row">Ability to learn, comprehend, research, and recall.</span>');
-	$('.c-att-row.Charisma-primary').append('<span class="clear"></span><div class="descriptor-container"><div class="top-descriptor">Mental</div><div class="bottom-descriptor">Proxy</div></div><span class="detail-row">Social skills, self confidence, and likabilty.</span>');
+	$('.c-att-row.Willpower-primary').append('<span class="clear"></span><div class="descriptor-container"><div class="top-descriptor">Mental</div></div><span class="detail-row">Ability to ignore coercion, temptation, and fear.</span>');
+	$('.c-att-row.Intelligence-primary').append('<span class="clear"></span><div class="descriptor-container"><div class="top-descriptor">Mental</div></div><span class="detail-row">Ability to learn, comprehend, research, and recall.</span>');
+	$('.c-att-row.Charisma-primary').append('<span class="clear"></span><div class="descriptor-container"><div class="top-descriptor">Mental</div></div><span class="detail-row">Social skills, self confidence, and likabilty.</span>');
 	
 	//rig the buttons to work
 	$('#create-finish-step-1').show();
