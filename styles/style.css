@@ -599,6 +599,14 @@ body.print {background:url(../images/logo.svg) no-repeat 0 6px #fff; background-
 	.section.open .visible-small {display:none;}
 }
 
+@media print {
+	#rulebook-chapters .chapter-title {display:none;}
+	#rulebook-chapters .chapter-text {border:none;}
+	#rulebook-chapters .section:before {content:none;}
+	#rulebook-chapters .section h4 {padding-left: 0;}
+	#rulebook-chapters .style-class, #rulebook-chapters .arcane-class, #rulebook-chapters .outlook-class {page-break-before:always; page-break-after:always; column-count:2;}
+}
+
 /* skewers  */
 @media (max-width:500px) {
 	body.skewed #root-menu, body.skewed #character-creation, body.skewed #settings-view {-webkit-transform:skewY(-12deg); transform:skewY(-12deg); margin:3% 0 0 0; padding:20% 0 0 0; background:url(../images/logo-steps.svg) no-repeat 0 6px; background-size:contain; }
