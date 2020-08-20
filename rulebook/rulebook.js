@@ -17,7 +17,7 @@ taxonomy = {
 		Stamina:      'Ability to continue acting despite exhaustion and injuries.',
 		Agility:      'Quickness when moving your entire body or dodging melee attacks.',
 		Wits:         'Think fast and react under pressure or avoid ranged attacks.',
-		Willpower:    'Resist coercion and fear, or comprehend the supernatural.',
+		Willpower:    'Resist coercion and fear, or comprehend the preternatural.',
 		Intelligence: 'Learn, comprehend, research, and recall.',
 		Charisma:     'Social skills, self confidence, and likabilty.'
 	},
@@ -29,7 +29,7 @@ taxonomy = {
 		Athletics:    'Move quickly and skillfully to excel in physical tasks and sports.',
 		Drive:        'Proficiency with operating motor vehicles.',
 		Survival:     'Navigate or provide food and shelter in hostile environments.',
-		Guts:         'Courage and comprehension of the supernatural.',
+		Guts:         'Courage and comprehension of the preternatural.',
 		Hardware:     'Make and repair crafts, computer hardware, and machines.',
 		Humanities:   'Knowledge of academia, arts, culture, history, law, and philosophy.',
 		Medicine:     'Knowledge of anatomy, diagnosis, first aid, and medical equipment.',
