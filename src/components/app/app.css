@@ -1,0 +1,31 @@
+@media print {
+  body {
+    background: none;
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  #root .App {
+    column-count: 2;
+    column-gap: 0;
+    max-width: 100%;
+  }
+}
+
+.App {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.globalToggle {
+  position: fixed;
+  bottom: 3px;
+  right: 3px;
+  padding: 6px;
+  z-index: 3;
+}
+
+@media print {
+  .globalToggle {
+    display: none;
+  }
+}

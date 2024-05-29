@@ -1,0 +1,140 @@
+@media print {
+    @page {
+        margin: 1cm;
+    }
+    /* @page nomargin {
+        margin: 0 !important;
+    } */
+    .App .section,
+    .App .sectionChildren {
+        margin: 0 0 12px 0;
+        padding: 0;
+    }
+
+    .App .section.depth2 {
+        margin: 12px;
+    }
+
+    .App .section.depth2.chapterIntroColumn {
+        margin: 0;
+    }
+
+    /* .App .section:not(.chapterIntroColumn),
+    .App .section:not(.chapterIntroColumn) .section {
+        margin: 6px;
+    } */
+  
+    .App .section p {
+        margin: 10px 0 2px 0;
+        padding: 0;
+    }
+  
+    .App .section h1,
+    .App .section h2,
+    .App .section h3,
+    .App .section h4  {
+        background: none;
+        margin: 0;
+        padding: 0;
+        position: static;
+    }
+  
+    .App .section h1 {
+        font-size: 42px;
+        text-align: center;
+        column-span: all;
+        margin: 0 0 2px 0;
+    }
+  
+    .App .section.depth1.openSection {
+        position: relative;
+        margin: 0;
+        break-after: page;
+        break-before: page;
+    }
+  
+    .App .sectionCoordinates,
+    .App .visibilityToggle {
+        display: none;
+    }
+
+
+    .section.depth1:after {
+        content: none;
+        display: none;
+    }
+
+    .section .logomark-svg {
+        display: block;
+        margin: 0 auto;
+        width: 20%;
+        /* left: 40%; */
+        position: relative;
+        top: 65px;
+    }
+    .nomargin-page {
+        page: nomargin;
+    }
+    .section.chapterIntroColumn {
+        background: none;
+        break-after: column;
+        padding: 160px 16px 16px 16px;
+        position: relative;
+        top: -60px;
+    }
+    .section.chapterIntroColumn.classified {
+        background: none;
+        color: #fff;
+    }
+
+    .section.chapterIntroColumn:after {
+        content: "";
+        background: #ddd;
+        display: block;
+        height: 700px;
+        position: absolute;
+        left: 0;
+        top: 64px;
+        transform: skewY(-6deg);
+        width: 100%;
+        z-index: -1;
+    }
+    .section.chapterIntroColumn.classified:after {
+        background: #000;
+        top: 25px;
+    }
+
+    .section.inset {
+        margin: 20px 0;
+        padding: 30px 20px;
+    }
+    .section.inset:after {
+        content: "";
+        background: #ddd;
+        display: block;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: skewY(-6deg);
+        width: 100%;
+        z-index: -1;
+    }
+
+    /* themes */
+    .section.classified { background: #000; color: #eee; }
+    .section.classified .visibilityToggle { background: #000; color: #eee; }
+    .section.classified p { color: #eee; }
+    .section.classified h1,
+    .section.classified h2,
+    .section.classified h3,
+    .section.classified h4,
+    .section.classified h5 {
+        background: #000;
+        color: #fff;
+    }
+
+    .App .crosslink {
+        -webkit-text-stroke: 0px;
+    }
+}

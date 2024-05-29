@@ -1,0 +1,10 @@
+.break {
+    display: block;
+    break-after: column;
+}
+
+.break.pageBreak {
+    display: block;
+    break-before: page;
+    column-span: all;
+}

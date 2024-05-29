@@ -1,0 +1,33 @@
+.rulebookRoll {
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+    margin: 0 0 0 10px;
+    padding: 1px 6px 1px 10px;
+    position: relative;
+}
+
+.rulebookRoll .die {
+    left: -8px;
+    position: absolute;
+    top: 3px;
+}
+
+.die {
+    align-content: space-around;
+    background: #fff;
+    border-width: 2px;
+    border-style: solid;
+    display: inline-flex;
+    flex-wrap: wrap;
+    height: 12px;
+    justify-content: center;
+    transform: rotate(45deg);
+    width: 12px;
+}
+
+.diePip {
+    background: #333;
+    height: 2px;
+    margin: 0 1px;
+    width: 2px;
+}

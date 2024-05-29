@@ -1,0 +1,108 @@
+@import url('../../variables.css');
+
+.section.inset,
+.section.inset h1,
+.section.inset h2,
+.section.inset h3,
+.section.inset h4,
+.section.inset h5 {
+     background: #ddd;
+}
+
+.section.classified,
+/* .section.classified p, */
+.section.classified .section,
+.section.classified .crosslink,
+.section.classified h1,
+.section.classified h2,
+.section.classified h3,
+.section.classified h4,
+.section.classified h5 {
+    background: #000;
+    color: #fff;
+}
+
+.section.metabSectionFight,
+.section.metabSectionFight .sectionCoordinates,
+.section.metabSectionFight .section,
+.section.metabSectionFight h1,
+.section.metabSectionFight h2,
+.section.metabSectionFight h3,
+.section.metabSectionFight h4,
+.section.metabSectionFight h5 {
+    background: var(--fight);
+    color: #000;
+    -webkit-text-stroke: 0.3px #000;
+    text-shadow: 0px 0px 15px #fff;
+}
+.section.metabSectionFlight,
+.section.metabSectionFlight .sectionCoordinates,
+.section.metabSectionFlight .section,
+.section.metabSectionFlight h1,
+.section.metabSectionFlight h2,
+.section.metabSectionFlight h3,
+.section.metabSectionFlight h4,
+.section.metabSectionFlight h5 {
+    background: var(--flight);
+    color: #000;
+    -webkit-text-stroke: 0.3px #000;
+    text-shadow: 0px 0px 15px #fff;
+}
+.section.metabSectionFocus,
+.section.metabSectionFocus .sectionCoordinates,
+.section.metabSectionFocus .section,
+.section.metabSectionFocus h1,
+.section.metabSectionFocus h2,
+.section.metabSectionFocus h3,
+.section.metabSectionFocus h4,
+.section.metabSectionFocus h5 {
+    background: var(--focus);
+    color: #000;
+    -webkit-text-stroke: 0.3px #000;
+    text-shadow: 0px 0px 15px #fff;
+}
+.section.metabSectionSelf,
+.section.metabSectionSelf .sectionCoordinates,
+.section.metabSectionSelf .sectionChildren,
+.section.metabSectionSelf .section p,
+.section.metabSectionSelf .crosslink,
+.section.metabSectionSelf h1,
+.section.metabSectionSelf h2,
+.section.metabSectionSelf h3,
+.section.metabSectionSelf h4,
+.section.metabSectionSelf h5 {
+    background: var(--self);
+    color: #fff;
+    -webkit-text-stroke: 0.3px #fff;
+    text-shadow: 0px 0px 15px #000;
+}
+.section.metabSectionNear,
+.section.metabSectionNear .sectionCoordinates,
+.section.metabSectionNear .sectionChildren,
+.section.metabSectionNear .crosslink,
+.section.metabSectionNear .section p,
+.section.metabSectionNear h1,
+.section.metabSectionNear h2,
+.section.metabSectionNear h3,
+.section.metabSectionNear h4,
+.section.metabSectionNear h5 {
+    background: var(--near);
+    color: #fff;
+    -webkit-text-stroke: 0.3px #fff;
+    text-shadow: 0px 0px 15px #000;
+}
+.section.metabSectionFar,
+.section.metabSectionFar .sectionCoordinates,
+.section.metabSectionFar .sectionChildren,
+.section.metabSectionFar .crosslink,
+.section.metabSectionFar .section p,
+.section.metabSectionFar h1,
+.section.metabSectionFar h2,
+.section.metabSectionFar h3,
+.section.metabSectionFar h4,
+.section.metabSectionFar h5 {
+    background: var(--far);
+    color: #fff;
+    -webkit-text-stroke: 0.3px #fff;
+    text-shadow: 0px 0px 15px #000;
+}

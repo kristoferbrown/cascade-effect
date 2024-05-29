@@ -1,0 +1,7 @@
+@media print {
+    .chapterIntro {
+        column-span: all;
+        padding: 0 10%;
+        position: relative;
+    }
+}
