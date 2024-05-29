@@ -1,6 +1,7 @@
 {
-  "name": "ce-2021",
+  "name": "cascade-effect",
   "version": "2.7.0",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "classnames": "2.3.1",
