@@ -1,5 +1,5 @@
 .section {
-    color: #333;
+    color: var(--dilatedSpace);
     position: relative;
     margin: 20px 0;
 }
@@ -12,7 +12,7 @@
 }
 
 .section.depth1:after {
-    background: #fff;
+    background: var(--physicalSpace);
     content: "";
     display: block;
     height: 100%;
@@ -36,7 +36,7 @@
 } */
 
 .sectionCoordinates {
-    color: #999;
+    color: var(--dilatedSpace);
     display: inline;
     font-size: 12px;
     letter-spacing: 1px;
@@ -48,7 +48,7 @@
 .section h3,
 .section h4,
 .section h5 {
-    background: #fff;
+    background: var(--physicalSpace);
     cursor: pointer;
     margin: 0;
     padding: 0 12px;
@@ -67,17 +67,17 @@
 }
 
 .section h2 {
-    top: 42px;
+    top: 40px;
     z-index: 3;
 }
 
 .section h3 {
-    top: 72px;
+    top: 68px;
     z-index: 2;
 }
   
 .section h4 {
-    top: 96px;
+    top: 90px;
     z-index: 1;
 }
   
@@ -99,7 +99,7 @@
     width: calc(100% - 20px);
 }
 .section thead {
-    background: #ddd;
+    background: var(--contractedSpace);
 }
 .section td {
     padding: 3px;
@@ -111,7 +111,7 @@
 }
 
 .visibilityToggle {
-    background: #fff;
+    background: var(--physicalSpace);
     border: 0;
     cursor: pointer;
     padding: 4px;
@@ -122,7 +122,7 @@
 }
 
 .visibilityToggle:hover {
-    background: #eee;
+    background: var(--physicalSpace);
 }
 
 .logomark-svg {

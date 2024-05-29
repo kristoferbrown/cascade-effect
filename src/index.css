@@ -5,7 +5,7 @@ body {
 }
 
 body {
-  background: #ccc;
+  background: var(--entangledSpace);
   margin: 0;
   font-family: 'burlingame', 'Helvetica Neue', 'Verdana', sans-serif;
   -webkit-font-smoothing: antialiased;

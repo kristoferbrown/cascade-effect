@@ -1,6 +1,6 @@
 .rulebookStyle {
     display: inline-block;
     padding: 1px 3px;
-    text-shadow: 0 0 2px #000;
+    text-shadow: 0 0 2px var(--hiddenSpace);
     transform: skewX(-9deg)
 }

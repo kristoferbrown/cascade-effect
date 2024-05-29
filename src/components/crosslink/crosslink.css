@@ -1,13 +1,13 @@
 .crosslink {
     background: linear-gradient(0deg, rgba(0,0,0,.05) 30%, rgba(255,255,255,0) 30%);
-    color: #000;
+    color: var(--hiddenSpace);
     text-decoration: none;
-    -webkit-text-stroke: 0.1px #000;
+    -webkit-text-stroke: 0.1px var(--hiddenSpace);
 }
 
 .classified .crosslink {
-    color: #fff;
-    -webkit-text-stroke: 0.1px #fff;
+    color: var(--physicalSpace);
+    -webkit-text-stroke: 0.1px var(--physicalSpace);
 }
 
 .crosslink:hover {
@@ -15,7 +15,7 @@
 }
 
 .crosslink:active {
-    color: #fff;
+    color: var(--physicalSpace);
     background: linear-gradient(180deg, rgba(0,0,0,.8) 99%, rgba(255,255,255,0) 99%);
     -webkit-text-stroke: 0;
 }

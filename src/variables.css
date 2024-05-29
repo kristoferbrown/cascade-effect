@@ -1,8 +1,21 @@
 :root {
-  --fight: #EE3B96;
-  --flight: #CBAF24;
-  --focus: #00AEEF;
-  --self: #AE2513;
-  --near: #006E1F;
-  --far: #002D95;
+  --physicalSpace: #F5E8D2;
+  --contractedSpace: #DBC1A8;
+  --entangledSpace: #B99D8E;
+  --dilatedSpace: #796168;
+  --hiddenSpace: #3A3242;
+
+  --fight: #E884B2;
+  --flight: #E8CF7B;
+  --focus: #74C9E5;
+  --self: #642828;
+  --near: #0A461E;
+  --far: #282882;
+
+  --fightAccent: #EF5BA0;
+  --flightAccent: #D2BB29;
+  --focusAccent: #00B7EC;
+  --selfAccent: #B41414;
+  --nearAccent: #006E1F;
+  --farAccent: #000096;
 }

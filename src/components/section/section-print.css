@@ -84,12 +84,12 @@
     }
     .section.chapterIntroColumn.classified {
         background: none;
-        color: #fff;
+        color: var(--physicalSpace);
     }
 
     .section.chapterIntroColumn:after {
         content: "";
-        background: #ddd;
+        background: var(--contractedSpace);
         display: block;
         height: 700px;
         position: absolute;
@@ -100,7 +100,7 @@
         z-index: -1;
     }
     .section.chapterIntroColumn.classified:after {
-        background: #000;
+        background: var(--hiddenSpace);
         top: 25px;
     }
 
@@ -110,7 +110,7 @@
     }
     .section.inset:after {
         content: "";
-        background: #ddd;
+        background: var(--contractedSpace);
         display: block;
         height: 100%;
         position: absolute;
@@ -122,16 +122,16 @@
     }
 
     /* themes */
-    .section.classified { background: #000; color: #eee; }
-    .section.classified .visibilityToggle { background: #000; color: #eee; }
-    .section.classified p { color: #eee; }
+    .section.classified { background: var(--hiddenSpace); color: var(--physicalSpace); }
+    .section.classified .visibilityToggle { background: var(--hiddenSpace); color: var(--physicalSpace); }
+    .section.classified p { color: var(--physicalSpace); }
     .section.classified h1,
     .section.classified h2,
     .section.classified h3,
     .section.classified h4,
     .section.classified h5 {
-        background: #000;
-        color: #fff;
+        background: var(--hiddenSpace);
+        color: var(--physicalSpace);
     }
 
     .App .crosslink {

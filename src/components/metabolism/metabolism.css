@@ -12,19 +12,19 @@
 .metabolism.fight,
 .metabolism.flight,
 .metabolism.focus {
-    color: #000;
-    text-shadow: 0px 0px 3px #fff;
-    -webkit-text-stroke: 0.4px #000;
-    border-color: #ddd;
+    color: var(--hiddenSpace);
+    text-shadow: 0px 0px 3px var(--physicalSpace);
+    -webkit-text-stroke: 0.4px var(--hiddenSpace);
+    border-color: var(--contractedSpace);
 }
 
 .metabolism.self,
 .metabolism.near,
 .metabolism.far {
-    color: #fff;
-    -webkit-text-stroke: 0.4px #fff;
-    text-shadow: 0px 0px 3px #000;
-    border-color: #000;
+    color: var(--physicalSpace);
+    -webkit-text-stroke: 0.4px var(--physicalSpace);
+    text-shadow: 0px 0px 3px var(--hiddenSpace);
+    border-color: var(--hiddenSpace);
 }
 
 .metabolism.fight { background: var(--fight); }
@@ -60,12 +60,12 @@
     display: inline-block;
     font-weight: bold;
     position: relative;
-    text-shadow: 0px 0px 3px #fff;
+    text-shadow: 0px 0px 3px var(--physicalSpace);
 }
 
 .pair-bond:before {
     content: "";
-    background: #bfbfbf;
+    background: var(--entangledSpace);
     width: 25px;
     height: 25px;
     display: block;
