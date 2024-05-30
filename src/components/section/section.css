@@ -1,5 +1,5 @@
 .section {
-    color: var(--dilatedSpace);
+    color: var(--hiddenSpace);
     position: relative;
     margin: 20px 0;
 }
@@ -23,6 +23,7 @@
     width: 100%;
     z-index: -1;
     transition: ease 0.5s;
+    box-shadow: 0 1px 3px var(--hiddenSpace);
 }
 
 .section.depth1.openSection:after {

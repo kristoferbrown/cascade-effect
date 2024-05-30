@@ -5,13 +5,13 @@ body {
 }
 
 body {
-  background: var(--entangledSpace);
+  background: #fcf3e4; /* like phys space but extra light */
   margin: 0;
   font-family: 'burlingame', 'Helvetica Neue', 'Verdana', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-ul { 
+ul {
   list-style: square;
 }
