@@ -154,19 +154,18 @@ function Chapter1() {
         </Section>
       </Section>
 
-      {/* @todo continue rewrites from here */}
-
       <Section header="Basic Gameplay">
         <p>
           Gameplay consists of the GM and players collaborating on a story. The GM presents a situation, and the players
           say what their characters are doing. Most of the time, anything a player describes their character doing just
-          happens. However, if the action described is challenging to the character in some way, the GM will assign it a
-          <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink> number.
+          happens. However, if the action described is difficult for the character in some way, the GM will assign it a
+          <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink> number and you will resolve a Challenge. The
+          basic details of resolving a challenge are presented here, for more details see chapter 3.
         </p>
         <p>
-          To determine if you succeed, and at what cost, you must use your character's{" "}
-          <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink>
-          scores to attempt to beat the <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink> number. For every
+          To determine if you succeed, and at what cost, you must use your character's
+          <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink>
+          to attempt to beat the <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink> number. For every
           <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, choose a pairing of one
           <Crosslink target={topics.PHYS_METAB}>Physical Metabolism</Crosslink> and one
           <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> that you will use to attempt to overcome
@@ -175,61 +174,42 @@ function Chapter1() {
         </p>
         <Section header="Comparing Difficulty">
           <p>
-            Often it is very simple to determine if you succeed. Just compare the{" "}
-            <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink> number to the sum of the current values of your
-            chosen Metabolism pairing. If it meets or exceeds the difficulty then you complete the Challenge
-            successfully.
+            Often it is very simple to determine if you succeed. Add up the sum of the current values of your chosen
+            Metabolism pairing, this number is referred to as your Progress. If your Progress meets or exceeds the
+            Difficulty number then you complete the Challenge successfully.
           </p>
         </Section>
-        <Section header="Spending Metabolisms">
+        <Section header="Effort & Spending Metabolisms">
           <p>
-            Most <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> require some physical or mental effort, and
-            therefore require you to spend 1 point from either{" "}
-            <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> in your chosen pair after counting your sum of
-            your pairing to determine success. Spent <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> points
-            deduct from your current value and cannot be used until you regain them.
+            Many <Crosslink target={topics.CHALLENGE}>Challenges</Crosslink> will have a set Effort value representing
+            how much physical or mental effort the Challenge requires. Some Effort values will require you to spend
+            Metabolism points. You spend these points by reducing the Current value of one or both of the involved
+            Metabolisms. These spent points can't be used again until they are regained, for example, by resting.
+          </p>
+          <p>
+            When you spend Metabolism points, the amount of Progress created is equal to the number of points spent
+            instead of the sum of the current values.
           </p>
         </Section>
-        <Section header="Complications">
+        <Section header="Risk & Rolling Dice">
           <p>
-            The circumstances of the <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> can cause it to come
-            with
-            <Crosslink target={topics.COMPLICATION}>Complications</Crosslink> attached to it.
-            <Crosslink target={topics.COMPLICATION}>Complications</Crosslink> may make the
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> easier, harder, more expensive, or cheaper.
+            Many <Crosslink target={topics.CHALLENGE}>Challenges</Crosslink> will have a set Risk value representing how
+            much chance, unpredictability, and things out of your character's control can influence the challenge.
+            Certain Risk values will require you to roll dice instead of just counting how successful you are.
           </p>
           <p>
-            The most common Complications, especially in combat, are{" "}
-            <Crosslink target={topics.STRENUOUS}>Strenuous</Crosslink>, which requires you to spend more Metabolism
-            points, and <Crosslink>Risky</Crosslink>, which requires you to roll dice.
-          </p>
-        </Section>
-        <Section header="Rolling Dice">
-          <p>
-            Dice are only needed if a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> is{" "}
-            <Crosslink target={topics.RISKY}>Risky</Crosslink>. This happens when a possiblity of failure exists due to
-            things outside of your character's control. Roll a number of 6 sided dice equal to the amount of Metabolism
-            points you applied to the action.
+            When a Challenge requires dice, the number of dice you roll is typically equal to how much Progress you
+            would have had without the dice. For example, if you would have gotten 4 Progress, instead roll 4 dice. Each
+            die you roll is a 6 sided die that has a roughly 50% chance of generating Progress.
           </p>
           <p>
-            When you roll them, each die landing on 4 or greater adds a point of{" "}
+            Each die you roll that lands on 4 or above adds a point of
             <Crosslink target={topics.PROGRESS}>Progress</Crosslink> to the results. Any die that comes up 6 gets
-            rerolled, potentially adding more <Crosslink target={topics.PROGRESS}>Progress</Crosslink>, or even coming
-            up as 6 to reroll again. Sum up the total amount of <Crosslink target={topics.PROGRESS}>Progress</Crosslink>{" "}
-            and if it meets or exceeds the
-            <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink>, then you succeed in the
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>.
-          </p>
-        </Section>
-        <Section header="Pushing Yourself">
-          <p>
-            You may find yourself in situations where it seems like you don't have enough Metabolism points available to
-            succeed at something. When this happens, you can{" "}
-            <Crosslink target={topics.PUSH_YRSELF}>Push Yourself</Crosslink> to exert extra effort. This causes all of
-            your Metabolisms to refill and lets you immediately spend any refilled points on the same challenge. But be
-            careful, doing this adds negative
-            <Crosslink target={topics.COMPLICATION}>Complications</Crosslink> to the{" "}
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>.
+            rerolled, potentially adding even more <Crosslink target={topics.PROGRESS}>Progress</Crosslink>, or even
+            coming up as 6 to reroll again. Sum up the total amount of{" "}
+            <Crosslink target={topics.PROGRESS}>Progress</Crosslink> generated by the dice and if it meets or exceeds
+            the
+            <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink>, then you succeed.
           </p>
         </Section>
       </Section>
@@ -246,28 +226,25 @@ function Chapter1() {
           </p>
           <p>
             Characters start as ordinary people. Follow the standard character creation steps detailed in the next
-            chapter. Players should avoid reading about the secret parts of the setting so that they can learn about the
-            world as the
-            <Crosslink target={topics.GAMEMASTER}>GM</Crosslink>
-            reveals it.
+            chapter.
           </p>
         </Section>
         <Section header="The Heroic Story">
           <p>This approach is recommended if everyone has played Cascade Effect before.</p>
           <p>
-            Characters are already slightly superhuman at the start. The Inciting Incident event has already occured.
-            Follow the standard character creation steps detailed in the next chapter. Afterwards, each character gets 3
-            experience points to spend (or a different amount determined by the{" "}
-            <Crosslink target={topics.GAMEMASTER}>GM</Crosslink>). Players are free to read any secret parts of the
-            setting.
+            Characters are already slightly superhuman at the start. An Inciting Incident has already occured. Follow
+            the standard character creation steps detailed in the next chapter. Afterwards, each character gets 3
+            experience points to spend (or a different amount determined by the
+            <Crosslink target={topics.GAMEMASTER}>GM</Crosslink>).
           </p>
         </Section>
         <Section header="The Short Story">
-          <p>Recommended for one shots, play testing, and short term games.</p>
+          <p>Recommended for one shots and short term games.</p>
           <p>
             Skip standard character creation. Instead, characters have 12 points to split between
-            <Crosslink target={topics.PHYS_METAB}>Physical Metabolisms</Crosslink>, with no metabolism ending up below 3
-            or above 6. Then choose any 9<Crosslink target={topics.TRAITS}>Traits</Crosslink> for the character. The{" "}
+            <Crosslink target={topics.PHYS_METAB}>Physical Metabolisms</Crosslink> scores, with no metabolism ending up
+            below 3 or above 6. Choose one Hidden Metabolism that starts with a score of 2 and the rest start with a
+            score of 1. Then choose any 9<Crosslink target={topics.TRAITS}>Traits</Crosslink> for the character. The
             <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> may also set an amount of experience points to spend as
             well.
           </p>
