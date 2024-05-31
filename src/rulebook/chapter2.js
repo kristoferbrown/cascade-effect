@@ -23,7 +23,7 @@ function Chapter2() {
 
       <Section header="Physical Body" isChapterIntroColumn>
         <p>
-          Most people are defined by the 3 <Crosslink target={topics.PHYS_METAB}>Physical Metabolisms</Crosslink>,{" "}
+          Most people are defined by the 3 <Crosslink target={topics.PHYS_METAB}>Physical Metabolisms</Crosslink>,
           <Metabolism fight />,
           <Metabolism flight />, and <Metabolism focus />.
         </p>
@@ -35,7 +35,7 @@ function Chapter2() {
           humans.
         </p>
         <p>
-          Every action you take, whether it is athletic or academic, will use one
+          Every action you take, from the athletic to the academic, will use one
           <Crosslink target={topics.PHYS_METAB}>Physical Metabolism</Crosslink>.
         </p>
       </Section>
@@ -49,15 +49,15 @@ function Chapter2() {
         </p>
         <p>
           A new character is only just beginning to sense and understand them. They are the resources provided by your
-          connection to your Yau Body, an intangible organ residing outside of normal space. This connection can be
+          connection to your Hidden Body, an intangible organ residing outside of normal space. This connection can be
           tapped to create energy, supplementing the physical body and mind, boosting it beyond its normal limits.
         </p>
         <p>
-          Every action you take will be paired with one
+          Every action you take will also use one
           <Crosslink inverted target={topics.HIDDEN_METAB}>
             Hidden Metabolism
           </Crosslink>
-          , if you have a relevant one available.
+          , resulting in a pairing of the physical and hidden.
         </p>
       </Section>
 
@@ -69,7 +69,8 @@ function Chapter2() {
           your character are
           <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink>
           and <Crosslink target={topics.TRAITS}>Traits</Crosslink>, and the steps of character creation will walk you
-          through defining these values.
+          through defining these values. You will also have a few secondary characteristics like Action Bonuses or
+          Entanglements, that will primarily come into play after character creation.
         </p>
         <p>
           <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> are numbers indicating how much energy,
@@ -82,14 +83,23 @@ function Chapter2() {
           authority, wealth, possessions, or other advantages are good
           <Crosslink target={topics.TRAITS}>Traits</Crosslink>.
         </p>
+        <p>
+          Action Bonuses are a number assigned to each action you can take in combat, representing your skill with
+          taking that action while under pressure. For a starting character, most of these will be 0 but a few might be
+          increased to 1 during the steps of character creation.
+        </p>
+        <p>
+          Finally, Entanglements and their Specializations will not be touched during character creation. Only later
+          when you spend experience points will these come up.
+        </p>
         <Section header="Step by Step Character Creation" isInset>
           <ol>
             <li>
               Choose a character concept.
               <ul>
                 <li>
-                  Set each <Crosslink target={topics.PHYS_METAB}>Physical Metabolism</Crosslink> to 3, and then spend 3
-                  more points on them.
+                  Set each <Crosslink target={topics.PHYS_METAB}>Physical Metabolism</Crosslink> score to 3, and then
+                  choose one that represents your character concept to increase by one.
                 </li>
                 <li>
                   Pick 3 <Crosslink target={topics.TRAITS}>Traits</Crosslink> that reflect your concept.
@@ -99,6 +109,7 @@ function Chapter2() {
             <li>
               Choose a Physical Origin.
               <ul>
+                <li>Choose a Physical Metabolism score that represents this origin and increase it by one.</li>
                 <li>
                   Pick the <Crosslink target={topics.TRAITS}>Traits</Crosslink> provided by this origin.
                 </li>
@@ -107,6 +118,8 @@ function Chapter2() {
             <li>
               Choose a Hidden Origin.
               <ul>
+                <li>Choose a Physical Metabolism score that represents this origin and increase it by one.</li>
+                <li>Choose a Hideen Metabolism score that represents this origin, and increase it from 0 to 1.</li>
                 <li>
                   Pick the <Crosslink target={topics.TRAITS}>Traits</Crosslink> provided by this origin.
                 </li>
