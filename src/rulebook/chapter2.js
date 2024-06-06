@@ -9,8 +9,6 @@ import Logomark from "../svgs/logomark";
 function Chapter2() {
   return (
     <Section coordinates={"2"} header="Characters">
-      {/* @todo continue rewrites from here */}
-
       <ChapterIntro>
         <p>
           Cascade Effect characters are just starting to discover an entire new world. Their mind is beginning to sense
@@ -24,15 +22,13 @@ function Chapter2() {
       <Section header="Physical Body" isChapterIntroColumn>
         <p>
           Most people are defined by the 3 <Crosslink target={topics.PHYS_METAB}>Physical Metabolisms</Crosslink>,
-          <Metabolism fight />,
-          <Metabolism flight />, and <Metabolism focus />.
+          <Metabolism fight />, <Metabolism flight />, and <Metabolism focus />.
         </p>
         <p>
           Think of these not as attributes that represent your talents, but rather resources provided by the hardware of
           the body and brain. They represent how much effort you can bring to an activity and how much stress you can
-          handle. Each
-          <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> is assigned a score, from 3 to 6 for normal
-          humans.
+          handle. Each <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> is assigned a score, from 3 to 6 for
+          normal humans.
         </p>
         <p>
           Every action you take, from the athletic to the academic, will use one
@@ -60,15 +56,12 @@ function Chapter2() {
           , resulting in a pairing of the physical and hidden.
         </p>
       </Section>
-
       <Break page />
-
       <Section header="Creating a Character">
         <p>
           The first step of playing the game is to create the character you will play as. The two main statistics of
-          your character are
-          <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink>
-          and <Crosslink target={topics.TRAITS}>Traits</Crosslink>, and the steps of character creation will walk you
+          your character are <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> and
+          <Crosslink target={topics.TRAITS}>Traits</Crosslink>, and the steps of character creation will walk you
           through defining these values. You will also have a few secondary characteristics like Action Bonuses or
           Entanglements, that will primarily come into play after character creation.
         </p>
@@ -130,25 +123,22 @@ function Chapter2() {
         <Section header="Step 1: Character Concept">
           <p>
             Start imagining your character and write down their name and a character concept. A concept is a few words
-            that describe their defining characteristic. Maybe it's a personality{" "}
-            <Crosslink target={topics.TRAITS}>Trait</Crosslink>, a hobby, a job title, a combat role, or a special
-            talent. It's OK if your concept starts out vague and gets revised as you create this character, or you can
-            even come back to this step at the end of character creation if you don't have ideas right now.
+            that describe their defining characteristic. Maybe it's a personality type, a hobby, a job title, a combat
+            role, or a special talent. It's OK if your concept starts out vague and gets revised as you create this
+            character, or you can even come back to this step at the end of character creation if you don't have ideas
+            right now.
           </p>
           <p>
-            Once you have a concept to work with, you can set the{" "}
-            <Crosslink target={topics.PHYS_METAB}>Physical Metabolisms</Crosslink>, of Fight, Flight, and Focus. Each
-            starts with a minimum score of 3 points. Split 3 additional points between them however you want. When you
-            are done, each should have a final score between 3 and 6, and the sum of all three of them should add up to
-            12. You can track them with dice, tokens, or small post-it tags.
+            Once you have a concept to work with, look at your
+            <Crosslink target={topics.PHYS_METAB}>Physical Metabolisms</Crosslink>, of Fight, Flight, and Focus. Start
+            each with a score of 3 points, then choose one that most represents your character concept and increase this
+            one to 4.
           </p>
           <p>
             Finally, write in 3 <Crosslink target={topics.TRAITS}>Traits</Crosslink>. These can be anything, but in
-            general the
-            <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> and
-            <Crosslink target={topics.TRAITS}>Traits</Crosslink> you chose in this step should represent your concept.
-            For example, a scientist might have high Focus and <Crosslink target={topics.TRAITS}>Traits</Crosslink>{" "}
-            representing fields of knowledge and contacts in academia.
+            general they should somehow represent your character concept. For example, a scientist might have
+            <Crosslink target={topics.TRAITS}>Traits</Crosslink> representing fields of knowledge and contacts in
+            academia.
           </p>
           <p>
             <Crosslink target={topics.TRAITS}>Traits</Crosslink> can be vague at this stage! During play, an unspecific
@@ -158,15 +148,14 @@ function Chapter2() {
         </Section>
         <Section header="Step 2: Physcial Origin">
           <p>
-            A Physical Origin represents the region your character comes from. This origin is not about nationality,
-            culture, or class, but rather the opportunities and restrictions your character experiences due to the
-            circumstances they live under.
+            A Physical Origin represents the political climate your character comes from. This origin is not about
+            nationality, culture, or class, but rather the opportunities and restrictions your character experiences due
+            to the circumstances they live under.
           </p>
           <p>
-            Choose a Physical Origin from the list at the end of this chapter. Once you have chosen, write down 3
-            <Crosslink target={topics.TRAITS}>Traits</Crosslink> that represent this origin. Each origin description
-            will have requirements and suggestions for what these <Crosslink target={topics.TRAITS}>Traits</Crosslink>{" "}
-            should be.
+            Choose a Physical Origin from the list at the end of this chapter. Once you have chosen, your origin's
+            description will give you some <Crosslink target={topics.TRAITS}>Traits</Crosslink> with guidelines for what
+            these traits might be, and a boost to one of your physical metabolisms.
           </p>
         </Section>
         <Section header="Step 3: Hidden Origin">
@@ -174,35 +163,71 @@ function Chapter2() {
             A Hidden Origin describes how a character first began to sense their
             <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink>. Often a first encounter with
             supernatural phenomena is what starts this process. Typically, the way your character experiences their
-            Hidden Body slightly colors their personality and strongly influences the way they react to their{" "}
+            Hidden Body slightly colors their personality and strongly influences the way they react to their
             <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> being stressed.
           </p>
           <p>
-            Choose a Hidden Origin from the list at the end of this chapter. Once you have chosen, write down 3
-            <Crosslink target={topics.TRAITS}>Traits</Crosslink> that represent this origin. Each origin description
-            will have requirements and suggestions for what these <Crosslink target={topics.TRAITS}>Traits</Crosslink>{" "}
-            should be.
+            Choose a Hidden Origin from the list at the end of this chapter. Once you have chosen, your origin's
+            description will give you some <Crosslink target={topics.TRAITS}>Traits</Crosslink> with guidelines for what
+            these traits might be, and a boost to both a physical and a hidden metabolism.
           </p>
         </Section>
-        <Section header="The Inciting Incident" isInset>
+        <Section header="What's Next?">
           <p>
-            Like all normal humans, starting characters typically do not have any points in the
-            <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink>. However, this is about to change.
-            Somewhere early after the game has started, usually during the first session, the characters will have their
-            first contact with the overtly superatural and this contact will force them to fully realize their
-            connection to their hidden body.
+            After finishing your character, you're ready to start their adventure. However, there also are a few cases
+            later when you might further edit your character. This can occur during your story's Inciting Incident, any
+            time you want to revise one of your Traits, and later as you gain and spend experience to level up your
+            character.
           </p>
-          <p>
-            After this inciting incident occurs, permanently increase all of your
-            <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> scores by 1.
-          </p>
+          <Section header="The Inciting Incident" isInset>
+            <p>
+              Normal humans typically do not have points in the
+              <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> and starting characters are similar
+              with only a single point in one of them. However, this is about to change. Somewhere early after the game
+              has started, usually during the first session, the characters will have their first contact with the
+              overtly superatural and this contact will force them to fully realize their connection to their hidden
+              body.
+            </p>
+            <p>
+              After this inciting incident occurs, permanently increase all of your
+              <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> scores by 1.
+            </p>
+          </Section>
+          <Section header="Revising Traits" isInset>
+            <p>
+              After character creation your Traits might still be vague and general, everyone in your game is still
+              getting to known your character. During gameplay if you have a trait you haven't used much, you can revise
+              this trait to something more concrete. You can even do this during a Challenge so that your revised trait
+              is relevant to the Challenge.
+            </p>
+            <p>
+              You can only revise traits when it doesn't contradict things that have already been shown to be true about
+              your character. A trait you have already used several times cannot be completely changed to something
+              totally unrelated, but a trait you have never used perhaps could be if the new trait makes more sense for
+              the character. You can also usually change a trait from something general to something more specific. The
+              GM has the final decision on any trait revision.
+            </p>
+            <p>
+              For example, if you were facing a challenge involving ropes and knots, your vague Trait "Athlete" would
+              not help. However, you could revise this to the more specific Trait "Rock Climber", and suddenly it's
+              quite relevant. Later, you couldn't revise "Rock Climber" into some other atheletic pursuit, but perhaps
+              you could change it to something even more specific like "Mountaineer", "Alpinist", or "Ice Climber".
+            </p>
+          </Section>
+          <Section header="Leveling Up" isInset>
+            <p>
+              After each session, the GM will give your character some experience points. These can be spent to gain
+              Entanglements and special abilities. See chapter 5 for more details on how to use your experience points.
+            </p>
+          </Section>
         </Section>
       </Section>
+      {/* @todo continue rewrites from origins */}
+
       <Section header="Physical Origins">
         <p>
           Physical Origins represent your character's place in the world and will provide guidance for choosing your
-          next
-          <Crosslink target={topics.TRAITS}>Traits</Crosslink>. Some may even provide bonuses to
+          next <Crosslink target={topics.TRAITS}>Traits</Crosslink>. Some may even provide bonuses to
           <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink>.
         </p>
         <Section header="Conventional" isInset>
@@ -212,7 +237,7 @@ function Chapter2() {
           </p>
           <ul>
             <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Fit In. This{" "}
+              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Fit In. This
               <Crosslink target={topics.TRAITS}>Trait</Crosslink> is relevant any time you want to be friendly with
               people of a similar social class to you or hide in a crowd.
             </li>
@@ -304,7 +329,7 @@ function Chapter2() {
           </p>
           <ul>
             <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Resourceful. This{" "}
+              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Resourceful. This
               <Crosslink target={topics.TRAITS}>Trait</Crosslink> is relevant any time you are trying to acquire
               something you need by searching, socializing, or navigating a bureaucracy
             </li>
@@ -329,7 +354,7 @@ function Chapter2() {
             <li>
               Gain the <Crosslink target={topics.TRAITS}>Traits</Crosslink> Unknown Combat Skill and Unknown Academic
               Skill. You don't realize you have these skills and you do not recall practicing them. One time when you
-              attempt to perform an action, you can permanently replace one of these{" "}
+              attempt to perform an action, you can permanently replace one of these
               <Crosslink target={topics.TRAITS}>Traits</Crosslink> with a skill relevant to the action. One skill must
               be useful in combat and the other must be a field of knowledge.
             </li>
@@ -354,18 +379,16 @@ function Chapter2() {
           <p>
             Things always seemed to come easily for you. You were chronically exposed to a dilating Cascade Event, that
             made all information transfer between physical and hidden space easier. Due to this, you had subconscious
-            access to a small portion of the
-            <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> available, giving you more resources
-            to succeed at anything you attempted. Perhaps you've always wondered why other people had to put so much
-            effort into learning new skills when it seemed so easy for you.
+            access to a small portion of the <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink>
+            available, giving you more resources to succeed at anything you attempted. Perhaps you've always wondered
+            why other people had to put so much effort into learning new skills when it seemed so easy for you.
           </p>
           <ul>
             <li>
               Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Quick Study. Any time you spend an hour
-              practicing or studying something, you can gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink>{" "}
-              representing this subject. You keep this
-              <Crosslink target={topics.TRAITS}>Trait</Crosslink> until you replace it with another one by studying
-              again.
+              practicing or studying something, you can gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink>
+              representing this subject. You keep this <Crosslink target={topics.TRAITS}>Trait</Crosslink> until you
+              replace it with another one by studying again.
             </li>
             <li>
               Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a physical skill you were able to
@@ -405,7 +428,7 @@ function Chapter2() {
             </li>
             <li>
               Choose a <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> to increase from 0 to 1.
-              You find yourself frequently leaning into using this{" "}
+              You find yourself frequently leaning into using this
               <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> when possible.
             </li>
           </ul>
@@ -420,9 +443,8 @@ function Chapter2() {
           <ul>
             <li>
               Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Dissociation Resistance. You can still act
-              normally when any of your
-              <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> dissociate up to the negative of
-              their score.
+              normally when any of your <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink>
+              dissociate up to the negative of their score.
             </li>
             <li>
               Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Deep Awareness. You always maintain at least
@@ -480,8 +502,7 @@ function Chapter2() {
             <li>
               Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Unknown Skill. You don't realize you have
               this skill and you do not recall practicing it. One time when you attempt to perform an action, you can
-              permanently replace this
-              <Crosslink target={topics.TRAITS}>Trait</Crosslink> with a relevant skill.
+              permanently replace this <Crosslink target={topics.TRAITS}>Trait</Crosslink> with a relevant skill.
             </li>
             <li>
               Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a skill you developed to track
@@ -504,7 +525,7 @@ function Chapter2() {
           <ul>
             <li>
               Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Last Reserves. Up to once per scene, if you
-              are exposed to a source of danger you haven't encountered before, you gain a point in each{" "}
+              are exposed to a source of danger you haven't encountered before, you gain a point in each
               <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink>. These points can go above your
               normal maximums.
             </li>
@@ -527,5 +548,4 @@ function Chapter2() {
     </Section>
   );
 }
-
 export default Chapter2;
