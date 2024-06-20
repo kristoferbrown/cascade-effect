@@ -388,12 +388,13 @@ function Chapter2() {
         </p>
         <Section header="Competence" isClassified>
           <p>
-            Things always seemed to come easily for you. Somehow, at a young age, you started to subconsciously access
-            to a small portion of the <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink>, giving you
-            more resources to succeed at anything you attempted. Perhaps you've always wondered why other people had to
-            put so much effort into learning new skills when it seemed so easy for you.
+            <strong>Things always seemed to come easily for you.</strong> Somehow, at a young age, you started to
+            subconsciously access to a small portion of the{" "}
+            <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink>, giving you more resources to succeed
+            at anything you attempted. Perhaps you've always wondered why other people had to put so much effort into
+            learning new skills when it seemed so easy for you.
           </p>
-          <ul>
+          <ol>
             <li>
               <h3>In your youth, what were you?</h3>
               <strong>A focused prodigy.</strong> You trained one specific skill intensely, gain a Trait representing
@@ -423,97 +424,135 @@ function Chapter2() {
               Choose one Physical and one Hidden Metabolism and increase them both by 1. You were always talented in
               these domains.
             </li>
-          </ul>
+          </ol>
         </Section>
-        <Section header="Dedication" isClassified>
+        <Section header="Dissociated Self" isClassified>
           <p>
-            Either chronically or acutely, you have been influenced by a subliming Cascade Event. These conditions make
-            it easy for information to enter hidden space, but difficult for it to exit. The location this event occurs
-            in seems to have an inexplicable magnetic pull on one's attention, and even short term exposure sticks with
-            a person. After the event ends, this experience leaves one inclined to find other things to hyperfocus on
-            instead of the event.
+            <strong>You always felt like something was wrong about your body.</strong> Maybe you saw yourself with a
+            different gender or appearance; maybe felt like you were a mind awkwardly piloting a body; maybe you wished
+            you could ignore the incessant repeated demands having a human body places on you. Whatever the
+            manifestation, you experienced a chronic dissociation of the Self Metabolism, making your physical body feel
+            like a separate, possibly antagonistic, entity. This experience led directly to you sensing the separation
+            and connections between your Physical and Hidden Bodies.
+          </p>
+          <ol>
+            <li>
+              <h3>Before this experience peaked, how much did it affect you?</h3>
+              <strong>Things mostly seemed normal.</strong>Gain a Trait representing a skill or social connection you
+              gained during a more conventional part your youth.
+              <br />
+              <strong>It was always a bit like that.</strong>Gain a Trait representing a skill or knowledge you gained
+              in your youth that was considered outside of the stereotypes for someone who looked like you.
+            </li>
+            <li>
+              <h3>During this experience, how did you cope?</h3> <strong>You turned inward.</strong> Gain a trait
+              representing a creative skill or an uncommon field of knowledge you cultivated during this time.
+              <br />
+              <strong>You found community.</strong> Gain a trait representing a contact or a community that supported
+              you during difficult times.
+            </li>
+            <li>
+              <h3>Have you overcome this experience?</h3> <strong>You thrived.</strong> Gain a Trait that represents a
+              type of physical or social fitness that you developed during a transformative time that occurred at the
+              end of this experience.
+              <br />
+              <strong>It still shapes you.</strong> Gain a Trait that represents a skill or knowledge you have developed
+              as part of a masking or coping strategy.
+            </li>
+            <li>
+              Choose one Physical and one Hidden Metabolism and increase them both by 1. These domains just seemed to
+              click for you after this experience.
+            </li>
+          </ol>
+        </Section>
+        <Section header="Dissociated Near" isClassified>
+          <p>
+            <strong>You always felt like the was something off about the world around you.</strong> Maybe it all seems
+            like a dream, an illusion, simulation, or some other crude imitation; maybe you felt constrained by the
+            limits it imposed on you; maybe it all just feels meaningless. Whatever the manifestation, you experienced a
+            chronic dissociation of the Near Metabolism, making the physical world feel unreal, unimportant, or
+            untrustworthy. However, this experience led to your gaining an intuition into the hidden space behind all
+            physical spaces.
+          </p>
+          <ol>
+            <li>
+              <h3>Before this experience peaked, how much did it affect you?</h3>
+              <strong>Things mostly seemed normal.</strong> Gain a Trait representing a skill or social connection you
+              gained during a more conventional part your youth.
+              <br />
+              <strong>It was always a bit like that.</strong> Gain a Trait representing a field of knowledge you
+              developed searching for answers to why others didn't seem to notice something that seemed unavoidable to
+              you.
+            </li>
+            <li>
+              <h3>During this experience, how did you cope?</h3>
+              <strong>You sought diagnosis or explanation for why you felt the world this way.</strong> Gain a skill
+              representing knowledge of a field of scientific or non-traditional medicine, a spiritual practice, or an
+              awareness of your true nature that is useful in everyday life.
+              <br />
+              <strong>You sought a theory explaining why the world actually was this way.</strong> Gain a Trait
+              representing a field of obscure and unusual knowledge or a social connection or community that shares a
+              specific outlook on the world with you.
+            </li>
+            <li>
+              <h3>Have you overcome this experience?</h3>
+              <strong>You Thrived.</strong> Gain a Trait that represents a skill that requires physically navigating,
+              sensing, or otherwise engaging with your surroundings, practicing this skill helped you find your
+              connection with the world.
+              <br />
+              <strong>It still shapes you.</strong> Gain a Trait that represents a creative practice, a field of
+              knowledge, or skill you developed in academia or online.
+            </li>
+            <li>
+              Choose one Physical and one Hidden Metabolism increase them both by 1. These abilities seemed more natural
+              to you after this experience.
+            </li>
+          </ol>
+        </Section>
+        <Section header="Dissociated Far" isClassified>
+          <p>
+            <strong>You always struggled to relate to other people.</strong> Maybe they always reacted differently than
+            you expected; maybe you couldn't understand socializing seemed to be natural to others, maybe it was
+            exhausting to be around other people; maybe other people seemed unreal to you; or maybe you just felt
+            awkward. Whatever the manifestation, you experienced a chronic dissociation of the Far Metabolism, making
+            the other people seem inscrutable or illusory. However, this experience led to sensing more concretely the
+            precise bounds of your Hidden Body, and therefore how to interact with it.
           </p>
           <ul>
             <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Refuge. Any space you regularly sleep in for
-              at least a week becomes restorative to you. It's easier to do mental work and you recover from
-              dissociation and injuries more quickly in this space.
+              <h3>Before this experience peaked, how much did it affect you?</h3>
+              <strong>Things mostly seemed normal.</strong> Gain a Trait representing a skill or social connection you
+              gained during a more conventional part your youth.
+              <br />
+              <strong>It was always a bit like that.</strong> Gain a Trait representing a skill or field of knowledge
+              that was important to you in your youth.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a subject that you find endlessly
-              interesting and have a savant-like encyclopedic knowledge of.
+              <h3>During this experience, how did you cope?</h3> <strong>You learned to mask.</strong> Gain a Trait
+              representing a social skill or connection you've cultivated despite the challenges.
+              <br />
+              <strong>You pursued other things.</strong> Gain a Trait representing a field of knowledge or creative
+              process you invested yourself in instead.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a skill that helps you mask your
-              intentions, true nature, or the consequences of your actions.
+              <h3>Have you overcome this?</h3> <strong>You Thrived.</strong> Gain a Trait that represents a social
+              connection or community that quickly became important to you after this experience.
+              <br />
+              <strong>It still shapes you.</strong> Gain a Trait that represents a skill, field of knowledge, or asset
+              you cultivate in private.
             </li>
             <li>
-              Choose a <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> to increase from 0 to 1.
-              You find yourself frequently leaning into using this
-              <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> when possible.
-            </li>
-          </ul>
-        </Section>
-        <Section header="Grit" isClassified>
-          <p>
-            You spent an extended period inside a contracting Cascade Event that suppressed all information transfer
-            between physical and hidden space. Severing one's connection to their hidden body causes unconsciousness,
-            but when exposed to these conditions your willpower held your connection together. Strengthened by
-            adversity, your connection to your hidden body makes you resistant to dissociative phenomena.
-          </p>
-          <ul>
-            <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Dissociation Resistance. You can still act
-              normally when any of your <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink>
-              dissociate up to the negative of their score.
-            </li>
-            <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Deep Awareness. You always maintain at least
-              a vague awareness and memory of surroundings, even when you are asleep or unconscious due to injuries.
-            </li>
-            <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a skill you are good at due to
-              being able to persevere in situations that others typically cannot.
-            </li>
-            <li>
-              Choose a <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> to increase from 0 to 1.
-              You've always been able to push yourself a little extra in this domain.
-            </li>
-          </ul>
-        </Section>
-        <Section header="Inspiration" isClassified>
-          <p>
-            A condensing Cascade Event makes it easy for information to exit hidden space, but difficult for it to
-            enter. Your exposure to one of these events left you with a subtle awareness of the information becoming
-            available to you as it nears physical space. This grants you the ability to find patterns and inspiration in
-            places other people wouldn't. The ideas just seem to come to you, even if it's unclear where, or who,
-            they're coming from.
-          </p>
-          <ul>
-            <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Inspiration. Ideas just seem to come to you
-              out of thin air, once per scene you can ask the GM for advice about the situation.
-            </li>
-            <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a creative, imaginative, or
-              spiritual practice.
-            </li>
-            <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a skill you have due to being able
-              to notice things about situations or people that others usually don't.
-            </li>
-            <li>
-              Choose a <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> to increase from 0 to 1.
-              You find this things in this domain intuitive.
+              Choose one Physical and one Hidden Metabolism and increase them both by 1. Your experience helped you
+              develop these abilities.
             </li>
           </ul>
         </Section>
         <Section header="Missing Time" isClassified>
           <p>
-            You experience a period of missing time that you do not remember. Perhaps a Cascade Event rendered you
-            unconscious or simply unable to remember this time, or perhaps something even stranger occurred. Whatever
-            happened, afterwards you had a subtle awareness of the hidden body and a drive to find answers about the
-            nature of this experience.
+            <strong>You experience a period of missing time that you do not remember.</strong> Perhaps intense
+            dissociation rendered you unconscious or simply unable to remember this time, or perhaps something even
+            stranger occurred. Whatever happened, afterwards you had a subtle awareness of the hidden body and a drive
+            to find answers about the nature of this experience.
           </p>
           <ul>
             <li>
@@ -530,18 +569,18 @@ function Chapter2() {
               down or research whatever it is that happened to you during your lost time.
             </li>
             <li>
-              Choose a <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> to increase from 0 to 1.
-              Things in this domain seemed easier after you came back.
+              Choose one Physical and one Hidden Metabolism and increase them both by 1. When you came back from your
+              lost time, these abilities seemed stronger.
             </li>
           </ul>
         </Section>
         <Section header="Trauma" isClassified>
           <p>
-            A single dramatic event changed your life. Perhaps it was surviving a disaster, proximity to an extreme
-            danger, witnessing the supernatural, or even a mental break caused by prolonged stressors or social
-            conflict. To manage the situation, you tapped into resources you didn't realize you had by connecting with
-            your Hidden Body. Ever since, you've had the feeling that Hidden Space was there, just barely out of reach
-            waiting for you to connect with it again.
+            <strong>A single dramatic event changed your life.</strong> Perhaps you survived a disaster or extreme
+            danger, maybe you witnessed something overtly supernatural or terrifying, or maybe you had a mental break
+            caused by prolonged stressors, social conflicts, or intense embarassment. To manage the situation, you
+            tapped into resources you didn't realize you had by connecting with your Hidden Body. Ever since, you've had
+            the feeling that Hidden Space was there, just barely out of reach waiting for you to connect with it again.
           </p>
           <ul>
             <li>
@@ -559,8 +598,8 @@ function Chapter2() {
               with you or a resource you stockpile to prepare for this event's return.
             </li>
             <li>
-              Choose a <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> to increase from 0 to 1.
-              This ability recovered from the incident stronger than before.
+              Choose one Physical and one Hidden Metabolism and increase them both by 1. These abilities seemed to come
+              online after the traumatic event.
             </li>
           </ul>
         </Section>
