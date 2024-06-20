@@ -378,39 +378,50 @@ function Chapter2() {
       <Section header="Hidden Origins">
         <p>
           A Hidden Origin represents how your character first came to sense their connection to their Hidden Body. This
-          often comes from spending time inside "Cascade Events", areas where the normal connection between physical and
-          hidden space is altered. This connection is part of the algorithm of consciousness for humans, and modifying
-          it causes Dissociation. Dissociative experiences often have subtle mental side effects, but when intense
-          enough they invariably result in unconsciousness and memory loss in normal humans. Your character, however,
-          when exposed to dissociative conditions began to sense the connection to hidden space itself and developed an
-          intuitive sense of how to control it.
+          can happen simply from this connection being strong and learning to understand it intuitively, however, more
+          often it comes from enduring some sort of dissociative experience. Dissociation occurs when the constant
+          information transfer between the physical brain and the hidden body is disrupted in some way. The algorithm of
+          consciousness in humans depends on this connection, and any disruption leads to pyschedelic mental side
+          effects, and ultimately memory loss and unconsciousness. Rarely, when exposed to dissociative conditions some
+          people began to sense the connection to hidden space itself and develop an intuitive sense of how to control
+          it.
         </p>
         <Section header="Competence" isClassified>
           <p>
-            Things always seemed to come easily for you. You were chronically exposed to a dilating Cascade Event, that
-            made all information transfer between physical and hidden space easier. Due to this, you had subconscious
-            access to a small portion of the <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink>
-            available, giving you more resources to succeed at anything you attempted. Perhaps you've always wondered
-            why other people had to put so much effort into learning new skills when it seemed so easy for you.
+            Things always seemed to come easily for you. Somehow, at a young age, you started to subconsciously access
+            to a small portion of the <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink>, giving you
+            more resources to succeed at anything you attempted. Perhaps you've always wondered why other people had to
+            put so much effort into learning new skills when it seemed so easy for you.
           </p>
           <ul>
             <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Quick Study. Any time you spend an hour
-              practicing or studying something, you can gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink>
-              representing this subject. You keep this <Crosslink target={topics.TRAITS}>Trait</Crosslink> until you
-              replace it with another one by studying again.
+              <h3>In your youth, what were you?</h3>
+              <strong>A focused prodigy.</strong> You trained one specific skill intensely, gain a Trait representing
+              it. <br />
+              <strong>A prolific dabbler.</strong> You tried everything, once. Gain a Trait representing the social
+              contacts you made while trying every hobby or a broad field of trivia you've picked up along the way.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a physical skill you were able to
-              master with little practice.
+              <h3>Were your talents...</h3> <strong>Physical.</strong> Gain a Trait representing a type of physical
+              fitness or athletic competition you excel in. <br />
+              <strong>Academic.</strong> Gain a Trait representing a field of knowledge you know inside and out.
+              <br />
+              <strong>Social.</strong> Gain a Trait representing a social skill you're surprised other's don't have or a
+              useful social community.
+              <br />
+              <strong>Combat Oriented.</strong> Gain an Action Bonus for an Attack or Reaction that comes naturally to
+              you in times of stress.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a field of knowledge that you were
-              and to learn easily.
+              <h3>How did this affect you socially?</h3>
+              <strong>You stayed humble.</strong> Gain a Trait representing useful social contact, community, or
+              network. These people have your back. <br />
+              <strong>You knew you were special.</strong> Choose a skill or field of study that came naturally to you
+              and gain a Trait representing it.
             </li>
             <li>
-              Choose a <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> to increase from 0 to 1.
-              You were always able to excel when you could apply this metabolism.
+              Choose one Physical and one Hidden Metabolism and increase them both by 1. You were always talented in
+              these domains.
             </li>
           </ul>
         </Section>

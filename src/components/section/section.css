@@ -57,6 +57,14 @@
     top: 0;
 }
 
+.section li h1,
+.section li h2,
+.section li h3,
+.section li h4,
+.section li h5 {
+    padding: 0;
+}
+
 .section h6 {
     margin: 0;
     padding: 0 12px;
@@ -90,7 +98,17 @@
 }
 
 .section li {
+    margin: 12px 0;
     font-size: 12px;
+}
+
+.section strong {
+    -webkit-text-stroke: 0.1px var(--physicalSpace);
+}
+
+
+.classified .section strong {
+    -webkit-text-stroke: 0.1px var(--hiddenSpace);
 }
 
 .section table {
