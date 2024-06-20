@@ -74,7 +74,8 @@ function Chapter2() {
           character, and they provide a bonus whenever they are relevant to an action. They can be almost anything that
           your character is able to leverage in a useful way. Generally, skills, social status, relationships,
           authority, wealth, possessions, or other advantages are good
-          <Crosslink target={topics.TRAITS}>Traits</Crosslink>.
+          <Crosslink target={topics.TRAITS}>Traits</Crosslink>. Don't think too hard about having precise
+          <Crosslink target={topics.TRAITS}>Traits</Crosslink>, if they're vague you will be able to revise them later.
         </p>
         <p>
           Action Bonuses are a number assigned to each action you can take in combat, representing your skill with
@@ -153,9 +154,11 @@ function Chapter2() {
             to the circumstances they live under.
           </p>
           <p>
-            Choose a Physical Origin from the list at the end of this chapter. Once you have chosen, your origin's
-            description will give you some <Crosslink target={topics.TRAITS}>Traits</Crosslink> with guidelines for what
-            these traits might be, and a boost to one of your physical metabolisms.
+            Choose a Physical Origin from the list at the end of this chapter. Once you have chosen, this origin's
+            description will give you some prompts that grant you <Crosslink target={topics.TRAITS}>Traits</Crosslink>.
+            The prompts provide guidelines for what these traits might be, but ultimately you can choose anything that
+            fits your character if the prompt doesn't. Finally, this origin will let you choose a Physcial Metabolism to
+            increase.
           </p>
         </Section>
         <Section header="Step 3: Hidden Origin">
@@ -169,8 +172,16 @@ function Chapter2() {
           <p>
             Choose a Hidden Origin from the list at the end of this chapter. Once you have chosen, your origin's
             description will give you some <Crosslink target={topics.TRAITS}>Traits</Crosslink> with guidelines for what
-            these traits might be, and a boost to both a physical and a hidden metabolism.
+            these traits might be, Finally, this origin will let you choose both a Physcial Metabolism to increase.
           </p>
+        </Section>
+        <Section header="Combat Traits" isInset>
+          <Crosslink target={topics.TRAITS}>Traits</Crosslink> chosen at character creation are not meant to represent
+          combat proficiency, they will typically not be relevant for standard combat actions. For example, a Trait like
+          "Army Marksman" might be relevant in many of situations, but it won't help you shoot a gun in a fight. Action
+          Bonuses better represent combat proven abilities. If you wish to play a character who is already capable in
+          combat, you may omit one of your Traits and instead increase an Action Bonus of your choice from 0 to 1.
+          Action Bonuses greater than 1 represent a level of combat ability typically unavailable to normal humans.
         </Section>
         <Section header="What's Next?">
           <p>
@@ -222,7 +233,6 @@ function Chapter2() {
           </Section>
         </Section>
       </Section>
-      {/* @todo continue rewrites from origins */}
 
       <Section header="Physical Origins">
         <p>
@@ -369,11 +379,11 @@ function Chapter2() {
         <p>
           A Hidden Origin represents how your character first came to sense their connection to their Hidden Body. This
           often comes from spending time inside "Cascade Events", areas where the normal connection between physical and
-          hidden space is altered. This normal connection is part of the algorithm of consciousness for normal people,
-          and modifying it causes Dissociation. Dissociative experiences often have subtle mental side effects, but when
-          intense enough they invariably result in unconsciousness and memory loss in normal humans. Your character,
-          however, when exposed to dissociative conditions began to sense the connection to hidden space itself and
-          developed an intuitive sense of how to control it.
+          hidden space is altered. This connection is part of the algorithm of consciousness for humans, and modifying
+          it causes Dissociation. Dissociative experiences often have subtle mental side effects, but when intense
+          enough they invariably result in unconsciousness and memory loss in normal humans. Your character, however,
+          when exposed to dissociative conditions began to sense the connection to hidden space itself and developed an
+          intuitive sense of how to control it.
         </p>
         <Section header="Competence" isClassified>
           <p>
