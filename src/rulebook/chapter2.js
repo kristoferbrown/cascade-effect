@@ -175,13 +175,15 @@ function Chapter2() {
             these traits might be, Finally, this origin will let you choose both a Physcial Metabolism to increase.
           </p>
         </Section>
-        <Section header="Combat Traits" isInset>
+        <Section header="Traits, Combat, & Gear" isInset>
           <Crosslink target={topics.TRAITS}>Traits</Crosslink> chosen at character creation are not meant to represent
           combat proficiency, they will typically not be relevant for standard combat actions. For example, a Trait like
           "Army Marksman" might be relevant in many of situations, but it won't help you shoot a gun in a fight. Action
           Bonuses better represent combat proven abilities. If you wish to play a character who is already capable in
           combat, you may omit one of your Traits and instead increase an Action Bonus of your choice from 0 to 1.
           Action Bonuses greater than 1 represent a level of combat ability typically unavailable to normal humans.
+          Additionally, you may also omit a Trait to instead gain a single weapon or armor. Remember, Trait prompts are
+          suggestions, you don't need to follow them if you have better ideas for your character.
         </Section>
         <Section header="What's Next?">
           <p>
@@ -396,15 +398,15 @@ function Chapter2() {
           </p>
           <ol>
             <li>
-              <h3>In your youth, what were you?</h3>
+              <h5 className="subheader">In your youth, what were you?</h5>
               <strong>A focused prodigy.</strong> You trained one specific skill intensely, gain a Trait representing
               it. <br />
               <strong>A prolific dabbler.</strong> You tried everything, once. Gain a Trait representing the social
               contacts you made while trying every hobby or a broad field of trivia you've picked up along the way.
             </li>
             <li>
-              <h3>Were your talents...</h3> <strong>Physical.</strong> Gain a Trait representing a type of physical
-              fitness or athletic competition you excel in. <br />
+              <h5 className="subheader">Were your talents...</h5> <strong>Physical.</strong> Gain a Trait representing a
+              type of physical fitness or athletic competition you excel in. <br />
               <strong>Academic.</strong> Gain a Trait representing a field of knowledge you know inside and out.
               <br />
               <strong>Social.</strong> Gain a Trait representing a social skill you're surprised other's don't have or a
@@ -414,7 +416,7 @@ function Chapter2() {
               you in times of stress.
             </li>
             <li>
-              <h3>How did this affect you socially?</h3>
+              <h5 className="subheader">How did this affect you socially?</h5>
               <strong>You stayed humble.</strong> Gain a Trait representing useful social contact, community, or
               network. These people have your back. <br />
               <strong>You knew you were special.</strong> Choose a skill or field of study that came naturally to you
@@ -437,7 +439,7 @@ function Chapter2() {
           </p>
           <ol>
             <li>
-              <h3>Before this experience peaked, how much did it affect you?</h3>
+              <h5 className="subheader">Before this experience peaked, how much did it affect you?</h5>
               <strong>Things mostly seemed normal.</strong>Gain a Trait representing a skill or social connection you
               gained during a more conventional part your youth.
               <br />
@@ -445,16 +447,17 @@ function Chapter2() {
               in your youth that was considered outside of the stereotypes for someone who looked like you.
             </li>
             <li>
-              <h3>During this experience, how did you cope?</h3> <strong>You turned inward.</strong> Gain a trait
-              representing a creative skill or an uncommon field of knowledge you cultivated during this time.
+              <h5 className="subheader">During this experience, how did you cope?</h5>{" "}
+              <strong>You turned inward.</strong> Gain a trait representing a creative skill or an uncommon field of
+              knowledge you cultivated during this time.
               <br />
               <strong>You found community.</strong> Gain a trait representing a contact or a community that supported
               you during difficult times.
             </li>
             <li>
-              <h3>Have you overcome this experience?</h3> <strong>You thrived.</strong> Gain a Trait that represents a
-              type of physical or social fitness that you developed during a transformative time that occurred at the
-              end of this experience.
+              <h5 className="subheader">Have you overcome this experience?</h5> <strong>You thrived.</strong> Gain a
+              Trait that represents a type of physical or social fitness that you developed during a transformative time
+              that occurred at the end of this experience.
               <br />
               <strong>It still shapes you.</strong> Gain a Trait that represents a skill or knowledge you have developed
               as part of a masking or coping strategy.
@@ -476,7 +479,7 @@ function Chapter2() {
           </p>
           <ol>
             <li>
-              <h3>Before this experience peaked, how much did it affect you?</h3>
+              <h5 className="subheader">Before this experience peaked, how much did it affect you?</h5>
               <strong>Things mostly seemed normal.</strong> Gain a Trait representing a skill or social connection you
               gained during a more conventional part your youth.
               <br />
@@ -485,7 +488,7 @@ function Chapter2() {
               you.
             </li>
             <li>
-              <h3>During this experience, how did you cope?</h3>
+              <h5 className="subheader">During this experience, how did you cope?</h5>
               <strong>You sought diagnosis or explanation for why you felt the world this way.</strong> Gain a skill
               representing knowledge of a field of scientific or non-traditional medicine, a spiritual practice, or an
               awareness of your true nature that is useful in everyday life.
@@ -495,7 +498,7 @@ function Chapter2() {
               specific outlook on the world with you.
             </li>
             <li>
-              <h3>Have you overcome this experience?</h3>
+              <h5 className="subheader">Have you overcome this experience?</h5>
               <strong>You Thrived.</strong> Gain a Trait that represents a skill that requires physically navigating,
               sensing, or otherwise engaging with your surroundings, practicing this skill helped you find your
               connection with the world.
@@ -518,9 +521,9 @@ function Chapter2() {
             the other people seem inscrutable or illusory. However, this experience led to sensing more concretely the
             precise bounds of your Hidden Body, and therefore how to interact with it.
           </p>
-          <ul>
+          <ol>
             <li>
-              <h3>Before this experience peaked, how much did it affect you?</h3>
+              <h5 className="subheader">Before this experience peaked, how much did it affect you?</h5>
               <strong>Things mostly seemed normal.</strong> Gain a Trait representing a skill or social connection you
               gained during a more conventional part your youth.
               <br />
@@ -528,15 +531,16 @@ function Chapter2() {
               that was important to you in your youth.
             </li>
             <li>
-              <h3>During this experience, how did you cope?</h3> <strong>You learned to mask.</strong> Gain a Trait
-              representing a social skill or connection you've cultivated despite the challenges.
+              <h5 className="subheader">During this experience, how did you cope?</h5>{" "}
+              <strong>You learned to mask.</strong> Gain a Trait representing a social skill or connection you've
+              cultivated despite the challenges.
               <br />
               <strong>You pursued other things.</strong> Gain a Trait representing a field of knowledge or creative
               process you invested yourself in instead.
             </li>
             <li>
-              <h3>Have you overcome this?</h3> <strong>You Thrived.</strong> Gain a Trait that represents a social
-              connection or community that quickly became important to you after this experience.
+              <h5 className="subheader">Have you overcome this?</h5> <strong>You Thrived.</strong> Gain a Trait that
+              represents a social connection or community that quickly became important to you after this experience.
               <br />
               <strong>It still shapes you.</strong> Gain a Trait that represents a skill, field of knowledge, or asset
               you cultivate in private.
@@ -545,34 +549,52 @@ function Chapter2() {
               Choose one Physical and one Hidden Metabolism and increase them both by 1. Your experience helped you
               develop these abilities.
             </li>
-          </ul>
+          </ol>
         </Section>
         <Section header="Missing Time" isClassified>
           <p>
-            <strong>You experience a period of missing time that you do not remember.</strong> Perhaps intense
-            dissociation rendered you unconscious or simply unable to remember this time, or perhaps something even
-            stranger occurred. Whatever happened, afterwards you had a subtle awareness of the hidden body and a drive
-            to find answers about the nature of this experience.
+            <strong>You experienced a period of missing time that you do not remember.</strong> Perhaps intense
+            dissociation rendered you unconscious or unable to remember this time, or perhaps something even stranger
+            occurred. Whatever happened, afterwards you had a subtle awareness of the hidden body and a drive to find
+            answers about the nature of this experience.
           </p>
-          <ul>
+          <ol>
             <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Fearless. When others would be afraid or
-              shocked by encountering something truly unknown, you are unaffected.
+              <h5 className="subheader">How long was this lost period?</h5>
+              <strong>Hours or days.</strong> You weren't gone long, but you came back different. Gain a Trait
+              representing something you couldn't do before, but you can now.
+              <br />
+              <strong>Months or years.</strong>Gain the Trait "Unknown Skill". You do not know you have this skill and
+              don't recall practicing it. At any later point when you take a Challenge, you can permanently replace this
+              Trait with a relevant skill.
             </li>
             <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Unknown Skill. You don't realize you have
-              this skill and you do not recall practicing it. One time when you attempt to perform an action, you can
-              permanently replace this <Crosslink target={topics.TRAITS}>Trait</Crosslink> with a relevant skill.
+              <h5 className="subheader">How fresh is this experience?</h5>
+              <strong>It just ended.</strong>Gain the Trait "Unknown Skill". You do not know you have this skill and
+              don't recall practicing it. At any later point when you take a Challenge, you can permanently replace this
+              Trait with a relevant skill.
+              <br />
+              <strong>Years ago.</strong>Gain a Trait representing a field of knowledge you learned or a community you
+              became part of during your attempts to understand what happened.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a skill you developed to track
-              down or research whatever it is that happened to you during your lost time.
+              <h5 className="subheader">Did this period leave any physical evidence?</h5>
+              <strong>Not a trace.</strong> Gain the Trait "Unknown Skill". You do not know you have this skill and
+              don't recall practicing it. At any later point when you take a Challenge, you can permanently replace this
+              Trait with a relevant skill.
+              <br />
+              <strong>An artifact.</strong>Gain a trait representing an object you had when you came to, you didn't
+              recognize it. Is it a mundane but useful like a weapon, tool, vehicle, or even property, or is it
+              something stranger you don't understand?
+              <br />
+              <strong>Social clues.</strong>Gain a Trait representing social connections with other people that had the
+              same experience as you or with someone that knows what happened but cannot tell you.
             </li>
             <li>
               Choose one Physical and one Hidden Metabolism and increase them both by 1. When you came back from your
               lost time, these abilities seemed stronger.
             </li>
-          </ul>
+          </ol>
         </Section>
         <Section header="Trauma" isClassified>
           <p>
@@ -582,26 +604,39 @@ function Chapter2() {
             tapped into resources you didn't realize you had by connecting with your Hidden Body. Ever since, you've had
             the feeling that Hidden Space was there, just barely out of reach waiting for you to connect with it again.
           </p>
-          <ul>
+          <ol>
             <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Last Reserves. Up to once per scene, if you
-              are exposed to a source of danger you haven't encountered before, you gain a point in each
-              <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink>. These points can go above your
-              normal maximums.
+              <h5 className="subheader">What was the threat you perceived from this event?</h5>{" "}
+              <strong>Physical safety.</strong> Gain a Trait representing a type of fitness you developed to deal with
+              the consequences of this event.
+              <br />
+              <strong>Mental integrity.</strong> Gain a Trait representing a type of mental disciple or fortitude that
+              you developed to deal with the consequences of this event.
+              <br />
+              <strong>Social dignity.</strong> Gain a Trait representing something that helped you escape this situation
+              as fast as possible.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a skill you learned to cope with
-              past trauma or or avoid it in the future.
+              <h5 className="subheader">How fresh is this event in your memory?</h5>
+              <strong>Like it was yesterday.</strong> Gain a Trait representing skills that seemed to manifest in you
+              the moment you needed them most during this event.
+              <br />
+              <strong>It is ancient history.</strong>
+              Gain a Trait representing skills or practices you cultivated to ensure this never happens again.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a contact who witnessed this event
-              with you or a resource you stockpile to prepare for this event's return.
+              <h5 className="subheader">How were you spared from the worst consequences of this event?</h5>
+              <strong>You sprang into action.</strong> Gain a Trait representing skills that seemed to manifest in you
+              the moment you needed them most.
+              <br />
+              <strong>Something unlikely or seemingly supernatural occurred.</strong>
+              Gain a Trait representing something or someone that helped you during this event and could do so again.
             </li>
             <li>
               Choose one Physical and one Hidden Metabolism and increase them both by 1. These abilities seemed to come
-              online after the traumatic event.
+              online for you after the traumatic event.
             </li>
-          </ul>
+          </ol>
         </Section>
       </Section>
       <Break page />

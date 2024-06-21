@@ -6,7 +6,7 @@ const EntanglementDescription = ({ intro = "", ranks = [] }) => {
       {intro}
       {ranks.map((rank, index) => (
         <Fragment key={index}>
-          <h5 key={index} className="entanglementRank">
+          <h5 key={index} className="entanglementRank subheader">
             Rank {index + 1}
           </h5>
           {rank}
