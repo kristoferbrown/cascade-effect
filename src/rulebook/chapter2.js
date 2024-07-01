@@ -66,15 +66,15 @@ function Chapter2() {
           Entanglements, that will primarily come into play after character creation.
         </p>
         <p>
-          <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> are numbers indicating how much energy,
+          <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> are numbers indicating how much effort,
           attention, and willpower a character can bring to an action.
         </p>
         <p>
           <Crosslink target={topics.TRAITS}>Traits</Crosslink> are keywords that flesh out additional details about your
           character, and they provide a bonus whenever they are relevant to an action. They can be almost anything that
-          your character is able to leverage in a useful way. Generally, skills, social status, relationships,
-          authority, wealth, possessions, or other advantages are good
-          <Crosslink target={topics.TRAITS}>Traits</Crosslink>. Don't think too hard about having precise
+          your character is able to leverage in a useful way. Generally, skills, social status, relationships, community
+          membership, authority, wealth, possessions, careers, apparent physical traits, fashions, roles you fill, or
+          other advantages are good Traits. Don't think too hard about having precise
           <Crosslink target={topics.TRAITS}>Traits</Crosslink>, if they're vague you will be able to revise them later.
         </p>
         <p>
@@ -90,7 +90,7 @@ function Chapter2() {
           <ol>
             <li>
               Choose a character concept.
-              <ul>
+              <ol>
                 <li>
                   Set each <Crosslink target={topics.PHYS_METAB}>Physical Metabolism</Crosslink> score to 3, and then
                   choose one that represents your character concept to increase by one.
@@ -98,26 +98,26 @@ function Chapter2() {
                 <li>
                   Pick 3 <Crosslink target={topics.TRAITS}>Traits</Crosslink> that reflect your concept.
                 </li>
-              </ul>
+              </ol>
             </li>
             <li>
               Choose a Physical Origin.
-              <ul>
-                <li>Choose a Physical Metabolism score that represents this origin and increase it by one.</li>
+              <ol>
                 <li>
                   Pick the <Crosslink target={topics.TRAITS}>Traits</Crosslink> provided by this origin.
                 </li>
-              </ul>
+                <li>Choose a Physical Metabolism score that represents this origin and increase it by 1.</li>
+              </ol>
             </li>
             <li>
               Choose a Hidden Origin.
-              <ul>
-                <li>Choose a Physical Metabolism score that represents this origin and increase it by one.</li>
-                <li>Choose a Hideen Metabolism score that represents this origin, and increase it from 0 to 1.</li>
+              <ol>
                 <li>
                   Pick the <Crosslink target={topics.TRAITS}>Traits</Crosslink> provided by this origin.
                 </li>
-              </ul>
+                <li>Choose a Physical Metabolism score that represents this origin and increase it by 1.</li>
+                <li>Choose a Hideen Metabolism score that represents this origin, and increase it from 0 to 1.</li>
+              </ol>
             </li>
           </ol>
         </Section>
@@ -155,10 +155,10 @@ function Chapter2() {
           </p>
           <p>
             Choose a Physical Origin from the list at the end of this chapter. Once you have chosen, this origin's
-            description will give you some prompts that grant you <Crosslink target={topics.TRAITS}>Traits</Crosslink>.
+            description will give you three prompts that grant you <Crosslink target={topics.TRAITS}>Traits</Crosslink>.
             The prompts provide guidelines for what these traits might be, but ultimately you can choose anything that
-            fits your character if the prompt doesn't. Finally, this origin will let you choose a Physcial Metabolism to
-            increase.
+            fits your character even if the prompts don't. Finally, this origin will let you choose a Physcial
+            Metabolism to increase.
           </p>
         </Section>
         <Section header="Step 3: Hidden Origin">
@@ -170,20 +170,35 @@ function Chapter2() {
             <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> being stressed.
           </p>
           <p>
-            Choose a Hidden Origin from the list at the end of this chapter. Once you have chosen, your origin's
-            description will give you some <Crosslink target={topics.TRAITS}>Traits</Crosslink> with guidelines for what
-            these traits might be, Finally, this origin will let you choose both a Physcial Metabolism to increase.
+            Choose a Hidden Origin from the list at the end of this chapter. Once you have chosen, this origin's
+            description will give you three prompts that grant you <Crosslink target={topics.TRAITS}>Traits</Crosslink>.
+            The prompts provide guidelines for what these traits might be, but ultimately you can choose anything that
+            fits your character even if the prompts don't. Finally, this origin will let you choose both a Physcial and
+            a Hidden Metabolism to increase.
           </p>
         </Section>
-        <Section header="Traits, Combat, & Gear" isInset>
-          <Crosslink target={topics.TRAITS}>Traits</Crosslink> chosen at character creation are not meant to represent
-          combat proficiency, they will typically not be relevant for standard combat actions. For example, a Trait like
-          "Army Marksman" might be relevant in many of situations, but it won't help you shoot a gun in a fight. Action
-          Bonuses better represent combat proven abilities. If you wish to play a character who is already capable in
-          combat, you may omit one of your Traits and instead increase an Action Bonus of your choice from 0 to 1.
-          Action Bonuses greater than 1 represent a level of combat ability typically unavailable to normal humans.
-          Additionally, you may also omit a Trait to instead gain a single weapon or armor. Remember, Trait prompts are
-          suggestions, you don't need to follow them if you have better ideas for your character.
+        <Section header="Choosing Traits">
+          <p>
+            Traits can be almost anything that fleshes out your character and what they bring to the table. They don't
+            need to follow the prompts in the origins you choose exactly, or even at all if you have a better idea.
+          </p>
+          <p>
+            In general Traits should be assets, not flaws. They don't need to be purely useful, even just a description
+            of your appearance or demeanor can be a good Trait that helps you fit in with certain people. A Trait can
+            even have several downsides, but it shouldn't be purely negative or completely useless.
+          </p>
+          <Section header="Combat Skills and Equipment">
+            <p>
+              <Crosslink target={topics.TRAITS}>Traits</Crosslink> chosen at character creation are not meant to
+              represent combat proficiency. They will typically not be relevant for standard combat actions. For
+              example, a Trait like "Army Marksman" might be relevant in many of situations, but it won't help you shoot
+              a gun in a fight. Action Bonuses better represent combat proven abilities. If you wish to play a character
+              who is already capable in combat, you may omit one of your Traits and instead increase an Action Bonus of
+              your choice from 0 to 1. Action Bonuses greater than 1 represent a level of combat ability typically
+              unavailable to normal humans. Additionally, you may also omit a Trait to instead gain a small arsenal of
+              combat equipment.
+            </p>
+          </Section>
         </Section>
         <Section header="What's Next?">
           <p>
@@ -192,7 +207,7 @@ function Chapter2() {
             time you want to revise one of your Traits, and later as you gain and spend experience to level up your
             character.
           </p>
-          <Section header="The Inciting Incident" isInset>
+          <Section header="The Inciting Incident">
             <p>
               Normal humans typically do not have points in the
               <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> and starting characters are similar
@@ -206,7 +221,7 @@ function Chapter2() {
               <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> scores by 1.
             </p>
           </Section>
-          <Section header="Revising Traits" isInset>
+          <Section header="Revising Traits">
             <p>
               After character creation your Traits might still be vague and general, everyone in your game is still
               getting to known your character. During gameplay if you have a trait you haven't used much, you can revise
@@ -227,7 +242,7 @@ function Chapter2() {
               you could change it to something even more specific like "Mountaineer", "Alpinist", or "Ice Climber".
             </p>
           </Section>
-          <Section header="Leveling Up" isInset>
+          <Section header="Leveling Up">
             <p>
               After each session, the GM will give your character some experience points. These can be spent to gain
               Entanglements and special abilities. See chapter 5 for more details on how to use your experience points.
@@ -245,116 +260,224 @@ function Chapter2() {
         <Section header="Conventional" isInset>
           <p>
             The vast majority of people in the world fall into this category. You live a life that wouldn't be unusual
-            of in the present day.
+            in the present day. If you can afford them, you have access to modern conveniences and liberties that others
+            are losing access to.
           </p>
-          <ul>
+          <ol>
             <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Fit In. This
-              <Crosslink target={topics.TRAITS}>Trait</Crosslink> is relevant any time you want to be friendly with
-              people of a similar social class to you or hide in a crowd.
+              <h5 className="subheader">How do you feel about this lifestyle?</h5>
+              <strong>It suits me for now.</strong> Maybe you think a few things seem unfair, or maybe not, but you have
+              a lifestyle you'd prefer not to lose, gain a Trait representing a career path, position of authority, or
+              access to a useful social community.
+              <br />
+              <strong>I'm rebelling against it.</strong> While the world falls collapses, you can't stand idly by. You
+              work to steer future into a better direction than it seems to be headed currently. Gain a Trait
+              representing an membership in an activist or counterculture movement, or skills you use to organize and
+              rally such a community.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a skill learned from a trade,
-              career, or education.
+              <h5 className="subheader">You've avoided the worst aspects of the failing climate. How?</h5>
+              <strong>I have money.</strong> The world really hasn't changed much if you can afford to live somewhere
+              comfortable. Gain a Trait representing a significant financial asset or skills that got you into a well
+              paid career.
+              <br />
+              <strong>I got lucky.</strong> Maybe your home region hasn't struggled much or maybe someone else gets you
+              access to a better lifestyle. Gain a Trait representing useful knowledge of your home city or region, or a
+              social benefactor that somehow allows you to live in a comfortable area.
+              <br />
+              <strong>I'm prepared.</strong> You saw this coming and you prepped for the worst case scenario. Gain a
+              Trait representing access to a physical asset, such as a bunker, off grid power sources, or a stockpile
+              that you can use if things go wrong.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a useful social connection or a
-              material asset.
+              <h5 className="subheader">What's your vibe?</h5>
+              <strong>Mainstream.</strong> Maybe you're fashionable or maybe you just don't think about this too much.
+              Gain a Trait representing your ability to fit into a specific social circle or the dominant aspect of your
+              appearance, demeanor or fashion.
+              <br />
+              <strong>Counterculture.</strong> Are you part of the Frontier movement? An ASYM Slouch fashionista? A DIY
+              ecopunk maker? Choose or invent a subculture you belong to and Gain a Trait representing your ability to
+              fit in with it.
             </li>
-          </ul>
+            <li>
+              Choose a Physical Metabolism and increase it by 1. This is the ability you find yourself leaning into most
+              in life.
+            </li>
+          </ol>
         </Section>
         <Section header="Documented" isInset>
           <p>
-            As a reactionary response to repeated disasters, many regions have enacted laws requiring RFID cards that
-            can be scanned from several meters away. You live or work in a region where this is enforced, or you used
-            to.
+            As a reactionary response to repeated disasters, many regions worldwide have enacted laws requiring RFID
+            cards that can be scanned from several meters away and matched to a database of all previous scan locations.
+            You live or work somewhere that this is enforced, or you recently used to, and therefore you have a valid
+            RFID card.
           </p>
-          <ul>
+          <ol>
             <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> RFID. As long as you carry this ID, you can
-              move and work freely in regions where this is required, but law enforcement knows your previous scan
-              locations.
+              <h5 className="subheader">How do you feel about living under RFID restrictions?</h5>
+              <strong>It's not so bad.</strong>The RFID system makes things safer and more convenient for you. Gain a
+              Trait representing a vocational or academic skill, position of authority, or access to a useful social
+              community.
+              <br />
+              <strong>I'm rebelling against it.</strong> The RFID system has triggered a lot of protest, including
+              yours. You work from within to subvert or undermine the system. Gain a Trait representing an membership in
+              an underground hacker, maker, or activist community, or skills you use to interfere with technical or
+              social systems.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a skill learned from a career or
-              education.
+              <h5 className="subheader">Why did you end up getting registered with an RFID?</h5>
+              <strong>My city started requiring them recently or I moved to a city that already did.</strong> Gain a
+              trait representing your knowledge of your home city or useful social connections within it.
+              <br />
+              <strong>My career requires it.</strong> Gain a Trait representing a career in law inforcement, the
+              military, politics, or a career that requires a deep background check.
+              <br />
+              <strong>It makes international travel easier.</strong> Gain a Trait representing a language or skills
+              you've gained while or find useful while outside of your home region, or to fit in while frequently on the
+              move.
+              <br />
+              <strong>My security clearance requires it.</strong> Gain a Trait representing a security clearance or
+              other access to sensitive information.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a useful social connection
-              property, or position of authority
+              <h5 className="subheader">Has your lifestyle been impacted by climate events or political upheaval?</h5>
+              <strong>Not really, I'm doing well.</strong> Gain a Trait representing success in a career, a social
+              community, or access to resources.
+              <br />
+              <strong>Yes, avoiding it brought me to this RFID enforced region.</strong> Gain a Trait representing a
+              skill or useful social connection you needed to cultivate in order to start a new life.
+              <br />
+              <strong>Yes, even some large RFID cities are starting to struggle.</strong> Gain a Trait representing a
+              skill or physical asset you've needed to cultivate to deal with failures in infrastructure or supply
+              chains.
             </li>
-          </ul>
+            <li>
+              Choose a Physical Metabolism and increase it by 1. This is the ability you've found most useful in your
+              life.
+            </li>
+          </ol>
         </Section>
         <Section header="Frontier" isInset>
           <p>
-            In one way or another, you've abandoned traditional society. Maybe you've joined a community in the
-            Post-National Frontier movement, or maybe you've just struck out on your own. You've destroyed your RFID if
-            you ever had one.
+            In one way or another, you've abandoned traditional society. Maybe you've joined an off-grid community in
+            the Post-National Frontier movement, or maybe you've just struck out on your own. Cheap DIY solar and water
+            condenser projects can sometimes make this possible on small scales. You've destroyed your RFID if you ever
+            had one.
           </p>
-          <ul>
+          <ol>
             <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Frontier Clout. Actual experience with
-              frontier lifestyle is respected by people all over the political spectrum. This
-              <Crosslink target={topics.TRAITS}>Trait</Crosslink> is relevant any time you want to fit in with frontier
-              folk, or impress people leading more traditional lives.
+              <h5 className="subheader">How do you feel about the Frontier lifestyle?</h5>
+              <strong>I walk the walk and talk the talk.</strong> You live like this because it's important to your
+              values. Gain a Trait representing the role you fill in your community.
+              <br />
+              <strong>I wouldn't have chosen it, but it's where I am for now.</strong> Circumstances led you here, but
+              you'd rather be doing something else. Gain a Trait representing a role you are better suited to fill than
+              the one you find your self filling in your community.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a skill or tool you use to provide
-              safety, resources, power, water, or data for yourself or your community. This may be any non-restricted
-              weapon.
+              <h5 className="subheader">How do you support yourself or your community?</h5>
+              <strong>I work to fulfill physical needs.</strong> Gain a Trait representing a skill that you use to help
+              provide food, water, power, data, or some other necessity.
+              <br />
+              <strong>I support the people in the community.</strong> Gain a Trait reprsenting a soft skill you use to
+              keep the community together and running.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing your knowledge of a political
-              ideology or praxis, or a social connection to someone with a lot of power within a counter culture
-              movement.
+              <h5 className="subheader">How well do you fit in with the culture and politics of your community?</h5>
+              <strong>I'm a respected member of this community.</strong> Gain a Trait describing your ability to fit in
+              with the dominant subculture in your community.
+              <br />
+              <strong>I'm doing my own thing.</strong> Gain a Trait describing the strongest aspect of your appearance,
+              demeanor or fashion.
             </li>
-          </ul>
+            <li>
+              Choose a Physical Metabolism and increase it by 1. This ability has proven necessary to support yourself.
+            </li>
+          </ol>
         </Section>
         <Section header="Fugitive" isInset>
           <p>
-            Regardless of whether you are guilty or wrongly accused, you are on the run from the law. You either have to
-            live in hiding, or you've created a false identity for yourself. This is easier in some places, but very
-            difficult in places with RFID laws.
+            You are on the run from something. It may be from the law, a stalker, organized crime, an Auditor from the
+            Schedule, a person in power, or some other threat. Regardless of the source of the threat, you no longer
+            have access to a conventional lifestyle. You must either live in hiding, constantly on the move, or under
+            false identities. This is easier in some places, but very difficult in places with RFID laws.
           </p>
-          <ul>
+          <ol>
             <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Safe House. You have access to a space where
-              you can go to lay low and reliably hide from pursuers.
+              <h5 className="subheader">What are you running from?</h5>
+              <strong>Law Enforcement or some other official process.</strong> Regardless of whether you are guilty or
+              wrongly accused, you can't afford to be caught. Gain a Trait representing a skill or social connection you
+              use avoid the heat.
+              <br />
+              <strong>An individual or an underground organization.</strong>Gain a Trait representing an underworld
+              connection or a skill you use to know when you are being followed or keep your home and loved ones
+              concealed.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a skill you use to avoid unwanted
-              attention, social interactions, or bureaucratic entanglements.
+              <h5 className="subheader">How do you avoid your pursuers?</h5>
+              <strong>I lay low.</strong> Gain a Trait representing a skill you use to stay hidden or an asset, such as
+              a safe house, you can use to live without being noticed.
+              <br />
+              <strong>I keep moving.</strong> Gain a Trait representing a skill you use to repeatedly reinvent your life
+              every time you move or a material asset you can use to support staying on the move.
+              <br />
+              <strong>I have a new identity.</strong> Gain a Trait representing a skill you use create a new identity or
+              a material asset, such as a fake or stolen RFID, you can use to become someone else.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing any non restricted weapon, an
-              untraceable income source, a fake RFID, or a possession or social contact that helps you live under the
-              radar.
+              <h5 className="subheader">How do you make ends meet?</h5>
+              <strong>I get paid under the table.</strong> You work a more conventional job but have arranged to be paid
+              off the books. Gain a Trait representing a skill needed to work this job or the social connections you
+              needed to leverage to arrange it.
+              <br />
+              <strong>Illicit activity.</strong> Whatever this activity, it pays the bills as long as you don't get
+              caught. Gain a Trait representing the role you play in this racket, a skill you need to do it, or
+              connections you have that make it possible.
             </li>
-          </ul>
+            <li>
+              Choose a Physical Metabolism and increase it by 1. This is the ability has proven necessary to support
+              yourself.
+            </li>
+          </ol>
         </Section>
         <Section header="Liberated" isInset>
           <p>
             "Liberated" is a euphemism the frontier movement uses to refer to regions that have been abandoned by their
-            parent nations, most often due to unrepairable climate disasters. Most people have left these regions and
-            become refugees, but something has kept you living or frequently visiting one of these regions to fend for
-            yourself under martial law.
+            parent nations, most often due to unmanagable climate disasters. Most people leave these regions and become
+            refugees or migrants, but some continue their lives there fending for themselves under martial law.
           </p>
-          <ul>
+          <ol>
             <li>
-              Gain the <Crosslink target={topics.TRAITS}>Trait</Crosslink> Resourceful. This
-              <Crosslink target={topics.TRAITS}>Trait</Crosslink> is relevant any time you are trying to acquire
-              something you need by searching, socializing, or navigating a bureaucracy
+              <h5 className="subheader">What happened that separated your home region from society?</h5>
+              <strong>A disaster or a failure of a local resource or supply chain.</strong> Whether it was natural or
+              man-made, sudden destruction or a slow collapse, this event has made this region challenging to live in.
+              Gain a Trait representing a skill you depend on to stay resourceful amidst the remains of this region.
+              <br />
+              <strong>Political upheaval, conflict, or war.</strong> Maybe your region is an active combat zone or maybe
+              it's isolated by a blockade, siege or quarantine. Whatever the case, the area is under martial law. Gain a
+              Trait you use to survive and avoid the worst of the danger.
             </li>
             <li>
-              The harsh conditions of your life have forced you to remain flexible and capable. Increase any one
-              <Crosslink target={topics.PHYS_METAB}>Physical Metabolism</Crosslink> by 1. This cannot cause it to
-              increase above 6.
+              <h5 className="subheader">Do you still live there most of the time?</h5>
+              <strong>Yes, I'm trying to make the most of it.</strong> Gain a Trait representing a skill or community
+              you depend on to survive without fully functional supply chains and infrastructure.
+              <br />
+              <strong>No, I'm a refugee from this situation.</strong> Gain a Trait representing a skill or social
+              connection you used to build a new life somewhere else.
             </li>
             <li>
-              Gain a <Crosslink target={topics.TRAITS}>Trait</Crosslink> representing a skill or social connection you
-              can use to survive without reliable access to advanced infrastructure.
+              <h5 className="subheader">How long has it been since you've been able to lead a conventional life?</h5>
+              <strong>Years.</strong> Gain a Trait representing a skill or community you depend on to survive without
+              fully functional supply chains and infrastructure.
+              <br />
+              <strong>Just a short time.</strong> Gain a Trait representing a role you filled in a career or social
+              circle before your region fell apart.
             </li>
-          </ul>
+            <li>
+              Choose a Physical Metabolism and increase it by 1. You depend on this ability to support yourself and
+              avoid adversity.
+            </li>
+          </ol>
         </Section>
         <Section header="Unknown" isInset>
           <p>
@@ -362,19 +485,18 @@ function Chapter2() {
             memories. Whether this point is a few days ago or a few years ago, you've been struggling to find an
             identity for yourself ever since.
           </p>
-          <ul>
+          <ol>
             <li>
-              Gain the <Crosslink target={topics.TRAITS}>Traits</Crosslink> Unknown Combat Skill and Unknown Academic
-              Skill. You don't realize you have these skills and you do not recall practicing them. One time when you
-              attempt to perform an action, you can permanently replace one of these
-              <Crosslink target={topics.TRAITS}>Traits</Crosslink> with a skill relevant to the action. One skill must
-              be useful in combat and the other must be a field of knowledge.
+              Gain three instances of the <Crosslink target={topics.TRAITS}>Traits</Crosslink> Unknown Skill. You don't
+              realize you have these skills and you do not recall practicing them. Later, when you attempt a Challenge,
+              you can permanently replace one of these
+              <Crosslink target={topics.TRAITS}>Traits</Crosslink> with a skill relevant to this Challenge.
             </li>
             <li>
-              Increase any one <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> from 0 to 1.
-              Whatever happened before your memory begins left you aware of your hidden body.
+              Choose a Physical Metabolism and increase it by 1. Regardless of where it came from in your past, you feel
+              confident in this ability.
             </li>
-          </ul>
+          </ol>
         </Section>
       </Section>
       <Section header="Hidden Origins">
