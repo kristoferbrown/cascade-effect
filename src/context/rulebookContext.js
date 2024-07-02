@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 
 export const RulebookContext = createContext();
 
+// @TODO update all of these after refactor and do a pass of adding more crosslinks
 export const topics = {
   ACTION: "4.4.2",
   ADVANTAGE: "3.4.3",

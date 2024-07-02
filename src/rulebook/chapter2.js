@@ -76,6 +76,7 @@ function Chapter2() {
           membership, authority, wealth, possessions, careers, apparent physical traits, fashions, roles you fill, or
           other advantages are good Traits. Don't think too hard about having precise
           <Crosslink target={topics.TRAITS}>Traits</Crosslink>, if they're vague you will be able to revise them later.
+          When playing the game, any time one of your Traits is relevant to a Challenge you gain Advantage on it.
         </p>
         <p>
           Action Bonuses are a number assigned to each action you can take in combat, representing your skill with

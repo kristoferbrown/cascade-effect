@@ -31,12 +31,12 @@ function Chapter3() {
           </p>
         </Section>
         <Section header="Using Flight" metabolized="Flight">
-          <p>Flight is your ability avoid unwanted changes, as well as achieve and maintain a position.</p>
+          <p>Flight is your ability avoid unwanted changes or to achieve and maintain a position.</p>
           <p>
-            Use Flight any time you are trying to avoid harm, endure hardship, or move somewhere. This typically
-            includes all defenses in combat, sustained aerobic athletic activities like climbing or distance running,
-            social activities like resisting influence or maintaining composure, and mental activities like identifying
-            tricks or paths that lead to bad outcomes.
+            Use Flight any time you are trying to avoid harm, endure hardship, or traverse your environment. This
+            typically includes all defenses in combat, sustained aerobic athletic activities like climbing or distance
+            running, social activities like resisting influence or maintaining composure, and mental activities like
+            identifying tricks or paths that lead to bad outcomes.
           </p>
         </Section>
         <Section header="Using Focus" metabolized="Focus">
@@ -96,507 +96,339 @@ function Chapter3() {
         <Section header="Steps to Resolve Challenges" isInset>
           <ol>
             <li>
-              The GM decides the <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink> and the
-              <Crosslink target={topics.COMPLICATION}>Complications</Crosslink> of the Challenge.
+              The GM describes the context with a the <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink>
+              level and optionally the level of Risk and Effort.
             </li>
             <li>
-              The player chooses a pair of <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> to use.
+              Determine which pair of <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> to use.
             </li>
             <li>
-              The player tries to adjust <Crosslink target={topics.COMPLICATION}>Complications</Crosslink>.
+              Determine if you have advantage, possibly from a relevant Trait, or disadvantage, and adjust the Risk or
+              Effort level accordingly.
+            </li>
+            <li>
+              Spend any <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> points you need to.
             </li>
             <li>
               Count how much <Crosslink target={topics.PROGRESS}>Progress</Crosslink> was produced.
             </li>
             <li>
-              Compare the <Crosslink target={topics.PROGRESS}>Progress</Crosslink> to the{" "}
+              Compare the <Crosslink target={topics.PROGRESS}>Progress</Crosslink> to the
               <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink>
               to determine the results.
             </li>
-            <li>
-              Spend any <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> points you need to.
-            </li>
           </ol>
         </Section>
-        <p>
-          Challenges may sometimes have <Crosslink target={topics.COMPLICATION}>Complications</Crosslink> applied to
-          them that remove or modify these steps. For example, certain Challenges may require you to roll{" "}
-          <Crosslink target={topics.DICE}>dice</Crosslink> or spend more or less
-          <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> points when you are counting
-          <Crosslink target={topics.PROGRESS}>Progress</Crosslink>. You can also Take Time to do a Challenge carefully
-          in order to remove these
-          <Crosslink target={topics.COMPLICATION}>Complications</Crosslink>, or{" "}
-          <Crosslink target={topics.PUSH_YRSELF}>Push Yourself</Crosslink> in order to attempt things that are more
-          difficult than they could do otherwise.
-        </p>
-        <Section header="Difficulty and Context">
-          <p>
-            The game master will set a Difficulty number for the{" "}
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>. This is the target number the player must match
-            or beat to succeed at the Challenge.
-          </p>
-          <Section header="Difficulty Scales" isInset>
-            <p>0 - 3 Anyone can reliably do this if there are no complications.</p>
-            <p>3 - 6 Experts can reliably do this, others need extra effort and luck.</p>
-            <p>6 - 12 Even experts need extra effort and luck to do this, it's practically impossible for others.</p>
-            <p>12 - 18 Superhuman ability is required, but still appears plausibly normal to witnesses.</p>
-            <p>
-              18 - 36 Even with superhuman ability, extra effort and luck are needed. The attempt appears overtly
-              supernatural to witnesses.
-            </p>
-          </Section>
-          <p>
-            In addition to the Difficulty, the GM should describe any additional context related to the
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> by answering the following questions:
-          </p>
-          <p>
-            Are any <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> ill suited to the Challenge? If so,
-            the Difficulty may be increased if these are used.
-          </p>
-          <p>
-            Is there any urgency to the <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> or
-            <Crosslink target={topics.CONSEQUENCE}>consequences</Crosslink> if you
-            <Crosslink target={topics.TAKE_TIME}>Take Time</Crosslink> with it?
-          </p>
-          <p>
-            Do any <Crosslink target={topics.COMPLICATION}>Complications</Crosslink> apply to the
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>?
-          </p>
-          <p>What are the consequences for failure?</p>
-          <p>
-            When communicating this context to the players, it is filtered through what the character would be aware of.
-            Often, a player can know the exact Difficulty number. However, depending on the situation and what the
-            character can perceive, you may only get hints at the other parts of the context.
-          </p>
-        </Section>
-        <Section header="Metabolism Pairing">
-          <p>
-            While the GM sets a <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink>, the player chooses a
-            pairing of one
-            <Crosslink target={topics.PHYS_METAB}>physical</Crosslink> and one
-            <Crosslink target={topics.HIDDEN_METAB}>hidden Metabolism</Crosslink> to use. You may omit one half of the
-            pairing if you don't have appropriate <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink>{" "}
-            available. For example, starting characters often may be missing some{" "}
-            <Crosslink target={topics.HIDDEN_METAB}>hidden Metabolisms</Crosslink>, so they would choose only a
-            <Crosslink target={topics.PHYS_METAB}>physical</Crosslink> one.
-          </p>
-          <p>
-            Most <Crosslink target={topics.CHALLENGE}>Challenges</Crosslink> can potentially be accomplished with many
-            different Metabolism pairings, you just have to describe how your character is handling the situation in a
-            way that applies them. The
-            <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> has the final say over whether a description is
-            sufficient to justify the chosen Metabolisms.
-          </p>
-          <p>
-            Sometimes, often in combat, a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> will require a
-            specific choice for one or both Metabolisms. For example, to throw a punch, you must use <Pair fight self />
-            , and to dodge a bullet you must use <Pair flight far />.
-          </p>
-          <Section header="Metabolism Pairing Example" isInset>
-            <p>
-              Your character is trying to sneak into a secure building, so you need to choose what Metabolism pairing
-              you will use to attempt this
-              <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>.
-            </p>
-            <p>
-              One pairing you could choose is <Metabolism flight />, to represent how you are moving quickly to avoid
-              your pursuers, and
-              <Metabolism far /> to represent that you are trying to maintain awareness of the guard's movements to
-              avoid getting too close.
-            </p>
-            <p>
-              Alternatively, you could choose <Metabolism focus />, to represent watching closely for any security
-              cameras, paired with
-              <Metabolism near />, to represent how you are carefully interacting with your environment to remain
-              silent.
-            </p>
-          </Section>
-        </Section>
-        <Section header="Counting Progress">
-          <p>
-            To succeed at a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, the player must create an amount
-            of Progress equal to or greater than the <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink>. In
-            basic
-            <Crosslink target={topics.CHALLENGE}>Challenges</Crosslink> with no{" "}
-            <Crosslink target={topics.COMPLICATION}>Complications</Crosslink>, the Progress created is equal to the sum
-            of the current values of your <Crosslink target={topics.PAIRING}>paired Metabolisms</Crosslink>. Always use
-            the current value, not the maximum. <Crosslink target={topics.COMPLICATION}>Complications</Crosslink> can
-            change the way you count Progress, potentially requiring you to buy or roll{" "}
-            <Crosslink target={topics.DICE}>dice</Crosslink> to gain
-            <Crosslink target={topics.PROGRESS}>Progress</Crosslink>.
-          </p>
-        </Section>
-        <Section header="Spending Metabolisms">
-          <p>
-            Your Metabolisms are a resource with a current and a maximum value. The maximum value is typically equal to
-            the Metabolism's score, but it can be reduced by <Crosslink target={topics.STRESS}>Stress</Crosslink>. When
-            you do any
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, you must choose one Metabolism in the
-            <Crosslink target={topics.PAIRING}>pairing</Crosslink> used on it and reduce its current value by 1.
-          </p>
-          <p>
-            Certain challenges may have negative <Crosslink target={topics.COMPLICATION}>Complications</Crosslink> that
-            force you to spend Metabolism points faster, or positive ones that can make it free. The only way to fully
-            restore all Metabolisms to their maximum is by resting for an hour or by{" "}
-            <Crosslink target={topics.PUSH_YRSELF}>Pushing Yourself</Crosslink> during a
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>.
-          </p>
-          <Section header="Creating Progress & Spending Metabolisms Example" isInset>
-            <ol>
-              <li>
-                You choose the pairing of <Pair fight self /> for a basic{" "}
-                <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>. You were already missing a point of{" "}
-                <Metabolism fight /> from past events.
-              </li>
-              <li>
-                Add your current 2 points of <Metabolism fight /> to your current 1 point of <Metabolism self />,
-                creating a sum of 3<Crosslink target={topics.PROGRESS}>Progress</Crosslink>.
-              </li>
-              <li>
-                You just used <Pair fight self />, so you must deduct a point from one of them.
-              </li>
-            </ol>
-          </Section>
-        </Section>
-        <Section header="Stress">
-          <p>
-            Wear and tear accumulated from exertion and conflict is referred to as Stress. Stress can be caused by the
-            <Crosslink target={topics.CONSEQUENCE}>consequences</Crosslink> of
-            <Crosslink target={topics.CHALLENGE}>Challenges</Crosslink> that have certain Complications, enduring a
-            hardship, or by getting attacked in combat. When you take Stress, choose how to distribute the Stress
-            between all affected
-            <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink>. Typically, the
-            <Crosslink target={topics.PAIRING}>pair of Metabolisms</Crosslink> involved in the current
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> are the ones affected.
-          </p>
-          <p>
-            For each point of Stress a <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> takes, reduce its
-            maximum value by 1. If something, such as rest or healing, causes you to remove a point of Stress from a
-            <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink>, restore its maximum to 1 point closer to the
-            Metabolism's full score.
-          </p>
-        </Section>
-        <Section header="Depleted Metabolisms">
-          <p>
-            To stay effective, you'll want to remove avoid negative{" "}
-            <Crosslink target={topics.COMPLICATION}>Complications</Crosslink> and and other sources of{" "}
-            <Crosslink target={topics.STRESS}>Stress</Crosslink> as often as possible. However, things aren't over when
-            a<Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> is empty. Even when you have no more points
-            remaining in a Metabolism pairing, you can still treat any{" "}
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> that uses it as if you spent a single point on
-            it, but when you do so the action gains the
-            <Crosslink target={topics.RISKY}>Risky complication</Crosslink> if it didn't have it already.
-          </p>
-        </Section>
-        <Section header="Recovery">
-          <p>
-            The primary way to restore maximum <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> that have
-            been reduced by
-            <Crosslink target={topics.STRESS}>Stress</Crosslink> is resting. Any time you sleep for several hours, no
-            more than once per day, you recover from <Crosslink target={topics.CHALLENGE}>Stress</Crosslink>. Remove all{" "}
-            <Crosslink target={topics.CHALLENGE}>Stress</Crosslink>
-            from all <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> and remove 1
-            <Crosslink target={topics.STRESS}>Stress</Crosslink> from all{" "}
-            <Crosslink target={topics.PHYS_METAB}>Physical Metabolism</Crosslink>. Then refill the current value of all{" "}
-            <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> to their new maximums.
-          </p>
-          <Section header="Stress and Recovery Example" isInset>
-            <ol>
-              <li>
-                You have your 4/4 <Metabolism focus /> and 1/3 <Metabolism near /> paired for a basic
-                <Crosslink target={topics.CHALLENGE}>Challenge.</Crosslink>
-              </li>
-              <li>
-                This creates 5 <Crosslink target={topics.PROGRESS}>Progress</Crosslink> and you must deduct a point from
-                both
-                <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink>
-              </li>
-              <li>
-                During this <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> you fall and get hurt, causing 5
-                <Crosslink target={topics.STRESS}>Stress</Crosslink> split between <Pair focus near />. You choose put 3
-                <Crosslink target={topics.CHALLENGE}>Stress</Crosslink> on <Metabolism focus /> and the remaining 2 on{" "}
-                <Metabolism near />.
-              </li>
-              <li>
-                Later, you can rest for an hour to fully refill all your{" "}
-                <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> to their maximum values, however the
-                maximums have been lowered by <Crosslink target={topics.STRESS}>Stress</Crosslink>.
-              </li>
-              <li>
-                That night you sleep normally, removing all{" "}
-                <Crosslink target={topics.HIDDEN_METAB}>hidden metabolism</Crosslink>
-                <Crosslink target={topics.STRESS}>Stress</Crosslink> and 1 point of{" "}
-                <Crosslink target={topics.STRESS}>Stress</Crosslink> from all
-                <Crosslink target={topics.PHYS_METAB}>physical Metabolisms</Crosslink>. All the current values are
-                filled to the new maximum.
-              </li>
-            </ol>
-          </Section>
-        </Section>
       </Section>
-      {/* @todo move this concept to a "context" concept that includes difficulty, risk, and effort */}
-      {/* @todo this will be a big refactor requiring crosslink updating, maybe remove the children from crosslinks too */}
-      <Section header="Complications">
+      <Section header="Difficulty and Context">
         <p>
-          When setting the <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink> number of a
-          <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, the
-          <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> may also assign a value for Risk and a value for Effort.
-          The value for either can be low, balanced, high, or rarely extreme. If either Risk or Effort is not mentioned,
-          it is assumed to be balanced.
+          The context of a Challenge is set and described by the GM and includes any relevant details about the nature
+          of the Challenge and how it might be resolved. The only required element of context is a Difficulty level.
+          Difficulty is the target number the player must beat to succeed at the Challenge.
         </p>
-        <p>
-          The <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> sets the initial Risk and Effort, but it can be
-          changed. For example, if you have advantage on a Challenge, you can chose to improve either Risk or Effort.
-          Similarly, if you have disadvantage one of them will be degraded.
-        </p>
-        <Section header="Effort" isInset>
-          <h4>Low Effort</h4>
+        <Section header="Difficulty Levels" isInset>
+          <p>0 - 3 Anyone can reliably do this if there are no complications.</p>
+          <p>3 - 6 Experts can reliably do this, others need extra effort and luck.</p>
+          <p>6 - 12 Even experts need extra effort and luck to do this, it's practically impossible for others.</p>
+          <p>12 - 18 Superhuman ability is required, but still appears plausibly normal to witnesses.</p>
           <p>
-            This challenge is effortless or allows you to set your own pace. All current Metabolism points in your
-            chosen Pairing are applied to the Challenge and are not spent.
-          </p>
-          <h4>Balanced Effort</h4>
-          <p>
-            A standard Challenge requires physical or mental effort. Choose any combination of points from your chosen{" "}
-            <Crosslink target={topics.PAIRING}>paired Metabolisms</Crosslink> to spend. Each point spent creates one
-            point of
-            <Crosslink target={topics.PROGRESS}>Progress</Crosslink>.
-          </p>
-          <h4>High Effort</h4>
-          <p>
-            The mind or body are strained by this task. Attempting it will cause a point of unavoidable
-            <Crosslink target={topics.STRESS}>Stress</Crosslink> to your choice of one of your
-            <Crosslink target={topics.PAIRING}>paired Metabolisms</Crosslink>.
-          </p>
-          <h4>Extreme Effort</h4>
-          <p>
-            Attempting a task this strenuous will cause a point of unavoidable
-            <Crosslink target={topics.STRESS}>Stress</Crosslink> to every Metabolism involved.
+            18 - 36 Even with superhuman ability, extra effort and luck are needed. The attempt appears overtly
+            supernatural to witnesses.
           </p>
         </Section>
-        <Section header="Risk" isInset>
-          <h4>Low Risk</h4>
+        <p>
+          Optionally, the Challenge context may also include Risk and Effort levels that modify how it is resolved. The
+          Risk level will determine if you need to roll <Crosslink target={topics.DICE}>dice</Crosslink> and the Effort
+          level will determine how many
+          <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> points you need to spend. The value for either
+          can be Low, Default, High, or rarely Extreme. If either Risk or Effort is not mentioned, the level is assumed
+          to be Default.
+        </p>
+        <p>
+          In addition to the Difficulty, Risk, and Effort levels, the GM might describe any additional context related
+          to the
+          <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> by answering any of the following questions that
+          are relevant:
+        </p>
+        <p>
+          Are any <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> ill suited to the Challenge? If so, the
+          Difficulty may be increased if these are used.
+        </p>
+        <p>
+          Is there any urgency to the <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> or
+          <Crosslink target={topics.CONSEQUENCE}>consequences</Crosslink> if you take too much time with it?
+        </p>
+        <p>Are there any circumstances that give the characters an advantage or disadvantage?</p>
+        <p>What are the consequences for failure?</p>
+        <p>
+          When communicating this context to the players, it is filtered through what the character would be aware of.
+          Typically, a player can know the exact Difficulty number. However, depending on the situation and what the
+          character can perceive, you may only get hints.
+        </p>
+        <Section header="Risk Levels" isInset>
+          <h5>Low Risk</h5>
           <p>
             You can plan your approach and reliably apply your best efforts. You may select another
             <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> to use in addition to your chosen
             <Crosslink target={topics.PAIRING}>pairing</Crosslink>, however the additional Metabolism creates dice
             instead of Progress.
           </p>
-          <h4>Balanced Risk</h4>
+          <h5>Balanced Risk</h5>
           <p>
             A standard <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, no dice are required and your efforts
             produce
             <Crosslink target={topics.METABOLISM}>Progress</Crosslink> normally.
           </p>
-          <h4>High Risk</h4>
+          <h5>High Risk</h5>
           <p>
-            A perfect attempt could still fail due to chaos, competition, luck, motion, or unknown factors. Each point
-            of
+            A perfect attempt could still fail due to chaos, competition, luck, motion, or other unpredictable factors.
+            Each point of
             <Crosslink target={topics.PROGRESS}>Progress</Crosslink> that would normally be created instead grants you
             one die to roll with a chance of creating <Crosslink target={topics.PROGRESS}>Progress</Crosslink> or
             <Crosslink target={topics.CHALLENGE}>consequences</Crosslink>.
           </p>
-          <h4>Extreme Risk</h4>
+          <h5>Extreme Risk</h5>
           <p>
             The odds are stacked against you. Treat this the same as High Risk, however 6s are not rerolled and each 1
             rolled subtracts a point of Progress.
           </p>
         </Section>
-
-        {/* <p>
-          The three methods are, <Crosslink target={topics.TRAITS}>Applying a Trait</Crosslink>,
-          <Crosslink target={topics.TAKE_TIME}>Taking Time</Crosslink>, and{" "}
-          <Crosslink target={topics.ADVANTAGE}>Finding an Advantage</Crosslink>.
+        <Section header="Effort Levels" isInset>
+          <h5>Low Effort</h5>
+          <p>
+            This challenge is effortless or allows you to set your own pace. All current Metabolism points in your
+            chosen Pairing are applied to the Challenge and are not spent. Challenges that are primarily about noticing
+            or knowing something are typically Low Effort.
+          </p>
+          <h5>Default Effort</h5>
+          <p>
+            Some physical or mental effort is required. Choose any combination of points from your chosen
+            <Crosslink target={topics.PAIRING}>paired Metabolisms</Crosslink> to spend. Each point spent creates one
+            point of
+            <Crosslink target={topics.PROGRESS}>Progress</Crosslink>.
+          </p>
+          <h5>High Effort</h5>
+          <p>
+            The mind or body are strained by this task. Attempting it will cause a point of unavoidable
+            <Crosslink target={topics.STRESS}>Stress</Crosslink> to your choice of one of your
+            <Crosslink target={topics.PAIRING}>paired Metabolisms</Crosslink>.
+          </p>
+          <h5>Extreme Effort</h5>
+          <p>
+            Attempting a task this strenuous will cause a point of unavoidable
+            <Crosslink target={topics.STRESS}>Stress</Crosslink> to every Metabolism involved.
+          </p>
+        </Section>
+      </Section>
+      <Section header="Metabolism Pairing">
+        <p>
+          After the GM describes the context, the next step is determining which two Metabolisms the player will use to
+          complete the Challenge. The Metabolisms used will always be a pairing of one
+          <Crosslink target={topics.PHYS_METAB}>physical</Crosslink> and one
+          <Crosslink target={topics.HIDDEN_METAB}>hidden Metabolism</Crosslink>. The GM may require a specific choice
+          for one or both of them, but otherwise the player chooses which to use.
         </p>
-        <Section header="Applying Traits">
+        <p>
+          Most <Crosslink target={topics.CHALLENGE}>Challenges</Crosslink> can potentially be accomplished with many
+          different Metabolism pairings, you just have to describe how your character is handling the situation in a way
+          that applies them. The
+          <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> has the final say over whether a description is
+          sufficient to justify the chosen Metabolisms, if it doesn't you get Disadvantage on the Challenge.
+        </p>
+        <p>
+          Sometimes, often in combat, a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> will require a
+          specific choice for one or both Metabolisms. For example, to throw a punch, you must use <Pair fight self />
+          , and to dodge a bullet you must use <Pair flight far />.
+        </p>
+        <Section header="Metabolism Pairing Example" isInset>
           <p>
-            If you have one or more Traits that are relevant to the{" "}
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, you can add or remove one complication. Traits
-            are relevant if they can somehow be leveraged to assist with the
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>. For example, a Trait called Medical Training
-            would be relevant in a<Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>
-            treating injuries. Players and GMS are encouraged to be creative and flexible when deciding if Traits are
-            relevant.
+            Your character is trying to sneak into a secure building, so you need to choose what Metabolism pairing you
+            will use to attempt this
+            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>.
+          </p>
+          <p>
+            One pairing you could choose is <Metabolism flight />, to represent how you are moving quickly to avoid your
+            pursuers, and
+            <Metabolism far /> to represent that you are trying to maintain awareness of the guard's movements to avoid
+            getting too close.
+          </p>
+          <p>
+            Alternatively, you could choose <Metabolism focus />, to represent watching closely for any security
+            cameras, paired with
+            <Metabolism near />, to represent how you are carefully interacting with your environment to remain silent.
           </p>
         </Section>
-        <Section header="Taking Time">
-          <p>
-            You can attempt to Take Time on a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> to add or
-            remove one complication. This represents taking things slowly and carefully or preparing for them in
-            advance. Normally, a<Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> is completed as soon as
-            possible, but when you Take Time, things take longer. This at least doubles the normal time the it would
-            have taken, with a minimum of adding a few minutes.
-          </p>
-          <p>
-            You have the option to Take Time on all <Crosslink target={topics.CHALLENGE}>Challenges</Crosslink>, but it
-            can be dangerous. The
-            <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> will describe the urgency of the situation and if you
-            are aware of any potential
-            <Crosslink target={topics.CONSEQUENCE}>consequences</Crosslink> of finishing too slowly. For example, you
-            could be interrupted, draw unwanted attention, or even make the
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> fail entirely
-          </p>
-        </Section>
-        <Section header="Finding Advantages">
-          <p>
-            If you have useful help, distracted opponents, just the right tool for the job, the element of surprise, or
-            otherwise can act from a privileged position, you have an advantage. Having one or more advantages lets you
-            add or remove one Complication. It is not always possible to find an advantage, the{" "}
-            <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> has the final say if your approach can plausibly change
-            the Complications the way you intend them to.
-          </p>
-        </Section> */}
-        {/* <Section header="Positive Complications" isInset>
-
-          <h4>Satisfying</h4>
-          <p>
-            This task involves a big milestone, built in rewards, or one of your character's interests. If you succeed,
-            choose a<Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> that was not used on this task. This
-            Metabolism regains a number of points equal to the amount of{" "}
-            <Crosslink target={topics.PROGRESS}>Progress</Crosslink> you created.
-          </p>
-        </Section>
-
-      </p> */}
-        {/* </Section> */}
-        <Section header="Rolling Dice">
-          <p>
-            Dice are only needed if a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> is{" "}
-            <Crosslink target={topics.RISKY}>Risky</Crosslink>. Replace each point of{" "}
-            <Crosslink target={topics.PROGRESS}>Progress</Crosslink> that would have been created for this challenge
-            with a six sided die, and then roll these dice. Each die that has a result of 4 or greater increases the
-            <Crosslink target={topics.PROGRESS}>Progress</Crosslink> by one. Any die that comes up 6 "explodes" and gets
-            rerolled, potentially increasing <Crosslink target={topics.PROGRESS}>Progress</Crosslink>
-            further or even coming up 6 again and getting rerolled again.
-          </p>
-        </Section>
-        <Section header="Consequences">
-          <p>
-            Be careful with <Crosslink target={topics.RISKY}>Risky Challenges</Crosslink>, they can cause extra
-            consequences. If you roll
-            <Crosslink target={topics.DICE}>dice</Crosslink> and end up with 0{" "}
-            <Crosslink target={topics.PROGRESS}>Progress</Crosslink>
-            your failure is especially bad and causes a consequence. Also, if your{" "}
-            <Crosslink target={topics.PROGRESS}>Progress</Crosslink> is exactly equal to the{" "}
-            <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink> you must choose if you simply fail, or if you
-            succeed at the cost of causing a consequence. The <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> may
-            also add a consequence when you choose to
-            <Crosslink target={topics.TAKE_TIME}>Take Time</Crosslink> at an inopportune moment. Any time a consequence
-            occurs, choose a<Crosslink target={topics.PROGRESS}>Metabolism</Crosslink> in your
-            <Crosslink target={topics.PAIRING}>pairing</Crosslink> to take a point of{" "}
-            <Crosslink target={topics.STRESS}>Stress</Crosslink>, and the
-            <Crosslink target={topics.GAMEMASTER}>GM</Crosslink>
-            will describe an additional problem that was caused during the{" "}
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>. Consequences only occur when there is a set{" "}
-            <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink> number. They don't occur when comparing one's
-            <Crosslink target={topics.ACTION}>action to a reaction</Crosslink>, such as when attacking and defending in
-            combat.
-          </p>
-        </Section>
-        <Section header="Complications & Dice Example" isInset>
-          <p>
-            You're trying to sneak into a building. Because it is a secure area with big consequences for being caught,
-            the
-            <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> decides the{" "}
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>
-            is <Crosslink target={topics.RISKY}>Risky</Crosslink>,{" "}
-            <Crosslink target={topics.STRENUOUS}>Strenuous</Crosslink>, and
-            <Crosslink target={topics.STRESSFUL}>Stressful</Crosslink> and has a{" "}
-            <Crosslink target={topics.DIFFICULTY}>difficulty</Crosslink> of 4. You{" "}
-            <Crosslink target={topics.TAKE_TIME}>Take Time</Crosslink> by carefully scouting the area before proceeding,
-            so you can adjust the
-            <Crosslink target={topics.COMPLICATION}>Complications</Crosslink>. You choose to remove
-            <Crosslink target={topics.STRESSFUL}>Stressful</Crosslink>, so you won't take{" "}
-            <Crosslink target={topics.STRESS}>Stress</Crosslink> just for attempting it.
-          </p>
+      </Section>
+      <Section header="Counting Progress">
+        <p>
+          To cleanly succeed at a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, the player must create an
+          amount of Progress greater than the <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink>. The simplest
+          scenario is a Challenge with Default Risk and Low Effort, in this case the Progress created is equal to the
+          sum of the current values of your <Crosslink target={topics.PAIRING}>paired Metabolisms</Crosslink>. Always
+          use the current value, not the maximum or the score. If the Risk level is different, you will also need to
+          roll some dice and if the Effort level is higher you'll have to spend Metabolism points to buy Progress.
+        </p>
+        <p>
+          If your total Progress is lower than the Difficulty, you fail and do not complete the goal of the Challenge.
+          If your Progress ties the Difficulty exactly you have a choice to make; you can either fail the Challenge or
+          succeed at it with a cost. This cost will cause a point of Stress and the GM may add some additional
+          consequence that occurs despite your success. You can know what the exact consequences are before you decide.
+        </p>
+      </Section>
+      <Section header="Rolling Dice">
+        <p>
+          Dice are only needed if a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> has a Risk level other
+          than Default. To roll, replace each point of
+          <Crosslink target={topics.PROGRESS}>Progress</Crosslink> that would have been created during this Challenge
+          with a six sided die, and then roll these dice. Every die that has a result of 4 or greater increases the
+          <Crosslink target={topics.PROGRESS}>Progress</Crosslink> by one and any die with a lower result does nothing.
+          Any die that comes up 6 "explodes" and gets rerolled, potentially increasing
+          <Crosslink target={topics.PROGRESS}>Progress</Crosslink>
+          further or even coming up 6 again and getting rerolled again.
+        </p>
+        <Section header="Rolling Dice Example" isInset>
           <ol>
             <li>
-              First choose your <Crosslink target={topics.PAIRING}>Metabolism pair</Crosslink>. You choose{" "}
-              <Metabolism focus /> to represent being careful and <Metabolism far /> to represent that you are trying to
-              keep close track of your pursuer's movements without getting close to them.
+              In a low Effort Challenge, your current Metabolism pairing values add up to 4, so you would normally
+              create 4 Progress. However, the Challenge is also high Risk, so this produces 4 dice instead.
+            </li>
+            <li>You roll 4 dice, getting the results 2, 4, 6, and 6.</li>
+            <li>
+              Three of those are 4 or better, so that's 3 points of
+              <Crosslink target={topics.CHALLENGE}>Progress</Crosslink> already.
             </li>
             <li>
-              Because it's <Crosslink target={topics.STRENUOUS}>Strenuous</Crosslink> you need to buy your
-              <Crosslink target={topics.PROGRESS}>Progress</Crosslink>. You choose to spend 3 <Metabolism focus /> and 1{" "}
-              <Metabolism far />. Because it's <Crosslink target={topics.RISKY}>Risky</Crosslink> this buys you 4{" "}
-              <Crosslink target={topics.DICE}>dice</Crosslink> to roll instead of 4
-              <Crosslink target={topics.PROGRESS}>Progress</Crosslink>.
+              The 6's explode, so you reroll both of them, getting a 1 and a 5. That's one more die that is above 4, so
+              your
+              <Crosslink target={topics.CHALLENGE}>Progress</Crosslink> increases to 4.
             </li>
-            <li>
-              You roll 2, 4, 6, and 6. Three of those are 4 or better, so that's 3 points of{" "}
-              <Crosslink target={topics.CHALLENGE}>Progress</Crosslink>.
-            </li>
-            <li>
-              6's always explode, so you reroll both 6's, getting a 4 and a 5. That's two{" "}
-              <Crosslink target={topics.DICE}>dice</Crosslink> that are 4 or above, so your
-              <Crosslink target={topics.CHALLENGE}>Progress</Crosslink> increases to 5.
-            </li>
-            <li>
-              You beat the <Crosslink target={topics.DIFFICULTY}>difficulty</Crosslink>! You succeed and get into the
-              building undetected.
-            </li>
+            <li>If the difficulty was 4 or less, you succeed.</li>
           </ol>
         </Section>
-        <Section header="Pushing Yourself">
-          <p>
-            If you are unable to get as much <Crosslink target={topics.PROGRESS}>Progress</Crosslink> as you need to
-            succeed at a<Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, you can Push Yourself to give an
-            extra effort. Doing so immediately refills all of your{" "}
-            <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> pools, and gives you a second chance to spend
-            more of them on this <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>. You must spend at least one
-            additional point when you do this.
-          </p>
-          <p>
-            This allows you to spend up to double what your{" "}
-            <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> would normally allow, however, it comes with
-            some risks. First, it makes the action <Crosslink target={topics.RISKY}>Risky</Crosslink> if it wasn't
-            already: you need roll <Crosslink target={topics.DICE}>dice</Crosslink> to get any additional{" "}
-            <Crosslink target={topics.PROGRESS}>Progress</Crosslink>
-            and the chance exists to cause
-            <Crosslink target={topics.CONSEQUENCE}>consequences</Crosslink> if you roll poorly. If the
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> was already{" "}
-            <Crosslink target={topics.RISKY}>Risky</Crosslink> when you Push Yourself, it also becomes{" "}
-            <Crosslink target={topics.STRESSFUL}>Stressful</Crosslink>. If it was already
-            <Crosslink target={topics.STRESSFUL}>Stressful</Crosslink>, this causes two points of{" "}
-            <Crosslink target={topics.STRESS}>Stress</Crosslink>
-            instead of one.
-          </p>
-          <p>
-            You must decide to Push Yourself after you've finalized{" "}
-            <Crosslink target={topics.COMPLICATION}>Complications</Crosslink>, counted your initial{" "}
-            <Crosslink target={topics.PROGRESS}>Progress</Crosslink>, and then failed. Therefore, the extra
-            <Crosslink target={topics.COMPLICATION}>Complications</Crosslink> created by Pushing Yourself can never be
-            removed, and you can't Push Yourself just for the sake of restoring your{" "}
-            <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink>.
-          </p>
-        </Section>
-        <Section header="Pushing Yourself Example" isInset>
+      </Section>
+      <Section header="Spending Metabolisms">
+        <p>
+          Your Metabolisms are a resource with a current and a maximum value. The maximum value is typically equal to
+          the Metabolism's score, but it can be reduced by <Crosslink target={topics.STRESS}>Stress</Crosslink>. When
+          you take a low Effort Challenge these values are unchanged. Otherwise, you must spend Metabolism points to buy
+          Progress. To spend points, reduce the current values of the Metabolisms in your chosen pairing by any amount.
+          The Progress created in the Challenge is equal to the total amount of points you spent.
+        </p>
+        <p>
+          These reduced values represent short term fatigue, your character doesn't feel like using them when they're
+          depleted. You can refill them this by using the Push action to fight through the fatigue, or taking a short
+          rest, or from the adrenaline of participating in combat.
+        </p>
+        <Section header="Spending Metabolisms Example" isInset>
           <ol>
             <li>
-              In a <Crosslink target={topics.STRENUOUS}>Strenuous Challenge</Crosslink> with a
-              <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink> of 4, your
-              <Crosslink target={topics.PAIRING}>Metabolism pairing</Crosslink> has 2 points remaining.
+              You choose the pairing of <Pair fight self /> for a default Effort
+              <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>. You currently have 3 out of 4 points of
+              <Metabolism fight /> and 1 out of 1 points of <Metabolism self /> available.
             </li>
             <li>
-              You spend those last points to create 2 <Crosslink target={topics.PROGRESS}>Progress</Crosslink>. But it's
-              not enough!
+              You decide to spend 2 points of <Metabolism fight /> and 1 point of <Metabolism self />, leaving you with
+              only 1 point of <Metabolism fight /> remaining.
+            </li>
+            <li>You spent a total of 3 Metabolism points, so you created 3 Progress (or 3 dice).</li>
+          </ol>
+        </Section>
+      </Section>
+      <Section header="Advantage and Disadvantage">
+        <p>
+          The <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> sets the initial Risk and Effort levels, but
+          sometimes you can change it. If you have Advantage on a Challenge, you can chose to improve either the Risk or
+          Effort level. Similarly, if you have Disadvantage the GM will choose a level to degrade further. If you
+          inflict Disadvantage on an enemy, you choose which level, Risk or Effort, is degraded. A Challenge may only
+          have a one instance of Advantage or Disadvantage, you can't apply either more than one time. You also cannot
+          have both Advantage and Disadvantage at the same time, if you manage to get both they cancel each other out.
+        </p>
+        <p>
+          If you find a way to improve your odds in the Challenge, the GM may give you Advantage. One reliable way to do
+          this is by applying a Trait. If you have one or more Traits that are relevant to the
+          <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, you gain Advantage or remove Disadvantage. Traits
+          are relevant if they can somehow be leveraged to assist with the
+          <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>. For example, a Trait called Medical Training would
+          be relevant in a<Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> about treating injuries. Players
+          and GMS are encouraged to be creative and flexible when deciding if Traits are relevant.
+        </p>
+      </Section>
+      <Section header="Stress">
+        <p>
+          Wear and tear accumulated from exertion and conflict is referred to as Stress. Stress can be caused by the
+          consequences of
+          <Crosslink target={topics.CHALLENGE}>Challenges</Crosslink>, enduring a hardship, or by getting attacked in
+          combat. When you take Stress, choose how to distribute the Stress between all affected
+          <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink>. Typically, the
+          <Crosslink target={topics.PAIRING}>pair of Metabolisms</Crosslink> involved in the current
+          <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> are the ones affected.
+        </p>
+        <p>
+          For each point of Stress a <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> takes, reduce its
+          maximum value by 1. If something, such as rest or healing, causes you to remove a point of Stress from a
+          <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink>, restore its maximum to 1 point closer to the
+          Metabolism's full score.
+        </p>
+      </Section>
+      <Section header="Depleted Metabolisms">
+        <p>
+          To stay effective, you'll want to keep your current Metabolism values high. However, inevitably they will be
+          reduced to 0 and things aren't over when this happens. You can refill them by resting, but often there isn't
+          enough time to rest. If you find yourself with Metabolisms that are too low to succeed in a Challenge, you can
+          use the Push action to refill them and potentially still succeed. Even when your Metabolism pairing is
+          completely empty, you can still make a desperate attempt by treating the
+          <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> as if you spent a single point on it, but when you
+          do so the Risk level increases by 1.
+        </p>
+        <p>
+          If Stress reduces the maximum values, this creates a bigger problems. Not only do you have fewer points to
+          work with, but it takes much more rest to recover. If a Metabolism's maximum is reduced to 0, you can become
+          injured or dissociated.
+        </p>
+      </Section>
+      <Section header="Recovery">
+        <p>
+          The primary way to restore <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> is by resting.
+        </p>
+        <p>
+          You can take a short hour long rest, doing little more than relaxing and self care. When you do, refill all of
+          your current Metabolism values to their current maximum.
+        </p>
+        <p>
+          You can also take a longer rest once per day. Any time you sleep for several hours, you can emove all
+          <Crosslink target={topics.CHALLENGE}>Stress</Crosslink>
+          from all <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> and remove 1
+          <Crosslink target={topics.STRESS}>Stress</Crosslink> from all
+          <Crosslink target={topics.PHYS_METAB}>Physical Metabolism</Crosslink>. Then refill the current value of all
+          <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> to their new maximums.
+        </p>
+        <Section header="Stress and Recovery Example" isInset>
+          <ol>
+            <li>
+              You spend all of your current <Pair flight self /> on a dangerous climbing Challenge, reducing
+              <Metabolism flight /> to 0 out of 5 and <Metabolism self /> to 0 out of 2.
             </li>
             <li>
-              Push Yourself to refill all <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink>.
+              Unfortunately, the dice roll poorly and you fail anyway. The resulting fall hurts you causing 4 Stress.
             </li>
             <li>
-              You can now add more to the <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>. You spend 3 more,
-              but they now buy
-              <Crosslink target={topics.DICE}>dice</Crosslink> because Pushing Yourself makes it{" "}
-              <Crosslink target={topics.RISKY}>Risky</Crosslink>. You roll 1, 4, and 5, adding 2 more
-              <Crosslink target={topics.PROGRESS}>Progress</Crosslink>.
+              You must split this Stress between teh involved Metabolisms, <Pair flight self />. You choose put 3
+              <Crosslink target={topics.CHALLENGE}>Stress</Crosslink> on <Metabolism flight /> and the remaining 1 on
+              <Metabolism self />. You now have 0 out of 2 <Metabolism flight /> and 0 out of 1 and <Metabolism self />.
             </li>
             <li>
-              You've created 4 total <Crosslink target={topics.PROGRESS}>Progress</Crosslink>. Because the
-              <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> became Risky and you only tied the
-              <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink>, you can now only succeed by causing a
-              <Crosslink target={topics.CHALLENGE}>Consequence</Crosslink>. When you do, you take a point of
-              <Crosslink target={topics.STRESS}>Stress</Crosslink>.
+              Later, you can rest for an hour to fully refill your current <Pair flight self /> values (along with all
+              other Metabolisms) to to their maximum. However these maximums have been lowered by
+              <Crosslink target={topics.STRESS}>Stress</Crosslink>, so you now have 2 out of 2 <Metabolism flight /> and
+              1 out of 1 and <Metabolism self />.
+            </li>
+            <li>
+              That night you sleep normally, removing all
+              <Crosslink target={topics.HIDDEN_METAB}>hidden metabolism</Crosslink>
+              <Crosslink target={topics.STRESS}>Stress</Crosslink> and 1 point of
+              <Crosslink target={topics.STRESS}>Stress</Crosslink> from all
+              <Crosslink target={topics.PHYS_METAB}>physical Metabolisms</Crosslink>. You now have 3 out of 3
+              <Metabolism flight /> and 2 out of 2 and <Metabolism self />.
             </li>
           </ol>
         </Section>
