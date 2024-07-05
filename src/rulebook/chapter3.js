@@ -119,246 +119,237 @@ function Chapter3() {
             </li>
           </ol>
         </Section>
-      </Section>
-      <Section header="Difficulty and Context">
-        <p>
-          The context of a Challenge is set and described by the GM and includes any relevant details about the nature
-          of the Challenge and how it might be resolved. The only required element of context is a Difficulty level.
-          Difficulty is the target number the player must beat to succeed at the Challenge.
-        </p>
-        <Section header="Difficulty Levels" isInset>
-          <p>0 - 3 Anyone can reliably do this if there are no complications.</p>
-          <p>3 - 6 Experts can reliably do this, others need extra effort and luck.</p>
-          <p>6 - 12 Even experts need extra effort and luck to do this, it's practically impossible for others.</p>
-          <p>12 - 18 Superhuman ability is required, but still appears plausibly normal to witnesses.</p>
+        <Section header="Difficulty and Context">
           <p>
-            18 - 36 Even with superhuman ability, extra effort and luck are needed. The attempt appears overtly
-            supernatural to witnesses.
+            The context of a Challenge is set and described by the GM and includes any relevant details about the nature
+            of the Challenge and how it might be resolved. The only required element of context is a Difficulty level.
+            Difficulty is the target number the player must match or beat to succeed at the Challenge.
+          </p>
+          <Section header="Difficulty Levels" isInset>
+            <p>0 - 3 Anyone can reliably do this if there are no complications.</p>
+            <p>3 - 6 Experts can reliably do this, others need extra effort and luck.</p>
+            <p>6 - 12 Even experts need extra effort and luck to do this, it's practically impossible for others.</p>
+            <p>12 - 18 Superhuman ability is required, but still appears plausibly normal to witnesses.</p>
+            <p>
+              18 - 36 Even with superhuman ability, extra effort and luck are needed. The attempt appears overtly
+              supernatural to witnesses.
+            </p>
+          </Section>
+          <p>
+            Optionally, the Challenge context may also include Risk and Effort levels that modify how it is resolved.
+            The Risk level will determine if you need to roll <Crosslink target={topics.DICE}>dice</Crosslink> and the
+            Effort level will determine how many
+            <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> points you need to spend. The value for either
+            can be Low, Default, or High. If either Risk or Effort is not mentioned, the level is assumed to be Default.
+          </p>
+          <p>
+            In addition to the Difficulty, Risk, and Effort levels, the GM might describe any additional context related
+            to the
+            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> by answering any of the following questions that
+            are relevant:
+          </p>
+          <p>
+            Are any <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> ill suited to the Challenge? If so,
+            the Difficulty may be increased if these are used.
+          </p>
+          <p>
+            Is there any urgency to the <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> or
+            <Crosslink target={topics.CONSEQUENCE}>consequences</Crosslink> if you take too much time with it?
+          </p>
+          <p>Are there any circumstances that give the characters an advantage or disadvantage?</p>
+          <p>What are the consequences for failure?</p>
+          <p>
+            When communicating this context to the players, it is filtered through what the character would be aware of.
+            Typically, a player can know the exact Difficulty number. However, depending on the situation and what the
+            character can perceive, you may only get hints.
+          </p>
+          <Section header="Risk Levels" isInset>
+            <h5>Low Risk</h5>
+            <p>
+              You can control your approach to this Challenge. No dice are required and each point of Metabolism applied
+              to the Challenge produces one point of
+              <Crosslink target={topics.METABOLISM}>Progress</Crosslink>.
+            </p>
+            <h5>Default Risk</h5>
+            <p>
+              A perfect attempt could still fail due to chaos, competition, luck, motion, or other unpredictable
+              factors. Each point of Metabolism applied to the Challenge grants you one die to roll with a ~50% chance
+              of creating
+              <Crosslink target={topics.PROGRESS}>Progress</Crosslink>.
+            </p>
+            <h5>High Risk</h5>
+            <p>
+              The odds are stacked against you. Roll dice the same as with default risk, however, if you end up tying
+              the Difficulty you don't succeed cleanly. Instead, you must choose if you fail entirely, or succeed at a
+              cost. The GM will describe the cost before you decide, but this cost always causes 1 point of unavoidable
+              Stress. If this Challenge does not have a set Difficulty, for example if it is an attack or a reaction, it
+              instead just causes 1 point of unavoidable Stress.
+            </p>
+          </Section>
+          <Section header="Effort Levels" isInset>
+            <h5>Low Effort</h5>
+            <p>
+              This challenge is effortless or allows you to set your own pace. All current Metabolism points in your
+              chosen Pairing are applied to the Challenge and are not spent. Challenges that are primarily about
+              noticing or knowing something are typically Low Effort.
+            </p>
+            <h5>Default Effort</h5>
+            <p>
+              Some physical or mental effort is required. Choose any combination of points from your chosen
+              <Crosslink target={topics.PAIRING}>paired Metabolisms</Crosslink> to spend. Each point spent creates one
+              point of
+              <Crosslink target={topics.PROGRESS}>Progress</Crosslink>.
+            </p>
+            <h5>High Effort</h5>
+            <p>
+              The mind or body are strained by this task. This works the same as Default Effort, however attempting it
+              will also cause a point of unavoidable
+              <Crosslink target={topics.STRESS}>Stress</Crosslink>.
+            </p>
+          </Section>
+        </Section>
+        <Section header="Metabolism Pairing">
+          <p>
+            After the GM describes the context, the next step is determining which two Metabolisms the player will use
+            to complete the Challenge. The Metabolisms used will always be a pairing of one
+            <Crosslink target={topics.PHYS_METAB}>physical</Crosslink> and one
+            <Crosslink target={topics.HIDDEN_METAB}>hidden Metabolism</Crosslink>. The GM may require a specific choice
+            for one or both of them, but otherwise the player chooses which to use.
+          </p>
+          <p>
+            Most <Crosslink target={topics.CHALLENGE}>Challenges</Crosslink> can potentially be accomplished with many
+            different Metabolism pairings, you just have to describe how your character is handling the situation in a
+            way that applies them. The
+            <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> has the final say over whether a description is
+            sufficient to justify the chosen Metabolisms, if it doesn't you get Disadvantage on the Challenge.
+          </p>
+          <p>
+            Sometimes, often in combat, a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> will require a
+            specific choice for one or both Metabolisms. For example, to throw a punch, you must use <Pair fight self />
+            , and to dodge a bullet you must use <Pair flight far />.
+          </p>
+          <Section header="Metabolism Pairing Example" isInset>
+            <p>
+              Your character is trying to sneak into a secure building, so you need to choose what Metabolism pairing
+              you will use to attempt this
+              <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>.
+            </p>
+            <p>
+              One pairing you could choose is <Metabolism flight />, to represent how you are moving quickly to avoid
+              your pursuers, and
+              <Metabolism far /> to represent that you are trying to maintain awareness of the guard's movements to
+              avoid getting too close.
+            </p>
+            <p>
+              Alternatively, you could choose <Metabolism focus />, to represent watching closely for any security
+              cameras, paired with
+              <Metabolism near />, to represent how you are carefully interacting with your environment to remain
+              silent.
+            </p>
+          </Section>
+        </Section>
+        <Section header="Counting Progress">
+          <p>
+            To cleanly succeed at a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, the player must create
+            an amount of Progress greater than the <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink>. The
+            Effort level determines how many of your Metabolism points you can apply, if it is Low all of the current
+            points in your metabolism pair are applied, if it is higher only the points you choose to spend are applied.
+            The Risk level determines how many of the applied points become Progress, if it is Low they all do, if it is
+            higher you must roll a die for each point to see if it becomes Progress.
+          </p>
+          <p>
+            If your total Progress is lower than the Difficulty, you fail and do not complete the goal of the Challenge.
+            If your Progress ties or exceeds the Difficulty, you succeed.
           </p>
         </Section>
-        <p>
-          Optionally, the Challenge context may also include Risk and Effort levels that modify how it is resolved. The
-          Risk level will determine if you need to roll <Crosslink target={topics.DICE}>dice</Crosslink> and the Effort
-          level will determine how many
-          <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> points you need to spend. The value for either
-          can be Low, Default, High, or rarely Extreme. If either Risk or Effort is not mentioned, the level is assumed
-          to be Default.
-        </p>
-        <p>
-          In addition to the Difficulty, Risk, and Effort levels, the GM might describe any additional context related
-          to the
-          <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> by answering any of the following questions that
-          are relevant:
-        </p>
-        <p>
-          Are any <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> ill suited to the Challenge? If so, the
-          Difficulty may be increased if these are used.
-        </p>
-        <p>
-          Is there any urgency to the <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> or
-          <Crosslink target={topics.CONSEQUENCE}>consequences</Crosslink> if you take too much time with it?
-        </p>
-        <p>Are there any circumstances that give the characters an advantage or disadvantage?</p>
-        <p>What are the consequences for failure?</p>
-        <p>
-          When communicating this context to the players, it is filtered through what the character would be aware of.
-          Typically, a player can know the exact Difficulty number. However, depending on the situation and what the
-          character can perceive, you may only get hints.
-        </p>
-        <Section header="Risk Levels" isInset>
-          <h5>Low Risk</h5>
+        <Section header="Rolling Dice">
           <p>
-            You can plan your approach and reliably apply your best efforts. You may select another
-            <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> to use in addition to your chosen
-            <Crosslink target={topics.PAIRING}>pairing</Crosslink>, however the additional Metabolism creates dice
-            instead of Progress.
+            Dice are only needed if a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> has a Risk level other
+            than Low. To resolve the roll, roll one die for every Metabolism point applied to the Challenge. Every die
+            that has a result of 4 or greater increases the
+            <Crosslink target={topics.PROGRESS}>Progress</Crosslink> by one and any die with a lower result does
+            nothing. Any die that comes up 6 "explodes" and gets rerolled, potentially increasing
+            <Crosslink target={topics.PROGRESS}>Progress</Crosslink>
+            further or even coming up 6 again and getting rerolled again.
           </p>
-          <h5>Balanced Risk</h5>
-          <p>
-            A standard <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, no dice are required and your efforts
-            produce
-            <Crosslink target={topics.METABOLISM}>Progress</Crosslink> normally.
-          </p>
-          <h5>High Risk</h5>
-          <p>
-            A perfect attempt could still fail due to chaos, competition, luck, motion, or other unpredictable factors.
-            Each point of
-            <Crosslink target={topics.PROGRESS}>Progress</Crosslink> that would normally be created instead grants you
-            one die to roll with a chance of creating <Crosslink target={topics.PROGRESS}>Progress</Crosslink> or
-            <Crosslink target={topics.CHALLENGE}>consequences</Crosslink>.
-          </p>
-          <h5>Extreme Risk</h5>
-          <p>
-            The odds are stacked against you. Treat this the same as High Risk, however 6s are not rerolled and each 1
-            rolled subtracts a point of Progress.
-          </p>
+          <Section header="Rolling Dice Example" isInset>
+            <ol>
+              <li>
+                The current values of your chosen Metabolism pairing add up to 4. The Effort level is low, so all 4
+                points are applied. However, the Challenge is also Default Risk, so this produces 4 dice instead of
+                Progress.
+              </li>
+              <li>You roll the 4 dice, getting the results 2, 4, 6, and 6.</li>
+              <li>
+                Three of those are 4 or better, so that's 3 points of
+                <Crosslink target={topics.CHALLENGE}>Progress</Crosslink> already.
+              </li>
+              <li>
+                The 6's explode, so you reroll both of them, getting a 1 and a 5. That's one more die that is above 4,
+                so your
+                <Crosslink target={topics.CHALLENGE}>Progress</Crosslink> increases to 4.
+              </li>
+              <li>If the difficulty was 4 or less, you succeed.</li>
+            </ol>
+          </Section>
         </Section>
-        <Section header="Effort Levels" isInset>
-          <h5>Low Effort</h5>
+        <Section header="Spending Metabolisms">
           <p>
-            This challenge is effortless or allows you to set your own pace. All current Metabolism points in your
-            chosen Pairing are applied to the Challenge and are not spent. Challenges that are primarily about noticing
-            or knowing something are typically Low Effort.
+            Your Metabolisms are a resource with a current and a maximum value. The maximum value is typically equal to
+            the Metabolism's score, but it can be reduced by <Crosslink target={topics.STRESS}>Stress</Crosslink>. When
+            you take a low Effort Challenge these current values are applied and then remain unchanged. Otherwise, you
+            must spend Metabolism points to buy Progress or dice. To spend points, reduce the current values of the
+            Metabolisms in your chosen pairing by any amount. The total number of points you spent is applied to the
+            Challenge, buying you the same number of dice or Progress.
           </p>
-          <h5>Default Effort</h5>
           <p>
-            Some physical or mental effort is required. Choose any combination of points from your chosen
-            <Crosslink target={topics.PAIRING}>paired Metabolisms</Crosslink> to spend. Each point spent creates one
-            point of
-            <Crosslink target={topics.PROGRESS}>Progress</Crosslink>.
+            These reduced values represent short term fatigue, your character doesn't feel like using them when they're
+            depleted. You can refill them this by using the Push action to fight through the fatigue, taking the Rest
+            action to recover, or from the adrenaline of participating in combat.
           </p>
-          <h5>High Effort</h5>
+          <Section header="Spending Metabolisms Example" isInset>
+            <ol>
+              <li>
+                You choose the pairing of <Pair fight self /> for a default Effort
+                <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>. You currently have 3 out of 4 points of
+                <Metabolism fight /> and 1 out of 1 points of <Metabolism self /> available.
+              </li>
+              <li>
+                You decide to spend 2 points of <Metabolism fight /> and 1 point of <Metabolism self />, leaving you
+                with only 1 point of <Metabolism fight /> remaining.
+              </li>
+              <li>You spent a total of 3 Metabolism points, so you created 3 Progress (or 3 dice).</li>
+            </ol>
+          </Section>
+        </Section>
+        <Section header="Advantage and Disadvantage">
           <p>
-            The mind or body are strained by this task. Attempting it will cause a point of unavoidable
-            <Crosslink target={topics.STRESS}>Stress</Crosslink> to your choice of one of your
-            <Crosslink target={topics.PAIRING}>paired Metabolisms</Crosslink>.
+            The <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> sets the initial Risk and Effort levels, but
+            sometimes you can change it. If you have Advantage on a Challenge, you can chose to improve either the Risk
+            or Effort level. Similarly, if you have Disadvantage the GM will choose a level to degrade further. If you
+            inflict Disadvantage on an enemy, you choose which level, Risk or Effort, is degraded. A Challenge may only
+            have a one instance of Advantage or Disadvantage, you can't apply either more than one time. You also cannot
+            have both Advantage and Disadvantage at the same time, if you manage to get both they cancel each other out.
           </p>
-          <h5>Extreme Effort</h5>
           <p>
-            Attempting a task this strenuous will cause a point of unavoidable
-            <Crosslink target={topics.STRESS}>Stress</Crosslink> to every Metabolism involved.
+            If you find a way to improve your odds in the Challenge, the GM may give you Advantage. One reliable way to
+            do this is by applying a Trait. If you have one or more Traits that are relevant to the
+            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, you gain Advantage or remove Disadvantage.
+            Traits are relevant if they can somehow be leveraged to assist with the
+            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>. For example, a Trait called Medical Training
+            would be relevant in a<Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> about treating injuries.
+            Players and GMS are encouraged to be creative and flexible when deciding if Traits are relevant.
           </p>
         </Section>
       </Section>
-      <Section header="Metabolism Pairing">
-        <p>
-          After the GM describes the context, the next step is determining which two Metabolisms the player will use to
-          complete the Challenge. The Metabolisms used will always be a pairing of one
-          <Crosslink target={topics.PHYS_METAB}>physical</Crosslink> and one
-          <Crosslink target={topics.HIDDEN_METAB}>hidden Metabolism</Crosslink>. The GM may require a specific choice
-          for one or both of them, but otherwise the player chooses which to use.
-        </p>
-        <p>
-          Most <Crosslink target={topics.CHALLENGE}>Challenges</Crosslink> can potentially be accomplished with many
-          different Metabolism pairings, you just have to describe how your character is handling the situation in a way
-          that applies them. The
-          <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> has the final say over whether a description is
-          sufficient to justify the chosen Metabolisms, if it doesn't you get Disadvantage on the Challenge.
-        </p>
-        <p>
-          Sometimes, often in combat, a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> will require a
-          specific choice for one or both Metabolisms. For example, to throw a punch, you must use <Pair fight self />
-          , and to dodge a bullet you must use <Pair flight far />.
-        </p>
-        <Section header="Metabolism Pairing Example" isInset>
-          <p>
-            Your character is trying to sneak into a secure building, so you need to choose what Metabolism pairing you
-            will use to attempt this
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>.
-          </p>
-          <p>
-            One pairing you could choose is <Metabolism flight />, to represent how you are moving quickly to avoid your
-            pursuers, and
-            <Metabolism far /> to represent that you are trying to maintain awareness of the guard's movements to avoid
-            getting too close.
-          </p>
-          <p>
-            Alternatively, you could choose <Metabolism focus />, to represent watching closely for any security
-            cameras, paired with
-            <Metabolism near />, to represent how you are carefully interacting with your environment to remain silent.
-          </p>
-        </Section>
-      </Section>
-      <Section header="Counting Progress">
-        <p>
-          To cleanly succeed at a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, the player must create an
-          amount of Progress greater than the <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink>. The simplest
-          scenario is a Challenge with Default Risk and Low Effort, in this case the Progress created is equal to the
-          sum of the current values of your <Crosslink target={topics.PAIRING}>paired Metabolisms</Crosslink>. Always
-          use the current value, not the maximum or the score. If the Risk level is different, you will also need to
-          roll some dice and if the Effort level is higher you'll have to spend Metabolism points to buy Progress.
-        </p>
-        <p>
-          If your total Progress is lower than the Difficulty, you fail and do not complete the goal of the Challenge.
-          If your Progress ties the Difficulty exactly you have a choice to make; you can either fail the Challenge or
-          succeed at it with a cost. This cost will cause a point of Stress and the GM may add some additional
-          consequence that occurs despite your success. You can know what the exact consequences are before you decide.
-        </p>
-      </Section>
-      <Section header="Rolling Dice">
-        <p>
-          Dice are only needed if a <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> has a Risk level other
-          than Default. To roll, replace each point of
-          <Crosslink target={topics.PROGRESS}>Progress</Crosslink> that would have been created during this Challenge
-          with a six sided die, and then roll these dice. Every die that has a result of 4 or greater increases the
-          <Crosslink target={topics.PROGRESS}>Progress</Crosslink> by one and any die with a lower result does nothing.
-          Any die that comes up 6 "explodes" and gets rerolled, potentially increasing
-          <Crosslink target={topics.PROGRESS}>Progress</Crosslink>
-          further or even coming up 6 again and getting rerolled again.
-        </p>
-        <Section header="Rolling Dice Example" isInset>
-          <ol>
-            <li>
-              In a low Effort Challenge, your current Metabolism pairing values add up to 4, so you would normally
-              create 4 Progress. However, the Challenge is also high Risk, so this produces 4 dice instead.
-            </li>
-            <li>You roll 4 dice, getting the results 2, 4, 6, and 6.</li>
-            <li>
-              Three of those are 4 or better, so that's 3 points of
-              <Crosslink target={topics.CHALLENGE}>Progress</Crosslink> already.
-            </li>
-            <li>
-              The 6's explode, so you reroll both of them, getting a 1 and a 5. That's one more die that is above 4, so
-              your
-              <Crosslink target={topics.CHALLENGE}>Progress</Crosslink> increases to 4.
-            </li>
-            <li>If the difficulty was 4 or less, you succeed.</li>
-          </ol>
-        </Section>
-      </Section>
-      <Section header="Spending Metabolisms">
-        <p>
-          Your Metabolisms are a resource with a current and a maximum value. The maximum value is typically equal to
-          the Metabolism's score, but it can be reduced by <Crosslink target={topics.STRESS}>Stress</Crosslink>. When
-          you take a low Effort Challenge these values are unchanged. Otherwise, you must spend Metabolism points to buy
-          Progress. To spend points, reduce the current values of the Metabolisms in your chosen pairing by any amount.
-          The Progress created in the Challenge is equal to the total amount of points you spent.
-        </p>
-        <p>
-          These reduced values represent short term fatigue, your character doesn't feel like using them when they're
-          depleted. You can refill them this by using the Push action to fight through the fatigue, or taking a short
-          rest, or from the adrenaline of participating in combat.
-        </p>
-        <Section header="Spending Metabolisms Example" isInset>
-          <ol>
-            <li>
-              You choose the pairing of <Pair fight self /> for a default Effort
-              <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>. You currently have 3 out of 4 points of
-              <Metabolism fight /> and 1 out of 1 points of <Metabolism self /> available.
-            </li>
-            <li>
-              You decide to spend 2 points of <Metabolism fight /> and 1 point of <Metabolism self />, leaving you with
-              only 1 point of <Metabolism fight /> remaining.
-            </li>
-            <li>You spent a total of 3 Metabolism points, so you created 3 Progress (or 3 dice).</li>
-          </ol>
-        </Section>
-      </Section>
-      <Section header="Advantage and Disadvantage">
-        <p>
-          The <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> sets the initial Risk and Effort levels, but
-          sometimes you can change it. If you have Advantage on a Challenge, you can chose to improve either the Risk or
-          Effort level. Similarly, if you have Disadvantage the GM will choose a level to degrade further. If you
-          inflict Disadvantage on an enemy, you choose which level, Risk or Effort, is degraded. A Challenge may only
-          have a one instance of Advantage or Disadvantage, you can't apply either more than one time. You also cannot
-          have both Advantage and Disadvantage at the same time, if you manage to get both they cancel each other out.
-        </p>
-        <p>
-          If you find a way to improve your odds in the Challenge, the GM may give you Advantage. One reliable way to do
-          this is by applying a Trait. If you have one or more Traits that are relevant to the
-          <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>, you gain Advantage or remove Disadvantage. Traits
-          are relevant if they can somehow be leveraged to assist with the
-          <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink>. For example, a Trait called Medical Training would
-          be relevant in a<Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> about treating injuries. Players
-          and GMS are encouraged to be creative and flexible when deciding if Traits are relevant.
-        </p>
-      </Section>
+
       <Section header="Stress">
         <p>
           Wear and tear accumulated from exertion and conflict is referred to as Stress. Stress can be caused by the
           consequences of
           <Crosslink target={topics.CHALLENGE}>Challenges</Crosslink>, enduring a hardship, or by getting attacked in
-          combat. When you take Stress, choose how to distribute the Stress between all affected
+          combat, or by High Risk and Effort levels. When you take Stress, choose how to distribute the Stress between
+          all affected
           <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink>. Typically, the
           <Crosslink target={topics.PAIRING}>pair of Metabolisms</Crosslink> involved in the current
           <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> are the ones affected.
@@ -369,68 +360,220 @@ function Chapter3() {
           <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink>, restore its maximum to 1 point closer to the
           Metabolism's full score.
         </p>
+        <Section header="Depleted Metabolisms">
+          <p>
+            To stay effective, you'll want to keep your current Metabolism values high. However, inevitably they will be
+            reduced to 0 and things aren't over when this happens. You can refill them by taking the Rest action, but
+            often there isn't enough time to rest. If you find yourself with Metabolisms that are too low to succeed in
+            a Challenge, you can use the Push action to refill them and potentially still succeed. Even when your
+            Metabolism pairing is completely empty, you can still make a desperate attempt by treating the
+            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> as if you spent a single point on it, but when
+            you do so the Risk level increases.
+          </p>
+          <p>
+            If Stress reduces the maximum values, this creates a bigger problems. Not only do you have fewer points to
+            work with, but it takes much more rest to recover. If a Metabolism's maximum is reduced to 0, you can become
+            injured or dissociated.
+          </p>
+        </Section>
+        <Section header="Rest & Recovery">
+          <p>
+            The primary way to restore <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> is by using the
+            Rest action. This action allows you to refill all of your current Metabolism values to their current maximum
+            if you spend an hour doing it.
+          </p>
+          <p>
+            Once per day you can spend several hours on the Rest action. When you do remove all
+            <Crosslink target={topics.CHALLENGE}>Stress</Crosslink>
+            from all <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> and remove 1 + your Rest
+            Action Bonus
+            <Crosslink target={topics.STRESS}>Stress</Crosslink> from all
+            <Crosslink target={topics.PHYS_METAB}>Physical Metabolism</Crosslink>. Then refill the current value of all
+            <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> to their new maximums.
+          </p>
+          <Section header="Stress and Recovery Example" isInset>
+            <ol>
+              <li>
+                You spend all of your current <Pair flight self /> on a dangerous climbing Challenge, reducing
+                <Metabolism flight /> to 0 out of 5 and <Metabolism self /> to 0 out of 2.
+              </li>
+              <li>
+                Unfortunately, the dice roll poorly and you fail anyway. The resulting fall hurts you causing 4 Stress.
+              </li>
+              <li>
+                You must split this Stress between teh involved Metabolisms, <Pair flight self />. You choose put 3
+                <Crosslink target={topics.CHALLENGE}>Stress</Crosslink> on <Metabolism flight /> and the remaining 1 on
+                <Metabolism self />. You now have 0 out of 2 <Metabolism flight /> and 0 out of 1 and{" "}
+                <Metabolism self />.
+              </li>
+              <li>
+                Later, you can rest for an hour to fully refill your current <Pair flight self /> values (along with all
+                other Metabolisms) to to their maximum. However these maximums have been lowered by
+                <Crosslink target={topics.STRESS}>Stress</Crosslink>, so you now have 2 out of 2 <Metabolism flight />{" "}
+                and 1 out of 1 and <Metabolism self />.
+              </li>
+              <li>
+                That night you sleep normally, removing all
+                <Crosslink target={topics.HIDDEN_METAB}>hidden metabolism</Crosslink>
+                <Crosslink target={topics.STRESS}>Stress</Crosslink> and 1 point of
+                <Crosslink target={topics.STRESS}>Stress</Crosslink> from all
+                <Crosslink target={topics.PHYS_METAB}>physical Metabolisms</Crosslink>. You now have 3 out of 3
+                <Metabolism flight /> and 2 out of 2 and <Metabolism self />.
+              </li>
+            </ol>
+          </Section>
+        </Section>
       </Section>
-      <Section header="Depleted Metabolisms">
+
+      <Section header="Injury, Dissociation, & States">
         <p>
-          To stay effective, you'll want to keep your current Metabolism values high. However, inevitably they will be
-          reduced to 0 and things aren't over when this happens. You can refill them by resting, but often there isn't
-          enough time to rest. If you find yourself with Metabolisms that are too low to succeed in a Challenge, you can
-          use the Push action to refill them and potentially still succeed. Even when your Metabolism pairing is
-          completely empty, you can still make a desperate attempt by treating the
-          <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> as if you spent a single point on it, but when you
-          do so the Risk level increases by 1.
+          When any Metabolism has its maximum value reduced to 0 by Stress, there are consequences. When this happens to
+          a Physical Metabolism, you gain an injury State that prevents you from taking certain actions. When this
+          happens to a Hidden Metabolism, you gain a dissocative State that disorients you and makes acting normally
+          difficult.
         </p>
         <p>
-          If Stress reduces the maximum values, this creates a bigger problems. Not only do you have fewer points to
-          work with, but it takes much more rest to recover. If a Metabolism's maximum is reduced to 0, you can become
-          injured or dissociated.
+          States are lasting status conditions that modify you can act. In addition to the Injured and Dissociated
+          States, there are several other States that can be imposed on you.
         </p>
-      </Section>
-      <Section header="Recovery">
-        <p>
-          The primary way to restore <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> is by resting.
-        </p>
-        <p>
-          You can take a short hour long rest, doing little more than relaxing and self care. When you do, refill all of
-          your current Metabolism values to their current maximum.
-        </p>
-        <p>
-          You can also take a longer rest once per day. Any time you sleep for several hours, you can emove all
-          <Crosslink target={topics.CHALLENGE}>Stress</Crosslink>
-          from all <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> and remove 1
-          <Crosslink target={topics.STRESS}>Stress</Crosslink> from all
-          <Crosslink target={topics.PHYS_METAB}>Physical Metabolism</Crosslink>. Then refill the current value of all
-          <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> to their new maximums.
-        </p>
-        <Section header="Stress and Recovery Example" isInset>
-          <ol>
-            <li>
-              You spend all of your current <Pair flight self /> on a dangerous climbing Challenge, reducing
-              <Metabolism flight /> to 0 out of 5 and <Metabolism self /> to 0 out of 2.
-            </li>
-            <li>
-              Unfortunately, the dice roll poorly and you fail anyway. The resulting fall hurts you causing 4 Stress.
-            </li>
-            <li>
-              You must split this Stress between teh involved Metabolisms, <Pair flight self />. You choose put 3
-              <Crosslink target={topics.CHALLENGE}>Stress</Crosslink> on <Metabolism flight /> and the remaining 1 on
-              <Metabolism self />. You now have 0 out of 2 <Metabolism flight /> and 0 out of 1 and <Metabolism self />.
-            </li>
-            <li>
-              Later, you can rest for an hour to fully refill your current <Pair flight self /> values (along with all
-              other Metabolisms) to to their maximum. However these maximums have been lowered by
-              <Crosslink target={topics.STRESS}>Stress</Crosslink>, so you now have 2 out of 2 <Metabolism flight /> and
-              1 out of 1 and <Metabolism self />.
-            </li>
-            <li>
-              That night you sleep normally, removing all
-              <Crosslink target={topics.HIDDEN_METAB}>hidden metabolism</Crosslink>
-              <Crosslink target={topics.STRESS}>Stress</Crosslink> and 1 point of
-              <Crosslink target={topics.STRESS}>Stress</Crosslink> from all
-              <Crosslink target={topics.PHYS_METAB}>physical Metabolisms</Crosslink>. You now have 3 out of 3
-              <Metabolism flight /> and 2 out of 2 and <Metabolism self />.
-            </li>
-          </ol>
+        <Section header="Injury States">
+          <p>
+            These states can only be caused by taking significant physical Stress. When Stress reduces a Physical
+            Metabolism maximum to 0, you gain the injury State that corresponds to it. If an injured metabolism has its
+            maximum restored to above 0 this state is removed, but it cannot be removed by any other means. If further
+            Stress is dealt to an Injured metabolism, the GM or the attacker that caused the Stress decides which
+            Physical Metabolism takes the Stress instead.
+          </p>
+          <p>
+            If you ever have two injury States, you also gain the Dying State. If you gain the injury States for all
+            three physical metabolisms, you die.
+          </p>
+          <Section header="Injured Fight">
+            <p>Your injuries prevent you from using attack actions.</p>
+          </Section>
+          <Section header="Injured Flight">
+            <p>
+              Your injuries prevent you from using reactions. If you are attacked, the attacker chooses which metabolism
+              pair is dealt Stress.
+            </p>
+          </Section>
+          <Section header="Injured Focus">
+            <p>Your injuries prevent you from using basic actions or cascade events.</p>
+          </Section>
+          <Section header="Dying">
+            <p>Your injuries are so severe that you are unconscious and can no longer benefit from the Heal action.</p>
+            <p>
+              You can only remove this state by getting medical attention. If you have this state for more than an hour
+              you die.
+            </p>
+          </Section>
+        </Section>
+        <Section header="Dissociative States">
+          <p>
+            When your hidden body is been stressed beyond your limits, it causes the physical brain to come out of sync
+            with resources it normally has, leading to debilitating psychedelic effects called dissociation. This is
+            represented by States that are only caused by Stress to Hidden Metabolisms. When one's maximum is reduced to
+            0, it becomes dissociated and you gain the dissociative State that corresponding to the dissociated
+            Metabolism. If this metabolism has its maximum restored back above 0 this State is removed, but it cannot be
+            removed by any other means. If further Stress is dealt to a dissociated Metabolism, the GM or the attacker
+            that caused the Stress decides which Hidden Metabolism takes the Stress instead.
+          </p>
+          <p>
+            If all three Hidden Metabolisms become dissociated, the dissociation escalates and becomes permanent,
+            rendering your character no longer playable. Their exact fate is up to the GM, but it may be worse than
+            death.
+          </p>
+          <Section header="Dissociated Self">
+            <p>
+              You are depersonalized. Your body feels wrong, unreal, awkward, untrustworthy, like an awkward exoskeleton
+              you're piloting.
+            </p>
+            <p>All challenges you take are always High Risk cannot have the Risk lowered.</p>
+          </Section>
+          <Section header="Dissociated Near">
+            <p>You are derealized, disoriented, and no longer sure if anything around you is real or imagined.</p>
+            <p>The only movement you can make is 1 meter at the end of your turn.</p>
+          </Section>
+          <Section header="Dissociated Far">
+            <p>You are in a fugue state and don't remember who you are, what you're doing, or who you can trust.</p>
+            <p>
+              The safest action seems like getting far away. This is now your your most important and urgent goal. You
+              cannot trust anyone that says otherwise.
+            </p>
+          </Section>
+        </Section>
+        <Section header="Other States">
+          <p>
+            These states can be caused by mundane means or by specific cascade events. These States come with an
+            Intensity value indicating how hard it is to get rid of and strong it is. Anything that causes a state to a
+            target that already has it increases the intensity by the state. The Rest action can be used to reduce the
+            intensity of these states, removing the state once the intensity is 0.
+          </p>
+          <Section header="Afraid">
+            <p>Something nearby is terrifying you.</p>
+            <p> While you have this state, you cannot willingly move closer to the source of your fear.</p>
+          </Section>
+          <Section header="Calmed">
+            <p>You're convinced there is currently no need for violence.</p>
+            <p>
+              While you have this state, you cannot take any attack actions or any other action that would intentionally
+              escalate tensions. If hostile or threatening action is taken against you or a close ally, you immediately
+              lose this state.
+            </p>
+          </Section>
+          <Section header="Enthralled">
+            <p>Your attention is being manipulated by something.</p>
+            <p>
+              You have disadvantage on Willpower and Intuition Reactions caused by the source of this State. Conversely,
+              you also have disadvantage on Perception Reactions caused by anyone other than the source of this State.
+            </p>
+          </Section>
+          <Section header="Faded">
+            <p>
+              You have become hard to notice. Not invisible, but people assume you belong wherever you are and are not
+              worthy of notice.
+            </p>
+            <p>
+              Others must make a Perception Reaction with a difficulty of your faded intensity to notice you. You have
+              disadvantage on any Challenges related to social interactions. If you take any actions that are violent or
+              extremely unusual, this state immediately ends.
+            </p>
+          </Section>
+          <Section header="Grappled">
+            <p>You are being held by someone else.</p>
+            <p>
+              While grappled, you can only move within the spaces adjacent to the grappler. The grappler can force you
+              to move when they move, but doing so increases the difficulty of each space they cross by 1.
+            </p>
+            <p>
+              The grappler can freely release you at any moment, otherwise the grapple only ends if you and the grappler
+              become more than a meter apart or you successfully escape. You can attempt to escape as an action by
+              making either an Unarmed Attack or Unarmed Defense challenge. Any Progress gained reduces the Intensity of
+              grappled, allowing you to escape when it reaches 0.
+            </p>
+          </Section>
+          <Section header="Out of Body">
+            <p>Your physical body is unconscious, but your mind can still move freely in hidden space.</p>
+            <p>
+              You cannot interact with or be sensed by anything in physical space, however the physical world casts
+              shadows into the hidden world that impede your movement. You are aware of the shape and position of
+              physical objects within a meter of you, but have no other senses.
+            </p>
+          </Section>
+          <Section header="Suppressed">
+            <p>You are pinned down behind cover and have disadvantage on all attacks.</p>
+            <p>
+              You can remove this condition by moving, however the difficulty of all adjacent spaces is increased by the
+              intensity of this state for you.
+            </p>
+          </Section>
+          <Section header="Taunted">
+            <p>Someone else has become your high priority target.</p>
+            <p>If there is a viable way to attack source of this state, then it is the only target you can attack.</p>
+          </Section>
+          <Section header="Unconscious">
+            <p>You are no longer able to act, react, communicate, or sense your surroundings.</p>
+          </Section>
         </Section>
       </Section>
       <Break page />
