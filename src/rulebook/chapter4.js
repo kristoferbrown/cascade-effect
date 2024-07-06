@@ -490,16 +490,13 @@ function Chapter4() {
       <Section header="Equipment">
         <Section header="Armor">
           <p>
-            All armor has a Defense value. Each point of Defense on worn armor reduces{" "}
-            <Crosslink target={topics.THREAT}>Threat</Crosslink> by 1 on all incoming{" "}
+            All armor has a Defense value. Each point of Defense on worn armor reduces
+            <Crosslink target={topics.THREAT}>Threat</Crosslink> by 1 on all incoming
             <Crosslink target={topics.ATTACK}>attacks</Crosslink>. Armor with Defense 1 can be concealed under or worn
-            as casual clothing. Armor with Defense 3 reduces the maximum value of all metabolisms it protects by 1.
+            as casual clothing. Armor with Defense 3 is heavy and slows you down, reactions do not provide free movement
+            while you are wearing it.
           </p>
           <Section header="Types of Armor">
-            <p>
-              Armor with Defense 1 can be concealed under or worn as casual clothing. Armor with Defense 3 reduces the
-              maximum value of all metabolisms it protects by 1.
-            </p>
             <table>
               <thead>
                 <tr>
@@ -533,28 +530,17 @@ function Chapter4() {
             <Metabolism near />, and ranged weapons use <Metabolism far />.
           </p>
           <p>
-            Each weapon has a Size value. This number indicates the amount of extra{" "}
-            <Crosslink target={topics.THREAT}>Threat</Crosslink> added to attack roll results. It also indicates the
-            minimum amount of Metabolism that must be spent to attack with the weapon. Size 1 can be concealed in casual
-            clothing, Size 2 cannot, and Size 3 or above requires both hands. Any weapon above Size 3 requires a
-            <Crosslink target={topics.FULL_ACTION}>full action</Crosslink> to use and deals an extra point of
-            <Crosslink target={topics.STRESS}>Stress</Crosslink> that cannot be removed by a{" "}
-            <Crosslink target={topics.REACTION}>reaction</Crosslink>.
-          </p>
-          <p>
-            If it is your first turn in a round and your weapon requires more points to use than you have available in
-            the required metabolism pairing, you can spend all of the points in that pairing to still use this weapon as
-            a<Crosslink target={topics.FULL_ACTION}>Full Action</Crosslink>.
+            Each weapon has a Size value. This number indicates the amount of extra
+            <Crosslink target={topics.THREAT}>Threat</Crosslink> added to attacks. It also indicates the minimum amount
+            of Metabolism points that must be spent to attack with the weapon, if you do not have this amount available,
+            you can only use this weapon with a desperate attack. Size 1 can be concealed in casual clothing, Size 2
+            cannot, and Size 3 or above requires both hands. Any weapon Size 4 or above requires a
+            <Crosslink target={topics.FULL_ACTION}>full action</Crosslink> to use and causes any reactions to it to
+            become Default Risk instead of Low.
           </p>
           <Section header="Types of Weapons">
-            <p>Each category of weapons has a special property common to all similar weapons.</p>
-            <p>Unarmed</p>
-            <p>
-              Each category of weapons has a special property common to all similar weapons. Because unarmed strikes are
-              typically weaker than weapons, the defender's reaction has the{" "}
-              <Crosslink target={topics.CONTROLLED}>Controlled</Crosslink>
-              <Crosslink target={topics.COMPLICATION}>complication</Crosslink>.
-            </p>
+            <p>Other than unarmed, each category of weapons has a special property common to all similar weapons.</p>
+            <h5>Unarmed</h5>
             <table>
               <thead>
                 <tr>
@@ -569,9 +555,10 @@ function Chapter4() {
                 </tr>
               </tbody>
             </table>
-            <p>Blunt</p>
+            <h5>Blunt</h5>
             <p>
-              When using blunt weapons the attacker can choose to force the target to react with <Metabolism focus />{" "}
+              When attackign with blunt weapons the defender uses the normal reaction, but the attacker can choose deal
+              any unblocked Stress as if the reaction's metabolism pair used <Metabolism focus />
               instead of <Metabolism flight />.
             </p>
             <table>
@@ -600,7 +587,7 @@ function Chapter4() {
                 </tr>
               </tbody>
             </table>
-            <p>Blades</p>
+            <h5>Blades</h5>
             <p>
               All blades deal 1 extra <Crosslink target={topics.THREAT}>Threat</Crosslink> above what their Size
               normally would.
@@ -631,7 +618,7 @@ function Chapter4() {
                 </tr>
               </tbody>
             </table>
-            <p>Ranged</p>
+            <h5>Ranged</h5>
             <p>Ranged weapons can target anything within your line of sight.</p>
             <table>
               <thead>
@@ -659,7 +646,7 @@ function Chapter4() {
                 </tr>
                 <tr>
                   <td>5*</td>
-                  <td>Light machine gun</td>
+                  <td>Machine gun</td>
                 </tr>
               </tbody>
             </table>
