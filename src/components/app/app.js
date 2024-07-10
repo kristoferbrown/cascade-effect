@@ -21,7 +21,7 @@ function App() {
         <Chapter4 />
         <Chapter5 />
         <Chapter6 />
-        <Chapter7 />
+        {/* <Chapter7 /> */}
       </div>
     </RulebookProvider>
   );
