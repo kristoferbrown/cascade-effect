@@ -1,9 +1,13 @@
 :root {
+  --highlight: #fcf3e4;
+
   --physicalSpace: #F5E8D2;
   --contractedSpace: #DBC1A8;
   --entangledSpace: #B99D8E;
   --dilatedSpace: #796168;
   --hiddenSpace: #3A3242;
+
+  --darkHighlight: #2a222a;
 
   --fight: #E884B2;
   --flight: #E8CF7B;

@@ -22,85 +22,85 @@
     color: var(--physicalSpace);
 }
 
-.section.metabSectionFight,
-.section.metabSectionFight .sectionCoordinates,
-.section.metabSectionFight .section,
-.section.metabSectionFight h1,
-.section.metabSectionFight h2,
-.section.metabSectionFight h3,
-.section.metabSectionFight h4,
-.section.metabSectionFight h5 {
+.section.hasAccentColor.metabSectionFight,
+.section.hasAccentColor.metabSectionFight .sectionCoordinates,
+.section.hasAccentColor.metabSectionFight .section,
+.section.hasAccentColor.metabSectionFight h1,
+.section.hasAccentColor.metabSectionFight h2,
+.section.hasAccentColor.metabSectionFight h3,
+.section.hasAccentColor.metabSectionFight h4,
+.section.hasAccentColor.metabSectionFight h5 {
     background: var(--fight);
     color: var(--hiddenSpace);
     -webkit-text-stroke: 0.3px var(--hiddenSpace);
     text-shadow: 0px 0px 15px var(--physicalSpace);
 }
-.section.metabSectionFlight,
-.section.metabSectionFlight .sectionCoordinates,
-.section.metabSectionFlight .section,
-.section.metabSectionFlight h1,
-.section.metabSectionFlight h2,
-.section.metabSectionFlight h3,
-.section.metabSectionFlight h4,
-.section.metabSectionFlight h5 {
+.section.hasAccentColor.metabSectionFlight,
+.section.hasAccentColor.metabSectionFlight .sectionCoordinates,
+.section.hasAccentColor.metabSectionFlight .section,
+.section.hasAccentColor.metabSectionFlight h1,
+.section.hasAccentColor.metabSectionFlight h2,
+.section.hasAccentColor.metabSectionFlight h3,
+.section.hasAccentColor.metabSectionFlight h4,
+.section.hasAccentColor.metabSectionFlight h5 {
     background: var(--flight);
     color: var(--hiddenSpace);
     -webkit-text-stroke: 0.3px var(--hiddenSpace);
     text-shadow: 0px 0px 15px var(--physicalSpace);
 }
-.section.metabSectionFocus,
-.section.metabSectionFocus .sectionCoordinates,
-.section.metabSectionFocus .section,
-.section.metabSectionFocus h1,
-.section.metabSectionFocus h2,
-.section.metabSectionFocus h3,
-.section.metabSectionFocus h4,
-.section.metabSectionFocus h5 {
+.section.hasAccentColor.metabSectionFocus,
+.section.hasAccentColor.metabSectionFocus .sectionCoordinates,
+.section.hasAccentColor.metabSectionFocus .section,
+.section.hasAccentColor.metabSectionFocus h1,
+.section.hasAccentColor.metabSectionFocus h2,
+.section.hasAccentColor.metabSectionFocus h3,
+.section.hasAccentColor.metabSectionFocus h4,
+.section.hasAccentColor.metabSectionFocus h5 {
     background: var(--focus);
     color: var(--hiddenSpace);
     -webkit-text-stroke: 0.3px var(--hiddenSpace);
     text-shadow: 0px 0px 15px var(--physicalSpace);
 }
-.section.metabSectionSelf,
-.section.metabSectionSelf .sectionCoordinates,
-.section.metabSectionSelf .sectionChildren,
-.section.metabSectionSelf .section p,
-.section.metabSectionSelf .crosslink,
-.section.metabSectionSelf h1,
-.section.metabSectionSelf h2,
-.section.metabSectionSelf h3,
-.section.metabSectionSelf h4,
-.section.metabSectionSelf h5 {
+.section.hasAccentColor.metabSectionSelf,
+.section.hasAccentColor.metabSectionSelf .sectionCoordinates,
+.section.hasAccentColor.metabSectionSelf .sectionChildren,
+.section.hasAccentColor.metabSectionSelf .section p,
+.section.hasAccentColor.metabSectionSelf .crosslink,
+.section.hasAccentColor.metabSectionSelf h1,
+.section.hasAccentColor.metabSectionSelf h2,
+.section.hasAccentColor.metabSectionSelf h3,
+.section.hasAccentColor.metabSectionSelf h4,
+.section.hasAccentColor.metabSectionSelf h5 {
     background: var(--self);
     color: var(--physicalSpace);
     -webkit-text-stroke: 0.3px var(--physicalSpace);
     text-shadow: 0px 0px 15px var(--hiddenSpace);
 }
-.section.metabSectionNear,
-.section.metabSectionNear .sectionCoordinates,
-.section.metabSectionNear .sectionChildren,
-.section.metabSectionNear .crosslink,
-.section.metabSectionNear .section p,
-.section.metabSectionNear h1,
-.section.metabSectionNear h2,
-.section.metabSectionNear h3,
-.section.metabSectionNear h4,
-.section.metabSectionNear h5 {
+.section.hasAccentColor.metabSectionNear,
+.section.hasAccentColor.metabSectionNear .sectionCoordinates,
+.section.hasAccentColor.metabSectionNear .sectionChildren,
+.section.hasAccentColor.metabSectionNear .crosslink,
+.section.hasAccentColor.metabSectionNear .section p,
+.section.hasAccentColor.metabSectionNear h1,
+.section.hasAccentColor.metabSectionNear h2,
+.section.hasAccentColor.metabSectionNear h3,
+.section.hasAccentColor.metabSectionNear h4,
+.section.hasAccentColor.metabSectionNear h5 {
     background: var(--near);
     color: var(--physicalSpace);
     -webkit-text-stroke: 0.3px var(--physicalSpace);
     text-shadow: 0px 0px 15px var(--hiddenSpace);
 }
-.section.metabSectionFar,
-.section.metabSectionFar .sectionCoordinates,
-.section.metabSectionFar .sectionChildren,
-.section.metabSectionFar .crosslink,
-.section.metabSectionFar .section p,
-.section.metabSectionFar h1,
-.section.metabSectionFar h2,
-.section.metabSectionFar h3,
-.section.metabSectionFar h4,
-.section.metabSectionFar h5 {
+.section.hasAccentColor.metabSectionFar,
+.section.hasAccentColor.metabSectionFar .sectionCoordinates,
+.section.hasAccentColor.metabSectionFar .sectionChildren,
+.section.hasAccentColor.metabSectionFar .crosslink,
+.section.hasAccentColor.metabSectionFar .section p,
+.section.hasAccentColor.metabSectionFar h1,
+.section.hasAccentColor.metabSectionFar h2,
+.section.hasAccentColor.metabSectionFar h3,
+.section.hasAccentColor.metabSectionFar h4,
+.section.hasAccentColor.metabSectionFar h5 {
     background: var(--far);
     color: var(--physicalSpace);
     -webkit-text-stroke: 0.3px var(--physicalSpace);

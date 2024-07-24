@@ -34,11 +34,14 @@
 } 
 
 .sectionCoordinates {
-    color: var(--dilatedSpace);
+    color: var(--physicalSpace);
     display: inline;
     font-size: 12px;
     letter-spacing: 1px;
     padding: 0 6px 0 0;
+}
+.classified.section .sectionCoordinates {
+    color: var(--hiddenSpace);
 }
 
 .section h1,
@@ -46,12 +49,8 @@
 .section h3,
 .section h4,
 .section h5 {
-    background: var(--physicalSpace);
-    cursor: pointer;
     margin: 0;
     padding: 3px 12px 0;
-    position: sticky;
-    top: 0;
 }
 
 .section li h1,
@@ -62,33 +61,48 @@
     padding: 0;
 }
   
-.section h1 {
+.sectionHeader {
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section h1.sectionHeader {
+    background: linear-gradient(-84deg, var(--hiddenSpace) 78.6px, var(--highlight) 79px);
     font-size: 33px;
     z-index: 4;
 }
 
-.section h2 {
+.section h2.sectionHeader {
+    background: linear-gradient(-84deg, var(--hiddenSpace) 81.9px, var(--highlight) 82.3px);
     top: 43px;
     z-index: 3;
 }
 
-.section h3 {
+.section h3.sectionHeader {
+    background: linear-gradient(-84deg, var(--hiddenSpace) 84.3px, var(--highlight) 84.6px);
     top: 73px;
     z-index: 2;
 }
   
-.section h4 {
+.section h4.sectionHeader {
+    background: linear-gradient(-84deg, var(--hiddenSpace) 86.5px, var(--highlight) 87px);
     top: 99px;
     z-index: 1;
 }
-.section h5 {
+.section h5.sectionHeader {
+    background: linear-gradient(-84deg, var(--hiddenSpace) 88.5px, var(--highlight) 89px);
     top: 122px;
     z-index: 1;
 }
-.section h6 {
-    margin: 0;
-    padding: 0 12px;
-}
+.classified.section h1.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 78.6px, var(--darkHighlight) 79px);}
+.classified.section h2.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 81.9px, var(--darkHighlight) 82.3px);}
+.classified.section h3.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 84.3px, var(--darkHighlight) 84.6px);}
+.classified.section h4.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 86.5px, var(--darkHighlight) 87px);}
+.classified.section h5.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 88.5px, var(--darkHighlight) 89px);}
 
 .section h5.subheader {
     font-size: 14px;
@@ -134,18 +148,31 @@
 }
 
 .visibilityToggle {
-    background: var(--physicalSpace);
+    background: transparent;
     border: 0;
     cursor: pointer;
-    padding: 4px;
+    padding: 3px;
     position: absolute;
     right: 12px;
-    top: -3px;
-    z-index: 2;
+    top: 2px;
+    color: var(--hiddenSpace);
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--hiddenSpace);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.classified.section .visibilityToggle {
+    color: var(--physicalSpace);
+    border-color: var(--physicalSpace);
 }
 
 .visibilityToggle:hover {
-    background: var(--physicalSpace);
+    font-weight: bold;
+    border-width: 2px;
+    padding: 2px;
 }
 
 .logomark-svg {
