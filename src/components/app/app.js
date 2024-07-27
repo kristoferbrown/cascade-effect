@@ -8,7 +8,7 @@ import Chapter3 from "../../rulebook/chapter3";
 import Chapter4 from "../../rulebook/chapter4";
 import Chapter5 from "../../rulebook/chapter5";
 import Chapter6 from "../../rulebook/chapter6";
-import Chapter7 from "../../rulebook/chapter7";
+// import Chapter7 from "../../rulebook/chapter7";
 
 function App() {
   return (

@@ -21,7 +21,7 @@
   bottom: 3px;
   right: 3px;
   padding: 6px;
-  z-index: 3;
+  z-index: 50;
 }
 
 @media print {

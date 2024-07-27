@@ -93,7 +93,7 @@ function Chapter3() {
           Typically you can just describe what your character does in any situation. However, if an action or event
           involves exertion, risk, or the possiblity of failure, it needs to be resolved as a Challenge.
         </p>
-        <Section header="Steps to Resolve Challenges" isInset>
+        <Section header="Steps by Step Challenges" isInset>
           <ol>
             <li>
               The GM describes the context with a the <Crosslink target={topics.DIFFICULTY}>Difficulty</Crosslink>
@@ -322,7 +322,7 @@ function Chapter3() {
             </ol>
           </Section>
         </Section>
-        <Section header="Advantage and Disadvantage">
+        <Section header="Advantage & Disadvantage">
           <p>
             The <Crosslink target={topics.GAMEMASTER}>GM</Crosslink> sets the initial Risk and Effort levels, but
             sometimes you can change it. If you have Advantage on a Challenge, you can chose to improve either the Risk
@@ -425,7 +425,7 @@ function Chapter3() {
         </Section>
       </Section>
 
-      <Section header="Injury, Dissociation, & States">
+      <Section header="Injury & States">
         <p>
           When any Metabolism has its maximum value reduced to 0 by Stress, there are consequences. When this happens to
           a Physical Metabolism, you gain an injury State that prevents you from taking certain actions. When this

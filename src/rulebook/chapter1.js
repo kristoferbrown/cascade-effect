@@ -21,32 +21,30 @@ function Chapter1() {
         <Logomark />
       </ChapterIntro>
 
-      <Section header="The Player Characters" isChapterIntroColumn>
+      <Section header="Player Characters" isChapterIntroColumn>
         <p>
           To play, pick one person to be the game master, the rest of the players create and play a single character.
           The players act out what their characters words and describe their actions.
         </p>
-        <Section header="What Characters Know">
-          <p>
-            The characters know what the GM describes about the scene and setting, but they're also people with
-            background knowledge about the world. Players are the primary authors of their character's backstory (within
-            the bounds what's reasonable in the setting), and should act according to what their character would know
-            given their history.
-          </p>
-          <p>
-            In general, characters will be aware of recent history and news. It's the near future, less than 10 years
-            from now. The biggest story connecting most recent events is the accelerating changing climate.
-            Unprecedented natural disasters, immensely destructive storms, flooded coastal cities, global crop failures,
-            droughts, and lethal heat waves, are occurring earlier and more often than predicted. The secondary societal
-            effects of these events are just as dramatic; the news is full of stories on looming wars, rebellions,
-            failing economies, global refugee crises, abandoned cities, and reactionary backlashes. New counter culture
-            movements are growing explosively and creating new communities outside of the status quo.
-          </p>
-          <p>
-            Amidst the growing chaos, almost everyone has heard rumors or seen blurry videos of bizarre events that
-            cannot be explained.
-          </p>
-        </Section>
+        <p>
+          The characters know what the GM describes about the scene and setting, but they're also people with background
+          knowledge about the world. Players are the primary authors of their character's backstory (within the bounds
+          what's reasonable in the setting), and should act according to what their character would know given their
+          history.
+        </p>
+        <p>
+          In general, characters will be aware of recent history and news. It's the near future, less than 10 years from
+          now. The biggest story connecting most recent events is the accelerating changing climate. Unprecedented
+          natural disasters, immensely destructive storms, flooded coastal cities, global crop failures, droughts, and
+          lethal heat waves, are occurring earlier and more often than predicted. The secondary societal effects of
+          these events are just as dramatic; the news is full of stories on looming wars, rebellions, failing economies,
+          global refugee crises, abandoned cities, and reactionary backlashes. New counter culture movements are growing
+          explosively and creating new communities outside of the status quo.
+        </p>
+        <p>
+          Amidst the growing chaos, almost everyone has heard rumors or seen blurry videos of bizarre events that cannot
+          be explained.
+        </p>
       </Section>
 
       <Section header="The Game Master" isChapterIntroColumn isClassified>
@@ -55,33 +53,31 @@ function Chapter1() {
           people and challenges that characters encounter. The game master's job is to guide the characters through an
           interesting and challenging adventure and to keep the story moving forward.
         </p>
-        <Section header="What the Game Master Knows">
-          <p>
-            The GM knows everything about the fictional world the story is taking place in. Anything the GM describes
-            about the world is true, whether it was planned or improvised it on the spot.
-          </p>
-          <p>
-            Details about the world and its secrets and possible adventures are described in the last section of this
-            rulebook. These pages are meant for the GM's eyes only and contain details on the secret, mysterious, or
-            supernatural aspects of the world that most people are unaware of.
-          </p>
-          <p>
-            The GM can start the game with the characters' origin stories on how they started entering the secret parts
-            of the world, or they could jump right into the action with characters that are already an established group
-            entwined in secrets and intrigue.
-          </p>
-          <p>
-            The GM should also have a good sense of the rules and instruct other players on how to resolve situations.
-            But don't lose momentum a lot of time looking for a rule, just improvise and look it up later.
-          </p>
-        </Section>
+        <p>
+          The GM knows everything about the fictional world the story is taking place in. Anything the GM describes
+          about the world is true, whether it was planned or improvised it on the spot.
+        </p>
+        <p>
+          Details about the world and its secrets and possible adventures are described in the last section of this
+          rulebook. These pages are meant for the GM's eyes only and contain details on the secret, mysterious, or
+          supernatural aspects of the world that most people are unaware of.
+        </p>
+        <p>
+          The GM can start the game with the characters' origin stories on how they started entering the secret parts of
+          the world, or they could jump right into the action with characters that are already an established group
+          entwined in secrets and intrigue.
+        </p>
+        <p>
+          The GM should also have a good sense of the rules and instruct other players on how to resolve situations. But
+          don't lose momentum a lot of time looking for a rule, just improvise and look it up later.
+        </p>
       </Section>
 
       <Break page />
 
-      <Section header="The World of Cascade Effect">
+      <Section header="The Setting">
         {/* @TODO use column-span: all; to lay out this bit*/}
-        <Section header="The Characters Know a World Heating Up...">
+        <Section header="A World Heating Up">
           <Section header="Rising Temperatures">
             <p>
               Surpassing several critical tipping points has caused climate change to hit harder and faster than
@@ -105,7 +101,7 @@ function Chapter1() {
           </Section>
         </Section>
 
-        <Section header="...and are Beginning to Sense a World Within..." isInset>
+        <Section header="A World Within" isInset>
           <Section header="Hidden Space, Hidden Body">
             <p>
               Between every point of the space you're familiar with, exists a second hidden space. It is normally
@@ -129,7 +125,7 @@ function Chapter1() {
           </Section>
         </Section>
 
-        <Section header="... and the GM is Sending Them into a World of Secrets" isClassified>
+        <Section header="A World of Secrets" isClassified>
           <Section header="Secret Organizations">
             <p>
               Many nations have secret intelligence agencies, but orchestrating them all is the Schedule and its
@@ -179,7 +175,7 @@ function Chapter1() {
             Difficulty number then you complete the Challenge successfully.
           </p>
         </Section>
-        <Section header="Effort & Spending Metabolisms">
+        <Section header="Effort & Metabolisms">
           <p>
             Many <Crosslink target={topics.CHALLENGE}>Challenges</Crosslink> will have a set Effort value representing
             how much physical or mental effort the Challenge requires. Some Effort values will require you to spend

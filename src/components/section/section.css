@@ -38,7 +38,7 @@
     display: inline;
     font-size: 12px;
     letter-spacing: 1px;
-    padding: 0 6px 0 0;
+    padding: 0;
 }
 .classified.section .sectionCoordinates {
     color: var(--hiddenSpace);
@@ -68,41 +68,43 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .section h1.sectionHeader {
-    background: linear-gradient(-84deg, var(--hiddenSpace) 78.6px, var(--highlight) 79px);
+    background: linear-gradient(-84deg, var(--hiddenSpace) 68.6px, var(--highlight) 69px);
     font-size: 33px;
-    z-index: 4;
+    z-index: 40;
 }
 
 .section h2.sectionHeader {
-    background: linear-gradient(-84deg, var(--hiddenSpace) 81.9px, var(--highlight) 82.3px);
+    background: linear-gradient(-84deg, var(--hiddenSpace) 71.9px, var(--highlight) 72.3px);
     top: 43px;
-    z-index: 3;
+    z-index: 30;
 }
 
 .section h3.sectionHeader {
-    background: linear-gradient(-84deg, var(--hiddenSpace) 84.3px, var(--highlight) 84.6px);
-    top: 73px;
-    z-index: 2;
+    background: linear-gradient(-84deg, var(--hiddenSpace) 74.3px, var(--highlight) 74.6px);
+    top: 75px;
+    z-index: 20;
 }
   
 .section h4.sectionHeader {
-    background: linear-gradient(-84deg, var(--hiddenSpace) 86.5px, var(--highlight) 87px);
-    top: 99px;
-    z-index: 1;
+    background: linear-gradient(-84deg, var(--hiddenSpace) 76.5px, var(--highlight) 77px);
+    top: 100px;
+    z-index: 10;
 }
 .section h5.sectionHeader {
-    background: linear-gradient(-84deg, var(--hiddenSpace) 88.5px, var(--highlight) 89px);
-    top: 122px;
-    z-index: 1;
+    background: linear-gradient(-84deg, var(--hiddenSpace) 78.5px, var(--highlight) 79px);
+    top: 123px;
+    z-index: 9;
 }
-.classified.section h1.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 78.6px, var(--darkHighlight) 79px);}
-.classified.section h2.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 81.9px, var(--darkHighlight) 82.3px);}
-.classified.section h3.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 84.3px, var(--darkHighlight) 84.6px);}
-.classified.section h4.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 86.5px, var(--darkHighlight) 87px);}
-.classified.section h5.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 88.5px, var(--darkHighlight) 89px);}
+.classified.section h1.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 68.6px, var(--darkHighlight) 69px);}
+.classified.section h2.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 71.9px, var(--darkHighlight) 72.3px);}
+.classified.section h3.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 74.3px, var(--darkHighlight) 74.6px);}
+.classified.section h4.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 76.5px, var(--darkHighlight) 77px);}
+.classified.section h5.sectionHeader {background: linear-gradient(-84deg, var(--highlight) 78.5px, var(--darkHighlight) 79px);}
 
 .section h5.subheader {
     font-size: 14px;

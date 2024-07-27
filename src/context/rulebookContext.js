@@ -53,6 +53,7 @@ const sectionsOpenByDefault = [
 const RulebookProvider = ({ children }) => {
   const [openSectionList, setOpenSectionList] = useState(new Set(sectionsOpenByDefault));
   const [isAllForcedOpen, setIsAllForcedOpen] = useState(false);
+  const [wasAllOpened, setWasAllOpened] = useState(false);
 
   return (
     <RulebookContext.Provider
@@ -61,6 +62,8 @@ const RulebookProvider = ({ children }) => {
         setOpenSectionList,
         isAllForcedOpen,
         setIsAllForcedOpen,
+        wasAllOpened,
+        setWasAllOpened,
       }}
     >
       {children}

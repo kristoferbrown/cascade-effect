@@ -87,7 +87,7 @@ function Chapter2() {
           Finally, Entanglements and their Specializations will not be touched during character creation. Only later
           when you spend experience points will these come up.
         </p>
-        <Section header="Step by Step Character Creation" isInset>
+        <Section header="Step by Step Characters" isInset>
           <ol>
             <li>
               Choose a character concept.

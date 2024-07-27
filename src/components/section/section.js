@@ -20,7 +20,8 @@ const Section = ({
   isOpenAtDepth = 2,
   metabolized,
 }) => {
-  const { openSectionList, setOpenSectionList, isAllForcedOpen } = useContext(RulebookContext);
+  const { openSectionList, setOpenSectionList, isAllForcedOpen, wasAllOpened, setWasAllOpened } =
+    useContext(RulebookContext);
   const isVisible = openSectionList.has(coordinates);
   const sectionContainer = useRef(null);
   const Heading = "h" + depth;
@@ -70,6 +71,9 @@ const Section = ({
     let newOpenSectionList = new Set(openSectionList);
     if (isVisible) {
       newOpenSectionList.delete(coordinates);
+      if (wasAllOpened) {
+        setWasAllOpened(false);
+      }
     } else {
       newOpenSectionList.add(coordinates);
     }
