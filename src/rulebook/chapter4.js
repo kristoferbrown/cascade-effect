@@ -46,17 +46,17 @@ function Chapter4() {
         <p>
           Determining initiative is the moment adrenaline kicks your body into high gear. Until combat ends you are
           pushing yourself to your limits, which has a few effects.
-          <ul>
-            <li>
-              Your <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> regenerate more quickly. Refill half of
-              their current values, rounding up to whole numbers, at the end of each round.
-            </li>
-            <li>
-              There are a list of named actions in the next chapter, such as Melee Attack, Aim, or Move. Due to the
-              speed and chaos of combat, you can only take actions from this list.
-            </li>
-          </ul>
         </p>
+        <ul>
+          <li>
+            Your <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> regenerate more quickly. Refill half of
+            their current values, rounding up to whole numbers, at the end of each round.
+          </li>
+          <li>
+            There are a list of named actions in the next chapter, such as Melee Attack, Aim, or Move. Due to the speed
+            and chaos of combat, you can only take actions from this list.
+          </li>
+        </ul>
         <Section header="Rounds & Turns">
           <p>
             In initiative order, everyone takes their turn doing an

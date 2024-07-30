@@ -22,6 +22,9 @@ function App() {
         <Chapter5 />
         <Chapter6 />
         {/* <Chapter7 /> */}
+        <div className="section depth1">
+          <h3>Character Sheets</h3>
+        </div>
       </div>
     </RulebookProvider>
   );

@@ -12,226 +12,140 @@ function Chapter5() {
     <Section coordinates={"5"} header="Experience">
       <ChapterIntro>
         <p>
-          The <Crosslink target={topics.PHYS_METAB}>Physical Metabolisms</Crosslink> you start the game with only
-          improve slowly with great effort. They're unlikely to see more than minor growth over the long term.
+          The Physical Metabolisms you start the game with only improve slowly with great effort. They're likely to see
+          only minor growth over the long term.
         </p>
         <p>
-          Conversely, your <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> may all start at 1 but
-          they will grow quickly as you learn to more deeply connect the physical and hidden bodies.
+          Conversely, your Hidden Metabolisms may all start low but they will grow quickly as you learn to more deeply
+          connect the physical and hidden bodies.
         </p>
         <p>
-          The experience you gain from adventuring is used to buy Entanglements that improve your abilities.
-          Entanglements are clustered into groups called Styles. There is an Intuitive Style and an Esoteric Style for
-          each Metabolism pairing.
+          These improvements come from the Experience you gain during your adventures. Experience points you earn are
+          used to buy ranks in the nine Entanglements and ranks in the Specializations within those Entanglements.
         </p>
         <Logomark />
       </ChapterIntro>
-
-      <Section header="Intuitive Styles" isChapterIntroColumn>
-        <p>
-          Intuitive Styles represent archetypal approaches to problem solving and are named with adjectives that
-          describe these approaches. They improve the existing capabilities of the body and mind.
-        </p>
-        <Section header="The 9 Intuitive Styles">
-          <h4>Strong</h4>
-          <p>
-            The intuitive pairing of <Pair fight self />.
-          </p>
-          <p>Unarmed attacks, grappling, intimidation, and brute force.</p>
-          <h4>Smooth</h4>
-          <p>
-            The intuitive pairing of <Pair fight near />.
-          </p>
-          <p>Melee attacks, stealth, charm, finesse, and manual dexterity</p>
-          <h4>Sharp</h4>
-          <p>
-            The intuitive pairing of <Pair fight far />.
-          </p>
-          <p>Ranged attacks, precision, critical hits, and deception.</p>
-          <h4>Tough</h4>
-          <p>
-            The intuitive pairing of <Pair flight self />.
-          </p>
-          <p> Unarmed defense, health, stamina, and regeneration.</p>
-          <h4>Mobile</h4>
-          <p>
-            The intuitive pairing of <Pair flight near />.
-          </p>
-          <p>Melee defense, agility, traversal, and movement speed.</p>
-          <h4>Quick</h4>
-          <p>
-            The intuitive pairing of <Pair flight far />.
-          </p>
-          <p>Ranged defense, wits, multitasking, tactics, and precognition.</p>
-          <h4>Confident</h4>
-          <p>
-            The intuitive pairing of <Pair focus self />.
-          </p>
-          <p>Will, courage, and executive function.</p>
-          <h4>Bright</h4>
-          <p>
-            The intuitive pairing of <Pair focus near />.
-          </p>
-          <p>Intelligence, learning, and creativity.</p>
-          <h4>Alert</h4>
-          <p>
-            The intuitive pairing of <Pair focus far />.
-          </p>
-          <p>Awareness, empathy, and social predictions.</p>
-        </Section>
-      </Section>
-
-      <Section header="Esoteric Styles" isChapterIntroColumn isClassified>
-        <p>
-          Esoteric Styles represent more unusual approaches to solving the same problems. They provide new abilities the
-          body is normally incapable of. They often appear overtly supernatural when used.
-        </p>
-        <Section header="The 9 Esoteric Styles">
-          <h4>Schizosomata</h4>
-          <p>
-            The esoteric pairing of <Pair fight self />.
-          </p>
-          <p>Radically transform one’s body or the way it is perceived.</p>
-
-          <h4>Sublimation</h4>
-          <p>
-            The esoteric pairing of <Pair flight self />.
-          </p>
-          <p>Sublimation Traverse hidden space intangibly and invisibly</p>
-
-          <h4>Abjuration</h4>
-          <p>
-            The esoteric pairing of <Pair focus self />.
-          </p>
-          <p>Abjuration Create durable barriers, wards, and filters, and alarms.</p>
-
-          <h4>Electromagnetism</h4>
-          <p>
-            The esoteric pairing of <Pair fight near />.
-          </p>
-          <p>Control over the fundamental force of light or electricity.</p>
-
-          <h4>Gravitonertia</h4>
-          <p>
-            The esoteric pairing of <Pair flight near />.
-          </p>
-          <p>Control over the fundamental force of mass and motion.</p>
-
-          <h4>Chromodynamism</h4>
-          <p>
-            The esoteric pairing of <Pair focus near />.
-          </p>
-          <p>Control over the fundamental force that binds atoms.</p>
-
-          <h4>Evocation</h4>
-          <p>
-            The esoteric pairing of <Pair fight far />.
-          </p>
-          <p>Evocation Create overtly explosive and destructive blasts.</p>
-          <h4>Pneumaplegia</h4>
-          <p>
-            The esoteric pairing of <Pair flight far />.
-          </p>
-          <p>Make fields that manipulate motion and metabolisms.</p>
-          <h4>Telethesia</h4>
-          <p>
-            The esoteric pairing of <Pair focus far />.
-          </p>
-          <p> Sense, communicate with, and manipulate other minds.</p>
-        </Section>
-      </Section>
-
-      <Section header="Entanglements">
+      <Section header="Entanglements" isChapterIntroColumn>
         <p>
           Entanglements represent a permanent connection between your physical and hidden bodies that you have learned
           to intuitively create. Controlling these connections allows you to utilize preternatural abilities beyond the
           normal range of the human body.
         </p>
         <p>
-          Entanglements can grant you increased <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink>, new
-          skills, special abilities, and ways to manipulate the action economy. They can also allow you to utilize
-          temporary, overtly supernatural powers called
-          <Crosslink target={topics.CASCADE_EVENT}>Cascade Events</Crosslink> that directly channel the Cascade Effect
-          into forces outside of the body.
+          Entanglements can increase Metabolisms and Action Bonuses and grant access to Specializations that further
+          customize and improve your abilities related to the Entanglement.
+        </p>
+      </Section>
+      <Section header="Cascade Events" isChapterIntroColumn isClassified>
+        <p>
+          There is a single cascade event associated with each Entanglement. This signature supernatural ability has its
+          own action bonus that improves its potency.
+        </p>
+        <p>
+          Inducing a cascade event is a special action that can have customizable effects based on how you spend and
+          apply metabolism points. Specializations related to the cascade event will improve its power or give you
+          additional customization options each time you use it.
+        </p>
+      </Section>
+      <Break page />
+
+      <Section header="Using Entanglements">
+        <p>
+          There are 9 Entanglements, one for each possible Metabolism pairing. Each Entanglement is composed of 3 ranks
+          you can purchase with experience points, 3 action bonuses that can be increased by these ranks, and several
+          Specializations that can be unlocked by these ranks.
+        </p>
+        <p>
+          These Specializations are sorted into two groups called Styles. Each Entanglement has an Intuitive Style
+          containing Specializations that boost your natural abilities beyond human limits and an Esoteric Style that
+          grants overtly supernatural capabilities.
         </p>
         <Section header="Buying Entanglements">
           <p>
-            Each session, you will earn 1-3 experience points, or more if you accomplish goals or have a particularly
-            dramatic session. All Entanglements have 3 ranks. Each rank costs 1 experience to acquire.
-          </p>
-        </Section>
-        <Section header="Core Entanglements">
-          <p>
-            At the start, you only have access to the 3 core Entanglements, one for each
-            <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink>. Each rank of these increases the
-            related Metabolism by 1 and unlocks access to several related Styles. Once unlocked, you can use experience
-            to buy Entanglements within that Style.
+            After each session, the GM will give each player at least 1 experience point, or more if you accomplish
+            important goals or have a particularly dramatic and entertaining session. All Entanglements have 3 core
+            ranks. Each rank costs 1 experience to acquire.
           </p>
           <p>
-            These Entanglements grant fundamental abilities that enable adventuring. For example, Empower removes the
-            long term consequences of
-            <Crosslink target={topics.INJURY}>injury</Crosslink>, Momentum lets you practically guarantee success in
-            critical moments, and Danger Sense reduces the threat posed by firearms.
+            Each rank directly increases your choice of one of the three action bonuses within the Entanglement. The
+            first and last rank also increase a specified Metabolism score. Finally, each rank also unlocks access to
+            your choice of two Specializations. The action bonus you chose to increase determines which Style the
+            specializations you can unlock must be in.
           </p>
         </Section>
         <Section header="Styles">
           <p>
-            All of the many Entanglements are divided into Styles. Think of each Style as a class or a cluster of
-            related Entanglements. There is an Intuitive Style and an Esoteric Style for each Metabolism pairing. Each
-            Intuitive Style represents an archetypal approach to problem solving, and each Esoteric Style represents an
-            overtly supernatural power.
+            Each Entanglement contains within it two Styles, an intuitive Style and an esoteric Style. Each Style is a
+            group of Specializations with a common theme.
+          </p>
+          <p>
+            For example, the Entanglement of Flight +Self contains the intuitive Style Tough which has Specializations
+            improving your physical durability, and the esoteric Style Abjuration which has Specializations that let you
+            make defensive shields using the Ward cascade event.
+          </p>
+        </Section>
+        <Section header="Specializations">
+          <p>
+            Each Specialization has three ranks. Once you have unlocked a Specialization, you can buy a rank in it by
+            spending 1 experience point to permanently gain its benefits.
+          </p>
+        </Section>
+        <Section header="Metabolism Growth">
+          <p>As you spend experience within Entanglements your Metabolism scores will also permanently increase.</p>
+          <p>
+            The first rank of an Entanglement and the final rank of every Specialization within it increase the Hidden
+            Metabolism score associated with this Entanglement. The associated Physical Metabolism score will only be
+            increased by acquiring the final rank of the Entanglement.
           </p>
         </Section>
       </Section>
-      <Section header="Metabolism Growth">
+
+      <Section header="Using Cascade Events">
         <p>
-          As you spend experience and buy Entanglements, your Metabolism scores will also permanently increase in two
-          ways.
-        </p>
-        <ol>
-          <li>
-            Each rank of the three core Entanglements includes a 1 point increase to its related Metabolism. This allows
-            you to get a few points in each Hidden Metabolism with a minimal experience investment.
-          </li>
-          <li>
-            Each time the total number of ranks you have within Styles related to the same Hidden Metabolism is a
-            multiple of 6, increase that Metabolism score by 1 point. For example, Strong, Tough, and Abjuration are all
-            Self styles. If you have 3 points within Strong and 3 points within Tough, this is a total of 6 ranks and
-            will cause your Self score to increase by 1. If later you also get 6 ranks in Abjuration, you now have 12
-            total ranks within Self styles and your Self score will increase by 1 again.
-          </li>
-        </ol>
-        <p>
-          All Metabolism scores have a maximum of 9. Any time your ranks would increase a Hidden Metabolism above 9,
-          instead increase a Physical Metabolism of your choice.
-        </p>
-      </Section>
-      <Section header="Cascade Events">
-        <p>
-          Some entanglements, particularly those in esoteric styles, grant you the ability to induce cascade events.
-          These events create temporary supernatural effects that are either instantaneous or last for a specified
-          duration.
+          Cascade events are a special class of action typically used to do something overtly supernatural. Each
+          Entanglement is associated with one cascade event its action bonus. You can only induce a cascade event if
+          your action bonus for it is above 0. The action bonus will be used to determine the maximum effectiveness of
+          the event.
         </p>
         <p>
-          Unless otherwise specified by the entanglement, inducing a cascade event is a{" "}
-          <Crosslink target={topics.STRENUOUS}>Strenuous</Crosslink>{" "}
-          <Crosslink target={topics.CHALLENGE}>challenge</Crosslink> that takes a full action that requires{" "}
-          <Metabolism focus />. If it targets you, it also requires <Metabolism self />. If it targets someone you
-          touch, it requires <Metabolism near />. If it targets anything else, it requires <Metabolism far />.
+          Unless otherwise specified in the event’s description, inducing a cascade event is a full action and any
+          Challenges involved are default effort and low risk. Focus plus the Hidden Metabolism associated with the
+          event are required in any Challenges.
         </p>
-        <p>
-          Some events only require a single point of <Crosslink target={topics.PROGRESS}>Progress</Crosslink> to take
-          full effect and for others the amount of Progress created increases the strength of the event. If the event
-          description states that the target can use a<Crosslink target={topics.REACTION}>Reaction</Crosslink> against
-          it, the reaction uses the same metabolisms that were used to induce it. The difference between the amounts of
-          Progress created by the event and the reaction determine how effective the event is.
-        </p>
-        <p>
-          Some events may specify that they require other metabolisms, other{" "}
-          <Crosslink target={topics.ACTION}>action</Crosslink> types, other
-          <Crosslink target={topics.COMPLICATION}>complications</Crosslink>, or that they can only be used outside of
-          combat.
-        </p>
+        <Section header="Event Metrics">
+          <p>
+            The amount of Progress needed to induce an event, and the strength of the event, are described by metrics.
+            Any Progress created when inducing the event is spent to increase these metrics. Each metric can be
+            increased by up to a maximum number of points equal to your Action Bonus for this event. For example, if
+            your action bonus for an event is 3 and the event has two different metrics, you could increase either
+            metric from 0 to 1, 2 or 3. If you increase both to 3 that typically would require 6 Progress to do.
+          </p>
+          <p>
+            Most metrics are a basic single unit. This unit indicates both how much the metric increases per point of
+            Progress you spend on it and also the minimum that occurs if you spend 0 Progress on it. For example, an
+            event with the metric “Duration: 1 minute” starts with a minimum duration of 1 minute when you spend 0
+            Progress on it, and increases by 1 minute for each point of Progress spent on it.
+          </p>
+          <p>
+            Some metrics indicate that they cost more than 1 point of Progress to increase them once. For example, the
+            metric “Targets: 1 person per 3” indicates that the event targets 1 person and can be increased to 2 people
+            by spending 3 Progress or 3 people by spending 6 Progress, and so on.
+          </p>
+          <p>
+            Finally, some metrics specify a minimum value. For example, the metric “Range: 10X, minimum = 1 meter” means
+            the range starts 1 meter and is multiplied by 10 per point of Progress. This is often used to set the
+            minimum to a character statistic, for example “Size: 1 meter, minimum = Bonus” means the size starts at a
+            number of meters equal to the event’s Action Bonus and can be increased in 1 meter increments.
+          </p>
+        </Section>
+        <Section header="Improving Events">
+          <p>
+            There is one event for each Entanglement, but the description there is the most basic and crude version of
+            the event. Each Entanglement will also have an esoteric Style that is full of specializations that allow you
+            to improve or customize the event. They can add new metrics, improve existing ones, or add new capabilities
+            entirely.
+          </p>
+        </Section>
       </Section>
       <Break page />
     </Section>

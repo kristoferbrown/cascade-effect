@@ -1,14 +1,137 @@
 import Break from "../components/break/break";
 import Section from "../components/section/section";
+import ChapterIntro from "../components/chapter-intro/chapter-intro";
 import EntanglementDescription from "../components/section/ent-desc";
 import Crosslink from "../components/crosslink/crosslink";
 import Pair from "../components/metabolism/pair";
 import { topics } from "../context/rulebookContext";
 import Metabolism from "../components/metabolism/metabolism";
+import Logomark from "../svgs/logomark";
 
 function Chapter6() {
   return (
     <Section coordinates={"6"} header="Entanglements">
+      <ChapterIntro>
+        <p>
+          Each Entanglement contains several specializations sorted into two styles, one intuitive and one esoteric.
+        </p>
+        <Logomark />
+      </ChapterIntro>
+
+      <Section header="Intuitive Styles" isChapterIntroColumn>
+        <p>
+          Intuitive Styles represent archetypal approaches to problem solving and are named with adjectives that
+          describe these approaches. They improve the existing capabilities of the body and mind.
+        </p>
+        <Section header="The 9 Intuitive Styles">
+          <h4>Strong</h4>
+          <p>
+            The intuitive pairing of <Pair fight self />.
+          </p>
+          <p>Unarmed attacks, grappling, intimidation, and brute force.</p>
+          <h4>Smooth</h4>
+          <p>
+            The intuitive pairing of <Pair fight near />.
+          </p>
+          <p>Melee attacks, stealth, charm, finesse, and manual dexterity</p>
+          <h4>Sharp</h4>
+          <p>
+            The intuitive pairing of <Pair fight far />.
+          </p>
+          <p>Ranged attacks, precision, critical hits, and deception.</p>
+          <h4>Tough</h4>
+          <p>
+            The intuitive pairing of <Pair flight self />.
+          </p>
+          <p> Unarmed defense, health, stamina, and regeneration.</p>
+          <h4>Mobile</h4>
+          <p>
+            The intuitive pairing of <Pair flight near />.
+          </p>
+          <p>Melee defense, agility, traversal, and movement speed.</p>
+          <h4>Quick</h4>
+          <p>
+            The intuitive pairing of <Pair flight far />.
+          </p>
+          <p>Ranged defense, wits, multitasking, tactics, and precognition.</p>
+          <h4>Confident</h4>
+          <p>
+            The intuitive pairing of <Pair focus self />.
+          </p>
+          <p>Will, courage, and executive function.</p>
+          <h4>Bright</h4>
+          <p>
+            The intuitive pairing of <Pair focus near />.
+          </p>
+          <p>Intelligence, learning, and creativity.</p>
+          <h4>Alert</h4>
+          <p>
+            The intuitive pairing of <Pair focus far />.
+          </p>
+          <p>Awareness, empathy, and social predictions.</p>
+        </Section>
+      </Section>
+
+      <Section header="Esoteric Styles" isChapterIntroColumn isClassified>
+        <p>
+          Esoteric Styles represent more unusual approaches to solving the same problems. They provide new abilities the
+          body is normally incapable of. They often appear overtly supernatural when used.
+        </p>
+        <Section header="The 9 Esoteric Styles">
+          <h4>Schizosomata</h4>
+          <p>
+            The esoteric pairing of <Pair fight self />.
+          </p>
+          <p>Radically transform one’s body or the way it is perceived.</p>
+
+          <h4>Sublimation</h4>
+          <p>
+            The esoteric pairing of <Pair flight self />.
+          </p>
+          <p>Sublimation Traverse hidden space intangibly and invisibly</p>
+
+          <h4>Abjuration</h4>
+          <p>
+            The esoteric pairing of <Pair focus self />.
+          </p>
+          <p>Abjuration Create durable barriers, wards, and filters, and alarms.</p>
+
+          <h4>Electromagnetism</h4>
+          <p>
+            The esoteric pairing of <Pair fight near />.
+          </p>
+          <p>Control over the fundamental force of light or electricity.</p>
+
+          <h4>Gravitonertia</h4>
+          <p>
+            The esoteric pairing of <Pair flight near />.
+          </p>
+          <p>Control over the fundamental force of mass and motion.</p>
+
+          <h4>Chromodynamism</h4>
+          <p>
+            The esoteric pairing of <Pair focus near />.
+          </p>
+          <p>Control over the fundamental force that binds atoms.</p>
+
+          <h4>Evocation</h4>
+          <p>
+            The esoteric pairing of <Pair fight far />.
+          </p>
+          <p>Evocation Create overtly explosive and destructive blasts.</p>
+          <h4>Pneumaplegia</h4>
+          <p>
+            The esoteric pairing of <Pair flight far />.
+          </p>
+          <p>Make fields that manipulate motion and metabolisms.</p>
+          <h4>Telethesia</h4>
+          <p>
+            The esoteric pairing of <Pair focus far />.
+          </p>
+          <p> Sense, communicate with, and manipulate other minds.</p>
+        </Section>
+      </Section>
+
       <Section header="Self Entanglements">
         <p>
           The Entanglements associated with the <Metabolism self /> Metabolism are grouped into the Intuitive Styles
