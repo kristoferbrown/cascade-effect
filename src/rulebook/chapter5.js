@@ -1,13 +1,17 @@
+// import { useContext } from "react";
+// import { RulebookContext } from "../context/rulebookContext";
 import Break from "../components/break/break";
 import ChapterIntro from "../components/chapter-intro/chapter-intro";
 import Section from "../components/section/section";
 import Logomark from "../svgs/logomark";
-import Crosslink from "../components/crosslink/crosslink";
-import { topics } from "../context/rulebookContext";
-import Pair from "../components/metabolism/pair";
-import Metabolism from "../components/metabolism/metabolism";
+// import Crosslink from "../components/crosslink/crosslink";
+// import Pair from "../components/metabolism/pair";
+// import Metabolism from "../components/metabolism/metabolism";
 
 function Chapter5() {
+  // const { topicMap } = useContext(RulebookContext);
+  // const linkMap = topicMap.current;
+
   return (
     <Section coordinates={"5"} header="Experience">
       <ChapterIntro>
@@ -25,7 +29,7 @@ function Chapter5() {
         </p>
         <Logomark />
       </ChapterIntro>
-      <Section header="Entanglements" isChapterIntroColumn>
+      <Section header="Entanglements" topicKey="entanglementsIntroColumn" isChapterIntroColumn>
         <p>
           Entanglements represent a permanent connection between your physical and hidden bodies that you have learned
           to intuitively create. Controlling these connections allows you to utilize preternatural abilities beyond the
@@ -67,10 +71,11 @@ function Chapter5() {
             ranks. Each rank costs 1 experience to acquire.
           </p>
           <p>
-            Each rank directly increases your choice of one of the three action bonuses within the Entanglement. The
-            first and last rank also increase a specified Metabolism score. Finally, each rank also unlocks access to
-            your choice of two Specializations. The action bonus you chose to increase determines which Style the
-            specializations you can unlock must be in.
+            Each rank directly increases your choice of one of the three action bonuses within the Entanglement. When
+            chosing an action bonus, you may choose the same bonus multiple times or a mixture. The first and last rank
+            also increase a specified Metabolism score. Finally, each rank also unlocks access to your choice of two
+            Specializations. The action bonus you chose to increase determines which Style the specializations you can
+            unlock must be in.
           </p>
         </Section>
         <Section header="Styles">

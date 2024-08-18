@@ -1,21 +1,25 @@
+import { useContext } from "react";
+import { RulebookContext } from "../context/rulebookContext";
 import Break from "../components/break/break";
 import ChapterIntro from "../components/chapter-intro/chapter-intro";
 import Section from "../components/section/section";
 import Logomark from "../svgs/logomark";
 import Crosslink from "../components/crosslink/crosslink";
-import { topics } from "../context/rulebookContext";
 import Metabolism from "../components/metabolism/metabolism";
 import Pair from "../components/metabolism/pair";
 
 function Chapter4() {
+  const { topicMap } = useContext(RulebookContext);
+  const linkMap = topicMap.current;
+
   return (
     <Section coordinates={"4"} header="Combat">
       <ChapterIntro>
         <p>
           In combat, the game slows down into turns to follow the action. Fights are difficult and lethal for normal
           people, but access to
-          <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> changes this. The primitive parts of
-          the brain stem that mediate the connection to the Hidden body are the same as those that manage autonomic
+          <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> changes this. The primitive parts
+          of the brain stem that mediate the connection to the Hidden body are the same as those that manage autonomic
           processes like breathing and heart rate. Once you've gotten the feel for this connection, stressful situations
           often take on a rhythm: inhale, allocate, exhale, execute. Having foudnd this rhythm, you can take two actions
           each time it's your turn.
@@ -27,7 +31,7 @@ function Chapter4() {
         <p>
           First, take an inhale action. This can be any action, but with one requirement, only people with at least one
           current point within the
-          <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> available can take inhale actions.
+          <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolism</Crosslink> available can take inhale actions.
         </p>
       </Section>
       <Section header="Exhale Action" isChapterIntroColumn isClassified>
@@ -40,7 +44,7 @@ function Chapter4() {
       <Section header="Combat Flow">
         <p>
           The first step of combat is determining who has the initiative. Everyone involved must make a
-          <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> with default Risk and Effort that requires
+          <Crosslink target={linkMap.Challenges}>Challenge</Crosslink> with default Risk and Effort that requires
           <Metabolism focus />. Turns start from the highest result on this Challenge and continue to the lowest result.
         </p>
         <p>
@@ -49,7 +53,7 @@ function Chapter4() {
         </p>
         <ul>
           <li>
-            Your <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> regenerate more quickly. Refill half of
+            Your <Crosslink target={linkMap.Gameplay}>Metabolisms</Crosslink> regenerate more quickly. Refill half of
             their current values, rounding up to whole numbers, at the end of each round.
           </li>
           <li>
@@ -60,19 +64,20 @@ function Chapter4() {
         <Section header="Rounds & Turns">
           <p>
             In initiative order, everyone takes their turn doing an
-            <Crosslink target={topics.INHALE_ACTION}>inhale action</Crosslink> and an
-            <Crosslink target={topics.EXHALE_ACTION}>exhale action</Crosslink>. At the end of each round after everyone
+            <Crosslink target={linkMap.InhaleAction}>inhale action</Crosslink> and an
+            <Crosslink target={linkMap.ExhaleAction}>exhale action</Crosslink>. At the end of each round after everyone
             has taken a turn, regain half of your used
-            <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> points. Always round up to a whole number.
+            <Crosslink target={linkMap.Gameplay}>Metabolism</Crosslink> points. Always round up to a whole number.
           </p>
         </Section>
-        <Section header="Taking Actions & Reactions">
+        <Section header="Taking Actions & Reactions" topicKey="TakingActionsAndReactions">
           <p>
-            Normal actions, such as <Crosslink target={topics.ATTACK}>attacking</Crosslink>, consume one of either your
-            <Crosslink target={topics.INHALE_ACTION}>inhale</Crosslink> or
-            <Crosslink target={topics.EXHALE_ACTION}>exhale action</Crosslink>. Occaisonally, there are
-            <Crosslink target={topics.FULL_ACTION}>full actions</Crosslink>, such as inducing most
-            <Crosslink target={topics.CASCADE_EVENT}>cascade events</Crosslink>, that consume both your inhale and
+            Normal actions, such as <Crosslink target={linkMap.Attacks}>attacking</Crosslink>, consume one of either
+            your
+            <Crosslink target={linkMap.InhaleAction}>inhale</Crosslink> or
+            <Crosslink target={linkMap.ExhaleAction}>exhale action</Crosslink>. Occaisonally, there are full actions,
+            such as inducing most
+            <Crosslink target={linkMap.UsingCascadeEvents}>cascade events</Crosslink>, that consume both your inhale and
             exhale actions. There can also be non-actions, that consume no action or time but still must be done on your
             turn.
           </p>
@@ -113,14 +118,15 @@ function Chapter4() {
           <p>
             Attack by taking the Unarmed, Melee, or Ranged Attack action. These actions are all a Default Risk and
             Effort Challenge that always requires <Metabolism fight />. The attack used determines which
-            <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> is required; <Metabolism self /> for
-            unarmed strikes,
+            <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolism</Crosslink> is required; <Metabolism self />{" "}
+            for unarmed strikes,
             <Metabolism near /> for melee attacks, and <Metabolism far /> for ranged attacks.
           </p>
           <p>
-            Attack Challenges do not have a Difficulty. Instead, each point of{" "}
-            <Crosslink target={topics.PROGRESS}>Progress</Crosslink> that you get on an attack inflicts a point of
-            <Crosslink target={topics.THREAT}>Threat</Crosslink> to the target. If you have a weapon equiped, the
+            Attack Challenges do not have a Difficulty. Instead, each point of
+            <Crosslink target={linkMap.CountingProgress}>Progress</Crosslink> that you get on an attack inflicts a point
+            of
+            <Crosslink target={linkMap.Attacks}>Threat</Crosslink> to the target. If you have a weapon equiped, the
             weapon's Size value is also added to the Threat dealt.
           </p>
           <p>
@@ -130,57 +136,58 @@ function Chapter4() {
           </p>
           <Section header="Attacking Example" isInset>
             <p>
-              For your <Crosslink target={topics.INHALE_ACTION}>inhale action</Crosslink> you spend 3 of 3
+              For your <Crosslink target={linkMap.InhaleAction}>inhale action</Crosslink> you spend 3 of 3
               <Metabolism far /> and 1 of 4
               <Metabolism fight /> to fire a size 2 ranged weapon. This buys you 4
-              <Crosslink target={topics.DICE}>dice</Crosslink>. The results are 2, 4, 4, and 5, meaning 3 points of
-              Progress and therefore 3 points of <Crosslink target={topics.THREAT}>Threat</Crosslink>. Add your weapon's
-              size of 2 to the Threat dealt, resulting in 5 total Threat.
+              <Crosslink target={linkMap.RollingDice}>dice</Crosslink>. The results are 2, 4, 4, and 5, meaning 3 points
+              of Progress and therefore 3 points of <Crosslink target={linkMap.Attacks}>Threat</Crosslink>. Add your
+              weapon's size of 2 to the Threat dealt, resulting in 5 total Threat.
             </p>
             <p>
-              For your <Crosslink target={topics.EXHALE_ACTION}>exhale action</Crosslink> you spend the remaining 3 of 4
+              For your <Crosslink target={linkMap.ExhaleAction}>exhale action</Crosslink> you spend the remaining 3 of 4
               <Metabolism fight /> and 2 of 2
-              <Metabolism self /> to kick an adjacent enemy. Your 5 <Crosslink target={topics.DICE}>dice</Crosslink>
-              come up 1, 1, 3, 4, and 5, creating 2<Crosslink target={topics.THREAT}>Threat</Crosslink>. Since no weapon
-              was used, there is no additional Threat.
+              <Metabolism self /> to kick an adjacent enemy. Your 5{" "}
+              <Crosslink target={linkMap.RollingDice}>dice</Crosslink>
+              come up 1, 1, 3, 4, and 5, creating 2<Crosslink target={linkMap.Attacks}>Threat</Crosslink>. Since no
+              weapon was used, there is no additional Threat.
             </p>
           </Section>
         </Section>
         <Section header="Reactions">
           <p>
             When attacked, you can react outside of your turn to reduce the
-            <Crosslink target={topics.THREAT}>Threat</Crosslink> you take. To do so, make a
-            <Crosslink target={topics.CHALLENGE}>Challenge</Crosslink> that is Default Effort, but Low Risk. This
+            <Crosslink target={linkMap.Attacks}>Threat</Crosslink> you take. To do so, make a
+            <Crosslink target={linkMap.Challenges}>Challenge</Crosslink> that is Default Effort, but Low Risk. This
             Challenge requires the pairing of
             <Metabolism flight /> and the same
-            <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> used by the attack. Reaction
+            <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolism</Crosslink> used by the attack. Reaction
             Challenges do not have a Difficulty, instead each point of
-            <Crosslink target={topics.PROGRESS}>Progress</Crosslink> lowers the
-            <Crosslink target={topics.THREAT}>Threat</Crosslink> taken by one. Any remaining
-            <Crosslink target={topics.THREAT}>Threat</Crosslink> becomes
-            <Crosslink target={topics.STRESS}>Stress</Crosslink> that you must distribute up between the
-            <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> you used in the reaction.
+            <Crosslink target={linkMap.CountingProgress}>Progress</Crosslink> lowers the
+            <Crosslink target={linkMap.Attacks}>Threat</Crosslink> taken by one. Any remaining
+            <Crosslink target={linkMap.Attacks}>Threat</Crosslink> becomes
+            <Crosslink target={linkMap.Stress}>Stress</Crosslink> that you must distribute up between the
+            <Crosslink target={linkMap.Gameplay}>Metabolisms</Crosslink> you used in the reaction.
           </p>
           <p>
             Because reactions often use <Metabolism flight />, your current <Metabolism flight /> is a good indicator of
             how much
-            <Crosslink target={topics.THREAT}>Threat</Crosslink> you can handle this round, and your maximum
-            <Metabolism flight /> is a good indicator of how much <Crosslink target={topics.STRESS}>Stress</Crosslink>
-            you can take in combat before being <Crosslink target={topics.INJURY}>injured</Crosslink>.
+            <Crosslink target={linkMap.Attacks}>Threat</Crosslink> you can handle this round, and your maximum
+            <Metabolism flight /> is a good indicator of how much <Crosslink target={linkMap.Stress}>Stress</Crosslink>
+            you can take in combat before being <Crosslink target={linkMap.InjuryStates}>injured</Crosslink>.
           </p>
           <Section header="Reactions Example" isInset>
             <p>
-              You were <Crosslink target={topics.ATTACK}>attacked</Crosslink> with a melee weapon for 5
-              <Crosslink target={topics.THREAT}>Threat</Crosslink>. You must
-              <Crosslink target={topics.REACTION}>react</Crosslink> with your
-              <Pair flight near /> <Crosslink target={topics.STRESS}>pairing</Crosslink>.
+              You were <Crosslink target={linkMap.Attacks}>attacked</Crosslink> with a melee weapon for 5
+              <Crosslink target={linkMap.Attacks}>Threat</Crosslink>. You must
+              <Crosslink target={linkMap.Reactions}>react</Crosslink> with your
+              <Pair flight near /> <Crosslink target={linkMap.Stress}>pairing</Crosslink>.
             </p>
             <p>
               You spend 2 out of 3 <Metabolism flight /> and 1 out of 1 <Metabolism near />, a total of 3 points.
             </p>
             <p>
-              This reduces the <Crosslink target={topics.THREAT}>Threat</Crosslink> dealt by 3, but there is still 2
-              points of Threat remaining, so you take 2<Crosslink target={topics.STRESS}>Stress</Crosslink>. You decide
+              This reduces the <Crosslink target={linkMap.Attacks}>Threat</Crosslink> dealt by 3, but there is still 2
+              points of Threat remaining, so you take 2<Crosslink target={linkMap.Stress}>Stress</Crosslink>. You decide
               to put all of it in
               <Metabolism flight /> to avoid reducing <Metabolism near /> to 0.
             </p>
@@ -189,7 +196,7 @@ function Chapter4() {
               available.
             </p>
             <p>
-              Another attack does 2 <Crosslink target={topics.THREAT}>Threat</Crosslink>, you spend your last point of
+              Another attack does 2 <Crosslink target={linkMap.Attacks}>Threat</Crosslink>, you spend your last point of
               <Metabolism flight /> to reduce the Threat to 1. You now must decide 1 Stress is dealt to
               <Metabolism flight /> reducing the max to 0 and injuring you or if it is dealt to <Metabolism near />
               reducing the max to 0 and dissociating you.
@@ -211,9 +218,9 @@ function Chapter4() {
           <p>
             You may find find you are don't want attack with one or both of you actions on a turn because you do not
             have enough
-            <Crosslink target={topics.ADVANTAGE}>Metabolism</Crosslink> points or want to save them for later. When this
-            happens you still have options. For example, every basic action can provide some benefit that doesn't
-            require a Challenge or spending metabolism points.
+            <Crosslink target={linkMap.AdvantageAndDisadvantage}>Metabolism</Crosslink> points or want to save them for
+            later. When this happens you still have options. For example, every basic action can provide some benefit
+            that doesn't require a Challenge or spending metabolism points.
           </p>
           <p>
             If you still wish to attack when you have 0 points in your Metabolism pairing, or fewer points than the size
@@ -226,10 +233,7 @@ function Chapter4() {
         <Section header="Ending Combat">
           <p>
             Combat ends when all aggressors of one side are either injured, dissociated, or unconscious. At this point
-            regain all of your spent metabolism points and you may resume acting normally, including{" "}
-            <Crosslink target={topics.PUSH_YRSELF}>Pushing Yourself</Crosslink> and
-            <Crosslink target={topics.TAKE_TIME}>Taking Time</Crosslink> during
-            <Crosslink target={topics.CHALLENGE}>Challenges</Crosslink>.
+            regain all of your spent metabolism points and you may resume acting normally.
           </p>
         </Section>
       </Section>
@@ -241,7 +245,7 @@ function Chapter4() {
           to do anything you describe, but you can still take the specific actions from this list and apply their Action
           Bonuses.
         </p>
-        <Section header="Attack Actions">
+        <Section header="Attack Action">
           <p>
             Attack actions always require a Default Risk and Effort Challenge requiring the action's related
             metabolisms. The appropriate Action Bonus is added to the Progress of this Challenge. If you are using a
@@ -421,13 +425,13 @@ function Chapter4() {
             </p>
           </Section>
         </Section>
-        <Section header="Reactions">
+        <Section header="Reactions" topicKey="reactionsList">
           <p>
             Reactions happen outside of your turn in response to the actions of others. The only limit to how often you
             can react in or out of combat is how many Metabolism points you are willing to spend. always add the Action
             Bonus you have for each reaction to the Progress you make.
           </p>
-          <Section header="Melee Defense">
+          <Section header="Melee Defense" topicKey="meleeDefenseReaction">
             <p>You deflect or dodge a melee weapon attack.</p>
             <p>
               Each point of Progress you get on a Low Risk and Default Effort <Pair flight near /> Challenge, plus your
@@ -435,7 +439,7 @@ function Chapter4() {
               incoming melee attack. You may move 1 meter freely afterwards.
             </p>
           </Section>
-          <Section header="Ranged Defense">
+          <Section header="Ranged Defense" topicKey="rangedDefenseReaction">
             <p>You attempt to predict your opponent's aim and get out of the path of their projectiles.</p>
             <p>
               Each point Progress you get on a Low Risk and Default Effort <Pair flight far /> Challenge, plus your
@@ -443,7 +447,7 @@ function Chapter4() {
               incoming ranged attack. You may move 1 meter freely afterwards.
             </p>
           </Section>
-          <Section header="Unarmed Defense">
+          <Section header="Unarmed Defense" topicKey="unarmedDefenseReaction">
             <p>You dodge, block, or simply endure a bow.</p>
             <p>
               Each point Progress you get on aLow Risk and Default Effort <Pair flight self /> Challenge, plus your
@@ -491,8 +495,8 @@ function Chapter4() {
         <Section header="Armor">
           <p>
             All armor has a Defense value. Each point of Defense on worn armor reduces
-            <Crosslink target={topics.THREAT}>Threat</Crosslink> by 1 on all incoming
-            <Crosslink target={topics.ATTACK}>attacks</Crosslink>. Armor with Defense 1 can be concealed under or worn
+            <Crosslink target={linkMap.Attacks}>Threat</Crosslink> by 1 on all incoming
+            <Crosslink target={linkMap.Attacks}>attacks</Crosslink>. Armor with Defense 1 can be concealed under or worn
             as casual clothing. Armor with Defense 3 is heavy and slows you down, reactions do not provide free movement
             while you are wearing it.
           </p>
@@ -523,20 +527,20 @@ function Chapter4() {
         </Section>
         <Section header="Weapons">
           <p>
-            What you choose to attack with determines what <Crosslink target={topics.Metabolism}>metabolisms</Crosslink>{" "}
+            What you choose to attack with determines what <Crosslink target={linkMap.Gameplay}>metabolisms</Crosslink>
             are used to attack and defend. In general all attacks require
-            <Metabolism fight />, and all reactions require <Metabolism flight />, unarmed combat uses{" "}
+            <Metabolism fight />, and all reactions require <Metabolism flight />, unarmed combat uses
             <Metabolism self />, melee weapons use
             <Metabolism near />, and ranged weapons use <Metabolism far />.
           </p>
           <p>
             Each weapon has a Size value. This number indicates the amount of extra
-            <Crosslink target={topics.THREAT}>Threat</Crosslink> added to attacks. It also indicates the minimum amount
-            of Metabolism points that must be spent to attack with the weapon, if you do not have this amount available,
-            you can only use this weapon with a desperate attack. Size 1 can be concealed in casual clothing, Size 2
-            cannot, and Size 3 or above requires both hands. Any weapon Size 4 or above requires a
-            <Crosslink target={topics.FULL_ACTION}>full action</Crosslink> to use and causes any reactions to it to
-            become Default Risk instead of Low.
+            <Crosslink target={linkMap.Attacks}>Threat</Crosslink> added to attacks. It also indicates the minimum
+            amount of Metabolism points that must be spent to attack with the weapon, if you do not have this amount
+            available, you can only use this weapon with a desperate attack. Size 1 can be concealed in casual clothing,
+            Size 2 cannot, and Size 3 or above requires both hands. Any weapon Size 4 or above requires a
+            <Crosslink target={linkMap.TakingActionsAndReactions}>full action</Crosslink> to use and causes any
+            reactions to it to become Default Risk instead of Low.
           </p>
           <Section header="Types of Weapons">
             <p>Other than unarmed, each category of weapons has a special property common to all similar weapons.</p>
@@ -589,7 +593,7 @@ function Chapter4() {
             </table>
             <h5>Blades</h5>
             <p>
-              All blades deal 1 extra <Crosslink target={topics.THREAT}>Threat</Crosslink> above what their Size
+              All blades deal 1 extra <Crosslink target={linkMap.Attacks}>Threat</Crosslink> above what their Size
               normally would.
             </p>
             <table>

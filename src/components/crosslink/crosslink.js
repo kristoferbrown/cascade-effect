@@ -1,5 +1,4 @@
 import { useContext } from "react";
-
 import { RulebookContext } from "../../context/rulebookContext";
 
 import "./crosslink.css";
@@ -41,7 +40,11 @@ const Crosslink = ({ children, className = "", inverted = false, target }) => {
   return (
     <>
       {" "}
-      <a className={`crosslink${inverted ? " inverted" : ""} ${className ? className : ""}`} href={`#${target}`} onClick={openAndGoToTarget}>
+      <a
+        className={`crosslink${inverted ? " inverted" : ""} ${className ? className : ""}`}
+        href={`#${target}`}
+        onClick={openAndGoToTarget}
+      >
         {children}
       </a>{" "}
     </>

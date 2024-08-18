@@ -124,11 +124,15 @@
 }
 
 .section strong {
-    -webkit-text-stroke: 0.1px var(--hiddenSpace);
+    -webkit-text-stroke: 0.4px var(--hiddenSpace);
 }
 
 .classified.section strong {
-    -webkit-text-stroke: 0.1px var(--physicalSpace);
+    -webkit-text-stroke: 0.4px var(--physicalSpace);
+}
+
+.section .eventName {
+    font-style: italic;
 }
 
 .section table {

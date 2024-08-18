@@ -24,6 +24,12 @@
   z-index: 50;
 }
 
+.section.charSheetLink {
+  display: inline-block;
+  margin: 6px;
+  padding: 6px;
+}
+
 @media print {
   .globalToggle {
     display: none;

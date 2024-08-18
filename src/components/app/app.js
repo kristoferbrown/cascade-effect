@@ -22,8 +22,16 @@ function App() {
         <Chapter5 />
         <Chapter6 />
         {/* <Chapter7 /> */}
-        <div className="section depth1">
-          <h3>Character Sheets</h3>
+        <div className="section depth1 charSheetLink">
+          <a
+            className="crosslink"
+            target="_blank"
+            rel="noreferrer"
+            href="https://cascade-effect.com/sheets/char-sheet-2.7.0.pdf"
+          >
+            Character Sheet (.pdf)
+          </a>
+          {/* @TODO ADD SHEETS HERE */}
         </div>
       </div>
     </RulebookProvider>

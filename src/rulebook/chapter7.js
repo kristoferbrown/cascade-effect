@@ -1,6 +1,11 @@
+import { useContext } from "react";
+import { RulebookContext } from "../context/rulebookContext";
 import Section from "../components/section/section";
 
 function Chapter7() {
+  const { topicMap } = useContext(RulebookContext);
+  const linkMap = topicMap.current;
+
   return (
     <Section coordinates={"7"} header="Classified Information">
       <p>

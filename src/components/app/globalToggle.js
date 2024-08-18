@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { RulebookContext } from "../../context/rulebookContext";
 
 function GlobalToggle() {
-  const { setOpenSectionList, openSectionList, wasAllOpened, setWasAllOpened } = useContext(RulebookContext);
+  const { setOpenSectionList, wasAllOpened, setWasAllOpened } = useContext(RulebookContext);
 
   const openEverything = () => {
     if (wasAllOpened) {
@@ -13,7 +13,7 @@ function GlobalToggle() {
       const allSections = new Set();
       for (let i = 1; i < 9; i++) {
         allSections.add(`${i}`);
-        for (let j = 1; j < 9; j++) {
+        for (let j = 1; j < 12; j++) {
           const currCoord = `${i}.${j}`;
           allSections.add(currCoord);
           for (let k = 1; k < 9; k++) {
@@ -26,7 +26,6 @@ function GlobalToggle() {
           }
         }
       }
-      console.log("allSections", openSectionList, allSections);
       setWasAllOpened(true);
       setOpenSectionList(allSections);
     }

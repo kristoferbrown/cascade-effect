@@ -32,7 +32,7 @@
 .section.hasAccentColor.metabSectionFight h5 {
     background: var(--fight);
     color: var(--hiddenSpace);
-    -webkit-text-stroke: 0.3px var(--hiddenSpace);
+    -webkit-text-stroke: 0.4px var(--hiddenSpace);
     text-shadow: 0px 0px 15px var(--physicalSpace);
 }
 .section.hasAccentColor.metabSectionFlight,
@@ -45,7 +45,7 @@
 .section.hasAccentColor.metabSectionFlight h5 {
     background: var(--flight);
     color: var(--hiddenSpace);
-    -webkit-text-stroke: 0.3px var(--hiddenSpace);
+    -webkit-text-stroke: 0.4px var(--hiddenSpace);
     text-shadow: 0px 0px 15px var(--physicalSpace);
 }
 .section.hasAccentColor.metabSectionFocus,
@@ -58,7 +58,7 @@
 .section.hasAccentColor.metabSectionFocus h5 {
     background: var(--focus);
     color: var(--hiddenSpace);
-    -webkit-text-stroke: 0.3px var(--hiddenSpace);
+    -webkit-text-stroke: 0.4px var(--hiddenSpace);
     text-shadow: 0px 0px 15px var(--physicalSpace);
 }
 .section.hasAccentColor.metabSectionSelf,
@@ -73,7 +73,7 @@
 .section.hasAccentColor.metabSectionSelf h5 {
     background: var(--self);
     color: var(--physicalSpace);
-    -webkit-text-stroke: 0.3px var(--physicalSpace);
+    -webkit-text-stroke: 0.4px var(--physicalSpace);
     text-shadow: 0px 0px 15px var(--hiddenSpace);
 }
 .section.hasAccentColor.metabSectionNear,
@@ -88,7 +88,7 @@
 .section.hasAccentColor.metabSectionNear h5 {
     background: var(--near);
     color: var(--physicalSpace);
-    -webkit-text-stroke: 0.3px var(--physicalSpace);
+    -webkit-text-stroke: 0.4px var(--physicalSpace);
     text-shadow: 0px 0px 15px var(--hiddenSpace);
 }
 .section.hasAccentColor.metabSectionFar,
@@ -103,6 +103,6 @@
 .section.hasAccentColor.metabSectionFar h5 {
     background: var(--far);
     color: var(--physicalSpace);
-    -webkit-text-stroke: 0.3px var(--physicalSpace);
+    -webkit-text-stroke: 0.4px var(--physicalSpace);
     text-shadow: 0px 0px 15px var(--hiddenSpace);
 }

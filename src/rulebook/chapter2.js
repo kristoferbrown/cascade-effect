@@ -1,12 +1,16 @@
+import { useContext } from "react";
+import { RulebookContext } from "../context/rulebookContext";
 import Break from "../components/break/break";
 import ChapterIntro from "../components/chapter-intro/chapter-intro";
 import Crosslink from "../components/crosslink/crosslink";
 import Metabolism from "../components/metabolism/metabolism";
-import { topics } from "../context/rulebookContext";
 import Section from "../components/section/section";
 import Logomark from "../svgs/logomark";
 
 function Chapter2() {
+  const { topicMap } = useContext(RulebookContext);
+  const linkMap = topicMap.current;
+
   return (
     <Section coordinates={"2"} header="Characters">
       <ChapterIntro>
@@ -21,24 +25,25 @@ function Chapter2() {
 
       <Section header="Physical Body" isChapterIntroColumn>
         <p>
-          Most people are defined by the 3 <Crosslink target={topics.PHYS_METAB}>Physical Metabolisms</Crosslink>,
+          Most people are defined by the 3{" "}
+          <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolisms</Crosslink>,
           <Metabolism fight />, <Metabolism flight />, and <Metabolism focus />.
         </p>
         <p>
           Think of these not as attributes that represent your talents, but rather resources provided by the hardware of
           the body and brain. They represent how much effort you can bring to an activity and how much stress you can
-          handle. Each <Crosslink target={topics.METABOLISM}>Metabolism</Crosslink> is assigned a score, from 3 to 6 for
+          handle. Each <Crosslink target={linkMap.Gameplay}>Metabolism</Crosslink> is assigned a score, from 3 to 6 for
           normal humans.
         </p>
         <p>
           Every action you take, from the athletic to the academic, will use one
-          <Crosslink target={topics.PHYS_METAB}>Physical Metabolism</Crosslink>.
+          <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolism</Crosslink>.
         </p>
       </Section>
       <Section header="Hidden Body" isChapterIntroColumn isClassified>
         <p>
           Your character also has 3
-          <Crosslink inverted target={topics.HIDDEN_METAB}>
+          <Crosslink inverted target={linkMap.HiddenMetabolisms}>
             Hidden Metabolisms
           </Crosslink>
           that normal humans do not; <Metabolism self />, <Metabolism near />, and <Metabolism far />.
@@ -50,7 +55,7 @@ function Chapter2() {
         </p>
         <p>
           Every action you take will also use one
-          <Crosslink inverted target={topics.HIDDEN_METAB}>
+          <Crosslink inverted target={linkMap.HiddenMetabolisms}>
             Hidden Metabolism
           </Crosslink>
           , resulting in a pairing of the physical and hidden.
@@ -60,23 +65,24 @@ function Chapter2() {
       <Section header="Creating a Character">
         <p>
           The first step of playing the game is to create the character you will play as. The two main statistics of
-          your character are <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> and
-          <Crosslink target={topics.TRAITS}>Traits</Crosslink>, and the steps of character creation will walk you
-          through defining these values. You will also have a few secondary characteristics like Action Bonuses or
-          Entanglements, that will primarily come into play after character creation.
+          your character are <Crosslink target={linkMap.Gameplay}>Metabolisms</Crosslink> and
+          <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink>, and the steps of character creation
+          will walk you through defining these values. You will also have a few secondary characteristics like Action
+          Bonuses or Entanglements, that will primarily come into play after character creation.
         </p>
         <p>
-          <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink> are numbers indicating how much effort,
+          <Crosslink target={linkMap.Gameplay}>Metabolisms</Crosslink> are numbers indicating how much effort,
           attention, and willpower a character can bring to an action.
         </p>
         <p>
-          <Crosslink target={topics.TRAITS}>Traits</Crosslink> are keywords that flesh out additional details about your
-          character, and they provide a bonus whenever they are relevant to an action. They can be almost anything that
-          your character is able to leverage in a useful way. Generally, skills, social status, relationships, community
-          membership, authority, wealth, possessions, careers, apparent physical traits, fashions, roles you fill, or
-          other advantages are good Traits. Don't think too hard about having precise
-          <Crosslink target={topics.TRAITS}>Traits</Crosslink>, if they're vague you will be able to revise them later.
-          When playing the game, any time one of your Traits is relevant to a Challenge you gain Advantage on it.
+          <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink> are keywords that flesh out additional
+          details about your character, and they provide a bonus whenever they are relevant to an action. They can be
+          almost anything that your character is able to leverage in a useful way. Generally, skills, social status,
+          relationships, community membership, authority, wealth, possessions, careers, apparent physical traits,
+          fashions, roles you fill, or other advantages are good Traits. Don't think too hard about having precise
+          <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink>, if they're vague you will be able to
+          revise them later. When playing the game, any time one of your Traits is relevant to a Challenge you gain
+          Advantage on it.
         </p>
         <p>
           Action Bonuses are a number assigned to each action you can take in combat, representing your skill with
@@ -93,11 +99,12 @@ function Chapter2() {
               Choose a character concept.
               <ol>
                 <li>
-                  Set each <Crosslink target={topics.PHYS_METAB}>Physical Metabolism</Crosslink> score to 3, and then
-                  choose one that represents your character concept to increase by one.
+                  Set each <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolism</Crosslink> score to 3,
+                  and then choose one that represents your character concept to increase by one.
                 </li>
                 <li>
-                  Pick 3 <Crosslink target={topics.TRAITS}>Traits</Crosslink> that reflect your concept.
+                  Pick 3 <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink> that reflect your
+                  concept.
                 </li>
               </ol>
             </li>
@@ -105,7 +112,8 @@ function Chapter2() {
               Choose a Physical Origin.
               <ol>
                 <li>
-                  Pick the <Crosslink target={topics.TRAITS}>Traits</Crosslink> provided by this origin.
+                  Pick the <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink> provided by this
+                  origin.
                 </li>
                 <li>Choose a Physical Metabolism score that represents this origin and increase it by 1.</li>
               </ol>
@@ -114,7 +122,8 @@ function Chapter2() {
               Choose a Hidden Origin.
               <ol>
                 <li>
-                  Pick the <Crosslink target={topics.TRAITS}>Traits</Crosslink> provided by this origin.
+                  Pick the <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink> provided by this
+                  origin.
                 </li>
                 <li>Choose a Physical Metabolism score that represents this origin and increase it by 1.</li>
                 <li>Choose a Hideen Metabolism score that represents this origin, and increase it from 0 to 1.</li>
@@ -132,20 +141,22 @@ function Chapter2() {
           </p>
           <p>
             Once you have a concept to work with, look at your
-            <Crosslink target={topics.PHYS_METAB}>Physical Metabolisms</Crosslink>, of Fight, Flight, and Focus. Start
-            each with a score of 3 points, then choose one that most represents your character concept and increase this
-            one to 4.
+            <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolisms</Crosslink>, of Fight, Flight, and
+            Focus. Start each with a score of 3 points, then choose one that most represents your character concept and
+            increase this one to 4.
           </p>
           <p>
-            Finally, write in 3 <Crosslink target={topics.TRAITS}>Traits</Crosslink>. These can be anything, but in
-            general they should somehow represent your character concept. For example, a scientist might have
-            <Crosslink target={topics.TRAITS}>Traits</Crosslink> representing fields of knowledge and contacts in
-            academia.
+            Finally, write in 3 <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink>. These can be
+            anything, but in general they should somehow represent your character concept. For example, a scientist
+            might have
+            <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink> representing fields of knowledge and
+            contacts in academia.
           </p>
           <p>
-            <Crosslink target={topics.TRAITS}>Traits</Crosslink> can be vague at this stage! During play, an unspecific
-            <Crosslink target={topics.TRAITS}>Trait</Crosslink> can be revised to something more specific as we get to
-            know the character.
+            <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink> can be vague at this stage! During
+            play, an unspecific
+            <Crosslink target={linkMap.AdvantageAndDisadvantage}>Trait</Crosslink> can be revised to something more
+            specific as we get to know the character.
           </p>
         </Section>
         <Section header="Step 2: Physcial Origin">
@@ -156,26 +167,26 @@ function Chapter2() {
           </p>
           <p>
             Choose a Physical Origin from the list at the end of this chapter. Once you have chosen, this origin's
-            description will give you three prompts that grant you <Crosslink target={topics.TRAITS}>Traits</Crosslink>.
-            The prompts provide guidelines for what these traits might be, but ultimately you can choose anything that
-            fits your character even if the prompts don't. Finally, this origin will let you choose a Physcial
-            Metabolism to increase.
+            description will give you three prompts that grant you{" "}
+            <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink>. The prompts provide guidelines for
+            what these traits might be, but ultimately you can choose anything that fits your character even if the
+            prompts don't. Finally, this origin will let you choose a Physcial Metabolism to increase.
           </p>
         </Section>
         <Section header="Step 3: Hidden Origin">
           <p>
             A Hidden Origin describes how a character first began to sense their
-            <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink>. Often a first encounter with
+            <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink>. Often a first encounter with
             supernatural phenomena is what starts this process. Typically, the way your character experiences their
             Hidden Body slightly colors their personality and strongly influences the way they react to their
-            <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> being stressed.
+            <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> being stressed.
           </p>
           <p>
             Choose a Hidden Origin from the list at the end of this chapter. Once you have chosen, this origin's
-            description will give you three prompts that grant you <Crosslink target={topics.TRAITS}>Traits</Crosslink>.
-            The prompts provide guidelines for what these traits might be, but ultimately you can choose anything that
-            fits your character even if the prompts don't. Finally, this origin will let you choose both a Physcial and
-            a Hidden Metabolism to increase.
+            description will give you three prompts that grant you{" "}
+            <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink>. The prompts provide guidelines for
+            what these traits might be, but ultimately you can choose anything that fits your character even if the
+            prompts don't. Finally, this origin will let you choose both a Physcial and a Hidden Metabolism to increase.
           </p>
         </Section>
         <Section header="Choosing Traits">
@@ -190,14 +201,14 @@ function Chapter2() {
           </p>
           <Section header="Combat Skills and Equipment">
             <p>
-              <Crosslink target={topics.TRAITS}>Traits</Crosslink> chosen at character creation are not meant to
-              represent combat proficiency. They will typically not be relevant for standard combat actions. For
-              example, a Trait like "Army Marksman" might be relevant in many of situations, but it won't help you shoot
-              a gun in a fight. Action Bonuses better represent combat proven abilities. If you wish to play a character
-              who is already capable in combat, you may omit one of your Traits and instead increase an Action Bonus of
-              your choice from 0 to 1. Action Bonuses greater than 1 represent a level of combat ability typically
-              unavailable to normal humans. Additionally, you may also omit a Trait to instead gain a small arsenal of
-              combat equipment.
+              <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink> chosen at character creation are
+              not meant to represent combat proficiency. They will typically not be relevant for standard combat
+              actions. For example, a Trait like "Army Marksman" might be relevant in many of situations, but it won't
+              help you shoot a gun in a fight. Action Bonuses better represent combat proven abilities. If you wish to
+              play a character who is already capable in combat, you may omit one of your Traits and instead increase an
+              Action Bonus of your choice from 0 to 1. Action Bonuses greater than 1 represent a level of combat ability
+              typically unavailable to normal humans. Additionally, you may also omit a Trait to instead gain a small
+              arsenal of combat equipment.
             </p>
           </Section>
         </Section>
@@ -211,15 +222,15 @@ function Chapter2() {
           <Section header="The Inciting Incident">
             <p>
               Normal humans typically do not have points in the
-              <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink> and starting characters are similar
-              with only a single point in one of them. However, this is about to change. Somewhere early after the game
-              has started, usually during the first session, the characters will have their first contact with the
-              overtly superatural and this contact will force them to fully realize their connection to their hidden
+              <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> and starting characters are
+              similar with only a single point in one of them. However, this is about to change. Somewhere early after
+              the game has started, usually during the first session, the characters will have their first contact with
+              the overtly superatural and this contact will force them to fully realize their connection to their hidden
               body.
             </p>
             <p>
               After this inciting incident occurs, permanently increase all of your
-              <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolism</Crosslink> scores by 1.
+              <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolism</Crosslink> scores by 1.
             </p>
           </Section>
           <Section header="Revising Traits">
@@ -255,8 +266,8 @@ function Chapter2() {
       <Section header="Physical Origins">
         <p>
           Physical Origins represent your character's place in the world and will provide guidance for choosing your
-          next <Crosslink target={topics.TRAITS}>Traits</Crosslink>. Some may even provide bonuses to
-          <Crosslink target={topics.METABOLISM}>Metabolisms</Crosslink>.
+          next <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink>. Some may even provide bonuses to
+          <Crosslink target={linkMap.Gameplay}>Metabolisms</Crosslink>.
         </p>
         <Section header="Conventional" isInset>
           <p>
@@ -488,10 +499,11 @@ function Chapter2() {
           </p>
           <ol>
             <li>
-              Gain three instances of the <Crosslink target={topics.TRAITS}>Traits</Crosslink> Unknown Skill. You don't
-              realize you have these skills and you do not recall practicing them. Later, when you attempt a Challenge,
-              you can permanently replace one of these
-              <Crosslink target={topics.TRAITS}>Traits</Crosslink> with a skill relevant to this Challenge.
+              Gain three instances of the <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink>{" "}
+              Unknown Skill. You don't realize you have these skills and you do not recall practicing them. Later, when
+              you attempt a Challenge, you can permanently replace one of these
+              <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink> with a skill relevant to this
+              Challenge.
             </li>
             <li>
               Choose a Physical Metabolism and increase it by 1. Regardless of where it came from in your past, you feel
@@ -514,10 +526,10 @@ function Chapter2() {
         <Section header="Competence" isClassified>
           <p>
             <strong>Things always seemed to come easily for you.</strong> Somehow, at a young age, you started to
-            subconsciously access to a small portion of the{" "}
-            <Crosslink target={topics.HIDDEN_METAB}>Hidden Metabolisms</Crosslink>, giving you more resources to succeed
-            at anything you attempted. Perhaps you've always wondered why other people had to put so much effort into
-            learning new skills when it seemed so easy for you.
+            subconsciously access to a small portion of the
+            <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink>, giving you more resources to
+            succeed at anything you attempted. Perhaps you've always wondered why other people had to put so much effort
+            into learning new skills when it seemed so easy for you.
           </p>
           <ol>
             <li>
@@ -551,7 +563,7 @@ function Chapter2() {
             </li>
           </ol>
         </Section>
-        <Section header="Dissociated Self" isClassified>
+        <Section header="Dissociated Self" topicKey="dissociatedSelfOrigin" isClassified>
           <p>
             <strong>You always felt like something was wrong about your body.</strong> Maybe you saw yourself with a
             different gender or appearance; maybe felt like you were a mind awkwardly piloting a body; maybe you wished
@@ -570,7 +582,7 @@ function Chapter2() {
               in your youth that was considered outside of the stereotypes for someone who looked like you.
             </li>
             <li>
-              <h5 className="subheader">During this experience, how did you cope?</h5>{" "}
+              <h5 className="subheader">During this experience, how did you cope?</h5>
               <strong>You turned inward.</strong> Gain a trait representing a creative skill or an uncommon field of
               knowledge you cultivated during this time.
               <br />
@@ -591,7 +603,7 @@ function Chapter2() {
             </li>
           </ol>
         </Section>
-        <Section header="Dissociated Near" isClassified>
+        <Section header="Dissociated Near" topicKey="dissociatedNearOrigin" isClassified>
           <p>
             <strong>You always felt like the was something off about the world around you.</strong> Maybe it all seems
             like a dream, an illusion, simulation, or some other crude imitation; maybe you felt constrained by the
@@ -635,7 +647,7 @@ function Chapter2() {
             </li>
           </ol>
         </Section>
-        <Section header="Dissociated Far" isClassified>
+        <Section header="Dissociated Far" topicKey="dissociatedFarOrigin" isClassified>
           <p>
             <strong>You always struggled to relate to other people.</strong> Maybe they always reacted differently than
             you expected; maybe you couldn't understand socializing seemed to be natural to others, maybe it was
@@ -654,7 +666,7 @@ function Chapter2() {
               that was important to you in your youth.
             </li>
             <li>
-              <h5 className="subheader">During this experience, how did you cope?</h5>{" "}
+              <h5 className="subheader">During this experience, how did you cope?</h5>
               <strong>You learned to mask.</strong> Gain a Trait representing a social skill or connection you've
               cultivated despite the challenges.
               <br />
@@ -729,7 +741,7 @@ function Chapter2() {
           </p>
           <ol>
             <li>
-              <h5 className="subheader">What was the threat you perceived from this event?</h5>{" "}
+              <h5 className="subheader">What was the threat you perceived from this event?</h5>
               <strong>Physical safety.</strong> Gain a Trait representing a type of fitness you developed to deal with
               the consequences of this event.
               <br />

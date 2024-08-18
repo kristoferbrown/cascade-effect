@@ -2,12 +2,12 @@
     background: linear-gradient(0deg, rgba(0,0,0,.05) 30%, rgba(255,255,255,0) 30%);
     color: var(--hiddenSpace);
     text-decoration: none;
-    -webkit-text-stroke: 0.1px var(--hiddenSpace);
+    -webkit-text-stroke: 0.4px var(--hiddenSpace);
 }
 
 .classified .crosslink {
     color: var(--physicalSpace);
-    -webkit-text-stroke: 0.1px var(--physicalSpace);
+    -webkit-text-stroke: 0.4px var(--physicalSpace);
 }
 
 .crosslink:hover {

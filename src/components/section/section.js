@@ -19,8 +19,9 @@ const Section = ({
   isInset,
   isOpenAtDepth = 2,
   metabolized,
+  topicKey,
 }) => {
-  const { openSectionList, setOpenSectionList, isAllForcedOpen, wasAllOpened, setWasAllOpened } =
+  const { openSectionList, setOpenSectionList, isAllForcedOpen, wasAllOpened, setWasAllOpened, topicMap } =
     useContext(RulebookContext);
   const isVisible = openSectionList.has(coordinates);
   const sectionContainer = useRef(null);
@@ -29,6 +30,12 @@ const Section = ({
   useEffect(() => {
     if (depth > isOpenAtDepth) {
       openSectionList.add(coordinates);
+    }
+    const topic = topicKey ? topicKey : header.replace(/\s+/g, "").replace("&", "And");
+    if (topicMap.current[topic]) {
+      console.log("topic exists, rename this or add a topicKey", topic);
+    } else {
+      topicMap.current[topic] = coordinates;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
