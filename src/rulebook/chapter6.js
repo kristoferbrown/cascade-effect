@@ -457,10 +457,7 @@ function Chapter6() {
               intro={<p>You can make the most of enhanced finesse while in close combat.</p>}
               rank3Met={{ near: true }}
               ranks={[
-                <p>
-                  Drawing or reloading a weapon are now both non-actions. Any target that has one of your allies within
-                  melee range has disadvantage on reactions to your attacks.
-                </p>,
+                <p>Drawing or reloading a weapon are now both non-actions.</p>,
                 <p>
                   Any time you attack with a weapon of a smaller size than your rank in this specialization, it deals
                   Threat as if it were the same size as this rank.

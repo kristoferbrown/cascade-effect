@@ -237,7 +237,51 @@ function Chapter4() {
           </p>
         </Section>
       </Section>
-      {/* @todo see if actions fit here... */}
+
+      <Section header="Combat Situations">
+        <p>
+          A wide variety of complex situations can arise in combat. Scenarios that are part of common tactics and are
+          described here. For every other unexpected situation, the GM will decide how to resolve it.
+        </p>
+        <Section header="Ambush">
+          <p>
+            Any combatants are not aware of their enemies when initiative is determined are considered to be surprised.
+            When a surprised combatant takes their turn during the first round of combat, they cannot take an exhale
+            action. If they don't have access to an inhale action, like most unentangled humans, then they are unabled
+            to take any actions during this turn.
+          </p>
+        </Section>
+        <Section header="Cover">
+          <p>
+            Any obstacle that can get between two combatants can be used as cover. Cover is assigned a numerical value
+            based on how well it protects you from the current attacker. This number is determined based on the line of
+            sight of the current attacker, a different attacker who's line of sight is not blocked by the cover may have
+            no cover or a lower cover value. Cover that only blocks a small portion of your body has a value of 1,
+            blocking half of your body has a value of 3, and cover that blocks your entire body has a value of 6.
+          </p>
+          <p>
+            When you are attacked, the incoming Threat is reduced by the value of the cover. If the value of the cover
+            is 6 or greater, line of sight to you is blocked and you cannot be the target of an attack action or any
+            other action that requires seeing you.
+          </p>
+          <p>
+            If you are not currently in cover when you use a reaction against an attack, but you use the free movement
+            provided by the reaction to move into cover, then you can resolve the reaction with the benefit of the
+            cover. You can use the Hide action to duck behind the cover to increase the value.
+          </p>
+        </Section>
+        <Section header="Stealth">
+          <p>
+            Any time you you attack an enemy that does not know your location, you have advantage on the attack. Taking
+            this attack reveals your location to the target, and to everyone if it makes any noise.
+          </p>
+          <p>
+            If you are in or next to cover, you can use the Hide action to attempt to make enemies lose track of your
+            location.
+          </p>
+        </Section>
+      </Section>
+
       <Section header="Actions">
         <p>
           In combat you are limited to taking a list of specific actions. All actions are associated with an Action
