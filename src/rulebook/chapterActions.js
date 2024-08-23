@@ -13,7 +13,7 @@ function ChapterActions() {
   const linkMap = topicMap.current;
 
   return (
-    <Section coordinates={"4"} header="Actions">
+    <Section coordinates={"5"} header="Actions">
       <ChapterIntro>
         <p>
           The actions listed in this chapter spell out how to handle some of the things your character may attempt to

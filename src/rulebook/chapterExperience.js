@@ -13,7 +13,7 @@ function ChapterExperience() {
   // const linkMap = topicMap.current;
 
   return (
-    <Section coordinates={"5"} header="Experience">
+    <Section coordinates={"6"} header="Experience">
       <ChapterIntro>
         <p>
           The Physical Metabolisms you start the game with only improve slowly with great effort. They're likely to see

@@ -15,7 +15,7 @@ function ChapterEntanglements() {
   const linkMap = topicMap.current;
 
   return (
-    <Section coordinates={"6"} header="Entanglements" topicKey="entanglementsChapter">
+    <Section coordinates={"7"} header="Entanglements" topicKey="entanglementsChapter">
       <ChapterIntro>
         <p>
           Each Entanglement contains several specializations sorted into two styles, one intuitive and one esoteric.
