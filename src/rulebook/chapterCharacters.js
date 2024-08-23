@@ -7,7 +7,7 @@ import Metabolism from "../components/metabolism/metabolism";
 import Section from "../components/section/section";
 import Logomark from "../svgs/logomark";
 
-function Chapter2() {
+function ChapterCharacters() {
   const { topicMap } = useContext(RulebookContext);
   const linkMap = topicMap.current;
 
@@ -778,4 +778,4 @@ function Chapter2() {
     </Section>
   );
 }
-export default Chapter2;
+export default ChapterCharacters;

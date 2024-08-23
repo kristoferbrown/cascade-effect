@@ -8,7 +8,7 @@ import Logomark from "../svgs/logomark";
 // import Pair from "../components/metabolism/pair";
 // import Metabolism from "../components/metabolism/metabolism";
 
-function Chapter5() {
+function ChapterExperience() {
   // const { topicMap } = useContext(RulebookContext);
   // const linkMap = topicMap.current;
 
@@ -157,4 +157,4 @@ function Chapter5() {
   );
 }
 
-export default Chapter5;
+export default ChapterExperience;

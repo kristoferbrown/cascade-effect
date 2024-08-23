@@ -2,12 +2,13 @@ import "./app.css";
 import RulebookProvider from "../../context/rulebookContext";
 import GlobalToggle from "./globalToggle";
 
-import Chapter1 from "../../rulebook/chapter1";
-import Chapter2 from "../../rulebook/chapter2";
-import Chapter3 from "../../rulebook/chapter3";
-import Chapter4 from "../../rulebook/chapter4";
-import Chapter5 from "../../rulebook/chapter5";
-import Chapter6 from "../../rulebook/chapter6";
+import ChapterIntroduction from "../../rulebook/chapterIntroduction";
+import ChapterCharacters from "../../rulebook/chapterCharacters";
+import ChapterGameplay from "../../rulebook/chapterGameplay";
+import ChapterCombat from "../../rulebook/chapterCombat";
+import ChapterActions from "../../rulebook/chapterActions";
+import ChapterExperience from "../../rulebook/chapterExperience";
+import ChapterEntanglements from "../../rulebook/chapterEntanglements";
 // import Chapter7 from "../../rulebook/chapter7";
 
 function App() {
@@ -15,12 +16,13 @@ function App() {
     <RulebookProvider>
       <div className="App">
         <GlobalToggle />
-        <Chapter1 />
-        <Chapter2 />
-        <Chapter3 />
-        <Chapter4 />
-        <Chapter5 />
-        <Chapter6 />
+        <ChapterIntroduction />
+        <ChapterCharacters />
+        <ChapterGameplay />
+        <ChapterCombat />
+        <ChapterActions />
+        <ChapterExperience />
+        <ChapterEntanglements />
         {/* <Chapter7 /> */}
         <div className="section depth1 charSheetLink">
           <a
@@ -31,7 +33,6 @@ function App() {
           >
             Character Sheet (.pdf)
           </a>
-          {/* @TODO ADD SHEETS HERE */}
         </div>
       </div>
     </RulebookProvider>

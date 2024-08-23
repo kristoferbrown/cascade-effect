@@ -8,7 +8,7 @@ import Pair from "../components/metabolism/pair";
 import Crosslink from "../components/crosslink/crosslink";
 import Metabolism from "../components/metabolism/metabolism";
 
-function Chapter3() {
+function ChapterGameplay() {
   const { topicMap } = useContext(RulebookContext);
   const linkMap = topicMap.current;
 
@@ -591,4 +591,4 @@ function Chapter3() {
   );
 }
 
-export default Chapter3;
+export default ChapterGameplay;

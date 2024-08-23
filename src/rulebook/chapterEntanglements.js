@@ -10,7 +10,7 @@ import Logomark from "../svgs/logomark";
 import Pair from "../components/metabolism/pair";
 import Metabolism from "../components/metabolism/metabolism";
 
-function Chapter6() {
+function ChapterEntanglements() {
   const { topicMap } = useContext(RulebookContext);
   const linkMap = topicMap.current;
 
@@ -2390,4 +2390,4 @@ function Chapter6() {
   );
 }
 
-export default Chapter6;
+export default ChapterEntanglements;

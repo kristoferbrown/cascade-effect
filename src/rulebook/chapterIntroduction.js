@@ -6,7 +6,7 @@ import Section from "../components/section/section";
 import Crosslink from "../components/crosslink/crosslink";
 import Logomark from "../svgs/logomark";
 
-function Chapter1() {
+function ChapterIntroduction() {
   const { topicMap } = useContext(RulebookContext);
   const linkMap = topicMap.current;
 
@@ -259,4 +259,4 @@ function Chapter1() {
   );
 }
 
-export default Chapter1;
+export default ChapterIntroduction;
