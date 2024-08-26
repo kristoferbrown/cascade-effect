@@ -450,9 +450,10 @@ function ChapterGameplay() {
           <p>
             These states can only be caused by taking significant physical Stress. When Stress reduces a Physical
             Metabolism maximum to 0, you gain the injury State that corresponds to it. If an injured metabolism has its
-            maximum restored to above 0 this state is removed, but it cannot be removed by any other means. If further
-            Stress is dealt to an Injured metabolism, the GM or the attacker that caused the Stress decides which
-            Physical Metabolism takes the Stress instead.
+            maximum restored to above 0 this state is removed, but it cannot be removed by any other means. If more
+            Stress was dealt to you than needed to injure the Metabolism, of if Stress is dealt to an already Injured
+            metabolism, the GM or the attacker that caused the Stress decides which Physical Metabolism takes the Stress
+            instead.
           </p>
           <p>
             If you ever have two injury States, you also gain the Dying State. If you gain the injury States for all
@@ -563,11 +564,16 @@ function ChapterGameplay() {
             </p>
           </Section>
           <Section header="Out of Body">
-            <p>Your physical body is unconscious, but your mind can still move freely in hidden space.</p>
+            <p>
+              Your physical body is unconscious, but your hidden body is still aware and can still move freely in hidden
+              space.
+            </p>
             <p>
               You cannot interact with or be sensed by anything in physical space, however the physical world casts
               shadows into the hidden world that impede your movement. You are aware of the shape and position of
-              physical objects within a meter of you, but have no other senses.
+              physical objects within a meter of you, but have no other senses. If you use the Move action to travel
+              through hidden space, or take any other action in hidden space, only hidden metabolisms may be applied to
+              it.
             </p>
           </Section>
           <Section header="Suppressed">

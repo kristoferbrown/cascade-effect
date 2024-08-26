@@ -91,13 +91,15 @@ function ChapterActions() {
         <p>
           Basic actions can be done as either your inhale or exhale action, or over the course of a few seconds out of
           combat. These actions often do not require Challenges, so they can be taken without spending any resources.
-          However, some provide ways to use a Challenge to improve their effects.
+          However, some provide ways to use a Challenge to improve their effects. All basic actions are improved by and
+          depend on the associated Action Bonus, but can still provide a useful benefit when this bonus is 0. If any
+          Challenge is involved, this bonus is added to the Progress.
         </p>
         <Section header="Aim">
           <p>You take a moment to line up an attack.</p>
           <p>
-            Choose a target. If the next attack you make is on this target, add your Aim Bonus to any Threat it deals
-            and disadvantage to the target's reaction.
+            As an inhale action, choose a target you can see. If your following exhale action includes an attack on this
+            target, this attack is made with advantage and your Aim Bonus is added to it.
           </p>
         </Section>
         <Section header="Heal">
@@ -106,8 +108,9 @@ function ChapterActions() {
             physical body just enough to keep it moving.
           </p>
           <p>
-            Remove one Stress from all of the target's Physical Metabolisms that currently have a maximum equal or lower
-            than your Heal bonus, removing any Injury States in the process.
+            Touch a target to remove one Stress from a Physical Metabolism that currently has a maximum equal to or
+            lower than your Heal bonus. If the target was youself, also remove one Stress from another Physical
+            Metabolism with any maximum value even if your Heal bonus is 0 or no other Metabolism was healed.
           </p>
         </Section>
         <Section header="Hide">
@@ -115,9 +118,9 @@ function ChapterActions() {
           <p>
             You can only take this action if you are next to, or use your free movement to get next to, something that
             could plausibly be used as cover. The value of the cover increases by your Hide bonus. Anyone the cover
-            protects you from can make a Low Effort Perception Reaction. Anyone with a result lower than the cover's
-            increased value no longer knows your exact position and can't target you directly. These benefits end
-            whenever you move more than a meter from your source of cover.
+            protects you from can make a low effort Perception reaction. Anyone with a result lower than the cover's
+            increased value (or its original value if your Hide bonus is 0) no longer knows your exact position and
+            can't target you directly. These benefits end whenever you move more than a meter from your source of cover.
           </p>
           <p>
             You can also take this action out of combat to act stealthily. When you do so treat it as a Challenge and
@@ -128,9 +131,10 @@ function ChapterActions() {
           <p>You interact with something in the environment, help an ally, or execute a clever plan.</p>
           <p>
             You can use Improvise to attempt any other course of action that could plausibly be taken, but isn't covered
-            in the other actions. If the GM decides this action has no Difficulty, or a Difficulty less than your
-            Improvise bonus, it simply occurs successfully, otherwise you must resolve this action as a Challenge.
-            Occaisonally, very simple interactions with the environment might even be non-actions.
+            in the other actions. Many simple object interations such as drawing or swapping a weapon, flipping a
+            switch, or grabbing a loose object have no Difficulty and simply happen successfully. Similarly, if the
+            action has a Difficulty less than your Improvise bonus, it also occurs successfully. Anything with a higher
+            Difficulty must be resolved as a Challenge.
           </p>
           <p>
             Alternatively, you may use Improvise to come up with a plan that could plausibly improve the outcome of a
@@ -145,17 +149,17 @@ function ChapterActions() {
           </p>
         </Section>
         <Section header="Manipulate">
-          {/* @todo lets come back to this one.. */}
           <p>
             You attempt to influence someone else socially, threatening, taunting, distracting, or de-escalating them.
           </p>
           <p>
-            Pick a target who makes a Low Effort Willpower reaction. If the result is lower than 1 + your Manipulate
-            bonus, they gain a State of your choice between Afraid, Calmed, Enthralled, or Taunted until the start of
-            your next turn.
+            Pick a target who makes a Low Effort Willpower reaction. If the result is lower than your Manipulate bonus,
+            they gain a State of your choice between Afraid, Calmed, Enthralled, or Taunted with intensity 1 until
+            removed or the start of your next turn.
           </p>
           <p>
-            If you do this as a full action, the target's Willpower Reaction must instead beat the results of a
+            You can also do this as full action if your Manipulate bonus is 0 or you wish to have a greater impact. When
+            you do, the target's Willpower Reaction must instead beat the results of a
             <Pair focus far /> Challenge, plus your Manipulate Bonus. If the reaction has a lower result, they gain the
             chosen State with an intensity equal the difference between it and your Challenge.
           </p>
@@ -174,21 +178,22 @@ function ChapterActions() {
           <p>
             Spaces with obstructions may have a Difficulty assigned to them. Instead of using 1 meter of movement to
             enter these spaces you must use a number of meters equal to the Difficulty. For example you may need to
-            spend 2 meters of movement on spaces that require traversing difficult terrain, balancing, or opening a
-            door, and even 3 meters for climbing a meter vertically or scrambling over a boulder. Particularly dangerous
-            terrain may also increase the Risk level, and the GM may even add consequences, such as falling, for failing
-            to get enough Progress to enter the dangerous space.
+            spend 2 meters of movement to enter spaces that require opening a door, crossing rough terrain, balancing,
+            or avoiding an obstacle, and even 3 meters for climb a meter vertically or scramble over a chest high
+            boulder. Particularly dangerous terrain may also increase the Risk level, and the GM may even add
+            consequences, such as falling, for failing to get enough Progress to enter the dangerous space. Typically,
+            you can see these risks before choosing to move into the space.
           </p>
         </Section>
         <Section header="Push">
-          <p>With great effort, you push yourself to the limit to get an important task done.</p>
+          <p>With great effort, you push yourself to the limit to avoid failing an important task.</p>
           <p>
             You can only take this action immediately after attempting a different action or Challenge with
-            unsatisfactory results. This extends the original attempt, replacing the results. Take any number of points
-            of unavoidable Stress to <Metabolism focus />, as long as it is lower than its current maximum and wont
-            cause injury. Add this number and your Push bonus to any bonus that was applied to the original task. If a
-            Challenge was involved, treat it as if you spent 1 additional point from each involved Metabolism. Then
-            resolve the original action with these new results.
+            unsatisfactory results and on the same turn as the original action if you are in combat. This extends the
+            original attempt, replacing the results. Take any number of points of unavoidable Stress to
+            <Metabolism focus />, as long as it is lower than its current maximum and wont cause injury. Add this number
+            and your Push bonus to the results of the original action, as if it were done with an Action Bonus increased
+            by this amount. Then resolve the original action with these new results.
           </p>
         </Section>
         <Section header="Ready">

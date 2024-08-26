@@ -1455,6 +1455,12 @@ function ChapterEntanglements() {
                   Metabolism equal to Boost. The points are lost or gained from whatever combination of Metabolisms the
                   affected target chooses.
                 </p>
+                <p>
+                  If you already have an ongoing field from a previous use of this event when you induce it, and the new
+                  field is contiguous with the old field, then they merge into a single field. The properties of the
+                  combined field all match the whatever metrics were applied to it the most recent time it was induced.
+                  If the new field is not connected to the old one it replaces the old one.
+                </p>
               </>
             }
           />
@@ -1693,8 +1699,10 @@ function ChapterEntanglements() {
               ranks={[
                 <p>
                   Your Sublime event now has the metric “Blink Range: 2 meters, minimum = 0”. If you increase Blink
-                  Range above 0, the event causes you to teleport by forcing your body into hidden space and instantly
-                  exiting it anywhere within Blink Range. You cannot teleport through walls or obstacles.
+                  Range above 0, inducing the event becomes a basic action and it causes you to teleport by forcing your
+                  body into hidden space and instantly exiting it anywhere within Blink Range. You cannot teleport
+                  through walls or obstacles. If your physical body is already sublimed into hidden space, you can use
+                  tthis exit it anywhere within Blink Range.
                 </p>,
 
                 <p>Replace the Blink Range metric with “Blink Range: 4 meters, minimum = 0”.</p>,
@@ -1792,15 +1800,16 @@ function ChapterEntanglements() {
               ranks={[
                 <p>
                   Your Sublime events now have the metric “Bodies: 1 per 4, minimum = 0”. At this rank, you can only
-                  increase this metric to 1 and it can only be used to target yourself. This causes you to vanish
-                  entirely from physical space. If you do so, you can exit hidden space later and your body will
-                  reappear at the new location you traveled to while sublimed.
+                  increase this metric to 1 and it can only be used to target yourself. This causes your physical body
+                  vanish entirely from physical space. While your physical body is sublimed into hidden space in this
+                  way, you can apply any of your Metabolisms to actions taken in hidden space and when you exit hidden
+                  space later your body will reappear at the new location you traveled to while sublimed.
                 </p>,
                 <p>
                   You can now increase the Bodies metric up to your Sublime bonus and it can now also be used on any
                   willing participant that you touch. They can then move freely in hidden space, but can only exit when
-                  you decide they do or naturally after an hour. All targets have the same Depth, Sensory Range, and
-                  Blink Range.
+                  you decide they do or they will exit naturally after an hour. All targets have the same Depth, Sensory
+                  Range, and Blink Range.
                 </p>,
                 <p>
                   The Bodies metric can now target unwilling participants forcing them to enter hidden space. You must
@@ -1827,10 +1836,10 @@ function ChapterEntanglements() {
                 </p>,
                 <p>
                   You can now use Sublime as a reaction instead of using a normal reaction to being attacked to attempt
-                  to phase out harm's way. The total Progress used to induce the event reduces the Threat dealt by the
-                  attack in the same way a normal reaction would. After resolving the reaction, if you increased the
-                  Bodies metric you can enter hidden space and can no longer be targeted by physical attacks. Otherwise,
-                  you stay in place. Increase your Self score by 1.
+                  to phase out harm's way. The total Progress used to induce the event, plus your Sublime Action bonus,
+                  reduces the Threat dealt by the attack in the same way a normal reaction would. After resolving the
+                  reaction, if you increased the Bodies metric you can enter hidden space and can no longer be targeted
+                  by physical attacks. Otherwise, you stay in place. Increase your Self score by 1.
                 </p>,
               ]}
             />
