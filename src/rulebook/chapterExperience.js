@@ -107,23 +107,27 @@ function ChapterExperience() {
 
       <Section header="Using Cascade Events">
         <p>
-          Cascade events are a special class of action typically used to do something overtly supernatural. Each
-          Entanglement is associated with one cascade event its action bonus. You can only induce a cascade event if
-          your action bonus for it is above 0. The action bonus will be used to determine the maximum effectiveness of
-          the event.
+          Cascade events are a special class of action typically used to do something overtly supernatural. Each event
+          is associated with an entanglement, if you have at least 1 rank in this entanglement you can induce the event.
         </p>
         <p>
-          Unless otherwise specified in the event’s description, inducing a cascade event is a full action and any
-          Challenges involved are default effort and low risk. Focus plus the Hidden Metabolism associated with the
-          event are required in any Challenges.
+          Unless otherwise specified in the event’s description, inducing a cascade event is a full action and a default
+          effort, low risk Challenge. Focus plus the Hidden Metabolism associated with the event are required in any
+          Challenges.
+        </p>
+        <p>
+          When induced, an event creates some small effect even if no Progress is invested in it. Each event has an
+          action bonus, if this bonus is above 1 you can use Progress to increase the effectiveness of the event.
         </p>
         <Section header="Event Metrics">
           <p>
             The amount of Progress needed to induce an event, and the strength of the event, are described by metrics.
             Any Progress created when inducing the event is spent to increase these metrics. Each metric can be
             increased by up to a maximum number of points equal to your Action Bonus for this event. For example, if
-            your action bonus for an event is 3 and the event has two different metrics, you could increase either
-            metric from 0 to 1, 2 or 3. If you increase both to 3 that typically would require 6 Progress to do.
+            your action bonus for an event is 3 and the event has two different basic metrics, you could increase either
+            metric from 0 to 1, 2 or 3 and increasing both to 3 would typically would require 6 Progress to do.
+            Conversely, if your action bonus is 0 you cannot increase any metrics and therefore they all remain at their
+            minimum value.
           </p>
           <p>
             Most metrics are a basic single unit. This unit indicates both how much the metric increases per point of
@@ -139,8 +143,9 @@ function ChapterExperience() {
           <p>
             Finally, some metrics specify a minimum value. For example, the metric “Range: 10X, minimum = 1 meter” means
             the range starts 1 meter and is multiplied by 10 per point of Progress. This is often used to set the
-            minimum to a character statistic, for example “Size: 1 meter, minimum = Bonus” means the size starts at a
-            number of meters equal to the event’s Action Bonus and can be increased in 1 meter increments.
+            minimum to 0 or to set it to the value of the event's action bonus. For example, “Size: 1 meter, minimum =
+            Bonus” means the size starts at a number of meters equal to the event’s Action Bonus and can be increased in
+            1 meter increments. If you have a 0 in the bonus that a minumum is set to, the minimum is instead set to 1.
           </p>
         </Section>
         <Section header="Improving Events">

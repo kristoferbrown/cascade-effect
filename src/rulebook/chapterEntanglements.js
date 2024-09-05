@@ -142,7 +142,7 @@ function ChapterEntanglements() {
         <EntanglementDescription
           ranks={[
             <p>
-              Increase your <Metabolism self /> score by 1 and choose a bonus.
+              Increase your <Metabolism self /> score by 1 and choose a bonus. You can induce the Empower cascade event.
             </p>,
             <p>Choose a bonus.</p>,
             <p>
@@ -250,10 +250,10 @@ function ChapterEntanglements() {
             description={
               <>
                 <p>
-                  Increase your maximum and current Self values by the Intensity level of this event. This can cause
-                  these values to go above your Self score. As long as your new maximum is above your Self score, you
-                  are in an empowered state. While in this state, you take an unavoidable point of Stress to Self at the
-                  end of each round. You cannot induce this event again while empowered, or more than once a round.
+                  Increase your maximum, but not current, Self value by the Intensity level of this event. This can
+                  cause these values to go above your Self score. As long as your new maximum is above your Self score,
+                  you are in an empowered state. While in this state, you take an unavoidable point of Stress to Self at
+                  the end of each round. You cannot induce this event again while empowered, or more than once a round.
                 </p>
                 <p>
                   While empowered, you can "spend empowerment" by taking an unavoidable point of Stress to a Self. When
@@ -268,8 +268,8 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>Increase the power and duration of your Empower events.</p>}
               rank3Met={{ self: true }}
-              rank1Event="Empower"
-              rank1EventTarget={linkMap.SchizosomataStyle}
+              // rank1Event="Empower"
+              // rank1EventTarget={linkMap.SchizosomataStyle}
               ranks={[
                 <p>While empowered, you take Stress to Self at the end of each minute instead of each round.</p>,
                 <p>
@@ -289,8 +289,8 @@ function ChapterEntanglements() {
                 </p>
               }
               rank3Met={{ self: true }}
-              rank1Event="Empower"
-              rank1EventTarget={linkMap.SchizosomataStyle}
+              // rank1Event="Empower"
+              // rank1EventTarget={linkMap.SchizosomataStyle}
               ranks={[
                 <p>
                   As an action, you can spend empowerment to gain the Faded state with an intensity of your Empower
@@ -319,8 +319,8 @@ function ChapterEntanglements() {
                 </p>
               }
               rank3Met={{ self: true }}
-              rank1Event="Empower"
-              rank1EventTarget={linkMap.SchizosomataStyle}
+              // rank1Event="Empower"
+              // rank1EventTarget={linkMap.SchizosomataStyle}
               ranks={[
                 <p>
                   After you witness someone using a skill based Trait, you can spend empowerment to temporarily gain the
@@ -342,8 +342,8 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>When Empowered your adrenaline pushes you beyond the limits of your body.</p>}
               rank3Met={{ self: true }}
-              rank1Event="Empower"
-              rank1EventTarget={linkMap.SchizosomataStyle}
+              // rank1Event="Empower"
+              // rank1EventTarget={linkMap.SchizosomataStyle}
               ranks={[
                 <p>
                   You can spend empowerment before attempting a Challenge involving a feat of strength to double your
@@ -371,8 +371,8 @@ function ChapterEntanglements() {
                 </p>
               }
               rank3Met={{ self: true }}
-              rank1Event="Empower"
-              rank1EventTarget={linkMap.SchizosomataStyle}
+              // rank1Event="Empower"
+              // rank1EventTarget={linkMap.SchizosomataStyle}
               ranks={[
                 <p>
                   You permanently become an idealized version of yourself. You decide whether that means attractive,
@@ -405,7 +405,7 @@ function ChapterEntanglements() {
         <EntanglementDescription
           ranks={[
             <p>
-              Increase your <Metabolism near /> score by 1 and choose a bonus.
+              Increase your <Metabolism near /> score by 1 and choose a bonus. You can induce the Refract cascade event
             </p>,
             <p>Choose a bonus.</p>,
             <p>
@@ -501,7 +501,7 @@ function ChapterEntanglements() {
             linkTarget={linkMap.ElectromagnetismStyle}
             metrics={[
               { name: "Intensity", value: "1 Threat" },
-              { name: "Range", value: "3 Meters" },
+              { name: "Range", value: "1 Meter" },
             ]}
             description={
               <>
@@ -528,8 +528,8 @@ function ChapterEntanglements() {
                 </p>
               }
               rank3Met={{ near: true }}
-              rank1Event="Refract"
-              rank1EventTarget={linkMap.ElectromagnetismStyle}
+              // rank1Event="Refract"
+              // rank1EventTarget={linkMap.ElectromagnetismStyle}
               ranks={[
                 <p>
                   Your Refract event gains the metric “Create: 1”. You can use this metric to create energy from
@@ -552,12 +552,12 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You can sense and interpret additional parts of the electromagnetic spectrum.</p>}
               rank3Met={{ near: true }}
-              rank1Event="Refract"
-              rank1EventTarget={linkMap.ElectromagnetismStyle}
+              // rank1Event="Refract"
+              // rank1EventTarget={linkMap.ElectromagnetismStyle}
               ranks={[
                 <p>
-                  The Range metric of your Refract event increases from 3 meters by 1 meter per rank you have in this
-                  specialization.
+                  The Range metric of your Refract event increases from 1 meter by 1 addtional meter per rank you have
+                  in this specialization.
                 </p>,
                 <p>You can induce Refract as an attack action.</p>,
                 <p>
@@ -606,7 +606,7 @@ function ChapterEntanglements() {
         <EntanglementDescription
           ranks={[
             <p>
-              Increase your <Metabolism far /> score by 1 and choose a bonus.
+              Increase your <Metabolism far /> score by 1 and choose a bonus. You can induce the Evoke cascade event
             </p>,
             <p>Choose a bonus.</p>,
             <p>
@@ -758,8 +758,9 @@ function ChapterEntanglements() {
             linkTarget={linkMap.EvocationStyle}
             description={
               <p>
-                Attack a target you can see with an explosive torrent of energy as a Risky and Strenuous Challenge. The
-                target is dealt Threat equal to Power and may defend with a Ranged Defense reaction.
+                Inducing this is an a Risky and Strenuous Challenge that results in an attacking a target you can see
+                with an explosive torrent of energy. The target is dealt Threat equal to Power and may defend with a
+                Ranged Defense reaction.
               </p>
             }
           />
@@ -774,8 +775,8 @@ function ChapterEntanglements() {
                 </p>
               }
               rank3Met={{ far: true }}
-              rank1Event="Evoke"
-              rank1EventTarget={linkMap.EvocationStyle}
+              // rank1Event="Evoke"
+              // rank1EventTarget={linkMap.EvocationStyle}
               ranks={[
                 <p>The Power metric of your Evoke event has no limit, you can spend any amount of Progress on it.</p>,
                 <p>
@@ -790,8 +791,8 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>Your Evoke events can affect a larger area.</p>}
               rank3Met={{ far: true }}
-              rank1Event="Evoke"
-              rank1EventTarget={linkMap.EvocationStyle}
+              // rank1Event="Evoke"
+              // rank1EventTarget={linkMap.EvocationStyle}
               ranks={[
                 <p>
                   Your Evoke events gain the metric “Radius: 1 meter”. Everything within the Radius of the target of
@@ -809,8 +810,8 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You are a master of using Evocation Attacks in tactical situations.</p>}
               rank3Met={{ far: true }}
-              rank1Event="Evoke"
-              rank1EventTarget={linkMap.EvocationStyle}
+              // rank1Event="Evoke"
+              // rank1EventTarget={linkMap.EvocationStyle}
               ranks={[
                 <p>Evoke ignores cover. You may choose if it ignites any flammable materials it strikes.</p>,
                 <p>If you hit a target behind cover with Evoke, they gain the Suppressed state with intensity 2.</p>,
@@ -853,7 +854,7 @@ function ChapterEntanglements() {
         <EntanglementDescription
           ranks={[
             <p>
-              Increase your <Metabolism self /> score by 1 and choose a bonus.
+              Increase your <Metabolism self /> score by 1 and choose a bonus. You can induce the Ward cascade event
             </p>,
             <p>Choose a bonus.</p>,
             <p>
@@ -978,15 +979,16 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>When using the Ward event you may add filtering properties to the barrier you create. </p>}
               rank3Met={{ far: true }}
-              rank1Event="Ward"
-              rank1EventTarget={linkMap.AbjurationStyle}
+              // rank1Event="Ward"
+              // rank1EventTarget={linkMap.AbjurationStyle}
               ranks={[
                 <>
                   <p>You can choose if each Ward you make is opaque, translucent, or invisible.</p>
                   <p>
-                    Your Ward event gains the metric “Filters: 1 target, minimum 0”. For each target you add, choose a
-                    single object or entity. The chosen targets are either the only thing the barrier blocks, or the
-                    only thing that the barrier allows to pass.
+                    When creating a Ward, you may reduce its Durability by 1 to add a filter to it. You may do this
+                    multiple times as long as you maintain at least 1 point of Durability. For each filter you add,
+                    choose a single object or entity. The chosen targets are either the only thing the barrier blocks,
+                    or the only thing that the barrier allows to pass.
                   </p>
                   <p>
                     Things that can pass through the filter can only do so while moving at speeds slower than 1 space
@@ -996,22 +998,21 @@ function ChapterEntanglements() {
                 </>,
                 <>
                   <p>
-                    The targets of the Filters metric can now be a specific class of objects, a type of entity, or
-                    homogeneous substance. For example, you could make selections such as metallic objects, humans, or
-                    oxygen.
+                    The targets of filters can now be a specific class of objects, type of entity, or homogeneous
+                    substance. For example, you could make selections such as metallic objects, humans, or oxygen.
                   </p>
                   <p>
-                    Blocked objects inside allowed objects can now harmlessly pass through each other. For example, you
-                    could create a filter that blocks a toxin but allows humans in order to safely purge the toxin from
-                    those that cross the barrier.
+                    Blocked objects inside allowed objects can now harmlessly pass through each other if you want them
+                    to. For example, you could create a filter that blocks a toxin but allows humans in order to safely
+                    purge the toxin from those that cross the barrier.
                   </p>
                 </>,
                 <p>
-                  If you spend 2 Progress on the Filters metric, you can opt to choose what it filters on a case by case
-                  basis instead of designating targets. When you do, you become aware of anything that comes within a
-                  meter of the barrier no matter where you are, and may then choose whether to allow it or block it. If
-                  it returns later, you may change your previous choice. Objects may now pass through at full speed,
-                  making an invisible barrier undetectable to those it allows to pass.
+                  You can now add filters that work on a case by case basis. When you do, you become aware of anything
+                  that comes within a meter of the barrier no matter where you are, and may then choose whether to allow
+                  it or block it. If it returns later, you may change your previous choice, allowing you to trap
+                  something. Objects may now pass through at full speed, making an invisible barrier undetectable to
+                  those it allows to pass.
                 </p>,
               ]}
             />
@@ -1046,8 +1047,8 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>Your Ward events last longer and are more durable.</p>}
               rank3Met={{ far: true }}
-              rank1Event="Evoke"
-              rank1EventTarget={linkMap.EvocationStyle}
+              // rank1Event="Evoke"
+              // rank1EventTarget={linkMap.EvocationStyle}
               ranks={[
                 <p>Replace the Duration metric of your Ward event with “Duration: 1 minute, minimum = bonus”.</p>,
                 <p>Replace the Durability metric of your Ward event with “Durability: 2 Threat, minimum = bonus”.</p>,
@@ -1073,7 +1074,8 @@ function ChapterEntanglements() {
         <EntanglementDescription
           ranks={[
             <p>
-              Increase your <Metabolism near /> score by 1 and choose a bonus.
+              Increase your <Metabolism near /> score by 1 and choose a bonus. You can induce the Telekinesis cascade
+              event
             </p>,
             <p>Choose a bonus.</p>,
             <p>
@@ -1172,7 +1174,7 @@ function ChapterEntanglements() {
         <Section header="Gravitonertia Style">
           <p>
             The esoteric style of the entanglement of Flight + Near allows you to control the fundamental forces behind
-            gravity and motion. This ability is expressed primarily via the Telekinesis cascade event.{" "}
+            gravity and motion. This ability is expressed primarily via the Telekinesis cascade event.
           </p>
           <EventDescription
             eventName="Telekinesis"
@@ -1180,15 +1182,14 @@ function ChapterEntanglements() {
             inductionTime="Full Action"
             linkTarget={linkMap.GravitonertiaStyle}
             metrics={[
-              { name: "Mass", value: "1 kilogram, minimum = Bonus" },
+              { name: "Mass", value: "1 kilogram" },
               { name: "Range", value: "1 meter" },
-              { name: "Duration", value: "1 round, minimum = 0" },
+              { name: "Targets", value: "1 per 3" },
             ]}
             description={
               <p>
-                Choose an object within Range that weighs less than Mass. This object moves from its current location to
-                a new location within Range of its starting point. You can continue moving it for the Duration by taking
-                a non-action once per turn to move it up to Range again.
+                Choose a number of objects equal to Targets within Range that each weigh less than Mass. Each object
+                moves from it its current location to a new location within Range of its starting point.
               </p>
             }
           />
@@ -1198,19 +1199,19 @@ function ChapterEntanglements() {
                 <p>Your Telekinesis events can increase or decrease the mass of objects instead of moving them.</p>
               }
               rank3Met={{ near: true }}
-              rank1Event="Telekinesis"
-              rank1EventTarget={linkMap.GravitonertiaStyle}
+              // rank1Event="Telekinesis"
+              // rank1EventTarget={linkMap.GravitonertiaStyle}
               ranks={[
                 <p>
-                  Your Telekinesis event gains the metric “Mass Multiplier: 1x”. After the Duration of the event ends,
-                  the targeted object's weight is multiplied by Mass Multiplier. This increased weight remains for the
-                  rest of the scene.
+                  After moving an object with Telekinesis, you may spend a point of Near to double the object's weight.
+                  You may do this a number of times equal to your rank in this Specialization.
                 </p>,
                 <p>
-                  You may choose to reduce an object's weight by dividing it by Mass Multiplier instead of multiplying.
+                  The Mass metric of Telekinesis is replaced with "1 kilogram, minimum = Bonus". Each time you would
+                  double an object's weight you may choose to reduce its weight by half instead.
                 </p>,
                 <p>
-                  When you reduce an object's weight, you may do so immediately instead of after the Duration. This
+                  When you reduce an object's weight, you may do so immediately before moving it instead of after. This
                   allows you to reduce the weight of an object and then move it telekinetically if the new weight is
                   less than the Mass limit.
                 </p>,
@@ -1221,22 +1222,24 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You can telekinetically throw small objects with bullet-like force.</p>}
               rank3Met={{ near: true }}
-              rank1Event="Telekinesis"
-              rank1EventTarget={linkMap.GravitonertiaStyle}
+              // rank1Event="Telekinesis"
+              // rank1EventTarget={linkMap.GravitonertiaStyle}
               ranks={[
                 <p>
-                  You can induce Telekinesis as an attack action to violently launch a small unattended object. When you
-                  do so, the event has the metrics “Threat: 1, and Range: 1 meter”. A chosen target you can see within
-                  Range is dealt Threat by this projectile. When you do this as an attack action, the other metrics and
-                  capabilities of Telekinesis are not available.
+                  You can induce Telekinesis as an attack action to violently launch a tiny unattended object with
+                  bullet-like force. When you do so, the Mass metric measures the number of points of Threat this
+                  projectile deals instead of the number of kilograms it can lift. One target within Range is dealt this
+                  amount of Threat. When you do this as an attack action, any other metrics and capabilities of
+                  Telekinesis are not available.
                 </p>,
                 <p>
                   You can induce Telekinesis with its standard metrics and capabilities as a basic action. The Range
-                  metric, for both the attack or basic version, is replaced with “2 meters”.
+                  metric, for both the attack or standard version, is replaced with “2 meters”.
                 </p>,
                 <p>
-                  When you induce Telekinesis as an attack action, it gains the metric “Targets: 1 per 2”. Each Target
-                  is dealt Threat. You may select the same target multiple times, increasing the Threat dealt to them.
+                  When you induce Telekinesis as an attack action, you can now use the Targets metric. Each Target is
+                  dealt the same amount of Threat. You may select the same target multiple times, dealing this amount of
+                  Threat to them each time.
                 </p>,
               ]}
             />
@@ -1245,27 +1248,27 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You can lift yourself or others off the ground with your mind.</p>}
               rank3Met={{ near: true }}
-              rank1Event="Telekinesis"
-              rank1EventTarget={linkMap.GravitonertiaStyle}
+              // rank1Event="Telekinesis"
+              // rank1EventTarget={linkMap.GravitonertiaStyle}
               ranks={[
                 <p>
                   You can choose to target yourself with Telekinesis instead of an object in order to levitate. When you
-                  do, you rise off the ground by Range and stay there for the Duration. The Mass metric has no effect.
-                  At the start of each of your turns, you may ascend or descend by Range again. Other than ascending or
-                  descending, you cannot move while in the air unless you are next to a surface you can push yourself
-                  along on, such as a ceiling or wall. Moving this way requires the Move action, but each meter moved
-                  has a Difficulty of 2.
+                  do, you rise off the ground by Range and stay there for a minute. No other metrics or effects can be
+                  used when you induce the event this way. At the start of each of your turns, you may ascend or descend
+                  by Range again. Other than ascending or descending, you cannot move while in the air unless you are
+                  next to a surface you can push yourself along on, such as a ceiling or wall. Moving this way requires
+                  the Move action, but each meter moved has a Difficulty of 2.
                 </p>,
                 <p>
-                  You can choose to target other people with Telekinesis to levitate them in the same way you levitate
-                  yourself. You can move the target up or down at the start of your turn as you could yourself. If the
-                  target is unwilling to be levitated, they can make a Willpower reaction. If they beat or tie the total
-                  amount of Progress used to induce the event, it has no effect.
+                  You can choose to target another person within Range with Telekinesis to levitate them in the same way
+                  you levitate yourself. You can move the target up or down at the start of your turn as you could
+                  yourself. If the target is unwilling to be levitated, they can make a Willpower reaction. If they beat
+                  or tie the total amount of Progress used to induce the event, it has no effect.
                 </p>,
                 <p>
                   When you raise or lower a levitated target at the start of your turn, you may also move it
-                  horizontally by Range. When you use Telekinesis to levitate someone, it now has the metric "Targets: 1
-                  per 3". Each target is levitated in the same way.
+                  horizontally by Range. When you use Telekinesis to levitate someone, you can now use the Targets
+                  metric, levitating each target in the same manner.
                 </p>,
               ]}
             />
@@ -1280,12 +1283,12 @@ function ChapterEntanglements() {
         <p>
           Mastering this Entanglement grants one lightning fast wits, reflexes and predictive power, or the ability to
           create areas that deny others these faculties. It can increase the bonuses for Ranged Defense reactions, the
-          Hide action, or the Create Field cascade event.
+          Hide action, or the Field cascade event.
         </p>
         <EntanglementDescription
           ranks={[
             <p>
-              Increase your <Metabolism far /> score by 1 and choose a bonus.
+              Increase your <Metabolism far /> score by 1 and choose a bonus. You can induce the Field cascade event
             </p>,
             <p>Choose a bonus.</p>,
             <p>
@@ -1302,8 +1305,7 @@ function ChapterEntanglements() {
         </p>
         <h4>Esoteric Bonus</h4>
         <p>
-          Choose two specializations within the Pneumaplegia style to unlock. Your Create Field event bonus increases by
-          1.
+          Choose two specializations within the Pneumaplegia style to unlock. Your Field event bonus increases by 1.
         </p>
         <Section header="Quick Style">
           <p>
@@ -1430,18 +1432,17 @@ function ChapterEntanglements() {
         <Section header="Pneumaplegia Style">
           <p>
             The esoteric style of the entanglement of Flight + Far is the discipline of “frozen breath” or “paralyzed
-            air” which allows you to modify the effects of Create Field events.
+            air” which allows you to modify the effects of Field events.
           </p>
           <EventDescription
-            eventName="Create Field"
+            eventName="Field"
             intro="You create a region of space that enhances or disrupts the hidden body connection, disorienting your foes or hastening your allies."
             inductionTime="Full Action"
             linkTarget={linkMap.PneumaplegiaStyle}
             metrics={[
               { name: "Area", value: "1 square meter, minimum = Bonus" },
               { name: "Duration", value: "1 round, minimum = Bonus" },
-              { name: "Drain", value: "1 point, minimum = 0" },
-              { name: "Boost", value: "1 point, minimum = 0" },
+              { name: "Intensity", value: "1 point" },
             ]}
             description={
               <>
@@ -1450,9 +1451,9 @@ function ChapterEntanglements() {
                   other subtle but reliably noticeable visual effect and remain affected for the Duration.
                 </p>
                 <p>
-                  The Drain and Boost metrics determine if the affected area inhibits or aids movement. Any time someone
-                  starts a turn inside it, they lose a number of Metabolism points equal to Drain and regain a number of
-                  Metabolism equal to Boost. The points are lost or gained from whatever combination of Metabolisms the
+                  Decide if the affected area inhibits or aids movement. If it inhibits, any time someone starts a turn
+                  inside it, they lose a number of Metabolism points equal to Intensity. Otherwise they gain that number
+                  of Metabolism points. The points are lost or gained from whatever combination of Metabolisms the
                   affected target chooses.
                 </p>
                 <p>
@@ -1473,68 +1474,67 @@ function ChapterEntanglements() {
                 </p>
               }
               rank3Met={{ near: true }}
-              rank1Event="Create Field"
-              rank1EventTarget={linkMap.PneumaplegiaStyle}
+              // rank1Event="Field"
+              // rank1EventTarget={linkMap.PneumaplegiaStyle}
               ranks={[
-                <p>Replace the Duration metric of your Create Field events with “Duration: 1 minute”.</p>,
+                <p>Replace the Duration metric of your Field events with “Duration: 1 minute”.</p>,
                 <>
                   <p>
-                    Your Create Field events gain the metric “Isolated Targets: 1 per 4, minimum = 0”. When the event
-                    has 1 or more Isolated Targets, the area affected when inducing the event must include this many
-                    people. At this rank, you must be one of the Isolated Targets and the rest must all be willing.
+                    You may induce an isolating version of Field where the Intensity metric costs 4 points of Progress
+                    to increase instead of 1. When you do so, the area affected when inducing the event must include a
+                    number of people exactly equal to Intensity. At this rank, you must be one of these people and the
+                    others must all be willing.
                   </p>
                   <p>
-                    When a Create Field event has Isolated Targets, the affected area and its occupants are isolated
-                    from the flow of time and outside influences. Time outside of the event appears to grind to a halt
-                    while it continues to flow inside it. For the Duration, causality cannot cross the threshold of the
-                    event or interact with anyone unaffected by it. No beings, objects, gasses, signals, objects in
-                    hidden space, or anything else can cross the boundary. Anyone inside the event can exit it, however
-                    doing so immediately ends the event completely.
+                    The affected area and all its occupants are isolated from the flow of time and outside influences.
+                    Time outside of the event appears to grind to a halt while it continues to flow inside it. For the
+                    Duration, causality cannot cross the threshold of the event or interact with anyone inside it. No
+                    beings, objects, gasses, signals, objects in hidden space, or anything else can cross the boundary.
+                    Anyone inside the event can exit it, however doing so immediately ends the event completely.
                   </p>
                 </>,
                 <p>
-                  Replace the Duration metric of your Create Field events with “Duration:1 hour”. The Isolated Targets
-                  within your events do not need to include you or be willing.
+                  Replace the Duration metric of your Field events with “Duration:1 hour”. The when you use the
+                  isolating version of Field, the affected people inside it do not need to include you or be willing.
                 </p>,
               ]}
             />
           </Section>
           <Section header="Halting Field">
             <EntanglementDescription
-              intro={<p>Your Create Field events can stop foes in their tracks.</p>}
+              intro={<p>Your Field events can stop foes in their tracks.</p>}
               rank3Met={{ near: true }}
-              rank1Event="Create Field"
-              rank1EventTarget={linkMap.PneumaplegiaStyle}
+              // rank1Event="Field"
+              // rank1EventTarget={linkMap.PneumaplegiaStyle}
               ranks={[
                 <p>
-                  For everyone inside one of your fields, the terrain difficulty of every space adjacent to the field is
-                  increased by the event’s Drain value.{" "}
+                  For everyone inside one of your Fields with inhibiting effects, the terrain difficulty of every space
+                  adjacent to the field is increased by the event's Intensity value.
                 </p>,
 
                 <p>
-                  The terrain difficulty of every space inside one of your fields is increased by the event’s Drain
-                  value.
+                  The terrain difficulty of every space inside one of your inhibiting Fields is increased by the event's
+                  Intensity value.
                 </p>,
                 <p>
-                  When someone enters one of your fields with a Drain of 3 or greater, their turn ends immediately.
+                  When someone enters one of your inhibiting Fields with a Intensity of 3 or greater, their turn ends
+                  immediately.
                 </p>,
               ]}
             />
           </Section>
           <Section header="Hastening Field">
             <EntanglementDescription
-              intro={<p>Your Create Field events can greatly speed the movements of those inside it.</p>}
+              intro={<p>Your Field events can greatly speed the movements of those inside it.</p>}
               rank3Met={{ near: true }}
-              rank1Event="Create Field"
-              rank1EventTarget={linkMap.PneumaplegiaStyle}
+              // rank1Event="Field"
+              // rank1EventTarget={linkMap.PneumaplegiaStyle}
               ranks={[
-                <p>
-                  Your Create Field event is selective, you may choose who is affected by the Boost and Drain metrics,
-                  or any other effects of the field.
-                </p>,
+                <p>Your Field event is selective, you may choose who is affected by any effects of the Field.</p>,
 
                 <p>
-                  The Boost metric now occurs before every action taken inside the field instead of before each turn.
+                  Metabolism points are now regained before every action taken inside the Field instead of before each
+                  turn.
                 </p>,
                 <p>
                   When someone uses a Move action or the free movement of another action while inside any of your
@@ -1559,7 +1559,7 @@ function ChapterEntanglements() {
         <EntanglementDescription
           ranks={[
             <p>
-              Increase your <Metabolism self /> score by 1 and choose a bonus.
+              Increase your <Metabolism self /> score by 1 and choose a bonus. You can induce the Sublime cascade event
             </p>,
             <p>Choose a bonus.</p>,
             <p>
@@ -1668,7 +1668,7 @@ function ChapterEntanglements() {
             linkTarget={linkMap.SublimationStyle}
             metrics={[
               { name: "Depth", value: "1 minute" },
-              { name: "Sensory Range", value: "1 meter" },
+              { name: "Range", value: "1 meter" },
             ]}
             description={
               <>
@@ -1679,9 +1679,9 @@ function ChapterEntanglements() {
                 </p>
                 <p>
                   While your senses do not operate in hidden space, you are aware of the shape of physical objects
-                  within your current Sensory Range. If you have special senses from other Specializations, such as
-                  Chromaception, Detect Sensorium, Exoproprioception, Sense Waveform, or Tactical Awareness, you keep
-                  these senses while sublimed.
+                  within Range. If you have special senses from other Specializations, such as Chromaception, Detect
+                  Sensorium, Exoproprioception, Sense Waveform, or Tactical Awareness, you keep these senses while
+                  sublimed.
                 </p>
                 <p>
                   To exit the hidden space and end the Out of Body state, you must return to your physical body and
@@ -1694,21 +1694,21 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You can rapidly enter hidden space and exit it somewhere else nearby.</p>}
               rank3Met={{ self: true }}
-              rank1Event="Sublime"
-              rank1EventTarget={linkMap.SublimationStyle}
+              // rank1Event="Sublime"
+              // rank1EventTarget={linkMap.SublimationStyle}
               ranks={[
                 <p>
-                  Your Sublime event now has the metric “Blink Range: 2 meters, minimum = 0”. If you increase Blink
-                  Range above 0, inducing the event becomes a basic action and it causes you to teleport by forcing your
-                  body into hidden space and instantly exiting it anywhere within Blink Range. You cannot teleport
-                  through walls or obstacles. If your physical body is already sublimed into hidden space, you can use
-                  tthis exit it anywhere within Blink Range.
+                  The Range metric of your Sublime event increases to "2 meters". You can now induce a version of
+                  Sublime as a basic action that causes you to teleport by forcing your body into hidden space and
+                  instantly exiting it anywhere within Range. You cannot teleport through walls or obstacles.
                 </p>,
-
-                <p>Replace the Blink Range metric with “Blink Range: 4 meters, minimum = 0”.</p>,
                 <p>
-                  Replace the Blink Range metric with “Blink Range: 6 meters, minimum = 0”. You can now teleport through
-                  anything that Depth would allow you to phase through.
+                  Increase the Range metric to "4 meters". If your physical body is already fully sublimed into hidden
+                  space, you can use this version of Sublime to exit it anywhere within Range.
+                </p>,
+                <p>
+                  Increase the Range metric to "6 meters". You can now teleport through anything that Depth would allow
+                  you to phase through.
                 </p>,
               ]}
             />
@@ -1717,8 +1717,8 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You can enter deeper reaches of hidden space allowing you to phase through more objects.</p>}
               rank3Met={{ self: true }}
-              rank1Event="Sublime"
-              rank1EventTarget={linkMap.SublimationStyle}
+              // rank1Event="Sublime"
+              // rank1EventTarget={linkMap.SublimationStyle}
               ranks={[
                 <p>Replace the Depth metric with “Depth: 1 hour”.</p>,
                 <p>Replace the Depth metric with “Depth: 1 day”.</p>,
@@ -1795,8 +1795,8 @@ function ChapterEntanglements() {
                 <p>You can bring your physical body with you when entering hidden space and eventually other people.</p>
               }
               rank3Met={{ self: true }}
-              rank1Event="Sublime"
-              rank1EventTarget={linkMap.SublimationStyle}
+              // rank1Event="Sublime"
+              // rank1EventTarget={linkMap.SublimationStyle}
               ranks={[
                 <p>
                   Your Sublime events now have the metric “Bodies: 1 per 4, minimum = 0”. At this rank, you can only
@@ -1825,8 +1825,8 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You have mastered the actical capabilities of subliming your body.</p>}
               rank3Met={{ self: true }}
-              rank1Event="Sublime"
-              rank1EventTarget={linkMap.SublimationStyle}
+              // rank1Event="Sublime"
+              // rank1EventTarget={linkMap.SublimationStyle}
               ranks={[
                 <p>Inducing Sublime or exiting hidden space are now full actions.</p>,
                 <p>
@@ -1856,7 +1856,8 @@ function ChapterEntanglements() {
         <EntanglementDescription
           ranks={[
             <p>
-              Increase your <Metabolism near /> score by 1 and choose a bonus.
+              Increase your <Metabolism near /> score by 1 and choose a bonus. You can induce the Transmute cascade
+              event
             </p>,
             <p>Choose a bonus.</p>,
             <p>
@@ -2009,8 +2010,8 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You can create solid objects out of thin air.</p>}
               rank3Met={{ near: true }}
-              rank1Event="Transmute"
-              rank1EventTarget={linkMap.ChromodynamismStyleStyle}
+              // rank1Event="Transmute"
+              // rank1EventTarget={linkMap.ChromodynamismStyleStyle}
               ranks={[
                 <p>
                   When you use the Transmute event, you can transform ambient gasses into any homogenous liquid or
@@ -2038,8 +2039,8 @@ function ChapterEntanglements() {
                 </p>
               }
               rank3Met={{ near: true }}
-              rank1Event="Transmute"
-              rank1EventTarget={linkMap.ChromodynamismStyleStyle}
+              // rank1Event="Transmute"
+              // rank1EventTarget={linkMap.ChromodynamismStyleStyle}
               ranks={[
                 <p>
                   You can make an Entropic Attack. As an attack action using Focus + Near, you touch a target which can
@@ -2065,8 +2066,8 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You can transmute things into more complex materials.</p>}
               rank3Met={{ near: true }}
-              rank1Event="Transmute"
-              rank1EventTarget={linkMap.ChromodynamismStyleStyle}
+              // rank1Event="Transmute"
+              // rank1EventTarget={linkMap.ChromodynamismStyleStyle}
               ranks={[
                 <p>
                   When you use Transmute, the transformed area can include up to three crudely arranged different
@@ -2088,8 +2089,8 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You can sculpt materials and transmute larger objects.</p>}
               rank3Met={{ near: true }}
-              rank1Event="Transmute"
-              rank1EventTarget={linkMap.ChromodynamismStyleStyle}
+              // rank1Event="Transmute"
+              // rank1EventTarget={linkMap.ChromodynamismStyleStyle}
               ranks={[
                 <p>
                   Your Transmute events gain the metric ”Reshape Size: 1 centimeter, minimum = Bonus”. You can instantly
@@ -2123,7 +2124,7 @@ function ChapterEntanglements() {
         <EntanglementDescription
           ranks={[
             <p>
-              Increase your <Metabolism far /> score by 1 and choose a bonus.
+              Increase your <Metabolism far /> score by 1 and choose a bonus. You can induce the Telepathy cascade event
             </p>,
             <p>Choose a bonus.</p>,
             <p>
@@ -2142,7 +2143,7 @@ function ChapterEntanglements() {
         </p>
         <h4>Esoteric Bonus</h4>
         <p>
-          Choose two specializations within the Telethesia style to unlock. Your Telepathy event bonus increases by 1.{" "}
+          Choose two specializations within the Telethesia style to unlock. Your Telepathy event bonus increases by 1.
         </p>
 
         <Section header="Alert Style">
@@ -2333,8 +2334,8 @@ function ChapterEntanglements() {
                 </p>
               }
               rank3Met={{ far: true }}
-              rank1Event={"Telepathy"}
-              rank1EventTarget={linkMap.TelethesiaStyle}
+              // rank1Event={"Telepathy"}
+              // rank1EventTarget={linkMap.TelethesiaStyle}
               ranks={[
                 <p>
                   Your Telepathy action bonus increases by 1. The Range metric of Telepathy improves to “10x, minimum =
@@ -2342,14 +2343,21 @@ function ChapterEntanglements() {
                   scry on a location. Select a location within Range that you have previously seen before. You and all
                   Participants can see what is happening at this location in your minds for the rest of the scene.
                 </p>,
-                <p>
-                  When you scry on a location, you can also use the metric, “Retrocognition: 1 day ago, minimum = 0”. If
-                  you use this metric, you observe the location not as it currently is, but rather as it was at a chosen
-                  moment in the past that is more recent than the value of Retrocognition.
-                </p>,
+                <>
+                  <p>
+                    Telepathy gains the metric "Influence: 1, minimum = 0" if it didn't already have it. Influence has
+                    multiple possible uses, you can only use one when you induce the event.
+                  </p>
+                  <p>
+                    When you scry on a location you can choose to do so with retrocognition, observeing the location not
+                    as it currently is, but rather as it was at a chosen moment in the past within a number of days
+                    equal to Influence.
+                  </p>
+                </>,
                 <p>
                   When you scry, you do not need to have seen the location before. You and all Participants gain all of
-                  their senses at the location. The Retrocognition metric improves to “1 year ago, minimum = 0”.
+                  their senses at the location. You can observe the area retrocognitively at any chosen past moment
+                  within a number of years equal to Influence.
                 </p>,
               ]}
             />
@@ -2358,13 +2366,13 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You can seize control over simpler nervous systems.</p>}
               rank3Met={{ far: true }}
-              rank1Event={"Telepathy"}
-              rank1EventTarget={linkMap.TelethesiaStyle}
+              // rank1Event={"Telepathy"}
+              // rank1EventTarget={linkMap.TelethesiaStyle}
               ranks={[
                 <>
                   <p>
-                    Telepathy gains the metric “Influence: 1 point” if it didn't already have it. Influence has multiple
-                    possible uses, you can only use one when you induce the event.
+                    Telepathy gains the metric "Influence: 1, minimum = 0" if it didn't already have it. Influence has
+                    multiple possible uses, you can only use one when you induce the event.
                   </p>
                   <p>
                     You can use Influence to seize control over many simple nervous systems. This can only affect
