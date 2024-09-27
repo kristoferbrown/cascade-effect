@@ -485,7 +485,31 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
+          <Section header="Silence">
+            <EntanglementDescription
+              intro={
+                <p>
+                  You can exert a subtle influence over nearby objects that prevents vibrations and sound from
+                  propagating.
+                </p>
+              }
+              rank3Met={{ near: true }}
+              ranks={[
+                <p>You can move completely silently as long as you're moving at a walking pace or slower.</p>,
+                <p>
+                  As a default effort and low risk Challenge requiring Fight + Near, you can prevent sound from
+                  propagating in an area. The radius of this area in meters and the number of minutes it lasts are both
+                  equal to the Progress used to create it. No sound or vibration can be heard, felt, or created inside
+                  the area. The area is centered on you and follows you as you move.
+                </p>,
+                <p>
+                  You can move at any speed completely silently. If you render an area silent, it’s duration is measured
+                  in hours instead of minutes and you can choose to cause it to stay at a location instead of following
+                  you at any moment.
+                </p>,
+              ]}
+            />
+          </Section>
           {/* <Section header="TODO"></Section> */}
           {/* <Section header="TODO"></Section> */}
         </Section>
@@ -898,6 +922,49 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
+          <Section header="Extropy">
+            <EntanglementDescription
+              intro={
+                <p>
+                  You unconsciously use the cascade effect to create the energy your body needs to maintain your health.
+                </p>
+              }
+              rank3Met={{ self: true }}
+              ranks={[
+                <p>You no longer require food or water to remain healthy and comfortable.</p>,
+                <p>
+                  You no longer require breathing oxygen to remain healthy and comfortable. Your age at half speed,
+                  doubling your lifespan.
+                </p>,
+                <p>
+                  You no longer require flowing blood to remain healthy, and are therefore immune to the Dying state.
+                  You no longer age and can live forever if not killed.
+                </p>,
+              ]}
+            />
+          </Section>
+          <Section header="Homeostasis">
+            <EntanglementDescription
+              intro={
+                <p>
+                  Your body maintains optimum functionality, resisting and quickly recovering from anything that would
+                  throw you off balance.
+                </p>
+              }
+              rank3Met={{ self: true }}
+              ranks={[
+                <p>
+                  When you use the rest action in combat, you may use both the recover Metabolism option and the reduce
+                  state intensity option simultaneously.
+                </p>,
+                <p>
+                  When you use the rest action in combat, reduce the intensity of all states instead of just one. When
+                  affected by any poison, toxin, disease, or drug, you may choose to be immune to it.
+                </p>,
+                <p>Any time a state is applied to you, you may choose to reduce the intensity of the state by 1.</p>,
+              ]}
+            />
+          </Section>
           <Section header="Regneration">
             <EntanglementDescription
               intro={
@@ -907,7 +974,6 @@ function ChapterEntanglements() {
                 </p>
               }
               rank3Met={{ far: true }}
-              rank1Action="Rest"
               ranks={[
                 <p>Remove 1 point of Stress from every Physical Metabolism every hour.</p>,
                 <p>Remove 1 point of Stress from every Physical Metabolism every minute.</p>,
@@ -919,7 +985,6 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You can exert yourself for much longer durations than the body is normally capable.</p>}
               rank3Met={{ far: true }}
-              rank1Action="Rest"
               ranks={[
                 <p>
                   When you regenerate half of your spent Metabolism points between combat rounds , you regain an
@@ -1106,7 +1171,6 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You can effectively apply your movement in combat to your attacks and defenses.</p>}
               rank3Met={{ near: true }}
-              rank1Action="Move"
               ranks={[
                 <p>
                   Add your Move action bonus to the amount of free movement you can take when you use this movement
@@ -1127,7 +1191,6 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You have a strong sense for where attacks will land and how to avoid them.</p>}
               rank3Met={{ near: true }}
-              rank1Action="Melee Defense"
               ranks={[
                 <p>When reacting to an attack, if you reduce the threat dealt to 1, it is instead reduced to 0.</p>,
                 <p>
@@ -1145,7 +1208,6 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>You can run much faster than before.</p>}
               rank3Met={{ near: true }}
-              rank1Action="Move"
               ranks={[
                 <p>The free movement you get when taking a basic action on your turn increases by 1 meter.</p>,
                 <p>When you use the Move action, double the amount of Progress created in the Challenge.</p>,
@@ -1157,7 +1219,6 @@ function ChapterEntanglements() {
             <EntanglementDescription
               intro={<p>Obstacles and terrain no longer hinder your movement.</p>}
               rank3Met={{ near: true }}
-              rank1Action="Move"
               ranks={[
                 <p>You can treat any terrain with a difficulty less than Move action bonus as normal terrain.</p>,
                 <p>You can freely pass through enemy spaces, but you cannot end an action in them.</p>,
@@ -2309,23 +2370,7 @@ function ChapterEntanglements() {
               </>
             }
           />
-          <Section header="Sense Mind">
-            <EntanglementDescription
-              intro={<p>You can feel the other minds around you.</p>}
-              rank3Met={{ far: true }}
-              ranks={[
-                <p>
-                  At all times, you can sense the presence of any sentient minds within a number of meters equal to your
-                  Far score, even if they are in hidden space.
-                </p>,
-                <p>You are aware of the general emotional state and stress level of the minds you sense.</p>,
-                <p>
-                  You know if the minds you sense are developing hostile intent, granting you advantage on any
-                  initiative Challenges involving human opponents.
-                </p>,
-              ]}
-            />
-          </Section>
+
           <Section header="Clairvoyance">
             <EntanglementDescription
               intro={
@@ -2359,6 +2404,80 @@ function ChapterEntanglements() {
                   their senses at the location. You can observe the area retrocognitively at any chosen past moment
                   within a number of years equal to Influence.
                 </p>,
+              ]}
+            />
+          </Section>
+
+          <Section header="Group Mind">
+            <EntanglementDescription
+              intro={
+                <p>
+                  Participants in your Telepathy events can share more than just communication, allowing them to
+                  collaborate almost as effectively as a hive mind.
+                </p>
+              }
+              rank3Met={{ far: true }}
+              // rank1Event={"Telepathy"}
+              // rank1EventTarget={linkMap.TelethesiaStyle}
+              ranks={[
+                <p>
+                  For the duration of your Telepathy events, any Participant can use the Improvise action to help any
+                  other Participant as if they were adjacent and cooperating.
+                </p>,
+                <p>
+                  For the duration of your Telepathy events, any Participant can use the Heal or Rest action targeting
+                  any other Participant as if they were targeting themself.
+                </p>,
+                <p>
+                  For the duration of your Telepathy events, all Participants have every Trait representing skill or
+                  knowledge that any other Participant has.
+                </p>,
+              ]}
+            />
+          </Section>
+          <Section header="Implant Thought">
+            <EntanglementDescription
+              intro={
+                <p>You instill a lasting influence into the minds of others, altering their behavior for a time.</p>
+              }
+              rank3Met={{ far: true }}
+              // rank1Event={"Telepathy"}
+              // rank1EventTarget={linkMap.TelethesiaStyle}
+              ranks={[
+                <>
+                  <p>
+                    Telepathy gains the metric “Influence: 1 point” if it didn't already have it. Influence has multiple
+                    possible uses, you can only use one when you induce the event.
+                  </p>
+                  <p>
+                    You can use Influence to implant a thought into the mind of a target you can see in Range. When you
+                    do, the target can make a default risk and effort Willpower reaction. If Influence is less than the
+                    result of this reaction, the target is unaffected. Otherwise, you stimulate the target's brain to
+                    continually release a single specific neurotransmitter causing a crude emotion or phantom sensation
+                    of your choosing. The target continues to feel this strongly for the rest of the scene.
+                  </p>
+                </>,
+                <p>
+                  When you succeed at using Influence to implant a thought in a target, you can include a suggested
+                  action or simple goal. An affected target feels a compulsion to take this action or pursue this goal.
+                  This effect remains in place for the rest of the scene and then continues for a number of hours equal
+                  to the sum of the Influence and Participants metrics used to induce the event. Any time the target
+                  perceives an opportunity to follow your suggestion they may make a default risk and effort Willpower
+                  reaction. If they do not, or if Influence is lower than the result of this reaction, then they must
+                  follow the suggestion. Each time the target successfully resists and avoids following the compulsion,
+                  reduce the Influence level by 1 until it reaches 0 and the target is unaffected.
+                </p>,
+                <>
+                  <p>
+                    When you succeed at using Influence to implant a suggestion into a target, this suggestion now lasts
+                    for a number of days equal to Influence plus Participants instead of hours.
+                  </p>
+                  <p>
+                    Alternatively, when you succeed you can choose to implant a false memory into the target instead of
+                    a suggestion. As long as this memory is plausible, the target believes it permanently until it is
+                    proven false.
+                  </p>
+                </>,
               ]}
             />
           </Section>
@@ -2396,9 +2515,86 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
+          <Section header="Psychosomaticism">
+            <EntanglementDescription
+              intro={
+                <p>
+                  You can add subtle telepathic suggestions to your Manipulate actions that can convince the target to
+                  believe false things about the state of their body so intensely that their mind makes it real.
+                </p>
+              }
+              rank3Met={{ far: true }}
+              // rank1Event={"Telepathy"}
+              // rank1EventTarget={linkMap.TelethesiaStyle}
+              ranks={[
+                <p>
+                  Your Manipulate action can now cause the Grappled state as if the target was restrained by an
+                  invisible attacker in a space adjacent to them of your choosing.
+                </p>,
+                <p>
+                  Your Manipulate action can now cause the Suppressed state in a target no matter where they are. The
+                  states caused by your Manipulate actions don’t expire on your next turn but instead last until the
+                  target is able to clear them normally.
+                </p>,
+                <p>Your Manipulate action can now cause the Unconscious state in non-entangled targets.</p>,
+              ]}
+            />
+          </Section>
+          <Section header="Read Mind">
+            <EntanglementDescription
+              intro={<p>You can examine the thoughts and memories of others.</p>}
+              rank3Met={{ far: true }}
+              // rank1Event={"Telepathy"}
+              // rank1EventTarget={linkMap.TelethesiaStyle}
+              ranks={[
+                <>
+                  <p>
+                    Telepathy gains the metric “Influence: 1 point” if it didn't already have it. Influence has multiple
+                    possible uses, you can only use one when you induce the event.
+                  </p>
+                  <p>
+                    You can use Influence to attempt to read the mind of a target you can see in Range. When you do, the
+                    target can use a default risk and effort Willpower reaction. If Influence is greater than the result
+                    of the reaction you and all Participants can read the target's surface thoughts for the rest of the
+                    scene. This includes their emotional state and infernal monologue.
+                  </p>
+                </>,
+                <p>
+                  If the event’s influence ties the target's reaction, the event grants access to surface thoughts. If
+                  it is higher, it also accesses short term memories. This includes recent events and things that have
+                  been on the target's mind earlier in the day.
+                </p>,
+                <>
+                  <p>
+                    If the event’s influence is lower than the target's reaction, the event still grants access to
+                    surface thoughts. If it ties, it grants access to short term memories. If it is higher, it also
+                    accesses long term memories.
+                  </p>
+                  <p>
+                    The greater the difference between Influence and a lower reaction, the deeper the memories you can
+                    access. Recent memories are easy, older memories might require at least 2, a dark secret at least 3.
+                  </p>
+                </>,
+              ]}
+            />
+          </Section>
+          <Section header="Sense Minds">
+            <EntanglementDescription
+              intro={<p>You can feel the other minds around you.</p>}
+              rank3Met={{ far: true }}
+              ranks={[
+                <p>
+                  At all times, you can sense the presence of any sentient minds within a number of meters equal to your
+                  Far score, even if they are in hidden space.
+                </p>,
+                <p>You are aware of the general emotional state and stress level of the minds you sense.</p>,
+                <p>
+                  You know if the minds you sense are developing hostile intent, granting you advantage on any
+                  initiative Challenges involving human opponents.
+                </p>,
+              ]}
+            />
+          </Section>
         </Section>
       </Section>
 
