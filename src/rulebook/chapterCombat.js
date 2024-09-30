@@ -210,8 +210,8 @@ function ChapterCombat() {
             by the enemy or the enemy is restrained in someway, you will have advantage when you attack them. Outside of
             combat you can often apply a Trait in order to get advantage, however Traits you have from character
             creation are not typically relevant in combat. As you spend experience you may acquire specific combat
-            Traits that state precisely when they are relevant. You can only apply a Trait one time per round, even if
-            you have multiple Traits that become relevant during the round.
+            Traits that state precisely when they are relevant. You can only apply a Trait once round, even if you have
+            multiple Traits that become relevant during the round.
           </p>
         </Section>
         <Section header="Acting on Empty">
@@ -268,6 +268,15 @@ function ChapterCombat() {
             If you are not currently in cover when you use a reaction against an attack, but you use the free movement
             provided by the reaction to move into cover, then you can resolve the reaction with the benefit of the
             cover. You can use the Hide action to duck behind the cover to increase the value.
+          </p>
+        </Section>
+        <Section header="Delaying Actions">
+          <p>
+            If you wish to take an action in response to an anticipated event instead of on your turn, you can delay
+            your action. As an inhale action, choose a single, simple, and discernible trigger event and an exhale
+            action you wish to take when it occurs. Your chosen exhale action is then delayed until immediately after
+            the chosen trigger occurs. If the trigger does not occur before your next turn, then your exhale action is
+            lost.
           </p>
         </Section>
         <Section header="Stealth">

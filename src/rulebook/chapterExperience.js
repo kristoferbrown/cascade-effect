@@ -147,6 +147,11 @@ function ChapterExperience() {
             Bonus” means the size starts at a number of meters equal to the event’s Action Bonus and can be increased in
             1 meter increments. If you have a 0 in the bonus that a minumum is set to, the minimum is instead set to 1.
           </p>
+          <p>
+            The physical appearance of inducing a cascade event is up to you, however unless the event specifies
+            otherwise, it is never subtle. Someone witnessing you induce the event can see that the event occured and
+            that it was caused by you.
+          </p>
         </Section>
         <Section header="Improving Events">
           <p>

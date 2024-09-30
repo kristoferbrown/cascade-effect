@@ -27,9 +27,10 @@ function ChapterActions() {
 
       <Section header="Actions in Combat" isChapterIntroColumn>
         <p>
-          In combat you are limited to taking actions from the list in this chapter. If you wish to do something not
-          directly covered by these actions, you need to use the Improvise action to resolve it. In general actions
-          consume a single inhale or exhale action, with the exception of full actions that consume both.
+          In combat the actions you take will generally be taken from the list in this chapter. If you wish to do
+          something not directly covered by these actions, the GM will present a Challenge to resolve it. In general
+          actions in combat consume a single inhale or exhale action, with the exception of full actions that consume
+          both.
         </p>
       </Section>
       <Section header="Actions out of Combat" isChapterIntroColumn isClassified>
@@ -80,9 +81,10 @@ function ChapterActions() {
             Requires <Pair fight self />. The amount of Progress you get is dealt to the target as Threat.
           </p>
           <p>
-            Alternatively, if you would deal more Threat than the target's Reaction, you can choose to deal no Threat
-            and instead shove or grab the target. If you shove, move them away from you by 1 + Unarmed Attack bonus
-            meters. If you grab, you give the target the Grappled state with an intensity of 1 + Unarmed Attack bonus.
+            Alternatively, if you have a free hand and would deal more Threat than the target's Reaction, you can choose
+            to deal no Threat and instead shove or grab the target. If you shove, move them away from you by 1 + Unarmed
+            Attack bonus meters. If you grab, you give the target the Grappled state with an intensity of 1 + Unarmed
+            Attack bonus.
           </p>
         </Section>
       </Section>
@@ -128,24 +130,36 @@ function ChapterActions() {
           </p>
         </Section>
         <Section header="Improvise">
-          <p>You interact with something in the environment, help an ally, or execute a clever plan.</p>
+          <p>You prepare for a Challenge, help an ally, or execute a clever plan.</p>
           <p>
-            You can use Improvise to attempt any other course of action that could plausibly be taken, but isn't covered
-            in the other actions. Many simple object interations such as drawing or swapping a weapon, flipping a
-            switch, or grabbing a loose object have no Difficulty and simply happen successfully. Similarly, if the
-            action has a Difficulty less than your Improvise bonus, it also occurs successfully. Anything with a higher
-            Difficulty must be resolved as a Challenge.
+            Describe a plan or course of action that could plausibly improve the outcome of a specific action or
+            Challenge about to be taken by you or someone else you can see. If the next action taken by the target, is
+            the planned action, it gains advantage and has your Improvise bonus added to the Progress.
           </p>
           <p>
-            Alternatively, you may use Improvise to come up with a plan that could plausibly improve the outcome of a
-            specific action taken by you or someone else you can see. If the next action taken by the target, whether it
-            is you or someone else, is the planned action, it gains advantage and has your Improvise bonus added to the
-            Progress.
+            When you do this, the Improvise action takes as much time as the Challenge or action it benefits. For
+            example, if the benefit is applied to an action in combat then Improvise also consumes an action, or if it
+            is applied to a Challenge involving an hour of work then Improvise also requires an hour. The Improvise
+            action must occur before the action that benefits from it, or if the target is another person you are
+            helping Improvise may take place simultaneously.
+          </p>
+        </Section>
+        <Section header="Interact">
+          <p>You use an object you are carrying or within your reach in the enviroment.</p>
+          <p>
+            Interacting with something typically requires a free hand. Most object interactions, such as grabbing a
+            loose object, flipping a switch, pulling an item from a bag, or unlocking a door with a key have no
+            Difficulty and simply occur immediately. This includes any interaction with things you are carrying, such as
+            drawing, stowing, or reloading a weapon. If this interaction had no Difficulty, you may also do an
+            additional number of interations equal to your Interact action bonus. For example, if you use this
+            interaction to stow a weapon and your action bonus is 1 you could then follow up by drawing a different
+            weapon in the same action.
           </p>
           <p>
-            When you do this, the Improvise action takes as much time (an action, an hour, etc) as the original action,
-            meaning that if you use this action to help yourself the time consumed is doubled and if you help someone
-            else you must continue helping them for the whole duration of their action.
+            If this action can't be done easily in a brief moment, for example moving a heavy object, navigating an
+            unfamiliar user interface, or picking a simple lock, the GM may assign it a difficulty. Each time you take
+            this action, reduce the difficulty of the task by 1 plus your Interact bonus. Once the difficulty reaches 0,
+            you've completed the task.
           </p>
         </Section>
         <Section header="Manipulate">
@@ -196,16 +210,6 @@ function ChapterActions() {
             by this amount. Then resolve the original action with these new results.
           </p>
         </Section>
-        <Section header="Ready">
-          <p>You prepare yourself to handle an anticipated event.</p>
-          <p>
-            Choose a single, simple, and discernible trigger event and a single basic or attack action you wish to take
-            when it occurs. For example you may wish to attack a target when it enters your reach, grapple a target that
-            attempts to leave your reach, shoot a target when it leaves cover, or run when a door opens. After the
-            trigger event occurs, your planned action also occurs. However, any Challenge the action may have required
-            is not completed. Instead treat it as if you got an amount of Progress equal to 1 + your Ready bonus.
-          </p>
-        </Section>
         <Section header="Rest">
           <p>
             You take a moment to reorient and catch your breath. The benefits of this depend on how long you spend doing
@@ -213,7 +217,8 @@ function ChapterActions() {
           </p>
           <p>
             As a single basic action in combat, you recover a number of any spent Metabolism points equal to your Rest
-            bonus + 1 or reduce the intensity of any state by your Rest bonus + 1.
+            bonus + 1. Alternatively, instead of recovering Metabolisms you can choose reduce the intensity of any state
+            by your Rest bonus + 1.
           </p>
           <p>
             Out of combat, if you spend an hour resting, doing little more than treating wounds, relaxing, chatting,

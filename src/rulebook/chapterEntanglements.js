@@ -480,7 +480,7 @@ function ChapterEntanglements() {
                 <p>Your melee reach while wielding a weapon increases by 1 meter.</p>,
                 <p>
                   You can add Focus as a third metabolism to the metabolism pairing when you use the Melee Attack
-                  action. Your Near score increases by 1.
+                  action.
                 </p>,
               ]}
             />
@@ -609,8 +609,7 @@ function ChapterEntanglements() {
                 </p>,
                 <p>
                   You can emit a tiny amount of x-rays and sub-millimeter waves and then sense their reflections. This
-                  allows you to see through solid materials and examine their contents or internal structure. Your Near
-                  score increases by 1.
+                  allows you to see through solid materials and examine their contents or internal structure.
                 </p>,
               ]}
             />
@@ -708,7 +707,7 @@ function ChapterEntanglements() {
                 </p>,
                 <p>
                   When using a ranged weapon, you can target lethally to deal one extra Threat as if it were also a
-                  bladed weapon, or you can choose to use shock and awe to attack the target’s Focus as if it were a
+                  bladed weapon, or you can choose to use shock and awe to attack the target's Focus as if it were a
                   blunt weapon.
                 </p>,
                 <p>
@@ -1040,6 +1039,31 @@ function ChapterEntanglements() {
               </>
             }
           />
+          <Section header="Combat Shielding">
+            <EntanglementDescription
+              intro={<p>You use Ward tactically to protect your allies.</p>}
+              rank3Met={{ far: true }}
+              // rank1Event="Evoke"
+              // rank1EventTarget={linkMap.EvocationStyle}
+              ranks={[
+                <p>
+                  Your Wards do not need to be straight lines, and can follow any path of you choose as long as the
+                  total length is still under the Length metric. You can freely traverse and attack through any ward you
+                  have created.
+                </p>,
+                <p>
+                  Your wards are selective, it blocks attacks from your enemies but does not block attacks made by your
+                  allies. Despite this, your wards remain untraversable to anyone but you.
+                </p>,
+                <p>
+                  You and any ally standing adjacent to the path of your ward when you create it is protected by a
+                  subtly shimmering shield that clings to their body. Any Threat dealt to someone protected this way is
+                  dealt to their shield instead of them. Each shield dissipates after it absorbs an amount of Threat
+                  equal to the Durability used to induce the event. Any further Threat then passes through normally.
+                </p>,
+              ]}
+            />
+          </Section>
           <Section header="Filter">
             <EntanglementDescription
               intro={<p>When using the Ward event you may add filtering properties to the barrier you create. </p>}
@@ -1048,7 +1072,6 @@ function ChapterEntanglements() {
               // rank1EventTarget={linkMap.AbjurationStyle}
               ranks={[
                 <>
-                  <p>You can choose if each Ward you make is opaque, translucent, or invisible.</p>
                   <p>
                     When creating a Ward, you may reduce its Durability by 1 to add a filter to it. You may do this
                     multiple times as long as you maintain at least 1 point of Durability. For each filter you add,
@@ -1057,8 +1080,8 @@ function ChapterEntanglements() {
                   </p>
                   <p>
                     Things that can pass through the filter can only do so while moving at speeds slower than 1 space
-                    per round. Filters cannot cause damage, if a blocked object is inside an object that can pass, then
-                    both objects are blocked.
+                    per round, preventing any attacks from passing through. Filters cannot cause damage, if a blocked
+                    object is inside an object that can pass, then both objects are blocked.
                   </p>
                 </>,
                 <>
@@ -1076,8 +1099,35 @@ function ChapterEntanglements() {
                   You can now add filters that work on a case by case basis. When you do, you become aware of anything
                   that comes within a meter of the barrier no matter where you are, and may then choose whether to allow
                   it or block it. If it returns later, you may change your previous choice, allowing you to trap
-                  something. Objects may now pass through at full speed, making an invisible barrier undetectable to
-                  those it allows to pass.
+                  something.
+                </p>,
+              ]}
+            />
+          </Section>
+          <Section header="Repelling Ward">
+            <EntanglementDescription
+              intro={<p>You can create airtight Wards that push others away.</p>}
+              rank3Met={{ far: true }}
+              // rank1Event="Evoke"
+              // rank1EventTarget={linkMap.EvocationStyle}
+              ranks={[
+                <p>
+                  Instead of straight lines, you may create spherical wards centered on yourself with a diameter of up
+                  to Length. The affected area must not include anything unwilling to be enclosed by it, or the event
+                  fails. The sphere is airtight, preventing liquids or gasses from entering or exiting.
+                </p>,
+                <p>
+                  When you create a Spherical ward, it can now include unwilling occupants and you can now place it
+                  freely as long as you are inside or adjacent to it. You may also select any number of entities or
+                  objects that are expelled from the warded area. These targets are forcibly pushed into the nearest
+                  empty space outside of the sphere.
+                </p>,
+                <p>
+                  A spherical ward my now have a radius of up to Length instead of a diameter, doubling its maximum
+                  size. If the ward is centered on you when you create it, you can choose for it to move with you when
+                  you move or to remain stationary. For each person, or object of greater mass than a person, that would
+                  be forced to move by the ward moving with you, the terrain difficulty of every space you move into is
+                  increased by 1.
                 </p>,
               ]}
             />
@@ -1103,7 +1153,34 @@ function ChapterEntanglements() {
                 </p>,
                 <p>
                   You can maintain the concentration needed to use Retrogradient while still defending yourself
-                  normally. You can now add Focus to the reaction’s Challenge without removing Flight from it.
+                  normally. You can now add Focus to the reaction's Challenge without removing Flight from it.
+                </p>,
+              ]}
+            />
+          </Section>
+          <Section header="Subtle Ward">
+            <EntanglementDescription
+              intro={<p>You can create Wards that are effective without people being aware of them.</p>}
+              rank3Met={{ far: true }}
+              // rank1Event="Evoke"
+              // rank1EventTarget={linkMap.EvocationStyle}
+              ranks={[
+                <p>
+                  You can choose if each Ward you make is opaque, translucent, or invisible. If an invisible ward has
+                  filters added to it by the Filter specialization, unblocked targets can pass through at full running
+                  speed and doing so is imperceptible.
+                </p>,
+                <p>
+                  You can induce Ward as a basic action instead of a full action. You may create a ward subtly
+                  preventing witnesses from knowing you did anything.
+                </p>,
+                <p>
+                  You may induce an alternate version of Ward that acts primarily mentally. When you do, the ward does
+                  not actually physically block anything. Instead, anyone that comes within Length of the ward becomes
+                  stricken with an inexplicable anxiety and fear of approaching closer, even if they can't actually
+                  perceive the ward. No one will willingly come closer to the ward outside of a life or death scenario
+                  such as combat. In combat, to traverse the ward someone must make a Willpower reaction that is greater
+                  than the Durability of the Ward.
                 </p>,
               ]}
             />
@@ -1124,9 +1201,6 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
         </Section>
       </Section>
 
@@ -2367,6 +2441,7 @@ function ChapterEntanglements() {
                   Telepathic communication occurs at a slightly faster speed and bandwidth than normal speech and a
                   shared language is not required.
                 </p>
+                <p>You can induce this event subtly, preventing any witnesses from knowing anything happened.</p>
               </>
             }
           />

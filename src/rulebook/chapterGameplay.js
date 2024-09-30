@@ -450,10 +450,10 @@ function ChapterGameplay() {
           <p>
             These states can only be caused by taking significant physical Stress. When Stress reduces a Physical
             Metabolism maximum to 0, you gain the injury State that corresponds to it. If an injured metabolism has its
-            maximum restored to above 0 this state is removed, but it cannot be removed by any other means. If more
-            Stress was dealt to you than needed to injure the Metabolism, of if Stress is dealt to an already Injured
-            metabolism, the GM or the attacker that caused the Stress decides which Physical Metabolism takes the Stress
-            instead.
+            maximum restored to above 0 this state is removed, but it cannot be removed by any other means such as the
+            Rest action. If more Stress was dealt to you than needed to injure the Metabolism, of if Stress is dealt to
+            an already Injured metabolism, the GM or the attacker that caused the Stress decides which Physical
+            Metabolism takes the Stress instead.
           </p>
           <p>
             If you ever have two injury States, you also gain the Dying State. If you gain the injury States for all
@@ -486,8 +486,8 @@ function ChapterGameplay() {
             represented by States that are only caused by Stress to Hidden Metabolisms. When one's maximum is reduced to
             0, it becomes dissociated and you gain the dissociative State that corresponding to the dissociated
             Metabolism. If this metabolism has its maximum restored back above 0 this State is removed, but it cannot be
-            removed by any other means. If further Stress is dealt to a dissociated Metabolism, the GM or the attacker
-            that caused the Stress decides which Hidden Metabolism takes the Stress instead.
+            removed by any other means such as the Rest action. If further Stress is dealt to a dissociated Metabolism,
+            the GM or the attacker that caused the Stress decides which Hidden Metabolism takes the Stress instead.
           </p>
           <p>
             If all three Hidden Metabolisms become dissociated, the dissociation escalates and becomes permanent,
@@ -560,7 +560,9 @@ function ChapterGameplay() {
               The grappler can freely release you at any moment, otherwise the grapple only ends if you and the grappler
               become more than a meter apart or you successfully escape. You can attempt to escape as an action by
               making either an Unarmed Attack or Unarmed Defense challenge. Any Progress gained reduces the Intensity of
-              grappled, allowing you to escape when it reaches 0.
+              grappled, allowing you to escape when it reaches 0. The Rest action can reduce the intensity of this state
+              like any other state, but only to intensity 1, but only an escape attempt can reduce it to 0 end end the
+              grapple.
             </p>
           </Section>
           <Section header="Out of Body">
