@@ -221,11 +221,11 @@ function ChapterEntanglements() {
                 </p>,
                 <p>
                   Your unarmed attacks count as size 0 blunt weapons, allowing you to choose to target Flight or Focus
-                  with them.
+                  with them. Your reach with unarmed attacks increases by 1 meter.
                 </p>,
                 <p>
                   You can add Focus as a third metabolism to the metabolism pairing used to make an unarmed attack. Your
-                  unarmed attacks count as size 1 weapons.
+                  unarmed attacks count as size 1 blunt weapons.
                 </p>,
               ]}
             />
@@ -1353,6 +1353,30 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
+          <Section header="Remote Interaction">
+            <EntanglementDescription
+              intro={<p>Your can telekinetically interact with objects and enemies as if they were within reach.</p>}
+              rank3Met={{ near: true }}
+              // rank1Event="Telekinesis"
+              // rank1EventTarget={linkMap.GravitonertiaStyle}
+              ranks={[
+                <p>
+                  The Interact action no longer requires a free hand and you can use it on any object weighing under 1
+                  kilogram that is within a number of meters equal to your Near score.
+                </p>,
+                <p>
+                  As a basic action, you can shove or grab any target within a number of meters equal to your Near
+                  score. A shoved target is pushed 1 meter in any direction. A grabbed target gains the grappled state
+                  with intensity 1, or has this intensity increased by 1, as if you were adjacent to them.
+                </p>,
+                <p>
+                  Your reach with melee and unarmed attacks inreases by 1 meter. You can use the move action to force a
+                  grappled target to move you do not need to move with them, but doing so increases the terrain
+                  difficulty of each space moved by an additional 1.
+                </p>,
+              ]}
+            />
+          </Section>
           <Section header="Kinetic Attack">
             <EntanglementDescription
               intro={<p>You can telekinetically throw small objects with bullet-like force.</p>}
@@ -1718,7 +1742,7 @@ function ChapterEntanglements() {
             The intuitive style of the entanglement of Focus + Self helps you function in adverse situations, resist
             influence and dissociation, and when transcend the physical needs of the body.
           </p>
-          <Section header="Bandwidth">
+          <Section header="Auto-integrity">
             <EntanglementDescription
               intro={
                 <p>
@@ -1732,9 +1756,9 @@ function ChapterEntanglements() {
                   You do not gain the Dissociated state if one Hidden Metabolism is disabled. However, if two of them
                   are, you experience the Dissociated state for both.
                 </p>,
-                <p>Any cascade event you can induce cannot have the Stressful complication.</p>,
+                <p>Any cascade event you can induce cannot have its effort level increased above default.</p>,
                 <p>
-                  You can not gain the Dissociated state. However, if all three Hidden Metabolisms are disabled your
+                  You can not gain Dissociated states. However, if all three Hidden Metabolisms are disabled your
                   character still becomes permanently unplayable.
                 </p>,
               ]}
@@ -1764,6 +1788,26 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
+          <Section header="Event Bandwidth">
+            <EntanglementDescription
+              intro={<p>You can induce cascade events with more powerful effects.</p>}
+              rank3Met={{ self: true }}
+              ranks={[
+                <p>
+                  The maximum number of times you can increase a metric of any cascade event is now equal to the event's
+                  action bonus plus your rank in this specialization.
+                </p>,
+                <p>
+                  When inducing a cascade event, choose a single metric to increase once without spending any Progress
+                  on it.
+                </p>,
+                <p>
+                  When inducing a cascade event, you may increase any number of metrics once without spending Progress
+                  instead of just one.
+                </p>,
+              ]}
+            />
+          </Section>
           <Section header="Insulation">
             <EntanglementDescription
               intro={<p>You have created a buffer that protects your hidden body from harm and influence.</p>}
@@ -1779,11 +1823,7 @@ function ChapterEntanglements() {
                   currently sublimed into hidden space. You cannot be forced to enter or exit hidden space against your
                   will.
                 </p>,
-                <p>
-                  When one of your Hidden Metabolism maximums is reduced to 0, you do not gain the dissociative State
-                  that this normally causes and may continue acting normal. You only gain the dissociative State if this
-                  Metabolism would take further Stress at a later point while its maximum is still 0.
-                </p>,
+                <p>You are immune to the manipulate action.</p>,
               ]}
             />
           </Section>
@@ -2109,7 +2149,39 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
+          <Section header="Isolate Signal">
+            <EntanglementDescription
+              intro={
+                <p>
+                  You can intuitively sense mechanical, electrical, and biological oscillation, and therefore the clock
+                  signal that synchronizes computer operations and neural resonance. With practice you can create a
+                  counter oscillation that disrupts and prevents resonance and singals from propagating.
+                </p>
+              }
+              rank3Met={{ near: true }}
+              ranks={[
+                <p>
+                  As a basic action, you take a moment to open your senses to normally impreceptible rhythms within a
+                  range of your Near score. You become aware of the presence, location, and complexity of all nervous
+                  systems more complex than an insect and all devices capable of basic computing or timekeeping. A
+                  device must be fully unpowered, not idling or on standby, to remain undetected. You can maintain this
+                  awareness for a minute.
+                </p>,
+                <p>
+                  As a basic action, select a number, up to your Near score, of devices you can sense the rhythm of.
+                  These devices crash and become disabled. You choose if this is permanent or if the device can be
+                  restarted.
+                </p>,
+                <p>
+                  As a basic action that causes a point of unavoidable Stress to Near, you prevent oscillatory systems
+                  from resonating with others within a range of you equal to your Near score. This prevents all humans
+                  other than you from comprehending or creating language while they remain in range. It also prevents
+                  any any device in range from transmitting or receiving a wired or wireless signal. This effect lasts
+                  for up to an hour.
+                </p>,
+              ]}
+            />
+          </Section>
           {/* <Section header="TODO"></Section> */}
           {/* <Section header="TODO"></Section> */}
         </Section>
@@ -2659,8 +2731,8 @@ function ChapterEntanglements() {
               rank3Met={{ far: true }}
               ranks={[
                 <p>
-                  At all times, you can sense the presence of any sentient minds within a number of meters equal to your
-                  Far score, even if they are in hidden space.
+                  At all times, you can sense the presence and location of any sentient minds within a number of meters
+                  equal to your Far score, even if they are in hidden space.
                 </p>,
                 <p>You are aware of the general emotional state and stress level of the minds you sense.</p>,
                 <p>

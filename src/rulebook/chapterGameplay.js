@@ -554,7 +554,8 @@ function ChapterGameplay() {
             <p>You are being held by someone else.</p>
             <p>
               While grappled, you can only move within the spaces adjacent to the grappler. The grappler can force you
-              to move when they move, but doing so increases the difficulty of each space they cross by 1.
+              to move with them when they use the move action, but doing so increases the terrain difficulty of each
+              space they cross by 1.
             </p>
             <p>
               The grappler can freely release you at any moment, otherwise the grapple only ends if you and the grappler
