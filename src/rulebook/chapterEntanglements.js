@@ -452,6 +452,33 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
+          <Section header="Counter">
+            <EntanglementDescription
+              intro={
+                <p>
+                  You can punish opponents for letting their guard down and use the momentum of their failed attacks
+                  against them.
+                </p>
+              }
+              rank3Met={{ near: true }}
+              ranks={[
+                <p>
+                  Once per round you may make a free counterattack in response to certain triggers, targeting the enemy
+                  that caused the trigger. This is resolved the same was as an attack action on your turn, but it
+                  happens immediately and consumes no actions. This is triggered any time an opponent uses the Move
+                  action to exit your melee or unarmed reach.
+                </p>,
+                <p>
+                  If the Progress you get on a melee or unarmed reaction is greater than the amount of Threat dealt, you
+                  may parry the attack to immediately deal an amount of Threat to the attacker equal to the difference.
+                </p>,
+                <p>
+                  An opponent using any basic action within your melee or unarmed reach triggers your free
+                  counterattack.
+                </p>,
+              ]}
+            />
+          </Section>
           <Section header="Deft Combat">
             <EntanglementDescription
               intro={<p>You can make the most of enhanced finesse while in close combat.</p>}
@@ -510,7 +537,28 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
+          <Section header="Sleight of Hand">
+            <EntanglementDescription
+              intro={<p>You can interact with things undetected and without permission.</p>}
+              rank3Met={{ near: true }}
+              ranks={[
+                <p>
+                  When you use the Interact action, you can do so without anyone noticing. If you do this to draw a
+                  weapon unnoticed, you have advantage on the next attack you take with it.
+                </p>,
+                <p>
+                  If you have advantage on an Interact action, for example if you are unseen or used the Improvise
+                  action cleverly, you can interact with or take an object in someone's pockets or bags without being
+                  noticed.
+                </p>,
+                <p>
+                  If you have advantage on an Interact action, you can take an object from someone's hands, however
+                  doing so will always be noticed. If this object was a weapon, you have advantage on the next attack
+                  you make with it.
+                </p>,
+              ]}
+            />
+          </Section>
           {/* <Section header="TODO"></Section> */}
         </Section>
         <Section header="Electromagnetism Style">
@@ -1790,21 +1838,20 @@ function ChapterEntanglements() {
           </Section>
           <Section header="Event Bandwidth">
             <EntanglementDescription
-              intro={<p>You can induce cascade events with more powerful effects.</p>}
+              intro={<p>You can use pure willpower to induce cascade events with heightened intensity.</p>}
               rank3Met={{ self: true }}
               ranks={[
                 <p>
-                  The maximum number of times you can increase a metric of any cascade event is now equal to the event's
-                  action bonus plus your rank in this specialization.
+                  You can use the Push action to improve cascade events. When you do, each metric can be increased again
+                  the same number of times it could normally be increased, effectively doubling the maximum range. For
+                  example, if you could increase a metric up to 2 times when inducing an event, you could increase it up
+                  to 2 additional times when Pushing the event.
                 </p>,
                 <p>
                   When inducing a cascade event, choose a single metric to increase once without spending any Progress
-                  on it.
+                  on it. You may do this again if you use the Push action on the event.
                 </p>,
-                <p>
-                  When inducing a cascade event, you may increase any number of metrics once without spending Progress
-                  instead of just one.
-                </p>,
+                <p>The maximum number of times you can increase the metrics of any cascade event is increased by 1.</p>,
               ]}
             />
           </Section>
@@ -2102,8 +2149,8 @@ function ChapterEntanglements() {
               ranks={[
                 <>
                   <p>
-                    You can comprehend, but not speak, read, or write, the spoken language of anyone within 9 meters of
-                    you.
+                    You can comprehend, but not speak, read, or write, the spoken language of anyone within{" "}
+                    <Metabolism near /> meters of you.
                   </p>
                   <p>
                     Once per scene, you can touch a person to detect the presence of specific knowledge. The information
@@ -2112,14 +2159,43 @@ function ChapterEntanglements() {
                   </p>
                 </>,
                 <p>
-                  You can speak, read, or write any language as fluently as anyone within 9 meters of you. When you
-                  detect the presence of information in someone, you now also learn the contents of this information.
+                  You can speak, read, or write any language as fluently as anyone within <Metabolism near /> meters of
+                  you. When you detect the presence of information in someone, you now also learn the contents of this
+                  information.
                 </p>,
                 <p>
                   When you detect the presence of information in someone, you can now take a point of unavoidable Stress
                   to Focus in order to excise this memory. You learn the desired memory and the target permanently
                   forgets it.
                 </p>,
+              ]}
+            />
+          </Section>
+          <Section header="Event Flexibility">
+            <EntanglementDescription
+              intro={
+                <p>
+                  You deeply understand the fundamental mechanisms that allow cascade events to work, allowing you to
+                  improve and modify their effects.
+                </p>
+              }
+              rank3Met={{ self: true }}
+              ranks={[
+                <p>
+                  You can use the Improvise action to improve cascade events. This is always a basic action, regardless
+                  of how long the event takes to induce. When you do, instead of adding advantage to the event choose a
+                  single metric of the event to make flexible. During the Improvise action you can spend points from any
+                  Metabolism, plus your Improvise bonus, to increase the flexible metric up to its normal limit. Then
+                  during the action to induce the event, you can increase the metric further up to its limit again. For
+                  example, if you can normally increase a metric up to 2 times, you could increase it 2 times using any
+                  Metabolism during the Improvise action and then 2 more times as usual during the action to induce the
+                  event.
+                </p>,
+                <p>
+                  When inducing a cascade event, choose a single metric to increase once without spending any Progress
+                  on it. You may do this twice if you use the Improvise action on the event.
+                </p>,
+                <p>The maximum number of times you can increase the metrics of any cascade event is increased by 1.</p>,
               ]}
             />
           </Section>
@@ -2145,6 +2221,38 @@ function ChapterEntanglements() {
                 <p>
                   Your exoproprioception allows you to sense and avoid attacks, you may use your Intuition reaction in
                   place of Unarmed, Melee, or Ranged reactions.
+                </p>,
+              ]}
+            />
+          </Section>
+          <Section header="Group Mind">
+            <EntanglementDescription
+              intro={<p>You can share knowledge and experiences with others empathically, almost like a hive mind.</p>}
+              rank3Met={{ near: true }}
+              ranks={[
+                <>
+                  <p>
+                    By taking 1 unavoidable Stress to <Metabolism near /> as a non-action, you can create a group mind
+                    containing yourself and a number of targets you can see up to your rank in this specialization. For
+                    the rest of the scene, the group mind remains intact as long as each member can see at least one
+                    other member. Members can leave as a non-action. Members of this group mind can communicate
+                    empathically and experience any emotions experienced by the other members. Information sent this way
+                    pre-semiotic and does not require a shared language, however it lacks the speed, precision, and
+                    urgency of language.
+                  </p>
+                  <p>
+                    If one member uses or becomes a Participant in a Telepathy event, all other members also become
+                    Participants for free. Participants in these events no longer require a shared language.
+                  </p>
+                </>,
+                <p>
+                  All members of the group mind can use the Improvise action to help any other member as if they were
+                  adjacent and cooperating. They can also use the Heal or Rest actions targeting any other member as if
+                  they were targeting themself.
+                </p>,
+                <p>
+                  While in the group mind, all members share any Traits that represent skills or knowledge. Any of these
+                  Traits one member has, all other members also have.
                 </p>,
               ]}
             />
@@ -2182,8 +2290,6 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
         </Section>
         <Section header="Chromodynamism Style">
           <p>
@@ -2510,8 +2616,8 @@ function ChapterEntanglements() {
                   participants can communicate telepathically. This communication is undetectable to outsiders.
                 </p>
                 <p>
-                  Telepathic communication occurs at a slightly faster speed and bandwidth than normal speech and a
-                  shared language is not required.
+                  Telepathic communication occurs at a slightly faster speed and bandwidth than normal speech, but still
+                  requires a shared language.
                 </p>
                 <p>You can induce this event subtly, preventing any witnesses from knowing anything happened.</p>
               </>
@@ -2550,34 +2656,6 @@ function ChapterEntanglements() {
                   When you scry, you do not need to have seen the location before. You and all Participants gain all of
                   their senses at the location. You can observe the area retrocognitively at any chosen past moment
                   within a number of years equal to Influence.
-                </p>,
-              ]}
-            />
-          </Section>
-
-          <Section header="Group Mind">
-            <EntanglementDescription
-              intro={
-                <p>
-                  Participants in your Telepathy events can share more than just communication, allowing them to
-                  collaborate almost as effectively as a hive mind.
-                </p>
-              }
-              rank3Met={{ far: true }}
-              // rank1Event={"Telepathy"}
-              // rank1EventTarget={linkMap.TelethesiaStyle}
-              ranks={[
-                <p>
-                  For the duration of your Telepathy events, any Participant can use the Improvise action to help any
-                  other Participant as if they were adjacent and cooperating.
-                </p>,
-                <p>
-                  For the duration of your Telepathy events, any Participant can use the Heal or Rest action targeting
-                  any other Participant as if they were targeting themself.
-                </p>,
-                <p>
-                  For the duration of your Telepathy events, all Participants have every Trait representing skill or
-                  knowledge that any other Participant has.
                 </p>,
               ]}
             />

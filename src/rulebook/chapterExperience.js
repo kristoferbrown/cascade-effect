@@ -107,11 +107,8 @@ function ChapterExperience() {
 
       <Section header="Using Cascade Events">
         <p>
-          Cascade events are a special class of action typically used to do something overtly supernatural. Each event
-          is associated with an entanglement, if you have at least 1 rank in this entanglement you can induce the event.
-        </p>
-        <p>
-          Unless otherwise specified in the event’s description, inducing a cascade event is a full action and a default
+          Cascade events are a special class of action typically used to do something overtly supernatural. Unless
+          otherwise specified in the event’s description, inducing a cascade event is a full action and a default
           effort, low risk Challenge. Focus plus the Hidden Metabolism associated with the event are required in any
           Challenges.
         </p>
@@ -151,6 +148,13 @@ function ChapterExperience() {
             The physical appearance of inducing a cascade event is up to you, however unless the event specifies
             otherwise, it is never subtle. Someone witnessing you induce the event can see that the event occured and
             that it was caused by you.
+          </p>
+        </Section>
+        <Section header="Event Limitations">
+          <p>
+            Inducing an event cannot benefit from the Push or Improvise actions. However, their are specializations in
+            the Bright and Confident styles that allow you to break this rule, and also increase the limit on how many
+            times you can improve Metrics.
           </p>
         </Section>
         <Section header="Improving Events">
