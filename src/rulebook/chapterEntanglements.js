@@ -572,17 +572,33 @@ function ChapterEntanglements() {
             inductionTime="Full Action"
             linkTarget={linkMap.ElectromagnetismStyle}
             metrics={[
-              { name: "Intensity", value: "1 Threat" },
+              { name: "Intensity", value: "1" },
               { name: "Range", value: "1 Meter" },
             ]}
             description={
               <>
                 <p>
-                  Bend the path of an existing flow of light or electricity within Range. This can discharge a battery,
-                  short circuit a device, or focus sunlight into a beam. Without further Electromagnetism
-                  Specializations, this event can only crudely redirect this energy, it cannot create, transform,
-                  exercise fine control, or handle extremely high energy levels.
+                  Bend the path of an existing flow of light or electricity within Range. This can, for example,
+                  discharge a battery, short circuit a device, or focus sunlight into a beam. Without further
+                  Electromagnetism Specializations, this event can only crudely redirect this energy, it cannot create,
+                  transform, exercise fine control, or handle extremely high energy levels.
                 </p>
+                <p>
+                  This requires an existing energy source of a similar or greater strength than the value of Intensity
+                  you wish to use. If the source is stronger than Intensity, you only move a portion of the energy. The
+                  exact strength of a specific energy source is up to the GM, within these rough guidelines:
+                </p>
+                <ul>
+                  <li>Consumer batteries, residential lighting, fridge magnets.</li>
+                  <li>Residential wiring, direct sunlight, small rare earth magnets.</li>
+                  <li>A laser that can blind you.</li>
+                  <li>Residential overhead power lines.</li>
+                  <li>A laser that can burn you.</li>
+                  <li>Industrial electromagnets.</li>
+                  <li>High-tension distribtion lines.</li>
+                  <li>The output of a powerplant.</li>
+                  <li>Extreme circumstances.</li>
+                </ul>
                 <p>
                   If this is used to harm someone, it deals Threat equal to Intensity. This attack moves too fast to
                   allow the target to take a reaction. The energy can dazzle or stun, but not truely harm the body and
@@ -603,19 +619,58 @@ function ChapterEntanglements() {
               // rank1Event="Refract"
               // rank1EventTarget={linkMap.ElectromagnetismStyle}
               ranks={[
+                <>
+                  <p>
+                    Your Refract event gains the metric “Create/Destroy: 1”. This metric has multiple uses in different
+                    specializations. Choose one specific use for it when you use it.
+                  </p>
+                  <p>
+                    You can use the Create/Destroy metric to create energy from nothing. When you do this, Intensity
+                    must be equal to or lower than Create/Destroy, but Create/Destroy has no other effect.
+                  </p>
+                </>,
                 <p>
-                  Your Refract event gains the metric “Create: 1”. You can use this metric to create energy from
-                  nothing, but it has no effect on its own. Instead it is the fuel for other metrics when you use
-                  Refract without an existing energy source, the total amount of Progress you spend on all other metrics
-                  must be equal or lower than the value of Create.
+                  Your Refract event gains the metric “Area: 1 meter”. The event can now affect everything within a
+                  radius of Area as long as the center of the area is within Range.
                 </p>,
                 <p>
-                  Your Refract event gains the metric “Area: 1 cubic meter”. The event can now affect everything within
-                  Area. At least one meter of the affected Area must be within Range.
+                  When you use Refract to affect an existing energy source, you can use Create/Destroy to increase the
+                  Strength of this energy source. When you do this, the final value of Intensity is equal to Intensity +
+                  Create/Destroy.
+                </p>,
+              ]}
+            />
+          </Section>
+          <Section header="Darkness">
+            <EntanglementDescription
+              intro={
+                <p>
+                  You can prevent electromagnetism from propagating meaningful distances through the air in a region.
+                </p>
+              }
+              rank3Met={{ near: true }}
+              // rank1Event="Refract"
+              // rank1EventTarget={linkMap.ElectromagnetismStyle}
+              ranks={[
+                <>
+                  <p>
+                    Your Refract event gains the metric “Create/Destroy: 1”. This metric has multiple uses in different
+                    specializations. Choose one specific use for it when you use it.
+                  </p>
+                  <p>
+                    You can use Create/Destroy to destroy light in an area and create an area of darkness. The area is a
+                    sphere with a radius in meters of Create/Destroy + Area + Intensity. Light cannot enter, travel, or
+                    be emitted in the affected area. Everyone inside is blind.
+                  </p>
+                  ,
+                </>,
+                <p>
+                  When you create an area of darkness, you can allow a single narrow wavelength to pass and then
+                  sensitize your eyes to this wavelength. This allows you to see in the area when no one else can.
                 </p>,
                 <p>
-                  When you use the Create metric, only the Intensity metric must be equal to or lower than it, you can
-                  freely set any other metric.
+                  Radio signals, electrical wires, and any senses that involve electromagnetism in an area of darkness
+                  do not function unless you allow them to.
                 </p>,
               ]}
             />
@@ -1672,6 +1727,37 @@ function ChapterEntanglements() {
               </>
             }
           />
+          <Section header="Concentrate Field">
+            <EntanglementDescription
+              intro={
+                <p>
+                  You can increase the strength of a field by concentrating it into a smaller area, or conversely make
+                  it larger and more diffuse.
+                </p>
+              }
+              rank3Met={{ near: true }}
+              // rank1Event="Field"
+              // rank1EventTarget={linkMap.PneumaplegiaStyle}
+              ranks={[
+                <p>
+                  Each time you spend Progress to increase the Area metric of your Field event, you may instead increase
+                  the value of the Intensity metric. This allows you to increase Intensity above its normal limit. For
+                  example, if your maximum number of increases was 3 and you increased both Area and Intensity the
+                  maximum 3 times, you could treat the event as if you had increased Intensity 6 times and left Area at
+                  the minimum.
+                </p>,
+                <p>You can also do the opposite of Rank 1, sacrificing Intensity to increase Area further.</p>,
+                <p>
+                  Any time you create a Field with that has an Intensity metric increased above your normal maximum,
+                  either from this specialization or any other means such as from the Event Bandwidth specialization,
+                  the field becomes extremely dense. A dense Fields greatly hinders movement, every space within it has
+                  a terrain Difficulty equal to Intensity and it acts as cover with a value of 3 to any attacks that
+                  pass through any part of it. They become increasingly opaque closer to the ground, suitible to hide
+                  behind by crouching down.
+                </p>,
+              ]}
+            />
+          </Section>
           <Section header="Isolate Flow">
             <EntanglementDescription
               intro={
