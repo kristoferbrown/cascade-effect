@@ -1,0 +1,109 @@
+@import url("../../variables.css");
+
+.ChapterIntroSpreadPage .pageContentLogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ChapterIntroSpreadPage .logomark-svg {
+  height: 150px;
+  transform: rotate(90deg);
+}
+
+.ChapterIntroSpreadPageContent {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.ChapterIntroSpreadRightPage {
+  background: var(--hiddenSpace);
+  color: var(--physicalSpace);
+}
+
+.ChapterIntroSpreadRightPage .crosslink {
+  color: var(--physicalSpace);
+  -webkit-text-stroke: 0.4px var(--physicalSpace);
+}
+
+@media print {
+  .ChapterIntroSpread {
+    page: chapterIntroPage;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  .ChapterIntroSpreadPage {
+    break-after: page;
+    break-before: page;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding: 0;
+  }
+  .ChapterIntroSpreadPage h1 {
+    color: #000;
+    height: 11vh;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+  }
+  .ChapterIntroSpreadPage:after {
+    content: "";
+    transform: skewY(-9deg);
+    height: 77.7vh;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+  }
+
+  .ChapterIntroSpreadLeftPage {
+    margin: 0 0 0 0;
+  }
+  .ChapterIntroSpreadLeftPage .pageContentLogo {
+    padding: 0 0 0 5vh;
+  }
+  .ChapterIntroSpreadLeftPage h1 {
+    top: 0;
+    line-height: 15vh;
+  }
+  .ChapterIntroSpreadLeftPage:after {
+    background: var(--physicalSpace);
+    bottom: 0;
+    transform-origin: bottom left;
+  }
+
+  .ChapterIntroSpreadRightPage {
+    margin: 0 0 0 0;
+    background: none;
+    color: var(--physicalSpace);
+  }
+  .ChapterIntroSpreadRightPage .pageContentLogo {
+    padding: 0 5vh 0 0;
+  }
+
+  .ChapterIntroSpreadRightPage h1 {
+    bottom: 0;
+    line-height: 7vh;
+  }
+  .ChapterIntroSpreadRightPage:after {
+    background: var(--hiddenSpace);
+    top: 0;
+    transform-origin: top right;
+  }
+
+  .ChapterIntroSpreadPageContent {
+    padding: 0 5vh;
+    overflow: hidden;
+    flex-direction: row;
+    height: 100%;
+    align-items: center;
+  }
+  .ChapterIntroSpreadPage .logomark-svg {
+    transform: none;
+  }
+}

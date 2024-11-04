@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { RulebookContext } from "../context/rulebookContext";
 import Break from "../components/break/break";
-import ChapterIntro from "../components/chapter-intro/chapter-intro";
+import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import Section from "../components/section/section";
 import Logomark from "../svgs/logomark";
 import Crosslink from "../components/crosslink/crosslink";
@@ -13,34 +13,46 @@ function ChapterCombat() {
   const linkMap = topicMap.current;
 
   return (
-    <Section coordinates={"4"} header="Combat">
-      <ChapterIntro>
-        <p>
-          In combat, the game slows down into turns to follow the action. Fights are difficult and lethal for normal
-          people, but access to
-          <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> changes this. The primitive parts
-          of the brain stem that mediate the connection to the Hidden body are the same as those that manage autonomic
-          processes like breathing and heart rate. Once you've gotten the feel for this connection, stressful situations
-          often take on a rhythm: inhale, allocate, exhale, execute. Having foudnd this rhythm, you can take two actions
-          each time it's your turn.
-        </p>
-        <Logomark />
-      </ChapterIntro>
-
-      <Section header="Inhale Action" isChapterIntroColumn>
-        <p>
-          First, take an inhale action. This can be any action, but with one requirement, only people with at least one
-          current point within the
-          <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolism</Crosslink> available can take inhale actions.
-        </p>
-      </Section>
-      <Section header="Exhale Action" isChapterIntroColumn isClassified>
-        <p>
-          Second, take an exhale action. The exhale action can be any action. This is the only action normal people have
-          access to, so once you can reliably use the inhale action too you can act twice as often as most people.
-        </p>
-      </Section>
-
+    <Section
+      coordinates={"4"}
+      header="Combat"
+      introContent={
+        <ChapterIntroSpread
+          chapterNumber={4}
+          title="Combat"
+          leftPageContent={
+            <>
+              <h2>Inhale Action</h2>
+              <p>
+                In combat, the game slows down into turns to follow the action. Fights are difficult and lethal for
+                normal people, but access to
+                <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> changes this. The primitive
+                parts of the brain stem that mediate the connection to the Hidden body are the same as those that manage
+                autonomic processes like breathing and heart rate. Once you've gotten the feel for this connection,
+                stressful situations often take on a rhythm: inhale, allocate, exhale, execute. Having foudnd this
+                rhythm, you can take two actions each time it's your turn.
+              </p>
+              <p>
+                First, take an inhale action. This can be any action, but with one requirement, only people with at
+                least one current point within the
+                <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolism</Crosslink> available can take inhale
+                actions.
+              </p>
+            </>
+          }
+          rightPageContent={
+            <>
+              <h2>Exhale Action</h2>
+              <p>
+                Second, take an exhale action. The exhale action can be any action. This is the only action normal
+                people have access to, so once you can reliably use the inhale action too you can act twice as often as
+                most people.
+              </p>
+            </>
+          }
+        ></ChapterIntroSpread>
+      }
+    >
       <Section header="Combat Flow">
         <p>
           The first step of combat is determining who has the initiative. Everyone involved must make a

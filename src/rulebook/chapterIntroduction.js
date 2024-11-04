@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { RulebookContext } from "../context/rulebookContext";
 import Break from "../components/break/break";
-import ChapterIntro from "../components/chapter-intro/chapter-intro";
+import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import Section from "../components/section/section";
 import Crosslink from "../components/crosslink/crosslink";
 import Logomark from "../svgs/logomark";
@@ -11,76 +11,93 @@ function ChapterIntroduction() {
   const linkMap = topicMap.current;
 
   return (
-    <Section coordinates={"1"} header="Introduction">
-      <ChapterIntro>
+    <Section
+      coordinates={"1"}
+      header="Introduction"
+      introContent={
+        <ChapterIntroSpread
+          chapterNumber={1}
+          title="Introduction"
+          leftPageContent={
+            <>
+              <h2>A World Heating Up</h2>
+              <p>We've crossed the tipping point.</p>
+              <p>
+                Accelerating changes to the climate are hitting harder and faster than anyone predicted. Unpredictable
+                natural disasters, destructive storms, unprecedented floods, widespread crop failures, longterm
+                droughts, and lethal heat waves are daily news stories. The ensuing societal effects are just as
+                dramatic. Failing economies, looming wars, global refugee crises, abandoned cities, and reactionary
+                backlashes are rippling across the globe in chain reactions. Fueled by these tensions new counter
+                cultures, rebellions, and social movements are growing explosively and creating new communities outside
+                of the status quo. Amidst the growing chaos, almost everyone has heard rumors or seen blurry videos of
+                things they can't explain.
+              </p>
+            </>
+          }
+          rightPageContent={
+            <>
+              <h2>A World Hidden Within</h2>
+              <p>You've gone down the rabbit hole.</p>
+              <p>
+                Maybe you've always suspected that there was something more to the world, that things were never quite
+                as they seemed. But now, you've felt it. Seen it hiding behind the world you once knew. Realized it is a
+                part of you. A part of everyone. You're only just beginning to sense it, but a hidden intangible world
+                exists parallel to the one we know, and in it resides your parallel hidden body. You can feel it. You
+                can reach out and feel the hidden bodies of others. Yet no one seems to ever realize it's there. It was
+                always there, always a necessary part of you. But now that you're beginning to interact with it, you're
+                discovering that it can help you do things you never thought possible.
+              </p>
+            </>
+          }
+        ></ChapterIntroSpread>
+      }
+    >
+      <Section header="Basics">
         <p>
-          In a near future collapsing under the weight of a climate changing faster than anyone expected, players
-          roleplay characters that are about to embark on an adventure revealing a world much more complex, strange, and
-          dangerous than they ever expected.
+          Cascade Effect is a table top roleplaying game. To play it, get a group of friends together and choose one of
+          you to be the game master. The game master tells the story, every other player controls a single character in
+          that story. The player characters work together as a team of protagonists, navigating the near future world of
+          Cascade Effect and unraveling its mysteries and surviving its dangers.
         </p>
-        <p>
-          Not only are they discovering secrets about the world, they're also starting to discover new abilities that
-          seem to come from their connection to a mysterious intangible realm.
-        </p>
-        <Logomark />
-      </ChapterIntro>
-
-      <Section header="Player Characters" isChapterIntroColumn>
-        <p>
-          To play, pick one person to be the game master, the rest of the players create and play a single character.
-          The players act out what their characters words and describe their actions.
-        </p>
-        <p>
-          The characters know what the GM describes about the scene and setting, but they're also people with background
-          knowledge about the world. Players are the primary authors of their character's backstory (within the bounds
-          what's reasonable in the setting), and should act according to what their character would know given their
-          history.
-        </p>
-        <p>
-          In general, characters will be aware of recent history and news. It's the near future, less than 10 years from
-          now. The biggest story connecting most recent events is the accelerating changing climate. Unprecedented
-          natural disasters, immensely destructive storms, flooded coastal cities, global crop failures, droughts, and
-          lethal heat waves, are occurring earlier and more often than predicted. The secondary societal effects of
-          these events are just as dramatic; the news is full of stories on looming wars, rebellions, failing economies,
-          global refugee crises, abandoned cities, and reactionary backlashes. New counter culture movements are growing
-          explosively and creating new communities outside of the status quo.
-        </p>
-        <p>
-          Amidst the growing chaos, almost everyone has heard rumors or seen blurry videos of bizarre events that cannot
-          be explained.
-        </p>
+        <Section header="Player Characters">
+          <p>
+            The players roleplay characters that are about to embark on an adventure revealing a world much more
+            complex, strange, and dangerous than they ever expected. Not only are they discovering secrets about the
+            world, they're also starting to discover new abilities that seem to come from their connection to a
+            mysterious intangible realm. The players act out what their characters words and describe their actions.
+          </p>
+          <p>
+            The characters know what the GM describes about the scene and setting, but they're also people with
+            background knowledge about the world. Players are the primary authors of their character's backstory (within
+            the bounds what's reasonable in the setting), and should act according to what their character would know
+            given their history.
+          </p>
+        </Section>
+        <Section header="The Game Master">
+          <p>
+            The game master describes the situations and events characters experience. They are in control of all of the
+            people and challenges that characters encounter. The game master's job is to guide the characters through an
+            interesting and challenging adventure and to keep the story moving forward.
+          </p>
+          <p>
+            The GM knows everything about the fictional world the story is taking place in. Anything the GM describes
+            about the world is true, whether it was planned or improvised it on the spot. Details about the world and
+            its secrets and possible adventures are described in the last section of this rulebook. These pages are
+            meant for the GM's eyes only and contain details on the secret, mysterious, or supernatural aspects of the
+            world that most people are unaware of.
+          </p>
+          <p>
+            The GM can start the game with the characters' origin stories on how they started entering the secret parts
+            of the world, or they could jump right into the action with characters that are already an established group
+            entwined in secrets and intrigue.
+          </p>
+          <p>
+            The GM should also have a good sense of the rules and instruct other players on how to resolve situations.
+            But don't lose momentum a lot of time looking for a rule, just improvise and look it up later for next time.
+          </p>
+        </Section>
       </Section>
-
-      <Section header="The Game Master" isChapterIntroColumn isClassified>
-        <p>
-          The game master describes the situations and events characters experience. They are in control of all of the
-          people and challenges that characters encounter. The game master's job is to guide the characters through an
-          interesting and challenging adventure and to keep the story moving forward.
-        </p>
-        <p>
-          The GM knows everything about the fictional world the story is taking place in. Anything the GM describes
-          about the world is true, whether it was planned or improvised it on the spot.
-        </p>
-        <p>
-          Details about the world and its secrets and possible adventures are described in the last section of this
-          rulebook. These pages are meant for the GM's eyes only and contain details on the secret, mysterious, or
-          supernatural aspects of the world that most people are unaware of.
-        </p>
-        <p>
-          The GM can start the game with the characters' origin stories on how they started entering the secret parts of
-          the world, or they could jump right into the action with characters that are already an established group
-          entwined in secrets and intrigue.
-        </p>
-        <p>
-          The GM should also have a good sense of the rules and instruct other players on how to resolve situations. But
-          don't lose momentum a lot of time looking for a rule, just improvise and look it up later.
-        </p>
-      </Section>
-
-      <Break page />
-
       <Section header="The Setting">
-        {/* @TODO use column-span: all; to lay out this bit*/}
         <Section header="A World Heating Up">
           <Section header="Rising Temperatures">
             <p>
@@ -153,7 +170,6 @@ function ChapterIntroduction() {
           </Section>
         </Section>
       </Section>
-
       <Section header="Basic Gameplay">
         <p>
           Gameplay consists of the GM and players collaborating on a story. The GM presents a situation, and the players
@@ -215,7 +231,6 @@ function ChapterIntroduction() {
           </p>
         </Section>
       </Section>
-
       <Section header="Getting Started">
         <p>
           As a group, you'll have to decide what point to start your story at. This choice determines how powerful your
@@ -253,8 +268,6 @@ function ChapterIntroduction() {
           </p>
         </Section>
       </Section>
-
-      <Break page />
     </Section>
   );
 }

@@ -20,6 +20,7 @@ const Section = ({
   isOpenAtDepth = 2,
   metabolized,
   topicKey,
+  introContent,
 }) => {
   const { openSectionList, setOpenSectionList, isAllForcedOpen, wasAllOpened, setWasAllOpened, topicMap } =
     useContext(RulebookContext);
@@ -88,38 +89,45 @@ const Section = ({
   };
 
   return (
-    <section
-      className={classnames({
-        section: true,
-        [`depth${depth}`]: true,
-        openSection: isVisible,
-        hasBackground: !!background,
-        [background]: !!background,
-        chapterIntroColumn: isChapterIntroColumn,
-        classified: isClassified,
-        inset: isInset,
-        [`metabSection${metabolized}`]: !!metabolized,
-        hasAccentColor: !!metabolized,
-      })}
-      ref={sectionContainer}
-      id={`section${coordinates}`}
-    >
-      <Heading onClick={onHeaderClick} className="sectionHeader">
-        {header}
-        <div className={"sectionCoordinates"}>{coordinates}</div>
-      </Heading>
+    <>
+      <section
+        className={classnames({
+          section: true,
+          [`depth${depth}`]: true,
+          openSection: isVisible,
+          hasBackground: !!background,
+          [background]: !!background,
+          classified: isClassified,
+          inset: isInset,
+          [`metabSection${metabolized}`]: !!metabolized,
+          hasAccentColor: !!metabolized,
+        })}
+        ref={sectionContainer}
+        id={`section${coordinates}`}
+      >
+        <Heading onClick={onHeaderClick} className="sectionHeader">
+          {header}
+          <div className={"sectionCoordinates"}>{coordinates}</div>
+        </Heading>
 
-      <AnimateHeight duration={300} height={isVisible || isAllForcedOpen ? "auto" : 0}>
-        <div className="sectionChildren">
-          {!isAllForcedOpen ? (
-            <button className="visibilityToggle" onClick={toggleVisibility}>
-              X
-            </button>
-          ) : null}
-          {children && children.map ? appendChildrenProps() : children}
-        </div>
-      </AnimateHeight>
-    </section>
+        <AnimateHeight duration={300} height={isVisible || isAllForcedOpen ? "auto" : 0}>
+          {introContent}
+          <div
+            className={classnames({
+              sectionChildren: true,
+              chapterContent: depth === 1,
+            })}
+          >
+            {!isAllForcedOpen ? (
+              <button className="visibilityToggle" onClick={toggleVisibility}>
+                X
+              </button>
+            ) : null}
+            {children && children.map ? appendChildrenProps() : children}
+          </div>
+        </AnimateHeight>
+      </section>
+    </>
   );
 };
 

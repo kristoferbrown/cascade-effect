@@ -1,7 +1,7 @@
 // import { useContext } from "react";
 // import { RulebookContext } from "../context/rulebookContext";
 import Break from "../components/break/break";
-import ChapterIntro from "../components/chapter-intro/chapter-intro";
+import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import Section from "../components/section/section";
 import Logomark from "../svgs/logomark";
 // import Crosslink from "../components/crosslink/crosslink";
@@ -13,46 +13,57 @@ function ChapterExperience() {
   // const linkMap = topicMap.current;
 
   return (
-    <Section coordinates={"6"} header="Experience">
-      <ChapterIntro>
-        <p>
-          The Physical Metabolisms you start the game with only improve slowly with great effort. They're likely to see
-          only minor growth over the long term.
-        </p>
-        <p>
-          Conversely, your Hidden Metabolisms may all start low but they will grow quickly as you learn to more deeply
-          connect the physical and hidden bodies.
-        </p>
-        <p>
-          These improvements come from the Experience you gain during your adventures. Experience points you earn are
-          used to buy ranks in the nine Entanglements and ranks in the Specializations within those Entanglements.
-        </p>
-        <Logomark />
-      </ChapterIntro>
-      <Section header="Entanglements" topicKey="entanglementsIntroColumn" isChapterIntroColumn>
-        <p>
-          Entanglements represent a permanent connection between your physical and hidden bodies that you have learned
-          to intuitively create. Controlling these connections allows you to utilize preternatural abilities beyond the
-          normal range of the human body.
-        </p>
-        <p>
-          Entanglements can increase Metabolisms and Action Bonuses and grant access to Specializations that further
-          customize and improve your abilities related to the Entanglement.
-        </p>
-      </Section>
-      <Section header="Cascade Events" isChapterIntroColumn isClassified>
-        <p>
-          There is a single cascade event associated with each Entanglement. This signature supernatural ability has its
-          own action bonus that improves its potency.
-        </p>
-        <p>
-          Inducing a cascade event is a special action that can have customizable effects based on how you spend and
-          apply metabolism points. Specializations related to the cascade event will improve its power or give you
-          additional customization options each time you use it.
-        </p>
-      </Section>
-      <Break page />
-
+    <Section
+      coordinates={"6"}
+      header="Experience"
+      introContent={
+        <ChapterIntroSpread
+          chapterNumber={6}
+          title="Experience"
+          leftPageContent={
+            <>
+              <h2>Entanglements</h2>
+              <p>
+                The Physical Metabolisms you start the game with only improve slowly with great effort. They're likely
+                to see only minor growth over the long term.
+              </p>
+              <p>
+                Conversely, your Hidden Metabolisms may all start low but they will grow quickly as you learn to more
+                deeply connect the physical and hidden bodies.
+              </p>
+              <p>
+                These improvements come from the Experience you gain during your adventures. Experience points you earn
+                are used to buy ranks in the nine Entanglements and ranks in the Specializations within those
+                Entanglements.
+              </p>
+              <p>
+                Entanglements represent a permanent connection between your physical and hidden bodies that you have
+                learned to intuitively create. Controlling these connections allows you to utilize preternatural
+                abilities beyond the normal range of the human body.
+              </p>
+              <p>
+                Entanglements can increase Metabolisms and Action Bonuses and grant access to Specializations that
+                further customize and improve your abilities related to the Entanglement.
+              </p>
+            </>
+          }
+          rightPageContent={
+            <>
+              <h2>Cascade Events</h2>
+              <p>
+                There is a single cascade event associated with each Entanglement. This signature supernatural ability
+                has its own action bonus that improves its potency.
+              </p>
+              <p>
+                Inducing a cascade event is a special action that can have customizable effects based on how you spend
+                and apply metabolism points. Specializations related to the cascade event will improve its power or give
+                you additional customization options each time you use it.
+              </p>
+            </>
+          }
+        ></ChapterIntroSpread>
+      }
+    >
       <Section header="Using Entanglements">
         <p>
           There are 9 Entanglements, one for each possible Metabolism pairing. Each Entanglement is composed of 3 ranks

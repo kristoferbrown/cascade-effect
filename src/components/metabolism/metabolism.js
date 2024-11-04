@@ -21,7 +21,9 @@ const Metabolism = ({ fight, flight, focus, self, near, far, pairLeft, pairRight
     <Crosslink
       inverted={self || near || far}
       target={linkMap[`Using${label}`]}
-      className={`metabolism ${cssLabel} ${pairLeft ? "pair-left" : ""} ${pairRight ? "pair-right" : ""}`}
+      className={`metabolismLabel metabolism ${cssLabel} ${pairLeft ? "pair-left" : ""} ${
+        pairRight ? "pair-right" : ""
+      }`}
     >
       {label}
     </Crosslink>

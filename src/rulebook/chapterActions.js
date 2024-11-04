@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { RulebookContext } from "../context/rulebookContext";
 import Break from "../components/break/break";
-import ChapterIntro from "../components/chapter-intro/chapter-intro";
+import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import Section from "../components/section/section";
 import Logomark from "../svgs/logomark";
 import Crosslink from "../components/crosslink/crosslink";
@@ -13,34 +13,44 @@ function ChapterActions() {
   const linkMap = topicMap.current;
 
   return (
-    <Section coordinates={"5"} header="Actions">
-      <ChapterIntro>
-        <p>
-          The actions listed in this chapter spell out how to handle some of the things your character may attempt to
-          do. These may be basic actions with no special rules, attack actions that provoke a reaction from their
-          target, reactions that you take in response to something, or full actions that consume a full turn. All
-          actions are associated with an Action Bonus representing any unusual skill your character may have with this
-          action.
-        </p>
-        <Logomark />
-      </ChapterIntro>
-
-      <Section header="Actions in Combat" isChapterIntroColumn>
-        <p>
-          In combat the actions you take will generally be taken from the list in this chapter. If you wish to do
-          something not directly covered by these actions, the GM will present a Challenge to resolve it. In general
-          actions in combat consume a single inhale or exhale action, with the exception of full actions that consume
-          both.
-        </p>
-      </Section>
-      <Section header="Actions out of Combat" isChapterIntroColumn isClassified>
-        <p>
-          Outside of combat you are free to do anything you describe, and the GM will create Challenges for you as you
-          run into them. However, you can still take the specific actions from the list in this chapter to benefit from
-          their Action Bonuses and any specializations that improve them.
-        </p>
-      </Section>
-
+    <Section
+      coordinates={"5"}
+      header="Actions"
+      introContent={
+        <ChapterIntroSpread
+          chapterNumber={5}
+          title="Actions"
+          leftPageContent={
+            <>
+              <h2>Actions in Combat</h2>
+              <p>
+                The actions listed in this chapter spell out how to handle some of the things your character may attempt
+                to do. These may be basic actions with no special rules, attack actions that provoke a reaction from
+                their target, reactions that you take in response to something, or full actions that consume a full
+                turn. All actions are associated with an Action Bonus representing any unusual skill your character may
+                have with this action.
+              </p>
+              <p>
+                In combat the actions you take will generally be taken from the list in this chapter. If you wish to do
+                something not directly covered by these actions, the GM will present a Challenge to resolve it. In
+                general actions in combat consume a single inhale or exhale action, with the exception of full actions
+                that consume both.
+              </p>
+            </>
+          }
+          rightPageContent={
+            <>
+              <h2>Actions out of Combat</h2>
+              <p>
+                Outside of combat you are free to do anything you describe, and the GM will create Challenges for you as
+                you run into them. However, you can still take the specific actions from the list in this chapter to
+                benefit from their Action Bonuses and any specializations that improve them.
+              </p>
+            </>
+          }
+        ></ChapterIntroSpread>
+      }
+    >
       <Section header="Attack Actions">
         <p>
           Attack actions always require a Default Risk and Effort Challenge requiring the action's related metabolisms.

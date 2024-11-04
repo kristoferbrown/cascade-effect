@@ -1,0 +1,27 @@
+@import url("../variables.css");
+
+.logoFight {
+  fill: var(--fightAccent);
+}
+.logoFlight {
+  fill: var(--flightAccent);
+}
+.logoFocus {
+  fill: var(--focusAccent);
+}
+.logoSelf {
+  fill: var(--selfAccent);
+}
+.logoNear {
+  fill: var(--nearAccent);
+}
+.logoFar {
+  fill: var(--farAccent);
+}
+
+.logoPhysical {
+  fill: var(--highlight);
+}
+.logoHidden {
+  fill: var(--darkHighlight);
+}

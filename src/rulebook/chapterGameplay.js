@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import { RulebookContext } from "../context/rulebookContext";
 import Break from "../components/break/break";
-import ChapterIntro from "../components/chapter-intro/chapter-intro";
+import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import Section from "../components/section/section";
-import Logomark from "../svgs/logomark";
 import Pair from "../components/metabolism/pair";
 import Crosslink from "../components/crosslink/crosslink";
 import Metabolism from "../components/metabolism/metabolism";
@@ -13,85 +12,94 @@ function ChapterGameplay() {
   const linkMap = topicMap.current;
 
   return (
-    <Section coordinates={"3"} header="Gameplay">
-      <ChapterIntro>
-        <p>
-          When your character is challenged, you need to decide how to attempt to overcome this challenge and then
-          determine the results of this attempt. The most important step is to choose a pairing of Metabolisms, one
-          physical and one hidden, to apply to the challenge.
-        </p>
-        <Logomark />
-      </ChapterIntro>
-
-      <Section header="Physical Metabolisms" isChapterIntroColumn>
-        <p>Physical Metabolism choice is about deciding what the body and mind are doing to respond to a Challenge.</p>
-        <Section header="Using Fight" metabolized="Fight">
-          <p>Fight is your ability to change the external world.</p>
-          <p>
-            Use Fight any time you are trying to affect, move, harm, or influence something. This includes all attacks
-            in combat, athletic activities that involve power or anaerobic bursts like lifting, throwing, or jumping,
-            social activities like intimidation, persuasion, or deception, and mental tasks that involve using "brute
-            force" solutions.
-          </p>
-        </Section>
-        <Section header="Using Flight" metabolized="Flight">
-          <p>Flight is your ability avoid unwanted changes or to achieve and maintain a position.</p>
-          <p>
-            Use Flight any time you are trying to avoid harm, endure hardship, or traverse your environment. This
-            typically includes all defenses in combat, sustained aerobic athletic activities like climbing or distance
-            running, social activities like resisting influence or maintaining composure, and mental activities like
-            identifying tricks or paths that lead to bad outcomes.
-          </p>
-        </Section>
-        <Section header="Using Focus" metabolized="Focus">
-          <p>Focus is your ability to direct and maintain attention or sense and interpret situations.</p>
-          <p>
-            Use Focus any time you want to notice a detail, think your way out of a problem, or be in the right place at
-            the right time. This includes initiative in combat, trying to succeed in athletic activities through
-            strategy instead of athleticism, social skills like being witty or thoughtful, and mental skills that
-            involve knowledge, memory, attention, or complexity.
-          </p>
-        </Section>
-      </Section>
-      <Break />
-      <Section header="Hidden Metabolisms" isChapterIntroColumn isClassified>
-        <p>Hidden Metabolism choice is primarily concerned with where your response to the challenge takes place.</p>
-        <Section header="Using Self" metabolized="Self">
-          <p>Self is the hidden body's ability to aid the physical body.</p>
-          <p>
-            Use Self any time you are trying to push your body beyond its normal limits. This includes unarmed combat, a
-            wide range of athletic activities involving power, endurance, or adrenaline, as well as social activities or
-            mental activities that require willpower, patience, or managing your emotions.
-          </p>
-        </Section>
-        <Section header="Using Near" metabolized="Near">
-          <p>
-            Near is the hidden body's ability to sense and act in your immediate surroundings and understand
-            connections.
-          </p>
-          <p>
-            Use Near any time you are trying to interact with your surroundings with finesse, speed, and precision. This
-            typically includes armed melee content, athletic activities that involve skillful movements or avoiding
-            obstacles, social activities involving body language, and mental activities that involve searching for
-            connections between concepts.
-          </p>
-        </Section>
-        <Section header="Using Far" metabolized="Far">
-          <p>
-            Far is the hidden body's ability to sense and act over distances, understand other minds, or make
-            predictions.
-          </p>
-          <p>
-            Use Far any time you are trying to empathize with others as well as understand or interact with things
-            outside of your reach. This includes ranged combat, athletic activities that involve situational awareness,
-            good aim, or predicting opponents, a wide range of social activities that involve understanding what others
-            may be thinking, and mental activities that involve an eye for details or making plans for the future.
-          </p>
-        </Section>
-      </Section>
-
-      <Break page />
-
+    <Section
+      coordinates={"3"}
+      header="Gameplay"
+      introContent={
+        <ChapterIntroSpread
+          chapterNumber={3}
+          title="Gameplay"
+          leftPageContent={
+            <>
+              <h2>Physical Metabolisms</h2>
+              <p>Any...</p>
+              <div className="metabolism fight">
+                <h3>Using Fight</h3>
+                <p>Fight is your ability to change the external world.</p>
+                <p>
+                  Use Fight any time you are trying to affect, move, harm, or influence something. This includes all
+                  attacks in combat, athletic activities that involve power or anaerobic bursts like lifting, throwing,
+                  or jumping, social activities like intimidation, persuasion, or deception, and mental tasks that
+                  involve using "brute force" solutions.
+                </p>
+              </div>
+              <div className="metabolism flight">
+                <h3>Using Flight</h3>
+                <p>Flight is your ability avoid unwanted changes or to achieve and maintain a position.</p>
+                <p>
+                  Use Flight any time you are trying to avoid harm, endure hardship, or traverse your environment. This
+                  typically includes all defenses in combat, sustained aerobic athletic activities like climbing or
+                  distance running, social activities like resisting influence or maintaining composure, and mental
+                  activities like identifying tricks or paths that lead to bad outcomes.
+                </p>
+              </div>
+              <div className="metabolism focus">
+                <h3>Using Focus</h3>
+                <p>Focus is your ability to direct and maintain attention or sense and interpret situations.</p>
+                <p>
+                  Use Focus any time you want to notice a detail, think your way out of a problem, or be in the right
+                  place at the right time. This includes initiative in combat, trying to succeed in athletic activities
+                  through strategy instead of athleticism, social skills like being witty or thoughtful, and mental
+                  skills that involve knowledge, memory, attention, or complexity.
+                </p>
+              </div>
+            </>
+          }
+          rightPageContent={
+            <>
+              <h2>Hidden Metabolisms</h2>
+              <p>hidden...</p>
+              <div className="metabolism self">
+                <h3>Using Self</h3>
+                <p>Self is the hidden body's ability to aid the physical body.</p>
+                <p>
+                  Use Self any time you are trying to push your body beyond its normal limits. This includes unarmed
+                  combat, a wide range of athletic activities involving power, endurance, or adrenaline, as well as
+                  social activities or mental activities that require willpower, patience, or managing your emotions.
+                </p>
+              </div>
+              <div className="metabolism near">
+                <h3>Using Near</h3>
+                <p>
+                  Near is the hidden body's ability to sense and act in your immediate surroundings and understand
+                  connections.
+                </p>
+                <p>
+                  Use Near any time you are trying to interact with your surroundings with finesse, speed, and
+                  precision. This typically includes armed melee content, athletic activities that involve skillful
+                  movements or avoiding obstacles, social activities involving body language, and mental activities that
+                  involve searching for connections between concepts.
+                </p>
+              </div>
+              <div className="metabolism far">
+                <h3>Using Far</h3>
+                <p>
+                  Far is the hidden body's ability to sense and act over distances, understand other minds, or make
+                  predictions.
+                </p>
+                <p>
+                  Use Far any time you are trying to empathize with others as well as understand or interact with things
+                  outside of your reach. This includes ranged combat, athletic activities that involve situational
+                  awareness, good aim, or predicting opponents, a wide range of social activities that involve
+                  understanding what others may be thinking, and mental activities that involve an eye for details or
+                  making plans for the future.
+                </p>
+              </div>
+            </>
+          }
+        />
+      }
+    >
       <Section header="Challenges">
         <p>
           Typically you can just describe what your character does in any situation. However, if an action or event

@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { RulebookContext } from "../context/rulebookContext";
 import Break from "../components/break/break";
-import ChapterIntro from "../components/chapter-intro/chapter-intro";
+import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import Crosslink from "../components/crosslink/crosslink";
 import Metabolism from "../components/metabolism/metabolism";
 import Section from "../components/section/section";
@@ -12,56 +12,64 @@ function ChapterCharacters() {
   const linkMap = topicMap.current;
 
   return (
-    <Section coordinates={"2"} header="Characters">
-      <ChapterIntro>
-        <p>
-          Cascade Effect characters are just starting to discover an entire new world. Their mind is beginning to sense
-          the first hints of a second incorporeal body existing in parallel to their physical form, but outside of
-          normal space. Their connection to this body is starting to manifest a second set of resources, resources that
-          could be used to overcome the limits imposed by the physical body, mind, and world.
-        </p>
-        <Logomark />
-      </ChapterIntro>
-
-      <Section header="Physical Body" isChapterIntroColumn>
-        <p>
-          Most people are defined by the 3{" "}
-          <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolisms</Crosslink>,
-          <Metabolism fight />, <Metabolism flight />, and <Metabolism focus />.
-        </p>
-        <p>
-          Think of these not as attributes that represent your talents, but rather resources provided by the hardware of
-          the body and brain. They represent how much effort you can bring to an activity and how much stress you can
-          handle. Each <Crosslink target={linkMap.Gameplay}>Metabolism</Crosslink> is assigned a score, from 3 to 6 for
-          normal humans.
-        </p>
-        <p>
-          Every action you take, from the athletic to the academic, will use one
-          <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolism</Crosslink>.
-        </p>
-      </Section>
-      <Section header="Hidden Body" isChapterIntroColumn isClassified>
-        <p>
-          Your character also has 3
-          <Crosslink inverted target={linkMap.HiddenMetabolisms}>
-            Hidden Metabolisms
-          </Crosslink>
-          that normal humans do not; <Metabolism self />, <Metabolism near />, and <Metabolism far />.
-        </p>
-        <p>
-          A new character is only just beginning to sense and understand them. They are the resources provided by your
-          connection to your Hidden Body, an intangible organ residing outside of normal space. This connection can be
-          tapped to create energy, supplementing the physical body and mind, boosting it beyond its normal limits.
-        </p>
-        <p>
-          Every action you take will also use one
-          <Crosslink inverted target={linkMap.HiddenMetabolisms}>
-            Hidden Metabolism
-          </Crosslink>
-          , resulting in a pairing of the physical and hidden.
-        </p>
-      </Section>
-      <Break page />
+    <Section
+      coordinates={"2"}
+      header="Characters"
+      introContent={
+        <ChapterIntroSpread
+          chapterNumber={2}
+          title="Characters"
+          leftPageContent={
+            <>
+              <h2>The Physical Body</h2>
+              <p>
+                Half of the abilities of Cascade Effect characters are the capabilities provided by the physical body.
+                The physical body is measured by the 3
+                <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolisms</Crosslink>,
+                <Metabolism fight />, <Metabolism flight />, and <Metabolism focus />.
+              </p>
+              <p>
+                Think of <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolisms</Crosslink> not as
+                attributes that represent your talents, but rather resources provided by the hardware of the body and
+                brain. They represent how much effort you can bring to an activity and how much stress you can handle.
+                Each <Crosslink target={linkMap.Gameplay}>Metabolism</Crosslink> is assigned a score, from 3 to 6 for
+                normal humans.
+              </p>
+              <p>
+                Every action you take, from the athletic to the academic, will use one
+                <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolism</Crosslink>.
+              </p>
+            </>
+          }
+          rightPageContent={
+            <>
+              <h2>The Hidden Body</h2>
+              <p>
+                New Cascade Effect characters are just starting to discover an entire new world. They're beginning to
+                sense hints of the presene of a second incorporeal body existing in parallel to their physical form, but
+                outside of normal space. Their connection to this hidden body is starting to manifest a second set of
+                resources that can supplement the physical body and mind, boosting it beyond its normal limits.
+              </p>
+              <p>
+                The hidden body is measured by the 3
+                <Crosslink inverted target={linkMap.HiddenMetabolisms}>
+                  Hidden Metabolisms
+                </Crosslink>
+                of <Metabolism self />, <Metabolism near />, and <Metabolism far />. These Metabolisms are not available
+                to normal humans, and starting characters are only just beginning to get access to them.
+              </p>
+              <p>
+                Every action you take will also use one
+                <Crosslink inverted target={linkMap.HiddenMetabolisms}>
+                  Hidden Metabolism
+                </Crosslink>
+                , resulting in a pairing of a physical and hidden metabolism.
+              </p>
+            </>
+          }
+        />
+      }
+    >
       <Section header="Creating a Character">
         <p>
           The first step of playing the game is to create the character you will play as. The two main statistics of
@@ -512,6 +520,7 @@ function ChapterCharacters() {
           </ol>
         </Section>
       </Section>
+      <Break page />
       <Section header="Hidden Origins">
         <p>
           A Hidden Origin represents how your character first came to sense their connection to their Hidden Body. This
@@ -774,7 +783,6 @@ function ChapterCharacters() {
           </ol>
         </Section>
       </Section>
-      <Break page />
     </Section>
   );
 }
