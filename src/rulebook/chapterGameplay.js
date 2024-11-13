@@ -22,35 +22,38 @@ function ChapterGameplay() {
           leftPageContent={
             <>
               <h2>Physical Metabolisms</h2>
-              <p>Any...</p>
+              <p>
+                When your character attempts to overcome a challenge, you must decide how their physical body and mind
+                rise to the occasion. This is represented by choosing one Physical Metabolism to use.
+              </p>
               <div className="metabolism fight">
                 <h3>Using Fight</h3>
-                <p>Fight is your ability to change the external world.</p>
+                <p>Fight is your ability to change the world.</p>
                 <p>
-                  Use Fight any time you are trying to affect, move, harm, or influence something. This includes all
-                  attacks in combat, athletic activities that involve power or anaerobic bursts like lifting, throwing,
-                  or jumping, social activities like intimidation, persuasion, or deception, and mental tasks that
-                  involve using "brute force" solutions.
+                  Use Fight any time you are trying to affect, move, harm, or influence something. In combat, attacks
+                  use Fight. Fight is useful in athletic activities that involve anaerobic bursts like lifting or
+                  jumping, social activities like intimidation or persuasion, and mental tasks that involve finding
+                  "brute force" solutions all favor Fight.
                 </p>
               </div>
               <div className="metabolism flight">
                 <h3>Using Flight</h3>
-                <p>Flight is your ability avoid unwanted changes or to achieve and maintain a position.</p>
+                <p>Flight is your ability to resist the world.</p>
                 <p>
-                  Use Flight any time you are trying to avoid harm, endure hardship, or traverse your environment. This
-                  typically includes all defenses in combat, sustained aerobic athletic activities like climbing or
-                  distance running, social activities like resisting influence or maintaining composure, and mental
-                  activities like identifying tricks or paths that lead to bad outcomes.
+                  Use Flight any time you are trying to avoid danger, endure hardship, or traverse your environment. In
+                  combat, defenses use Flight. Flight is useful in athletic activities involving sustained aerobic
+                  exertion like climbing or distance running, social activities like setting boundaries or maintaining
+                  composure, and mental activities like identifying tricks or finding escape routes.
                 </p>
               </div>
               <div className="metabolism focus">
                 <h3>Using Focus</h3>
-                <p>Focus is your ability to direct and maintain attention or sense and interpret situations.</p>
+                <p>Focus is your ability to understand the world.</p>
                 <p>
-                  Use Focus any time you want to notice a detail, think your way out of a problem, or be in the right
-                  place at the right time. This includes initiative in combat, trying to succeed in athletic activities
-                  through strategy instead of athleticism, social skills like being witty or thoughtful, and mental
-                  skills that involve knowledge, memory, attention, or complexity.
+                  Use Focus any time you want to pay attention, notice a detail, find a pattern, or be in the right
+                  place at the right time. In combat, initiative uses Focus. Focus is useful in athletic activities that
+                  require strategy or prediction, social skills like being witty or reading others, and mental skills
+                  that involve observation, deduction, memory, attention, or complexity.
                 </p>
               </div>
             </>
@@ -58,10 +61,13 @@ function ChapterGameplay() {
           rightPageContent={
             <>
               <h2>Hidden Metabolisms</h2>
-              <p>hidden...</p>
+              <p>
+                Similarly, the hidden body also applies resources to every challenge you face. You must choose which
+                Hidden Metabolism is used.
+              </p>
               <div className="metabolism self">
                 <h3>Using Self</h3>
-                <p>Self is the hidden body's ability to aid the physical body.</p>
+                <p>Self is the hidden body's ability to empower the physical body.</p>
                 <p>
                   Use Self any time you are trying to push your body beyond its normal limits. This includes unarmed
                   combat, a wide range of athletic activities involving power, endurance, or adrenaline, as well as
@@ -70,29 +76,22 @@ function ChapterGameplay() {
               </div>
               <div className="metabolism near">
                 <h3>Using Near</h3>
-                <p>
-                  Near is the hidden body's ability to sense and act in your immediate surroundings and understand
-                  connections.
-                </p>
+                <p>Near is the hidden body's ability to sense and influence your immediate surroundings.</p>
                 <p>
                   Use Near any time you are trying to interact with your surroundings with finesse, speed, and
-                  precision. This typically includes armed melee content, athletic activities that involve skillful
-                  movements or avoiding obstacles, social activities involving body language, and mental activities that
-                  involve searching for connections between concepts.
+                  precision. This includes armed melee content, athletic activities that involve skillful movements or
+                  avoiding obstacles, social activities involving body language, and mental activities that involve
+                  searching for connections between concepts.
                 </p>
               </div>
               <div className="metabolism far">
                 <h3>Using Far</h3>
+                <p>Far is the hidden body's ability to sense and influence other people or distant objects.</p>
                 <p>
-                  Far is the hidden body's ability to sense and act over distances, understand other minds, or make
-                  predictions.
-                </p>
-                <p>
-                  Use Far any time you are trying to empathize with others as well as understand or interact with things
-                  outside of your reach. This includes ranged combat, athletic activities that involve situational
-                  awareness, good aim, or predicting opponents, a wide range of social activities that involve
-                  understanding what others may be thinking, and mental activities that involve an eye for details or
-                  making plans for the future.
+                  Use Far any time you are trying to understand other people or interact with things outside of your
+                  reach. This includes ranged combat, athletic activities that involve situational awareness, good aim,
+                  or predicting opponents, social activities that involve empathizing with or predicting others, and
+                  mental activities that involve an eye for details or making predictions.
                 </p>
               </div>
             </>
@@ -108,7 +107,7 @@ function ChapterGameplay() {
         <Section header="Steps by Step Challenges" isInset>
           <ol>
             <li>
-              The GM describes the context with a the{" "}
+              The GM describes the context with a the
               <Crosslink target={linkMap.DifficultyandContext}>Difficulty</Crosslink>
               level and optionally the level of Risk and Effort.
             </li>
@@ -603,7 +602,6 @@ function ChapterGameplay() {
           </Section>
         </Section>
       </Section>
-      <Break page />
     </Section>
   );
 }

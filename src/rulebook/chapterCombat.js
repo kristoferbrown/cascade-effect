@@ -22,31 +22,29 @@ function ChapterCombat() {
           title="Combat"
           leftPageContent={
             <>
-              <h2>Inhale Action</h2>
               <p>
-                In combat, the game slows down into turns to follow the action. Fights are difficult and lethal for
-                normal people, but access to
-                <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> changes this. The primitive
-                parts of the brain stem that mediate the connection to the Hidden body are the same as those that manage
-                autonomic processes like breathing and heart rate. Once you've gotten the feel for this connection,
-                stressful situations often take on a rhythm: inhale, allocate, exhale, execute. Having foudnd this
-                rhythm, you can take two actions each time it's your turn.
-              </p>
-              <p>
-                First, take an inhale action. This can be any action, but with one requirement, only people with at
-                least one current point within the
-                <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolism</Crosslink> available can take inhale
-                actions.
+                In combat, the game slows down into turns to follow the action. Fights move too fast and chaotic for
+                normal humans to act effectively, limiting them to one action per turn. Learning to access Hidden
+                Metabolisms allows you to overcome this limit and react efficiently. The primitive parts of the brain
+                stem that mediate the connection to the Hidden body are the same as those that manage autonomic
+                processes like breathing and heart rate. Once you've gotten the feel for this connection, stressful
+                situations often take on a rhythm: inhale, allocate, exhale, execute. Having found this rhythm, you can
+                take two actions each time it's your turn.
               </p>
             </>
           }
           rightPageContent={
             <>
+              <h2>Inhale Action</h2>
+              <p>
+                First, take an inhale action. This can be any action, but with one requirement, only people with at
+                least one Hidden Metabolism score above 0 can take inhale actions.
+              </p>
               <h2>Exhale Action</h2>
               <p>
                 Second, take an exhale action. The exhale action can be any action. This is the only action normal
-                people have access to, so once you can reliably use the inhale action too you can act twice as often as
-                most people.
+                people have access to. Once you can reliably use both actions, you'll be acting twice as fast as most
+                people.
               </p>
             </>
           }
@@ -55,8 +53,9 @@ function ChapterCombat() {
     >
       <Section header="Combat Flow">
         <p>
-          The first step of combat is determining who has the initiative. Everyone involved must make a
-          <Crosslink target={linkMap.Challenges}>Challenge</Crosslink> with default Risk and Effort that requires
+          When combat starts, the game breaks down into turns. The first step is determining who has the initiative and
+          the turn order. Everyone involved must make a<Crosslink target={linkMap.Challenges}>Challenge</Crosslink> with
+          default Risk and Effort that requires
           <Metabolism focus />. Turns start from the highest result on this Challenge and continue to the lowest result.
         </p>
         <p>
@@ -469,7 +468,6 @@ function ChapterCombat() {
           </Section>
         </Section>
       </Section>
-      <Break page />
     </Section>
   );
 }

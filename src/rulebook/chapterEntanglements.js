@@ -25,120 +25,98 @@ function ChapterEntanglements() {
           title="Entanglements"
           leftPageContent={
             <>
-              <h2>The 9 Intuitive Styles</h2>
+              <h3>The 9 Intuitive Styles</h3>
               <p>
-                Each Entanglement contains several specializations sorted into two styles, one intuitive and one
-                esoteric.
-              </p>
-              <p>
-                Intuitive Styles represent archetypal approaches to problem solving and are named with adjectives that
-                describe these approaches. They improve the existing capabilities of the body and mind.
+                Each Entanglement contains specializations sorted into two styles, one intuitive and one esoteric. The
+                Intuitive Styles improve the existing capabilities of the body and mind.
               </p>
               <h4>Strong</h4>
               <p>
-                The intuitive pairing of <Pair fight self />.
+                Pairs <Pair fight self /> to enhance unarmed attacks, grappling, and power.
               </p>
-              <p>Unarmed attacks, grappling, intimidation, and brute force.</p>
               <h4>Smooth</h4>
               <p>
-                The intuitive pairing of <Pair fight near />.
+                Pairs <Pair fight near /> to enhance melee attacks, stealth, and finesse.
               </p>
-              <p>Melee attacks, stealth, charm, finesse, and manual dexterity</p>
               <h4>Sharp</h4>
               <p>
-                The intuitive pairing of <Pair fight far />.
+                Pairs <Pair fight far /> to enhance ranged attacks and precision.
               </p>
-              <p>Ranged attacks, precision, critical hits, and deception.</p>
               <h4>Tough</h4>
               <p>
-                The intuitive pairing of <Pair flight self />.
+                Pairs <Pair flight self /> to enhance unarmed defense and stamina.
               </p>
-              <p> Unarmed defense, health, stamina, and regeneration.</p>
               <h4>Mobile</h4>
               <p>
-                The intuitive pairing of <Pair flight near />.
+                Pairs <Pair flight near /> to enhance melee defense, agility, and speed.
               </p>
-              <p>Melee defense, agility, traversal, and movement speed.</p>
               <h4>Quick</h4>
               <p>
-                The intuitive pairing of <Pair flight far />.
+                Pairs <Pair flight far /> to enhance ranged defense, wits, and prediction.
               </p>
-              <p>Ranged defense, wits, multitasking, tactics, and precognition.</p>
               <h4>Confident</h4>
               <p>
-                The intuitive pairing of <Pair focus self />.
+                Pairs <Pair focus self /> to enhance willpower and executive function.
               </p>
-              <p>Will, courage, and executive function.</p>
               <h4>Bright</h4>
               <p>
-                The intuitive pairing of <Pair focus near />.
+                Pairs <Pair focus near /> to enhance intelligence and creativity.
               </p>
-              <p>Intelligence, learning, and creativity.</p>
               <h4>Alert</h4>
               <p>
-                The intuitive pairing of <Pair focus far />.
+                Pairs <Pair focus far /> to enhance physical and social awareness.
               </p>
-              <p>Awareness, empathy, and social predictions.</p>
             </>
           }
           rightPageContent={
             <>
-              <h2>The 9 Esoteric Styles</h2>
+              <h3>The 9 Esoteric Styles</h3>
               <p>
-                Esoteric Styles represent more unusual approaches to solving the same problems. They provide new
-                abilities the body is normally incapable of. They often appear overtly supernatural when used.
+                Esoteric Styles represent more unusual approaches to solving the same problems. They provide new, often
+                overtly supernatural, abilities the body is normally incapable of.
               </p>
               <h4>Schizosomata</h4>
               <p>
-                The esoteric pairing of <Pair fight self />.
+                Pairs <Pair fight self /> to radically transform or empower the physical body.
               </p>
-              <p>Radically transform one’s body or the way it is perceived.</p>
 
               <h4>Sublimation</h4>
               <p>
-                The esoteric pairing of <Pair flight self />.
+                Pairs <Pair flight self /> to traverse hidden space intangibly and invisibly
               </p>
-              <p>Sublimation Traverse hidden space intangibly and invisibly</p>
 
               <h4>Abjuration</h4>
               <p>
-                The esoteric pairing of <Pair focus self />.
+                Pairs <Pair focus self /> to create durable barriers, wards, and filters.
               </p>
-              <p>Abjuration Create durable barriers, wards, and filters, and alarms.</p>
 
               <h4>Electromagnetism</h4>
               <p>
-                The esoteric pairing of <Pair fight near />.
+                Pairs <Pair fight near /> to control the fundamental force of light or electricity.
               </p>
-              <p>Control over the fundamental force of light or electricity.</p>
 
               <h4>Gravitonertia</h4>
               <p>
-                The esoteric pairing of <Pair flight near />.
+                Pairs <Pair flight near /> to control the fundamental force of mass and motion.
               </p>
-              <p>Control over the fundamental force of mass and motion.</p>
 
               <h4>Chromodynamism</h4>
               <p>
-                The esoteric pairing of <Pair focus near />.
+                Pairs <Pair focus near /> to control the fundamental force that binds atoms.
               </p>
-              <p>Control over the fundamental force that binds atoms.</p>
 
               <h4>Evocation</h4>
               <p>
-                The esoteric pairing of <Pair fight far />.
+                Pairs <Pair fight far /> to create explosive and destructive blasts.
               </p>
-              <p>Evocation Create overtly explosive and destructive blasts.</p>
               <h4>Pneumaplegia</h4>
               <p>
-                The esoteric pairing of <Pair flight far />.
+                Pairs <Pair flight far /> to make fields that help and hinder others.
               </p>
-              <p>Make fields that manipulate motion and metabolisms.</p>
               <h4>Telethesia</h4>
               <p>
-                The esoteric pairing of <Pair focus far />.
+                Pairs <Pair focus far /> to sense and manipulate other minds.
               </p>
-              <p> Sense, communicate with, and manipulate other minds.</p>
             </>
           }
         ></ChapterIntroSpread>

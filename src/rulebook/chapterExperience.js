@@ -25,11 +25,8 @@ function ChapterExperience() {
               <h2>Entanglements</h2>
               <p>
                 The Physical Metabolisms you start the game with only improve slowly with great effort. They're likely
-                to see only minor growth over the long term.
-              </p>
-              <p>
-                Conversely, your Hidden Metabolisms may all start low but they will grow quickly as you learn to more
-                deeply connect the physical and hidden bodies.
+                to see only minor growth over the long term. Conversely, your Hidden Metabolisms may all start low but
+                they will grow quickly as you learn to more deeply connect your physical and hidden bodies.
               </p>
               <p>
                 These improvements come from the Experience you gain during your adventures. Experience points you earn
@@ -38,18 +35,23 @@ function ChapterExperience() {
               </p>
               <p>
                 Entanglements represent a permanent connection between your physical and hidden bodies that you have
-                learned to intuitively create. Controlling these connections allows you to utilize preternatural
-                abilities beyond the normal range of the human body.
-              </p>
-              <p>
-                Entanglements can increase Metabolisms and Action Bonuses and grant access to Specializations that
-                further customize and improve your abilities related to the Entanglement.
+                learned to intuitively create and sustain. Controlling these connections allows you to utilize
+                preternatural abilities beyond the normal range of the human body. Entanglements can increase
+                Metabolisms and Action Bonuses and grant access to Specializations that further customize and improve
+                your abilities related to the Entanglement.
               </p>
             </>
           }
           rightPageContent={
             <>
               <h2>Cascade Events</h2>
+              <p>
+                A cascade event is a temporary, often overtly supernatural, effect you can learn to induce by ranks in
+                Entanglements with your experience. By transfering information from the hidden body into the
+                thermodynamically separate physical space, entropy is locally reversed and free energy is created. By
+                controlling this process, one can evoke influence insdide or outside the body and create action at a
+                distance.
+              </p>
               <p>
                 There is a single cascade event associated with each Entanglement. This signature supernatural ability
                 has its own action bonus that improves its potency.
@@ -177,7 +179,6 @@ function ChapterExperience() {
           </p>
         </Section>
       </Section>
-      <Break page />
     </Section>
   );
 }

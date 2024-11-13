@@ -22,29 +22,22 @@ function ChapterActions() {
           title="Actions"
           leftPageContent={
             <>
-              <h2>Actions in Combat</h2>
+              <h2>Actions out of Combat</h2>
               <p>
-                The actions listed in this chapter spell out how to handle some of the things your character may attempt
-                to do. These may be basic actions with no special rules, attack actions that provoke a reaction from
-                their target, reactions that you take in response to something, or full actions that consume a full
-                turn. All actions are associated with an Action Bonus representing any unusual skill your character may
-                have with this action.
-              </p>
-              <p>
-                In combat the actions you take will generally be taken from the list in this chapter. If you wish to do
-                something not directly covered by these actions, the GM will present a Challenge to resolve it. In
-                general actions in combat consume a single inhale or exhale action, with the exception of full actions
-                that consume both.
+                Outside of combat you are free to do anything you describe, and the GM will create Challenges for you as
+                you run into them. If the situation allows it, you can also take specific actions from the list in this
+                chapter to benefit from their Action Bonuses and any specializations that improve them.
               </p>
             </>
           }
           rightPageContent={
             <>
-              <h2>Actions out of Combat</h2>
+              <h2>Actions in Combat</h2>
               <p>
-                Outside of combat you are free to do anything you describe, and the GM will create Challenges for you as
-                you run into them. However, you can still take the specific actions from the list in this chapter to
-                benefit from their Action Bonuses and any specializations that improve them.
+                In combat, all actions you take will generally be from the list in this chapter. If you wish to do
+                something not directly covered by these actions, the GM will present a Challenge to resolve it. In
+                general actions in combat consume a single inhale or exhale action, with the exception of full actions
+                that consume both.
               </p>
             </>
           }
@@ -320,8 +313,6 @@ function ChapterActions() {
           </p>
         </Section>
       </Section>
-
-      <Break page />
     </Section>
   );
 }
