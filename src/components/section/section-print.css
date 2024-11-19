@@ -4,13 +4,26 @@
   }
 }
 @media print {
+  body {
+    counter-reset: page;
+  }
   @page {
     margin: 1cm 0.5cm;
     column-fill: auto;
+    @bottom-center {
+      font-size: 12px;
+      font-family: "burlingame", "Helvetica Neue", "Verdana", sans-serif;
+      content: counter(page);
+    }
   }
   @page chapterIntroPage {
     margin: 0;
+    @bottom-center {
+      content: none;
+    }
   }
+
+
   .hiddenInPrint {
     display: none !important;
   }
@@ -39,7 +52,8 @@
 
   .App .section h2,
   .App .section h3,
-  .App .section h4 {
+  .App .section h4,
+  .App .section h5 {
     background: none;
     margin: 0;
     padding: 0;
@@ -78,21 +92,25 @@
     background: none;
     break-inside: avoid;
   }
+  .contentsList.inset:after,
+  .contentsList.classified:after,
   .section.inset:after,
   .section.classified:after {
     content: "";
     display: block;
     position: absolute;
-    top: 0.5cm;
+    top: 0.4cm;
     left: -0.2cm;
     right: -0.2cm;
-    bottom: 0.3cm;
+    bottom: 0.1cm;
     transform: skewY(-4deg);
     z-index: -1;
   }
+  .contentsList.inset:after,
   .section.inset:after {
     background: var(--contractedSpace);
   }
+  .contentsList.classified:after,
   .section.classified:after {
     background: var(--hiddenSpace);
   }
@@ -124,5 +142,8 @@
 
   .App .crosslink {
     -webkit-text-stroke: 0px;
+  }
+  .App .charSheetLink {
+    display: none;
   }
 }

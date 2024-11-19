@@ -1,12 +1,14 @@
 @import url("../../variables.css");
 
 .metabolism {
+  display: inline-block;
   padding: 2px 3px;
 }
 
 .metabolism:hover {
   border-bottom-width: 2px;
   border-bottom-style: solid;
+  padding: 2px 3px 0px;
 }
 
 .metabolism.fight,
@@ -73,10 +75,10 @@
 }
 
 .metabolism-pair {
-  display: inline-block;
+  display: inline-flex;
   overflow-y: hidden;
   position: relative;
-  vertical-align: text-bottom;
+  vertical-align: middle;
 }
 
 .pair-bond {
@@ -89,20 +91,20 @@
 .pair-bond:before {
   content: "";
   background: var(--entangledSpace);
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
   display: block;
   position: absolute;
-  top: -7px;
-  left: -12px;
+  top: 2px;
+  left: -7.3px;
   transform: rotate(45deg);
   z-index: 0;
 }
 .pair-bond:after {
   content: "+";
   font-size: 20px;
-  left: -6.3px;
+  left: -6.8px;
   position: absolute;
-  top: -16px;
+  top: -2.2px;
   z-index: 3;
 }

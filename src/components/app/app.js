@@ -9,12 +9,16 @@ import ChapterCombat from "../../rulebook/chapterCombat";
 import ChapterActions from "../../rulebook/chapterActions";
 import ChapterExperience from "../../rulebook/chapterExperience";
 import ChapterEntanglements from "../../rulebook/chapterEntanglements";
-// import Chapter7 from "../../rulebook/chapter7";
+import FrontCover from "../print-elements/front-cover";
+import Contents from "../print-elements/table-of-contents";
+import BackCover from "../print-elements/back-cover";
 
 function App() {
   return (
     <RulebookProvider>
       <div className="App">
+        <FrontCover />
+        <Contents />
         <GlobalToggle />
         <ChapterIntroduction />
         <ChapterCharacters />
@@ -23,6 +27,8 @@ function App() {
         <ChapterActions />
         <ChapterExperience />
         <ChapterEntanglements />
+        <BackCover />
+
         {/* <Chapter7 /> */}
         <div className="section depth1 charSheetLink">
           <a

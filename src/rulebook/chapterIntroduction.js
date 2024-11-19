@@ -4,7 +4,6 @@ import Break from "../components/break/break";
 import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import Section from "../components/section/section";
 import Crosslink from "../components/crosslink/crosslink";
-import Logomark from "../svgs/logomark";
 
 function ChapterIntroduction() {
   const { topicMap } = useContext(RulebookContext);

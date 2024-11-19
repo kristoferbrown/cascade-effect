@@ -3,7 +3,6 @@
 import Break from "../components/break/break";
 import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import Section from "../components/section/section";
-import Logomark from "../svgs/logomark";
 // import Crosslink from "../components/crosslink/crosslink";
 // import Pair from "../components/metabolism/pair";
 // import Metabolism from "../components/metabolism/metabolism";
@@ -69,13 +68,14 @@ function ChapterExperience() {
       <Section header="Using Entanglements">
         <p>
           There are 9 Entanglements, one for each possible Metabolism pairing. Each Entanglement is composed of 3 ranks
-          you can purchase with experience points, 3 action bonuses that can be increased by these ranks, and several
-          Specializations that can be unlocked by these ranks.
+          you can purchase with experience points. Each rank grants you your choice of one of three action bonuses to
+          improve, and also grants you access to your choice of several Specializations that to unlock.
         </p>
         <p>
-          These Specializations are sorted into two groups called Styles. Each Entanglement has an Intuitive Style
-          containing Specializations that boost your natural abilities beyond human limits and an Esoteric Style that
-          grants overtly supernatural capabilities.
+          These Specializations are sorted into two groups called Styles. Each Entanglement has an Intuitive Style and
+          an Esoteric Style. The Intuitive Style contains Specializations that focus on boosting your natural abilities
+          beyond human limits. The Esoteric Style focuses on that grants overtly supernatural capabilities and ways to
+          improve and customize cascade events.
         </p>
         <Section header="Buying Entanglements">
           <p>
@@ -84,11 +84,14 @@ function ChapterExperience() {
             ranks. Each rank costs 1 experience to acquire.
           </p>
           <p>
-            Each rank directly increases your choice of one of the three action bonuses within the Entanglement. When
-            chosing an action bonus, you may choose the same bonus multiple times or a mixture. The first and last rank
-            also increase a specified Metabolism score. Finally, each rank also unlocks access to your choice of two
-            Specializations. The action bonus you chose to increase determines which Style the specializations you can
-            unlock must be in.
+            Each rank directly increases your choice of one of the three action bonuses within the Entanglement. each
+            rank also unlocks access to your choice of two Specializations. The action bonus you chose to increase
+            determines which Style the specializations you can unlock must be in.
+          </p>
+          <p>
+            The first rank you acquite in an Entanglement will increase a specified Metabolism score and grant you the
+            abilitiy to use a specified casade event. Finally, the last rank you acquire in an Entanglement will
+            increase a different specified metabolism
           </p>
         </Section>
         <Section header="Styles">
@@ -97,9 +100,10 @@ function ChapterExperience() {
             group of Specializations with a common theme.
           </p>
           <p>
-            For example, the Entanglement of Flight +Self contains the intuitive Style Tough which has Specializations
+            For example, the Entanglement of Flight + Self contains the intuitive style Tough which has Specializations
             improving your physical durability, and the esoteric Style Abjuration which has Specializations that let you
-            make defensive shields using the Ward cascade event.
+            make defensive shields using the Ward cascade event. These two styles have a similar goal, defense, but
+            differ in how to approach this goal.
           </p>
         </Section>
         <Section header="Specializations">
@@ -118,10 +122,12 @@ function ChapterExperience() {
         </Section>
       </Section>
 
+      <Break />
+
       <Section header="Using Cascade Events">
         <p>
           Cascade events are a special class of action typically used to do something overtly supernatural. Unless
-          otherwise specified in the event’s description, inducing a cascade event is a full action and a default
+          otherwise specified in the event's description, inducing a cascade event is a full action and a default
           effort, low risk Challenge. Focus plus the Hidden Metabolism associated with the event are required in any
           Challenges.
         </p>
@@ -129,6 +135,7 @@ function ChapterExperience() {
           When induced, an event creates some small effect even if no Progress is invested in it. Each event has an
           action bonus, if this bonus is above 1 you can use Progress to increase the effectiveness of the event.
         </p>
+        <p>You can induce any cascade event that is associated with an Entanglement you have at least one rank in.</p>
         <Section header="Event Metrics">
           <p>
             The amount of Progress needed to induce an event, and the strength of the event, are described by metrics.
@@ -139,17 +146,21 @@ function ChapterExperience() {
             Conversely, if your action bonus is 0 you cannot increase any metrics and therefore they all remain at their
             minimum value.
           </p>
+          <h4>Basic Metrics</h4>
           <p>
             Most metrics are a basic single unit. This unit indicates both how much the metric increases per point of
             Progress you spend on it and also the minimum that occurs if you spend 0 Progress on it. For example, an
             event with the metric “Duration: 1 minute” starts with a minimum duration of 1 minute when you spend 0
             Progress on it, and increases by 1 minute for each point of Progress spent on it.
           </p>
+          <h4>Metric Costs</h4>
           <p>
-            Some metrics indicate that they cost more than 1 point of Progress to increase them once. For example, the
-            metric “Targets: 1 person per 3” indicates that the event targets 1 person and can be increased to 2 people
-            by spending 3 Progress or 3 people by spending 6 Progress, and so on.
+            Typically, each time you increase a metric it costs 1 progress to do so. However, some metrics are more
+            expensive to increase. For example, the metric “Targets: 1 person per 3” indicates that the event targets 1
+            person and can be increased to 2 people by spending 3 Progress or 3 people by spending 6 Progress, and so
+            on.
           </p>
+          <h4>Metric Minimums</h4>
           <p>
             Finally, some metrics specify a minimum value. For example, the metric “Range: 10X, minimum = 1 meter” means
             the range starts 1 meter and is multiplied by 10 per point of Progress. This is often used to set the
@@ -157,17 +168,17 @@ function ChapterExperience() {
             Bonus” means the size starts at a number of meters equal to the event’s Action Bonus and can be increased in
             1 meter increments. If you have a 0 in the bonus that a minumum is set to, the minimum is instead set to 1.
           </p>
-          <p>
-            The physical appearance of inducing a cascade event is up to you, however unless the event specifies
-            otherwise, it is never subtle. Someone witnessing you induce the event can see that the event occured and
-            that it was caused by you.
-          </p>
         </Section>
         <Section header="Event Limitations">
           <p>
             Inducing an event cannot benefit from the Push or Improvise actions. However, their are specializations in
             the Bright and Confident styles that allow you to break this rule, and also increase the limit on how many
             times you can improve Metrics.
+          </p>
+          <p>
+            The physical appearance of inducing a cascade event is up to you, however unless the event specifies
+            otherwise, it is never subtle. Someone witnessing you induce the event can see that the event occured and
+            that it was caused by you.
           </p>
         </Section>
         <Section header="Improving Events">

@@ -1,0 +1,55 @@
+@import url("../../variables.css");
+
+.coverPage,
+.contentsPage {
+  display: none;
+}
+
+@media print {
+
+  .coverPage {
+    page: fullPage;
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+  }
+  @page fullPage {
+    margin: 0;
+    @bottom-center {
+      content: none;
+    }
+  }
+
+  .contentsPage {
+    position: relative;
+    display: block;
+    column-count: 2;
+    column-gap: 0.5cm;
+    column-fill: auto;
+    margin: 0;
+    padding: 1cm 1cm 0 1cm;
+    box-sizing: border-box;
+  }
+  .contentsPage ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .contentsPage h2 {
+    column-span: all;
+  }
+  .contentsPage h3,
+  .contentsPage .childList li {
+    display: flex;
+    justify-content: space-between;
+  }
+  .contentsPage .contentEntanglement {
+    margin: 3mm 0 0 0;
+    -webkit-text-stroke: 0.5px var(--darkHighlight);
+  }
+}

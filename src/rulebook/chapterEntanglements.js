@@ -5,7 +5,6 @@ import Section from "../components/section/section";
 import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import EntanglementDescription from "../components/section/ent-desc";
 import EventDescription from "../components/section/event-desc";
-import Logomark from "../svgs/logomark";
 // import Crosslink from "../components/crosslink/crosslink";
 import Pair from "../components/metabolism/pair";
 import Metabolism from "../components/metabolism/metabolism";
@@ -139,6 +138,7 @@ function ChapterEntanglements() {
             </p>,
           ]}
         />
+
         <h4>Intuitive Bonus</h4>
         <p>
           Choose two specializations within the Strong style to unlock. Increase your Unarmed Attack action bonus by 1.
@@ -153,12 +153,36 @@ function ChapterEntanglements() {
           Choose two specializations within the Schizosomata style to unlock. Your Empower event bonus increases by 1.
         </p>
 
+        <EventDescription
+          eventName="Empower"
+          intro="You focus on your physical form, modifying its capabilities for a short time."
+          inductionTime="Non-action at the start of your turn"
+          metrics={[{ name: "Intensity", value: "1 level" }]}
+          linkTarget={linkMap.SchizosomataStyle}
+          description={
+            <>
+              <p>
+                Increase your maximum, but not current, Self value by the Intensity level of this event. This can cause
+                these values to go above your Self score. As long as your new maximum is above your Self score, you are
+                in an empowered state. While in this state, you take an unavoidable point of Stress to Self at the end
+                of each round. You cannot induce this event again while empowered, or more than once a round.
+              </p>
+              <p>
+                While empowered, you can "spend empowerment" by taking an unavoidable point of Stress to a Self. When
+                making an Unarmed Attack, you can spend empowerment to add your Empower bonus to the threat dealt by the
+                attack.
+              </p>
+            </>
+          }
+        />
+
+        <Break />
         <Section header="Strong Style">
           <p>
             The intuitive style of the entanglement of Fight + Self boosts the brute physical strength of the body and
             the efficacy of attacks in unarmed combat.
           </p>
-          <Section header="Explosive Strength">
+          <Section header="Explosive Strength" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -177,7 +201,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Iron Grip">
+          <Section header="Iron Grip" isInset>
             <EntanglementDescription
               intro={<p>You can use weapons that would normally be too large to wield effectively.</p>}
               rank3Met={{ self: true }}
@@ -188,7 +212,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Lifting Capacity">
+          <Section header="Lifting Capacity" isInset>
             <EntanglementDescription
               intro={<p>You can lift objects beyond what your strength would normally allow.</p>}
               rank3Met={{ self: true }}
@@ -199,7 +223,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Unarmed Mastery">
+          <Section header="Unarmed Mastery" isInset>
             <EntanglementDescription
               intro={<p>Your empty hands have become powerful weapons.</p>}
               rank3Met={{ self: true }}
@@ -219,9 +243,11 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="Adrenal Strength"></Section> */}
-          {/* <Section header="Grappler"></Section> */}
+          {/* <Section header="Adrenal Strength" isInset></Section> */}
+          {/* <Section header="Grappler" isInset></Section> */}
         </Section>
+
+        <Break />
 
         <Section header="Schizosomata Style">
           <p>
@@ -230,30 +256,7 @@ function ChapterEntanglements() {
             abilities are primarily expressed through the Empower cascade event.
           </p>
 
-          <EventDescription
-            eventName="Empower"
-            intro="You focus on your physical form, modifying its capabilities for a short time."
-            inductionTime="Non-action at the start of your turn"
-            metrics={[{ name: "Intensity", value: "1 level" }]}
-            linkTarget={linkMap.SchizosomataStyle}
-            description={
-              <>
-                <p>
-                  Increase your maximum, but not current, Self value by the Intensity level of this event. This can
-                  cause these values to go above your Self score. As long as your new maximum is above your Self score,
-                  you are in an empowered state. While in this state, you take an unavoidable point of Stress to Self at
-                  the end of each round. You cannot induce this event again while empowered, or more than once a round.
-                </p>
-                <p>
-                  While empowered, you can "spend empowerment" by taking an unavoidable point of Stress to a Self. When
-                  making an Unarmed Attack, you can spend empowerment to add your Empower bonus to the threat dealt by
-                  the attack.
-                </p>
-              </>
-            }
-          />
-
-          <Section header="Deep Empowerment">
+          <Section header="Deep Empowerment" isClassified>
             <EntanglementDescription
               intro={<p>Increase the power and duration of your Empower events.</p>}
               rank3Met={{ self: true }}
@@ -269,7 +272,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Fade">
+          <Section header="Fade" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -299,7 +302,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Mimic">
+          <Section header="Mimic" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -327,7 +330,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Rage">
+          <Section header="Rage" isClassified>
             <EntanglementDescription
               intro={<p>When Empowered your adrenaline pushes you beyond the limits of your body.</p>}
               rank3Met={{ self: true }}
@@ -351,7 +354,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Shapeshift">
+          <Section header="Shapeshift" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -382,9 +385,11 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="Hemokinesis"></Section> */}
+          {/* <Section header="Hemokinesis" isClassified></Section> */}
         </Section>
       </Section>
+
+      <Break page />
 
       <Section header="Fight + Near">
         <p>
@@ -416,10 +421,53 @@ function ChapterEntanglements() {
           Choose two specializations within the Electromagnetism style to unlock. Your Refract event bonus increases by
           1.
         </p>
+        <EventDescription
+          eventName="Refract"
+          intro="You reach out with your mind and take control of nearby light, electricity, or magnetism."
+          inductionTime="Full Action"
+          linkTarget={linkMap.ElectromagnetismStyle}
+          metrics={[
+            { name: "Intensity", value: "1" },
+            { name: "Range", value: "1 Meter" },
+          ]}
+          description={
+            <>
+              <p>
+                Bend the path of an existing flow of light or electricity within Range. This can, for example, discharge
+                a battery, short circuit a device, or focus sunlight into a beam. Without further Electromagnetism
+                Specializations, this event can only crudely redirect this energy, it cannot create, transform, exercise
+                fine control, or handle extremely high energy levels.
+              </p>
+              <p>
+                This requires an existing energy source of a similar or greater strength than the value of Intensity you
+                wish to use. If the source is stronger than Intensity, you only move a portion of the energy. The exact
+                strength of a specific energy source is up to the GM, within these rough guidelines:
+              </p>
+              <ul>
+                <li>Consumer batteries, residential lighting, fridge magnets.</li>
+                <li>Residential wiring, direct sunlight, small rare earth magnets.</li>
+                <li>A laser that can blind you.</li>
+                <li>Residential overhead power lines.</li>
+                <li>A laser that can burn you.</li>
+                <li>Industrial electromagnets.</li>
+                <li>High-tension distribtion lines.</li>
+                <li>The output of a powerplant.</li>
+                <li>Extreme circumstances.</li>
+              </ul>
+              <p>
+                If this is used to harm someone, it deals Threat equal to Intensity. This attack moves too fast to allow
+                the target to take a reaction. The energy can dazzle or stun, but not truely harm the body and therefore
+                deals Stress to Focus + Far.
+              </p>
+            </>
+          }
+        />
+
+        <Break />
 
         <Section header="Smooth Style">
           <p>The intuitive style of the entanglement of Fight + Near your skill with melee combat and finesse.</p>
-          <Section header="Ambidexterity">
+          <Section header="Ambidexterity" isInset>
             <EntanglementDescription
               intro={
                 <p>You can split your proprioceptive awareness between both hands without any loss of coordination.</p>
@@ -441,7 +489,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Counter">
+          <Section header="Counter" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -468,7 +516,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Deft Combat">
+          <Section header="Deft Combat" isInset>
             <EntanglementDescription
               intro={<p>You can make the most of enhanced finesse while in close combat.</p>}
               rank3Met={{ near: true }}
@@ -485,7 +533,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Melee Mastery">
+          <Section header="Melee Mastery" isInset>
             <EntanglementDescription
               intro={<p>You have perfected the movements of the blades and blows of close combat.</p>}
               rank3Met={{ near: true }}
@@ -501,7 +549,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Silence">
+          <Section header="Silence" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -526,7 +574,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Sleight of Hand">
+          <Section header="Sleight of Hand" isInset>
             <EntanglementDescription
               intro={<p>You can interact with things undetected and without permission.</p>}
               rank3Met={{ near: true }}
@@ -548,55 +596,17 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
+          {/* <Section header="TODO" isInset></Section> */}
         </Section>
+        <Break />
+
         <Section header="Electromagnetism Style">
           <p>
             The esoteric style of the Fight + Near entanglement allows you to control the fundamental force of
             electromagnetism. This ability is primarily expressed through the Refract cascade event.
           </p>
-          <EventDescription
-            eventName="Refract"
-            intro="You reach out with your mind and take control of nearby light, electricity, or magnetism."
-            inductionTime="Full Action"
-            linkTarget={linkMap.ElectromagnetismStyle}
-            metrics={[
-              { name: "Intensity", value: "1" },
-              { name: "Range", value: "1 Meter" },
-            ]}
-            description={
-              <>
-                <p>
-                  Bend the path of an existing flow of light or electricity within Range. This can, for example,
-                  discharge a battery, short circuit a device, or focus sunlight into a beam. Without further
-                  Electromagnetism Specializations, this event can only crudely redirect this energy, it cannot create,
-                  transform, exercise fine control, or handle extremely high energy levels.
-                </p>
-                <p>
-                  This requires an existing energy source of a similar or greater strength than the value of Intensity
-                  you wish to use. If the source is stronger than Intensity, you only move a portion of the energy. The
-                  exact strength of a specific energy source is up to the GM, within these rough guidelines:
-                </p>
-                <ul>
-                  <li>Consumer batteries, residential lighting, fridge magnets.</li>
-                  <li>Residential wiring, direct sunlight, small rare earth magnets.</li>
-                  <li>A laser that can blind you.</li>
-                  <li>Residential overhead power lines.</li>
-                  <li>A laser that can burn you.</li>
-                  <li>Industrial electromagnets.</li>
-                  <li>High-tension distribtion lines.</li>
-                  <li>The output of a powerplant.</li>
-                  <li>Extreme circumstances.</li>
-                </ul>
-                <p>
-                  If this is used to harm someone, it deals Threat equal to Intensity. This attack moves too fast to
-                  allow the target to take a reaction. The energy can dazzle or stun, but not truely harm the body and
-                  therefore deals Stress to Focus + Far.
-                </p>
-              </>
-            }
-          />
-          <Section header="Amplify Waveform">
+
+          <Section header="Amplify Waveform" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -630,7 +640,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Darkness">
+          <Section header="Darkness" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -664,7 +674,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Photonic Combat">
+          <Section header="Photonic Combat" isClassified>
             <EntanglementDescription
               intro={<p>You can sense and interpret additional parts of the electromagnetic spectrum.</p>}
               rank3Met={{ near: true }}
@@ -683,7 +693,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Sense Waveform">
+          <Section header="Sense Waveform" isClassified>
             <EntanglementDescription
               intro={<p>You can sense and interpret additional parts of the electromagnetic spectrum.</p>}
               rank3Met={{ near: true }}
@@ -706,12 +716,13 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
+          {/* <Section header="TODO" isClassified></Section> */}
+          {/* <Section header="TODO" isClassified></Section> */}
+          {/* <Section header="TODO" isClassified></Section> */}
         </Section>
       </Section>
 
+      <Break page />
       <Section header="Fight + Far">
         <p>
           Mastering this Entanglement lets you precisely target things in ranged combat, or even directly attack things
@@ -738,14 +749,28 @@ function ChapterEntanglements() {
         </p>
         <h4>Esoteric Bonus</h4>
         <p>Choose two specializations within the Evocation style to unlock. Your Evoke event bonus increases by 1.</p>
-
+        <EventDescription
+          eventName="Evoke"
+          intro="You selectively sublime half of the virtual particles in a path creating a small but highly destructive burst of antimatter."
+          inductionTime="Attack Action"
+          metrics={[{ name: "Power", value: "1 Threat, minimum = Bonus" }]}
+          linkTarget={linkMap.EvocationStyle}
+          description={
+            <p>
+              Inducing this is an a Risky and Strenuous Challenge that results in an attacking a target you can see with
+              an explosive torrent of energy. The target is dealt Threat equal to Power and may defend with a Ranged
+              Defense reaction.
+            </p>
+          }
+        />
+        <Break />
         <Section header="Sharp Style">
           <p>
             The intuitive style of the entanglement of Fight + Far boosts your ranged combat abilities and capability to
             do harm with precise strikes. This style contains the specializations Disentangle, Pierce, Manipulate,
             Ranged Mastery, Stealth Strike, and Suppression.
           </p>
-          <Section header="Disentangle">
+          <Section header="Disentangle" isInset>
             <EntanglementDescription
               intro={<p>You can assault a target's connection to their hidden body directly.</p>}
               rank3Met={{ far: true }}
@@ -766,7 +791,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Pierce">
+          <Section header="Pierce" isInset>
             <EntanglementDescription
               intro={<p>You can make the most from the trajectory of a single attack.</p>}
               rank3Met={{ far: true }}
@@ -783,7 +808,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Ranged Mastery">
+          <Section header="Ranged Mastery" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -809,7 +834,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Stealth Strike">
+          <Section header="Stealth Strike" isInset>
             <EntanglementDescription
               rank3Met={{ far: true }}
               intro={
@@ -830,7 +855,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Suppress Area">
+          <Section header="Suppress Area" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -857,30 +882,16 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
+          {/* <Section header="TODO" isInset></Section> */}
         </Section>
+        <Break />
         <Section header="Evocation Style">
           <p>
             The esoteric style of the Focus + Near entanglement increases the effectiveness and adds new capabilities to
             the Evoke cascade event.
           </p>
 
-          <EventDescription
-            eventName="Evoke"
-            intro="You selectively sublime half of the virtual particles in a path creating a small but highly destructive burst of antimatter."
-            inductionTime="Attack Action"
-            metrics={[{ name: "Power", value: "1 Threat, minimum = Bonus" }]}
-            linkTarget={linkMap.EvocationStyle}
-            description={
-              <p>
-                Inducing this is an a Risky and Strenuous Challenge that results in an attacking a target you can see
-                with an explosive torrent of energy. The target is dealt Threat equal to Power and may defend with a
-                Ranged Defense reaction.
-              </p>
-            }
-          />
-
-          <Section header="Annihilate">
+          <Section header="Annihilate" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -902,7 +913,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Blast Radius">
+          <Section header="Blast Radius" isClassified>
             <EntanglementDescription
               intro={<p>Your Evoke events can affect a larger area.</p>}
               rank3Met={{ far: true }}
@@ -921,7 +932,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Combat Evocation">
+          <Section header="Combat Evocation" isClassified>
             <EntanglementDescription
               intro={<p>You are a master of using Evocation Attacks in tactical situations.</p>}
               rank3Met={{ far: true }}
@@ -936,7 +947,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Force Push">
+          <Section header="Force Push" isClassified>
             <EntanglementDescription
               intro={<p>You can apply enough force to targets to move them.</p>}
               rank3Met={{ far: true }}
@@ -955,11 +966,12 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
+          {/* <Section header="TODO" isClassified></Section> */}
+          {/* <Section header="TODO" isClassified></Section> */}
         </Section>
       </Section>
 
+      <Break page />
       <Section header="Flight + Self">
         <p>
           This entanglement helps one defend themself from unarmed blows, reduce damage taken in general, improve
@@ -989,13 +1001,41 @@ function ChapterEntanglements() {
         </p>
         <h4>Esoteric Bonus</h4>
         <p>Choose two specializations within the Abjuration style to unlock. Your Ward event bonus increases by 1. </p>
-
+        <EventDescription
+          eventName="Ward"
+          intro="You create a translucent barrier of force that prevents anything from crossing it."
+          inductionTime="Full Action"
+          linkTarget={linkMap.AbjurationStyle}
+          metrics={[
+            { name: "Durability", value: "1 Threat, minimum = Bonus" },
+            { name: "Duration", value: "1 round, minimum = Bonus" },
+            { name: "Length", value: "1 meter, minimum = Bonus" },
+          ]}
+          description={
+            <>
+              <p>
+                Choose a straight line starting from a point in any adjacent space and ending at any point within the
+                Length metric. For the Duration, a barrier prevents anything from crossing this line. If this line
+                crosses any occupied spaces, you choose which side of the barrier each occupier is on. Attacks that
+                target the barrier, or something on the other side of it, deal Threat only to the barrier. Each point of
+                Threat reduces the barrier's Durability by 1, until it reaches 0 durability and is destroyed. The attack
+                that destroys the barrier is still blocked completely, regardless of how much Threat it dealt.
+              </p>
+              <p>These barriers completely block things in hidden space just as well as they block physical objects.</p>
+              <p>
+                You have some control over the cosmetic appearance of your barriers. However, they are always
+                transparent enough not to hinder vision but still easily visible due to a faint color or luminosity.
+              </p>
+            </>
+          }
+        />
+        <Break />
         <Section header="Tough Style">
           <p>
             The intuitive style of the entanglement of Flight + Self boosts your endurance, staying power, and unarmed
             defense.
           </p>
-          <Section header="Diehard">
+          <Section header="Diehard" isInset>
             <EntanglementDescription
               intro={<p>It is extremely hard to take you out of a fight.</p>}
               rank3Met={{ self: true }}
@@ -1013,7 +1053,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Extropy">
+          <Section header="Extropy" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -1034,7 +1074,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Homeostasis">
+          <Section header="Homeostasis" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -1056,7 +1096,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Regneration">
+          <Section header="Regneration" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -1072,7 +1112,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Stamina">
+          <Section header="Stamina" isInset>
             <EntanglementDescription
               intro={<p>You can exert yourself for much longer durations than the body is normally capable.</p>}
               rank3Met={{ far: true }}
@@ -1092,46 +1132,18 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
+          {/* <Section header="TODO" isInset></Section> */}
+          {/* <Section header="TODO" isInset></Section> */}
+          {/* <Section header="TODO" isInset></Section> */}
         </Section>
+        <Break />
         <Section header="Abjuration Style">
           <p>
             The esoteric style of the entanglement of Flight + Self allows you to heighten and customize the
             capabilities of the Ward cascade event.
           </p>
-          <EventDescription
-            eventName="Ward"
-            intro="You create a translucent barrier of force that prevents anything from crossing it."
-            inductionTime="Full Action"
-            linkTarget={linkMap.AbjurationStyle}
-            metrics={[
-              { name: "Durability", value: "1 Threat, minimum = Bonus" },
-              { name: "Duration", value: "1 round, minimum = Bonus" },
-              { name: "Length", value: "1 meter, minimum = Bonus" },
-            ]}
-            description={
-              <>
-                <p>
-                  Choose a straight line starting from a point in any adjacent space and ending at any point within the
-                  Length metric. For the Duration, a barrier prevents anything from crossing this line. If this line
-                  crosses any occupied spaces, you choose which side of the barrier each occupier is on. Attacks that
-                  target the barrier, or something on the other side of it, deal Threat only to the barrier. Each point
-                  of Threat reduces the barrier's Durability by 1, until it reaches 0 durability and is destroyed. The
-                  attack that destroys the barrier is still blocked completely, regardless of how much Threat it dealt.
-                </p>
-                <p>
-                  These barriers completely block things in hidden space just as well as they block physical objects.
-                </p>
-                <p>
-                  You have some control over the cosmetic appearance of your barriers. However, they are always
-                  transparent enough not to hinder vision but still easily visible due to a faint color or luminosity.
-                </p>
-              </>
-            }
-          />
-          <Section header="Combat Shielding">
+
+          <Section header="Combat Shielding" isClassified>
             <EntanglementDescription
               intro={<p>You use Ward tactically to protect your allies.</p>}
               rank3Met={{ far: true }}
@@ -1156,7 +1168,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Filter">
+          <Section header="Filter" isClassified>
             <EntanglementDescription
               intro={<p>When using the Ward event you may add filtering properties to the barrier you create. </p>}
               rank3Met={{ far: true }}
@@ -1196,7 +1208,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Repelling Ward">
+          <Section header="Repelling Ward" isClassified>
             <EntanglementDescription
               intro={<p>You can create airtight Wards that push others away.</p>}
               rank3Met={{ far: true }}
@@ -1224,7 +1236,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Retrogradient">
+          <Section header="Retrogradient" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -1250,7 +1262,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Subtle Ward">
+          <Section header="Subtle Ward" isClassified>
             <EntanglementDescription
               intro={<p>You can create Wards that are effective without people being aware of them.</p>}
               rank3Met={{ far: true }}
@@ -1277,7 +1289,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Sustain Ward">
+          <Section header="Sustain Ward" isClassified>
             <EntanglementDescription
               intro={<p>Your Ward events last longer and are more durable.</p>}
               rank3Met={{ far: true }}
@@ -1296,6 +1308,7 @@ function ChapterEntanglements() {
         </Section>
       </Section>
 
+      <Break page />
       <Section header="Flight + Near">
         <p>
           Mastering this Entanglement is mastering motion itself. It boosts your melee defense, speed, and can even
@@ -1328,12 +1341,29 @@ function ChapterEntanglements() {
           Choose two specializations within the Gravitonertia style to unlock. Your Telekinesis event bonus increases by
           1.
         </p>
-
+        <EventDescription
+          eventName="Telekinesis"
+          intro="You focus your mind on an unattended non-living object, causing it to move at your command."
+          inductionTime="Full Action"
+          linkTarget={linkMap.GravitonertiaStyle}
+          metrics={[
+            { name: "Mass", value: "1 kilogram" },
+            { name: "Range", value: "1 meter" },
+            { name: "Targets", value: "1 per 3" },
+          ]}
+          description={
+            <p>
+              Choose a number of objects equal to Targets within Range that each weigh less than Mass. Each object moves
+              from it its current location to a new location within Range of its starting point.
+            </p>
+          }
+        />
+        <Break />
         <Section header="Mobile Style">
           <p>
             The intuitive style of the entanglement of Flight + Near your skill with melee defense and rapid mobility.
           </p>
-          <Section header="Charge">
+          <Section header="Charge" isInset>
             <EntanglementDescription
               intro={<p>You can effectively apply your movement in combat to your attacks and defenses.</p>}
               rank3Met={{ near: true }}
@@ -1353,7 +1383,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Evasion">
+          <Section header="Evasion" isInset>
             <EntanglementDescription
               intro={<p>You have a strong sense for where attacks will land and how to avoid them.</p>}
               rank3Met={{ near: true }}
@@ -1370,7 +1400,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Speed">
+          <Section header="Speed" isInset>
             <EntanglementDescription
               intro={<p>You can run much faster than before.</p>}
               rank3Met={{ near: true }}
@@ -1381,7 +1411,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Traversal">
+          <Section header="Traversal" isInset>
             <EntanglementDescription
               intro={<p>Obstacles and terrain no longer hinder your movement.</p>}
               rank3Met={{ near: true }}
@@ -1395,32 +1425,16 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
+          {/* <Section header="TODO" isInset></Section> */}
+          {/* <Section header="TODO" isInset></Section> */}
         </Section>
+        <Break />
         <Section header="Gravitonertia Style">
           <p>
             The esoteric style of the entanglement of Flight + Near allows you to control the fundamental forces behind
             gravity and motion. This ability is expressed primarily via the Telekinesis cascade event.
           </p>
-          <EventDescription
-            eventName="Telekinesis"
-            intro="You focus your mind on an unattended non-living object, causing it to move at your command."
-            inductionTime="Full Action"
-            linkTarget={linkMap.GravitonertiaStyle}
-            metrics={[
-              { name: "Mass", value: "1 kilogram" },
-              { name: "Range", value: "1 meter" },
-              { name: "Targets", value: "1 per 3" },
-            ]}
-            description={
-              <p>
-                Choose a number of objects equal to Targets within Range that each weigh less than Mass. Each object
-                moves from it its current location to a new location within Range of its starting point.
-              </p>
-            }
-          />
-          <Section header="Alter Mass">
+          <Section header="Alter Mass" isClassified>
             <EntanglementDescription
               intro={
                 <p>Your Telekinesis events can increase or decrease the mass of objects instead of moving them.</p>
@@ -1445,7 +1459,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Remote Interaction">
+          <Section header="Remote Interaction" isClassified>
             <EntanglementDescription
               intro={<p>Your can telekinetically interact with objects and enemies as if they were within reach.</p>}
               rank3Met={{ near: true }}
@@ -1469,7 +1483,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Kinetic Attack">
+          <Section header="Kinetic Attack" isClassified>
             <EntanglementDescription
               intro={<p>You can telekinetically throw small objects with bullet-like force.</p>}
               rank3Met={{ near: true }}
@@ -1495,7 +1509,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Levitation">
+          <Section header="Levitation" isClassified>
             <EntanglementDescription
               intro={<p>You can lift yourself or others off the ground with your mind.</p>}
               rank3Met={{ near: true }}
@@ -1524,12 +1538,13 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
+          {/* <Section header="TODO" isClassified></Section> */}
+          {/* <Section header="TODO" isClassified></Section> */}
+          {/* <Section header="TODO" isClassified></Section> */}
         </Section>
       </Section>
 
+      <Break page />
       <Section header="Flight + Far">
         <p>
           Mastering this Entanglement grants one lightning fast wits, reflexes and predictive power, or the ability to
@@ -1558,12 +1573,44 @@ function ChapterEntanglements() {
         <p>
           Choose two specializations within the Pneumaplegia style to unlock. Your Field event bonus increases by 1.
         </p>
+        <EventDescription
+          eventName="Field"
+          intro="You create a region of space that enhances or disrupts the hidden body connection, disorienting your foes or hastening your allies."
+          inductionTime="Full Action"
+          linkTarget={linkMap.PneumaplegiaStyle}
+          metrics={[
+            { name: "Area", value: "1 square meter, minimum = Bonus" },
+            { name: "Duration", value: "1 round, minimum = Bonus" },
+            { name: "Intensity", value: "1 point" },
+          ]}
+          description={
+            <>
+              <p>
+                Select a number of contiguous 1 meter spaces equal to Area. These spaces fill with a faint haze or other
+                subtle but reliably noticeable visual effect and remain affected for the Duration.
+              </p>
+              <p>
+                Decide if the affected area inhibits or aids movement. If it inhibits, any time someone starts a turn
+                inside it, they lose a number of Metabolism points equal to Intensity. Otherwise they gain that number
+                of Metabolism points. The points are lost or gained from whatever combination of Metabolisms the
+                affected target chooses.
+              </p>
+              <p>
+                If you already have an ongoing field from a previous use of this event when you induce it, and the new
+                field is contiguous with the old field, then they merge into a single field. The properties of the
+                combined field all match the whatever metrics were applied to it the most recent time it was induced. If
+                the new field is not connected to the old one it replaces the old one.
+              </p>
+            </>
+          }
+        />
+        <Break />
         <Section header="Quick Style">
           <p>
             The intuitive style of the entanglement of Flight + Far focuses on accelerating your wits and predictive
             capabilities.
           </p>
-          <Section header="Danger Sense">
+          <Section header="Danger Sense" isInset>
             <EntanglementDescription
               intro={<p>You can sense and predict incoming threats.</p>}
               rank3Met={{ far: true }}
@@ -1580,7 +1627,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Multitask">
+          <Section header="Multitask" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -1609,7 +1656,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Precognition">
+          <Section header="Precognition" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -1635,7 +1682,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Priority">
+          <Section header="Priority" isInset>
             <EntanglementDescription
               intro={<p>Your fast reactions let you take more turns at more advantageous times in combat.</p>}
               rank3Met={{ far: true }}
@@ -1658,7 +1705,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Ranged Defense" topicKey="rangedDefenseSpecialization">
+          <Section header="Ranged Defense" topicKey="rangedDefenseSpecialization" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -1678,45 +1725,16 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
+          {/* <Section header="TODO" isInset></Section> */}
         </Section>
+        <Break />
         <Section header="Pneumaplegia Style">
           <p>
             The esoteric style of the entanglement of Flight + Far is the discipline of “frozen breath” or “paralyzed
             air” which allows you to modify the effects of Field events.
           </p>
-          <EventDescription
-            eventName="Field"
-            intro="You create a region of space that enhances or disrupts the hidden body connection, disorienting your foes or hastening your allies."
-            inductionTime="Full Action"
-            linkTarget={linkMap.PneumaplegiaStyle}
-            metrics={[
-              { name: "Area", value: "1 square meter, minimum = Bonus" },
-              { name: "Duration", value: "1 round, minimum = Bonus" },
-              { name: "Intensity", value: "1 point" },
-            ]}
-            description={
-              <>
-                <p>
-                  Select a number of contiguous 1 meter spaces equal to Area. These spaces fill with a faint haze or
-                  other subtle but reliably noticeable visual effect and remain affected for the Duration.
-                </p>
-                <p>
-                  Decide if the affected area inhibits or aids movement. If it inhibits, any time someone starts a turn
-                  inside it, they lose a number of Metabolism points equal to Intensity. Otherwise they gain that number
-                  of Metabolism points. The points are lost or gained from whatever combination of Metabolisms the
-                  affected target chooses.
-                </p>
-                <p>
-                  If you already have an ongoing field from a previous use of this event when you induce it, and the new
-                  field is contiguous with the old field, then they merge into a single field. The properties of the
-                  combined field all match the whatever metrics were applied to it the most recent time it was induced.
-                  If the new field is not connected to the old one it replaces the old one.
-                </p>
-              </>
-            }
-          />
-          <Section header="Concentrate Field">
+
+          <Section header="Concentrate Field" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -1747,7 +1765,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Isolate Flow">
+          <Section header="Isolate Flow" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -1782,7 +1800,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Halting Field">
+          <Section header="Halting Field" isClassified>
             <EntanglementDescription
               intro={<p>Your Field events can stop foes in their tracks.</p>}
               rank3Met={{ near: true }}
@@ -1805,7 +1823,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Hastening Field">
+          <Section header="Hastening Field" isClassified>
             <EntanglementDescription
               intro={<p>Your Field events can greatly speed the movements of those inside it.</p>}
               rank3Met={{ near: true }}
@@ -1826,12 +1844,13 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
+          {/* <Section header="TODO" isClassified></Section> */}
+          {/* <Section header="TODO" isClassified></Section> */}
+          {/* <Section header="TODO" isClassified></Section> */}
         </Section>
       </Section>
 
+      <Break page />
       <Section header="Focus + Self">
         <p>
           Mastering this Entanglement allows you to take charge of your instincts, the needs of your body, resist
@@ -1860,12 +1879,41 @@ function ChapterEntanglements() {
         </p>
         <h4>Esoteric Bonus</h4>
         <p>Choose two specializations within the Sublimation style to unlock.</p>
+        <EventDescription
+          eventName="Sublime"
+          intro="You still your mind, quiet the distractions of your body, open your senses to hidden space, and leave the physical world behind."
+          inductionTime="1 minute"
+          linkTarget={linkMap.SublimationStyle}
+          metrics={[
+            { name: "Depth", value: "1 minute" },
+            { name: "Range", value: "1 meter" },
+          ]}
+          description={
+            <>
+              <p>
+                Your hidden body fully separates from the physical world, leaving your unconscious physical body behind
+                and giving you the Out of Body state. While in this state, you can phase through any object that has
+                moved within an amount of time less than your current Depth.
+              </p>
+              <p>
+                While your senses do not operate in hidden space, you are aware of the shape of physical objects within
+                Range. If you have special senses from other Specializations, such as Chromaception, Detect Sensorium,
+                Exoproprioception, Sense Waveform, or Tactical Awareness, you keep these senses while sublimed.
+              </p>
+              <p>
+                To exit the hidden space and end the Out of Body state, you must return to your physical body and induce
+                this event again, but no Challenge or Progress is required to do so.
+              </p>
+            </>
+          }
+        />
+        <Break />
         <Section header="Confident Style">
           <p>
             The intuitive style of the entanglement of Focus + Self helps you function in adverse situations, resist
             influence and dissociation, and when transcend the physical needs of the body.
           </p>
-          <Section header="Auto-integrity">
+          <Section header="Auto-integrity" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -1887,7 +1935,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Determination">
+          <Section header="Determination" isInset>
             <EntanglementDescription
               intro={<p>You can push yourself to the limit harder and longer than others.</p>}
               rank3Met={{ self: true }}
@@ -1911,7 +1959,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Event Bandwidth">
+          <Section header="Event Bandwidth" isInset>
             <EntanglementDescription
               intro={<p>You can use pure willpower to induce cascade events with heightened intensity.</p>}
               rank3Met={{ self: true }}
@@ -1930,7 +1978,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Insulation">
+          <Section header="Insulation" isInset>
             <EntanglementDescription
               intro={<p>You have created a buffer that protects your hidden body from harm and influence.</p>}
               rank3Met={{ self: true }}
@@ -1949,45 +1997,18 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
+          {/* <Section header="TODO" isInset></Section> */}
+          {/* <Section header="TODO" isInset></Section> */}
+          {/* <Section header="TODO" isInset></Section> */}
         </Section>
+        <Break />
         <Section header="Sublimation Style">
           <p>
             The esoteric style of the entanglement of Focus + Self grants additional capabilities to the Sublime cascade
             event.
           </p>
-          <EventDescription
-            eventName="Sublime"
-            intro="You still your mind, quiet the distractions of your body, open your senses to hidden space, and leave the physical world behind."
-            inductionTime="1 minute"
-            linkTarget={linkMap.SublimationStyle}
-            metrics={[
-              { name: "Depth", value: "1 minute" },
-              { name: "Range", value: "1 meter" },
-            ]}
-            description={
-              <>
-                <p>
-                  Your hidden body fully separates from the physical world, leaving your unconscious physical body
-                  behind and giving you the Out of Body state. While in this state, you can phase through any object
-                  that has moved within an amount of time less than your current Depth.
-                </p>
-                <p>
-                  While your senses do not operate in hidden space, you are aware of the shape of physical objects
-                  within Range. If you have special senses from other Specializations, such as Chromaception, Detect
-                  Sensorium, Exoproprioception, Sense Waveform, or Tactical Awareness, you keep these senses while
-                  sublimed.
-                </p>
-                <p>
-                  To exit the hidden space and end the Out of Body state, you must return to your physical body and
-                  induce this event again, but no Challenge or Progress is required to do so.
-                </p>
-              </>
-            }
-          />
-          <Section header="Blink">
+
+          <Section header="Blink" isClassified>
             <EntanglementDescription
               intro={<p>You can rapidly enter hidden space and exit it somewhere else nearby.</p>}
               rank3Met={{ self: true }}
@@ -2010,7 +2031,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Deep Traversal">
+          <Section header="Deep Traversal" isClassified>
             <EntanglementDescription
               intro={<p>You can enter deeper reaches of hidden space allowing you to phase through more objects.</p>}
               rank3Met={{ self: true }}
@@ -2023,7 +2044,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Nonlocality">
+          <Section header="Nonlocality" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -2058,7 +2079,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Storage">
+          <Section header="Storage" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -2086,7 +2107,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Sublime Body">
+          <Section header="Sublime Body" isClassified>
             <EntanglementDescription
               intro={
                 <p>You can bring your physical body with you when entering hidden space and eventually other people.</p>
@@ -2118,7 +2139,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Sublime Combat">
+          <Section header="Sublime Combat" isClassified>
             <EntanglementDescription
               intro={<p>You have mastered the actical capabilities of subliming your body.</p>}
               rank3Met={{ self: true }}
@@ -2144,6 +2165,7 @@ function ChapterEntanglements() {
         </Section>
       </Section>
 
+      <Break page />
       <Section header="Focus + Near">
         <p>
           Mastering this Entanglement improves your ability to find and understand complex patterns, devise plans, and
@@ -2176,13 +2198,36 @@ function ChapterEntanglements() {
           Choose two specializations within the Chromodynamism style to unlock. Your Transmute event bonus increases by
           1.
         </p>
-
+        <EventDescription
+          eventName="Transmute"
+          intro="You touch an unattended non-living object and alter its material properties."
+          inductionTime="Full Action"
+          linkTarget={linkMap.ChromodynamismStyle}
+          metrics={[{ name: "Transmute Size", value: "1 centimeter, minimum = Bonus" }]}
+          description={
+            <>
+              <p>
+                An object that would fit within a diameter of Transmute Size, or a spherical portion of this size within
+                a larger object, changes from one material to another. The shape and structure are unchanged. The new
+                material must be a single homogeneous substance of the same state (solid, liquid, gas) as the original
+                that will not react violently with itself or its context. Toxic substances are possible but dangerous
+                because you must remain touching it and near any fumes or radiation for the duration of the
+                transformation.
+              </p>
+              <p>
+                For example, you could turn water into gasoline, or salt into iron, but not turn something into concrete
+                (not homogeneous) or pure sodium (too reactive).
+              </p>
+            </>
+          }
+        />
+        <Break />
         <Section header="Bright Style">
           <p>
             The intuitive style of the entanglement of Focus + Near boosts your ability to find patterns and understand
             the world.
           </p>
-          <Section header="Analyze Cascade">
+          <Section header="Analyze Cascade" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -2212,7 +2257,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Episemiotics">
+          <Section header="Episemiotics" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -2246,7 +2291,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Event Flexibility">
+          <Section header="Event Flexibility" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -2274,7 +2319,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Exoproprioception">
+          <Section header="Exoproprioception" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -2300,7 +2345,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Group Mind">
+          <Section header="Group Mind" isInset>
             <EntanglementDescription
               intro={<p>You can share knowledge and experiences with others empathically, almost like a hive mind.</p>}
               rank3Met={{ near: true }}
@@ -2332,7 +2377,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Isolate Signal">
+          <Section header="Isolate Signal" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -2366,35 +2411,14 @@ function ChapterEntanglements() {
             />
           </Section>
         </Section>
+        <Break />
         <Section header="Chromodynamism Style">
           <p>
             The esoteric style of the entanglement of Focus + Near allows you to control the strong fundamental force
             that binds atomic nuclei. This capability is primarily expressed through the Transmute cascade event.
           </p>
-          <EventDescription
-            eventName="Transmute"
-            intro="You touch an unattended non-living object and alter its material properties."
-            inductionTime="Full Action"
-            linkTarget={linkMap.ChromodynamismStyle}
-            metrics={[{ name: "Transmute Size", value: "1 centimeter, minimum = Bonus" }]}
-            description={
-              <>
-                <p>
-                  An object that would fit within a diameter of Transmute Size, or a spherical portion of this size
-                  within a larger object, changes from one material to another. The shape and structure are unchanged.
-                  The new material must be a single homogeneous substance of the same state (solid, liquid, gas) as the
-                  original that will not react violently with itself or its context. Toxic substances are possible but
-                  dangerous because you must remain touching it and near any fumes or radiation for the duration of the
-                  transformation.
-                </p>
-                <p>
-                  For example, you could turn water into gasoline, or salt into iron, but not turn something into
-                  concrete (not homogeneous) or pure sodium (too reactive).
-                </p>
-              </>
-            }
-          />
-          <Section header="Condense Matter">
+
+          <Section header="Condense Matter" isClassified>
             <EntanglementDescription
               intro={<p>You can create solid objects out of thin air.</p>}
               rank3Met={{ near: true }}
@@ -2418,7 +2442,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Entropic Combat">
+          <Section header="Entropic Combat" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -2450,7 +2474,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Composite">
+          <Section header="Composite" isClassified>
             <EntanglementDescription
               intro={<p>You can transmute things into more complex materials.</p>}
               rank3Met={{ near: true }}
@@ -2473,7 +2497,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Reshape">
+          <Section header="Reshape" isClassified>
             <EntanglementDescription
               intro={<p>You can sculpt materials and transmute larger objects.</p>}
               rank3Met={{ near: true }}
@@ -2499,11 +2523,12 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="TODO"></Section> */}
-          {/* <Section header="TODO"></Section> */}
+          {/* <Section header="TODO" isClassified></Section> */}
+          {/* <Section header="TODO" isClassified></Section> */}
         </Section>
       </Section>
 
+      <Break page />
       <Section header="Focus + Far">
         <p>
           Mastering this Entanglement sharpens your senses, alertness, social modeling, and can even allow you to
@@ -2533,10 +2558,33 @@ function ChapterEntanglements() {
         <p>
           Choose two specializations within the Telethesia style to unlock. Your Telepathy event bonus increases by 1.
         </p>
-
+        <EventDescription
+          eventName="Telepathy"
+          intro="The diffuse bounds of your hidden body reach out over a distance to sense and interface with other minds."
+          inductionTime="Full Action"
+          linkTarget={linkMap.ChromodynamismStyle}
+          metrics={[
+            { name: "Range", value: " 3x, minimum = 1 meter" },
+            { name: "Participants", value: "1 Target" },
+          ]}
+          description={
+            <>
+              <p>
+                Select a number of willing Participants within Range. For the rest of the scene, you and all
+                participants can communicate telepathically. This communication is undetectable to outsiders.
+              </p>
+              <p>
+                Telepathic communication occurs at a slightly faster speed and bandwidth than normal speech, but still
+                requires a shared language.
+              </p>
+              <p>You can induce this event subtly, preventing any witnesses from knowing anything happened.</p>
+            </>
+          }
+        />
+        <Break />
         <Section header="Alert Style">
           <p>The intuitive style of the entanglement of Focus + Far focuses on sensory and social awareness.</p>
-          <Section header="Cold Reading">
+          <Section header="Cold Reading" isInset>
             <EntanglementDescription
               intro={<p>You can read people like a book with a single glance.</p>}
               rank3Met={{ far: true }}
@@ -2556,7 +2604,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Investigation">
+          <Section header="Investigation" isInset>
             <EntanglementDescription
               intro={<p>You can get to the bottom of any mystery.</p>}
               rank3Met={{ far: true }}
@@ -2574,7 +2622,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Sharp Senses">
+          <Section header="Sharp Senses" isInset>
             <EntanglementDescription
               intro={<p>This specialization boosts the power of your existing senses to incredible levels.</p>}
               rank3Met={{ far: true }}
@@ -2591,7 +2639,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Tactical Awareness">
+          <Section header="Tactical Awareness" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -2617,7 +2665,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Chromaception">
+          <Section header="Chromaception" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -2646,7 +2694,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Detect Sensorium">
+          <Section header="Detect Sensorium" isInset>
             <EntanglementDescription
               intro={
                 <p>
@@ -2670,36 +2718,14 @@ function ChapterEntanglements() {
             />
           </Section>
         </Section>
+        <Break />
         <Section header="Telethesia Style">
           <p>
             The esoteric style of the entanglement of Focus + Far allows you to customize the Telepathy event’s
             capabilities within other minds or remote sensing.
           </p>
-          <EventDescription
-            eventName="Telepathy"
-            intro="The diffuse bounds of your hidden body reach out over a distance to sense and interface with other minds."
-            inductionTime="Full Action"
-            linkTarget={linkMap.ChromodynamismStyle}
-            metrics={[
-              { name: "Range", value: " 3x, minimum = 1 meter" },
-              { name: "Participants", value: "1 Target" },
-            ]}
-            description={
-              <>
-                <p>
-                  Select a number of willing Participants within Range. For the rest of the scene, you and all
-                  participants can communicate telepathically. This communication is undetectable to outsiders.
-                </p>
-                <p>
-                  Telepathic communication occurs at a slightly faster speed and bandwidth than normal speech, but still
-                  requires a shared language.
-                </p>
-                <p>You can induce this event subtly, preventing any witnesses from knowing anything happened.</p>
-              </>
-            }
-          />
 
-          <Section header="Clairvoyance">
+          <Section header="Clairvoyance" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -2735,7 +2761,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Implant Thought">
+          <Section header="Implant Thought" isClassified>
             <EntanglementDescription
               intro={
                 <p>You instill a lasting influence into the minds of others, altering their behavior for a time.</p>
@@ -2781,7 +2807,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Mind Control">
+          <Section header="Mind Control" isClassified>
             <EntanglementDescription
               intro={<p>You can seize control over simpler nervous systems.</p>}
               rank3Met={{ far: true }}
@@ -2815,7 +2841,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Psychosomaticism">
+          <Section header="Psychosomaticism" isClassified>
             <EntanglementDescription
               intro={
                 <p>
@@ -2840,7 +2866,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Read Mind">
+          <Section header="Read Mind" isClassified>
             <EntanglementDescription
               intro={<p>You can examine the thoughts and memories of others.</p>}
               rank3Met={{ far: true }}
@@ -2878,7 +2904,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Sense Minds">
+          <Section header="Sense Minds" isClassified>
             <EntanglementDescription
               intro={<p>You can feel the other minds around you.</p>}
               rank3Met={{ far: true }}
@@ -2897,8 +2923,6 @@ function ChapterEntanglements() {
           </Section>
         </Section>
       </Section>
-
-      <Break page />
     </Section>
   );
 }

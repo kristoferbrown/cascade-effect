@@ -3,7 +3,6 @@ import { RulebookContext } from "../context/rulebookContext";
 import Break from "../components/break/break";
 import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import Section from "../components/section/section";
-import Logomark from "../svgs/logomark";
 import Crosslink from "../components/crosslink/crosslink";
 import Metabolism from "../components/metabolism/metabolism";
 import Pair from "../components/metabolism/pair";

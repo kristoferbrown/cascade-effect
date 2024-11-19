@@ -5,7 +5,6 @@ import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro
 import Crosslink from "../components/crosslink/crosslink";
 import Metabolism from "../components/metabolism/metabolism";
 import Section from "../components/section/section";
-import Logomark from "../svgs/logomark";
 
 function ChapterCharacters() {
   const { topicMap } = useContext(RulebookContext);
@@ -271,6 +270,7 @@ function ChapterCharacters() {
         </Section>
       </Section>
 
+      <Break />
       <Section header="Physical Origins">
         <p>
           Physical Origins represent your character's place in the world and will provide guidance for choosing your
