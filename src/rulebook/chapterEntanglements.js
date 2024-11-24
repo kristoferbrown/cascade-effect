@@ -79,14 +79,14 @@ function ChapterEntanglements() {
                 Pairs <Pair fight self /> to radically transform or empower the physical body.
               </p>
 
-              <h4>Sublimation</h4>
-              <p>
-                Pairs <Pair flight self /> to traverse hidden space intangibly and invisibly
-              </p>
-
               <h4>Abjuration</h4>
               <p>
-                Pairs <Pair focus self /> to create durable barriers, wards, and filters.
+                Pairs <Pair flight self /> tocreate durable barriers, wards, and filters.
+              </p>
+
+              <h4>Sublimation</h4>
+              <p>
+                Pairs <Pair focus self /> to traverse hidden space intangibly and invisibly.
               </p>
 
               <h4>Electromagnetism</h4>
