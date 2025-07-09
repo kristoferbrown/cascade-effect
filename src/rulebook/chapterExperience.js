@@ -46,9 +46,9 @@ function ChapterExperience() {
               <h2>Cascade Events</h2>
               <p>
                 A cascade event is a temporary, often overtly supernatural, effect you can learn to induce by ranks in
-                Entanglements with your experience. By transfering information from the hidden body into the
+                Entanglements with your experience. By transferring information from the hidden body into the
                 thermodynamically separate physical space, entropy is locally reversed and free energy is created. By
-                controlling this process, one can evoke influence insdide or outside the body and create action at a
+                controlling this process, one can evoke influence inside or outside the body and create action at a
                 distance.
               </p>
               <p>

@@ -1,15 +1,15 @@
-import { useContext } from "react";
-import { RulebookContext } from "../context/rulebookContext";
-import Break from "../components/break/break";
+// import { useContext } from "react";
+// import { RulebookContext } from "../context/rulebookContext";
+// import Break from "../components/break/break";
 import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import Section from "../components/section/section";
-import Crosslink from "../components/crosslink/crosslink";
+// import Crosslink from "../components/crosslink/crosslink";
 import Metabolism from "../components/metabolism/metabolism";
 import Pair from "../components/metabolism/pair";
 
 function ChapterActions() {
-  const { topicMap } = useContext(RulebookContext);
-  const linkMap = topicMap.current;
+  // const { topicMap } = useContext(RulebookContext);
+  // const linkMap = topicMap.current;
 
   return (
     <Section
