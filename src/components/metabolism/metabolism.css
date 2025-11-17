@@ -16,7 +16,7 @@
 .metabolism.focus {
   color: var(--hiddenSpace);
   text-shadow: 0px 0px 3px var(--physicalSpace);
-  -webkit-text-stroke: 0.4px var(--hiddenSpace);
+  -webkit-text-stroke: 0.25px var(--hiddenSpace);
   border-color: var(--contractedSpace);
 }
 
@@ -24,7 +24,7 @@
 .metabolism.near,
 .metabolism.far {
   color: var(--physicalSpace);
-  -webkit-text-stroke: 0.4px var(--physicalSpace);
+  -webkit-text-stroke: 0.25px var(--physicalSpace);
   text-shadow: 0px 0px 3px var(--hiddenSpace);
   border-color: var(--hiddenSpace);
 }

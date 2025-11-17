@@ -42,8 +42,8 @@ function ChapterIntroduction() {
                 Maybe you've always suspected that there was something more to the world, that things were never quite
                 as they seemed. But now, you've felt it. Seen it hiding behind the world you once knew. Realized it is a
                 part of you. A part of everyone. You're only just beginning to sense it, but a hidden intangible world
-                exists parallel to the one we know, and in it resides your subtle body, mirroring your physical form.
-                You can feel it. You can reach out and feel the subtle bodies of others. Yet no one else seems to
+                exists parallel to the one we know, and in it resides your hidden body, mirroring your physical form.
+                You can feel it. You can reach out and feel the hidden bodies of others. Yet no one else seems to
                 realize it's there. It was always there, always a necessary part of you. But now that you're beginning
                 to interact with it, you're discovering that it can help you do things you never thought possible.
               </p>
@@ -124,24 +124,24 @@ function ChapterIntroduction() {
         </Section>
 
         <Section header="A World Within" isInset>
-          <Section header="The Subtle Body">
+          <Section header="The Hidden Body">
             <p>
               Between every point of the space you're familiar with, exists a second hidden space. This parallel realm,
-              called Infraspace, is invisible to most. But you've sense an intangible mirror of your physical form
-              embedded in this space, your Subtle Body.
+              called Hidden Space, is invisible to most. But you've sense an intangible mirror of your physical form
+              embedded in this space, your Hidden Body.
             </p>
           </Section>
           <Section header="Dissociative Experiences">
             <p>
-              The mind requires contact with the Subtle Body. When this connection is stressed, loss of awareness and
+              The mind requires contact with the Hidden Body. When this connection is stressed, loss of awareness and
               memory result for most people, but for those with stronger links, psychedelic dissociative experiences
               hint at the true nature of consciousness and the world.
             </p>
           </Section>
           <Section header="Hints of New Abilities">
             <p>
-              With awareness of the Subtle Body, one can harness the resources it provides and use them in physical
-              space to accomplish more in less time. When truly synchronized with the Subtle Body, one can transcend the
+              With awareness of the Hidden Body, one can harness the resources it provides and use them in physical
+              space to accomplish more in less time. When truly synchronized with the Hidden Body, one can transcend the
               limits of the physical body and its surroundings.
             </p>
           </Section>
@@ -164,9 +164,9 @@ function ChapterIntroduction() {
           </Section>
           <Section header="Inhuman Entities">
             <p>
-              Infraspace is full of semi-aware beings. By manifesting physical forces, assembling bodies, or possessing
-              humans, they sometimes find ways to become less incorporeal. Meanwhile, other beings that definitely
-              aren't from around here lurk in dark places.
+              Hidden Space is full of semi-aware beings. By manifesting physical forces, assembling bodies, or
+              possessing humans, they sometimes find ways to become less incorporeal. Meanwhile, other beings that
+              definitely aren't from around here lurk in dark places.
             </p>
           </Section>
         </Section>
@@ -177,18 +177,19 @@ function ChapterIntroduction() {
         <Section header="Duality of Space" isInset>
           <ul>
             <li>
-              <strong>Ultraspace</strong> is the physical world and its laws as we normally experience and understand
-              it. It is often just referred to as physical space.
+              <strong>Physical Space</strong> is the physical world and its laws as we normally experience and
+              understand it. As an essential part of everyday experience, it hasn't gained many names throughout
+              history, but researchers studying these topics have taken to calling it Ultraspace.
             </li>
             <li>
-              <strong>Infraspace</strong> is hidden realm running parallel to the physical. It's almost undetectable,
-              but those that have suspected its presence have called it many names depending on their world view, the
-              spirit world, the astral plane, hidden space, Calabi-Yau space, and many others.
+              <strong>Hidden Space</strong> is hidden realm running parallel to the physical. It's almost undetectable,
+              but those that have suspected its presence have called it many names depending on their world view,
+              Infraspace, the spirit world, the astral plane, Calabi-Yau space, and many others.
             </li>
           </ul>
           <p>
-            "Think of Ultraspace as the surface world and Infraspace as the underside, like two sides of a coin, one
-            tangible, the other invisible but both equally real."
+            Think of the physical Ultraspace as the surface world and the Hidden Infraspace as the underside, like two
+            sides of a coin, one tangible, the other invisible, but both equally real.
           </p>
         </Section>
         <Section header="Duality of Body" isInset>
@@ -196,16 +197,19 @@ function ChapterIntroduction() {
           <ul>
             <li>
               <strong>The Physical Body</strong> is how we normally navigate the world. It is the mind and the flesh,
-              made of muscle, bone, organs, neurons, chemicals, and electric signals. In the game it is represented by
-              the
+              made of muscle, bone, organs, neurons, chemical reactions, and electric signals. In the game it is
+              represented by the
               <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolisms</Crosslink> of <Metabolism fight />,{" "}
               <Metabolism flight />, and <Metabolism focus />
             </li>
             <li>
-              <strong>The Subtle Body</strong> is an intangible part of every human and most animals. It is not your
-              mind or personality, and it is useless without its physical analog, but is a necessary part of maintaining
-              consciousness. In the game it is represented by the
-              <Crosslink target={linkMap.SubtleMetabolisms}>Subtle Metabolisms</Crosslink> of <Metabolism self />,{" "}
+              <strong>The Hidden Body</strong> is an intangible part of every human and most animals. It is not your
+              mind, personality, or soul, but when paired with its physical analog in the brain, it is a necessary part
+              of maintaining consciousness. Its normally undetectable, but those who have experienced being separated
+              from it have dissociative symptoms that hint at its absence. Despite never understanding its true nature,
+              people suspecting the presence of the Hidden Body have given it many names throughout history, such as the
+              soul, the subtle body, the body of light, pneuma, and many others.In the game it is represented by the
+              <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> of <Metabolism self />,
               <Metabolism near />, and <Metabolism far />.
             </li>
           </ul>
@@ -230,12 +234,12 @@ function ChapterIntroduction() {
         <Section header="Harnessing the Cascade Effect">
           <p>
             Trans-spatial information transfer is typically an uncommon process in nature. However, evolution has found
-            ways to harness it by creating the Subtle Body, an intangible information processing organ that supplements
+            ways to harness it by creating the Hidden Body, an intangible information processing organ that supplements
             the physical brain. In humans, this process is an important part of consciousness and other mental
             faculties.
           </p>
           <p>
-            In extremely rare cases, humans can learn to sense and control their Subtle Body and the connection to it,
+            In extremely rare cases, humans can learn to sense and control their Hidden Body and the connection to it,
             allowing them to intentionally induce and harness the Cascade Effect. These humans are referred to as
             <em>entangled</em>.
           </p>
@@ -245,12 +249,12 @@ function ChapterIntroduction() {
       <Section header="Entangled Characters">
         <p>
           Player characters are formerly ordinary humans who have become <em>entangled</em>. They have developed
-          conscious awareness of their Subtle Body and and are beginning to harness energy created by the Cascade
+          conscious awareness of their Hidden Body and and are beginning to harness energy created by the Cascade
           Effect. This grants them the following capabilities beyond those provided by the Physical Body alone.
         </p>
         <ul>
           <li>
-            <Crosslink target={linkMap.SubtleMetabolisms}>Subtle Metabolisms</Crosslink> scores. Normal humans have
+            <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> scores. Normal humans have
             these metabolisms only at unmeasurable levels. However, entangled characters can use these metabolisms as a
             second set of resources, supplementing the physical mind and body to allow increased levels of competence
             and exertion.
@@ -261,18 +265,18 @@ function ChapterIntroduction() {
             parallelized mind of an entangled character can do things in the same time a normal human can do one thing.
           </li>
           <li>
-            <Crosslink target={linkMap.Entanglements}>Entanglements</Crosslink>. The Subtle Body is more mutable than
+            <Crosslink target={linkMap.Entanglements}>Entanglements</Crosslink>. The Hidden Body is more mutable than
             the Physical Body, and over time can be modified and improved to increase a character's capabilities. This
             process is measured in <Crosslink target={linkMap.Entanglements}>Entanglements</Crosslink>, pairings of one
-            Physical and one Subtle Metabolism that when developed will rapidly increase the
-            <Crosslink target={linkMap.SubtleMetabolisms}>Subtle Metabolisms</Crosslink> and allow for subtle superhuman
+            Physical and one Hidden Metabolism that when developed will rapidly increase the
+            <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> and allow for subtle superhuman
             abilities.
           </li>
           <li>
             <Crosslink target={linkMap.CascadeEvents}>Cascade Events</Crosslink>. True mastery over the Cascade Effect
             allows one to manifest energy outside of the Physical Body, allowing one to create temporary effects that
             circumvent the perceived laws of physical reality. Cascade Events can manipulate the fundamental forces of
-            physics, transform the body, communicate telepathically, or allow one to traverse Infraspace.
+            physics, transform the body, communicate telepathically, or allow one to traverse Hidden Space.
           </li>
         </ul>
       </Section>
@@ -290,7 +294,7 @@ function ChapterIntroduction() {
             at what cost. Challenges have a<Crosslink target={linkMap.DifficultyAndContext}>Difficulty</Crosslink>{" "}
             number set by the GM. You must choose a pairing of one{" "}
             <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolism</Crosslink> and one
-            <Crosslink target={linkMap.SubtleMetabolisms}>Subtle Metabolism</Crosslink> that you will use to attempt to
+            <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolism</Crosslink> that you will use to attempt to
             meet the Difficulty. Challenges are fully described in Chapter 3.
           </li>
           <li>
@@ -389,10 +393,10 @@ function ChapterIntroduction() {
         <Section header="The Heroic Story">
           <p>This approach is recommended if everyone has played Cascade Effect before.</p>
           <p>
-            Characters are already slightly superhuman at the start. Characters are already slightly superhuman at the
-            start. Follow the standard character creation steps detailed in the next chapter, but their Inciting
-            Incident and the Metabolism increases it grants have already occurred. Afterwards, each character gets 3
-            experience points to spend (or a different amount determined by the
+            Characters are already slightly superhuman at the start. Follow the standard character creation steps
+            detailed in the next chapter, but their Inciting Incident and the Metabolism increases it grants have
+            already occurred. Your character can start with any weapons legal to civilians. Afterwards, each character
+            gets 3 experience points to spend (or a different amount determined by the
             <Crosslink target={linkMap.TheGameMaster}>GM</Crosslink>).
           </p>
         </Section>
@@ -401,11 +405,12 @@ function ChapterIntroduction() {
           <p>
             Skip standard character creation. Instead, characters have 12 points to split between
             <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolisms</Crosslink> scores, with no metabolism
-            ending up below 3 or above 6. Choose one Subtle Metabolism that starts with a score of 2 and the rest start
-            with a score of 1. Then choose any 9<Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink>{" "}
-            for the character. The
+            ending up below 3 or above 6. Choose one Hidden Metabolism that starts with a score of 2 and the rest start
+            with a score of 1. Then choose any 8<Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink>{" "}
+            for the character and increase 2 <Crosslink target={linkMap.ActionBonus}>Action Bonuses</Crosslink> from 0
+            to 1. Finally, chose a single Specialization that you have at rank 1. The
             <Crosslink target={linkMap.TheGameMaster}>GM</Crosslink> may also set an amount of experience points to
-            spend as well.
+            spend as well or give you access to weapons.
           </p>
         </Section>
       </Section>

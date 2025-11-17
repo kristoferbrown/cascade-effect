@@ -8,6 +8,8 @@ logs
 node_modules
 bower_components
 
+.vscode
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db

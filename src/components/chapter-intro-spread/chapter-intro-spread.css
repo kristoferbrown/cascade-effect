@@ -24,7 +24,7 @@
 
 .ChapterIntroSpreadRightPage .crosslink {
   color: var(--physicalSpace);
-  -webkit-text-stroke: 0.4px var(--physicalSpace);
+  -webkit-text-stroke: 0.25px var(--physicalSpace);
 }
 
 @media print {

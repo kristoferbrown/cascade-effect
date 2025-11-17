@@ -3,7 +3,7 @@ import { RulebookContext } from "../../context/rulebookContext";
 
 import "./crosslink.css";
 
-const Crosslink = ({ children, className = "", inverted = false, target }) => {
+const Crosslink = ({ children, className = "", inverted = false, isSpecialization, target }) => {
   const { openSectionList, setOpenSectionList } = useContext(RulebookContext);
 
   const openAndGoToTarget = () => {
@@ -41,7 +41,9 @@ const Crosslink = ({ children, className = "", inverted = false, target }) => {
     <>
       {" "}
       <a
-        className={`crosslink${inverted ? " inverted" : ""} ${className ? className : ""}`}
+        className={`crosslink${inverted ? " inverted" : ""}${isSpecialization ? " specializationLink" : ""} ${
+          className ? className : ""
+        }`}
         href={`#${target}`}
         onClick={openAndGoToTarget}
       >
