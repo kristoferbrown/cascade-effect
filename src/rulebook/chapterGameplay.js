@@ -126,42 +126,67 @@ function ChapterGameplay() {
           </p>
           <Section header="Goals">
             <p>
-              A Goal is the target number representing the difficulty of the Challenge. If you can match or beat this
-              number while applying Progress to the Goal, then you accomplish the it successfully.{" "}
+              A Goal is a desired outcome of the Challenge. When attempting a Challenge you will apply Progress towards
+              its Goals to determine the outcome.
             </p>
-            <Section header="Hidden Goals">
+            <Section header="Fixed Goals">
               <p>
-                Typically, the GM will tell you the exact target number for the Goal and give you a clear idea what
-                happens if you succeed or fail at accomplishing it. However, if your character has incomplete
-                information about the situation the GM may only give you hints about how difficult it is and the
-                consequences. Additionally, when your character is actively being resisted by someone the target number
-                may be determined by that person's stats or actions.
+                Most Goals are <em>fixed</em>, meaning they have a specific fixed target number representing the
+                difficulty of achieving them. If you apply enough Progress to a fixed Goal to meet or exceed this target
+                number, you succeed at the Goal and achieve its desired outcome. If you apply less Progress, than the
+                target number you fail the Goal.
               </p>
               <p>
-                For example, if you're trying to jump across a gap in the dark, you may not be able to clearly see how
-                difficult the jump is, part of the danger of the Challenge is acting without this information.{" "}
+                Typically, the GM will tell you the exact target number for a fixed Goal and give you a clear idea what
+                happens if you succeed or fail at accomplishing it. In this case you can apply exactly the right amount
+                of Progress without wasting any effort. However, if your character has incomplete information about the
+                situation the GM may only give you hints about how difficult it is and the consequences. The less
+                information your character has, the more vague the hints will be. Challenges with incomplete information
+                are much more dangerous, as you can only guess how much Progress you need to apply.
+              </p>
+              <p>
+                For example, if you're trying to jump across a gap, the GM would set a Goal with a target number based
+                on the size and difficulty of the gap. If the GM set this number as 4, you would need to apply 4
+                Progress to jump across, otherwise you cannot cross. Normally you would know this target number exactly,
+                but if you were attempting this in the dark and unable to see how far the jump is, you would have to do
+                so without this knowledge.
+              </p>
+            </Section>
+            <Section header="Metric Goals">
+              <p>
+                If a Goal does not have a fixed target number, it is a <em>metric</em> Goal. These goals are not pass or
+                fail thresholds. Instead, they are numeric measurements. The amount of Progress applied to them directly
+                indicates the quality of the outcome. The more Progress applied, the better the result, with no fixed
+                ceiling. These Goals are commonly used in combat or Challenges where you are competing against or being
+                resisted by someone else.
+              </p>
+              <p>
+                For example, attacking an opponent in combat is a metric Goal. The amount of Progress you apply directly
+                indicates how harmful the attack is.
               </p>
             </Section>
             <Section header="Multiple Goals">
               <p>
                 Most Challenges have a single clear Goal. However, complex Challenges may sometimes have multiple Goals.
-                Each can have a different target number and different consequences of success or failure. Apply Progress
-                to the Goals separately, depending on how much you were able to get you may succeed on all of the Goals
-                or a only portion of them.
+                Each can have a different target number and different consequences of success or failure. When applying
+                Progress to multiple Goals, your Progress is a pool you must decide how to distribute between the each
+                Goal. Depending on how much Progress you were able to get you may succeed on all of the Goals or a only
+                portion of them.
               </p>
               <p>
-                For example, gaining access to a secure building maybe have two Goals, one for getting into the building
+                For example, gaining access to a secure building may have two Goals, one for getting into the building
                 and one for remaining undetected by security. If you get enough Progress to accomplish one but not the
                 other, you would need to choose which Goal is more important.
               </p>
             </Section>
             <Section header="Critical Success & Failure">
               <p>
-                Most of the time, a Goal is simply pass or fail, you either get enough Progress to tie or you don't.
-                However, some Goals may have degrees of success. In this case, a Goal may allow for critical success or
-                critical failure, or both. If a goal allows for critical failure, there is an additional negative
-                consequence for missing the Goal by 3 or more points. If it allows for critical success, there are
-                additional positive effects if you exceed the Goal by 3 or more points than needed to simply succeed.{" "}
+                Most of the time, a fixed Goal is simply pass or fail, you either get enough Progress to tie or you
+                don't. However, sometimes there may be degrees of success. In this case, a fixed Goal may allow for
+                critical success or critical failure, or both. If it allows for critical failure, there is an additional
+                negative consequence for missing the Goal by 3 or more points. If it allows for critical success, there
+                are additional positive effects if you exceed the Goal by 3 or more points than needed to simply
+                succeed.
               </p>
               <p>
                 For example, convincing the fearful townsfolk to evacuate before an unexpected disaster may have a
@@ -520,12 +545,11 @@ function ChapterGameplay() {
           <Section header="Creating Progress">
             <p>
               How well you do at Challenge is measured by Progress, and the Risk level determines how you create it.
-              Progress created is applied to Goals. To cleanly succeed at a Goal, you must create an amount of Progress
-              equal to or greater than the Goal. If there are multiple Goals, Progress is split up as you see fit and
-              applied to them separately. For example if you've created 5 Progress in a Challenge with a Goal of 2 and a
-              Goal of 4, you could apply 2 Progress to the smaller one and succeed at it leaving 3 left for the other,
-              or you could apply 4 to the larger Goal to succeed at it leaving only 1 for the smaller Goal, but you have
-              no way to succeed at both.
+              Progress created is applied to Goals. If there are multiple Goals, you must decide how to divide the total
+              Progress up, applying a portion of this total to each Goal. For example if you've created 5 Progress in a
+              Challenge with a fixed Goal of 2 and a fixed Goal of 4, you could apply 2 Progress to the smaller one and
+              succeed at it leaving 3 left for the other, or you could apply 4 to the larger Goal to succeed at it
+              leaving only 1 for the smaller Goal, but you have no way to succeed at both.
             </p>
           </Section>
           <Section header="Risk">
@@ -719,10 +743,10 @@ function ChapterGameplay() {
           <Section header="Long Term Projects">
             <p>
               Countdowns can also be used to track progress towards larger projects the characters pursue. This breaks
-              the larger project into several Challenges devoted to a single Goal with a difficulty equal to the
+              the larger project into several Challenges devoted to a single Goal with a target number equal to the
               countdown's duration. All Progress gained on Challenges done in pursuit of completing the project is
               applied to the countdown clock, accumulating over multiple Challenges. Eventually, when total Progress
-              meets the countdown, the project is completed successfully.{" "}
+              meets the countdown, the project is completed successfully.
             </p>
             <p>
               For example, cracking the case on a complex mystery, building a solar powered community radio tower,
@@ -813,7 +837,7 @@ function ChapterGameplay() {
           </Section>
           <Section header="Dissociated Far" topicKey="dissociatedFarState">
             <p>
-              The safest action seems like getting far away, this is your most important and urgent goal. You cannot
+              The safest action seems like getting far away, this is now your most important and urgent need. You cannot
               trust anyone that says otherwise.
             </p>
           </Section>
@@ -888,8 +912,8 @@ function ChapterGameplay() {
           <Section header="Suppressed">
             <p>You are pinned down behind cover and have disadvantage on all attacks.</p>
             <p>
-              You can remove this condition by moving, however the difficulty of all adjacent spaces is increased by the
-              intensity of this state for you.
+              You can remove this condition by moving, however the terrain difficulty of all adjacent spaces is
+              increased by the intensity of this state for you.
             </p>
           </Section>
           <Section header="Taunted">
