@@ -193,11 +193,15 @@ function ChapterCombat() {
         <Section header="Action Bonuses">
           <p>
             You have an Action Bonus associated with every action and reaction you can take in combat. If the action
-            involves a Challenge, add this bonus to the number of Metabolism points allocated to the challenge.{" "}
+            involves a Challenge, add this bonus to the number of Metabolism points allocated to the challenge.
           </p>
           <p>
             For example, if you have an Unarmed Attack bonus of 2, and you spend 4 Metabolism points on the action,
             you've effectively allocated 6 points.
+          </p>
+          <p>
+            Action Bonuses are associated with each combat action, however they are not exclusively used in combat.
+            Outside of combat you can also add them to any Challenge where taking this action would be helpful.
           </p>
         </Section>
         <Section header="Prepared Actions">
@@ -209,9 +213,9 @@ function ChapterCombat() {
             two inhale actions on your turn the preparation lasts until the end of your next turn instead.
           </p>
           <p>
-            When you take a Prepared action, you may add Focus as a third Metabolism to the Metabolism pair used in any
-            Challenge done during this action. If Focus is already a required part of the pairing used in a Prepared
-            action, you may instead choose any other Metabolism to be the third component.
+            When you take a Prepared action, any Challenges involved in this action are Prepared Challenges, allowing
+            you to add Focus as a third Metabolism to the pair used, or any other Metabolism if Focus is already
+            required.
           </p>
           <p>
             For example, as your inhale action, you use Evade, which Prepares the next Defense reaction you take. You

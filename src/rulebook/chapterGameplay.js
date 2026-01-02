@@ -333,6 +333,7 @@ function ChapterGameplay() {
             </p>
           </Section>
         </Section>
+
         <Section header="Taking Action">
           <p>
             Once you know the details of the Challenge's context, you must decide how you are going to face it. This is
@@ -341,19 +342,19 @@ function ChapterGameplay() {
           <Section header="Choosing Metabolisms">
             <p>
               Your Metabolisms will always be used as a pair, one Physical and one Hidden. Every action you take, be it
-              intellectual or athletic, requires physical and a hidden component.{" "}
+              intellectual or athletic, requires physical and a hidden component.
             </p>
             <p>
               Most Challenges can potentially be accomplished with many different Metabolism pairings, so you can choose
               the pairing freely. You just have to describe how your character is handling the situation in a way that
               applies the chosen Metabolisms. In general, Physical Metabolisms represent how your character is acting
-              and Hidden Metabolisms represent where the action is taking place.{" "}
+              and Hidden Metabolisms represent where the action is taking place.
             </p>
             <p>
               The GM has the final say over whether a description is sufficient to justify the chosen Metabolisms. If a
               pairing is poorly suited to the task you will get Disadvantage on the Challenge if you choose it. The GM
               should tell you this before you make the final choice. If the pairing is completely incompatibly with the
-              task, the GM will not allow you to choose it at all.{" "}
+              task, the GM will not allow you to choose it at all.
             </p>
             <p>
               How strictly a Challenge favors certain Metabolisms depends on the situation. Often it is very flexible,
@@ -373,88 +374,7 @@ function ChapterGameplay() {
               </p>
             </Section>
           </Section>
-          <Section header="Advantage & Disadvantage">
-            <p>
-              The GM sets the initial Risk and Effort levels based on the inherent nature of the task and situation.
-              However, you can attempt to change them by creating Advantage or Disadvantage. If the specific actions,
-              preparations, or resources you describe using to attempt the Challenge are particularly effective or
-              ineffective, the GM may give you Advantage or Disadvantage. If you choose a clever or effective approach,
-              you gain Advantage. Conversely if your chosen Metabolism pairing is poorly aligned with the Challenge or
-              you make poor choices in your approach, you gain Disadvantage. While others are attempting Challenges, if
-              you have the time and ability to intervene, you can also attempt to grant them Advantage or inflict
-              Disadvantage on them.
-            </p>
-            <p>
-              If you have Advantage on a Challenge, you can choose to lower either the Risk or Effort level, making it
-              easier to succeed. When someone intentionally inflicts Disadvantage, they choose which level, Risk or
-              Effort, to increase for the person attempting the Challenge. In any other cases of Disadvantage, the GM
-              will choose which to increase.
-            </p>
-            <p>
-              A Challenge may only have a one instance of Advantage or Disadvantage, you can't apply either more than
-              once. Having both Advantage and Disadvantage at the same time, no matter how many possible sources you
-              have of one or the other, cancel each other out resulting in unchanged Risk and Effort levels.{" "}
-            </p>
-            <Section header="Advantage & Disadvantage Examples" isInset>
-              <ul>
-                <li>Get Advantage by having a relevant Trait.</li>
-                <li>Get Advantage by using the right tool for the job.</li>
-                <li>Get Advantage by having the element of surprise.</li>
-                <li>Give Advantage by offering a helping hand.</li>
-                <li>Give Advantage by supporting someone's talking points.</li>
-                <li>Give Advantage by being a lookout.</li>
-                <li>Get Disadvantage by using Fight in a Challenge that really needs Focus.</li>
-                <li>Get Disadvantage by making a social blunder.</li>
-                <li>Get Disadvantage by running into circumstance you didn't predict.</li>
-                <li>Inflict Disadvantage by distracting someone.</li>
-                <li>Inflict Disadvantage by refuting their argument.</li>
-                <li>Inflict Disadvantage by standing in someone's way.</li>
-              </ul>
-            </Section>
-          </Section>
-          <Section header="Using Traits">
-            <p>
-              The most reliable way to gain Advantage is by applying a Trait. If you have one or more Traits that are
-              relevant to the Challenge, you gain Advantage. Traits are relevant if they can somehow be leveraged to
-              assist with the Challenge.
-            </p>
-            <p>
-              For example, a Trait called Medical Training would be relevant in a Challenge about treating injuries,
-              granting the character Advantage. Players and GMs are encouraged to be creative and flexible when deciding
-              if Traits are relevant.
-            </p>
-            <Section header="Other Uses for Traits">
-              <p>
-                The GM may also use the characters' Traits to gate Challenges. For example, Challenges requiring expert
-                knowledge may only be attempted by someone with a relevant Trait. For example, picking a lock isn't
-                extremely hard, but the average person doesn't know where to start.
-              </p>
-              <p>
-                Conversely, the GM may use the characters' Traits to skip Challenges entirely. For example, characters
-                with a with a field of knowledge will just know things related to it and characters connected to a
-                subculture will be aware of current events within it.
-              </p>
-            </Section>
-            <Section header="Using Traits Examples" isInset>
-              <ul>
-                <li>The Trait "Mechanic" grants Advantage on Challenges to repair a car.</li>
-                <li>The Trait "Streetwise" grants Advantage on Challenges to find a black-market.</li>
-                <li>
-                  Most people can't attempt to fly an experimental aircraft, but with the Trait "Pilot's License" you
-                  can.
-                </li>
-                <li>Most people can't attempt influence a senator, but with the Trait "Lobbyist Contacts" you can.</li>
-                <li>
-                  If you have the Trait "Terminally Online" you don't need a Challenge to recognize a message hidden in
-                  a series of memes.
-                </li>
-                <li>
-                  If you have the Trait "Local Guide" you don't need a Challenge to plan the fastest shortcuts through
-                  your town.
-                </li>
-              </ul>
-            </Section>
-          </Section>
+
           <Section header="Using Metabolisms">
             <p>
               Your Metabolisms are a resource you can spend. To track this, each has three measurements, score,
@@ -513,6 +433,19 @@ function ChapterGameplay() {
               </p>
             </Section>
           </Section>
+          <Section header="Action Bonuses">
+            <p>
+              Your character may have numeric Action Bonuses associated with certain combat actions. If taking an action
+              similar to this would be relevant and helpful in a Challenge are are attempting, you can add it to the
+              number of Metabolism points allocated to the Challenge.
+            </p>
+            <p>
+              For example, if you have a Move bonus of 2 and you allocate 4 Metabolism points to a Challenge to traverse
+              an obstacle, then you have effectively allocated 6 points to the Challenge. Similarly, if you have a
+              Manipulate bonus of 1 and you allocated 3 points to a Challenge requiring you to socially influence
+              others, then you have effectively allocated 4 points to the Challenge.
+            </p>
+          </Section>
           <Section header="Allocating Metabolisms Example" isInset>
             <p>
               You're trying to get from a hidden safe house to a destination that requires you to sneak across a
@@ -537,6 +470,7 @@ function ChapterGameplay() {
             </p>
           </Section>
         </Section>
+
         <Section header="Resolving Challenges">
           <p>
             After allocating your Metabolism points to make an effort, now you must determine how well you do by
@@ -611,6 +545,118 @@ function ChapterGameplay() {
               due to the high Risk level. The 5, 6, and 6 create Progress, but 3 total points is less than the goal so
               you are unable to climb further.
             </p>
+          </Section>
+        </Section>
+
+        <Section header="Maximizing Success">
+          <p>
+            Use any tools at your disposal to maximize your odds of success. If can have time, Prepare, if you can find
+            an Advantage, do it.
+          </p>
+          <p>
+            Preparing lets you tackle harder Goals. When Prepared you can allocate more Metabolism points to the
+            Challenge, increasing the maximum possible Progress.
+          </p>
+          <p>
+            Advantage and Disadvantage let you tackle goals more efficiently or predictably. By altering the Risk or
+            Effort levels, you can remove unpredictable dice from a Challenge or make it cost you nothing to attempt.
+          </p>
+          <Section header="Prepared Challenges">
+            <p>
+              If you can take your time with a Challenge, you can prepare for it and increase your ability to succeed.
+              Preparing an action takes significant time, doubling the amount of time the Challenge would have taken
+              normally. At the GMs discretion, depending how much time you have available, you will either be able to
+              prepare freely, be able to prepare by taking on some external cost or risk, or simply not have enough time
+              to prepare at all.
+            </p>
+            <p>
+              When you are Prepared for a Challenge, you may add Focus as a third Metabolism to the Metabolism pair
+              uses, making it a Metabolism Trio. If Focus is already a part of the pair being used, you may instead
+              choose any other Metabolism to be the third component. The third Metabolism may be allocated normally, and
+              may take Stress the Challenge results in.
+            </p>
+          </Section>
+          <Section header="Advantage & Disadvantage">
+            <p>
+              The GM sets the initial Risk and Effort levels based on the inherent nature of the task and situation.
+              However, you can attempt to change them by creating Advantage or Disadvantage. If the specific actions,
+              preparations, or resources you describe using to attempt the Challenge are particularly effective or
+              ineffective, the GM may give you Advantage or Disadvantage. If you choose a clever or effective approach,
+              you gain Advantage. Conversely if your chosen Metabolism pairing is poorly aligned with the Challenge or
+              you make poor choices in your approach, you gain Disadvantage. While others are attempting Challenges, if
+              you have the time and ability to intervene, you can also attempt to grant them Advantage or inflict
+              Disadvantage on them.
+            </p>
+            <p>
+              If you have Advantage on a Challenge, you can choose to lower either the Risk or Effort level, making it
+              easier to succeed. When someone intentionally inflicts Disadvantage, they choose which level, Risk or
+              Effort, to increase for the person attempting the Challenge. In any other cases of Disadvantage, the GM
+              will choose which to increase.
+            </p>
+            <p>
+              A Challenge may only have a one instance of Advantage or Disadvantage, you can't apply either more than
+              once. Having both Advantage and Disadvantage at the same time, no matter how many possible sources you
+              have of one or the other, cancel each other out resulting in unchanged Risk and Effort levels.
+            </p>
+            <Section header="Advantage & Disadvantage Examples" isInset>
+              <ul>
+                <li>Get Advantage by having a relevant Trait.</li>
+                <li>Get Advantage by using the right tool for the job.</li>
+                <li>Get Advantage by having the element of surprise.</li>
+                <li>Give Advantage by offering a helping hand.</li>
+                <li>Give Advantage by supporting someone's talking points.</li>
+                <li>Give Advantage by being a lookout.</li>
+                <li>Get Disadvantage by using Fight in a Challenge that really needs Focus.</li>
+                <li>Get Disadvantage by making a social blunder.</li>
+                <li>Get Disadvantage by running into circumstance you didn't predict.</li>
+                <li>Inflict Disadvantage by distracting someone.</li>
+                <li>Inflict Disadvantage by refuting their argument.</li>
+                <li>Inflict Disadvantage by standing in someone's way.</li>
+              </ul>
+            </Section>
+          </Section>
+          <Section header="Using Traits">
+            <p>
+              The most reliable way to gain Advantage is by applying a Trait. If you have one or more Traits that are
+              relevant to the Challenge, you gain Advantage. Traits are relevant if they can somehow be leveraged to
+              assist with the Challenge.
+            </p>
+            <p>
+              For example, a Trait called Medical Training would be relevant in a Challenge about treating injuries,
+              granting the character Advantage. Players and GMs are encouraged to be creative and flexible when deciding
+              if Traits are relevant.
+            </p>
+            <Section header="Other Uses for Traits">
+              <p>
+                The GM may also use the characters' Traits to gate Challenges. For example, Challenges requiring expert
+                knowledge may only be attempted by someone with a relevant Trait. For example, picking a lock isn't
+                extremely hard, but the average person doesn't know where to start.
+              </p>
+              <p>
+                Conversely, the GM may use the characters' Traits to skip Challenges entirely. For example, characters
+                with a with a field of knowledge will just know things related to it and characters connected to a
+                subculture will be aware of current events within it.
+              </p>
+            </Section>
+            <Section header="Using Traits Examples" isInset>
+              <ul>
+                <li>The Trait "Mechanic" grants Advantage on Challenges to repair a car.</li>
+                <li>The Trait "Streetwise" grants Advantage on Challenges to find a black-market.</li>
+                <li>
+                  Most people can't attempt to fly an experimental aircraft, but with the Trait "Pilot's License" you
+                  can.
+                </li>
+                <li>Most people can't attempt influence a senator, but with the Trait "Lobbyist Contacts" you can.</li>
+                <li>
+                  If you have the Trait "Terminally Online" you don't need a Challenge to recognize a message hidden in
+                  a series of memes.
+                </li>
+                <li>
+                  If you have the Trait "Local Guide" you don't need a Challenge to plan the fastest shortcuts through
+                  your town.
+                </li>
+              </ul>
+            </Section>
           </Section>
         </Section>
       </Section>
