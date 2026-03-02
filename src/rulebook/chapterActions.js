@@ -4,8 +4,7 @@
 import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import Section from "../components/section/section";
 // import Crosslink from "../components/crosslink/crosslink";
-import Metabolism from "../components/metabolism/metabolism";
-import Pair from "../components/metabolism/pair";
+import ChallengeParams from "../components/challengeParams/challengeParams";
 
 function ChapterActions() {
   // const { topicMap } = useContext(RulebookContext);
@@ -23,9 +22,9 @@ function ChapterActions() {
             <>
               <h2>Actions out of Combat</h2>
               <p>
-                Outside of combat you are free to do anything you describe, and the GM will create Challenges for you as
-                you run into them. If the situation allows it, you can also take specific actions from the list in this
-                chapter to benefit from their Action Bonuses and any specializations that improve them.
+                Outside of combat you are free to do anything you describe, and the GM will create specific Challenges
+                for you as you run into them. The GM may also ask you to take specific reactions to see how you notice
+                or respond to something.
               </p>
             </>
           }
@@ -33,65 +32,85 @@ function ChapterActions() {
             <>
               <h2>Actions in Combat</h2>
               <p>
-                In combat, all actions you take will generally be from the list in this chapter. If you wish to do
-                something not directly covered by these actions, the GM will present a Challenge to resolve it. In
-                general actions in combat consume a single inhale or exhale action, with the exception of full actions
-                that consume both.
+                In combat, the actions you take will be from the list in this chapter. If you wish to do something not
+                directly covered by these actions, you can use the Improvise action. All actions in combat are either an
+                inhale or exhale action, or a reaction.
               </p>
             </>
           }
         ></ChapterIntroSpread>
       }
     >
-      <Section header="Attack Actions">
+      <Section header="Exhale Actions">
         <p>
-          Attack actions always require a Default Risk and Effort Challenge requiring the action's related metabolisms.
-          The appropriate Action Bonus is added to the Progress of this Challenge. If you are using a weapon, you must
-          spend a minimum number of Metabolism points equal to the weapon's size in order to attack with this weapon.
-          Targets of these attacks can use reactions to reduce the Threat dealt to them and can then move 1 meter for
-          free.
+          Exhale actions allow you to attack your enemies and create supernatural effects. Each will involve a Challenge
+          that requires the indicated Metabolism pairs and has the indicated Risk and Effort levels, typically medium.
+          They also specify bonuses you can add when allocating Metabolism points, typically equal to a specified
+          Style's rank, and bonuses you can add when counting Progress, typically equal to the Size of the weapon you
+          are using. Each may have multiple Goals, these are typically metric Goals where each point of Progress applied
+          to them increases the potency of an effect. For attacks specifically, they all have the Goal Threat, allowing
+          you to damage your target and a secondary Goal that applies a restrictive state.
         </p>
         <Section header="Melee Attack">
           <p>You take a swing at an adjacent opponent with whatever weapon you have in hand.</p>
+          <ChallengeParams
+            pair={"Fight+Near"}
+            risk={"Medium"}
+            effort={"Medium"}
+            allocBonus={"Smooth Style"}
+            progBonus={"Weapon Size"}
+            goals={["Threat", "Off Balance"]}
+          />
+          <p>The amount of Progress applied to the Threat Goal is dealt to the target as Threat.</p>
           <p>
-            Requires <Pair fight near />. The amount of Progress you get, plus the weapon's Size rating, is dealt to the
-            target as Threat.
+            The target gains the Off Balance state with an intensity equal to the Progress applied to Off Balance Goal.
+            The amount of Progress you apply to this Goal cannot exceed your weapon's Size.
           </p>
-          <p>
-            Alternatively, if you would deal more Threat than the target's Reaction, you can choose to deal no Threat
-            and instead shove the target. Move them directly away from you by 1 + Melee Attack bonus meters.
-          </p>
+          <p>This attack provokes a Melee Defense reaction.</p>
         </Section>
         <Section header="Ranged Attack">
+          <p>You fire a pistol, throw a stone, shoot an arrow, or unleash a burst automatic gunfire at an opponent.</p>
+          <ChallengeParams
+            pair={"Fight+Far"}
+            risk={"Medium"}
+            effort={"Medium"}
+            allocBonus={"Sharp Style"}
+            progBonus={"Weapon Size"}
+            goals={["Threat", "Suppressed"]}
+          />
+          <p>The amount of Progress applied to the Threat Goal is dealt to the target as Threat.</p>
           <p>
-            You fire a pistol, throw a stone, shoot an arrow, or unleash a burst automatic gunfire at a distant
-            opponent.
+            The target gains the Suppressed state with an intensity equal to the Progress applied to the Suppressed
+            Goal. The amount of Progress you apply to this Goal cannot exceed your weapon's Size.
           </p>
-          <p>
-            Requires <Pair fight far />. The amount of Progress you get, plus the weapon's Size rating, is dealt to the
-            target as Threat.
-          </p>
-          <p>
-            Alternatively, if you would deal more Threat than the target's Reaction and the target is behind cover, you
-            can choose to deal no Threat and instead suppress the target. The target gets the Suppressed state with an
-            intensity of 1 + Ranged Attack bonus.
-          </p>
+          <p>This attack provokes a Ranged Defense reaction.</p>
         </Section>
         <Section header="Unarmed Attack">
           <p>You lash out at an adjacent opponent with a punch, kick, elbow, grab, shove, or other blow.</p>
+          <ChallengeParams
+            pair={"Fight+Self"}
+            risk={"Medium"}
+            effort={"Medium"}
+            allocBonus={"Strong Style"}
+            goals={["Threat", "Grappled"]}
+          />
+          <p>The amount of Progress applied to the Threat Goal is dealt to the target as Threat.</p>
           <p>
-            Requires <Pair fight self />. The amount of Progress you get is dealt to the target as Threat.
+            The target gains the Grappled state with an intensity equal to the Progress applied to the Grappled goal.
+            You can only use the Grappled Goal if you have a free hand.
           </p>
+          <p>This attack provokes a Unarmed Defense reaction. </p>
+        </Section>
+        <Section header="Induce a Cascade Event">
           <p>
-            Alternatively, if you have a free hand and would deal more Threat than the target's Reaction, you can choose
-            to deal no Threat and instead shove or grab the target. If you shove, move them away from you by 1 + Unarmed
-            Attack bonus meters. If you grab, you give the target the Grappled state with an intensity of 1 + Unarmed
-            Attack bonus.
+            Each Entanglement has a Style can grant the ability to create an a supernatural effect by inducing a cascade
+            event. These events are variable, but they're typically done as exhale actions. See the definition of each
+            specific event for further details regarding it.
           </p>
         </Section>
       </Section>
 
-      <Section header="Basic Actions">
+      <Section header="Inhale Actions">
         <p>
           Basic actions can be done as either your inhale or exhale action, or over the course of a few seconds out of
           combat. These actions often do not require Challenges, so they can be taken without spending any resources.
@@ -101,214 +120,319 @@ function ChapterActions() {
         </p>
         <Section header="Aim">
           <p>You take a moment to line up an attack.</p>
+          <p>Your next attack against a chosen target is Prepared. </p>
+          <p>If this target is behind full cover, the Prepared attack treats it as partial cover. </p>
+        </Section>
+        <Section header="Elude">
+          <p>You prepare to defend yourself or drop deeper into cover. </p>
+          <p>Your next defense Reaction is Prepared.</p>
           <p>
-            As an inhale action, choose a target you can see. If your following exhale action includes an attack on this
-            target, this attack is made with advantage and your Aim Bonus is added to it.
+            If you are in, or use the free movement from this action to enter partial cover, you may choose to duck
+            behind it. If you do, it immediately becomes full cover preventing attacks to or from anyone you have cover
+            from.
+          </p>
+          <p>
+            If you are already in full cover from all enemies, or are otherwise well concealed when you take this
+            action, you may choose to gain the Hidden State.
           </p>
         </Section>
         <Section header="Heal">
           <p>
-            You instinctively pull resources stored in your hidden body to roughly seal the wounds of a target's
-            physical body just enough to keep it moving.
+            The visceral, desperate desire to heal ones injuries leads all entangled people to develop the ability to
+            instinctively repair their worst injuries. By drawing on resources like clotting factors previously sublimed
+            into the hidden body you can roughly seal physical wounds just enough to keep moving.
           </p>
           <p>
-            Touch a target to remove one Stress from a Physical Metabolism that currently has a maximum equal to or
-            lower than your Heal bonus. If the target was youself, also remove one Stress from another Physical
-            Metabolism with any maximum value even if your Heal bonus is 0 or no other Metabolism was healed.
-          </p>
-        </Section>
-        <Section header="Hide">
-          <p>You take cover to protect yourself from incoming threats or hide from your enemies.</p>
-          <p>
-            You can only take this action if you are next to, or use your free movement to get next to, something that
-            could plausibly be used as cover. The value of the cover increases by your Hide bonus. Anyone the cover
-            protects you from can make a low effort Perception reaction. Anyone with a result lower than the cover's
-            increased value (or its original value if your Hide bonus is 0) no longer knows your exact position and
-            can't target you directly. These benefits end whenever you move more than a meter from your source of cover.
+            Restore the capacity of one of your injured Physical Metabolisms from 0 to 1, removing it's Injured state.
+            The current value remains at 0. If you had two injured Physical Metabolisms,
           </p>
           <p>
-            You can also take this action out of combat to act stealthily. When you do so treat it as a Challenge and
-            anything with a lower result on a Low Effort Perception Reaction than your Progress is unaware of you.
+            If you have appropriate medical supplies in hand, you can use them as the scaffolding needed to Heal a
+            person other than yourself.
           </p>
         </Section>
         <Section header="Improvise">
-          <p>You prepare for a Challenge, help an ally, or execute a clever plan.</p>
+          <p>You come up with a clever plan to give yourself or an ally an edge, or hinder an enemy.</p>
           <p>
-            Describe a plan or course of action that could plausibly improve the outcome of a specific action or
-            Challenge about to be taken by you or someone else you can see. If the next action taken by the target, is
-            the planned action, it gains advantage and has your Improvise bonus added to the Progress.
+            Execute a plan, stunt, ruse, collusion, or leverage a skill in a way that could plausibly improve the
+            outcome of an action you are about to take, or you predict someone else is about to take. The GM must agree
+            that this plan has a chance of being viable, if not you must choose a different inhale action. You can do
+            one of the following:
           </p>
+          <ul>
+            <li>Leverage something about the situation to give yourself or an ally Advantage.</li>
+            <li>Leverage something about the situation to give an enemy Disadvantage.</li>
+            <li>Apply a Trait you have that is relevant to the situation to give yourself or an ally Advantage.</li>
+          </ul>
           <p>
-            When you do this, the Improvise action takes as much time as the Challenge or action it benefits. For
-            example, if the benefit is applied to an action in combat then Improvise also consumes an action, or if it
-            is applied to a Challenge involving an hour of work then Improvise also requires an hour. The Improvise
-            action must occur before the action that benefits from it, or if the target is another person you are
-            helping Improvise may take place simultaneously.
+            When you take the planned action, or the target takes the action you predicted, the Advantage or
+            Disadvantage is apply to it. If the predicted action does not occur before your next turn, this benefit is
+            lost.
           </p>
         </Section>
         <Section header="Interact">
-          <p>You use an object you are carrying or within your reach in the enviroment.</p>
+          <p>You use or move an object within reach. </p>
           <p>
-            Interacting with something typically requires a free hand. Most object interactions, such as grabbing a
-            loose object, flipping a switch, pulling an item from a bag, or unlocking a door with a key have no
-            Difficulty and simply occur immediately. This includes any interaction with things you are carrying, such as
-            drawing, stowing, or reloading a weapon. If this interaction had no Difficulty, you may also do an
-            additional number of interations equal to your Interact action bonus. For example, if you use this
-            interaction to stow a weapon and your action bonus is 1 you could then follow up by drawing a different
-            weapon in the same action.
+            You can use an item in hand, draw, stow, or swap something in hand for something else, or use a free hand to
+            interact with an uncontested item within reach. For example, use a tool, reload a weapon, grab a loose
+            object, flip a switch, pull an item from a bag, open a door, or use a screen.
           </p>
           <p>
             If this action can't be done easily in a brief moment, for example moving a heavy object, navigating an
-            unfamiliar user interface, or picking a simple lock, the GM may assign it a difficulty. Each time you take
-            this action, reduce the difficulty of the task by 1 plus your Interact bonus. Once the difficulty reaches 0,
-            you've completed the task.
+            unfamiliar user interface, or picking a lock, the GM may require a Challenge, typically requiring
+            Fight+Near, to successfully complete the action.
+          </p>
+          <p>
+            You can also use this action to maintain or escape grapples. If you are grappling someone, you can use
+            Interact to maintain their Grappled state at it's current intensity, otherwise it goes away at the end of
+            your turn. If you are in the Grappled state, you can use this action to trigger your Unarmed Defense
+            Reaction as if the current intensity of your Grappled state was just inflicted on you.
           </p>
         </Section>
         <Section header="Manipulate">
           <p>
-            You attempt to influence someone else socially, threatening, taunting, distracting, or de-escalating them.
+            You attempt to influence someone else psychologically or socially, threatening, taunting, distracting, or
+            de-escalating them.
           </p>
           <p>
-            Pick a target who makes a Low Effort Willpower reaction. If the result is lower than your Manipulate bonus,
-            they gain a State of your choice between Afraid, Calmed, Enthralled, or Taunted with intensity 1 until
-            removed or the start of your next turn.
-          </p>
-          <p>
-            You can also do this as full action if your Manipulate bonus is 0 or you wish to have a greater impact. When
-            you do, the target's Willpower Reaction must instead beat the results of a
-            <Pair focus far /> Challenge, plus your Manipulate Bonus. If the reaction has a lower result, they gain the
-            chosen State with an intensity equal the difference between it and your Challenge.
+            Pick a target that can hear and see you and make a Focus+Far Challenge that triggers a Low Effort Willpower
+            reaction in the target. If the Reaction's result doesn't exceed your Challenge's result, the target gains a
+            State of your choice between Afraid, Calmed, Enthralled, or Taunted with intensity 1 until removed or until
+            the start of your next turn.
           </p>
         </Section>
         <Section header="Move">
-          <p>You dash from one location to another.</p>
+          <p>You dash from one location to another, traversing any obstacles in your way. </p>
           <p>
-            Move a number of meters up to your Move bonus. Don't forget to also move the free meter you get for having
-            taken an action.
+            Make a low Risk Challenge using any Metabolism pair. The amount of Progress you get is the number of meters
+            you can move, plus 1 meter for the free movement provided by taking any inhale action.
           </p>
           <p>
-            If you wish to move further, you can also make a Low Risk and Default Effort Challenge. However, for this
-            Challenge you do not need to choose a Metabolism pairing and may freely spend any combination of points from
-            all of your Metabolisms. Each point of Progress lets you move 1 additional meter.
-          </p>
-          <p>
-            Spaces with obstructions may have a Difficulty assigned to them. Instead of using 1 meter of movement to
-            enter these spaces you must use a number of meters equal to the Difficulty. For example you may need to
-            spend 2 meters of movement to enter spaces that require opening a door, crossing rough terrain, balancing,
-            or avoiding an obstacle, and even 3 meters for climb a meter vertically or scramble over a chest high
-            boulder. Particularly dangerous terrain may also increase the Risk level, and the GM may even add
-            consequences, such as falling, for failing to get enough Progress to enter the dangerous space. Typically,
-            you can see these risks before choosing to move into the space.
+            Spaces containing difficult terrain or obstacles may cost more meters of movement than 1, or increase the
+            Risk or Effort of the Challenge. See the rules for terrain in the combat chapter.
           </p>
         </Section>
-        <Section header="Push">
-          <p>With great effort, you push yourself to the limit to avoid failing an important task.</p>
+        <Section header="Prime">
+          <p>You center yourself and concentrate on gathering the resources needed to induce a cascade event.</p>
           <p>
-            You can only take this action immediately after attempting a different action or Challenge with
-            unsatisfactory results and on the same turn as the original action if you are in combat. This extends the
-            original attempt, replacing the results. Take any number of points of unavoidable Stress to
-            <Metabolism focus />, as long as it is lower than its current maximum and wont cause injury. Add this number
-            and your Push bonus to the results of the original action, as if it were done with an Action Bonus increased
-            by this amount. Then resolve the original action with these new results.
+            The next cascade event you induce is Prepared. When you induce it, the limits on the amount of Progress you
+            can assign to any of its Goals is doubled.
           </p>
         </Section>
         <Section header="Rest">
+          <p>You take a moment to reorient and catch your breath.</p>
           <p>
-            You take a moment to reorient and catch your breath. The benefits of this depend on how long you spend doing
-            it.
+            Choose one Metabolism to fully refill, and reduce the intensity of a State you are in by 1. This can't
+            reduce states caused by an ongoing physical condition, such as Grappled, or injuries and dissociation.
           </p>
           <p>
-            As a single basic action in combat, you recover a number of any spent Metabolism points equal to your Rest
-            bonus + 1. Alternatively, instead of recovering Metabolisms you can choose reduce the intensity of any state
-            by your Rest bonus + 1.
-          </p>
-          <p>
-            Out of combat, if you spend an hour resting, doing little more than treating wounds, relaxing, chatting,
-            eating, self care, etc., recover all spent Metabolism points.
-          </p>
-          <p>
-            If you spend several hours resting, including a reasonable amount of sleep, remove all Stress from your
-            Hidden Metabolisms and 1 + your Rest Bonus from each Physical Metabolism.
+            If you use the deep breath option to Rest with both your inhale and exhale actions, remove all reducible
+            states entirely.
           </p>
         </Section>
       </Section>
 
       <Section header="Reactions" topicKey="reactionsList">
         <p>
-          Reactions happen outside of your turn in response to the actions of others. The only limit to how often you
-          can react in or out of combat is how many Metabolism points you are willing to spend. always add the Action
-          Bonus you have for each reaction to the Progress you make.
+          Reactions happen outside of your turn in response to the actions of others. There is no limit to the number
+          you can take in a turn. When something provokes a Reaction from you, you must take this Reaction, even if you
+          don't or can't allocate any Metabolism points to it.
+        </p>
+        <p>
+          Each will involve a Challenge that requires the indicated Metabolism pairs and has the indicated Risk and
+          Effort levels. They also specify bonuses you can add when allocating Metabolism points, typically equal to a
+          specified Style's rank, and sometimes a bonus applied when counting Progress, such as the defense rating of
+          armor you're wearing.
         </p>
         <Section header="Melee Defense" topicKey="meleeDefenseReaction">
           <p>You deflect or dodge a melee weapon attack.</p>
+          <ChallengeParams
+            pair={"Flight+Near"}
+            risk={"Low"}
+            effort={"Medium"}
+            allocBonus={"Mobile Style"}
+            progBonus={"Armor Rating"}
+            goals={["Defense"]}
+          />
           <p>
-            Each point of Progress you get on a Low Risk and Default Effort <Pair flight near /> Challenge, plus your
-            Melee Defense bonus and the rating of any armor you happen to be wearing, reduces the Threat dealt by an
-            incoming melee attack. You may move 1 meter freely afterwards.
+            Each point applied to Defense removes a removes a point of Threat, or a point from your choice of any other
+            Goal, inflicted by the triggering attack.
           </p>
         </Section>
         <Section header="Ranged Defense" topicKey="rangedDefenseReaction">
           <p>You attempt to predict your opponent's aim and get out of the path of their projectiles.</p>
+          <ChallengeParams
+            pair={"Flight+Far"}
+            risk={"Low"}
+            effort={"Medium"}
+            allocBonus={"Quick Style"}
+            progBonus={"Armor Rating"}
+            goals={["Defense"]}
+          />
           <p>
-            Each point Progress you get on a Low Risk and Default Effort <Pair flight far /> Challenge, plus your Ranged
-            Defense bonus and the rating of any armor you happen to be wearing, reduces the Threat dealt by an incoming
-            ranged attack. You may move 1 meter freely afterwards.
+            Each point applied to Defense removes a removes a point of Threat, or a point from your choice of any other
+            Goal, inflicted by the triggering attack.
           </p>
         </Section>
         <Section header="Unarmed Defense" topicKey="unarmedDefenseReaction">
-          <p>You dodge, block, or simply endure a bow.</p>
+          <p>You dodge, block, or endure a blow, or twist away from a grab.</p>
+          <ChallengeParams
+            pair={"Flight+Self"}
+            risk={"Low"}
+            effort={"Medium"}
+            allocBonus={"Tough Style"}
+            progBonus={"Armor Rating"}
+            goals={["Defense"]}
+          />
           <p>
-            Each point Progress you get on aLow Risk and Default Effort <Pair flight self /> Challenge, plus your
-            Unarmed Defense bonus and the rating of any armor you happen to be wearing, reduces the Threat dealt by an
-            incoming unarmed attack. You may move 1 meter freely afterwards.
+            Each point applied to Defense removes a removes a point of Threat, or a point from your choice of any other
+            Goal, inflicted by the triggering attack.
           </p>
         </Section>
         <Section header="Intuition">
           <p>
-            Intuition is targeted by things that manipulate you through incomplete knowledge, such as deception, memory
-            loss, or fast talk.
+            An Intuition reaction is provoked by things that manipulate you through incomplete knowledge, such as
+            deception, hidden motives, memory loss, or fast talk.
+          </p>
+          <ChallengeParams
+            pair={"Focus+Far"}
+            risk={"Medium"}
+            effort={"Low"}
+            allocBonus={"Bright Style"}
+            goals={["Variable"]}
+          />
+          <p>
+            If this was triggered by a Challenge someone else completed, the reaction has the same Goals as the
+            Challenge that provoked it. Each point applied to them removes a point of Progress that was applied during
+            during the triggering Challenge.
           </p>
           <p>
-            The Progress you get on a <Pair flight self /> Challenge, plus your Intuition bonus, determines how well you
-            resist the cause of this reaction. This is often done passively but is not always reliable, and therefore it
-            is typically Low Effort and Default Risk. It does not provide free movement.
+            Otherwise, the GM will assign Goals for this Reaction, often a just simple fixed Goal indicating if you are
+            aware of something or not.
           </p>
         </Section>
         <Section header="Perception">
           <p>
-            Perception is targeted by anything that attempts to avoid your senses, such as stealth, destroyed evidence,
-            or hidden details.
+            An Perception reaction is provoked by things that anything that attempts to avoid your senses, such as
+            stealth or hidden details.
+          </p>
+          <ChallengeParams
+            pair={"Focus+Far"}
+            risk={"Medium"}
+            effort={"Low"}
+            allocBonus={"Alert Style"}
+            goals={["Variable"]}
+          />
+          <p>
+            If this was triggered by a Challenge someone else completed, the reaction has the same Goals as the
+            Challenge that provoked it. Each point applied to them removes a point of Progress that was applied during
+            during the triggering Challenge.
           </p>
           <p>
-            The Progress you get on a Focus + Far Challenge, plus your Perception bonus, determines how much you are
-            aware of. This is often done passively but is not always reliable, and therefore it is typically Low Effort
-            and Default Risk. It does not provide free movement.
+            Otherwise, the GM will assign Goals for this Reaction, often a just simple fixed Goal indicating if you are
+            aware of something or not.
           </p>
         </Section>
         <Section header="Willpower">
           <p>
-            Willpower is targeted by anything that manipulates your emotions or instinct, such as fear, exhaustion, or
-            temptation.
+            A Willpower reaction is provoked by things that anything that manipulates your emotions or instincts, such
+            as fear, exhaustion, or temptation.
+          </p>
+          <ChallengeParams
+            pair={"Focus+Self"}
+            risk={"Medium"}
+            effort={"Low"}
+            allocBonus={"Confident Style"}
+            goals={["Variable"]}
+          />
+          <p>
+            If this was triggered by a Challenge someone else completed, the reaction has the same Goals as the
+            Challenge that provoked it. Each point applied to them removes a point of Progress that was applied during
+            during the triggering Challenge.
           </p>
           <p>
-            The Progress you get on a Focus + Self Challenge, plus your Willpower bonus, determines how well you resist
-            the cause of this reaction. Willpower sometimes requires significant mental load. The Effort and Risk levels
-            may be Low or Default depending on the situation. It does not provide free movement.
+            Otherwise, the GM will assign Goals for this Reaction, often a just simple fixed Goal indicating if you
+            resist something or not.
           </p>
         </Section>
       </Section>
 
-      <Section header="Full Actions" topicKey="fullActionsList">
+      <Section header="Hidden Space Actions" isClassified>
         <p>
-          By default non of the actions in this list are full actions unless something is making it take longer. For
-          example, if you use Improvise to do something that takes time, the GM may determine that this is a full
-          action. When you do a full action it takes your entire turn, consuming both your inhale and exhale actions.
+          The following actions and reaction can only be taken if you are in Hidden Space, or when triggered by
+          something in Hidden Space.
         </p>
-        <Section header="Inducing Cascade Events" topicKey="InducingCascadeEventActions">
+        <Section header="Hidden Attack">
           <p>
-            Each Entanglement can grant the ability to induce a cascade event. Each will specify how long it takes to
-            induce, but it is often a full action. Some are even slower than a full action, and therefore cannot be done
-            in combat.
+            You grapple with another's hidden body, interfering with its workings, attempting to sever it from its
+            hidden counterpart, or forcing it to a different depth.
+          </p>
+          <ChallengeParams
+            pair={"Variable"}
+            risk={"Medium"}
+            effort={"Medium"}
+            allocBonus={"Sublimation Style"}
+            goals={["Threat", "Floating", "Sinking"]}
+          />
+          <p>
+            This attack can only be used while you are on depth layer 1 of hidden space. It can target anyone on this
+            layer or in physical space.
+          </p>
+          <p>
+            The hidden Metabolism used in the pairing is Self if the target is adjacent to you, Near if they are not
+            adjacent to you but within a number of meters equal to your Near score, and Far if they are within a range
+            equal to the sum of your Near and Far scores. Outside this range, this attack cannot be used. If you have
+            the Sublimed state, you can use Focus for the Physical Metabolism, otherwise no Physical Metabolism used.
+          </p>
+          <p>The amount of Progress applied to the Threat Goal is dealt to the target as Threat.</p>
+          <p>
+            The target gains the Floating or Sinking state with an intensity equal to the Progress applied to Floating
+            or Sinking Goals. Progress may only be applied to one of these goals, not both. The amount of Progress you
+            apply to this Goal cannot exceed your rank in the Sublimation Style.
+          </p>
+          <p>This attack provokes a Hidden Defense reaction.</p>
+        </Section>
+        <Section header="Hidden Defense">
+          <p>You will your hidden body to maintain its integrity against an onslaught.</p>
+          <ChallengeParams
+            pair={"Variable"}
+            risk={"Low"}
+            effort={"Medium"}
+            allocBonus={"Sublimation Style"}
+            goals={["Defense"]}
+          />
+          <p>
+            The Hidden Metabolism used for this reaction is the same as the one used by the attack that triggered it. If
+            you have the Sublimed state, you can use Focus for the Physical Metabolism, otherwise no Physical Metabolism
+            used.
+          </p>
+          <p>
+            Each point applied to Defense removes a removes a point of Threat, or a point from your choice of any other
+            Goal, inflicted by the triggering attack.
+          </p>
+        </Section>
+        <Section header="Manifest">
+          <p>
+            You shift your form closer to physical space, attempting to influence it by shifting a portion of your
+            energies into it.
+          </p>
+          <p>You can only use this action while you are on depth layer 1 of hidden space.</p>
+          <p>
+            If you are in or adjacent to a willing person's space, you may donate any number of points from a single
+            Hidden Metabolism to this person. You spend these points and then your target immediately gains them. The
+            points they gain can exceed their capacity, however if they still exceed the capacity at the end of their
+            next turn they are lost.
+          </p>
+          <p>
+            If you are not close enough to anyone you want to give Metabolism points to, you may instead manifest a
+            minor haunting-like physical effect. The limits of these effects are up to the GM, but they are all minor
+            and ghostly, they cannot deal damage or move meaningful weight. The effects could be atmospheric, sensory,
+            or interference oriented. Atmospheric effects may include a rapid localized drop in temperature, sudden air
+            currents, or a frightening vertigo inducing infrasound or pressure change. Sensory effects may include a
+            strong scent of ozone, a faintly luminous humanoid visual haze, changes to light sources or shadows, or
+            unintelligible whispering sounds. Interference effects may include localized dimming or flickering lights,
+            static on screens, triggering the haptics in a device to cause a phantom notification, or ending any ongoing
+            phone calls or wireless signals.
           </p>
         </Section>
       </Section>

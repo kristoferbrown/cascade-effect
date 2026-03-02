@@ -2,6 +2,7 @@
 // import { RulebookContext } from "../context/rulebookContext";
 // import Break from "../components/break/break";
 import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
+import Pair from "../components/metabolism/pair";
 import Section from "../components/section/section";
 // import Pair from "../components/metabolism/pair";
 // import Crosslink from "../components/crosslink/crosslink";
@@ -72,7 +73,8 @@ function ChapterGameplay() {
                 <p>
                   Use Self any time you are trying to push your body beyond its normal limits. This includes unarmed
                   combat, a wide range of athletic activities involving power, endurance, or adrenaline, as well as
-                  social activities or mental activities that require willpower, patience, or managing your emotions.{" "}
+                  social activities or mental activities that require willpower, patience, or managing your
+                  emotions.{" "}
                 </p>
               </div>
               <div className="metabolism near">
@@ -433,17 +435,15 @@ function ChapterGameplay() {
               </p>
             </Section>
           </Section>
-          <Section header="Action Bonuses">
+          <Section header="Allocation Bonuses">
             <p>
-              Your character may have numeric Action Bonuses associated with certain combat actions. If taking an action
-              similar to this would be relevant and helpful in a Challenge are are attempting, you can add it to the
-              number of Metabolism points allocated to the Challenge.
+              While allocating Metabolism points, you may have bonuses that further increase the amount allocated. If
+              you have ranks in a Style that is relevant to the Challenge being attempted, add this rank to the amount
+              you have allocated.
             </p>
             <p>
-              For example, if you have a Move bonus of 2 and you allocate 4 Metabolism points to a Challenge to traverse
-              an obstacle, then you have effectively allocated 6 points to the Challenge. Similarly, if you have a
-              Manipulate bonus of 1 and you allocated 3 points to a Challenge requiring you to socially influence
-              others, then you have effectively allocated 4 points to the Challenge.
+              For example, if you have 2 ranks in the Mobile Style and you allocate 4 Metabolism points to a Challenge
+              to traverse an obstacle, then you have effectively allocated 6 points to the Challenge.
             </p>
           </Section>
           <Section header="Allocating Metabolisms Example" isInset>
@@ -506,7 +506,7 @@ function ChapterGameplay() {
             </Section>
             <Section header="High Risk">
               <p>
-                The odds are stacked against you. Roll dice the same as with default risk, however, do not reroll any 6s
+                The odds are stacked against you. Roll dice the same as with medium risk, however, do not reroll any 6s
                 that you roll.
               </p>
             </Section>
@@ -658,6 +658,22 @@ function ChapterGameplay() {
               </ul>
             </Section>
           </Section>
+        </Section>
+
+        <Section header="Reactive Challenges">
+          <p>
+            Certain situations may trigger a reaction from your character. When this occurs, use one of the defined
+            Reactions. These Reactions have preset Challenges you should use.
+          </p>
+          <ul>
+            <li>To endure physical harm, use Unarmed Defense.</li>
+            <li>To move quickly out of the way, use Melee Defense.</li>
+            <li>To predict something or avoid projectiles, use Ranged Defense.</li>
+            <li>To resist mental or social coercion, use Willpower.</li>
+            <li>To detect deceit, hidden intentions, or see the bigger picture, use Intuition.</li>
+            <li>To notice something hidden or obscure, use Perception.</li>
+          </ul>
+          <p>If these Challenges are purely sensory or knowledge based, they are low Effort.</p>
         </Section>
       </Section>
 
@@ -848,7 +864,8 @@ function ChapterGameplay() {
           <Section header="Dying">
             <p>
               You are unconscious and cannot take actions. You can only remove this state by getting medical care or
-              supernatural healing. If you have this state for more than an hour, you die.
+              supernatural healing. If you have this state for more than an hour, you die. When the Dying State is
+              removed, you become Off Balance with intensity 3 because you need to get back on your feet.
             </p>
           </Section>
         </Section>
@@ -860,7 +877,7 @@ function ChapterGameplay() {
             to 0, it becomes dissociated and you gain the dissociative State that corresponding to the dissociated
             Metabolism. If it has its capacity restored back above 0 this State is removed, but it cannot be removed by
             any other means. If further Stress is dealt to a dissociated Metabolism, the GM or the attacker that caused
-            the Stress decides which Hidden Metabolism takes the Stress instead.{" "}
+            the Stress decides which Hidden Metabolism takes the Stress instead.
           </p>
           <p>
             If all three Hidden Metabolisms become dissociated, the dissociation escalates and becomes permanent,
@@ -891,15 +908,17 @@ function ChapterGameplay() {
         <Section header="Other States">
           <p>
             These states can be caused by mundane circumstances or by cascade events. These States come with an
-            Intensity value indicating how hard it is to get rid of and strong it is. Anything that causes a state to a
-            target that already has it increases the intensity by the state.
+            Intensity value indicating how hard it is to get rid of and strong it is. If a State is inflicted on someone
+            that already has it, the newly caused intensity level does not add to the existing level, instead it
+            replaces the previous level if it is higher.
           </p>
+          <p>Most states can have their intensity reduced by taking the Rest action.</p>
           <Section header="Afraid">
             <p>Something nearby is terrifying you.</p>
             <p>While you have this state, you cannot willingly move closer to the source of your fear.</p>
           </Section>
           <Section header="Calmed">
-            <p>You're convinced there is currently no need for violence.</p>
+            <p>You are doubting the need for violence, causing you to hesitate.</p>
             <p>
               While you have this state, you cannot take any attack actions or any other action that would intentionally
               escalate tensions. If hostile or threatening action is taken against you or a close ally, you immediately
@@ -926,40 +945,68 @@ function ChapterGameplay() {
           </Section>
           <Section header="Grappled">
             <p>
-              You are being held by someone else. This can range from a single hand grabbing your sleeve to being fully
-              pinned in place.
+              You are being held by someone else, restricting your movement. This can range from a single hand grabbing
+              your sleeve to being fully pinned in place.
             </p>
             <p>
-              While grappled, you can only move within the spaces adjacent to the grappler. The grappler can force you
-              to move with them when they use the move action, but doing so increases the terrain difficulty of each
-              space they cross by 1.
+              You can only move within the spaces adjacent to the grappler. If the grappler takes the Move action, they
+              can force you to move with them, but doing so increases the terrain difficulty of each space they cross by
+              1.
             </p>
             <p>
-              The grappler can freely release you at any moment, otherwise the grapple only ends if you and the grappler
-              become more than a meter apart or you successfully escape. You can attempt to escape as an action by
-              making either an Unarmed Attack or Unarmed Defense Challenge. Any Progress gained reduces the Intensity of
-              grappled, allowing you to escape when it reaches 0. The Rest action can reduce the intensity of this state
-              like any other state, but only to intensity 1, but only an escape attempt can reduce it to 0 end end the
-              grapple.
+              As the intensity of the state increases, you are more constrained, impairing your ability to use larger
+              weapons effectively. When determining the minimum amount of Metabolism points needed to use a weapon, add
+              the intensity of this state to the weapon's size.
+            </p>
+            <p>
+              This state ends if you and the grappler are forced to move apart. Also, if the grappler does not maintain
+              the hold during their subsequent turns, this state ends at the end of their turn. The state can be
+              maintained by either using the Interact action to maintain its current intensity, or by making another
+              Unarmed Attack that applies Grappled to replace the intensity.
+            </p>
+            <p>
+              You, or someone helping you, can use the Interact action to trigger your Unarmed Defense Reaction. Any
+              Progress gained in this reduces the Intensity of grappled, allowing you to escape when it reaches 0. No
+              other actions can remove this state.
             </p>
           </Section>
-          <Section header="Out of Body">
+          <Section header="Hidden">
+            <p>Whether due to darkness, concealment, or stealth, enemies cannot verify your exact position.</p>
+            <p>Attacks targeting you have Disadvantage, and attacks you make have Advantage.</p>
             <p>
-              Your physical body is unconscious, but your hidden body is still aware and can still move freely in hidden
-              space.
+              Typically the enemy still knows your rough location, but at the GM's discretion depending on how well
+              hidden you are, they may lose track of your location entirely making them unable to target you with
+              attacks.
             </p>
             <p>
-              You cannot interact with or be sensed by anything in physical space, however the physical world casts
-              shadows into the hidden world that impede your movement. You are aware of the shape and position of
-              physical objects within a meter of you, but have no other senses. Any actions you take in hidden space may
-              only have Hidden Metabolisms applied to them.
+              You lose this state if you create sufficient noise or light, leave your concealed position, or an enemy
+              establishes a clear line of sight to you. The GM may require a <Pair flight far /> Challenge resisted by a
+              Perception Reaction when you take any action that might reveal your location.
             </p>
+          </Section>
+          <Section header="Off Balance">
+            <p>
+              You are reeling from a blow or even knocked fully prone, requiring you to regain your footing before you
+              can move or defend yourself properly.
+            </p>
+            <p>You have disadvantage on all Defense Reactions and you cannot move from your current position.</p>
+            <p>
+              When you take the Move action or gain free movement from an action or reaction, including the reaction
+              made to the attack that inflicted this state, each meter of movement lost due to this state reduces it's
+              intensity by 1. If you gain more movement from the Move action than needed to remove this state, the
+              remaining movement can be used normally.
+            </p>
+            <p>If this State was directly inflicted by an attack, it ends when that attacker starts their next turn.</p>
           </Section>
           <Section header="Suppressed">
-            <p>You are pinned down behind cover and have disadvantage on all attacks.</p>
+            <p>You are pinned down by incoming fire.</p>
             <p>
-              You can remove this condition by moving, however the terrain difficulty of all adjacent spaces is
-              increased by the intensity of this state for you.
+              You have disadvantage on all attacks, you cannot use the Aim action, and the terrain difficulty of all
+              adjacent spaces is increased by 1.
+            </p>
+            <p>
+              This state ends if you leave your current position, if you gain full cover from the attacker that
+              inflicted it, or when that attacker that inflicted it starts their next turn.
             </p>
           </Section>
           <Section header="Taunted">
@@ -968,6 +1015,157 @@ function ChapterGameplay() {
           </Section>
           <Section header="Unconscious">
             <p>You are no longer able to act, react, communicate, or sense your surroundings.</p>
+            <p>When you awaken from this state you need to get back onto your feet, causing you to be Off Balance 3.</p>
+          </Section>
+        </Section>
+        <Section header="Hidden Space States" isClassified>
+          <p>
+            These states can only happen if your awareness has fully shifted into hidden space. They represent your
+            position and the degrees of freedom available to you in hidden space.
+          </p>
+          <Section header="Floating">
+            <p>
+              You are rising out of hidden space, becoming more solid and real with each passing moment. You feel a
+              desperate need to breathe, but do not have physical lungs.
+            </p>
+            <p>
+              If you are at the surface depth, you are so close to physical space that people there can see you as a
+              subtle shimmer. No matter what depth you are at, all physical objects are becoming solid to you and you
+              can no longer enter their space.
+            </p>
+            <p>
+              If you you have this state at the end of your turn, at the start of your next turn your depth layer in
+              hidden space decreases by 1 if possible. If you are at depth 1 when this happens, you exit physical space.
+            </p>
+          </Section>
+          <Section header="Out of Body">
+            <p>
+              Your unconscious physical body is left behind while your hidden body is still aware and can move freely in
+              hidden space.
+            </p>
+            <p>If you gain the Sublimed state, you lose the Out of Body state.</p>
+            <p>You can only use Hidden Metabolisms and they are used individually instead of paired.</p>
+            <p>
+              You are at the shallowest depth layer of hidden space and you cannot directly interact with or be sensed
+              by anything in physical space. The tenuous connection to your physical body blocks you from moving to a
+              deeper layer of hidden space. You are also blocked from exiting hidden space if you are not adjacent to
+              your physical body.
+            </p>
+            <p>
+              When you return from this State you awaken in your physical body where ever it is located. You need to get
+              back onto your feet, causing you to be Off Balance 3.
+            </p>
+          </Section>
+          <Section header="Sinking">
+            <p>
+              Your are being pulled deeper into hidden space. Your form feels vague and tenuous and the crushing weight
+              of the empty void around you bears down.
+            </p>
+            <p>While in this state you cannot sense anything further than a meter away from you.</p>
+            <p>
+              If you have this state at the end of your turn, at the start of your next turn your depth layer in hidden
+              space increases by 1 if possible.
+            </p>
+          </Section>
+          <Section header="Sublimed">
+            <p>
+              Your physical body has slipped through the gaps in space and fully entered hidden space, becoming
+              intangible and invisible.
+            </p>
+            <p>If you gain the Out of Body state, you lose the Sublimed state.</p>
+            <p>
+              You are fully in hidden space, leaving no trace behind in the physical world. You cannot interact with or
+              be sensed by anything in physical space. You can move about hidden space freely, however the physical
+              world casts shadows into the hidden world that impede your movement, depending on what depth layer you are
+              at.
+            </p>
+            <p>
+              Only Hidden Metabolisms and Focus may be used, but Focus can be used in place of any Physical Metabolism.
+              You have both inhale and exhale actions, but they can only be Move, Float, Sink, or the Sublime cascade
+              event.
+            </p>
+            <p>
+              When you return from this State you suddenly appear in whatever location you moved to while in hidden
+              space.
+            </p>
+          </Section>
+        </Section>
+      </Section>
+      <Section header="Hidden Space" isClassified>
+        <p>
+          Certain circumstances, such as the Out of Body or Sublimed states, cause your awareness to shift from physical
+          space to hidden space. Characters that can induce the Sublime cascade event can do this intentionally. When
+          this happens, you are invisible and intangible. You cannot directly interact with or be detected by anything
+          in physical space. You do not take up space and can freely enter or share a space with any physical or hidden
+          entity.
+        </p>
+        <p>Your senses operate differently in hidden space.</p>
+        <p>
+          You cannot see, but you have an innate sense of the position of anything, hidden or physical, within a number
+          of meters equal to your Far score. This only informs you of shape and movement, things like texture, color,
+          light, or two dimensional text and images are not available to you.{" "}
+        </p>
+        <p>
+          You cannot hear, but you can feel the muted vibrations of any sound louder than casual conversation. This is
+          only precise enough to comprehend single isolated simple words. You cannot directly communicate with other
+          beings, physical or hidden, but when you share a space with one you have an empathic sense of their mental
+          state.
+        </p>
+        <Section header="Depth" isClassified>
+          <p>
+            The further you drift from physical space the less it affects you. This level is referred to as depth. The
+            longer a physical object remains stationary, the deeper the wake it casts into hidden space. At any depth
+            you can freely share space with dynamic objects, like living things and vehicles. At deeper levels you can
+            share a space with increasingly static objects. When you share space with an object you may pass through
+            quickly to simply phase through it, or rest inside its space for prolonged periods.
+          </p>
+          <p>
+            The higher depths exert a pressure that will eventually eject anything not tied to a static physical object.
+            Unless specified otherwise, something in hidden space can be assumed to be at depth 1. If you spend longer
+            than a minute on any depth deeper than 1 without certain Specializations that allow you to stay there, you
+            will float one layer closer to physical space.
+          </p>
+          <Section header="Depth 0: Physical Space" isClassified>
+            <p>The world of your everyday experience. The laws of physics work as you expect them to.</p>
+          </Section>
+          <Section header="Depth 1: The Shallows" isClassified>
+            <p>
+              You can share space with dynamic physical objects and entities, including humans, animals, vehicles, and
+              doors or other objects that have moved within the last day. While these objects no longer impede your
+              movement, you can still sense their positions when they are close enough.
+            </p>
+          </Section>
+          <Section header="Depth 2: Pelagic Space" isClassified>
+            <p>
+              You can share space with static objects, including anything that has moved or been built within the last
+              year. You can no longer sense the position of dynamic physical objects. Vibrations from sound arrive to
+              you delayed, heavily muted, distorted, and incomprehensible.
+            </p>
+          </Section>
+          <Section header="Depth 3: Abyssal Space" isClassified>
+            <p>
+              You can share space with extremely static objects, including anything that has moved or been built within
+              the last century. You can only sense entities that share this level or physical objects old enough to
+              block your movement. You cannot influence or interact with anything, even subtly, even if it shares this
+              level.
+            </p>
+          </Section>
+          <Section header="Depth ∞: Trans-Stygian Space" isClassified>
+            <p>
+              This is the interstitial space between nearby worldlines, the nearly parallel timelines radiating outward
+              from the big bang. Only extreme and dangerous means can get you here and there are no guarantees you can
+              return because you no longer float back to the surface naturally.
+            </p>
+            <p>
+              Only truly ancient stone that has been beneath bedrock since the Precambrian impedes your movement and
+              reaches your senses, and even then only in a soft and nebulous fashion. Gravity is a suggestion you can
+              choose to ignore.
+            </p>
+            <p>
+              Time and distance do not function as expected here. If you manage to return, what felt like an hour may
+              have been seconds or years and what seemed like a kilometer may be the other side of the planet. You can
+              also never be sure if where you arrived is the same worldline you came from our merely a similar one.{" "}
+            </p>
           </Section>
         </Section>
       </Section>

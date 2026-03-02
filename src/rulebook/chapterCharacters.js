@@ -64,8 +64,8 @@ function ChapterCharacters() {
       <Section header="Creating a Character">
         <p>
           The first step of playing the game is to create the character you will play as. The main statistics of a
-          starting character are Metabolisms, Traits, and Action Bonuses. You will define these values by choosing two
-          Origins.
+          starting character are Metabolisms, Traits, Styles, and Specializations. You will define these values by
+          choosing two Origins.
         </p>
         <p>
           Origins represent your character's background. You will choose a Physical Origin describing how your character
@@ -79,29 +79,24 @@ function ChapterCharacters() {
           action.
         </p>
         <p>
-          Traits are keywords that flesh out additional details about your character, and they provide a bonus whenever
-          they are relevant to an action. They can be almost anything that your character is able to leverage in a
-          useful way. Generally, skills, social status, relationships, community membership, authority, wealth,
+          Traits are keywords that flesh out additional details about your character, and they provide a advantages
+          whenever they are relevant to an action. They can be almost anything that your character is able to leverage
+          in a useful way. Generally, skills, social status, relationships, community membership, authority, wealth,
           possessions, careers, apparent physical traits, fashions, roles you fill, or other advantages are good Traits.
           Don't think too hard about having perfect or precise Traits, they can be vague during character creation. You
           will be able to revise them later during play as you get to know the character.
         </p>
         <p>
-          Action Bonuses are a number assigned to each action you can take in combat, representing your skill with
-          taking that action quickly while under pressure. For a starting character, most of these will be 0 but a
-          couple will be increased to 1 during the steps of character creation. An action bonus of 1 indicates a high
-          level of proficiency, normal humans almost never have Action Bonuses above 1, but as your character gains
-          experience they may become supernaturally skilled in ways that increase these numbers higher.
+          The final aspects of character creation are Styles. Styles are the root of your character's supernatural
+          abilities. Each is part of an Entanglement, a permanent pairing of a Physical Metabolism and a Hidden
+          Metabolism. Each Entanglement contains two Styles, one intuitive that provides combat or sensory bonuses, and
+          one esoteric that provides a minor supernatural ability. Later, your Styles determine what Specializations you
+          will have access to.
         </p>
         <p>
           Specializations are supernatural abilities your character can learn as they refine the connection between
-          their physical and hidden bodies. Normally, you gain or increase the rank of Specializations by spending
-          experience points you gain after playing a session. However, your Hidden Origin will provide you with one
-          Specialization during character creation.
-        </p>
-        <p>
-          Finally, Entanglements and their Styles will not be touched during character creation. They will only come up
-          later when your character gains the experience needed to develop these special abilities.
+          their physical and hidden bodies. Your Hidden Origin will provide you with one Specialization to choose.
+          Later, you can gain ranks in Specializations by spending experience points you gain after playing a session,
         </p>
         <Section header="Step by Step Characters" isInset>
           <ol>
@@ -123,7 +118,7 @@ function ChapterCharacters() {
               <ol>
                 <li>
                   Following this origin's prompts will give you 3 Traits, increase one Physical Metabolism score, and
-                  increase one Action Bonus.
+                  allow you to adopt one Style.
                 </li>
               </ol>
             </li>
@@ -132,7 +127,7 @@ function ChapterCharacters() {
               <ol>
                 <li>
                   Following this origin's prompts will give you 3 Traits, increase one Physical and one Hidden
-                  Metabolism score, and increase one Action Bonus.
+                  Metabolism score, and allow you to adopt one Style.
                 </li>
               </ol>
             </li>
@@ -173,7 +168,7 @@ function ChapterCharacters() {
             Choose a Physical Origin from the list at the end of this chapter. Once you have chosen, this origin's
             description will give you prompts to follow. Answering the questions in these prompts will guide you in
             choosing a few Traits to gain. It will also guide you to choose a Physical Metabolism to to increase by 1
-            and an Action Bonus to increase from 0 to 1.
+            and a Style to adopt.
           </p>
         </Section>
         <Section header="Step 3: Hidden Origin">
@@ -188,13 +183,13 @@ function ChapterCharacters() {
             Choose a Hidden Origin from the list at the end of this chapter. Once you have chosen, this origin's
             description will give you prompts to follow. Answering the questions in these prompts will guide you in
             choosing a few Traits to gain. It will also guide you to choose a Physical Metabolism to to increase by 1,
-            as well as a Hidden Metabolism and an Action Bonus to increase from 0 to 1.
+            as well as a Hidden Metabolism and a Style to adopt.
           </p>
           <p>
-            Your Hidden Origin will also provide you to choose one Specialization to gain. You can ignore any
+            Your Hidden Origin will also provide you a choice of one Specialization to gain. You can ignore any
             prerequisites for the Specialization you gain in this step. It starts at rank 1, but you can spend
             experience points later to increase the rank. If this Specialization is from an Esoteric Style, you can also
-            induce the Cascade Event event associated with this Style.
+            induce the Cascade Event event associated with its Style.
           </p>
         </Section>
         <Section header="Choosing Traits">
@@ -216,12 +211,12 @@ function ChapterCharacters() {
             <p>
               <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink> chosen at character creation are
               not meant to represent combat proficiency. They will typically not be relevant for standard combat
-              actions. For example, a Trait like "Army Marksman" might be relevant in many of situations, but it won't
-              help you shoot a gun in the high speed stress and chaos of a real fight. Action Bonuses better represent
-              combat proven abilities, and each origin will give you one. Action Bonuses greater than 1 represent a
-              level of combat ability typically unavailable to normal humans. Additionally, remember that traits can
-              represent gear and assets instead of skills, so if your character is the type that would plausibly have a
-              small arsenal of combat equipment, take a trait that represents it.
+              actions. For example, a Trait like "Army Marksman" might be relevant in many situations, but it won't help
+              you shoot a gun in the high speed stress and chaos of a real fight. Instead, the proven reflexes needed to
+              improve your combat abilities come from the Styles you choose to adopt. If your character has combat
+              experience, choose a Style that is associated with an attack or defense. Additionally, remember that
+              traits can represent gear and assets instead of skills, so if your character is the type that would
+              plausibly have a small arsenal of combat equipment, take a trait that represents it.
             </p>
           </Section>
         </Section>
@@ -293,8 +288,8 @@ function ChapterCharacters() {
         <p>
           Physical Origins represent your character's place in the world and will provide guidance for choosing your
           next <Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink>. Each will also increase one
-          Physical Metabolism and one Action Bonus. Conventional is the most common origin, if your character lives a
-          lifestyle that would seem somewhat normal in the present day then choose Conventional.
+          Physical Metabolism allow you to adopt one Style. Conventional is the most common origin, if your character
+          lives a lifestyle that would seem somewhat normal in the present day then choose Conventional.
         </p>
         <Section header="Conventional" isInset>
           <p>
@@ -351,8 +346,8 @@ function ChapterCharacters() {
               in life.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. In moments of fear, this is how you would spring into
-              action.
+              Choose a Style to adopt by increasing its rank from 0 to 1. In moments of fear or conflict, this is how
+              you envision springing into action.
             </li>
           </ol>
         </Section>
@@ -389,9 +384,7 @@ function ChapterCharacters() {
             <li>
               <h5 className="subheader">What was your responsibility?</h5>
               <strong>Combat.</strong> You've seen active duty on the ground in combat. Gain a Trait representing a
-              skill needed to survive in a warzone. Alternatively, due to your experience in actual combat, you can
-              forego taking this trait and instead increase the Action Bonus for an action your practiced in combat from
-              0 to 1.
+              skill needed to survive in a warzone.
               <br />
               <strong>Personnel.</strong> Whether you were an officer or led a unit in the field, your core duties
               involved managing people. Gain a Trait representing a skill used to lead others or navigate bureaucracy.
@@ -428,8 +421,8 @@ function ChapterCharacters() {
               Choose a Physical Metabolism and increase it by 1. This is the ability you rely on when things get tough.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. This is the action you practiced the most in training or
-              combat.
+              Choose a Style to adopt by increasing its rank from 0 to 1. This is the action you practiced the most in
+              training or combat, or a strange ability you discovered in the heat of conflict.
             </li>
           </ol>
         </Section>
@@ -490,10 +483,8 @@ function ChapterCharacters() {
               life.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. This is the action your would instinctively rely on in a
-              dangerous moment. Alternatively, going with the flow in your life may have protected you from needing to
-              develop these reflexes, if this is the case instead forego this Action Bonus and instead take any Trait of
-              your choosing.
+              Choose a Style to adopt by increasing its rank from 0 to 1. This is a latent ability you've discovered or
+              practiced.
             </li>
           </ol>
         </Section>
@@ -586,10 +577,8 @@ function ChapterCharacters() {
               strength.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. Your life may not have had many chaotic or stressful
-              moments, but when it does your instinct is to lean into this action. Alternatively, your sheltered life
-              may have protected you from needing to develop these reflexes, if this is the case instead forego this
-              Action Bonus and instead take any Trait of your choosing.
+              Choose a Style to adopt by increasing its rank from 0 to 1. This is the ability you rely on to resolve the
+              conflicts in your life, or a strange capability you've been experimenting with.
             </li>
           </ol>
         </Section>
@@ -685,8 +674,8 @@ function ChapterCharacters() {
               yourself.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. This is an action you either practiced during criminal
-              activities or when you needed to escape from something.
+              Choose a Style to adopt by increasing its rank from 0 to 1. This is an ability you either practiced during
+              criminal activities or when you needed to escape.
             </li>
           </ol>
         </Section>
@@ -732,7 +721,8 @@ function ChapterCharacters() {
               avoid adversity.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. This is an action you rely on when pushed into conflict.
+              Choose a Style to adopt by increasing its rank from 0 to 1. This is an ability that you've discovered in
+              yourself while dealing with adversity.
             </li>
           </ol>
         </Section>
@@ -756,9 +746,9 @@ function ChapterCharacters() {
               confident in this ability.
             </li>
             <li>
-              You have an unknown Action Bonus. Once, at any moment during the first time you are involved in combat,
-              you may increase an Action Bonus from 0 to 1. Something about this action just clicks for you, as if
-              you've practiced it before but have no memory of it.
+              Gain the Trait Unknown Style. Once, at any moment during the first time you are involved in combat, you
+              may choose a Style to adopt by increasing its rank from 0 to 1 and removing this Trait. Something about
+              this action just clicks for you, as if you've practiced it before but have no memory of it.
             </li>
           </ol>
         </Section>
@@ -860,8 +850,8 @@ function ChapterCharacters() {
               further during your awakening.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. You practiced or were forced to use this action during
-              your awakening.
+              Choose a Style to adopt by increasing its rank from 0 to 1. You practiced or were forced to develop this
+              ability during your awakening.
             </li>
           </ol>
         </Section>
@@ -913,8 +903,8 @@ function ChapterCharacters() {
               these domains.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. You have a raw talent with this action, even if you
-              haven't practiced it.
+              Choose a Style to adopt by increasing its rank from 0 to 1. You have a raw talent with this ability, even
+              if you haven't practiced it.
             </li>
           </ol>
         </Section>
@@ -996,8 +986,8 @@ function ChapterCharacters() {
               these domains.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. You have a raw talent with this action, even if you
-              haven't practiced it.
+              Choose a Style to adopt by increasing its rank from 0 to 1. This began noticing this ability after your
+              contact event.
             </li>
           </ol>
         </Section>
@@ -1076,8 +1066,8 @@ function ChapterCharacters() {
               these abilities.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. After the process, you found yourself leaning towards this
-              action when you encountered danger.
+              Choose a Style to adopt by increasing its rank from 0 to 1. After the process, you found yourself leaning
+              towards this ability when you encountered danger.
             </li>
           </ol>
         </Section>
@@ -1133,8 +1123,8 @@ function ChapterCharacters() {
               click for you after this experience.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. You body seems to do this action almost automatically,
-              even if you haven't practiced it.
+              Choose a Style to adopt by increasing its rank from 0 to 1. You body seems to do this action almost
+              automatically, even if you haven't practiced it.
             </li>
           </ol>
         </Section>
@@ -1189,8 +1179,8 @@ function ChapterCharacters() {
               to you after this experience.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. In attempting to overcome your challenges, this ability
-              developed quickly.
+              Choose a Style to adopt by increasing its rank from 0 to 1. In attempting to overcome your challenges,
+              this ability developed quickly.
             </li>
           </ol>
         </Section>
@@ -1241,8 +1231,8 @@ function ChapterCharacters() {
               develop these abilities.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. In attempting to overcome your challenges, this ability
-              developed quickly.
+              Choose a Style to adopt by increasing its rank from 0 to 1. In attempting to overcome your challenges,
+              this ability developed quickly.
             </li>
           </ol>
         </Section>
@@ -1264,9 +1254,6 @@ function ChapterCharacters() {
               Trait with a relevant skill.
             </li>
             <li>
-              {/* artifact, isolate signal, sense waveform
-Strange abilities, levitation, force push
-Esp Precognition, chromaception */}
               <h5 className="subheader">How were things different after this event?</h5>
               <strong>You felt an unexplainable connection to technology.</strong> Gain either the Specialization{" "}
               <SpecializationLink name="Isolate Signal" /> or <SpecializationLink name="Sense Waveform" />.
@@ -1293,6 +1280,10 @@ Esp Precognition, chromaception */}
             <li>
               Choose one Physical and one Hidden Metabolism and increase them both by 1. When you came back from your
               lost time, these abilities seemed stronger.
+            </li>
+            <li>
+              Choose a Style to adopt by increasing its rank from 0 to 1. You started noticing this ability in yourself
+              after you returned.
             </li>
           </ol>
         </Section>
@@ -1344,8 +1335,8 @@ Esp Precognition, chromaception */}
               online for you after the traumatic event.
             </li>
             <li>
-              Choose an Action Bonus to increase from 0 to 1. In attempting to survive or recover from your trauma, this
-              action proved necessary.
+              Choose a Style to adopt by increasing its rank from 0 to 1. In attempting to survive or recover from your
+              trauma, this action proved necessary.
             </li>
           </ol>
         </Section>

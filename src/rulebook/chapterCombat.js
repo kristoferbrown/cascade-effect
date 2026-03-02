@@ -6,7 +6,7 @@ import Section from "../components/section/section";
 // import Logomark from "../svgs/logomark";
 import Crosslink from "../components/crosslink/crosslink";
 import Metabolism from "../components/metabolism/metabolism";
-import Pair from "../components/metabolism/pair";
+// import Pair from "../components/metabolism/pair";
 
 function ChapterCombat() {
   const { topicMap } = useContext(RulebookContext);
@@ -22,35 +22,39 @@ function ChapterCombat() {
           title="Combat"
           leftPageContent={
             <>
+              <h2>Physical combat</h2>
               <p>
-                In combat, the game slows down into turns to follow the action. Fights are too fast and chaotic for
-                normal humans to act effectively, limiting them to one action per turn. Learning to directly access
-                Hidden Metabolisms grants you the parallel processing needed overcome this limit and react efficiently.
-                The primitive parts of the brain stem that mediate the connection to the Hidden body are the same as
-                those that manage autonomic rhythmic processes like breathing and heart rate. Once you have the feel for
-                connecting to your Hidden Body, stressful situations start take on a similar biological rhythm: inhale,
-                allocate; exhale, execute. Having found this rhythm, you can take two actions each time it's your turn,
-                one inhale action and one exhale action.
+                The blows and tactics of physical combat take on a rhythm that is tracked in turns. Normal humans take
+                one action per turn. Entangled people, like the player characters, can overcome this limit. The
+                primitive parts of the brainstem that mediate the connection to the Hidden Body are the same as those
+                that manage autonomic rhythmic processes like breathing and heart rate. Once you have the feel for your
+                Hidden Body, stressful situations start take on a similar biological rhythm: inhale, allocate; exhale,
+                execute.
+              </p>
+              <p>
+                Having found this rhythm, you can take two actions each time it's your turn, one inhale action and one
+                exhale action.
               </p>
             </>
           }
           rightPageContent={
             <>
-              <h2>Inhale Action</h2>
+              <h2>Incorporeal Combat</h2>
               <p>
-                First, take an inhale action. Inhale actions are typically preparatory in nature, lining up things into
-                position and coiling up the resources needed to spring into action.
+                Not all combat is physical. Entities in hidden space can also fight amongst themselves or exert subtle
+                influences over physical space.
               </p>
-              <h2>Exhale Action</h2>
+              <h4>Hidden Combat</h4>
               <p>
-                Second, take an exhale action. Exhale actions execute on what you set up in the inhale action, often in
-                the form of an attack or cascade event.
+                Combat can also occur between beings that are purely in Hidden Space. Without access to the physical
+                world or the resources of the body, combat has a different rhythm, still measured in the same turns. You
+                take the same inhale and exhale actions, but they are chosen from a different restricted list of
+                actions.
               </p>
-              <h2>Deep Breath</h2>
+              <h4>Trans-Spatial Combat</h4>
               <p>
-                If there isn't an exhale action you want to take this turn, you can take a deep breath in order to do
-                two inhale actions instead. Doing so allows the benefits of some inhale actions to last longer than they
-                normally would.
+                Combat between characters in mixed regimes of space is limited, but not impossible. Hidden beings can
+                still hinder or bolster physical ones, or force enemies into deeper or shallower levels of hidden space.
               </p>
             </>
           }
@@ -60,13 +64,13 @@ function ChapterCombat() {
       <Section header="Combat Flow">
         <p>
           When combat starts, the gameplay breaks down into turns. The first step is determining who has the initiative
-          and the turn order. Everyone involved must make a Challenge with default Risk and Effort that requires Focus.
+          and the turn order. Everyone involved must make a Challenge with medium Risk and Effort that requires Focus.
           The Hidden Metabolism used in this Challenge's pair is chosen by the players. Turns then start from whoever
-          got the highest result on this Challenge and then continue down the line to the lowest result.{" "}
+          got the highest result on this Challenge and then continue down the line to the lowest result.
         </p>
         <p>
           Determining initiative is the moment adrenaline kicks your body into high gear. Until combat ends you are
-          pushing yourself to your limits, which has a few effects:{" "}
+          pushing yourself to your limits, which has a few effects:
         </p>
         <ul>
           <li>
@@ -78,10 +82,6 @@ function ChapterCombat() {
             points during combat.
           </li>
           <li>
-            There are a list of named inhale and exhale actions in the next chapter, such as Melee Attack, Aim, or Move.
-            Due to the speed and chaos of combat, you can only take actions from this list.
-          </li>
-          <li>
             Fights move too fast to apply Traits to combat actions, you must use the Improvise action to apply a Trait.
           </li>
         </ul>
@@ -91,10 +91,15 @@ function ChapterCombat() {
             those that have at least 1 in any Hidden Metabolism score, can take one inhale action followed by one exhale
             action on their turn. These actions must be taken this order, inhale first, exhale second.
           </p>
+          <p>
+            If there isn't an exhale action you want to take this turn, you can take a Deep Breath in order to do two
+            inhale actions instead. Doing so allows the benefits of some inhale actions to last longer than they
+            normally would.
+          </p>
           <p>Normal unentangled humans act more slowly, they only get one action per turn but it can be any type. </p>
           <p>
             At the end of each round after everyone has taken a turn, everyone regains Metabolism points equal to half
-            the Capacity of each Metabolism. Always round up to a whole number, with a minimum of 1 point regained.{" "}
+            the Capacity of each Metabolism. Always round up to a whole number, with a minimum of 1 point regained.
           </p>
           <p>
             Rounds last a few seconds, but have no strictly defined duration. The duration of any effect specified in
@@ -108,7 +113,13 @@ function ChapterCombat() {
           Outside of small non-actions that take no additional time, such as speaking a few words, everything you do in
           combat will be an inhale or exhale action taken on your turn, or a reaction taken in response to something
           happening to you outside your turn. Inhale and exhale actions both must come from their separate lists below.
-          The full definition and rules for each action can be found in the Actions chapter.{" "}
+          The full definition and rules for each action can be found in the Actions chapter.
+        </p>
+        <p>
+          The list of inhale and exhale actions covers most things you can do in combat. If something you're attempting
+          to do really cannot fit into one of them, the GM can allow you to attempt things outside of this list by
+          deciding if what you attempt is an inhale or exhale action, and then assigning it custom Challenge and
+          potentially a Reaction that it Triggers.
         </p>
         <Section header="Inhale Actions">
           <p>Inhale actions focus on getting into position and setting up for your next move. </p>
@@ -117,11 +128,11 @@ function ChapterCombat() {
               <strong>Aim:</strong> Prepare to attack by lining up your target.
             </li>
             <li>
-              <strong>Allocate:</strong> Prepare to induce a cascade event by concentrating the resources you'll put
-              into it.
+              <strong>Prime:</strong> Prepare to induce a cascade event by concentrating the resources you'll put into
+              it.
             </li>
             <li>
-              <strong>Evade:</strong> Prepare to defend yourself or get into cover.
+              <strong>Elude:</strong> Prepare to defend yourself or get into cover.
             </li>
             <li>
               <strong>Heal:</strong> Supernaturally repair your injuries, or use medical supplies to repair others.
@@ -167,7 +178,10 @@ function ChapterCombat() {
         <Section header="Reactions">
           <p>
             Reactions happen when something triggers them, even if you decide not to spend any Metabolism points on
-            them. They are your defense against harm or manipulation.
+            them. They are your defense against harm or manipulation. One of the three defense Reactions will be
+            triggered any time you are attacked. Intuition and Perception are often primarily sensory in nature, and
+            therefore are commonly low Effort, if they are caused by something difficult to notice they may rise to
+            medium Risk while the Effort stays low.
           </p>
           <ul>
             <li>
@@ -190,18 +204,15 @@ function ChapterCombat() {
             </li>
           </ul>
         </Section>
-        <Section header="Action Bonuses">
+        <Section header="Allocation Bonuses in Combat">
           <p>
-            You have an Action Bonus associated with every action and reaction you can take in combat. If the action
-            involves a Challenge, add this bonus to the number of Metabolism points allocated to the challenge.
+            Every exhale action specifies that a certain Style provides it with an allocation bonus. When completing the
+            Challenge associated with these actions, add your rank in the specified Style to the number of Metabolism
+            points allocated to it.
           </p>
           <p>
             For example, if you have an Unarmed Attack bonus of 2, and you spend 4 Metabolism points on the action,
             you've effectively allocated 6 points.
-          </p>
-          <p>
-            Action Bonuses are associated with each combat action, however they are not exclusively used in combat.
-            Outside of combat you can also add them to any Challenge where taking this action would be helpful.
           </p>
         </Section>
         <Section header="Prepared Actions">
@@ -218,7 +229,7 @@ function ChapterCombat() {
             required.
           </p>
           <p>
-            For example, as your inhale action, you use Evade, which Prepares the next Defense reaction you take. You
+            For example, as your inhale action, you use Elude, which Prepares the next Defense reaction you take. You
             then complete your turn by using your exhale action to attack. Before your next turn starts, you get
             targeted by 2 ranged attacks. The first you are Prepared for, you can spend Flight, Far, and Focus on it.
             When the second hits, you've already used your preparation so you can only spend Flight and Far.
@@ -230,16 +241,23 @@ function ChapterCombat() {
         <Section header="Making Attacks">
           <p>
             Attack by taking Unarmed, Melee, or Ranged Attack as your exhale action. These actions are described in full
-            detail in the Actions chapter, but they are all a Default Risk and Effort Challenge that always requires
+            detail in the Actions chapter, but they are all a medium Risk and Effort Challenge that always requires
             Fight. The attack used determines which Hidden Metabolism is required; Self for unarmed strikes, Near for
             melee attacks, and Far for ranged attacks. Attack Challenges have a metric Goal to deal Threat, each point
-            of Progress you apply to it inflicts a point of Threat to the target.{" "}
+            of Progress you apply to it inflicts a point of Threat to the target.
           </p>
           <p>
             Weapons deal additional Threat, but require additional effort to use. If you are using a weapon, the
-            weapon's Size value is also added to the Threat dealt. However, to attack with a weapon you must allocate a
-            minimum number of Metabolism points equal to the weapon's Size.
+            weapon's Size value is also added the amount of Progress created by the attack Challenge. However, to attack
+            with a weapon you must allocate a minimum number of Metabolism points equal to the weapon's Size.
           </p>
+          <Section header="Threat">
+            <p>
+              When Threat is dealt to a target they need to respond with the Reaction corresponding to the attack that
+              dealt the Threat. This Reaction can reduce the amount of Threat dealt, and any remaining Threat after this
+              reduction is taken by the target as Stress to the Metabolisms used in the reaction they took.
+            </p>
+          </Section>
           <Section header="Attacking Example" isInset>
             <p>
               For your exhale action you attack with a size 2 ranged weapon. You must allocate at least 2 Metabolism
@@ -257,8 +275,12 @@ function ChapterCombat() {
             reactions are described in the Actions chapter, but all require you to make a Challenge that is Default
             Effort, but Low Risk. This Challenge requires the pairing of Flight and the same Hidden Metabolism used by
             the attack. Reaction Challenges have a metric Goal, each point of Progress applied to it lowers the Threat
-            taken by one. Any Threat remaining after this reduction becomes Stress that you must distribute between the
-            Metabolisms you used in the reaction.{" "}
+            dealt, or a State intensity dealt, by one. Any Threat or State intensity remaining after this reduction
+            becomes Stress that you must distribute between the Metabolisms you used in the reaction.
+          </p>
+          <p>
+            If you are somehow completely prevented from reacting to an attack, you take the full amount of Threat as
+            Stress to the attackers choice of a valid Metabolism pair.
           </p>
           <p>
             Because reactions typically use Flight and their low Risk level doesn't require dice, your current Flight is
@@ -304,24 +326,24 @@ function ChapterCombat() {
 
       <Section header="Combat Geography">
         <p>
-          Surviving in combat will often require you to move around the battlefield and take advantage of the terrain.{" "}
+          Surviving in combat will often require you to move around the battlefield and take advantage of the terrain.
         </p>
         <Section header="Movement">
           <p>
             You can move 1 meter for free either before or after you take any action you take on your turn. This means
             you always have 2 meters of movement you can take on your turn, but each move is paired to one action so you
-            can't take both moves together at the start or end of your turn.{" "}
+            can't take both moves together at the start or end of your turn.
           </p>
           <p>
             Additionally, the first time you are attacked in a round, you can move 1 meter as you make a reaction to
             this attack. This move happens at the same time as the attack triggering it, the attack still hits you even
             if you move out of its reach. If you use this to move into cover, the triggering attack treats it as partial
-            cover.
+            cover. Other Reactions, like Willpower or Perception do not provide free movement.
           </p>
           <p>
             The movement granted as part of actions and reactions can only be used to enter normal unoccupied terrain.
             If you wish to move further, enter difficult terrain, or traverse obstacles, you must use the Move action.
-            The move action is typically a low risk and default effort Challenge, so each Metabolism point you allocate
+            The move action is typically a low risk and medium effort Challenge, so each Metabolism point you allocate
             to it creates a point of Progress, and each point of Progress provides 1 meter of movement.
           </p>
         </Section>
@@ -365,12 +387,12 @@ function ChapterCombat() {
               example, any object you can jump over but not stand on.
             </p>
             <p>
-              Obstacles may also introduce risks into movement. The Move action is normally a low Risk and default
-              Effort Challenge with a single metric Goal indicating how many meters you can move. However, if the
-              desired path crosses an obstacle that presents a risk of failing to traverse it, such as a slippery climb,
-              then the Risk level increases to default. Similarly, if an obstacle could physically harm you, such as a
-              thorny ticket or razor wire fence, the Effort level increases to high. A truly critical and difficult
-              obstacle can even introduce additional fixed Goal to the Challenge that must be met to enter the space.
+              Obstacles may also introduce risks into movement. The Move action is normally a low Risk and medium Effort
+              Challenge with a single metric Goal indicating how many meters you can move. However, if the desired path
+              crosses an obstacle that presents a risk of failing to traverse it, such as a slippery climb, then the
+              Risk level increases to medium. Similarly, if an obstacle could physically harm you, such as a thorny
+              ticket or razor wire fence, the Effort level increases to high. A truly critical and difficult obstacle
+              can even introduce additional fixed Goal to the Challenge that must be met to enter the space.
             </p>
           </Section>
         </Section>
@@ -401,22 +423,12 @@ function ChapterCombat() {
               take any exhale actions.
             </p>
           </Section>
-          <Section header="Concealment">
-            <p>
-              Any time the target of an attack cannot be clearly seen by the attacker, whether due to darkness,
-              blindness, or cover, then the attack becomes high Risk. Concealment can be caused by being fully hidden
-              behind objects, even if those objects are not sturdy enough to provide real cover.
-            </p>
-          </Section>
           <Section header="Hiding">
             <p>
-              If you are concealed, or have partial or full cover, you can use the Manipulate action to hide. If you
-              succeed, enemies no longer know exactly which space you occupy. Reactions a hidden character makes to
-              attacks targeting them are low Effort. Attacks a hidden character makes on someone they are hidden from
-              have advantage.
-            </p>
-            <p>
-              If you take an Attack action, a loud noise, or move outside of cover hiding you, you are no longer hidden.
+              If you start a fight while the enemy doesn't know exactly where you are, or if you use the Elude action to
+              hide behind cover, you can gain the Hidden State. This State both protects you from attacks and makes your
+              own attacks more likely to hit. The GM may request a Challenge resisted by Perception Reactions in order
+              for you hide or remain hidden.
             </p>
           </Section>
         </Section>
@@ -430,7 +442,8 @@ function ChapterCombat() {
           <Section header="Partial Cover">
             <p>
               Cover that blocks a significant portion of your body, but not all of it, is partial cover. An attacker
-              targeting someone in partial cover has the Threat their attack deals reduced by 3. Depending on the
+              targeting someone in partial cover has the Threat their attack deals reduced by 3. This only reduces the
+              Threat dealt, if an attack inflicts States or has other Goals, cover does not affect it. Depending on the
               position of the cover, it may provide cover in both directions or only one. For example, if you are
               standing directly behind a waist high barrier, you have partial cover from attackers on the other side,
               but your attacks are unimpeded so they do not have cover from you.
@@ -444,10 +457,10 @@ function ChapterCombat() {
             <p>
               Cover that completely breaks line of sight to your entire body is full cover. Full cover works in both
               directions, you cannot be attacked by someone you have full cover from and you cannot attack them either.
-              If this attack is attempted it deals no Threat, but may damage the cover.
+              If this attack is attempted it deals no Threat, but may damage the cover or inflict States.
             </p>
             <p>
-              If you are in partial cover, you can use the Evade action to duck behind it and treat it as full cover.
+              If you are in partial cover, you can use the Elude action to duck behind it and treat it as full cover.
             </p>
           </Section>
           <Section header="Destroying Cover">
@@ -528,7 +541,7 @@ function ChapterCombat() {
             available, you can only use this weapon with a desperate attack. Size 1 can be concealed in casual clothing,
             Size 2 cannot, and Size 3 or above requires both hands. Any weapon Size 4 or above requires a
             <Crosslink target={linkMap.TakingActionsAndReactions}>full action</Crosslink> to use and causes any
-            reactions to it to become Default Risk instead of Low.
+            reactions to it to become medium Risk instead of low.
           </p>
           <Section header="Types of Weapons">
             <p>Other than unarmed, each category of weapons has a special property common to all similar weapons.</p>
@@ -549,9 +562,8 @@ function ChapterCombat() {
             </table>
             <h5>Blunt</h5>
             <p>
-              When attacking with blunt weapons the defender uses the normal reaction, but the attacker can choose deal
-              any unblocked Stress as if the reaction's metabolism pair used <Metabolism focus />
-              instead of <Metabolism flight />.
+              When attacking with blunt weapons, if the Off Balance State is inflicted on the target, its intensity is
+              increased by 1.
             </p>
             <table>
               <thead>
@@ -581,8 +593,8 @@ function ChapterCombat() {
             </table>
             <h5>Blades</h5>
             <p>
-              All blades deal 1 extra <Crosslink target={linkMap.Attacks}>Threat</Crosslink> above what their Size
-              normally would.
+              All blades deal <Crosslink target={linkMap.Attacks}>Threat</Crosslink> as if they were one size larger
+              than they are.
             </p>
             <table>
               <thead>
@@ -643,6 +655,57 @@ function ChapterCombat() {
               </tbody>
             </table>
           </Section>
+        </Section>
+      </Section>
+      <Section header="Hidden Space Combat" isClassified>
+        <p>
+          If you have the Out of Body or Sublimed state in combat, your options are limited by your inability to
+          interact with physical combatants. You are safe from direct harm, but unable to inflict it yourself. However,
+          you can still exert more subtle influences over the battlefield.
+        </p>
+        <p>
+          The natural processes of your body are unavailable to you if you are Out of Body and they're in stasis if you
+          are sublimed. Either way, you are prevented from recovering Metabolism points normally, you can only recover
+          them by taking the Rest action.
+        </p>
+        <Section header="Actions in Hidden Space" isClassified>
+          <p>
+            Your actions are also severely limited. The only inhale actions you can take are Rest to recover metabolisms
+            and Move to traverse hidden space. If you can induce the Sublime cascade event you can use it to exit hidden
+            space. Additionally, you have access to two exhale actions that can only be used in hidden space, Hidden
+            Attack and Manifest.
+          </p>
+          <p>
+            Hidden Attack attempts to disrupt or sever access to the hidden bodies of others, or force them to change
+            depths. It triggers a unique reaction, Hidden Defense to resist its effects.{" "}
+          </p>
+          <p>
+            Manifest is used to attempt to influence physical space by supporting the hidden metabolisms of others or
+            creating minor physical haunting effects.
+          </p>
+        </Section>
+        <Section header="Changing Depth in Combat" isClassified>
+          <p>
+            Most hidden space combat will occur in or from the shallows of depth layer 1. However, one's depth can
+            change in combat, typically by inflicting or giving yourself the Floating or Sinking states that can cause
+            you to change depths at the start of a turn. However, circumstances can also prevent you from changing
+            depths. When you would change depths, but are unwilling or blocked from doing so, you instead take an
+            unavoidable point of Stress to every Hidden Metabolism. This Stress cannot reduce a Metabolism capacity
+            below 1.
+          </p>
+          <p>
+            You cannot float to a shallower layer or exit hidden space if you are currently occupying the same space of
+            a physical object or entity. The physical material blocks you from sharing material space with it. If you
+            have the Out of Body state, you can only exit hidden space if you are adjacent to your physical body.
+          </p>
+          <p>
+            You cannot sink to a deeper layer if you have the Out of Body state. Your connection to your physical body
+            becomes too tenuous if you drift away from it.
+          </p>
+          <p>
+            You cannot change depth in either direction if you have both the Floating and Sinking states simultaneously
+            as you are being torn apart in both directions.
+          </p>
         </Section>
       </Section>
     </Section>

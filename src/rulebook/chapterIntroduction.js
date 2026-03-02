@@ -407,8 +407,8 @@ function ChapterIntroduction() {
             <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolisms</Crosslink> scores, with no metabolism
             ending up below 3 or above 6. Choose one Hidden Metabolism that starts with a score of 2 and the rest start
             with a score of 1. Then choose any 8<Crosslink target={linkMap.AdvantageAndDisadvantage}>Traits</Crosslink>{" "}
-            for the character and increase 2 <Crosslink target={linkMap.ActionBonus}>Action Bonuses</Crosslink> from 0
-            to 1. Finally, chose a single Specialization that you have at rank 1. The
+            for the character and increase the rank of two Styles from 0 to 1. Finally, chose a single Specialization
+            that you have at rank 1. The
             <Crosslink target={linkMap.TheGameMaster}>GM</Crosslink> may also set an amount of experience points to
             spend as well or give you access to weapons.
           </p>
