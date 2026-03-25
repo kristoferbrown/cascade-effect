@@ -13,7 +13,7 @@ const ChapterIntroSpread = ({ title, chapterNumber, leftPageContent, rightPageCo
           </div>
         </div>
       </div>
-      <div className="ChapterIntroSpreadPage ChapterIntroSpreadRightPage">
+      <div className="ChapterIntroSpreadPage ChapterIntroSpreadRightPage classified">
         {/* <h1 className="hiddenOnScreen testdiv">test 2</h1> */}
         <div className="ChapterIntroSpreadPageContent">
           <div className="pageContentLogo">

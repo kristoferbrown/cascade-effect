@@ -7,6 +7,7 @@ const Crosslink = ({ children, className = "", inverted = false, isSpecializatio
   const { openSectionList, setOpenSectionList } = useContext(RulebookContext);
 
   const openAndGoToTarget = () => {
+    if (!target) return;
     const targets = target.split(".");
     const targetAndParents = targets.map((digit, index) => targets.slice(0, index + 1).join("."));
     if (targetAndParents.every((coords) => openSectionList.has(coords))) {

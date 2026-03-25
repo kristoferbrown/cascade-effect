@@ -52,15 +52,15 @@ function ChapterActions() {
           you to damage your target and a secondary Goal that applies a restrictive state.
         </p>
         <Section header="Melee Attack">
-          <p>You take a swing at an adjacent opponent with whatever weapon you have in hand.</p>
           <ChallengeParams
-            pair={"Fight+Near"}
+            pair={{ fight: true, near: true }}
             risk={"Medium"}
             effort={"Medium"}
             allocBonus={"Smooth Style"}
             progBonus={"Weapon Size"}
             goals={["Threat", "Off Balance"]}
           />
+          <p>You take a swing at an adjacent opponent with whatever weapon you have in hand.</p>
           <p>The amount of Progress applied to the Threat Goal is dealt to the target as Threat.</p>
           <p>
             The target gains the Off Balance state with an intensity equal to the Progress applied to Off Balance Goal.
@@ -69,15 +69,15 @@ function ChapterActions() {
           <p>This attack provokes a Melee Defense reaction.</p>
         </Section>
         <Section header="Ranged Attack">
-          <p>You fire a pistol, throw a stone, shoot an arrow, or unleash a burst automatic gunfire at an opponent.</p>
           <ChallengeParams
-            pair={"Fight+Far"}
+            pair={{ fight: true, far: true }}
             risk={"Medium"}
             effort={"Medium"}
             allocBonus={"Sharp Style"}
             progBonus={"Weapon Size"}
             goals={["Threat", "Suppressed"]}
           />
+          <p>You fire a pistol, throw a stone, shoot an arrow, or unleash a burst automatic gunfire at an opponent.</p>
           <p>The amount of Progress applied to the Threat Goal is dealt to the target as Threat.</p>
           <p>
             The target gains the Suppressed state with an intensity equal to the Progress applied to the Suppressed
@@ -86,18 +86,21 @@ function ChapterActions() {
           <p>This attack provokes a Ranged Defense reaction.</p>
         </Section>
         <Section header="Unarmed Attack">
-          <p>You lash out at an adjacent opponent with a punch, kick, elbow, grab, shove, or other blow.</p>
           <ChallengeParams
-            pair={"Fight+Self"}
+            pair={{ fight: true, self: true }}
             risk={"Medium"}
             effort={"Medium"}
             allocBonus={"Strong Style"}
             goals={["Threat", "Grappled"]}
           />
+          <p>You lash out at an adjacent opponent with a punch, kick, elbow, grab, shove, or other blow.</p>
           <p>The amount of Progress applied to the Threat Goal is dealt to the target as Threat.</p>
           <p>
             The target gains the Grappled state with an intensity equal to the Progress applied to the Grappled goal.
-            You can only use the Grappled Goal if you have a free hand.
+            You can only use the Grappled Goal if you have a free hand, but you can always use the Threat Goal.
+          </p>
+          <p>
+            If an this attack would cause the target to gain the Dying state, they instead gain the Unconscious state.
           </p>
           <p>This attack provokes a Unarmed Defense reaction. </p>
         </Section>
@@ -120,7 +123,7 @@ function ChapterActions() {
         </p>
         <Section header="Aim">
           <p>You take a moment to line up an attack.</p>
-          <p>Your next attack against a chosen target is Prepared. </p>
+          <p>Your next attack taken this turn against a chosen target is Prepared. </p>
           <p>If this target is behind full cover, the Prepared attack treats it as partial cover. </p>
         </Section>
         <Section header="Elude">
@@ -138,13 +141,13 @@ function ChapterActions() {
         </Section>
         <Section header="Heal">
           <p>
-            The visceral, desperate desire to heal ones injuries leads all entangled people to develop the ability to
+            The visceral, desperate desire to heal one's injuries leads all entangled people to develop the ability to
             instinctively repair their worst injuries. By drawing on resources like clotting factors previously sublimed
             into the hidden body you can roughly seal physical wounds just enough to keep moving.
           </p>
           <p>
             Restore the capacity of one of your injured Physical Metabolisms from 0 to 1, removing it's Injured state.
-            The current value remains at 0. If you had two injured Physical Metabolisms,
+            The current value remains at 0. This action cannot remove the Dying state.
           </p>
           <p>
             If you have appropriate medical supplies in hand, you can use them as the scaffolding needed to Heal a
@@ -245,62 +248,62 @@ function ChapterActions() {
           armor you're wearing.
         </p>
         <Section header="Melee Defense" topicKey="meleeDefenseReaction">
-          <p>You deflect or dodge a melee weapon attack.</p>
           <ChallengeParams
-            pair={"Flight+Near"}
+            pair={{ flight: true, near: true }}
             risk={"Low"}
             effort={"Medium"}
             allocBonus={"Mobile Style"}
             progBonus={"Armor Rating"}
             goals={["Defense"]}
           />
+          <p>You deflect or dodge a melee weapon attack.</p>
           <p>
             Each point applied to Defense removes a removes a point of Threat, or a point from your choice of any other
             Goal, inflicted by the triggering attack.
           </p>
         </Section>
         <Section header="Ranged Defense" topicKey="rangedDefenseReaction">
-          <p>You attempt to predict your opponent's aim and get out of the path of their projectiles.</p>
           <ChallengeParams
-            pair={"Flight+Far"}
+            pair={{ flight: true, far: true }}
             risk={"Low"}
             effort={"Medium"}
             allocBonus={"Quick Style"}
             progBonus={"Armor Rating"}
             goals={["Defense"]}
           />
+          <p>You attempt to predict your opponent's aim and get out of the path of their projectiles.</p>
           <p>
             Each point applied to Defense removes a removes a point of Threat, or a point from your choice of any other
             Goal, inflicted by the triggering attack.
           </p>
         </Section>
         <Section header="Unarmed Defense" topicKey="unarmedDefenseReaction">
-          <p>You dodge, block, or endure a blow, or twist away from a grab.</p>
           <ChallengeParams
-            pair={"Flight+Self"}
+            pair={{ flight: true, self: true }}
             risk={"Low"}
             effort={"Medium"}
             allocBonus={"Tough Style"}
             progBonus={"Armor Rating"}
             goals={["Defense"]}
           />
+          <p>You dodge, block, or endure a blow, or twist away from a grab.</p>
           <p>
             Each point applied to Defense removes a removes a point of Threat, or a point from your choice of any other
             Goal, inflicted by the triggering attack.
           </p>
         </Section>
         <Section header="Intuition">
-          <p>
-            An Intuition reaction is provoked by things that manipulate you through incomplete knowledge, such as
-            deception, hidden motives, memory loss, or fast talk.
-          </p>
           <ChallengeParams
-            pair={"Focus+Far"}
+            pair={{ focus: true, far: true }}
             risk={"Medium"}
             effort={"Low"}
             allocBonus={"Bright Style"}
             goals={["Variable"]}
           />
+          <p>
+            An Intuition reaction is provoked by things that manipulate you through incomplete knowledge, such as
+            deception, hidden motives, memory loss, or fast talk.
+          </p>
           <p>
             If this was triggered by a Challenge someone else completed, the reaction has the same Goals as the
             Challenge that provoked it. Each point applied to them removes a point of Progress that was applied during
@@ -312,17 +315,17 @@ function ChapterActions() {
           </p>
         </Section>
         <Section header="Perception">
-          <p>
-            An Perception reaction is provoked by things that anything that attempts to avoid your senses, such as
-            stealth or hidden details.
-          </p>
           <ChallengeParams
-            pair={"Focus+Far"}
+            pair={{ focus: true, far: true }}
             risk={"Medium"}
             effort={"Low"}
             allocBonus={"Alert Style"}
             goals={["Variable"]}
           />
+          <p>
+            An Perception reaction is provoked by things that anything that attempts to avoid your senses, such as
+            stealth or hidden details.
+          </p>
           <p>
             If this was triggered by a Challenge someone else completed, the reaction has the same Goals as the
             Challenge that provoked it. Each point applied to them removes a point of Progress that was applied during
@@ -334,17 +337,17 @@ function ChapterActions() {
           </p>
         </Section>
         <Section header="Willpower">
-          <p>
-            A Willpower reaction is provoked by things that anything that manipulates your emotions or instincts, such
-            as fear, exhaustion, or temptation.
-          </p>
           <ChallengeParams
-            pair={"Focus+Self"}
+            pair={{ focus: true, self: true }}
             risk={"Medium"}
             effort={"Low"}
             allocBonus={"Confident Style"}
             goals={["Variable"]}
           />
+          <p>
+            A Willpower reaction is provoked by things that anything that manipulates your emotions or instincts, such
+            as fear, exhaustion, or temptation.
+          </p>
           <p>
             If this was triggered by a Challenge someone else completed, the reaction has the same Goals as the
             Challenge that provoked it. Each point applied to them removes a point of Progress that was applied during
@@ -363,17 +366,17 @@ function ChapterActions() {
           something in Hidden Space.
         </p>
         <Section header="Hidden Attack">
-          <p>
-            You grapple with another's hidden body, interfering with its workings, attempting to sever it from its
-            hidden counterpart, or forcing it to a different depth.
-          </p>
           <ChallengeParams
-            pair={"Variable"}
+            pair={{ variable: true }}
             risk={"Medium"}
             effort={"Medium"}
             allocBonus={"Sublimation Style"}
             goals={["Threat", "Floating", "Sinking"]}
           />
+          <p>
+            You grapple with another's hidden body, interfering with its workings, attempting to sever it from its
+            hidden counterpart, or forcing it to a different depth.
+          </p>
           <p>
             This attack can only be used while you are on depth layer 1 of hidden space. It can target anyone on this
             layer or in physical space.
@@ -393,14 +396,14 @@ function ChapterActions() {
           <p>This attack provokes a Hidden Defense reaction.</p>
         </Section>
         <Section header="Hidden Defense">
-          <p>You will your hidden body to maintain its integrity against an onslaught.</p>
           <ChallengeParams
-            pair={"Variable"}
+            pair={{ variable: true }}
             risk={"Low"}
             effort={"Medium"}
             allocBonus={"Sublimation Style"}
             goals={["Defense"]}
           />
+          <p>You will your hidden body to maintain its integrity against an onslaught.</p>
           <p>
             The Hidden Metabolism used for this reaction is the same as the one used by the attack that triggered it. If
             you have the Sublimed state, you can use Focus for the Physical Metabolism, otherwise no Physical Metabolism

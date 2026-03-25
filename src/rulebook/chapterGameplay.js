@@ -864,8 +864,9 @@ function ChapterGameplay() {
           <Section header="Dying">
             <p>
               You are unconscious and cannot take actions. You can only remove this state by getting medical care or
-              supernatural healing. If you have this state for more than an hour, you die. When the Dying State is
-              removed, you become Off Balance with intensity 3 because you need to get back on your feet.
+              supernatural healing, even if the injury states that caused this is removed. If you have this state for
+              more than an hour, you die. When the Dying State is removed, you become Off Balance with intensity 3
+              because you need to get back on your feet.
             </p>
           </Section>
         </Section>

@@ -1,1 +1,29 @@
 @import url("../../variables.css");
+
+.challengeParams {
+  margin-top: -12px;
+  padding-top: 6px;
+  background: var(--highlight);
+}
+
+.classified .challengeParams {
+  background: var(--darkHighlight);
+  color: var(--physicalSpace);
+}
+
+.classified .challengeParams h5 {
+  background: var(--darkHighlight);
+}
+
+.challengeParams-row {
+  display: flex;
+}
+
+.lowRiskEffortTag {
+  background: var(--physicalSpace);
+  padding: 3px;
+}
+.highRiskEffortTag {
+  background: var(--hiddenSpace);
+  padding: 3px;
+}

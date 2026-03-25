@@ -25,11 +25,12 @@ function ChapterExperience() {
               <p>
                 The Physical Metabolisms you start the game with only improve slowly with great effort. They're likely
                 to see only minor growth over the long term. Conversely, your Hidden Metabolisms may all start low but
-                they will grow quickly as you learn to more deeply connect your physical and hidden bodies.{" "}
+                they will grow quickly as you learn to more deeply connect your physical and hidden bodies.
               </p>
               <p>
                 These improvements come from the Experience you earn during your adventures. Experience points you earn
-                are used to buy ranks in the Styles and Specializations of the nine Entanglements.{" "}
+                are used to buy ranks in the nine Entanglements and the Styles and Specializations contained within
+                them.
               </p>
               <p>
                 Entanglements represent a permanent connection between your physical and hidden bodies that you have
@@ -46,7 +47,7 @@ function ChapterExperience() {
                 A cascade event is a temporary, often overtly supernatural, effect you can learn to induce through your
                 experience. By transferring information from the hidden body into the thermodynamically separate
                 physical space, entropy is locally reversed and free energy is created. By controlling this process, one
-                can evoke influence inside or outside the body and create action at a distance.{" "}
+                can evoke influence inside or outside the body and create action at a distance.
               </p>
               <p>
                 There is a single cascade event associated with each Entanglement. Each Entanglement contains
@@ -63,28 +64,23 @@ function ChapterExperience() {
     >
       <Section header="Using Entanglements">
         <p>
-          There are 9 Entanglements, one for each possible Metabolism pairing. Each Entanglement is composed of two
-          Styles, one is intuitive and improves the method of problem solving that comes naturally to this metabolism
-          pairing, the other is esoteric and allows you to develop the supernatural cascade event that this pairing
-          makes possible. Each Style contains within it several Specializations that allow you to further refine its
-          capabilities.
+          There are 9 Entanglements, one for each possible Metabolism pairing. Each is associated with one inhale
+          action, one exhale action or reaction, and one cascade event. The Entanglement is focused on improving and
+          customizing these actions, as well as providing unique abilities related to them.
         </p>
         <p>
-          Each Entanglement is also associated with a specific inhale action, a specific exhale action or reaction, and
-          a specific cascade event. The Styles and Specializations within each Entanglement are focused on improving
-          these signature actions.
+          Each Entanglement has 3 ranks you can acquire. These ranks permanently increase one of Metabolisms in the
+          Entanglement's pair. These ranks also grant access to two Styles, one intuitive that improves the method of
+          problem solving that comes naturally to this Metabolisms pairing, the other is esoteric and allows you to
+          induce the supernatural cascade event that this pairing makes possible. Each Style contains within it several
+          Specializations that allow you to further refine its capabilities.
         </p>
         <Section header="Styles">
           <p>
-            Each Style is composed of three ranks that improve your Metabolisms and grant you access to your choice of
-            several Specializations. The intuitive Style contains several Specializations that focus on boosting your
-            natural abilities beyond human limits, often improving the effectiveness of the specific exhale action or
-            reaction associated with its Entanglement. The Esoteric Style grants overtly supernatural capabilities and
-            ways to improve and customize cascade events.
-          </p>
-          <p>
-            The rank of each Style itself is also added as an allocation bonus to every Challenge related to its
-            associated action.
+            Each Style is composed of 3 ranks you can acquire. These ranks grant an allocation bonus to an associated
+            action and grant you access to your choice of several Specializations. The intuitive Style contains several
+            Specializations that focus on boosting your natural abilities beyond human limits. The Esoteric Style grants
+            overtly supernatural capabilities and ways to improve and customize cascade events.{" "}
           </p>
           <p>
             For example, the Entanglement of Flight + Self contains the intuitive style Tough which has Specializations
@@ -97,28 +93,41 @@ function ChapterExperience() {
         </Section>
         <Section header="Specializations">
           <p>
-            Each Specialization is composed of three ranks. Each one has unique permanent benefits related to the core
-            theme of its parent Style. The number of Specializations you can have ranks in is limited by your rank in
-            its parent style. You can have 1 Specialization at rank 1, up to 2 more at rank 2, and up to 3 more at rank
-            3, resulting in a total of 6 Specializations available at rank 3 in a Style.{" "}
+            Each Specialization is also composed of 3 ranks. Each one has unique permanent benefits related to the core
+            theme of its parent Style. The number of Specializations you can have ranks in is limited. You can only buy
+            ranks in Specializations that have been granted to you a rank in its parent Style and Entanglement.
           </p>
         </Section>
-        <Section header="Buying Entanglements">
+        <Section header="Buying Ranks">
           <p>
-            After each session, the GM will give each player at least 1 experience point, or more if you accomplish
-            important goals or have a particularly dramatic and entertaining session. Experience points are spent to buy
-            ranks in Styles and Specializations. Each rank costs its rank in points, so rank 1 costs 1 point, rank 2
-            costs 2 points, and so on. You can buy ranks in any combination of Styles you wish, but Specializations only
-            become available after you buy ranks their parent Style.
+            After each session, the GM will give each player at 1 or more experience points. More experience points are
+            given for longer, more dramatic, or more entertaining sessions, or if the characters attain goals, reach
+            milestones, or learn lessons. Experience points are spent to buy ranks in Entanglements, Styles and
+            Specializations.
+          </p>
+          <p>
+            Buying any rank in a Specialization costs 1 experience point. Buying a rank in a Style costs the same number
+            as the rank, so they cost 1, 2, or 3 points. Buying a rank in an Entanglement costs double the rank, so they
+            cost 2, 4, or 6 points.
+          </p>
+          <p>
+            You can buy ranks in any combination of Entanglements you wish, but the first rank of all Styles and
+            Specializations only becomes available after you buy a rank that specifically grants access to them.
+          </p>
+          <p>
+            When you buy a rank in an Entanglement or Style that gives you the first rank in a Specialization, you can
+            choose and gain this rank in the Specialization immediately, or at any later time. Entanglement ranks
+            specifically let you pick a Specialization from either associated Style but only if you have ranks in it, so
+            you can wait to have to get ranks in a Style and before choosing which Specialization you want to pick.
           </p>
         </Section>
 
         <Section header="Metabolism Growth">
-          <p>As you spend experience, your Metabolism scores will also permanently increase.</p>
+          <p>As you buy Entanglement ranks, your Metabolism scores will permanently increase.</p>
           <p>
-            The first rank of each Style and the final rank of every Specialization increase the Hidden Metabolism score
-            associated with their parent Entanglement. The associated Physical Metabolism score will only be increased
-            by acquiring the final rank of a Style.
+            The every rank of each Entanglement increases associated Hidden Metabolism score. Improving the physical
+            body is more difficult, do Physical Metabolism scores only increase by acquiring the final rank of an
+            Entanglements associated with it.
           </p>
         </Section>
       </Section>
@@ -130,10 +139,13 @@ function ChapterExperience() {
           The first rank you acquire in any esoteric Style allows you to induce the cascade event associated with it.
         </p>
         <p>
-          Cascade events are a special class of action typically used to do something overtly supernatural. They are
+          Cascade events are a special class of action used to create temporary overtly supernatural effects. They are
           typically done as exhale actions and the description of each event indicates the parameters of the Challenge
           required to induce it and the Goals any Progress can be applied to. When induced, an event typically creates
           some small effect even if no Progress is invested in it.
+        </p>
+        <p>
+          You cannot induce a cascade event that has a Challenge requiring a Metabolism that is injured or dissociated.
         </p>
         <p>
           The physical appearance of inducing a cascade event is up to you, however unless the event specifies
@@ -145,11 +157,8 @@ function ChapterExperience() {
             The amount of Progress needed to induce an event, and the strength of the event, are described its Goals.
             Unlike standard Challenges, the Goals of cascade events are limited by your ability. You cannot spend more
             Progress on any Goal than your rank in the Style, or double this rank if you used the Prime action to
-            Prepare it.
-          </p>
-          <p>
-            The description of each event explains what effects each Goal will have per point of Progress you apply to
-            it.
+            Prepare it.The description of each event explains what effects each Goal will have per point of Progress you
+            apply to it.
           </p>
         </Section>
         <Section header="Improving Events">

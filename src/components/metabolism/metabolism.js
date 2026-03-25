@@ -13,7 +13,8 @@ const Metabolism = ({ fight, flight, focus, self, near, far, pairLeft, pairRight
     (focus && "Focus") ??
     (self && "Self") ??
     (near && "Near") ??
-    (far && "Far")
+    (far && "Far") ??
+    "Variable"
   }`;
 
   const cssLabel = label.toLowerCase();

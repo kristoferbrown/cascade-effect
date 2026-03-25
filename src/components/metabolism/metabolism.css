@@ -50,12 +50,18 @@
 
 .classified .metabolism.fight {
   background: var(--fight);
+  color: var(--hiddenSpace);
+  -webkit-text-stroke: 0.25px var(--hiddenSpace);
 }
 .classified .metabolism.flight {
   background: var(--flight);
+  color: var(--hiddenSpace);
+  -webkit-text-stroke: 0.25px var(--hiddenSpace);
 }
 .classified .metabolism.focus {
   background: var(--focus);
+  color: var(--hiddenSpace);
+  -webkit-text-stroke: 0.25px var(--hiddenSpace);
 }
 .classified .metabolism.self {
   background: var(--self);
