@@ -10,6 +10,7 @@ import StyleDescription from "../components/section/style-desc";
 // import Crosslink from "../components/crosslink/crosslink";
 import Pair from "../components/metabolism/pair";
 import Metabolism from "../components/metabolism/metabolism";
+import ChallengeParams from "../components/challengeParams/challengeParams";
 
 function ChapterEntanglements() {
   const { topicMap } = useContext(RulebookContext);
@@ -126,8 +127,7 @@ function ChapterEntanglements() {
       <Section header="Fight + Self">
         <p>
           This entanglement allows one to augment or alter their physical form. Mastering it can grant you peerless
-          unarmed offense, superhuman strength, shapeshifting, or the ability to adapt to situations. It can increase
-          the bonuses for the Unarmed Attack or Heal actions, or the Empower cascade event.
+          unarmed offense, superhuman strength, or the ability to transform your body.{" "}
         </p>
         <EntanglementDescription
           hidMet={<Metabolism self />}
@@ -142,13 +142,26 @@ function ChapterEntanglements() {
             intro={
               <p>
                 The intuitive style of the entanglement of Fight + Self boosts the brute physical strength of the body
-                and the efficacy of attacks in unarmed combat.
+                and the efficacy of Unarmed Attacks.
               </p>
             }
             styleName="Strong"
             associatedAction="Unarmed Attack actions"
             rank1Bonus="Fighting up close and personal allows you to disable opponents quickly. When you cause Stress with an Unarmed Attack, you may choose which Physical Metabolism is in the pair that the Stress is dealt to instead of it always being Flight."
           />
+          <Section header="Brawler" isInset>
+            <SpecializationDescription
+              intro={<p>You can seamlessly blend armed and unarmed close combat, gaining the best of both worlds.</p>}
+              ranks={[
+                <p>You may replace the Self component of Unarmed Attack Challenges with Near.</p>,
+                <p>You may replace the Near component of armed Melee Attack Challenges with Self. </p>,
+                <p>
+                  When you Prepare a Melee or Unarmed Attack, you can add either Self or Near to it instead of Focus.
+                  You do not need a free hand to inflict or maintain the Grappled state.{" "}
+                </p>,
+              ]}
+            />
+          </Section>
           <Section header="Explosive Strength" isInset>
             <SpecializationDescription
               intro={
@@ -157,56 +170,60 @@ function ChapterEntanglements() {
                   the power behind explosive movements.
                 </p>
               }
-              rank3Met={{ self: true }}
               ranks={[
                 <p>
-                  You may replace the Near component of armed melee attack rolls with Self. The distance you can jump is
-                  doubled.
+                  When you use an inhale action to Move in a straight line towards a target, and then then use your
+                  exhale action to make a Melee or Unarmed attack against the target, you can put your whole weight and
+                  strength into the strike. This lets you add your rank in this Specialization as extra Progress to the
+                  attack that can only be used on the Grapple or Off Balance Goals.
                 </p>,
-                <p>The distance you can jump is tripled. Increase your Unarmed Attack Bonus by 1.</p>,
-                <p>The distance you can jump is quadrupled.</p>,
+                <p>
+                  The distance you can jump is tripled. Any obstacle that can be jumped over cannot increase the Risk or
+                  add additional fixed Goals to a Move action.
+                </p>,
+                <p>
+                  When you use the free movement from making a Melee or Unarmed Attack, you can move an extra meter as
+                  long as you use it to move directly towards the target before the attack.{" "}
+                </p>,
               ]}
             />
           </Section>
           <Section header="Iron Grip" isInset>
             <SpecializationDescription
               intro={<p>You can use weapons that would normally be too large to wield effectively.</p>}
-              rank3Met={{ self: true }}
               ranks={[
-                <p>You can wield a weapon of size 3 in your main hand.</p>,
-                <p>You can wield weapons of size 3 in either hand. You cannot be disarmed against your will.</p>,
-                <p>You can wield weapons of size 4 in either hand.</p>,
+                <p>You can wield a weapon of size 3 in one hand.</p>,
+                <p>You cannot be disarmed against your will. Weapons of size 4 can be used without being Prepared.</p>,
+                <p>You can wield weapons of size 4 in one hand.</p>,
               ]}
             />
           </Section>
           <Section header="Lifting Capacity" isInset>
             <SpecializationDescription
-              intro={<p>You can lift objects beyond what your strength would normally allow.</p>}
-              rank3Met={{ self: true }}
+              intro={<p>You can lift objects beyond what your physique would normally allow.</p>}
               ranks={[
                 <p>You can reliably lift 300 kilograms.</p>,
-                <p>You can reliably lift 600 kilograms.</p>,
-                <p>You can reliably lift 1200 kilograms.</p>,
+                <p>
+                  You can reliably lift 600 kilograms. Any non-attack Challenge that is primarily about raw physical
+                  strength is always low Risk.
+                </p>,
+                <p>
+                  You can reliably lift 1200 kilograms. Any non-attack Challenge that is primarily about raw physical
+                  strength is always low Effort.
+                </p>,
               ]}
             />
           </Section>
           <Section header="Unarmed Mastery" isInset>
             <SpecializationDescription
               intro={<p>Your empty hands have become powerful weapons.</p>}
-              rank3Met={{ self: true }}
               ranks={[
+                <p>Your Unarmed Attack can use the Off Balance Goal in the same way Melee Attacks can.</p>,
                 <p>
-                  You gain the Trait Unarmed Mastery, this Trait is relevant any time you attempt to make an unarmed
-                  attack.
+                  When you make an Unarmed Attack, you can choose for it to hit as if it were either a blunt or bladed
+                  weapon of size 1.
                 </p>,
-                <p>
-                  Your unarmed attacks count as size 0 blunt weapons, allowing you to choose to target Flight or Focus
-                  with them. Your reach with unarmed attacks increases by 1 meter.
-                </p>,
-                <p>
-                  You can add Focus as a third metabolism to the metabolism pairing used to make an unarmed attack. Your
-                  unarmed attacks count as size 1 blunt weapons.
-                </p>,
+                <p>Your reach with Unarmed Attacks increases by 1 meter.</p>,
               ]}
             />
           </Section>
@@ -220,9 +237,8 @@ function ChapterEntanglements() {
           <StyleDescription
             intro={
               <p>
-                The esoteric style of the entanglement of Fight + Self is the discipline of the “split body” which
-                allows one to develop ways to reshape the body, rewire the brain, and temporarily boost your
-                capabilities. These abilities are primarily expressed through the Empower cascade event.
+                The esoteric style entangles Fight + Self to enable the discipline of the “split body” which allows one
+                to develop ways to temporarily reshape the body, rewire the brain, and boost your physical capabilities.
               </p>
             }
             styleName="Schizosomata"
@@ -231,112 +247,145 @@ function ChapterEntanglements() {
           />
           <EventDescription
             eventName="Empower"
-            intro="You focus on your physical form, modifying its capabilities for a short time."
-            inductionTime="Non-action at the start of your turn"
-            metrics={[{ name: "Intensity", value: "1 level" }]}
+            intro="You focus on your physical form, altering and improving it for a short time."
             linkTarget={linkMap.SchizosomataStyle}
             description={
               <>
+                <ChallengeParams
+                  pair={{ fight: true, self: true }}
+                  risk={"Medium"}
+                  effort={"Medium"}
+                  allocBonus={"Schizosomata Style"}
+                  goals={["Capacity"]}
+                />
                 <p>
-                  Increase your maximum, but not current, Self value by the Intensity level of this event. This can
-                  cause these values to go above your Self score. As long as your new maximum is above your Self score,
-                  you are in an empowered state. While in this state, you take an unavoidable point of Stress to Self at
-                  the end of each round. You cannot induce this event again while empowered, or more than once a round.
+                  Increase the capacity, but not the current value, of your Self Metabolism by the result of the
+                  Capacity Goal, and then you enter a special State called Empowered.{" "}
+                </p>
+                <h5>The Empowered State</h5>
+                <p>
+                  While in this state your appearance undergoes minor but noticeable changes, appearing stronger, more
+                  intimidating, more beautiful, or unearthly in some way, as you see fit. You cannot induce this event
+                  again while you have the Empowered state.
                 </p>
                 <p>
-                  While empowered, you can "spend empowerment" by taking an unavoidable point of Stress to a Self. When
-                  making an Unarmed Attack, you can spend empowerment to add your Empower bonus to the threat dealt by
-                  the attack.
+                  At the end of every turn after the turn you induced this event, this State decays. If your Self
+                  capacity is greater than your Self score it takes a point of Stress. If it is not, you lose the
+                  Empowered State.
+                </p>
+                <h5>Strain</h5>
+                <p>
+                  Your heightened Self capacity is a resource that some Specializations in this Style consume by causing
+                  Strain. To Strain, you take a point of Stress to Self. You can only Strain while in the Empowered
+                  State
+                </p>
+                <h5>Immediate Effects</h5>
+                <p>
+                  In addition to empowering you for further action, this event also causes immediate effects. After you
+                  induce this event as an exhale action, the immediate effect is that you can instantly Rest or
+                  Manipulate without consuming an action.{" "}
+                </p>
+                <p>
+                  Certain Specializations within this Style allow you to induce this event at other times than as an
+                  exhale action, triggering different immediate effects when you do.
                 </p>
               </>
             }
           />
-          <Section header="Deep Empowerment" isClassified>
+          <Section header="Combat Form" isClassified>
             <SpecializationDescription
-              intro={<p>Increase the power and duration of your Empower events.</p>}
-              rank3Met={{ self: true }}
-              ranks={[
-                <p>While empowered, you take Stress to Self at the end of each minute instead of each round.</p>,
-                <p>
-                  While empowered, you no longer take Stress to Self each minute, however any time you rest while
-                  empowered your Self maximum is reset to your Self score.
-                </p>,
-                <p>Your Self maximum no longer resets when you rest.</p>,
-              ]}
-            />
-          </Section>
-          <Section header="Fade" isClassified>
-            <SpecializationDescription
-              intro={
-                <p>
-                  You can temporarily control how you are perceived and even to remove yourself from the memory of
-                  others.
-                </p>
-              }
-              rank3Met={{ self: true }}
+              intro={<p>You can transform your body to become have natural weapons and armor.</p>}
               ranks={[
                 <p>
-                  As an action, you can spend empowerment to gain the Faded state with an intensity of your Empower
-                  bonus, or increase the intensity of your Faded state by this amount.
+                  You can induce Empower as an inhale action. When you do this the immediate effect is that your next
+                  attack you make this turn is Prepared.
                 </p>,
                 <p>
-                  As an action, you can spend empowerment to give someone that can see you the Enthralled state with an
-                  intensity of your Empower bonus, or increase the intensity of their Enthralled state by this amount.
-                  They may make a Willpower reaction to reduce this intensity.
+                  When you are Empowered you can choose to have natural weapons grow out of your body. When making
+                  Unarmed Attacks you may replace your Strong rank with you Schizosomata rank in the attack's allocation
+                  bonus, or you may Strain to add both bonuses simultaneously.
                 </p>,
                 <p>
-                  When you spend empowerment to gain the Faded state, you may also make your identity unrecognizable to
-                  anyone and uncapturable by recording equipment. Anyone who was aware of you will forget your presence
-                  at the end of the scene and attribute the consequences of your actions to the next most plausible
-                  source.
+                  When you are Empowered you can harden your skin into effective armor. Replace the armor rating of any
+                  armor you are wearing with your Schizosomata rank while empowered.
                 </p>,
               ]}
             />
           </Section>
-          <Section header="Mimic" isClassified>
+          <Section header="Empowered Healing" isClassified>
             <SpecializationDescription
-              intro={
-                <p>
-                  Mimic You can quickly memorize the patterns in the skills of others when you witness them and
-                  temporarily mimic them perfectly.
-                </p>
-              }
-              rank3Met={{ self: true }}
+              intro={<p>You can physically repair the body instead of reshaping it and Empower others.</p>}
               ranks={[
                 <p>
-                  After you witness someone using a skill based Trait, you can spend empowerment to temporarily gain the
-                  same Trait for a number of minutes equal to your empower bonus.
+                  Any time you use the Heal action you can induce Empower as part of the same action. The target of the
+                  Heal action gains the benefits of Empower, but no additional immediate effect occurs. Targeting
+                  someone other than yourself this way consumes materials from your own body, causing a point of Stress
+                  to Fight, but does not require medical equipment.
                 </p>,
                 <p>
-                  While you are mimicking a Trait, you may spend empowerment again to keep the Trait until you mimic a
-                  different Trait.
+                  Your Heal action can remove the Dying state and now restores the capacity of every injured Physical
+                  Metabolism instead of just one.
                 </p>,
                 <p>
-                  After you witness someone inducing any cascade event while you are empowered, during your next turn
-                  you may reset your Self maximum to your Self score to induce that same event. Increase your Self score
-                  by 1.
+                  When using Heal and Empower as the same action, after resolving the Heal effect the Empower event can
+                  cause further healing. For each point of the Progress on the Capacity Goal, you can remove a point of
+                  Stress from any Physical Metabolism or use it normally to increase the Self Capacity by 1.
+                </p>,
+              ]}
+            />
+          </Section>
+          <Section header="Hemokinesis" isClassified>
+            <SpecializationDescription
+              intro={<p>Your mastery of biology allows you to manipulate the blood itself when it is spilled.</p>}
+              ranks={[
+                <p>
+                  You can induce Empower as a reaction to gaining an injury State. If you do, the immediate effect is
+                  that your lost blood coagulates into a hard structure around your wounds, increasing your armor rating
+                  by by 1. You retain this armor for as long as you have this injury state or the Empowered state.
+                </p>,
+                <>
+                  <p>
+                    You can induce Empower as a reaction to anyone within your reach gaining an injury State. When you
+                    do this, the target is the injured person and you can use either the normal Capacity Goal, or an
+                    alternative Goal Hemorrhage, but not both at the same time.
+                  </p>
+                  <p>
+                    If you use Capacity, the injured person gains the benefits of being empowered as if you had induced
+                    the event targeting yourself, including the armor described by the previous rank.
+                  </p>
+                  <p>
+                    If you use Hemorrhage, you leverage the target's blood loss against them, causing painful sharp
+                    clots, high pressure sprays, or dangerous pressure drops. The target takes an additional amount of
+                    Stress equal to the Hemorrhage Goal, divided among their remaining Physical metabolisms as you see
+                    fit.
+                  </p>
+                </>,
+                <p>
+                  When inducing Empower as a reaction to an injury state on yourself or an adjacent target, you can use
+                  both the Capacity and Hemorrhage Goals simultaneously. When you do, you can spread the Self capacity
+                  gains and extra Stress taken as you see fit between every person adjacent to you or the target. All
+                  targets that gain Capacity gain the Empowered state and a point of armor that lasts as long as this
+                  state does.
                 </p>,
               ]}
             />
           </Section>
           <Section header="Rage" isClassified>
             <SpecializationDescription
-              intro={<p>When Empowered your adrenaline pushes you beyond the limits of your body.</p>}
-              rank3Met={{ self: true }}
+              intro={<p>When Empowered, adrenaline pushes you beyond the limits of your body.</p>}
               ranks={[
                 <p>
-                  You can spend empowerment before attempting a Challenge involving a feat of strength to double your
-                  strength and lifting capacity until you complete the Challenge
+                  You can induce the Empower event as a reaction to taking Stress from an attack. If you do, the
+                  immediate effect reduces the amount of Stress taken by your Schizosomata rank.{" "}
                 </p>,
                 <p>
-                  You can spend empowerment when reacting to any attack to reduce the Threat dealt by your Empower
-                  Bonus.
+                  You can Strain to double your lifting capacity and gain Advantage on all Challenges involving feats of
+                  Strength for the next minute.
                 </p>,
                 <p>
-                  You can spend empowerment when you regain spent Metabolism points at the Send of the round to ignore
-                  any injury or dissociation states until the next round. When you do so, any Physical Metabolism that
-                  would regain 0 points instead regains points equal to your Empower Bonus. Increase your Self score by
-                  1.
+                  When you regain Metabolism points at the start of a turn, you can Strain to ignore any injury or
+                  dissociation states until your next turn. When you do so, any Physical Metabolism that would regain 0
+                  points instead regains points equal to your Schizosomata rank.
                 </p>,
               ]}
             />
@@ -346,31 +395,38 @@ function ChapterEntanglements() {
               intro={
                 <p>
                   While the hidden body is mutable, the physical body is typically more static. This specialization
-                  changes that, allowing you to physically transform yourself.
+                  changes that, allowing you transform yourself permanently.
                 </p>
               }
-              rank3Met={{ self: true }}
               ranks={[
                 <p>
                   You permanently become an idealized version of yourself. You decide whether that means attractive,
-                  youthful, intimidating, or any other appearance you aspire to. Gain a Trait that describes this
-                  appearance.
+                  youthful, intimidating, matching the ideal of a specific subculture, or any other appearance you
+                  aspire to. Gain a Trait that describes this appearance.
                 </p>,
                 <p>
-                  If you start resting for an hour or longer while empowered, you can spend empowerment to slowly and
-                  permanently transform into a person of any appearance, build, gender, or skin color. For every 10
-                  centimeters or kilograms that your new body differs from your original body, you must spend
-                  empowerment.
+                  Over the course of an hour you can slowly and permanently transform yourself into any appearance,
+                  build, gender, voice, or skin color you wish. This change can only roughly imitate specific other
+                  people, if someone examines you closely they can tell you are an impostor. For every 10 kilograms or
+                  centimeters of height that your new body differs from your original body, you must take a point of
+                  Stress to Self.
                 </p>,
-                <p>
-                  If you start resting for an hour or longer while empowered, you can spend empowerment to permanently
-                  move a point from one Physical Metabolism score to another. The minimum score a metabolism can attain
-                  this way is 2.
-                </p>,
+                <>
+                  <p>
+                    Over the course of an hour, you can permanently move a point from one Physical Metabolism score to
+                    another. The minimum score a metabolism can attain this way is 2.
+                  </p>
+                  <p>You can also now perfectly mimic another person when you transform.</p>
+                  <p>
+                    Additionally, you can make the transformations allowed by this Specialization instantly as an exhale
+                    action instead of over an hour, but doing so is highly stressful and reduces both your Fight and
+                    Self capacities to 1 bringing you to the brink of injury and dissociation.
+                  </p>
+                </>,
               ]}
             />
           </Section>
-          {/* <Section header="Hemokinesis" isClassified></Section> */}
+          {/* <Section header="???" isClassified></Section> */}
         </Section>
       </Section>
 
@@ -449,7 +505,6 @@ function ChapterEntanglements() {
               intro={
                 <p>You can split your proprioceptive awareness between both hands without any loss of coordination.</p>
               }
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   When you hold a weapon in each hand, you can attack with both of them as a single full action. Both
@@ -474,7 +529,6 @@ function ChapterEntanglements() {
                   against them.
                 </p>
               }
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   Once per round you may make a free counterattack in response to certain triggers, targeting the enemy
@@ -496,7 +550,6 @@ function ChapterEntanglements() {
           <Section header="Deft Combat" isInset>
             <SpecializationDescription
               intro={<p>You can make the most of enhanced finesse while in close combat.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>Drawing or reloading a weapon are now both non-actions.</p>,
                 <p>
@@ -513,7 +566,6 @@ function ChapterEntanglements() {
           <Section header="Melee Mastery" isInset>
             <SpecializationDescription
               intro={<p>You have perfected the movements of the blades and blows of close combat.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   You gain the Trait Melee Mastery, this Trait is relevant any time you use the Melee Attack action.
@@ -534,7 +586,6 @@ function ChapterEntanglements() {
                   propagating.
                 </p>
               }
-              rank3Met={{ near: true }}
               ranks={[
                 <p>You can move completely silently as long as you're moving at a walking pace or slower.</p>,
                 <p>
@@ -554,7 +605,6 @@ function ChapterEntanglements() {
           <Section header="Sleight of Hand" isInset>
             <SpecializationDescription
               intro={<p>You can interact with things undetected and without permission.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   When you use the Interact action, you can do so without anyone noticing. If you do this to draw a
@@ -598,7 +648,6 @@ function ChapterEntanglements() {
                   interactions.
                 </p>
               }
-              rank3Met={{ near: true }}
               ranks={[
                 <>
                   <p>
@@ -629,7 +678,6 @@ function ChapterEntanglements() {
                   You can prevent electromagnetism from propagating meaningful distances through the air in a region.
                 </p>
               }
-              rank3Met={{ near: true }}
               ranks={[
                 <>
                   <p>
@@ -656,11 +704,10 @@ function ChapterEntanglements() {
           </Section>
           <Section header="Photonic Combat" isClassified>
             <SpecializationDescription
-              intro={<p>You can sense and interpret additional parts of the electromagnetic spectrum.</p>}
-              rank3Met={{ near: true }}
+              intro={<p>Your ability you use electromagnetism as a weapon improves.</p>}
               ranks={[
                 <p>
-                  The Range metric of your Refract event increases from 1 meter by 1 addtional meter per rank you have
+                  The Range metric of your Refract event increases from 1 meter by 1 additional meter per rank you have
                   in this specialization.
                 </p>,
                 <p>You can induce Refract as an attack action.</p>,
@@ -674,7 +721,6 @@ function ChapterEntanglements() {
           <Section header="Sense Waveform" isClassified>
             <SpecializationDescription
               intro={<p>You can sense and interpret additional parts of the electromagnetic spectrum.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   You can emit a tiny amount of light in an underutilized portion of the spectrum and then sense its
@@ -745,7 +791,6 @@ function ChapterEntanglements() {
           <Section header="Disentangle" isInset>
             <SpecializationDescription
               intro={<p>You can assault a target's connection to their hidden body directly.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   You can use the attack action Disentangle against anyone within a range equal to your Far score. The
@@ -766,7 +811,6 @@ function ChapterEntanglements() {
           <Section header="Pierce" isInset>
             <SpecializationDescription
               intro={<p>You can make the most from the trajectory of a single attack.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>The targets of your ranged attacks cannot benefit from cover.</p>,
                 <p>
@@ -788,7 +832,6 @@ function ChapterEntanglements() {
                   despite complications.
                 </p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   You gain the Trait Ranged Mastery, this Trait is relevant any time you attempt to make an attack with
@@ -808,7 +851,6 @@ function ChapterEntanglements() {
           </Section>
           <Section header="Stealth Strike" isInset>
             <SpecializationDescription
-              rank3Met={{ far: true }}
               intro={
                 <p>
                   When your opponent is unable to properly defend against you, you can intuitively sense their weak
@@ -835,7 +877,6 @@ function ChapterEntanglements() {
                   entering the area.
                 </p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   When you choose to suppress with a ranged attack instead of dealing Threat, you can designate a number
@@ -879,7 +920,6 @@ function ChapterEntanglements() {
                   output.
                 </p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <p>The Power metric of your Evoke event has no limit, you can spend any amount of Progress on it.</p>,
                 <p>
@@ -893,7 +933,6 @@ function ChapterEntanglements() {
           <Section header="Blast Radius" isClassified>
             <SpecializationDescription
               intro={<p>Your Evoke events can affect a larger area.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   Your Evoke events gain the metric “Radius: 1 meter”. Everything within the Radius of the target of
@@ -910,7 +949,6 @@ function ChapterEntanglements() {
           <Section header="Combat Evocation" isClassified>
             <SpecializationDescription
               intro={<p>You are a master of using Evocation Attacks in tactical situations.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>Evoke ignores cover. You may choose if it ignites any flammable materials it strikes.</p>,
                 <p>If you hit a target behind cover with Evoke, they gain the Suppressed state with intensity 2.</p>,
@@ -924,7 +962,6 @@ function ChapterEntanglements() {
           <Section header="Force Push" isClassified>
             <SpecializationDescription
               intro={<p>You can apply enough force to targets to move them.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   When you deal Stress to a target due to an Evoke event or any other attack action, you may force them
@@ -1003,7 +1040,6 @@ function ChapterEntanglements() {
           <Section header="Diehard" isInset>
             <SpecializationDescription
               intro={<p>It is extremely hard to take you out of a fight.</p>}
-              rank3Met={{ self: true }}
               ranks={[
                 <p>
                   When one of your Physical Metabolism maximums is reduced to 0, you do not gain the injury State that
@@ -1025,7 +1061,6 @@ function ChapterEntanglements() {
                   You unconsciously use the cascade effect to create the energy your body needs to maintain your health.
                 </p>
               }
-              rank3Met={{ self: true }}
               ranks={[
                 <p>You no longer require food or water to remain healthy and comfortable.</p>,
                 <p>
@@ -1047,7 +1082,6 @@ function ChapterEntanglements() {
                   throw you off balance.
                 </p>
               }
-              rank3Met={{ self: true }}
               ranks={[
                 <p>
                   When you use the rest action in combat, you may use both the recover Metabolism option and the reduce
@@ -1069,7 +1103,6 @@ function ChapterEntanglements() {
                   transfuse them into your physical body to seal your wounds rapidly.
                 </p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <p>Remove 1 point of Stress from every Physical Metabolism every hour.</p>,
                 <p>Remove 1 point of Stress from every Physical Metabolism every minute.</p>,
@@ -1080,7 +1113,6 @@ function ChapterEntanglements() {
           <Section header="Stamina" isInset>
             <SpecializationDescription
               intro={<p>You can exert yourself for much longer durations than the body is normally capable.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   When you regenerate half of your spent Metabolism points between combat rounds , you regain an
@@ -1118,7 +1150,6 @@ function ChapterEntanglements() {
           <Section header="Combat Shielding" isClassified>
             <SpecializationDescription
               intro={<p>You use Ward tactically to protect your allies.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   Your Wards do not need to be straight lines, and can follow any path of you choose as long as the
@@ -1141,7 +1172,6 @@ function ChapterEntanglements() {
           <Section header="Filter" isClassified>
             <SpecializationDescription
               intro={<p>When using the Ward event you may add filtering properties to the barrier you create. </p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <>
                   <p>
@@ -1179,7 +1209,6 @@ function ChapterEntanglements() {
           <Section header="Repelling Ward" isClassified>
             <SpecializationDescription
               intro={<p>You can create airtight Wards that push others away.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   Instead of straight lines, you may create spherical wards centered on yourself with a diameter of up
@@ -1210,7 +1239,6 @@ function ChapterEntanglements() {
                   must move further through this field than other attacks, greatly reducing their damage.
                 </p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   Instead of reacting normally to an incoming attack, you may use a special Retrogradient reaction to
@@ -1231,7 +1259,6 @@ function ChapterEntanglements() {
           <Section header="Subtle Ward" isClassified>
             <SpecializationDescription
               intro={<p>You can create Wards that are effective without people being aware of them.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   You can choose if each Ward you make is opaque, translucent, or invisible. If an invisible ward has
@@ -1256,7 +1283,6 @@ function ChapterEntanglements() {
           <Section header="Sustain Ward" isClassified>
             <SpecializationDescription
               intro={<p>Your Ward events last longer and are more durable.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>Replace the Duration metric of your Ward event with “Duration: 1 minute, minimum = bonus”.</p>,
                 <p>Replace the Durability metric of your Ward event with “Durability: 2 Threat, minimum = bonus”.</p>,
@@ -1316,7 +1342,6 @@ function ChapterEntanglements() {
           <Section header="Charge" isInset>
             <SpecializationDescription
               intro={<p>You can effectively apply your movement in combat to your attacks and defenses.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   Add your Move action bonus to the amount of free movement you can take when you use this movement
@@ -1336,7 +1361,6 @@ function ChapterEntanglements() {
           <Section header="Evasion" isInset>
             <SpecializationDescription
               intro={<p>You have a strong sense for where attacks will land and how to avoid them.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>When reacting to an attack, if you reduce the threat dealt to 1, it is instead reduced to 0.</p>,
                 <p>
@@ -1353,7 +1377,6 @@ function ChapterEntanglements() {
           <Section header="Speed" isInset>
             <SpecializationDescription
               intro={<p>You can run much faster than before.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>The free movement you get when taking a basic action on your turn increases by 1 meter.</p>,
                 <p>When you use the Move action, double the amount of Progress created in the Challenge.</p>,
@@ -1364,7 +1387,6 @@ function ChapterEntanglements() {
           <Section header="Traversal" isInset>
             <SpecializationDescription
               intro={<p>Obstacles and terrain no longer hinder your movement.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>You can treat any terrain with a difficulty less than Move action bonus as normal terrain.</p>,
                 <p>You can freely pass through enemy spaces, but you cannot end an action in them.</p>,
@@ -1396,7 +1418,6 @@ function ChapterEntanglements() {
               intro={
                 <p>Your Telekinesis events can increase or decrease the mass of objects instead of moving them.</p>
               }
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   After moving an object with Telekinesis, you may spend a point of Near to double the object's weight.
@@ -1417,7 +1438,6 @@ function ChapterEntanglements() {
           <Section header="Remote Interaction" isClassified>
             <SpecializationDescription
               intro={<p>Your can telekinetically interact with objects and enemies as if they were within reach.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   The Interact action no longer requires a free hand and you can use it on any object weighing under 1
@@ -1439,7 +1459,6 @@ function ChapterEntanglements() {
           <Section header="Kinetic Attack" isClassified>
             <SpecializationDescription
               intro={<p>You can telekinetically throw small objects with bullet-like force.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   You can induce Telekinesis as an attack action to violently launch a tiny unattended object with
@@ -1463,7 +1482,6 @@ function ChapterEntanglements() {
           <Section header="Levitation" isClassified>
             <SpecializationDescription
               intro={<p>You can lift yourself or others off the ground with your mind.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   You can choose to target yourself with Telekinesis instead of an object in order to levitate. When you
@@ -1555,7 +1573,6 @@ function ChapterEntanglements() {
           <Section header="Danger Sense" isInset>
             <SpecializationDescription
               intro={<p>You can sense and predict incoming threats.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   In a reaction to a ranged attack, the first point of Far you spend produces an extra amount of
@@ -1578,7 +1595,6 @@ function ChapterEntanglements() {
                   ability to parallelize tasks.
                 </p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   You can focus on multiple tasks at one time. The exact limits of this are up to the GM, but it
@@ -1605,7 +1621,6 @@ function ChapterEntanglements() {
                   Your predictive abilities are so rapid and accurate that it seems like you can see the near future.
                 </p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   You can always act in a surprise round and enemies cannot get advantage by attacking you while
@@ -1627,7 +1642,6 @@ function ChapterEntanglements() {
           <Section header="Priority" isInset>
             <SpecializationDescription
               intro={<p>Your fast reactions let you take more turns at more advantageous times in combat.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   When combat starts, you may choose to have a secondary turn. Make two separate challenges to determine
@@ -1654,7 +1668,6 @@ function ChapterEntanglements() {
                   Your tactical predictions about where ranged threats are coming from greatly protect you from harm.
                 </p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   When reacting to a ranged attack, any cover within a meter of you is considered to be protecting you.
@@ -1691,7 +1704,6 @@ function ChapterEntanglements() {
                   it larger and more diffuse.
                 </p>
               }
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   Each time you spend Progress to increase the Area metric of your Field event, you may instead increase
@@ -1720,7 +1732,6 @@ function ChapterEntanglements() {
                   isolating its occupants.
                 </p>
               }
-              rank3Met={{ near: true }}
               ranks={[
                 <p>Replace the Duration metric of your Field events with “Duration: 1 minute”.</p>,
                 <>
@@ -1748,7 +1759,6 @@ function ChapterEntanglements() {
           <Section header="Halting Field" isClassified>
             <SpecializationDescription
               intro={<p>Your Field events can stop foes in their tracks.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   For everyone inside one of your Fields with inhibiting effects, the terrain difficulty of every space
@@ -1769,7 +1779,6 @@ function ChapterEntanglements() {
           <Section header="Hastening Field" isClassified>
             <SpecializationDescription
               intro={<p>Your Field events can greatly speed the movements of those inside it.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>Your Field event is selective, you may choose who is affected by any effects of the Field.</p>,
 
@@ -1854,7 +1863,6 @@ function ChapterEntanglements() {
                   cascade events less stressful.
                 </p>
               }
-              rank3Met={{ self: true }}
               ranks={[
                 <p>
                   You do not gain the Dissociated state if one Hidden Metabolism is disabled. However, if two of them
@@ -1871,7 +1879,6 @@ function ChapterEntanglements() {
           <Section header="Determination" isInset>
             <SpecializationDescription
               intro={<p>You can push yourself to the limit harder and longer than others.</p>}
-              rank3Met={{ self: true }}
               ranks={[
                 <p>
                   After using the Push action and still getting less Progress than desired, you may repeat the Push
@@ -1895,7 +1902,6 @@ function ChapterEntanglements() {
           <Section header="Event Bandwidth" isInset>
             <SpecializationDescription
               intro={<p>You can use pure willpower to induce cascade events with heightened intensity.</p>}
-              rank3Met={{ self: true }}
               ranks={[
                 <p>
                   You can use the Push action to improve cascade events. When you do, each metric can be increased again
@@ -1914,7 +1920,6 @@ function ChapterEntanglements() {
           <Section header="Insulation" isInset>
             <SpecializationDescription
               intro={<p>You have created a buffer that protects your hidden body from harm and influence.</p>}
-              rank3Met={{ self: true }}
               ranks={[
                 <p>
                   Your mind is protected from outside influence. You cannot unwillingly be the target of any effect that
@@ -1951,7 +1956,6 @@ function ChapterEntanglements() {
           <Section header="Blink" isClassified>
             <SpecializationDescription
               intro={<p>You can rapidly enter hidden space and exit it somewhere else nearby.</p>}
-              rank3Met={{ self: true }}
               ranks={[
                 <p>
                   The Range metric of your Sublime event increases to "2 meters". You can now induce a version of
@@ -1972,7 +1976,6 @@ function ChapterEntanglements() {
           <Section header="Deep Traversal" isClassified>
             <SpecializationDescription
               intro={<p>You can enter deeper reaches of hidden space allowing you to phase through more objects.</p>}
-              rank3Met={{ self: true }}
               ranks={[
                 <p>Replace the Depth metric with “Depth: 1 hour”.</p>,
                 <p>Replace the Depth metric with “Depth: 1 day”.</p>,
@@ -1988,7 +1991,6 @@ function ChapterEntanglements() {
                   expect. You can take advantage of this to travel great distances effortlessly.
                 </p>
               }
-              rank3Met={{ self: true }}
               ranks={[
                 <p>
                   You can ignore gravity while you are in hidden space, however any other person you have brought into
@@ -2023,7 +2025,6 @@ function ChapterEntanglements() {
                   intangible, and then retrieve them later when needed.
                 </p>
               }
-              rank3Met={{ self: true }}
               ranks={[
                 <p>
                   As a basic action, you can touch a single uncontested nonliving item causing it to vanish as it
@@ -2048,7 +2049,6 @@ function ChapterEntanglements() {
               intro={
                 <p>You can bring your physical body with you when entering hidden space and eventually other people.</p>
               }
-              rank3Met={{ self: true }}
               ranks={[
                 <p>
                   Your Sublime events now have the metric “Bodies: 1 per 4, minimum = 0”. At this rank, you can only
@@ -2076,7 +2076,6 @@ function ChapterEntanglements() {
           <Section header="Sublime Combat" isClassified>
             <SpecializationDescription
               intro={<p>You have mastered the tactical capabilities of subliming your body.</p>}
-              rank3Met={{ self: true }}
               ranks={[
                 <p>Inducing Sublime or exiting hidden space are now full actions.</p>,
                 <p>
@@ -2155,7 +2154,6 @@ function ChapterEntanglements() {
                   and entanglements.
                 </p>
               }
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   You can tell if anyone you see has entanglements or is carrying objects with artifact functions. You
@@ -2184,7 +2182,6 @@ function ChapterEntanglements() {
                   empathic level or even to steal memories from others.
                 </p>
               }
-              rank3Met={{ near: true }}
               ranks={[
                 <>
                   <p>
@@ -2218,7 +2215,6 @@ function ChapterEntanglements() {
                   improve and modify their effects.
                 </p>
               }
-              rank3Met={{ self: true }}
               ranks={[
                 <p>
                   You can use the Improvise action to improve cascade events. This is always a basic action, regardless
@@ -2247,7 +2243,6 @@ function ChapterEntanglements() {
                   but not visual or tactile information like color, texture, patterns, weight, or small details.
                 </p>
               }
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   You have the sense of exoproprioception within a range of meters equal to your Near score. You can
@@ -2267,7 +2262,6 @@ function ChapterEntanglements() {
           <Section header="Group Mind" isInset>
             <SpecializationDescription
               intro={<p>You can share knowledge and experiences with others empathically, almost like a hive mind.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <>
                   <p>
@@ -2305,7 +2299,6 @@ function ChapterEntanglements() {
                   counter oscillation that disrupts and prevents resonance and singals from propagating.
                 </p>
               }
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   As a basic action, you take a moment to open your senses to normally impreceptible rhythms within a
@@ -2347,7 +2340,6 @@ function ChapterEntanglements() {
           <Section header="Condense Matter" isClassified>
             <SpecializationDescription
               intro={<p>You can create solid objects out of thin air.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   When you use the Transmute event, you can transform ambient gasses into any homogenous liquid or
@@ -2374,7 +2366,6 @@ function ChapterEntanglements() {
                   internal hemorrhaging, abraded flesh, and decaying bones.
                 </p>
               }
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   You can make an Entropic Attack. As an attack action using Focus + Near, you touch a target which can
@@ -2399,7 +2390,6 @@ function ChapterEntanglements() {
           <Section header="Composite" isClassified>
             <SpecializationDescription
               intro={<p>You can transmute things into more complex materials.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   When you use Transmute, the transformed area can include up to three crudely arranged different
@@ -2420,7 +2410,6 @@ function ChapterEntanglements() {
           <Section header="Reshape" isClassified>
             <SpecializationDescription
               intro={<p>You can sculpt materials and transmute larger objects.</p>}
-              rank3Met={{ near: true }}
               ranks={[
                 <p>
                   Your Transmute events gain the metric ”Reshape Size: 1 centimeter, minimum = Bonus”. You can instantly
@@ -2495,7 +2484,6 @@ function ChapterEntanglements() {
           <Section header="Cold Reading" isInset>
             <SpecializationDescription
               intro={<p>You can read people like a book with a single glance.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   When interacting with someone you always know what their true opinion of you is or what their current
@@ -2515,7 +2503,6 @@ function ChapterEntanglements() {
           <Section header="Investigation" isInset>
             <SpecializationDescription
               intro={<p>You can get to the bottom of any mystery.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   Once per session, when you have enough downtime to research a topic, you may ask the GM any one
@@ -2533,7 +2520,6 @@ function ChapterEntanglements() {
           <Section header="Sharp Senses" isInset>
             <SpecializationDescription
               intro={<p>This specialization boosts the power of your existing senses to incredible levels.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   You can read the lips of anyone you can see. You can understand small print and whispers within a
@@ -2555,7 +2541,6 @@ function ChapterEntanglements() {
                   surroundings, even in chaotic situations.
                 </p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   You always know the location of any enemy in combat. They cannot sneak away from you or hide their
@@ -2581,7 +2566,6 @@ function ChapterEntanglements() {
                   situational awareness of the chromodynamic wakes that physical objects impart on hidden space.
                 </p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   You gain chromaception within a number of meters equal to your Far score. This sense can detect the
@@ -2611,7 +2595,6 @@ function ChapterEntanglements() {
                   others perceive.
                 </p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <p>You know at all times if anyone can currently see you.</p>,
                 <p>
@@ -2640,7 +2623,6 @@ function ChapterEntanglements() {
                   You can use Telepathy to sense what happens at distant locales regardless of any obstacles in the way.
                 </p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   Your Telepathy action bonus increases by 1. The Range metric of Telepathy improves to “10x, minimum =
@@ -2672,7 +2654,6 @@ function ChapterEntanglements() {
               intro={
                 <p>You instill a lasting influence into the minds of others, altering their behavior for a time.</p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <>
                   <p>
@@ -2714,7 +2695,6 @@ function ChapterEntanglements() {
           <Section header="Mind Control" isClassified>
             <SpecializationDescription
               intro={<p>You can seize control over simpler nervous systems.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <>
                   <p>
@@ -2751,7 +2731,6 @@ function ChapterEntanglements() {
                   believe false things about the state of their body so intensely that their mind makes it real.
                 </p>
               }
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   Your Manipulate action can now cause the Grappled state as if the target was restrained by an
@@ -2769,7 +2748,6 @@ function ChapterEntanglements() {
           <Section header="Read Mind" isClassified>
             <SpecializationDescription
               intro={<p>You can examine the thoughts and memories of others.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <>
                   <p>
@@ -2805,7 +2783,6 @@ function ChapterEntanglements() {
           <Section header="Sense Minds" isClassified>
             <SpecializationDescription
               intro={<p>You can feel the other minds around you.</p>}
-              rank3Met={{ far: true }}
               ranks={[
                 <p>
                   At all times, you can sense the presence and location of any sentient minds within a number of meters
