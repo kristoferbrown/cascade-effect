@@ -1000,14 +1000,15 @@ function ChapterGameplay() {
             <p>If this State was directly inflicted by an attack, it ends when that attacker starts their next turn.</p>
           </Section>
           <Section header="Suppressed">
-            <p>You are pinned down by incoming fire.</p>
+            <p>You are pinned down by incoming fire, blinded by bright lights, or shocked and awed.</p>
             <p>
               You have disadvantage on all attacks, you cannot use the Aim action, and the terrain difficulty of all
               adjacent spaces is increased by 1.
             </p>
             <p>
-              This state ends if you leave your current position, if you gain full cover from the attacker that
-              inflicted it, or when that attacker that inflicted it starts their next turn.
+              If this state was caused by a standard Ranged Attack action, it ends if you leave your current position,
+              if you gain full cover from the attacker that inflicted it, or when that attacker that inflicted it starts
+              their next turn.
             </p>
           </Section>
           <Section header="Taunted">

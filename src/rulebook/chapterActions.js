@@ -168,9 +168,8 @@ function ChapterActions() {
             <li>Apply a Trait you have that is relevant to the situation to give yourself or an ally Advantage.</li>
           </ul>
           <p>
-            When you take the planned action, or the target takes the action you predicted, the Advantage or
-            Disadvantage is apply to it. If the predicted action does not occur before your next turn, this benefit is
-            lost.
+            When you take the planned action, or the target takes the action you predicted, Advantage or Disadvantage is
+            applied to it. If the predicted action does not occur before your next turn, this benefit is lost.
           </p>
         </Section>
         <Section header="Interact">

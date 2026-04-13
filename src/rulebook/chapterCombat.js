@@ -287,7 +287,7 @@ function ChapterCombat() {
             a good indicator of how much Threat you can handle this round, and your Flight capacity is a good indicator
             of how much Stress you can take in combat before being injured.
           </p>
-          <Section header="DefenseReactions Example" isInset>
+          <Section header="Defense Reactions Example" isInset>
             <p>
               An enemy took a swing at you with a baseball bat in a Melee Attack dealing 6 Threat. You must use the
               Melee Defense reaction to defend yourself, requiring the Flight + Near pairing. Your Flight is at its
@@ -550,6 +550,13 @@ function ChapterCombat() {
             Size 2 cannot, and Size 3 or above requires both hands. Any weapon Size 4 or above can only be used when
             Prepared.
           </p>
+          <Section header="Improvised Weapons">
+            <p>
+              If you use an object that is not a dedicated weapon to attack something, it is an improvised weapon.
+              Improvised weapons do not have a bonus like blunt or bladed weapons do and have disadvantage on attacks.
+              They may also break after being used if they are fragile.
+            </p>
+          </Section>
           <Section header="Types of Weapons">
             <p>Other than unarmed, each category of weapons has a special property common to all similar weapons.</p>
             <h5>Unarmed</h5>

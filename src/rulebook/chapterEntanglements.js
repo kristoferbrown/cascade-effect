@@ -214,7 +214,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Unarmed Mastery" isInset>
+          <Section header="Martial Artist" isInset>
             <SpecializationDescription
               intro={<p>Your empty hands have become powerful weapons.</p>}
               ranks={[
@@ -227,8 +227,35 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="Adrenal Strength" isInset></Section> */}
-          {/* <Section header="Grappler" isInset></Section> */}
+          <Section header="Reverberation" isInset>
+            <SpecializationDescription
+              intro={
+                <p>
+                  You can harness the latent tension created by dynamic situations and store it for later, amplifying
+                  yourself, and then unleash the energy later.
+                </p>
+              }
+              ranks={[
+                <p>
+                  Any time you participate in a Challenge with at least a medium risk and effort level, you may add an
+                  extra Goal called Reverberation. Any Progress applied to Reverberation doesn't affect the current
+                  Challenge. Instead it is stored for later, reverberating back and forth between your physical and
+                  hidden bodies. In any future Challenge, you can remove all of your stored Progress and apply it to
+                  that Challenge. You must use all of it at once, you can't use only a portion of it. While you have
+                  Progress stored in this way you feel anxious and uneasy. All stored Progress is lost at the end of the
+                  scene.
+                </p>,
+                <p>
+                  While you have stored Progress, you no longer feel anxious. If fact, you feel alive and confident. If
+                  you use the stored Progress on a Challenge that is primarily social, you have Advantage.
+                </p>,
+                <p>
+                  While you have stored Progress, you are perceived as more real and powerful granting you Advantage on
+                  every Challenge that is primarily social, even if you don't use the stored progress on it.{" "}
+                </p>,
+              ]}
+            />
+          </Section>
         </Section>
 
         <Break />
@@ -283,7 +310,7 @@ function ChapterEntanglements() {
                 <p>
                   In addition to empowering you for further action, this event also causes immediate effects. After you
                   induce this event as an exhale action, the immediate effect is that you can instantly Rest or
-                  Manipulate without consuming an action.{" "}
+                  Manipulate without consuming an action.
                 </p>
                 <p>
                   Certain Specializations within this Style allow you to induce this event at other times than as an
@@ -426,7 +453,6 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          {/* <Section header="???" isClassified></Section> */}
         </Section>
       </Section>
 
@@ -435,7 +461,7 @@ function ChapterEntanglements() {
       <Section header="Fight + Near">
         <p>
           Mastering this Entanglement can grant you peerless melee offense or the ability to modify light and
-          electricity. It can increase the bonuses for the Melee Attack or Ready actions, or the Refract cascade event.
+          electricity.
         </p>
         <EntanglementDescription
           physMet={<Metabolism fight />}
@@ -443,50 +469,6 @@ function ChapterEntanglements() {
           esoStyle={"Electromagnetism"}
           intStyle={"Smooth"}
         />
-
-        <EventDescription
-          eventName="Refract"
-          intro="You reach out with your mind and take control of nearby light, electricity, or magnetism."
-          inductionTime="Full Action"
-          linkTarget={linkMap.ElectromagnetismStyle}
-          metrics={[
-            { name: "Intensity", value: "1" },
-            { name: "Range", value: "1 Meter" },
-          ]}
-          description={
-            <>
-              <p>
-                Bend the path of an existing flow of light or electricity within Range. This can, for example, discharge
-                a battery, short circuit a device, or focus sunlight into a beam. Without further Electromagnetism
-                Specializations, this event can only crudely redirect this energy, it cannot create, transform, exercise
-                fine control, or handle extremely high energy levels.
-              </p>
-              <p>
-                This requires an existing energy source of a similar or greater strength than the value of Intensity you
-                wish to use. If the source is stronger than Intensity, you only move a portion of the energy. The exact
-                strength of a specific energy source is up to the GM, within these rough guidelines:
-              </p>
-              <ul>
-                <li>Consumer batteries, residential lighting, fridge magnets.</li>
-                <li>Residential wiring, direct sunlight, small rare earth magnets.</li>
-                <li>A laser that can blind you.</li>
-                <li>Residential overhead power lines.</li>
-                <li>A laser that can burn you.</li>
-                <li>Industrial electromagnets.</li>
-                <li>High-tension distribtion lines.</li>
-                <li>The output of a powerplant.</li>
-                <li>Extreme circumstances.</li>
-              </ul>
-              <p>
-                If this is used to harm someone, it deals Threat equal to Intensity. This attack moves too fast to allow
-                the target to take a reaction. The energy can dazzle or stun, but not truely harm the body and therefore
-                deals Stress to Focus + Far.
-              </p>
-            </>
-          }
-        />
-
-        <Break />
 
         <Section header="Smooth Style">
           <StyleDescription
@@ -497,7 +479,7 @@ function ChapterEntanglements() {
               </p>
             }
             styleName="Smooth"
-            rank1Bonus="When an uses the Move action to enter or exit the area within 1 meter of you, you may strike them with a Melee or Unarmed Attack as a reaction. Free movement from any action other than Move does trigger this response. The attack must follow all the rules of a normal attack action, including weapon size requiring a minimum Metabolism allocation. "
+            rank1Bonus="When anyone uses the Move action to enter or exit the area within 1 meter of you, you may Counterattack. Free movement from any action other than Move does not trigger this response. When you Counterattack, the original attacker takes Threat equal to your Smooth rank and must make the appropriate reaction. Specializations in this style add additional Counterattack effects and triggers."
             associatedAction="Melee Attack actions"
           />
           <Section header="Ambidexterity" isInset>
@@ -507,17 +489,27 @@ function ChapterEntanglements() {
               }
               ranks={[
                 <p>
-                  When you hold a weapon in each hand, you can attack with both of them as a single full action. Both
-                  attacks must have the same target. Both attacks have their normal metabolism costs and Minimum
-                  metabolism requirements for their size.
+                  When wielding a weapon in each hand, you can strike with both as a single Melee or Ranged Attack
+                  action. Add the Size values of both weapons to the Progress generated by the attack instead of just
+                  one, but you must allocate a minimum number of Metabolism points equal to their combined Size. Both
+                  attacks must have the same target and must be melee or ranged, you can't mix types.{" "}
                 </p>,
                 <p>
-                  When attacking with both of your hands, the lighter weapon has no minimum metabolism cost. Each attack
-                  can have a different target, but you can't mix melee and ranged attacks.
+                  When making a dual-weapon attack, you may divide the Progress applied to Threat, or any other Goal of
+                  the attack, between two different targets.
                 </p>,
-                <p>
-                  Attacking with both of your hands is now a regular action and you can mix melee and ranged attacks.
-                </p>,
+                <>
+                  <p>
+                    When making a dual-weapon attack, one of your weapons, the smaller one of they are different sizes,
+                    no longer counts toward the minimum Metabolism allocation required for the attack, though you still
+                    add its Size to your Progress.
+                  </p>
+                  <p>
+                    Additionally, if you you're holding both a ranged and a melee weapon and your attack is Prepared,
+                    instead of adding Focus as the third metabolism you may use the trio of Fight + Near + Far to attack
+                    both a ranged enemy and a melee enemy with the same attack.
+                  </p>
+                </>,
               ]}
             />
           </Section>
@@ -531,49 +523,35 @@ function ChapterEntanglements() {
               }
               ranks={[
                 <p>
-                  Once per round you may make a free counterattack in response to certain triggers, targeting the enemy
-                  that caused the trigger. This is resolved the same was as an attack action on your turn, but it
-                  happens immediately and consumes no actions. This is triggered any time an opponent uses the Move
-                  action to exit your melee or unarmed reach.
+                  Your Melee or Unarmed Defense Reactions to attacks made on an enemy's turn have an additional Goal
+                  called Counter. If Progress is assigned to Counter, you may Counterattack after your Reaction dealing
+                  extra Threat equal to the amount of Counter Progress.
                 </p>,
+                <p>Enemies using inhale actions or Ranged attacks within your reach trigger your Counterattack. </p>,
                 <p>
-                  If the Progress you get on a melee or unarmed reaction is greater than the amount of Threat dealt, you
-                  may parry the attack to immediately deal an amount of Threat to the attacker equal to the difference.
-                </p>,
-                <p>
-                  An opponent using any basic action within your melee or unarmed reach triggers your free
-                  counterattack.
+                  If you apply an amount of Progress to the Counter Goal that is equal to or greater than the size of
+                  the weapon you are using, you can add the weapon's size to the Threat dealt by the Counterattack.
                 </p>,
               ]}
             />
           </Section>
-          <Section header="Deft Combat" isInset>
+          <Section header="Opportunist" isInset>
             <SpecializationDescription
-              intro={<p>You can make the most of enhanced finesse while in close combat.</p>}
-              ranks={[
-                <p>Drawing or reloading a weapon are now both non-actions.</p>,
-                <p>
-                  Any time you attack with a weapon of a smaller size than your rank in this specialization, it deals
-                  Threat as if it were the same size as this rank.
-                </p>,
-                <p>
-                  In a whirlwind of motion, you can rapidly strike every adjacent target as a single action. Roll a
-                  normal attack and divide the Threat generated by it between all adjacent targets.
-                </p>,
-              ]}
-            />
-          </Section>
-          <Section header="Melee Mastery" isInset>
-            <SpecializationDescription
-              intro={<p>You have perfected the movements of the blades and blows of close combat.</p>}
+              intro={<p>You can easily find and devastatingly exploit any gaps in an enemy's defenses. </p>}
               ranks={[
                 <p>
-                  You gain the Trait Melee Mastery, this Trait is relevant any time you use the Melee Attack action.
+                  When you attack an enemy with the Off Balance state, resolve the attack as if you were Hidden from
+                  them.
                 </p>,
-                <p>Your melee reach while wielding a weapon increases by 1 meter.</p>,
                 <p>
-                  You can add Focus as a third metabolism to the metabolism pairing when you use the Melee Attack
-                  action.
+                  When you deal more Stress to a target with a Melee or Unarmed attack than it can take due to the
+                  Metabolisms used in it's defense Reaction being reduced to 0 capacity, then the extra Stress is dealt
+                  directly to all of the target's remaining Physical Metabolisms, instead of just one of them.{" "}
+                </p>,
+                <p>
+                  If an enemy is within reach of a Melee or Unarmed Attack from you and an ally that is on the opposite
+                  side of the space the enemy occupies, then this enemy is flanked. Resolve any attacks you make against
+                  them as they were Off Balance and you were Hidden.
                 </p>,
               ]}
             />
@@ -587,17 +565,17 @@ function ChapterEntanglements() {
                 </p>
               }
               ranks={[
-                <p>You can move completely silently as long as you're moving at a walking pace or slower.</p>,
+                <p>You can move completely silently at any speed.</p>,
                 <p>
-                  As a default effort and low risk Challenge requiring Fight + Near, you can prevent sound from
-                  propagating in an area. The radius of this area in meters and the number of minutes it lasts are both
-                  equal to the Progress used to create it. No sound or vibration can be heard, felt, or created inside
-                  the area. The area is centered on you and follows you as you move.
+                  As an exhale action, you can take a normal effort and low risk Challenge requiring Fight + Near, to
+                  prevent sound from propagating in an area. The radius of this area in meters and the number of minutes
+                  it lasts are both equal to the Progress used to create it. No sound or vibration can be heard, felt,
+                  or created inside the area. The area is centered on you and follows you as you move.
                 </p>,
                 <p>
-                  You can move at any speed completely silently. If you render an area silent, it’s duration is measured
-                  in hours instead of minutes and you can choose to cause it to stay at a location instead of following
-                  you at any moment.
+                  You can silence an area as an inhale action instead of an exhale action. When you silence an area, you
+                  can still hear normally while inside it and you can if it stays at its initial location instead of
+                  following you.
                 </p>,
               ]}
             />
@@ -606,25 +584,60 @@ function ChapterEntanglements() {
             <SpecializationDescription
               intro={<p>You can interact with things undetected and without permission.</p>}
               ranks={[
+                <>
+                  <p>
+                    When you use the Interact action, you can do so without anyone noticing. If you do this to draw a
+                    weapon unnoticed on the first round in combat, you have advantage on the next attack you take with
+                    it.
+                  </p>
+                  <p>
+                    Additionally, you can quickly draw, stow, swap, or reload any weapon without using any actions.{" "}
+                  </p>
+                </>,
                 <p>
-                  When you use the Interact action, you can do so without anyone noticing. If you do this to draw a
-                  weapon unnoticed, you have advantage on the next attack you take with it.
+                  If you are Hidden, you can use the Interact action to interact with, plant, or steal object in
+                  someone's pockets or bags without being noticed. Alternatively, if you Improvise as an Inhale action
+                  to create a diversion, you can Interact as if you were Hidden on your next exhale action.{" "}
                 </p>,
                 <p>
-                  If you have advantage on an Interact action, for example if you are unseen or used the Improvise
-                  action cleverly, you can interact with or take an object in someone's pockets or bags without being
-                  noticed.
-                </p>,
-                <p>
-                  If you have advantage on an Interact action, you can take an object from someone's hands, however
-                  doing so will always be noticed. If this object was a weapon, you have advantage on the next attack
-                  you make with it.
+                  If you are Hidden or the target is Off Balance, you can use the Interact action to take an object from
+                  someone's hands, however doing so will always be noticed. If this object was a weapon, you have
+                  Advantage on attacking with it if you do so as your next action.{" "}
                 </p>,
               ]}
             />
           </Section>
-          {/* <Section header="TODO" isInset></Section> */}
+          <Section header="Weapon Master" isInset>
+            <SpecializationDescription
+              intro={<p>You make the most of any weapon you're holding. </p>}
+              ranks={[
+                <>
+                  <p>
+                    Drawing, stowing, swapping, or reloading weapons can be done during your turn without using any
+                    actions.
+                  </p>
+                  <p>
+                    Double the bonus for the type of melee weapon you are wielding. Blunt weapons now deal 2 extra Off
+                    Balance and bladed weapons now deal 2 extra Threat, instead of 1.
+                  </p>
+                </>,
+                <p>
+                  The bonus for the type of melee weapon you are wielding is further improved. When you deal Stress to a
+                  target with a blunt weapon you may push the target 1 meter away from you, and when you attack with a
+                  bladed weapon it ignores 1 point of the target's armor.
+                </p>,
+                <>
+                  <p>Your reach while wielding a weapon increases by 1 meter.</p>
+                  <p>
+                    Additionally, any object you are holding counts as a blunt, bladed, or ranged weapon, not an
+                    improvised weapon. Although fragile objects may still break after being used as a weapon.
+                  </p>
+                </>,
+              ]}
+            />
+          </Section>
         </Section>
+
         <Break />
 
         <Section header="Electromagnetism Style">
@@ -640,38 +653,148 @@ function ChapterEntanglements() {
             associatedAction="inducing Refract events"
           />
 
+          <EventDescription
+            eventName="Refract"
+            intro="You reach out with your mind and take control of nearby photons."
+            linkTarget={linkMap.ElectromagnetismStyle}
+            description={
+              <>
+                <ChallengeParams
+                  pair={{ fight: true, near: true }}
+                  risk={"Medium"}
+                  effort={"Medium"}
+                  allocBonus={"Electromagnetism Style"}
+                  goals={["Power", "Range"]}
+                />
+                <p>
+                  Bend the path of an existing flow of light, electricity, or magnetism within a number of meters equal
+                  to Range. This can, for example, discharge a battery, short circuit a device, reverse a magnet's
+                  polarity, or focus sunlight into a beam. This only effects a single object or at most a 1 cubic meter
+                  portion of a larger energy flow. Without further Electromagnetism Specializations, this event can only
+                  crudely redirect this energy, it cannot create, destroy, increase, decrease, transform, or exercise
+                  fine control.
+                </p>
+                <p>
+                  The amount of energy you can control is determined by the Power Goal. The exact strength of a specific
+                  energy source is up to the GM, according to the guidelines in the following list. If the result of
+                  Power is lower than the strength of the energy source, it cannot be controlled. Other specializations
+                  that refer to a Power level are using this scale.
+                </p>
+                <ul>
+                  <li>1: Consumable batteries, single LEDs, fridge magnets, static shocks.</li>
+                  <li>2: Indoor lighting, dim indirect daylight, large lithium ion batteries.</li>
+                  <li>3: Residential wiring, direct sunlight, rare earth magnets.</li>
+                  <li>3-6: Residential overhead power lines, industrial electromagnets.</li>
+                  <li>6-9: A lightning strike.</li>
+                  <li>9-15: High-tension distribution lines.</li>
+                  <li>15+: The output of a power plant, catastrophic atmospheric phenomena.</li>
+                </ul>
+                <p>
+                  If energy is redirected with the intent to to harm someone, it primarily dazzles, blinds, or stuns. It
+                  bypasses armor and triggers no reaction, dealing Stress equal to the Power level directly to a single
+                  target's Flight + Near, up to a limit of your rank in the Electromagnetism Style. Any additional Power
+                  over this limit is the intensity of a State inflicted on the target, either Suppressed if the energy
+                  was primarily light or Off Balance if it was primarily electrical or magnetic.
+                </p>
+                <p>
+                  The effects of Refract last only until your next turn. If you wish for them to continue you just keep
+                  inducing the event.
+                </p>
+              </>
+            }
+          />
+
           <Section header="Amplify Waveform" isClassified>
             <SpecializationDescription
-              intro={
-                <p>
-                  You can use Refract to create electromagnetic energy from nothing by imbalancing virtual particle
-                  interactions.
-                </p>
-              }
+              intro={<p>You can use Refract to create electromagnetic energy from nothing.</p>}
               ranks={[
                 <>
                   <p>
-                    Your Refract event gains the metric “Create/Destroy: 1”. This metric has multiple uses in different
-                    specializations. Choose one specific use for it when you use it.
+                    Your Refract event now has a Goal called Create. You cannot use the Create and Destroy Goals in the
+                    same event.
                   </p>
                   <p>
-                    You can use the Create/Destroy metric to create energy from nothing. When you do this, Intensity
-                    must be equal to or lower than Create/Destroy, but Create/Destroy has no other effect.
+                    You can amplify the strength of lower Power energy source affected by Refract, increasing it's Power
+                    level to equal the result of the Create Goal.
+                  </p>
+                </>,
+                <>
+                  <p>
+                    Your Refract event now has a Goal called Radius. The event can now affect everything in an area with
+                    this Radius in meters. If this event causes harm, divide the Power level up between the targets as
+                    you see fit.
+                  </p>
+                  <p>
+                    You can also quickly create simple lights without using the Refract event. As an inhale action, take
+                    a point of Stress to Focus and an object you touch begins emitting light of a color and brightness
+                    of your choice, up to a brightness similar to common residential light bulbs. These lights last for
+                    the rest of the scene.
                   </p>
                 </>,
                 <p>
-                  Your Refract event gains the metric “Area: 1 meter”. The event can now affect everything within a
-                  radius of Area as long as the center of the area is within Range.
-                </p>,
-                <p>
-                  When you use Refract to affect an existing energy source, you can use Create/Destroy to increase the
-                  Strength of this energy source. When you do this, the final value of Intensity is equal to Intensity +
-                  Create/Destroy.
+                  You can use Refract to create energy from nothing. When you do this, the value of the Create Goal must
+                  equal or exceed the value of the Power Goal, and the final Power level of the event is equal to the
+                  Power Goal.
                 </p>,
               ]}
             />
           </Section>
-          <Section header="Darkness" isClassified>
+          <Section header="Frequency Shift" isClassified>
+            <SpecializationDescription
+              intro={<p>You can convert one form of energy into another. </p>}
+              ranks={[
+                <p>
+                  When using Refract on light, instead of redirecting the light you can transform it from one wavelength
+                  to another. For example, from one color to another or from visible to x-rays.
+                </p>,
+                <p>
+                  When using Refract, instead of redirecting the energy, you can transform it from one type of
+                  electromagnetism into another..
+                </p>,
+                <p>When using Refract, you can transform and redirect an energy flow simultaneously.</p>,
+              ]}
+            />
+          </Section>
+          <Section header="Modulate Signal" isClassified>
+            <SpecializationDescription
+              intro={<p>Your control over electromagnetism is so fine that you can embed information in it. </p>}
+              ranks={[
+                <>
+                  <p>
+                    As an exhale action, take a point of Stress to Focus to create a luminous message or image As an
+                    exhale action, take any number of points of Stress to Focus publicly in the air, or privately
+                    directly on the retina of someone you can see.
+                  </p>
+                  <p>
+                    Additionally, when your Refract event inflicts the Off Balance or Suppressed state, you may choose
+                    for it to instead inflict Enthralled or Afraid.
+                  </p>
+                </>,
+                <>
+                  <p>
+                    As an exhale action, take a point of Stress to Focus to rewrite any electronic media you can touch,
+                    emit a short wireless signal.
+                  </p>
+                  <p>
+                    If you have any ranks in Spectral Senses, you can also intercept and modify signals when you do
+                    this.
+                  </p>
+                </>,
+                <>
+                  <p>
+                    After you spend an hour freely examining any wireless device, you can from then on emit signals it
+                    can receive. As an inhale action, you can send a simple command to any device you have examined this
+                    way.
+                  </p>
+                  <p>
+                    If you have any ranks in Spectral Senses, you can have fluent two-way communications with these
+                    devices with a bandwidth similar to speaking to a person.
+                  </p>
+                </>,
+              ]}
+            />
+          </Section>
+          <Section header="Nullify" isClassified>
             <SpecializationDescription
               intro={
                 <p>
@@ -681,24 +804,32 @@ function ChapterEntanglements() {
               ranks={[
                 <>
                   <p>
-                    Your Refract event gains the metric “Create/Destroy: 1”. This metric has multiple uses in different
-                    specializations. Choose one specific use for it when you use it.
+                    Your Refract event now has a Goal called Destroy. You cannot use the Create and Destroy Goals in the
+                    same event.
                   </p>
                   <p>
-                    You can use Create/Destroy to destroy light in an area and create an area of darkness. The area is a
-                    sphere with a radius in meters of Create/Destroy + Area + Intensity. Light cannot enter, travel, or
-                    be emitted in the affected area. Everyone inside is blind.
+                    You can decrease the strength of an energy source affected by Refract, reducing it's Power level to
+                    by the result of the Destroy Goal. At this rank, the power level cannot be reduced below 1.{" "}
                   </p>
-                  ,
                 </>,
                 <p>
-                  When you create an area of darkness, you can allow a single narrow wavelength to pass and then
-                  sensitize your eyes to this wavelength. This allows you to see in the area when no one else can.
+                  You can quickly create an area of darkness without using the Refract event. As an exhale action, take
+                  any number of points of Stress to Focus and an object you touch begins emitting a sphere of darkness
+                  with a radius in meters and duration in minutes equal to this number. Light cannot enter, travel, or
+                  be emitted inside this area and everyone inside is blind.
                 </p>,
-                <p>
-                  Radio signals, electrical wires, and any senses that involve electromagnetism in an area of darkness
-                  do not function unless you allow them to.
-                </p>,
+                <>
+                  <p>
+                    When you use the Destroy Goal of Refract, you can reduce the Power level of the energy source to 0,
+                    completely eliminating it.
+                  </p>
+                  <p>
+                    When you create an area of darkness as an exhale action, you can allow a single narrow wavelength to
+                    pass and then sensitize your eyes to this wavelength. This allows you to see in the area when no one
+                    else can. Radio signals, electrical wires, and any senses that involve electromagnetism in this area
+                    only function if you allow them to.
+                  </p>
+                </>,
               ]}
             />
           </Section>
@@ -707,51 +838,55 @@ function ChapterEntanglements() {
               intro={<p>Your ability you use electromagnetism as a weapon improves.</p>}
               ranks={[
                 <p>
-                  The Range metric of your Refract event increases from 1 meter by 1 additional meter per rank you have
-                  in this specialization.
+                  The limit on the amount of Stress your Refract events can do before they only inflict States is your
+                  Electromagnetism rank plus your rank in this Specialization.
                 </p>,
-                <p>You can induce Refract as an attack action.</p>,
+                <p>
+                  If a target is already Off Balance or Suppressed when your Refract event would inflict the same state,
+                  the event deals only Stress with no limit instead of this state.{" "}
+                </p>,
                 <p>
                   Your Refract events can have paralytic, disorienting, or burning effects as needed, therefore if it
-                  harms someone it deals Threat to Far + a physical metabolism of your choosing.
+                  harms someone it deals Stress to Near + a physical metabolism of your choosing.
                 </p>,
               ]}
             />
           </Section>
           <Section header="Sense Waveform" isClassified>
             <SpecializationDescription
-              intro={<p>You can sense and interpret additional parts of the electromagnetic spectrum.</p>}
+              intro={
+                <p>
+                  You can emit a tiny amount of light in obscure parts of the spectrum and interpret its reflections.
+                </p>
+              }
               ranks={[
                 <p>
-                  You can emit a tiny amount of light in an underutilized portion of the spectrum and then sense its
-                  reflections, granting you perfect night vision even in absolute darkness. This sense does not require
-                  your eyes and grants you the equivalent of normal vision of physical space, even if you would
-                  otherwise be blinded or are sublimed into hidden space.
+                  At any time, you can have perfect vision of regardless of the circumstances, even in absolute
+                  darkness. This sense does not require your eyes and you cannot be blinded, even by their destruction.
+                  You cannot be Suppressed by the Retract event or other dazzling light sources. You can see physical
+                  space normally while you have the Out of Body or Sublimed states.
                 </p>,
                 <p>
-                  You can interpret emissions of other parts of the spectrum. For example, sensing infrared can grant
-                  you practical heat vision, or sensing radio and microwave emissions can be used to detect the strength
-                  and origin of any broadcast.
+                  You can interpret emissions of all parts of the spectrum. For example, sensing infrared can grant you
+                  practical heat vision, or sensing radio and microwave emissions can be used to detect the strength and
+                  origin of any broadcast.
                 </p>,
                 <p>
-                  You can emit a tiny amount of x-rays and sub-millimeter waves and then sense their reflections. This
-                  allows you to see through solid materials and examine their contents or internal structure.
+                  You can emit and sense tiny amount of x-rays and sub-millimeter waves, allowing you to see through
+                  solid materials and examine their contents or internal structure.
                 </p>,
               ]}
             />
           </Section>
-          {/* <Section header="TODO" isClassified></Section> */}
-          {/* <Section header="TODO" isClassified></Section> */}
-          {/* <Section header="TODO" isClassified></Section> */}
         </Section>
       </Section>
 
       <Break page />
+
       <Section header="Fight + Far">
         <p>
           Mastering this Entanglement lets you precisely target things in ranged combat, or even directly attack things
-          with blasts of energy. It can increase the bonuses for ranged attacks, the Aim action, or the Evoke cascade
-          event.
+          with blasts of energy.
         </p>
         <EntanglementDescription
           physMet={<Metabolism fight />}
@@ -759,28 +894,13 @@ function ChapterEntanglements() {
           esoStyle={"Evocation"}
           intStyle={"Sharp"}
         />
-        <EventDescription
-          eventName="Evoke"
-          intro="You selectively sublime half of the virtual particles in a path creating a small but highly destructive burst of antimatter."
-          inductionTime="Attack Action"
-          metrics={[{ name: "Power", value: "1 Threat, minimum = Bonus" }]}
-          linkTarget={linkMap.EvocationStyle}
-          description={
-            <p>
-              Inducing this is an a Risky and Strenuous Challenge that results in an attacking a target you can see with
-              an explosive torrent of energy. The target is dealt Threat equal to Power and may defend with a Ranged
-              Defense reaction.
-            </p>
-          }
-        />
         <Break />
         <Section header="Sharp Style">
           <StyleDescription
             intro={
               <p>
                 The intuitive style of the entanglement of Fight + Far boosts your ranged combat abilities and
-                capability to do harm with precise strikes. This style contains the specializations Disentangle, Pierce,
-                Manipulate, Ranged Mastery, Stealth Strike, and Suppression.
+                capability to do harm with precise strikes.
               </p>
             }
             styleName="Sharp"
@@ -788,22 +908,84 @@ function ChapterEntanglements() {
             associatedAction="Ranged Attack actions"
           />
 
-          <Section header="Disentangle" isInset>
+          <Section header="Charm Person" isInset>
             <SpecializationDescription
-              intro={<p>You can assault a target's connection to their hidden body directly.</p>}
+              intro={
+                <p>
+                  One of the earliest purposes the far edges of the hidden body first evolved to fulfill was a
+                  rudimentary way to identify friends and foes within one's species. You can hijack this system in
+                  humans for your own purposes.
+                </p>
+              }
               ranks={[
                 <p>
-                  You can use the attack action Disentangle against anyone within a range equal to your Far score. The
-                  target may make a Willpower reaction and is unaffected if the reaction ties or beats the attack.
-                  Affected targets take 1 Stress to every hidden metabolism with a current value above 1.
+                  Unless you actively offend or act hostile, you always make a great first impression, people are
+                  inclined to trust you, be your friend, or look to your for leadership.{" "}
+                </p>,
+                <>
+                  <p>
+                    As an exhale action, you make make a Challenge using Fight + Far that triggers a Willpower reaction
+                    in a target. If the target is experiencing strong emotions, such as open hostility, involving you,
+                    they have advantage on the reaction. If you get more Progress on this Challenge than the reaction,
+                    the target is charmed by you. They experience one of the following effects for the rest of the
+                    scene, or until they are physically or socially harmed by you. If anything notably unusual happens
+                    during this effect, the target knows they were manipulated by you in some way.{" "}
+                  </p>
+                  <p>
+                    <strong>Friend:</strong> The target regards you as a close friend, and is as helpful and trusting as
+                    one. They will not target you in combat.
+                  </p>
+                  <p>
+                    <strong>Stranger:</strong> The target cannot recognize your face and does not believe they know you.
+                  </p>
+                  <p>
+                    <strong>Enemy:</strong> The target views you with distrust and hostility. This alone is not enough
+                    to escalate a conflict, but if combat occurs the target is Taunted by you.
+                  </p>
+                </>,
+                <p>
+                  You can target 2 people simultaneously when you attempt to charm. If you Challenge beats the sum of
+                  both of their reactions, instead of having their opinion of you change, their opinion of each other
+                  changes.
+                </p>,
+              ]}
+            />
+          </Section>
+          <Section header="Dead Eye" isInset>
+            <SpecializationDescription
+              intro={<p>You can line up difficult shots to targets with extreme precision.</p>}
+              ranks={[
+                <p>
+                  As long as you can see your target, an attack that you have Prepared using Aim remains Prepared until
+                  you use it. If you use the Aim action on a target that you already have an attack Prepared for, you
+                  gain Advantage on the Prepared attack.
+                </p>,
+                <p>Prepared attacks ignore the target's armor.</p>,
+                <p>
+                  If you have a weapon with a scope or laser sight or other aiming tools, you can continue using Aim
+                  against a target even after you have a Prepared attack with Advantage. Each time you do, you can an an
+                  additional Metabolism to the pairing used in the attack until all Metabolisms are involved.
+                </p>,
+              ]}
+            />
+          </Section>
+          <Section header="Menace" isInset>
+            <SpecializationDescription
+              intro={
+                <p>The threat of your weapons can control a situation socially just as well as it can physically.</p>
+              }
+              ranks={[
+                <p>
+                  When you use the Manipulate action, it can inflict Suppressed if you're wielding a ranged weapon or
+                  Off Balance of you're wielding a Melee weapon. You can use Fight or Focus on Manipulate Challenges.
                 </p>,
                 <p>
-                  If a successfully affected target has no hidden metabolism scores, your Disentangle event immediately
-                  renders them unconscious for a number of rounds equal to the attack’s unblocked Progress.
+                  Your attack actions have the added Goals Afraid and Taunt that inflict these states with an intensity
+                  equal to the Progress applied to them, with a maximum of 1 or the size of your weapon.
                 </p>,
                 <p>
-                  Affected targets now also take 1 Stress to hidden metabolism with a current value of 1, causing them
-                  to enter the Dissociated state.
+                  If you are wielding a weapon, the Manipulate action can target multiple enemies that can see it. Split
+                  any Progress on the Manipulate challenge between all targets.
                 </p>,
               ]}
             />
@@ -812,39 +994,15 @@ function ChapterEntanglements() {
             <SpecializationDescription
               intro={<p>You can make the most from the trajectory of a single attack.</p>}
               ranks={[
-                <p>The targets of your ranged attacks cannot benefit from cover.</p>,
+                <p>When your attack is Prepared, resolve it as if any targets in cover did not have cover.</p>,
                 <p>
                   When making a ranged attack, you may target a line starting at your space instead of a single target.
-                  You may choose how to divide the Threat generated by the attack between all targets on this line.
+                  You may choose how to divide the Threat and any other Goals of this attack between a number of the
+                  closest targets equal to your Sharp rank on this line.
                 </p>,
                 <p>
-                  When targeting a line with a ranged attack, all targets on the line are dealt the full Threat of the
-                  attack.
-                </p>,
-              ]}
-            />
-          </Section>
-          <Section header="Ranged Mastery" isInset>
-            <SpecializationDescription
-              intro={
-                <p>
-                  You can rapidly calculate vectors to any target you perceive, and you can continue to focus on aiming
-                  despite complications.
-                </p>
-              }
-              ranks={[
-                <p>
-                  You gain the Trait Ranged Mastery, this Trait is relevant any time you attempt to make an attack with
-                  a ranged weapon.
-                </p>,
-                <p>
-                  When using a ranged weapon, you can target lethally to deal one extra Threat as if it were also a
-                  bladed weapon, or you can choose to use shock and awe to attack the target's Focus as if it were a
-                  blunt weapon.
-                </p>,
-                <p>
-                  You can add Focus as a third metabolism to the metabolism pairing used to make an attack with a ranged
-                  weapon.
+                  Enemies never have full cover against you, treat it as partial cover instead. As long as you know
+                  their exact position, you can target them.
                 </p>,
               ]}
             />
@@ -853,19 +1011,20 @@ function ChapterEntanglements() {
             <SpecializationDescription
               intro={
                 <p>
-                  When your opponent is unable to properly defend against you, you can intuitively sense their weak
-                  points and guide your strike towards it.
+                  When your opponent is unable to properly defend against you, you can use the opening guide your strike
+                  towards their weakest point.
                 </p>
               }
               ranks={[
                 <p>
-                  Whenever you have advantage on an attack action, you also deal 1 extra point of Threat per rank you
-                  have in this specialization.
+                  In certain conditions you can do a Stealth Strike, a regular attack that deals an amount of extra
+                  Threat equal to your Sharp rank. You can do this any time you are hidden from your target.
                 </p>,
+                <p>You can make a Stealth Strike any time your target is Off Balance. </p>,
                 <p>
-                  Any time you attack a target that is adjacent to one of your allies, you have advantage on the attack.
+                  You can make a Stealth Strike against any target that has not yet acted in combat after determining
+                  initiative.
                 </p>,
-                <p>Whenever you have advantage on an attack action, you can ignore the target's armor.</p>,
               ]}
             />
           </Section>
@@ -879,25 +1038,27 @@ function ChapterEntanglements() {
               }
               ranks={[
                 <p>
-                  When you choose to suppress with a ranged attack instead of dealing Threat, you can designate a number
-                  of adjacent spaces equal to the total Progress created by the attack. Everyone in these spaces gains
-                  the Suppressed state with the same intensity.
+                  When making a Ranged Attack action instead of picking a single target, you may target an area with any
+                  radius in meters of up to your weapon's size. When you do this, you may only apply Progress to State
+                  inflicting Goals like Suppressed, and not to the Threat Goal. Divide the result of all of the Goals
+                  between everyone in the targeted area as you see fit.
                 </p>,
                 <p>
-                  Any time someone currently suppressed by you moves in a way that causes them to lose cover from you,
-                  you may use a reaction to attack them as if you were taking an attack action on your turn.
+                  Any time someone currently Suppressed by one of your Ranged Attack ends a turn without at least
+                  partial cover from you, you may deal Threat to them equal to the intensity of the Suppressed State.
+                  They may react to this as a Ranged Attack and it consumes ammunition from your weapon.
                 </p>,
                 <p>
-                  When attacking as a reaction to a target in the suppressed area, you may choose to skip the normal
-                  attack Challenge and instead deal an amount of Threat equal to the intensity of the target’s
-                  Suppressed state for free.
+                  When targeting an area with a Ranged Attack instead of a single target, you may use the Threat Goal if
+                  you are wielding an automatic weapon.
                 </p>,
               ]}
             />
           </Section>
-          {/* <Section header="TODO" isInset></Section> */}
         </Section>
+
         <Break />
+
         <Section header="Evocation Style">
           <StyleDescription
             intro={
@@ -909,6 +1070,18 @@ function ChapterEntanglements() {
             styleName="Evocation"
             rank1Bonus="You can induce the Evoke cascade event."
             associatedAction="inducing Evoke events"
+          />
+          <EventDescription
+            eventName="Evoke"
+            intro="You selectively sublime half of the virtual particles in a path creating a small but highly destructive burst of antimatter."
+            linkTarget={linkMap.EvocationStyle}
+            description={
+              <p>
+                Inducing this is an a Risky and Strenuous Challenge that results in an attacking a target you can see
+                with an explosive torrent of energy. The target is dealt Threat equal to Power and may defend with a
+                Ranged Defense reaction.
+              </p>
+            }
           />
 
           <Section header="Annihilate" isClassified>
