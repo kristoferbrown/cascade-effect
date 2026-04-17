@@ -1073,33 +1073,33 @@ function ChapterEntanglements() {
           />
           <EventDescription
             eventName="Evoke"
-            intro="You selectively sublime half of the virtual particles in a path creating a small but highly destructive burst of antimatter."
+            intro="You selectively sublime half of the virtual particles in a path creating a small but highly destructive burst of energy."
             linkTarget={linkMap.EvocationStyle}
             description={
-              <p>
-                Inducing this is an a Risky and Strenuous Challenge that results in an attacking a target you can see
-                with an explosive torrent of energy. The target is dealt Threat equal to Power and may defend with a
-                Ranged Defense reaction.
-              </p>
+              <>
+                <ChallengeParams
+                  pair={{ fight: true, far: true }}
+                  risk={"Medium"}
+                  effort={"Medium"}
+                  allocBonus={"Evocation Style"}
+                  goals={["Power"]}
+                />
+                <p>
+                  Inducing this is an a medium Risk and Effort Challenge that results in attacking a target you can see
+                  with an explosive torrent of energy. The target is dealt Threat equal to Power and defends with a
+                  Ranged Defense reaction.
+                </p>
+              </>
             }
           />
 
           <Section header="Annihilate" isClassified>
             <SpecializationDescription
-              intro={
-                <p>
-                  You can selectively sublimate half of the virtual particles normally created by an Evoke event into
-                  hidden space, creating a small amount of antimatter which annihilates on impact, increasing the damage
-                  output.
-                </p>
-              }
+              intro={<p>The raw destructive potential of Evoke increases.</p>}
               ranks={[
+                <p>Your Evoke events deal an additional amount of Threat equal to your rank in this Specialization.</p>,
                 <p>The Power metric of your Evoke event has no limit, you can spend any amount of Progress on it.</p>,
-                <p>
-                  When inducing Evoke, you can intentionally take any amount of unavoidable Stress to Focus. The target
-                  also takes this amount of Stress in addition to any Threat dealt to them.
-                </p>,
-                <p>Replace the Power metric of your Evoke event with “2 Threat, minimum = Bonus”.</p>,
+                <p>Your Evoke events deal an additional amount of Threat equal to your rank in Evocation.</p>,
               ]}
             />
           </Section>
@@ -1108,50 +1108,167 @@ function ChapterEntanglements() {
               intro={<p>Your Evoke events can affect a larger area.</p>}
               ranks={[
                 <p>
-                  Your Evoke events gain the metric “Radius: 1 meter”. Everything within the Radius of the target of
-                  Evoke is dealt the same amount of Threat as the target.
+                  Your Evoke events have an additional Goal called Length. The event effects every space crossed by a
+                  straight line with a length in meters equal to the Length result originating from your space. You may
+                  divide the Threat dealt by this event between every person in the affected area as you see fit.{" "}
                 </p>,
-                <p>The Radius metric increases from “1 meter” to “2 meters”.</p>,
-                <p>
-                  You can sculpt the blast of your Evoke events, you may select any targets within Radius that are not
-                  affected by the blast.
-                </p>,
+                <>
+                  <p>
+                    Your Evoke events have an additional Goal called Width. If both Length and Width are used, Width
+                    indicates the total width of the affected area centered on a target line originating from your
+                    space.
+                  </p>
+                  <p>
+                    If only Width is used, and not Length, it indicates the Radius of a circle around a targeted point,
+                    effectively doubling the width.
+                  </p>
+                  <p>
+                    Similarly, if only Length is used, and not Width, the length of the line it indicates is now double
+                    the amount of Progress used on the Goal.
+                  </p>
+                </>,
+                <>
+                  <p>
+                    You can now choose to induce your Evoke events affecting an area at full power, causing them to deal
+                    the full Threat to every person in the affected area, or to induce them carefully and divide the
+                    Threat dealt between targets as you see fit.
+                  </p>
+                  <p>
+                    Additionally, for events with a Length the affected area can begin anywhere on the line originating
+                    from your space instead of beginning at your space.
+                  </p>
+                </>,
               ]}
             />
           </Section>
-          <Section header="Combat Evocation" isClassified>
+          <Section header="Breach" isClassified>
             <SpecializationDescription
-              intro={<p>You are a master of using Evocation Attacks in tactical situations.</p>}
+              intro={<p>Your Evoke events can blow doors off their hinges, destroy cover, and level walls.</p>}
               ranks={[
-                <p>Evoke ignores cover. You may choose if it ignites any flammable materials it strikes.</p>,
-                <p>If you hit a target behind cover with Evoke, they gain the Suppressed state with intensity 2.</p>,
+                <>
+                  <p>
+                    Your evocation events have an additional Goal called Breach. If this is the only Goal you apply
+                    Progress to, you can induce the event as an inhale action or as an instant non-action that occurs
+                    when you determine initiative. Any solid barrier, such as a wall or door, affected by the event with
+                    a durability on the following list that is less than the Progress applied to this Goal is
+                    explosively destroyed.
+                  </p>
+                  <ul>
+                    <li>1: Thin glass</li>
+                    <li>2: Small furniture</li>
+                    <li>3: Hollow wooden doors</li>
+                    <li>3-6: Drywall, solid wood doors</li>
+                    <li>6-9: Steel doors </li>
+                    <li>9-15: Brick wall</li>
+                    <li>15+: One meter thick reinforced concrete</li>
+                  </ul>
+                </>,
+                <p>Breach destroys barriers so thoroughly that anyone that had cover behind it no longer does. </p>,
                 <p>
-                  Evoke ignores line of sight, you can target anyone as long as you have seen them since your last
-                  turn.{" "}
+                  Breach destroys barriers with such explosive violence that anyone behind the barrier within a meter of
+                  the destroyed area is Off balance with an Intensity equal to the amount of extra Progress above what
+                  was needed to destroy the barrier, with a minimum of 1.
                 </p>,
               ]}
             />
           </Section>
-          <Section header="Force Push" isClassified>
+          <Section header="Burnout" isClassified>
             <SpecializationDescription
-              intro={<p>You can apply enough force to targets to move them.</p>}
+              intro={
+                <p>
+                  The human body wasn't meant to channel this degree of energy. You can push beyond this limit, harming
+                  yourself in the process in order to remove all limits on the power of evocation.
+                </p>
+              }
               ranks={[
                 <p>
-                  When you deal Stress to a target due to an Evoke event or any other attack action, you may force them
-                  to move directly away from you by 1 meter per rank you have in this specialization.
+                  When inducing Evoke, you can Push Yourself an additional number of times equal to your Evocation rank
+                  instead of just once.{" "}
                 </p>,
-                <p>When your attack action forces a target to move, you can choose to move them in any direction.</p>,
                 <p>
-                  Your Evoke event gains the metric “Push: 1 meter”. Regardless of whether the event deals Stress or
-                  not, it forces the target to move the Push distance in a direction of your choosing. If the event
-                  dealt Stress, the movement from Push happens in addition to the movement described in the previous
-                  ranks of this specialization. Increase your Far score by 1.
+                  Every point of Stress you take from Pushing Yourself while inducing Evoke increases the allocation
+                  bonus of the event by 1.
+                </p>,
+                <p>
+                  When inducing Evoke, you can willingly reduce a Metabolism capacity to 0 by Pushing Yourself, causing
+                  injury or dissociation. If this happens, add the damaged Metabolism's score to the final amount of
+                  Progress created.
                 </p>,
               ]}
             />
           </Section>
-          {/* <Section header="TODO" isClassified></Section> */}
-          {/* <Section header="TODO" isClassified></Section> */}
+          <Section header="Contained Plasma" isClassified>
+            <SpecializationDescription
+              intro={
+                <p>
+                  You can compress the volatile energies from evocation effects inside physical objects to release later
+                  a single detonation or a sustained release from the business end of a weapon.
+                </p>
+              }
+              ranks={[
+                <p>
+                  When inducing Evoke, you may hold a small object, such as a coin, card, bullet, or stone, in the palm
+                  of your hand to charge it with the event instead of detonating the event immediately. The object
+                  begins to glow brightly and as long as it, or any container it is in, remain in your line of sight you
+                  can detonate it at any later time in the scene. Detonating the object is an inhale action that causes
+                  the Evoke event you previously induced to resolve at the object's location, dealing Threat to anyone
+                  occupying the same space as the object or according to any area of effect Goals used. You may only
+                  maintain a single object in this state at a time.
+                </p>,
+                <p>
+                  You can contain the energies from evocation in an object and release them at a controlled rate. As an
+                  inhale action, touch a melee weapon, a piece cloth used as a hand wrap, a handful of projectiles, a
+                  magazine of ammunition, or other similar objects that could impact a target during a melee, ranged, or
+                  unarmed attack action. This object develops a luminous corona of plasma discharge, and has the
+                  allocation bonus of any attack made with it increased by your Evocation rank. The object can directly
+                  harm entities in hidden space if it strikes them. This state lasts until the scene ends or you lose
+                  line of sight to the object or a person holding the object. You can maintain a number of objects in
+                  this state equal to your evocation rank.
+                </p>,
+                <>
+                  <p>
+                    As an inhale action, you can create from nothing weapons made of luminous plasma. This acts as a
+                    long lasting bladed weapon of any size or as a stack of six size 1 thrown weapons that are destroyed
+                    on impact. Attacks made with these weapons have an allocation bonus increased by your Evocation rank
+                    and can harm entities in hidden space. You can only do this once per scene and the weapons created
+                    can only be used by you.
+                  </p>
+                  <p>
+                    Additionally, when you induce Evoke into an object, you may decide if the object leaving your line
+                    of sight will cause it to become inert or immediately detonate it. If the object detonates inside of
+                    someone's body, pockets, or a bag they carry, they have disadvantage on the defense reaction to the
+                    detonation.
+                  </p>
+                </>,
+              ]}
+            />
+          </Section>
+          <Section header="Disentangle" isClassified>
+            <SpecializationDescription
+              intro={<p>You can assault a target's connection to their hidden body directly.</p>}
+              ranks={[
+                <>
+                  <p>Your Evoke events can target entities in hidden space if you are aware of their presence. </p>
+                  <p>
+                    Additionally, when Evoke has a single target, you may execute it as an intangible purely
+                    dissociative attack. When you do, the target makes a Willpower reaction instead of Ranged Defense,
+                    and all Stress must be allocated to their Hidden Metabolisms. At this rank, this attack cannot cause
+                    a Dissociative State. If it would reduce a Capacity to 0, it instead remains at 1 and any excess
+                    Stress must be applied to another Hidden Metabolism.
+                  </p>
+                </>,
+                <p>
+                  If a target forced to make a Willpower reaction by your Evoke event is not entangled and therefore has
+                  no Hidden Metabolism scores, they are immediately rendered unconscious until the end of the scene.
+                </p>,
+                <p>
+                  Targets forced to make a Willpower reaction by your Evoke event that cannot take any further Stress
+                  without dissociating, you choose if they fall immediately unconscious for a number of rounds equal to
+                  the Stress dealt or they gain dissociative states normally.{" "}
+                </p>,
+              ]}
+            />
+          </Section>
         </Section>
       </Section>
 

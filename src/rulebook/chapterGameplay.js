@@ -714,7 +714,8 @@ function ChapterGameplay() {
               You can Push at any moment, even during a challenge. When you do this, it happens while you are allocating
               Metabolism points, before rolling any dice it counting Progress. This allows you to allocate all of a
               Metabolism, then Push to refill it and allocate the new refilled points as well. By Pushing during a
-              Challenge you can potentially accomplish harder Goals than you normally could.
+              Challenge you can potentially accomplish harder Goals than you normally could. You can only Push Yourself
+              one time during a single Challenge.
             </p>
           </Section>
           <Section header="Push Examples">
