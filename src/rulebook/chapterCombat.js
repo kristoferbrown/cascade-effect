@@ -543,10 +543,9 @@ function ChapterCombat() {
             <Metabolism near />, and ranged weapons use <Metabolism far />.
           </p>
           <p>
-            Each weapon has a Size value. This number indicates the amount of extra
-            <Crosslink target={linkMap.Attacks}>Threat</Crosslink> added to attacks. It also indicates the minimum
+            Each weapon has a Size value. This number indicates the Progress bonus the weapon adds to attacks made with it. It also indicates the minimum
             amount of Metabolism points that must be spent to attack with the weapon, if you do not have this amount
-            available, you can only use this weapon with a desperate attack. Size 1 can be concealed in casual clothing,
+            available, you can only use this weapon when the attack is Prepared. Size 1 can be concealed in casual clothing,
             Size 2 cannot, and Size 3 or above requires both hands. Any weapon Size 4 or above can only be used when
             Prepared.
           </p>

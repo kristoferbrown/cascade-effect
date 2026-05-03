@@ -172,10 +172,10 @@ function ChapterEntanglements() {
               }
               ranks={[
                 <p>
-                  When you use an inhale action to Move in a straight line towards a target, and then then use your
-                  exhale action to make a Melee or Unarmed attack against the target, you can put your whole weight and
-                  strength into the strike. This lets you add your rank in this Specialization as extra Progress to the
-                  attack that can only be used on the Grapple or Off Balance Goals.
+                  When you charge an enemy by using your inhale action to Move in a straight line to a target and then
+                  strike it with a Melee or Unarmed Attack, you can put your whole weight and strength into the strike.
+                  This lets you add your Strong rank as extra Progress to the attack that can only be used on the
+                  Grapple or Off Balance Goals.
                 </p>,
                 <p>
                   The distance you can jump is tripled. Any obstacle that can be jumped over cannot increase the Risk or
@@ -183,7 +183,7 @@ function ChapterEntanglements() {
                 </p>,
                 <p>
                   When you use the free movement from making a Melee or Unarmed Attack, you can move an extra meter as
-                  long as you use it to move directly towards the target before the attack.{" "}
+                  long as you use it to move directly towards the target before the attack.
                 </p>,
               ]}
             />
@@ -192,8 +192,8 @@ function ChapterEntanglements() {
             <SpecializationDescription
               intro={<p>You can use weapons that would normally be too large to wield effectively.</p>}
               ranks={[
-                <p>You can wield a weapon of size 3 in one hand.</p>,
-                <p>You cannot be disarmed against your will. Weapons of size 4 can be used without being Prepared.</p>,
+                <p>You cannot be disarmed against your will. You can wield a weapon of size 3 in one hand.</p>,
+                <p>Weapons of size 4 can be used without being Prepared.</p>,
                 <p>You can wield weapons of size 4 in one hand.</p>,
               ]}
             />
@@ -687,7 +687,6 @@ function ChapterEntanglements() {
                   <li>3-6: Residential overhead power lines, industrial electromagnets.</li>
                   <li>6-9: A lightning strike.</li>
                   <li>9-15: High-tension distribution lines.</li>
-                  <li>15+: The output of a power plant, catastrophic atmospheric phenomena.</li>
                 </ul>
                 <p>
                   If energy is redirected with the intent to to harm someone, it primarily dazzles, blinds, or stuns. It
@@ -1276,8 +1275,7 @@ function ChapterEntanglements() {
       <Section header="Flight + Self">
         <p>
           This entanglement helps one defend them self from unarmed blows, reduce damage taken in general, improve
-          endurance, and even to protect oneself and others by creating barriers of force. It can increase the bonuses
-          for the Unarmed Defense reactions, Rest actions, or the Ward cascade event.
+          endurance, and even to protect oneself and others by creating barriers of force.{" "}
         </p>
         <EntanglementDescription
           physMet={<Metabolism flight />}
@@ -1286,34 +1284,6 @@ function ChapterEntanglements() {
           intStyle={"Tough"}
         />
 
-        <EventDescription
-          eventName="Ward"
-          intro="You create a translucent barrier of force that prevents anything from crossing it."
-          inductionTime="Full Action"
-          linkTarget={linkMap.AbjurationStyle}
-          metrics={[
-            { name: "Durability", value: "1 Threat, minimum = Bonus" },
-            { name: "Duration", value: "1 round, minimum = Bonus" },
-            { name: "Length", value: "1 meter, minimum = Bonus" },
-          ]}
-          description={
-            <>
-              <p>
-                Choose a straight line starting from a point in any adjacent space and ending at any point within the
-                Length metric. For the Duration, a barrier prevents anything from crossing this line. If this line
-                crosses any occupied spaces, you choose which side of the barrier each occupier is on. Attacks that
-                target the barrier, or something on the other side of it, deal Threat only to the barrier. Each point of
-                Threat reduces the barrier's Durability by 1, until it reaches 0 durability and is destroyed. The attack
-                that destroys the barrier is still blocked completely, regardless of how much Threat it dealt.
-              </p>
-              <p>These barriers completely block things in hidden space just as well as they block physical objects.</p>
-              <p>
-                You have some control over the cosmetic appearance of your barriers. However, they are always
-                transparent enough not to hinder vision but still easily visible due to a faint color or luminosity.
-              </p>
-            </>
-          }
-        />
         <Break />
         <Section header="Tough Style">
           <StyleDescription
@@ -1332,15 +1302,18 @@ function ChapterEntanglements() {
               intro={<p>It is extremely hard to take you out of a fight.</p>}
               ranks={[
                 <p>
-                  When one of your Physical Metabolism maximums is reduced to 0, you do not gain the injury State that
-                  this normally causes and may continue acting normally. You only gain the injury State if this
-                  Metabolism would take further Stress at a later point while its maximum is still 0.
+                  Any time you are dealt more than 1 point of Stress by an attack, reduce the amount of Stress by your
+                  Tough style rank down to a minimum of 1 stress.{" "}
                 </p>,
                 <p>
-                  Any time you take more than 1 point of Stress from being attacked, reduce the amount of Stress you
-                  take by 1.
+                  When one of your Physical Metabolism capacities is reduced to 0, you do not gain the injury State that
+                  this normally causes and may continue acting normally. You only gain the injury State if this
+                  Metabolism would take further Stress at a later point while its capacity is still 0.
                 </p>,
-                <p>Once per day, if you would die you instead do not die.</p>,
+                <p>
+                  When one of your Physical Metabolisms is injured, your Hidden Metabolisms all refill to their
+                  capacity.{" "}
+                </p>,
               ]}
             />
           </Section>
@@ -1348,18 +1321,23 @@ function ChapterEntanglements() {
             <SpecializationDescription
               intro={
                 <p>
-                  You unconsciously use the cascade effect to create the energy your body needs to maintain your health.
+                  You unconsciously use the cascade effect to create the energy and materials your body needs to
+                  maintain your health.{" "}
                 </p>
               }
               ranks={[
-                <p>You no longer require food or water to remain healthy and comfortable.</p>,
                 <p>
-                  You no longer require breathing oxygen to remain healthy and comfortable. Your age at half speed,
+                  You no longer require food or water to remain healthy and comfortable. Your age at half speed,
                   doubling your lifespan.
                 </p>,
                 <p>
-                  You no longer require flowing blood to remain healthy, and are therefore immune to the Dying state.
-                  You no longer age and can live forever if not killed.
+                  You no longer require breathing oxygen to remain healthy and comfortable. Your requirement for sleep
+                  to be fully rested and restore Stress reduced by half.
+                </p>,
+                <p>
+                  You no longer require flowing blood to remain healthy, and are therefore cannot gain the Dying state.
+                  Only injuring all three of your Physical Metabolisms can kill you. You no longer age and can live
+                  forever if not killed.{" "}
                 </p>,
               ]}
             />
@@ -1374,14 +1352,11 @@ function ChapterEntanglements() {
               }
               ranks={[
                 <p>
-                  When you use the rest action in combat, you may use both the recover Metabolism option and the reduce
-                  state intensity option simultaneously.
+                  Any time a state is applied to you, you may choose to reduce the intensity of the state by your Tough
+                  style rank, to a minimum of 1.
                 </p>,
-                <p>
-                  When you use the rest action in combat, reduce the intensity of all states instead of just one. When
-                  affected by any poison, toxin, disease, or drug, you may choose to be immune to it.
-                </p>,
-                <p>Any time a state is applied to you, you may choose to reduce the intensity of the state by 1.</p>,
+                <p>You are immune to any undesired poison, toxin, disease, or drug.</p>,
+                <p>When you use the rest action in combat, reduce the intensity of all states instead of just one. </p>,
               ]}
             />
           </Section>
@@ -1394,9 +1369,9 @@ function ChapterEntanglements() {
                 </p>
               }
               ranks={[
-                <p>Remove 1 point of Stress from every Physical Metabolism every hour.</p>,
+                <p>Remove 1 point of Stress from every Physical Metabolism after every scene.</p>,
                 <p>Remove 1 point of Stress from every Physical Metabolism every minute.</p>,
-                <p>Whenever you use the Rest action, heal 1 stress on all Physical Metabolisms.</p>,
+                <p>You can regrow a missing limb or organ by getting enough sleep to rest for the day.</p>,
               ]}
             />
           </Section>
@@ -1405,25 +1380,45 @@ function ChapterEntanglements() {
               intro={<p>You can exert yourself for much longer durations than the body is normally capable.</p>}
               ranks={[
                 <p>
-                  When you regenerate half of your spent Metabolism points between combat rounds , you regain an
-                  additional number of points equal to your rank in this Specialization.
+                  When you regenerate half of your spent Metabolism points between combat rounds, you regain an
+                  additional number of points equal to your Tough style rank
                 </p>,
+                <>
+                  <p>Any challenge that would be high Effort due to physical exertion is instead medium Effort. </p>
+                  <p>
+                    Additionally, you can continue any physical activity indefinitely. The only limit is your need for
+                    sleep.
+                  </p>
+                </>,
+                <p>When you use the rest action in combat, refill all Metabolisms instead of one.</p>,
+              ]}
+            />
+          </Section>
+          <Section header="Unyielding" isInset>
+            <SpecializationDescription
+              intro={<p>It's extremely hard to knock you off your feet or push you around.</p>}
+              ranks={[
                 <p>
-                  Your requirement for sleep to be fully rested is reduced by a number of hours equal to your Rest
-                  bonus.
+                  When you stand your ground by not using the free movement provided by a defense Reaction, you can use
+                  Unarmed Defense in place of this and any subsequent reactions until your next turn.
                 </p>,
+                <>
+                  <p>You cannot be forced to move, such as by someone inflicting the Grappled state on you.</p>
+                  <p>
+                    An attack cannot take you off your feet unwillingly, therefore attacks cannot raise the intensity of
+                    your Off Balance state above 3.
+                  </p>
+                </>,
                 <p>
-                  Any challenge that would be high Effort due to physical exertion is instead default Effort. The only
-                  limit on how long you can continue a physical activity is your need for sleep.
+                  When someone inflicts the Grappled state on you, you may also inflict it on them with the same
+                  intensity.
                 </p>,
               ]}
             />
           </Section>
-          {/* <Section header="TODO" isInset></Section> */}
-          {/* <Section header="TODO" isInset></Section> */}
-          {/* <Section header="TODO" isInset></Section> */}
         </Section>
         <Break />
+
         <Section header="Abjuration Style">
           <StyleDescription
             intro={
@@ -1436,57 +1431,66 @@ function ChapterEntanglements() {
             rank1Bonus="You can induce the Ward cascade event."
             associatedAction="inducing Ward events"
           />
+          <EventDescription
+            eventName="Ward"
+            intro="You create a translucent barrier of force that prevents anything from crossing it."
+            linkTarget={linkMap.AbjurationStyle}
+            description={
+              <>
+                <ChallengeParams
+                  pair={{ flight: true, self: true }}
+                  risk={"Medium"}
+                  effort={"Medium"}
+                  allocBonus={"Abjuration Style"}
+                  goals={["Durability", "Length"]}
+                />
+                <p>
+                  Choose a straight line starting from a point in any adjacent space and ending at any point within a
+                  number of meters equal to the Length. For the rest of the scene, or until you dismiss it, or lose
+                  consciousness, a barrier prevents anything from crossing this line. If this line crosses any occupied
+                  spaces, you choose which side of the barrier each occupier is on. Attacks that target the barrier, or
+                  anything on the other side of it, deal Threat only to the barrier. Each point of Threat reduces the
+                  barrier's Durability by 1, until it reaches 0 and is destroyed. The attack that destroys the barrier
+                  is still blocked completely, regardless of how much Threat it dealt.
+                </p>
+                <p>
+                  These barriers completely block things in hidden space just as well as they block physical objects.
+                </p>
+                <p>You can only have one Ward barrier active at a time.</p>
+                <p>
+                  You have some control over the cosmetic appearance of your barriers. However, they are always
+                  transparent enough not to hinder vision yet still easily visible due to a faint color or luminosity.
+                </p>
+              </>
+            }
+          />
 
-          <Section header="Combat Shielding" isClassified>
-            <SpecializationDescription
-              intro={<p>You use Ward tactically to protect your allies.</p>}
-              ranks={[
-                <p>
-                  Your Wards do not need to be straight lines, and can follow any path of you choose as long as the
-                  total length is still under the Length metric. You can freely traverse and attack through any ward you
-                  have created.
-                </p>,
-                <p>
-                  Your wards are selective, it blocks attacks from your enemies but does not block attacks made by your
-                  allies. Despite this, your wards remain untraversable to anyone but you.
-                </p>,
-                <p>
-                  You and any ally standing adjacent to the path of your ward when you create it is protected by a
-                  subtly shimmering shield that clings to their body. Any Threat dealt to someone protected this way is
-                  dealt to their shield instead of them. Each shield dissipates after it absorbs an amount of Threat
-                  equal to the Durability used to induce the event. Any further Threat then passes through normally.
-                </p>,
-              ]}
-            />
-          </Section>
           <Section header="Filter" isClassified>
             <SpecializationDescription
-              intro={<p>When using the Ward event you may add filtering properties to the barrier you create. </p>}
+              intro={<p>When using the Ward event you may add filtering properties to the barrier you create.</p>}
               ranks={[
                 <>
                   <p>
-                    When creating a Ward, you may reduce its Durability by 1 to add a filter to it. You may do this
+                    When inducing Ward, you may reduce its Durability by 1 to add a filter to it. You may do this
                     multiple times as long as you maintain at least 1 point of Durability. For each filter you add,
                     choose a single object or entity. The chosen targets are either the only thing the barrier blocks,
-                    or the only thing that the barrier allows to pass.
+                    or the only thing that the barrier allows to pass. Things that can pass through the filter can only
+                    do so while moving at speeds slower than 1 meter per round, preventing any attacks from passing
+                    through.
                   </p>
                   <p>
-                    Things that can pass through the filter can only do so while moving at speeds slower than 1 space
-                    per round, preventing any attacks from passing through. Filters cannot cause damage, if a blocked
-                    object is inside an object that can pass, then both objects are blocked.
+                    Filters cannot cause Threat or other harmful effects. If a blocked object is inside an object that
+                    can pass, then both objects are blocked.
                   </p>
                 </>,
-                <>
-                  <p>
-                    The targets of filters can now be a specific class of objects, type of entity, or homogeneous
-                    substance. For example, you could make selections such as metallic objects, humans, or oxygen.
-                  </p>
-                  <p>
-                    Blocked objects inside allowed objects can now harmlessly pass through each other if you want them
-                    to. For example, you could create a filter that blocks a toxin but allows humans in order to safely
-                    purge the toxin from those that cross the barrier.
-                  </p>
-                </>,
+
+                <p>
+                  The targets of filters can now be a specific class of objects, type of entity, or homogeneous
+                  substance. For example, you could make selections such as metallic objects, humans, or oxygen. Blocked
+                  objects inside allowed objects can now harmlessly pass through each other to fulfill the filter if you
+                  want them to. For example, you could create a filter that blocks a toxin but allows humans in order to
+                  safely purge the toxin from those that cross the barrier.
+                </p>,
                 <p>
                   You can now add filters that work on a case by case basis. When you do, you become aware of anything
                   that comes within a meter of the barrier no matter where you are, and may then choose whether to allow
@@ -1496,76 +1500,77 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Repelling Ward" isClassified>
+          <Section header="Repelling Sphere" isClassified>
             <SpecializationDescription
               intro={<p>You can create airtight Wards that push others away.</p>}
               ranks={[
                 <p>
                   Instead of straight lines, you may create spherical wards centered on yourself with a diameter of up
                   to Length. The affected area must not include anything unwilling to be enclosed by it, or the event
-                  fails. The sphere is airtight, preventing liquids or gasses from entering or exiting.
+                  fails. The sphere may be airtight if you wish, preventing liquids or gasses from entering or
+                  exiting.{" "}
                 </p>,
                 <p>
-                  When you create a Spherical ward, it can now include unwilling occupants and you can now place it
+                  When you create a spherical Ward, it can now include unwilling occupants and you can now place it
                   freely as long as you are inside or adjacent to it. You may also select any number of entities or
                   objects that are expelled from the warded area. These targets are forcibly pushed into the nearest
-                  empty space outside of the sphere.
+                  empty space of their choice outside of the sphere.{" "}
                 </p>,
                 <p>
-                  A spherical ward my now have a radius of up to Length instead of a diameter, doubling its maximum
-                  size. If the ward is centered on you when you create it, you can choose for it to move with you when
-                  you move or to remain stationary. For each person, or object of greater mass than a person, that would
-                  be forced to move by the ward moving with you, the terrain difficulty of every space you move into is
-                  increased by 1.
+                  If the ward is centered on you when you create it, you can choose for it to move with you when you
+                  move or remain stationary. If your movement causes the ward to move into occupied spaces, the occupant
+                  is pushed to the nearest space of their choosing outside the path of the ward. Collisions with
+                  unmovable objects prevent your movement. Each person, or object with similar mass to a person, forced
+                  to move by the ward moving reduces its remaining durability by 1
                 </p>,
               ]}
             />
           </Section>
-          <Section header="Retrogradient" isClassified>
+          <Section header="Reflexive Shield" isClassified>
             <SpecializationDescription
-              intro={
-                <p>
-                  You can create a defensive field around yourself when attacked. Ranged attacks and other projectiles
-                  must move further through this field than other attacks, greatly reducing their damage.
-                </p>
-              }
+              intro={<p>You can instinctively protect yourself from incoming attacks by inducing Ward. </p>}
               ranks={[
                 <p>
-                  Instead of reacting normally to an incoming attack, you may use a special Retrogradient reaction to
-                  briefly project a defensive field around yourself. When you do, treat it the same as the original
-                  reaction but replace Flight with Focus and if the attack was ranged, reduce the Threat it dealt by 1.
+                  You may induce Ward as a defense reaction to any incoming attack. This reaction uses same metabolism
+                  pair and allocation bonus as inducing Ward normally, but can only use the a single Goal called
+                  Defense. This Goal has no limit to the Progress you can apply to it and it works the same as the
+                  Defense Goal of any defense reaction, with each point applied to it reducing Threat and or other Goals
+                  dealt by 1.
                 </p>,
                 <p>
-                  When reacting with Retrogradient, reduce incoming Threat by 3 points from Ranged attacks, 2 points
-                  from melee attacks, or 1 point from unarmed attacks.
+                  When using Ward as a reaction, it emits a repulsive field. Adjacent attackers are repelled by it and
+                  become Off Balance 1. Similarly, attacks originating from further away have their momentum drained by
+                  it, removing an amount of Threat dealt equal to the weapon size.
                 </p>,
                 <p>
-                  You can maintain the concentration needed to use Retrogradient while still defending yourself
-                  normally. You can now add Focus to the reaction's Challenge without removing Flight from it.
+                  When using Ward as a reaction, if the amount of Defense is more than enough to completely nullify the
+                  incoming attack, the event also creates a lasting barrier as if you induced the event normally. The
+                  barrier is 1 meter long, oriented in such a way that it blocks you from the attacker, and has
+                  Durability equal to the extra amount of Defense above what was needed to nullify the attack.
                 </p>,
               ]}
             />
           </Section>
           <Section header="Subtle Ward" isClassified>
             <SpecializationDescription
-              intro={<p>You can create Wards that are effective without people being aware of them.</p>}
+              intro={<p>Your Wards can be effective without people even being aware of them.</p>}
               ranks={[
                 <p>
                   You can choose if each Ward you make is opaque, translucent, or invisible. If an invisible ward has
-                  filters added to it by the Filter specialization, unblocked targets can pass through at full running
-                  speed and doing so is imperceptible.
+                  filters added to it by the Filter specialization, unblocked targets can pass through at any speed and
+                  doing so is imperceptible to them.{" "}
                 </p>,
                 <p>
-                  You can induce Ward as a basic action instead of a full action. You may create a ward subtly
-                  preventing witnesses from knowing you did anything.
+                  You can induce Ward without any gestures or noticeable exertion, preventing witnesses from knowing you
+                  did anything. You may also make wards that exclusively act in hidden space while being imperceptible
+                  in physical space, or vice versa.{" "}
                 </p>,
                 <p>
                   You may induce an alternate version of Ward that acts primarily mentally. When you do, the ward does
-                  not actually physically block anything. Instead, anyone that comes within Length of the ward becomes
-                  stricken with an inexplicable anxiety and fear of approaching closer, even if they can't actually
-                  perceive the ward. No one will willingly come closer to the ward outside of a life or death scenario
-                  such as combat. In combat, to traverse the ward someone must make a Willpower reaction that is greater
-                  than the Durability of the Ward.
+                  not actually physically block anything. Instead, anyone that comes within Length of any point of the
+                  ward becomes stricken with an inexplicable anxiety and fear of approaching closer, even if they can't
+                  actually perceive the it. I'm order to come closer to the ward or traverse it someone must make a
+                  Willpower reaction that is greater than the Durability of the Ward.
                 </p>,
               ]}
             />
@@ -1574,11 +1579,38 @@ function ChapterEntanglements() {
             <SpecializationDescription
               intro={<p>Your Ward events last longer and are more durable.</p>}
               ranks={[
-                <p>Replace the Duration metric of your Ward event with “Duration: 1 minute, minimum = bonus”.</p>,
-                <p>Replace the Durability metric of your Ward event with “Durability: 2 Threat, minimum = bonus”.</p>,
+                <p>Your wards last until you sleep, lose consciousness, or dismiss them.</p>,
                 <p>
-                  Replace the Duration metric of your Ward event with “Duration: 1 hour, minimum = bonus”. Replace the
-                  Durability metric of your Ward event with “Durability: 3 Threat, minimum = bonus”.
+                  You can extend the Durability or Length of a barrier by inducing Ward again. However doing so causes a
+                  point of Stress to both Flight and Self. You cannot recover this Stress while the ward remains active.
+                </p>,
+                <p>
+                  Your wards can continue existing while you sleep. For each hour that passes while you are not
+                  conscious, they lose a point of durability.
+                </p>,
+              ]}
+            />
+          </Section>
+          <Section header="Tactical Shielding" isClassified>
+            <SpecializationDescription
+              intro={<p>You use sculpt Wards tactically and selectively to protect you or your allies.</p>}
+              ranks={[
+                <p>
+                  Your Wards do not need to be a straight line, and can follow any path you choose of the same length.
+                  You can freely traverse and attack through any ward you have created.
+                </p>,
+                <p>
+                  Your wards are selective, it blocks attacks from your enemies but does not block attacks made by your
+                  allies. Despite this, your wards remain non-traversable to anyone but you.
+                </p>,
+                <p>
+                  When inducing Ward, you may make a barrier normally or instead take a point of Stress to Focus to wrap
+                  allies in a subtly shimmering protective field that clings to their body. When you do this, choose a
+                  path according to the Length Goal as normal. Divide the Durability Goal up as you see fit between
+                  anyone within a meter of this path. The amount of Durability you assign each person determines the
+                  durability of their shield. Any Threat dealt to them is taken by their shield instead of them. Each
+                  shield dissipates after it absorbs an amount of Threat equal to the Durability assigned to it. to
+                  induce the event. Any further Threat then passes through normally.
                 </p>,
               ]}
             />
@@ -1590,8 +1622,7 @@ function ChapterEntanglements() {
       <Section header="Flight + Near">
         <p>
           Mastering this Entanglement is mastering motion itself. It boosts your melee defense, speed, and can even
-          allow you to move things with your mind. It can increase the bonuses for the Melee Defense or Move actions, or
-          the Telekinesis cascade event.
+          allow you to move things with your mind.
         </p>
         <EntanglementDescription
           physMet={<Metabolism flight />}
@@ -1599,23 +1630,7 @@ function ChapterEntanglements() {
           esoStyle={"Gravitonertia"}
           intStyle={"Mobile"}
         />
-        <EventDescription
-          eventName="Telekinesis"
-          intro="You focus your mind on an unattended non-living object, causing it to move at your command."
-          inductionTime="Full Action"
-          linkTarget={linkMap.GravitonertiaStyle}
-          metrics={[
-            { name: "Mass", value: "1 kilogram" },
-            { name: "Range", value: "1 meter" },
-            { name: "Targets", value: "1 per 3" },
-          ]}
-          description={
-            <p>
-              Choose a number of objects equal to Targets within Range that each weigh less than Mass. Each object moves
-              from it its current location to a new location within Range of its starting point.
-            </p>
-          }
-        />
+
         <Break />
         <Section header="Mobile Style">
           <StyleDescription
@@ -1626,40 +1641,66 @@ function ChapterEntanglements() {
               </p>
             }
             styleName="Mobile"
-            rank1Bonus="Your mobility allows you to control how you engage in melee combat and traverse any obstacle. In addition to the free meter of movement included in each of your actions, you can also move one additional meter for free at any time during your turn. Additionally, obstacles than can be traversed by climbing, balancing, swimming, tumbling, or free running cannot increase the Risk level or add additional goals to our Move actions, however they remain difficult terrain."
+            rank1Bonus="Your mobility allows you to control how you engage in melee combat and traverse any obstacle. Obstacles than can be traversed by parkour, climbing, balancing, swimming, or tumbling cannot increase the Risk level or add additional goals to our Move actions, however they remain difficult terrain."
             associatedAction="Melee Defense reactions"
           />
-          <Section header="Charge" isInset>
+          <Section header="Afterimage" isInset>
             <SpecializationDescription
-              intro={<p>You can effectively apply your movement in combat to your attacks and defenses.</p>}
+              intro={<p>Enemies target where you were instead of where you are.</p>}
               ranks={[
                 <p>
-                  Add your Move action bonus to the amount of free movement you can take when you use this movement
-                  before an attack action on your turn.
+                  When an adjacent ally is attacked, you can also take a defense reaction. If either of you still have
+                  free movement from defense reactions available, one of you can use it to swap spaces before the
+                  attack. If you do this, any Threat or States dealt by the attack are divided evenly between you and
+                  your ally.
                 </p>,
                 <p>
-                  Once per turn, you can charge by taking both the Move action and then a Melee or Unarmed Attack action
-                  as if they were a single action. The attack action does not provide free movement.
+                  When reacting to being attacked, you may use the the reaction's free movement to swap positions with a
+                  different enemy who is adjacent to you. Any Threat or States dealt by the attack are then divided
+                  evenly between you and this enemy.
                 </p>,
                 <p>
-                  After you charge and until your next turn, you may add your Move action bonus to the Progress created
-                  to react to the next attack targeting you.
+                  When you take a Move action, you blur to your next location. You may leave behind an afterimage in a
+                  space on the trajectory you traveled. If this image is adjacent to an enemy, any Threat or States
+                  dealt by the attack are then divided evenly between you and this enemy.
+                </p>,
+              ]}
+            />
+          </Section>
+          <Section header="Charge" isInset>
+            <SpecializationDescription
+              intro={<p>You can effectively apply your momentum in combat to your attacks and defenses.</p>}
+              ranks={[
+                <p>
+                  When you use the free movement provided by a melee or unarmed attack to approach the target before the
+                  attack, increase the amount of free movement you can take by your Mobile rank. All of this movement
+                  must be used to move directly towards the target.{" "}
+                </p>,
+                <p>
+                  When you use the free movement provided by a melee or unarmed attack to approach the target before the
+                  attack, you can pass through enemy occupied spaces and ignore any difficult terrain.
+                </p>,
+                <p>
+                  When you charge an enemy by using your inhale action to Move in a straight line to a target and then
+                  strike it with a Melee or Unarmed Attack, you can move faster than the eye can follow. The attack and
+                  the next attack targeting you before your next turn are treated as if you are Hidden.
                 </p>,
               ]}
             />
           </Section>
           <Section header="Evasion" isInset>
             <SpecializationDescription
-              intro={<p>You have a strong sense for where attacks will land and how to avoid them.</p>}
+              intro={<p>Your rapid movements make you a hard target.</p>}
               ranks={[
                 <p>When reacting to an attack, if you reduce the threat dealt to 1, it is instead reduced to 0.</p>,
                 <p>
-                  Gain the trait Evasive. It is relevant any time you use the Melee Defense or Unarmed Defense
-                  reactions, or the Move action.
+                  If you use the Move action to move more than 3 meters, your quick movement makes you hard to hit, and
+                  the next defense Reaction you take becomes Prepared.
                 </p>,
                 <p>
-                  The free movement you get when using a reaction in response to any attack increases by 1 meter. This
-                  stacks with any other increase to free movement.
+                  If you use a deep breath to Move and then Elude and do nothing else on your turn, you become an
+                  extremely hard target. The first attack targeting you after this is nullified completely, on the
+                  second your defense reaction is Prepared.
                 </p>,
               ]}
             />
@@ -1668,9 +1709,12 @@ function ChapterEntanglements() {
             <SpecializationDescription
               intro={<p>You can run much faster than before.</p>}
               ranks={[
-                <p>The free movement you get when taking a basic action on your turn increases by 1 meter.</p>,
-                <p>When you use the Move action, double the amount of Progress created in the Challenge.</p>,
-                <p>When you use the Move action, treat your Move action bonus as if it were doubled.</p>,
+                <p>
+                  When you use an inhale action, you can move 1 meter for free before AND after the action, instead of
+                  just one or the other.
+                </p>,
+                <p>Your Move action is always Prepared.</p>,
+                <p>Your Move action has a Progress bonus equal to your Mobile style rank.</p>,
               ]}
             />
           </Section>
@@ -1678,17 +1722,32 @@ function ChapterEntanglements() {
             <SpecializationDescription
               intro={<p>Obstacles and terrain no longer hinder your movement.</p>}
               ranks={[
-                <p>You can treat any terrain with a difficulty less than Move action bonus as normal terrain.</p>,
+                <p>
+                  Reduce the difficulty of all terrain by your Mobile style rank, down to a minimum of being normal
+                  terrain.
+                </p>,
                 <p>You can freely pass through enemy spaces, but you cannot end an action in them.</p>,
                 <p>
-                  You can traverse vertical walls as if they were normal terrain up to a height equal to your Near score
-                  in meters. You must end the action on normal flat terrain.
+                  When you use the Move action, you can combine horizontal wall running and rapid vertical climbing to
+                  traverse vertical surfaces as if they were normal terrain up to a height equal to your Near score in
+                  meters. You must end the action on flat terrain.
                 </p>,
               ]}
             />
           </Section>
-          {/* <Section header="TODO" isInset></Section> */}
-          {/* <Section header="TODO" isInset></Section> */}
+          <Section header="Unfettered" isInset>
+            <SpecializationDescription
+              intro={<p>You can always get back on your feet or slip out of any tough situation effortlessly.</p>}
+              ranks={[
+                <p>When your turn starts, remove the Off Balance state entirely.</p>,
+                <p>You can slip through an enemy's defenses, your movement never triggers Counterattack reactions.</p>,
+                <p>
+                  As an inhale action you can slip out of any hold, removing the Grappled state entirely, or instantly
+                  escape handcuffs, zip ties, ropes, or other restraints.
+                </p>,
+              ]}
+            />
+          </Section>
         </Section>
         <Break />
         <Section header="Gravitonertia Style">
@@ -1703,46 +1762,75 @@ function ChapterEntanglements() {
             rank1Bonus="You can induce the Telekinesis cascade event."
             associatedAction="inducing Telekinesis events"
           />
+          <EventDescription
+            eventName="Telekinesis"
+            intro="You focus your mind on an object, causing it to move on command."
+            linkTarget={linkMap.AbjurationStyle}
+            description={
+              <>
+                <ChallengeParams
+                  pair={{ flight: true, near: true }}
+                  risk={"Medium"}
+                  effort={"Medium"}
+                  allocBonus={"Gravitonertia Style"}
+                  goals={["Mass", "Range"]}
+                />
+                <p>
+                  Choose a loose non-living object you can see within a number of meters equal to Range. The object must
+                  weigh fewer kilograms than Mass. This object quickly floats to a new location within Range of its
+                  starting point.
+                </p>
+              </>
+            }
+          />
           <Section header="Alter Mass" isClassified>
             <SpecializationDescription
-              intro={
-                <p>Your Telekinesis events can increase or decrease the mass of objects instead of moving them.</p>
-              }
+              intro={<p>Your can increase or decrease the mass of objects and use Telekinesis on larger things. </p>}
               ranks={[
                 <p>
-                  After moving an object with Telekinesis, you may spend a point of Near to double the object's weight.
-                  You may do this a number of times equal to your rank in this Specialization.
+                  Each of Progress applied to the Mass Goal of your Telekinesis events now allows you to move 10
+                  kilograms instead of 1.
                 </p>,
                 <p>
-                  The Mass metric of Telekinesis is replaced with "1 kilogram, minimum = Bonus". Each time you would
-                  double an object's weight you may choose to reduce its weight by half instead.
+                  As an inhale action, you can touch an object and take a point of Stress to Flight or Near to change
+                  its weight. It doubles or reduces to half if you Stress one metabolism. If you take Stress to both, it
+                  increases 10x or reduces to 10% its original weight. This change lasts until the end of the scene or
+                  until you dismiss it as an inhale action. At this rank, you cannot use telekinesis on this object
+                  while it is modified.
                 </p>,
                 <p>
-                  When you reduce an object's weight, you may do so immediately before moving it instead of after. This
-                  allows you to reduce the weight of an object and then move it telekinetically if the new weight is
-                  less than the Mass limit.
+                  When inducing Telekinesis, you can now modify the weight of the target object as described in rank 2
+                  just before you move it without an additional action. If the new weight is now under the weight
+                  indicated by the Mass Goal, you can move the object.
                 </p>,
               ]}
             />
           </Section>
-          <Section header="Remote Interaction" isClassified>
+          <Section header="Force Push" isClassified>
             <SpecializationDescription
-              intro={<p>Your can telekinetically interact with objects and enemies as if they were within reach.</p>}
+              intro={<p>You can shove or restrain other people telekinetically.</p>}
               ranks={[
                 <p>
-                  The Interact action no longer requires a free hand and you can use it on any object weighing under 1
-                  kilogram that is within a number of meters equal to your Near score.
+                  You can induce Telekinesis to shove or restrain a person within Range. The target gains the Grappled
+                  or Off Balance state with intensity equal to Mass. Grappled enemies do not lose this state if they are
+                  forced to move, but you cannot force them to move by moving yourself.
                 </p>,
                 <p>
-                  As a basic action, you can shove or grab any target within a number of meters equal to your Near
-                  score. A shoved target is pushed 1 meter in any direction. A grabbed target gains the grappled state
-                  with intensity 1, or has this intensity increased by 1, as if you were adjacent to them.
+                  When you shove a person, in addition to gaining Off Balance they are move directly away from you a
+                  number of meters equal to your Gravitonertia rank. If this enemy currently has the Grappled state from
+                  a previous Telekinesis induction, you may move them in any direction.
                 </p>,
-                <p>
-                  Your reach with melee and unarmed attacks inreases by 1 meter. You can use the move action to force a
-                  grappled target to move you do not need to move with them, but doing so increases the terrain
-                  difficulty of each space moved by an additional 1.
-                </p>,
+                <>
+                  <p>
+                    You may target an empty location within Range with a Telekinesis shove. If you do this, every person
+                    within a meter of the location is pushed directly away from the target a number of meters equal to
+                    your Gravitonertia rank and given Off Balance equal to Mass.
+                  </p>
+                  <p>
+                    Any time an enemy shoved by Telekinesis collides with another enemy or an immovable object, they are
+                    dealt Threat equal to the Mass Goal and may make a Melee Defense reaction.
+                  </p>
+                </>,
               ]}
             />
           </Section>
@@ -1751,20 +1839,19 @@ function ChapterEntanglements() {
               intro={<p>You can telekinetically throw small objects with bullet-like force.</p>}
               ranks={[
                 <p>
-                  You can induce Telekinesis as an attack action to violently launch a tiny unattended object with
-                  bullet-like force. When you do so, the Mass metric measures the number of points of Threat this
-                  projectile deals instead of the number of kilograms it can lift. One target within Range is dealt this
-                  amount of Threat. When you do this as an attack action, any other metrics and capabilities of
-                  Telekinesis are not available.
+                  You can induce Telekinesis as an attack to violently launch a tiny object with bullet-like force from
+                  your hand or the nearby environment. When you do so, the Mass Goal measures the amount of Threat this
+                  projectile deals instead of the weight limit. One target within the Range Goal is dealt this amount of
+                  Threat. Any other Goals and capabilities of Telekinesis are not available when it is used as an
+                  attack.
                 </p>,
                 <p>
-                  You can induce Telekinesis with its standard metrics and capabilities as a basic action. The Range
-                  metric, for both the attack or standard version, is replaced with “2 meters”.
+                  You can accelerate objects enough to push them further. Any Progress assigned to the Range Goal
+                  increases the final Range you can use by 2 meters instead of 1.{" "}
                 </p>,
                 <p>
-                  When you induce Telekinesis as an attack action, you can now use the Targets metric. Each Target is
-                  dealt the same amount of Threat. You may select the same target multiple times, dealing this amount of
-                  Threat to them each time.
+                  When you induce Telekinesis as an attack, add your Gravitonertia style rank to the final amount of
+                  Threat dealt by the attack.
                 </p>,
               ]}
             />
@@ -1775,29 +1862,88 @@ function ChapterEntanglements() {
               ranks={[
                 <p>
                   You can choose to target yourself with Telekinesis instead of an object in order to levitate. When you
-                  do, you rise off the ground by Range and stay there for a minute. No other metrics or effects can be
-                  used when you induce the event this way. At the start of each of your turns, you may ascend or descend
-                  by Range again. Other than ascending or descending, you cannot move while in the air unless you are
-                  next to a surface you can push yourself along on, such as a ceiling or wall. Moving this way requires
-                  the Move action, but each meter moved has a Difficulty of 2.
+                  do, you rise off the ground by Range and stay there for a minute, at which point they harmlessly
+                  descend. The Mass Goal and any other Goals or effects cannot be used when you induce the event this
+                  way. As an inhale action, you may ascend or descend the same distance again. Other than ascending or
+                  descending, you cannot move while in the air unless you are next to a surface you can push yourself
+                  along on, such as a ceiling or wall. Moving this way requires the Move action, but each meter moved
+                  has a terrain Difficulty of 2.
                 </p>,
                 <p>
-                  You can choose to target another person within Range with Telekinesis to levitate them in the same way
-                  you levitate yourself. You can move the target up or down at the start of your turn as you could
-                  yourself. If the target is unwilling to be levitated, they can make a Willpower reaction. If they beat
-                  or tie the total amount of Progress used to induce the event, it has no effect.
+                  You can choose to target another person within Range of Telekinesis to levitate them in the same way
+                  you levitate yourself. You can move the target up or down by Range again as an inhale action. If the
+                  target is unwilling to be moved, they can make a Willpower reaction when inducing the event. If the
+                  total amount of Progress used to induce the event beats their reaction, they begin to levitate. You
+                  can apply Progress to the Mass Goal to increase this difficulty, but it has no other effect.
+                </p>,
+                <>
+                  <p>
+                    When you move yourself or a levitated target further as an inhale action, you may also move it
+                    horizontally the same distance.
+                  </p>
+                  <p>
+                    Additionally, any time you would be harmed by a fall you can instinctively levitate just enough to
+                    avoid harm.
+                  </p>
+                </>,
+              ]}
+            />
+          </Section>
+          <Section header="Redirect" isClassified>
+            <SpecializationDescription
+              intro={
+                <p>
+                  You can instinctively bend the path of moving objects to defend yourself or send projectiles back at
+                  attackers.
+                </p>
+              }
+              ranks={[
+                <p>
+                  You can induce Telekinesis as a defense reaction to being attacked. If you do so, the event only has a
+                  single Defense Goal that has no limit to the Progress that can be applied to it. The result of Defense
+                  works the same as any other defense reaction, reducing the Threat or states caused by the attack.{" "}
                 </p>,
                 <p>
-                  When you raise or lower a levitated target at the start of your turn, you may also move it
-                  horizontally by Range. When you use Telekinesis to levitate someone, you can now use the Targets
-                  metric, levitating each target in the same manner.
+                  When using Telekinesis as a defense reaction to a ranged attack, if the result of the Defense Goal is
+                  more than enough to completely nullify the attack, then the projectile is redirected back to it's
+                  origin. The attacker is dealt an amount of Threat equal to the extra amount of Defense above what was
+                  needed to nullify the attack. If you also have ranks in Kinetic Attack, you can accelerate the
+                  projectile further and add your Gravitonertia rank to the amount of Threat dealt.{" "}
+                </p>,
+                <p>
+                  You can induce Telekinesis targeting a moving object within Range in order to change the direction of
+                  the movement by up to 90 degrees. If you only redirect an object this way instead of fully controlling
+                  its movement, the maximum amount of weight of the affected object is multiplied by 10 from what Mass
+                  would normally indicate.
                 </p>,
               ]}
             />
           </Section>
-          {/* <Section header="TODO" isClassified></Section> */}
-          {/* <Section header="TODO" isClassified></Section> */}
-          {/* <Section header="TODO" isClassified></Section> */}
+          <Section header="Remote Interaction" isClassified>
+            <SpecializationDescription
+              intro={<p>You can telekinetically interact with objects and enemies as if they were within reach.</p>}
+              ranks={[
+                <p>
+                  The Interact action no longer requires a free hand and you can use it on any object weighing under 1
+                  kilogram within a number of meters equal to your Near score without actually touching the object.{" "}
+                </p>,
+                <p>
+                  You can use the Improvise action on any target within a number of meters equal to your Near score, as
+                  long as there is something you could move telekinetically that could plausibly grant an Advantage or
+                  Disadvantage.
+                </p>,
+                <>
+                  <p>Using Interact or Improvise at range is subtle and cannot be traced back to you by witnesses. </p>
+                  <p>
+                    You can induce Telekinesis targeting an enemy within Range to attempt to disarm them. The target
+                    must make a Melee Defense reaction. If the total amount of Progress used to induce the event beats
+                    their reaction, the weapon falls to the floor. If it beats their reaction plus the size of the
+                    weapon, it flies into your hand or to the floor at your feet.
+                  </p>
+                </>,
+              ]}
+            />
+          </Section>
         </Section>
       </Section>
 
