@@ -972,20 +972,6 @@ function ChapterGameplay() {
               other actions can remove this state.
             </p>
           </Section>
-          <Section header="Hidden">
-            <p>Whether due to darkness, concealment, or stealth, enemies cannot verify your exact position.</p>
-            <p>Attacks targeting you have Disadvantage, and attacks you make have Advantage.</p>
-            <p>
-              Typically the enemy still knows your rough location, but at the GM's discretion depending on how well
-              hidden you are, they may lose track of your location entirely making them unable to target you with
-              attacks.
-            </p>
-            <p>
-              You lose this state if you create sufficient noise or light, leave your concealed position, or an enemy
-              establishes a clear line of sight to you. The GM may require a <Pair flight far /> Challenge resisted by a
-              Perception Reaction when you take any action that might reveal your location.
-            </p>
-          </Section>
           <Section header="Off Balance">
             <p>
               You are reeling from a blow or even knocked fully prone, requiring you to regain your footing before you
@@ -1018,13 +1004,111 @@ function ChapterGameplay() {
           </Section>
           <Section header="Unconscious">
             <p>You are no longer able to act, react, communicate, or sense your surroundings.</p>
+            <p>
+              Targeting an unconscious person with a physical attack is low Risk and low Effort and triggers no
+              reactions.
+            </p>
             <p>When you awaken from this state you need to get back onto your feet, causing you to be Off Balance 3.</p>
+          </Section>
+          <Section header="Unseen">
+            <p>Whether due to darkness, concealment, or stealth, enemies cannot verify your exact position.</p>
+            <p>Attacks targeting you have Disadvantage, and attacks you make have Advantage.</p>
+            <p>
+              Typically the enemy still knows your rough location, but at the GM's discretion depending on how well
+              hidden you are, they may lose track of your location entirely making them unable to target you with
+              attacks.
+            </p>
+            <p>
+              You lose this state if you create sufficient noise or light, leave your concealed position, or an enemy
+              establishes a clear line of sight to you. The GM may require a <Pair flight far /> Challenge resisted by a
+              Perception Reaction when you take any action that might reveal your location.
+            </p>
+          </Section>
+        </Section>
+      </Section>
+      <Section header="Hidden Space" isClassified>
+        <p>
+          Certain circumstances, such as the Out of Body or Sublimed states, cause your awareness to shift from physical
+          space to hidden space. Characters that can induce the Sublime cascade event can do this intentionally. When
+          this happens, you are invisible and intangible. You cannot directly interact with or be detected by anything
+          in physical space. You do not take up space and can freely enter or share a space with any physical or hidden
+          entity.
+        </p>
+        <p>Your senses operate differently in hidden space.</p>
+        <p>
+          You cannot see, but you have an innate sense of the position of anything, hidden or physical, within a number
+          of meters equal to your Far score. This only informs you of shape and movement, things like texture, color,
+          light, or two dimensional text and images are not available to you.
+        </p>
+        <p>
+          You cannot hear, but you can feel the muted vibrations of any sound louder than casual conversation. This is
+          only precise enough to comprehend single isolated simple words. You cannot directly communicate with other
+          beings, physical or hidden, but when you share a space with one you have an empathic sense of their mental
+          state.
+        </p>
+        <Section header="Depth" isClassified>
+          <p>
+            The further you drift from physical space the less it affects you. This level is referred to as depth. The
+            longer a physical object remains stationary, the deeper the wake it casts into hidden space. At any depth
+            you can freely share space with dynamic objects, like living things and vehicles. At deeper levels you can
+            share a space with increasingly static objects. When you share space with an object you may pass through
+            quickly to simply phase through it, or rest inside its space for prolonged periods.
+          </p>
+          <p>
+            The higher depths exert a pressure that will eventually eject anything not tied to a static physical object.
+            Unless specified otherwise, something in hidden space can be assumed to be at depth 1. If you spend longer
+            than a minute on any depth deeper than 1 without certain Specializations that allow you to stay there, you
+            gain the Floating state. At the end of the scene, if you are in hidden space at any depth and don't have the
+            Specializations needed to stay there, you fully return to physical space.
+          </p>
+          <Section header="Depth 0: Physical Space" isClassified>
+            <p>The world of your everyday experience. The laws of physics work as you expect them to.</p>
+          </Section>
+          <Section header="Depth 1: The Shallows" isClassified>
+            <p>
+              You can share space with dynamic physical objects and entities, including humans, animals, vehicles, and
+              doors or other objects that have moved within the last day. While these objects no longer impede your
+              movement, you can still sense their positions when they are close enough.
+            </p>
+          </Section>
+          <Section header="Depth 2: Pelagic Space" isClassified>
+            <p>
+              You can share space with static objects, including anything that has moved or been built within the last
+              year. You can no longer sense the position of dynamic physical objects. Vibrations from sound arrive to
+              you delayed, heavily muted, distorted, and incomprehensible.
+            </p>
+          </Section>
+          <Section header="Depth 3: Abyssal Space" isClassified>
+            <p>
+              You can share space with extremely static objects, including anything that has moved or been built within
+              the last century. You can only sense entities that share this level or physical objects old enough to
+              block your movement. You cannot influence or interact with anything, even subtly, even if it shares this
+              level.
+            </p>
+          </Section>
+          <Section header="Depth ∞: Stygian Space" isClassified>
+            <p>
+              This is the interstitial space between nearby worldlines, the nearly parallel timelines radiating outward
+              from the big bang. Only extreme and dangerous means can get you here and there are no guarantees you can
+              return because you no longer float back to the surface naturally.
+            </p>
+            <p>
+              Only truly ancient stone that has been beneath bedrock since the Precambrian impedes your movement and
+              reaches your senses, and even then only in a soft and nebulous fashion. Gravity is a suggestion you can
+              choose to ignore. The Trans-Stygian entities that pass through this region are probably unlike anything
+              you've encountered before and may be hostile, curious, or barely aware.
+            </p>
+            <p>
+              Time and distance do not function as expected here. If you manage to return, what felt like an hour may
+              have been seconds or years and what seemed like a kilometer may be the other side of the planet. You can
+              also never be sure if where you arrived is the same worldline you came from or merely a similar one.
+            </p>
           </Section>
         </Section>
         <Section header="Hidden Space States" isClassified>
           <p>
-            These states can only happen if your awareness has fully shifted into hidden space. They represent your
-            position and the degrees of freedom available to you in hidden space.
+            These special states can only happen if your awareness has fully shifted into hidden space. They represent
+            your position and the degrees of freedom available to you in hidden space.
           </p>
           <Section header="Floating">
             <p>
@@ -1037,8 +1121,9 @@ function ChapterGameplay() {
               can no longer enter their space.
             </p>
             <p>
-              If you you have this state at the end of your turn, at the start of your next turn your depth layer in
-              hidden space decreases by 1 if possible. If you are at depth 1 when this happens, you exit physical space.
+              If you you have this state at the end of your turn, at the start of your next turn you lose this state and
+              then your depth layer in hidden space decreases by 1 if possible and you are willing. If you are at depth
+              1 when this happens, you exit physical space.
             </p>
           </Section>
           <Section header="Out of Body">
@@ -1066,8 +1151,9 @@ function ChapterGameplay() {
             </p>
             <p>While in this state you cannot sense anything further than a meter away from you.</p>
             <p>
-              If you have this state at the end of your turn, at the start of your next turn your depth layer in hidden
-              space increases by 1 if possible.
+              If you have this state at the end of your turn, at the start of your next turn you lose this state and
+              then your depth layer in hidden space increases by 1 if possible and you are willing. If you are in
+              physical space when this happens, you gain the Out of Body state when your depth increases.
             </p>
           </Section>
           <Section header="Sublimed">
@@ -1090,84 +1176,6 @@ function ChapterGameplay() {
             <p>
               When you return from this State you suddenly appear in whatever location you moved to while in hidden
               space.
-            </p>
-          </Section>
-        </Section>
-      </Section>
-      <Section header="Hidden Space" isClassified>
-        <p>
-          Certain circumstances, such as the Out of Body or Sublimed states, cause your awareness to shift from physical
-          space to hidden space. Characters that can induce the Sublime cascade event can do this intentionally. When
-          this happens, you are invisible and intangible. You cannot directly interact with or be detected by anything
-          in physical space. You do not take up space and can freely enter or share a space with any physical or hidden
-          entity.
-        </p>
-        <p>Your senses operate differently in hidden space.</p>
-        <p>
-          You cannot see, but you have an innate sense of the position of anything, hidden or physical, within a number
-          of meters equal to your Far score. This only informs you of shape and movement, things like texture, color,
-          light, or two dimensional text and images are not available to you.{" "}
-        </p>
-        <p>
-          You cannot hear, but you can feel the muted vibrations of any sound louder than casual conversation. This is
-          only precise enough to comprehend single isolated simple words. You cannot directly communicate with other
-          beings, physical or hidden, but when you share a space with one you have an empathic sense of their mental
-          state.
-        </p>
-        <Section header="Depth" isClassified>
-          <p>
-            The further you drift from physical space the less it affects you. This level is referred to as depth. The
-            longer a physical object remains stationary, the deeper the wake it casts into hidden space. At any depth
-            you can freely share space with dynamic objects, like living things and vehicles. At deeper levels you can
-            share a space with increasingly static objects. When you share space with an object you may pass through
-            quickly to simply phase through it, or rest inside its space for prolonged periods.
-          </p>
-          <p>
-            The higher depths exert a pressure that will eventually eject anything not tied to a static physical object.
-            Unless specified otherwise, something in hidden space can be assumed to be at depth 1. If you spend longer
-            than a minute on any depth deeper than 1 without certain Specializations that allow you to stay there, you
-            will float one layer closer to physical space.
-          </p>
-          <Section header="Depth 0: Physical Space" isClassified>
-            <p>The world of your everyday experience. The laws of physics work as you expect them to.</p>
-          </Section>
-          <Section header="Depth 1: The Shallows" isClassified>
-            <p>
-              You can share space with dynamic physical objects and entities, including humans, animals, vehicles, and
-              doors or other objects that have moved within the last day. While these objects no longer impede your
-              movement, you can still sense their positions when they are close enough.
-            </p>
-          </Section>
-          <Section header="Depth 2: Pelagic Space" isClassified>
-            <p>
-              You can share space with static objects, including anything that has moved or been built within the last
-              year. You can no longer sense the position of dynamic physical objects. Vibrations from sound arrive to
-              you delayed, heavily muted, distorted, and incomprehensible.
-            </p>
-          </Section>
-          <Section header="Depth 3: Abyssal Space" isClassified>
-            <p>
-              You can share space with extremely static objects, including anything that has moved or been built within
-              the last century. You can only sense entities that share this level or physical objects old enough to
-              block your movement. You cannot influence or interact with anything, even subtly, even if it shares this
-              level.
-            </p>
-          </Section>
-          <Section header="Depth ∞: Trans-Stygian Space" isClassified>
-            <p>
-              This is the interstitial space between nearby worldlines, the nearly parallel timelines radiating outward
-              from the big bang. Only extreme and dangerous means can get you here and there are no guarantees you can
-              return because you no longer float back to the surface naturally.
-            </p>
-            <p>
-              Only truly ancient stone that has been beneath bedrock since the Precambrian impedes your movement and
-              reaches your senses, and even then only in a soft and nebulous fashion. Gravity is a suggestion you can
-              choose to ignore.
-            </p>
-            <p>
-              Time and distance do not function as expected here. If you manage to return, what felt like an hour may
-              have been seconds or years and what seemed like a kilometer may be the other side of the planet. You can
-              also never be sure if where you arrived is the same worldline you came from our merely a similar one.{" "}
             </p>
           </Section>
         </Section>

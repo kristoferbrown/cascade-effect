@@ -136,7 +136,7 @@ function ChapterActions() {
           </p>
           <p>
             If you are already in full cover from all enemies, or are otherwise well concealed when you take this
-            action, you may choose to gain the Hidden State.
+            action, you may choose to gain the Unseen State.
           </p>
         </Section>
         <Section header="Heal">
@@ -390,7 +390,7 @@ function ChapterActions() {
           <p>
             The target gains the Floating or Sinking state with an intensity equal to the Progress applied to Floating
             or Sinking Goals. Progress may only be applied to one of these goals, not both. The amount of Progress you
-            apply to this Goal cannot exceed your rank in the Sublimation Style.
+            apply to this Goal cannot exceed either 1 or your rank in the Sublimation Style.
           </p>
           <p>This attack provokes a Hidden Defense reaction.</p>
         </Section>

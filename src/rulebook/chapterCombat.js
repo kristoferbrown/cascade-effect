@@ -74,8 +74,8 @@ function ChapterCombat() {
         </p>
         <ul>
           <li>
-            Your Metabolisms regenerate more quickly. Refill half of their current values, rounding up to whole numbers,
-            at the end of each round.
+            Your Metabolisms regenerate more quickly. Their current values refill by half of their score, rounding up to
+            whole numbers, at the start of your turn.
           </li>
           <li>
             Because you are already acting at your limits, you cannot Push yourself to regain additional Metabolism
@@ -98,8 +98,9 @@ function ChapterCombat() {
           </p>
           <p>Normal unentangled humans act more slowly, they only get one action per turn but it can be any type. </p>
           <p>
-            At the end of each round after everyone has taken a turn, everyone regains Metabolism points equal to half
-            the Capacity of each Metabolism. Always round up to a whole number, with a minimum of 1 point regained.
+            At the start of each turn, all of your current Metabolism values refill a number of points equal to half the
+            Score of each Metabolism. Always round up to a whole number, with a minimum of 1 point regained. Current
+            Metabolism values can never exceed their Capacity.
           </p>
           <p>
             Rounds last a few seconds, but have no strictly defined duration. The duration of any effect specified in
@@ -426,9 +427,9 @@ function ChapterCombat() {
           <Section header="Hiding">
             <p>
               If you start a fight while the enemy doesn't know exactly where you are, or if you use the Elude action to
-              hide behind cover, you can gain the Hidden State. This State both protects you from attacks and makes your
+              hide behind cover, you can gain the Unseen State. This State both protects you from attacks and makes your
               own attacks more likely to hit. The GM may request a Challenge resisted by Perception Reactions in order
-              for you hide or remain hidden.
+              for you hide or remain unseen.
             </p>
           </Section>
         </Section>
@@ -543,11 +544,11 @@ function ChapterCombat() {
             <Metabolism near />, and ranged weapons use <Metabolism far />.
           </p>
           <p>
-            Each weapon has a Size value. This number indicates the Progress bonus the weapon adds to attacks made with it. It also indicates the minimum
-            amount of Metabolism points that must be spent to attack with the weapon, if you do not have this amount
-            available, you can only use this weapon when the attack is Prepared. Size 1 can be concealed in casual clothing,
-            Size 2 cannot, and Size 3 or above requires both hands. Any weapon Size 4 or above can only be used when
-            Prepared.
+            Each weapon has a Size value. This number indicates the Progress bonus the weapon adds to attacks made with
+            it. It also indicates the minimum amount of Metabolism points that must be spent to attack with the weapon,
+            if you do not have this amount available, you can only use this weapon when the attack is Prepared. Size 1
+            can be concealed in casual clothing, Size 2 cannot, and Size 3 or above requires both hands. Any weapon Size
+            4 or above can only be used when Prepared.
           </p>
           <Section header="Improvised Weapons">
             <p>
@@ -690,7 +691,7 @@ function ChapterCombat() {
           </p>
           <p>
             Hidden Attack attempts to disrupt or sever access to the hidden bodies of others, or force them to change
-            depths. It triggers a unique reaction, Hidden Defense to resist its effects.{" "}
+            depths. It triggers a unique reaction, Hidden Defense to resist its effects.
           </p>
           <p>
             Manifest is used to attempt to influence physical space by supporting the hidden metabolisms of others or
@@ -700,11 +701,11 @@ function ChapterCombat() {
         <Section header="Changing Depth in Combat" isClassified>
           <p>
             Most hidden space combat will occur in or from the shallows of depth layer 1. However, one's depth can
-            change in combat, typically by inflicting or giving yourself the Floating or Sinking states that can cause
-            you to change depths at the start of a turn. However, circumstances can also prevent you from changing
-            depths. When you would change depths, but are unwilling or blocked from doing so, you instead take an
-            unavoidable point of Stress to every Hidden Metabolism. This Stress cannot reduce a Metabolism capacity
-            below 1.
+            change in combat, typically due to the Floating or Sinking states that can cause you to change depths at the
+            start of a turn. However, circumstances can also prevent you from changing depths. When you would change
+            depths due to these states or for any other reason, but are unwilling or blocked from doing so, you instead
+            take an unavoidable point of Stress to every Hidden Metabolism. This Stress cannot reduce a Metabolism
+            capacity below 1.
           </p>
           <p>
             You cannot float to a shallower layer or exit hidden space if you are currently occupying the same space of
