@@ -3219,24 +3219,29 @@ function ChapterEntanglements() {
               intro={<p>You have an intuitive sense of the emotional state of others. </p>}
               ranks={[
                 <p>
-                  When you enter a new social context, you immediately get a sense for the emotional state of everyone
-                  present.
+                  At all times, you can sense the presence and emotional state of any sentient minds within a number of
+                  meters equal to your Far score, even if they are in hidden space. You intuitively sense if any minds
+                  near you are developing hostile intent, granting you advantage on any initiative Challenges involving
+                  human opponents.
                 </p>,
                 <>
                   <p>
                     You can sense the lingering vibes of a a space. When you enter it a room you become aware of the
-                    emotional context of its most recent occupants and the nature of any recent intensely felt
-                    sensations in it.
+                    emotional and social context of its most recent occupants and the nature of any recent intensely
+                    felt sensations in it.
                   </p>
                   <p>
                     Additionally, when you use the Manipulate action, you may also gain the state you attempt to grant
                     the target. If you do so, or if you already had this state, the Manipulate action is Prepared.
                   </p>
                 </>,
-                <p>
-                  You have advantage on the Manipulate action of another person you can sense is present that already
-                  has the state you're targeting.
-                </p>,
+                <>
+                  <p>Any mind you can sense the emotional state of you also know the exact location of. </p>
+                  <p>
+                    Additionally, you have advantage on the Manipulate action of another person you can sense is present
+                    that already has the state you're targeting.
+                  </p>
+                </>,
               ]}
             />
           </Section>
@@ -3281,31 +3286,39 @@ function ChapterEntanglements() {
         <Break />
         <Section header="Telethesia Style">
           <p>
-            The esoteric style of the entanglement of Focus + Far allows you to customize the Telepathy event’s
-            capabilities within other minds or remote sensing.
+            The esoteric style of the entanglement of Focus + Far allows your mind to reach out telepathically to
+            connect with other minds or sense remotely.
           </p>
           <EventDescription
             eventName="Telepathy"
             intro="The diffuse bounds of your hidden body reach out over a distance to sense and interface with other minds."
-            linkTarget={linkMap.ChromodynamismStyle}
+            linkTarget={linkMap.TelethesiaStyle}
             description={
               <>
                 <ChallengeParams
-                  pair={{ focus: true, near: true }}
+                  pair={{ focus: true, far: true }}
                   risk={"Medium"}
                   effort={"Medium"}
                   allocBonus={"Telethesia Style"}
-                  goals={["Range", "Participants"]}
+                  goals={["Influence", "Range", "Participants"]}
                 />
                 <p>
-                  Select a number of willing Participants within Range. For the rest of the scene, you and all
-                  participants can communicate telepathically. This communication is undetectable to outsiders.
+                  Select a number of willing Participants within a number of meters equal to Range. For the rest of the
+                  scene, you and all participants can communicate telepathically. This communication is undetectable to
+                  outsiders, and inducing the event is subtle and not noticed by witnesses. Telepathic communication
+                  occurs at a slightly faster speed and bandwidth than normal speech, but still requires a shared
+                  language.
                 </p>
                 <p>
-                  Telepathic communication occurs at a slightly faster speed and bandwidth than normal speech, but still
-                  requires a shared language.
+                  Progress you apply to the Influence Goal may be split up, assigning any portion of it to any targets
+                  within Range you can see. Some specializations within this style grant different uses for Influence.
+                  You may only choose one use for Influence when you induce this event.
                 </p>
-                <p>You can induce this event subtly, preventing any witnesses from knowing anything happened.</p>
+                <p>
+                  Even without any Specializations, you can use Influence to make targets suggestible. When you do, any
+                  target that you assigned at least a point of Influence to has disadvantage against your Manipulate
+                  actions until the end of your next turn.
+                </p>
               </>
             }
           />
@@ -3318,27 +3331,60 @@ function ChapterEntanglements() {
                 </p>
               }
               ranks={[
-                <p>
-                  Your Telepathy action bonus increases by 1. The Range metric of Telepathy improves to “10x, minimum =
-                  10 meters”. When you induce Telepathy you may take a point of unavoidable Stress to Focus in order to
-                  scry on a location. Select a location within Range that you have previously seen before. You and all
-                  Participants can see what is happening at this location in your minds for the rest of the scene.
-                </p>,
                 <>
+                  <p>The Range goal now measures 10 meter increments. </p>
                   <p>
-                    Telepathy gains the metric "Influence: 1, minimum = 0" if it didn't already have it. Influence has
-                    multiple possible uses, you can only use one when you induce the event.
-                  </p>
-                  <p>
-                    When you scry on a location you can choose to do so with retrocognition, observeing the location not
-                    as it currently is, but rather as it was at a chosen moment in the past within a number of days
-                    equal to Influence.
+                    When you induce Telepathy you may now use a Goal called Clairvoyance. If you assign any Progress to
+                    this Goal, you may select a location to scry on. This location must be within Range and you must
+                    have previously seen it before. You and all Participants can see and hear anything that is currently
+                    happening within a number of meters equal to Clairvoyance of this location in your minds for the
+                    rest of the scene.
                   </p>
                 </>,
+                <>
+                  <p>The Range goal now measures 100 meter increments. </p>
+                  <p>
+                    When you use Clairvoyance, you may target a person you have met to be the center of the area you
+                    scry on, even if you don't know where this person is. Additionally, you can choose to scry with
+                    retrocognition, observing the target not as it currently is, but rather as it was at a chosen moment
+                    in the past within a number of days equal to Clairvoyance.
+                  </p>
+                </>,
+                <>
+                  <p>The Range goal now measures kilometer increments. </p>
+                  <p>
+                    When you scry, you do not need to have seen the location or met the target before. You can observe
+                    the area at any chosen past moment within a number of years equal to Clairvoyance.
+                  </p>
+                </>,
+              ]}
+            />
+          </Section>
+          <Section header="Group Mind" isClassified>
+            <SpecializationDescription
+              intro={
                 <p>
-                  When you scry, you do not need to have seen the location before. You and all Participants gain all of
-                  their senses at the location. You can observe the area retrocognitively at any chosen past moment
-                  within a number of years equal to Influence.
+                  You can create a collective consciousness that allows participants to share knowledge, experiences,
+                  and resources.
+                </p>
+              }
+              ranks={[
+                <p>
+                  Willing Participants in your Telepathy events can share information pre-semiotically, eliminating the
+                  need for a shared language. In addition to verbal thoughts, they can also directly share entire
+                  concepts, imagined images, memories, or senses.
+                </p>,
+                <p>
+                  Willing Participants in your Telepathy events can use the Improvise action to help any other member as
+                  if they were adjacent and cooperating as long as the help doesn't require physically interacting. They
+                  can also use the Heal or Rest actions targeting any other Participant as if they were targeting them
+                  self.
+                </p>,
+                <p>
+                  As an inhale action, any willing Participant in your Telepathy events can choose to share any Trait
+                  that represents skills or knowledge. After doing so, all Participants are considered to have this
+                  Trait for as long as the event lasts. Only one Trait may be shared this way, the event must be induced
+                  again to share a different Trait.
                 </p>,
               ]}
             />
@@ -3350,37 +3396,32 @@ function ChapterEntanglements() {
               }
               ranks={[
                 <>
+                  <p>You can use Influence to implant thoughts. </p>
                   <p>
-                    Telepathy gains the metric “Influence: 1 point” if it didn't already have it. Influence has multiple
-                    possible uses, you can only use one when you induce the event.
-                  </p>
-                  <p>
-                    You can use Influence to implant a thought into the mind of a target you can see in Range. When you
-                    do, the target can make a default risk and effort Willpower reaction. If Influence is less than the
-                    result of this reaction, the target is unaffected. Otherwise, you stimulate the target's brain to
-                    continually release a single specific neurotransmitter causing a crude emotion or phantom sensation
-                    of your choosing. The target continues to feel this strongly for the rest of the scene.
+                    When you do, any target you assigned Influence to makes a Willpower reaction. If the reaction result
+                    is greater than amount of Influence assigned to them, the target is unaffected. Otherwise, you
+                    stimulate the target's brain to continually experience a chosen raw emotion or phantom sensation for
+                    the rest of the scene.
                   </p>
                 </>,
                 <p>
-                  When you succeed at using Influence to implant a thought in a target, you can include a suggested
-                  action or simple goal. An affected target feels a compulsion to take this action or pursue this goal.
-                  This effect remains in place for the rest of the scene and then continues for a number of hours equal
-                  to the sum of the Influence and Participants metrics used to induce the event. Any time the target
-                  perceives an opportunity to follow your suggestion they may make a default risk and effort Willpower
-                  reaction. If they do not, or if Influence is lower than the result of this reaction, then they must
-                  follow the suggestion. Each time the target successfully resists and avoids following the compulsion,
-                  reduce the Influence level by 1 until it reaches 0 and the target is unaffected.
+                  When you use Influence to implant thoughts, you may give the target a suggested action or simple goal
+                  instead of an emotion or sensation. A target failing their willpower reaction feels a strong
+                  compulsion to take this action or pursue this goal. This effect remains in place for the rest of the
+                  scene. Any time the target perceives a good opportunity to follow your suggestion they will do so
+                  unless it conflicts strongly with their morals, motivations, or self preservation, in which case they
+                  may repeat their Willpower reaction. If this reaction ever beats the amount of Influence on them the
+                  effect ends, otherwise they must follow the suggestion.
                 </p>,
                 <>
                   <p>
-                    When you succeed at using Influence to implant a suggestion into a target, this suggestion now lasts
-                    for a number of days equal to Influence plus Participants instead of hours.
+                    When you use Influence to implant thoughts, you may implant a false memory instead of a suggestion,
+                    emotion, or sensation. As long as this memory is plausible, the target believes it permanently until
+                    it is proven false.
                   </p>
                   <p>
-                    Alternatively, when you succeed you can choose to implant a false memory into the target instead of
-                    a suggestion. As long as this memory is plausible, the target believes it permanently until it is
-                    proven false.
+                    Additionally, any other effects of this Specialization now last indefinitely until the target
+                    succeeds their Willpower reaction.
                   </p>
                 </>,
               ]}
@@ -3388,36 +3429,39 @@ function ChapterEntanglements() {
           </Section>
           <Section header="Mind Control" isClassified>
             <SpecializationDescription
-              intro={<p>You can seize control over simpler nervous systems.</p>}
+              intro={<p>You can take direct control over other minds.</p>}
               ranks={[
                 <>
+                  <p>You can use Influence to seize control over many simple nervous systems. </p>
                   <p>
-                    Telepathy gains the metric "Influence: 1, minimum = 0" if it didn't already have it. Influence has
-                    multiple possible uses, you can only use one when you induce the event.
-                  </p>
-                  <p>
-                    You can use Influence to seize control over many simple nervous systems. This can only affect
-                    animals with no hidden body, this includes all invertebrates and jawless fish. For the rest of the
-                    scene, you can completely control all qualifying animals that remain within a number of meters equal
-                    to Influence of any Participant.
+                    This can only affect animals with no hidden body, this includes all invertebrates and jawless fish.
+                    For the rest of the scene, you can completely control all qualifying animals that remain within a
+                    number of meters equal to Influence of any Participant. You may give them commands as an inhale
+                    action.
                   </p>
                 </>,
-                <p>
-                  You can use Influence to control a few non-mammalian animals. Choose a number of qualifying animals
-                  you can see equal to Influence within Range. You control the actions of these animals for the rest of
-                  the scene, even if they leave Range.
-                </p>,
-                <p>
-                  You can use Influence to control any earth animal or non-entangled human. Choose a single qualifying
-                  target you can see within Range. The target can make a Willpower reaction. If your Influence exceeds
-                  this reaction, you gain control. If the target is human, ordering it to take an action uses one of
-                  your actions and you take a point of unavoidable Stress to Focus at the start of each round until you
-                  relinquish control as a non-action.
-                </p>,
+                <>
+                  <p>You can use Influence to control a few non-mammalian animals. </p>
+                  <p>
+                    When you do, choose a number of qualifying animals you can see equal to Influence within Range. You
+                    control the actions of these animals for the rest of the scene, even if they leave Range. You may
+                    give them commands as an inhale action.
+                  </p>
+                </>,
+                <>
+                  <p>You can use Influence to control a single earth animal or non-entangled human. </p>
+                  <p>
+                    When you do, choose a single qualifying target you can see within Range, any Influence assigned to
+                    other targets is lost. The target must make a Willpower reaction, if this reaction fails to exceed
+                    the amount of Influence assigned to them, you gain control. If the target is human, ordering it to
+                    take any action uses your inhale action and you take a point of Stress to Focus at the start of each
+                    of your turns until you relinquish control as a non-action.
+                  </p>
+                </>,
               ]}
             />
           </Section>
-          <Section header="Psychosomaticism" isClassified>
+          <Section header="Psychosomatics" isClassified>
             <SpecializationDescription
               intro={
                 <p>
@@ -3427,15 +3471,27 @@ function ChapterEntanglements() {
               }
               ranks={[
                 <p>
-                  Your Manipulate action can now cause the Grappled state as if the target was restrained by an
-                  invisible attacker in a space adjacent to them of your choosing.
+                  Your Manipulate action can now cause the Grappled, Off Balance, or Suppressed states as if the target
+                  was restrained by an invisible attacker.
                 </p>,
                 <p>
-                  Your Manipulate action can now cause the Suppressed state in a target no matter where they are. The
-                  states caused by your Manipulate actions don’t expire on your next turn but instead last until the
-                  target is able to clear them normally.
+                  Your Manipulate action can now cause the target to gain the effects of any physical metabolism's
+                  injury state until the end of their next turn. The target is not actually harmed, this state cannot
+                  kill them or trigger the Dying state.
                 </p>,
-                <p>Your Manipulate action can now cause the Unconscious state in non-entangled targets.</p>,
+                <>
+                  <p>
+                    Your Manipulate action can now cause entangled targets to gain the effects of any hidden
+                    metabolism's dissociative state until the end of their next turn. The target is not actually harmed,
+                    this state trigger problems caused by multiple metabolisms dissociating.
+                  </p>
+                  <p>
+                    Additionally, in non-entangled targets your Manipulate action can now cause the Unconscious state.
+                    If this occurs in combat or causes the target to fall down from a standing position, adrenaline
+                    wakes them at the end of their next turn. Otherwise, they remain unconscious for the rest of the
+                    scene.
+                  </p>
+                </>,
               ]}
             />
           </Section>
@@ -3444,49 +3500,29 @@ function ChapterEntanglements() {
               intro={<p>You can examine the thoughts and memories of others.</p>}
               ranks={[
                 <>
+                  <p>You can use Influence to read minds.</p>
                   <p>
-                    Telepathy gains the metric “Influence: 1 point” if it didn't already have it. Influence has multiple
-                    possible uses, you can only use one when you induce the event.
-                  </p>
-                  <p>
-                    You can use Influence to attempt to read the mind of a target you can see in Range. When you do, the
-                    target can use a default risk and effort Willpower reaction. If Influence is greater than the result
-                    of the reaction you and all Participants can read the target's surface thoughts for the rest of the
-                    scene. This includes their emotional state and infernal monologue.
+                    When you do, any target you assigned Influence to must make a Willpower reaction. If this reaction
+                    doesn't beat the amount of Influence on them you and all Participants can read the target's surface
+                    thoughts and internal monologue for the rest of the scene.
                   </p>
                 </>,
                 <p>
-                  If the event’s influence ties the target's reaction, the event grants access to surface thoughts. If
-                  it is higher, it also accesses short term memories. This includes recent events and things that have
-                  been on the target's mind earlier in the day.
+                  When you successfully use Influence to read a target's mind, their short term memories can be read by
+                  you or any Participant. This includes recent events and things that have been on the target's mind
+                  earlier in the day.
                 </p>,
                 <>
                   <p>
-                    If the event’s influence is lower than the target's reaction, the event still grants access to
-                    surface thoughts. If it ties, it grants access to short term memories. If it is higher, it also
-                    accesses long term memories.
+                    When you successfully use Influence to read a target's mind, any Participant can access their long
+                    term memories.
                   </p>
                   <p>
-                    The greater the difference between Influence and a lower reaction, the deeper the memories you can
-                    access. Recent memories are easy, older memories might require at least 2, a dark secret at least 3.
+                    The greater the difference between Influence and the target's reaction, the deeper the memories you
+                    can access. Recent memories are easy, older memories might require at least an extra point of
+                    Influence, a dark secret at least 3 extra.
                   </p>
                 </>,
-              ]}
-            />
-          </Section>
-          <Section header="Sense Minds" isClassified>
-            <SpecializationDescription
-              intro={<p>You can feel the other minds around you.</p>}
-              ranks={[
-                <p>
-                  At all times, you can sense the presence and location of any sentient minds within a number of meters
-                  equal to your Far score, even if they are in hidden space.
-                </p>,
-                <p>You are aware of the general emotional state and stress level of the minds you sense.</p>,
-                <p>
-                  You know if the minds you sense are developing hostile intent, granting you advantage on any
-                  initiative Challenges involving human opponents.
-                </p>,
               ]}
             />
           </Section>
