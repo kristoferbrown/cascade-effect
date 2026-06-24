@@ -797,7 +797,7 @@ function ChapterCharacters() {
               <strong>Empirical theory.</strong> The the universe is fundamentally knowable. Your abilities are
               predicted by Orthodynamic Field Theory, or a some other conceptual framework, and they cloud be
               experimentally verified if you could get the right tools. Gain either the Specialization{" "}
-              <SpecializationLink name="Analyze Cascade" /> or <SpecializationLink name="Embed Function" />.
+              <SpecializationLink name="Isolate Signal" /> or <SpecializationLink name="Embed Function" />.
               <br />
               <strong>Universal algorithm.</strong> The universe is fundamentally software. Regardless of whether this
               quantization happens naturally or as part of a simulation, it has underlying rules you can learn to hack
@@ -808,8 +808,8 @@ function ChapterCharacters() {
               <strong>Consensus praxis.</strong> The universe is created by the beliefs of its inhabitants. The
               aggregate ontological consensus of all sentient beings doesn't arise from natural law, it creates it. If
               you could shape the beliefs of others on a significant scale, you could shape reality. Gain either the
-              Specialization <SpecializationLink name="Illusion" /> or <SpecializationLink name="Psychosomatism" />, an
-              ability you use to make the unreal seem real.
+              Specialization <SpecializationLink name="Modulate Signal" /> or{" "}
+              <SpecializationLink name="Psychosomatism" />, an ability you use to make the unreal seem real.
               <br />
               <strong>Paracosmic flow.</strong> A new universe is created for each possible result of a random event.
               All possible universes are equally true, but separated into unique worldlines. You think you can learn to
@@ -867,19 +867,19 @@ function ChapterCharacters() {
             <li>
               <h5 className="subheader">In your youth, what were you?</h5>
               <strong>A focused prodigy.</strong> You could hyperfocus on topics, ensuring you mastered them. Gain
-              either the Specialization <SpecializationLink name="Determination" /> or{" "}
+              either the Specialization <SpecializationLink name="Motivation" /> or{" "}
               <SpecializationLink name="Investigation" />.
               <br />
               <strong>A prolific dabbler.</strong> You tried everything once and learned to split your focus between
               many things. Gain either the Specialization <SpecializationLink name="Multitask" /> or{" "}
-              <SpecializationLink name="Tactical Awareness" />.
+              <SpecializationLink name="Split Autonomy" />.
               <br />
               <strong>A mimic.</strong> You could do anything anyone else could, sometimes better. Gain either the
               Specialization <SpecializationLink name="Episemiotics" /> or <SpecializationLink name="Mimic" />.
               <br />
               <strong>Precocious social awareness.</strong> Predicting the motives and thoughts of others came easily
               for you. Gain either the Specialization <SpecializationLink name="Cold Reading" /> or{" "}
-              <SpecializationLink name="ReadMind" />.
+              <SpecializationLink name="Read Mind" />.
             </li>
             <li>
               <h5 className="subheader">Were your talents...</h5>
@@ -946,15 +946,13 @@ function ChapterCharacters() {
               <h5 className="subheader">What insight did it leave you with?</h5>
               <strong>The world is haunted.</strong> It abounds with intangible disembodied minds. Whether you view them
               as spirits of ancestors, theological angels and demons, or Clauda-Yau post-corporeal hidden body entities,
-              they speak to you if you know how to listen. In order to interact with these entities, gain either the
-              Specialization <SpecializationLink name="Commune" /> or <SpecializationLink name="Familiar" />
-              .
+              they speak to you if you know how to listen. In order to interact with these entities, gain the
+              Specialization <SpecializationLink name="Commune" />.
               <br />
               <strong>Everything is alive.</strong> The entity communicated not with words, but by opening your mind to
               the consciousness of everything around you. Panpsychic awareness is a fundamental feature of reality,
-              every object contains some measure of it. Gain either the Specialization{" "}
-              <SpecializationLink name="Sense Minds" /> or <SpecializationLink name="Detect Sensorium" />
-              .
+              every object contains some measure of it. Gain either the Specialization
+              <SpecializationLink name="Empathy" /> or <SpecializationLink name="Detect Sensorium" />.
               <br />
               <strong>Rituals are key.</strong> You summoned the entity via a ritual or it taught you that ritual imbues
               any practice with meaning and power. Your abilities stem from these rituals whether you create them on the
@@ -1051,13 +1049,13 @@ function ChapterCharacters() {
               <br />
               <strong>A martial focus.</strong> Only through discipline, meditation, and intensive physical training can
               you understand the true limits of your mind and body. Only then can you overcome them. Gain either the
-              Specialization <SpecializationLink name="Unarmed Mastery" /> or <SpecializationLink name="Counter" />
+              Specialization <SpecializationLink name="Martial Artist" /> or <SpecializationLink name="Counter" />
               .
               <br />
               <strong>A sense of euphoric unity.</strong> Everything is connected, the entire universe is a single
               natural system. Whether you believe in the universal wave function or that the planet is a living
               organism, you are starting to sense the flows of energy or information through the system. Gain either the
-              Specialization <SpecializationLink name="Habituate" /> or <SpecializationLink name="Regeneration" />
+              Specialization <SpecializationLink name="Homeostasis" /> or <SpecializationLink name="Regeneration" />
               .
               <br />
             </li>
@@ -1110,8 +1108,8 @@ function ChapterCharacters() {
               .
               <br />
               <strong>You wanted to separate from reality entirely.</strong> You found abilities that lessen the burden
-              embodiment places on your mind. Gain either the Specialization{" "}
-              <SpecializationLink name="Deep Traversal" /> or <SpecializationLink name="Fade" />
+              embodiment places on your mind. Gain either the Specialization <SpecializationLink name="Sublime Body" />{" "}
+              or <SpecializationLink name="Isolation Field" />
               .
               <br />
               <strong>You feel like you're mind has split.</strong> However, two minds have their advantages. Gain
@@ -1160,7 +1158,7 @@ function ChapterCharacters() {
             <li>
               <h5 className="subheader">How has a separation from the physical world changed you?</h5>
               <strong>You tried to shut out the outside world even further.</strong> Gain either the Specialization{" "}
-              <SpecializationLink name="Darkness" /> or <SpecializationLink name="Silence" />.
+              <SpecializationLink name="Nullify" /> or <SpecializationLink name="Silence" />.
               <br />
               <strong>You saw the world around you as a playground.</strong> Gain either the Specialization{" "}
               <SpecializationLink name="Speed" /> or <SpecializationLink name="Traversal" />.
@@ -1224,7 +1222,7 @@ function ChapterCharacters() {
               <SpecializationLink name="Disentangle" /> or <SpecializationLink name="Rage" />.
               <br />
               <strong>You taught yourself empathy.</strong> You can practically feel the minds around you. Gain either
-              the Specialization <SpecializationLink name="Read Mind" /> or <SpecializationLink name="Sense Minds" />.
+              the Specialization <SpecializationLink name="Read Mind" /> or <SpecializationLink name="Sense Mind" />.
             </li>
             <li>
               Choose one Physical and one Hidden Metabolism and increase them both by 1. Your experience helped you
@@ -1259,7 +1257,7 @@ function ChapterCharacters() {
               <SpecializationLink name="Isolate Signal" /> or <SpecializationLink name="Sense Waveform" />.
               <br />
               <strong>You had strange new abilities.</strong> Gain either the Specialization{" "}
-              <SpecializationLink name="Force Push" /> or <SpecializationLink name="Levitate" />.
+              <SpecializationLink name="Force Push" /> or <SpecializationLink name="Levitation" />.
               <br />
               <strong>You were aware of things shouldn't be.</strong> Gain either the Specialization{" "}
               <SpecializationLink name="Chromaception" /> or <SpecializationLink name="Precognition" />.
@@ -1324,10 +1322,10 @@ function ChapterCharacters() {
               Specialization <SpecializationLink name="Danger Sense" /> or <SpecializationLink name="Evasion" />.
               <br />
               <strong>You endured.</strong> Gain either the Specialization <SpecializationLink name="Auto-integrity" />{" "}
-              or <SpecializationLink name="Determination" />.
+              or <SpecializationLink name="Diehard" />.
               <br />
               <strong>Something seemingly supernatural occurred.</strong> In the heat of the moment, you did something
-              impossible. Gain either the Specialization <SpecializationLink name="Combat Shielding" /> or{" "}
+              impossible. Gain either the Specialization <SpecializationLink name="Reflexive Shield" /> or{" "}
               <SpecializationLink name="Sublime Body" />.
             </li>
             <li>

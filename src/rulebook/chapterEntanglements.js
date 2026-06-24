@@ -294,21 +294,16 @@ function ChapterEntanglements() {
                   capacity is greater than your Self score it takes a point of Stress. If it is not, you lose the
                   Empowered State.
                 </p>
-                <h5>Strain</h5>
                 <p>
                   Your heightened Self capacity is a resource that some Specializations in this Style consume by causing
                   Strain. To Strain, you take a point of Stress to Self. You can only Strain while in the Empowered
                   State
                 </p>
-                <h5>Immediate Effects</h5>
                 <p>
-                  In addition to empowering you for further action, this event also causes immediate effects. After you
-                  induce this event as an exhale action, the immediate effect is that you can instantly Rest or
-                  Manipulate without consuming an action.
-                </p>
-                <p>
-                  Certain Specializations within this Style allow you to induce this event at other times than as an
-                  exhale action, triggering different immediate effects when you do.
+                  In addition to empowering you for further action, When you induce this event as an exhale action,
+                  afterwards you can instantly Rest or Manipulate without consuming an action. Other Specializations can
+                  allow you to induce this at different times, but you may only take these free actions when you do it
+                  as a standard exhale action.
                 </p>
               </>
             }
@@ -318,8 +313,8 @@ function ChapterEntanglements() {
               intro={<p>You can transform your body to become have natural weapons and armor.</p>}
               ranks={[
                 <p>
-                  You can induce Empower as an inhale action. When you do this the immediate effect is that your next
-                  attack you make this turn is Prepared.
+                  You can induce Empower as an inhale action. When you do this, afterwards you can instantly Aim without
+                  consuming an action.
                 </p>,
                 <p>
                   When you are Empowered you can choose to have natural weapons grow out of your body. When making
@@ -338,10 +333,10 @@ function ChapterEntanglements() {
               intro={<p>You can physically repair the body instead of reshaping it and Empower others.</p>}
               ranks={[
                 <p>
-                  Any time you use the Heal action you can induce Empower as part of the same action. The target of the
-                  Heal action gains the benefits of Empower, but no additional immediate effect occurs. Targeting
-                  someone other than yourself this way consumes materials from your own body, causing a point of Stress
-                  to Fight, but does not require medical equipment.
+                  Any time you use the Heal action you can induce Empower as part of the same action. When you do this,
+                  you cannot take any additional free actions the event may give you otherwise. Targeting someone other
+                  than yourself this way consumes materials from your own body, causing a point of Stress to Fight, but
+                  does not require medical equipment.
                 </p>,
                 <p>
                   Your Heal action can remove the Dying state and now restores the capacity of every injured Physical
@@ -360,19 +355,20 @@ function ChapterEntanglements() {
               intro={<p>Your mastery of biology allows you to manipulate the blood itself when it is spilled.</p>}
               ranks={[
                 <p>
-                  You can induce Empower as a reaction to gaining an injury State. If you do, the immediate effect is
-                  that your lost blood coagulates into a hard structure around your wounds, increasing your armor rating
-                  by by 1. You retain this armor for as long as you have this injury state or the Empowered state.
+                  You can instantly induce Empower as a non-action after gaining an injury State. When you do so, the
+                  you may cause your lost blood to coagulate into a hard structure around your wounds, increasing your
+                  armor rating by by 1. You retain this armor for as long as you have this injury state or the Empowered
+                  state.
                 </p>,
                 <>
                   <p>
-                    You can induce Empower as a reaction to anyone within your reach gaining an injury State. When you
-                    do this, the target is the injured person and you can use either the normal Capacity Goal, or an
-                    alternative Goal Hemorrhage, but not both at the same time.
+                    You can instantly induce Empower as a non-action after anyone within your reach gains an injury
+                    State. When you do this, the target is the injured person and you can use either the normal Capacity
+                    Goal, or an alternative Goal Hemorrhage, but not both at the same time.
                   </p>
                   <p>
-                    If you use Capacity, the injured person gains the benefits of being empowered as if you had induced
-                    the event targeting yourself, including the armor described by the previous rank.
+                    If you use the Capacity Goal, the injured person gains the benefits of being empowered as if you had
+                    induced the event targeting yourself, including the armor described by the previous rank.
                   </p>
                   <p>
                     If you use Hemorrhage, you leverage the target's blood loss against them, causing painful sharp
@@ -382,11 +378,11 @@ function ChapterEntanglements() {
                   </p>
                 </>,
                 <p>
-                  When inducing Empower as a reaction to an injury state on yourself or an adjacent target, you can use
-                  both the Capacity and Hemorrhage Goals simultaneously. When you do, you can spread the Self capacity
-                  gains and extra Stress taken as you see fit between every person adjacent to you or the target. All
-                  targets that gain Capacity gain the Empowered state and a point of armor that lasts as long as this
-                  state does.
+                  When inducing Empower in response to a gained injury state on yourself or an adjacent target, you can
+                  use both the Capacity and Hemorrhage Goals simultaneously. When you do, you can spread the Self
+                  capacity gains and extra Stress taken as you see fit between every person adjacent to you or the
+                  target. All targets that gain Capacity gain the Empowered state and a point of armor that lasts as
+                  long as this state does.
                 </p>,
               ]}
             />
@@ -396,8 +392,8 @@ function ChapterEntanglements() {
               intro={<p>When Empowered, adrenaline pushes you beyond the limits of your body.</p>}
               ranks={[
                 <p>
-                  You can induce the Empower event as a reaction to taking Stress from an attack. If you do, the
-                  immediate effect reduces the amount of Stress taken by your Schizosomata rank.
+                  You can instantly induce the Empower event as a non-action after taking Stress from an attack. When
+                  you do this, you may also reduce the amount of Stress taken by your Schizosomata rank.
                 </p>,
                 <p>
                   You can Strain to double your lifting capacity and gain Advantage on all Challenges involving feats of
@@ -1380,7 +1376,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Regneration" isInset>
+          <Section header="Regeneration" isInset>
             <SpecializationDescription
               intro={
                 <p>
@@ -3503,7 +3499,7 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Psychosomatics" isClassified>
+          <Section header="Psychosomatism" isClassified>
             <SpecializationDescription
               intro={
                 <p>
