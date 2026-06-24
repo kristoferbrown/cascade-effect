@@ -223,32 +223,30 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Reverberation" isInset>
+          <Section header="Severing Strike" isInset>
             <SpecializationDescription
-              intro={
-                <p>
-                  You can harness the latent tension created by dynamic situations and store it for later, amplifying
-                  yourself, and then unleash the energy later.
-                </p>
-              }
+              intro={<p>You can strike with a force that pushes the spirit instead of harming the body.</p>}
               ranks={[
                 <p>
-                  Any time you participate in a Challenge with at least a medium risk and effort level, you may add an
-                  extra Goal called Reverberation. Any Progress applied to Reverberation doesn't affect the current
-                  Challenge. Instead it is stored for later, reverberating back and forth between your physical and
-                  hidden bodies. In any future Challenge, you can remove all of your stored Progress and apply it to
-                  that Challenge. You must use all of it at once, you can't use only a portion of it. While you have
-                  Progress stored in this way you feel anxious and uneasy. All stored Progress is lost at the end of the
-                  scene.
+                  When you make an Unarmed Attack that deals enough Stress to cause an injury or dissociation state, you
+                  may instead choose for it to cause the Out of Body state. When you do this, the target also gets the
+                  Floating state, meaning they will return to physical space quickly.
                 </p>,
                 <p>
-                  While you have stored Progress, you no longer feel anxious. If fact, you feel alive and confident. If
-                  you use the stored Progress on a Challenge that is primarily social, you have Advantage.
+                  When you make an Unarmed Attack, you can choose which Hidden Metabolism the target must use to react
+                  with instead of it always being Self.
                 </p>,
-                <p>
-                  While you have stored Progress, you are perceived as more real and powerful granting you Advantage on
-                  every Challenge that is primarily social, even if you don't use the stored progress on it.
-                </p>,
+                <>
+                  <p>
+                    You can use Unarmed Attacks to target entities in hidden space, including people with the Out of
+                    Body or Sublimed states.
+                  </p>
+                  <p>
+                    Additionally, when you cause the Out of Body state with an Unarmed Attack, you may take a point of
+                    Stress to Self to prevent the target from getting the Floating state so that they stay in hidden
+                    space for longer.
+                  </p>
+                </>,
               ]}
             />
           </Section>
@@ -446,6 +444,36 @@ function ChapterEntanglements() {
                     Self capacities to 1 bringing you to the brink of injury and dissociation.
                   </p>
                 </>,
+              ]}
+            />
+          </Section>
+          <Section header="Stabilize" isClassified>
+            <SpecializationDescription
+              intro={
+                <p>
+                  Your mastery over the connection between biology and your hidden space resources lets you recover
+                  those resources or move them to were they are more needed, or even borrow those resources from someone
+                  else.{" "}
+                </p>
+              }
+              ranks={[
+                <p>
+                  When you use the Heal action, any affect it has on a Physical Metabolism also simultaneously happens
+                  to a Hidden Metabolism. For example, if you use it to remove an injury state you may also remove a
+                  dissociative state, increasing the capacity of both Metabolisms.
+                </p>,
+                <p>
+                  When you use the Heal action while Empowered, you may also Strain to move your Stress around, reducing
+                  the capacity of one Metabolism to increase the lost capacity of another. You may move a number of
+                  points of Stress this way equal to your Schizosomata Rank.
+                </p>,
+                <p>
+                  When you use the Heal action targeting someone else you touch while Empowered you don't need medical
+                  supplies and the target may be willing or unwilling. When you do so you may also Strain to move Stress
+                  between you and the target, reducing the capacity of a Metabolism in either you or the target to
+                  increase the lost capacity of another metabolism in either you or the target. You may move a number of
+                  points of Stress this way equal to your Schizosomata Rank.
+                </p>,
               ]}
             />
           </Section>
@@ -2294,7 +2322,8 @@ function ChapterEntanglements() {
 
                 <p>
                   When your distortion field is in the helpful mode, anyone may treat every space in the field as
-                  adjacent to every other space when they are moving.
+                  adjacent to every other space when they are moving. Additionally, you may use the Manifest action from
+                  physical space on anyone inside the field.
                 </p>,
                 <p>
                   Your Distort event is now selective, you may choose who is helped by it and who is hinder. Those who
@@ -2510,18 +2539,31 @@ function ChapterEntanglements() {
               ]}
             />
           </Section>
-          <Section header="Trans-spatial Reach" isInset>
+          <Section header="Reverberation" isInset>
             <SpecializationDescription
-              intro={<p>You blur the lines between physical and hidden spaces, and can interact with both at once.</p>}
-              ranks={[
-                <p>You can use the Manifest action while in physical space.</p>,
+              intro={
                 <p>
-                  You can use the Hidden Attack action as if you were in the Sublimed state while in physical space or
-                  the Out of Body state.
+                  You can harness the latent tension created by dynamic situations and store it for later, amplifying
+                  yourself, and then unleash the energy later.
+                </p>
+              }
+              ranks={[
+                <p>
+                  Any time you participate in a Challenge with at least a medium risk and effort level, you may add an
+                  extra Goal called Reverberation. Any Progress applied to Reverberation doesn't affect the current
+                  Challenge. Instead it is stored for later, reverberating back and forth between your physical and
+                  hidden bodies. In any future Challenge, you can remove all of your stored Progress and apply it to
+                  that Challenge. You must use all of it at once, you can't use only a portion of it. While you have
+                  Progress stored in this way you feel anxious and uneasy. All stored Progress is lost at the end of the
+                  scene.
                 </p>,
                 <p>
-                  You can target entities in hidden space entities with physical attacks. You can also make physical
-                  attacks against physical targets from hidden space, but you gain the Floating state if you do.
+                  While you have stored Progress, you no longer feel anxious. If fact, you feel alive and confident. If
+                  you use the stored Progress on a Challenge that is primarily social, you have Advantage.
+                </p>,
+                <p>
+                  While you have stored Progress, you are perceived as more real and powerful granting you Advantage on
+                  every Challenge that is primarily social, even if you don't use the stored progress on it.
                 </p>,
               ]}
             />
