@@ -774,12 +774,19 @@ function ChapterEntanglements() {
           </Section>
           <Section header="Modulate Signal" isClassified>
             <SpecializationDescription
-              intro={<p>Your control over electromagnetism is so fine that you can embed information in it. </p>}
+              intro={
+                <p>
+                  Your control over electromagnetism is so fine that you can embed information in it or make visual
+                  illusions with it.
+                </p>
+              }
               ranks={[
                 <>
                   <p>
-                    As an exhale action, take a point of Stress to Focus to create a luminous message or image publicly
-                    in the air, or privately directly on the retina of someone you can see.
+                    As an exhale action you can take a point of Stress to Focus to create an illusion, such as a
+                    luminous message or unmoving two dimensional image. This illusion can form publicly in the air, or
+                    privately directly on the retina of someone you can see. Either way, it is too simple to be
+                    realistic.
                   </p>
                   <p>
                     Additionally, when your Refract event inflicts the Off Balance or Suppressed state, you may choose
@@ -789,22 +796,23 @@ function ChapterEntanglements() {
                 <>
                   <p>
                     As an exhale action, take a point of Stress to Focus to rewrite any electronic media you can touch,
-                    emit a short wireless signal.
+                    emit a short wireless signal. If you have any ranks in Sense Waveform, you can also intercept and
+                    modify signals when you do this.
                   </p>
                   <p>
-                    If you have any ranks in Sense Waveform, you can also intercept and modify signals when you do this.
+                    When you create an illusion, it can be lifelike and realistic and adapt itself to the movement of
+                    the eyes of viewers. Only attempting to interact with the illusion or its lack of movement can
+                    reveal its nature.
                   </p>
                 </>,
                 <>
                   <p>
                     After you spend an hour freely examining any wireless device, you can from then on emit signals it
                     can receive. As an inhale action, you can send a simple command to any device you have examined this
-                    way.
-                  </p>
-                  <p>
-                    If you have any ranks in Sense Waveform, you can have fluent two-way communications with these
+                    way. If you have any ranks in Sense Waveform, you can have fluent two-way communications with these
                     devices with a bandwidth similar to speaking to a person.
                   </p>
+                  <p>When you create an illusion it can include preplanned realistic movement.</p>
                 </>,
               ]}
             />
