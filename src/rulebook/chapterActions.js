@@ -56,8 +56,7 @@ function ChapterActions() {
             pair={{ fight: true, near: true }}
             risk={"Medium"}
             effort={"Medium"}
-            allocBonus={"Smooth Style"}
-            progBonus={"Weapon Size"}
+            allocBonus={"Smooth Style + Weapon Size"}
             goals={["Threat", "Off Balance"]}
           />
           <p>You take a swing at an adjacent opponent with whatever weapon you have in hand.</p>
@@ -73,8 +72,7 @@ function ChapterActions() {
             pair={{ fight: true, far: true }}
             risk={"Medium"}
             effort={"Medium"}
-            allocBonus={"Sharp Style"}
-            progBonus={"Weapon Size"}
+            allocBonus={"Sharp Style + Weapon Size"}
             goals={["Threat", "Suppressed"]}
           />
           <p>You fire a pistol, throw a stone, shoot an arrow, or unleash a burst automatic gunfire at an opponent.</p>
@@ -96,8 +94,8 @@ function ChapterActions() {
           <p>You lash out at an adjacent opponent with a punch, kick, elbow, grab, shove, or other blow.</p>
           <p>The amount of Progress applied to the Threat Goal is dealt to the target as Threat.</p>
           <p>
-            The target gains the Grappled state with an intensity equal to the Progress applied to the Grappled goal.
-            You can only use the Grappled Goal if you have a free hand, but you can always use the Threat Goal.
+            The target gains the Grappled or Off Balance states with an intensity equal to the Progress applied to the
+            Grappled or Off Balance Goals. You can only use the Grappled Goal if you have a free hand.{" "}
           </p>
           <p>
             If an this attack would cause the target to gain the Dying state, they instead gain the Unconscious state.
@@ -117,9 +115,7 @@ function ChapterActions() {
         <p>
           Basic actions can be done as either your inhale or exhale action, or over the course of a few seconds out of
           combat. These actions often do not require Challenges, so they can be taken without spending any resources.
-          However, some provide ways to use a Challenge to improve their effects. All basic actions are improved by and
-          depend on the associated Action Bonus, but can still provide a useful benefit when this bonus is 0. If any
-          Challenge is involved, this bonus is added to the Progress.
+          However, some provide ways to use a Challenge to improve their effects.
         </p>
         <Section header="Aim">
           <p>You take a moment to line up an attack.</p>
@@ -184,12 +180,6 @@ function ChapterActions() {
             unfamiliar user interface, or picking a lock, the GM may require a Challenge, typically requiring
             Fight+Near, to successfully complete the action.
           </p>
-          <p>
-            You can also use this action to maintain or escape grapples. If you are grappling someone, you can use
-            Interact to maintain their Grappled state at it's current intensity, otherwise it goes away at the end of
-            your turn. If you are in the Grappled state, you can use this action to trigger your Unarmed Defense
-            Reaction as if the current intensity of your Grappled state was just inflicted on you.
-          </p>
         </Section>
         <Section header="Manipulate">
           <p>
@@ -199,7 +189,7 @@ function ChapterActions() {
           <p>
             Pick a target that can hear and see you and make a Focus+Far Challenge that triggers a Low Effort Willpower
             reaction in the target. If the Reaction's result doesn't exceed your Challenge's result, the target gains a
-            State of your choice between Afraid, Calmed, Enthralled, or Taunted with intensity 1 until removed or until
+            State of your choice between Afraid, Calmed, Distracted, or Taunted with intensity 1 until removed or until
             the start of your next turn.
           </p>
         </Section>
@@ -243,16 +233,14 @@ function ChapterActions() {
         <p>
           Each will involve a Challenge that requires the indicated Metabolism pairs and has the indicated Risk and
           Effort levels. They also specify bonuses you can add when allocating Metabolism points, typically equal to a
-          specified Style's rank, and sometimes a bonus applied when counting Progress, such as the defense rating of
-          armor you're wearing.
+          specified Style's rank plus the defense rating of any armor you're wearing.
         </p>
         <Section header="Melee Defense" topicKey="meleeDefenseReaction">
           <ChallengeParams
             pair={{ flight: true, near: true }}
             risk={"Low"}
             effort={"Medium"}
-            allocBonus={"Mobile Style"}
-            progBonus={"Armor Rating"}
+            allocBonus={"Mobile Style + Armor Rating"}
             goals={["Defense"]}
           />
           <p>You deflect or dodge a melee weapon attack.</p>
@@ -266,8 +254,7 @@ function ChapterActions() {
             pair={{ flight: true, far: true }}
             risk={"Low"}
             effort={"Medium"}
-            allocBonus={"Quick Style"}
-            progBonus={"Armor Rating"}
+            allocBonus={"Quick Style + Armor Rating"}
             goals={["Defense"]}
           />
           <p>You attempt to predict your opponent's aim and get out of the path of their projectiles.</p>
@@ -281,8 +268,7 @@ function ChapterActions() {
             pair={{ flight: true, self: true }}
             risk={"Low"}
             effort={"Medium"}
-            allocBonus={"Tough Style"}
-            progBonus={"Armor Rating"}
+            allocBonus={"Tough Style + Armor Rating"}
             goals={["Defense"]}
           />
           <p>You dodge, block, or endure a blow, or twist away from a grab.</p>

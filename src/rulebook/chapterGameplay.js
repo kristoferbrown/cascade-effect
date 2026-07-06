@@ -435,15 +435,17 @@ function ChapterGameplay() {
               </p>
             </Section>
           </Section>
-          <Section header="Allocation Bonuses">
+          <Section header="Bonuses">
             <p>
               While allocating Metabolism points, you may have bonuses that further increase the amount allocated. If
               you have ranks in a Style that is relevant to the Challenge being attempted, add this rank to the amount
-              you have allocated.
+              you have allocated. Similarly, if you use a weapon add its size to the amount allocated when attacking
+              with it or if you wear armor add its defense rating to the amount allocated to defense reactions while
+              wearing it.
             </p>
             <p>
-              For example, if you have 2 ranks in the Mobile Style and you allocate 4 Metabolism points to a Challenge
-              to traverse an obstacle, then you have effectively allocated 6 points to the Challenge.
+              For example, if you have 2 ranks in the Sharp Style and you allocate 4 Metabolism points to a Ranged
+              Attack Challenge using a size 2 weapon, then you have effectively allocated 8 points to the Challenge.
             </p>
           </Section>
           <Section header="Allocating Metabolisms Example" isInset>
@@ -927,11 +929,15 @@ function ChapterGameplay() {
               lose this state.
             </p>
           </Section>
-          <Section header="Enthralled">
+          <Section header="Distracted">
             <p>Your attention is being manipulated by something.</p>
             <p>
-              You have disadvantage on Willpower and Intuition Reactions caused by the source of this State. Conversely,
-              you also have disadvantage on Perception Reactions caused by anyone other than the source of this State.
+              You also have disadvantage on Intuition and Perception Reactions caused by anyone other than the source of
+              this State.
+            </p>
+            <p>
+              If you have this state with an intensity greater than three, you are practically enthralled by the source
+              of this state. You have disadvantage on Willpower and Intuition Reactions caused by them.
             </p>
           </Section>
           <Section header="Faded">
@@ -961,15 +967,16 @@ function ChapterGameplay() {
               the intensity of this state to the weapon's size.
             </p>
             <p>
-              This state ends if you and the grappler are forced to move apart. Also, if the grappler does not maintain
-              the hold during their subsequent turns, this state ends at the end of their turn. The state can be
-              maintained by either using the Interact action to maintain its current intensity, or by making another
-              Unarmed Attack that applies Grappled to replace the intensity.
+              This state ends if the grappler moves or is moved more than 1 meter away, or if the grappler ever finishes
+              a turn without maintaining the grapple with at least one action. The grappler can use an inhale action to
+              maintain the grappled state at its current intensity, or they can make another Unarmed Attack that applies
+              Grappled to replace the current intensity with the one applied by this action.{" "}
             </p>
             <p>
-              You, or someone helping you, can use the Interact action to trigger your Unarmed Defense Reaction. Any
-              Progress gained in this reduces the Intensity of grappled, allowing you to escape when it reaches 0. No
-              other actions can remove this state.
+              To escape this state, you or someone helping you, can use an inhale action to trigger your Unarmed Defense
+              Reaction. You have advantage on this reaction if it was triggered by someone helping you. Any Progress
+              gained in this reduces the Intensity of grappled, allowing you to escape when it reaches 0. No other
+              actions can remove this state.
             </p>
           </Section>
           <Section header="Off Balance">

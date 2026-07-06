@@ -77,18 +77,18 @@ function ChapterExperience() {
         </p>
         <Section header="Styles">
           <p>
-            Each Style is composed of 3 ranks you can acquire. These ranks grant an allocation bonus to an associated
-            action and grant you access to your choice of several Specializations. The intuitive Style contains several
+            Each Style is composed of 3 ranks you can acquire. These ranks grant a bonus to an associated action and
+            grant you access to your choice of several Specializations. The intuitive Style contains several
             Specializations that focus on boosting your natural abilities beyond human limits. The Esoteric Style grants
-            overtly supernatural capabilities and ways to improve and customize cascade events.{" "}
+            overtly supernatural capabilities and ways to improve and customize cascade events.
           </p>
           <p>
             For example, the Entanglement of Flight + Self contains the intuitive style Tough which has Specializations
-            that improve your physical durability. Your rank in Tough is applied as an allocation bonus when using the
-            Unarmed Defense reaction. This Entanglement also contains the esoteric style Abjuration which has
-            Specializations that let you make defensive shields using the Ward cascade event, the rank in this style is
-            added as an allocation bonus when inducing this event. These two styles have a similar goal, defense, but
-            differ in how to approach this goal.
+            that improve your physical durability. Your rank in Tough is applied as an bonus when allocating metabolism
+            points to the Unarmed Defense reaction. This Entanglement also contains the esoteric style Abjuration which
+            has Specializations that let you make defensive shields using the Ward cascade event, the rank in this style
+            is added as a bonus to the amount allocated when inducing this event. These two styles have a similar goal,
+            defense, but differ in how to approach this goal.
           </p>
         </Section>
         <Section header="Specializations">

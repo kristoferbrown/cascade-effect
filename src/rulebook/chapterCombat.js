@@ -169,7 +169,7 @@ function ChapterCombat() {
               an enemy.
             </li>
             <li>
-              <strong>Unarmed Attack:</strong> Use a punch, kick, elbow, or grapple to harm or subdue an enemy.
+              <strong>Unarmed Attack:</strong> Use a punch, kick, elbow, or grab to harm or subdue an enemy.
             </li>
             <li>
               <strong>Induce a cascade event:</strong> Create a supernatural effect.
@@ -205,11 +205,11 @@ function ChapterCombat() {
             </li>
           </ul>
         </Section>
-        <Section header="Allocation Bonuses in Combat">
+        <Section header="Bonuses in Combat">
           <p>
-            Every exhale action specifies that a certain Style provides it with an allocation bonus. When completing the
-            Challenge associated with these actions, add your rank in the specified Style to the number of Metabolism
-            points allocated to it.
+            Every exhale action specifies that a certain Style provides it with a bonus. When completing the Challenge
+            associated with these actions, add your rank in the specified Style to the number of Metabolism points
+            allocated to it.
           </p>
           <p>
             For example, if you have an Unarmed Attack bonus of 2, and you spend 4 Metabolism points on the action,
@@ -504,11 +504,13 @@ function ChapterCombat() {
       <Section header="Equipment">
         <Section header="Armor">
           <p>
-            All armor has a Defense value. Each point of Defense on worn armor reduces
-            <Crosslink target={linkMap.Attacks}>Threat</Crosslink> by 1 on all incoming
-            <Crosslink target={linkMap.Attacks}>attacks</Crosslink>. Armor with Defense 1 can be concealed under or worn
-            as casual clothing. Armor with Defense 3 is heavy and slows you down, actions and reactions do not provide
-            free movement while you are wearing it.
+            All armor has a Defense value. This value indicates the size of the bonus it adds to the metabolism points
+            allocated to defense reactions. For example, if your armor has a Defense of 2 and you spend 3 Metabolism
+            points on a defense reaction, you've effectively allocated 5 points to the defense.
+          </p>
+          <p>
+            Armor with Defense 1 can be concealed under or worn as casual clothing. Armor with Defense 3 is heavy and
+            slows you down, actions and reactions do not provide free movement while you are wearing it.
           </p>
           <Section header="Types of Armor">
             <table>
@@ -544,11 +546,16 @@ function ChapterCombat() {
             <Metabolism near />, and ranged weapons use <Metabolism far />.
           </p>
           <p>
-            Each weapon has a Size value. This number indicates the Progress bonus the weapon adds to attacks made with
-            it. It also indicates the minimum amount of Metabolism points that must be spent to attack with the weapon,
-            if you do not have this amount available, you can only use this weapon when the attack is Prepared. Size 1
-            can be concealed in casual clothing, Size 2 cannot, and Size 3 or above requires both hands. Any weapon Size
-            4 or above can only be used when Prepared.
+            Each weapon has a Size value. This number indicates the bonus the weapon adds to the amount of metabolism
+            points allocated to attacks made with it. It also indicates the minimum amount of Metabolism points that
+            must be spent to attack with the weapon, if you do not have this amount available, you can only use this
+            weapon when the attack is Prepared. For example, if your weapon is size 3, you must spend at least 3
+            Metabolism points to use it if the attack is not prepared, if you chose to spend 5 points on the attack, you
+            would have total points allocated to the attack.
+          </p>
+          <p>
+            Size 1 can be concealed in casual clothing, Size 2 cannot, and Size 3 or above requires both hands. Any
+            weapon Size 4 or above can only be used when Prepared.
           </p>
           <Section header="Improvised Weapons">
             <p>

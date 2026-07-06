@@ -11,7 +11,7 @@
     margin: 1cm 0.5cm;
     column-fill: auto;
     @bottom-center {
-      font-size: 12px;
+      font-size: 1rem;
       font-family: "burlingame", "Helvetica Neue", "Verdana", sans-serif;
       content: counter(page);
     }
@@ -22,7 +22,6 @@
       content: none;
     }
   }
-
 
   .hiddenInPrint {
     display: none !important;
@@ -44,6 +43,11 @@
   .App .section p {
     margin: 0 0 3mm 0;
     padding: 0;
+    font-size: 1.3rem;
+  }
+  .App .section li,
+  .App .section table {
+    font-size: 1.3rem;
   }
 
   .App .section h1.sectionHeader {
@@ -61,10 +65,22 @@
   }
 
   .App .section h1 {
-    font-size: 42px;
+    font-size: 3rem;
     text-align: center;
     margin: 0;
     padding: 0;
+  }
+  .App .section h2 {
+    font-size: 2.5rem;
+  }
+  .App .section h3 {
+    font-size: 2rem;
+  }
+  .App .section h4 {
+    font-size: 1.8rem;
+  }
+  .App .section h5 {
+    font-size: 1.5rem;
   }
 
   .App .section.depth1.openSection {
@@ -121,7 +137,7 @@
   /* themes */
   .section.classified,
   .ChapterIntroSpreadRightPage.classified {
-    background: var(--hiddenSpace);
+    /* background: var(--hiddenSpace); */
     color: var(--physicalSpace);
   }
   .section.classified .visibilityToggle {

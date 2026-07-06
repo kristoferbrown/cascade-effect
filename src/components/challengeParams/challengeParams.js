@@ -34,14 +34,14 @@ const ChallengeParams = ({ pair, risk, effort, allocBonus, progBonus, goals }) =
       <div className="challengeParams-row">
         {allocBonus && (
           <p>
-            <strong>Allocate Bonus</strong>: {allocBonus}
+            <strong>Bonus</strong>: {allocBonus}
           </p>
         )}
-        {progBonus && (
+        {/* {progBonus && (
           <p>
             <strong>Progress Bonus</strong>: {progBonus}
           </p>
-        )}
+        )} */}
       </div>
       <p>
         <strong>Goals</strong>: {goals.map((goalText) => `${goalText}, `)}

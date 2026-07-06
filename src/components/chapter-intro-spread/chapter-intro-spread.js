@@ -5,7 +5,7 @@ const ChapterIntroSpread = ({ title, chapterNumber, leftPageContent, rightPageCo
   return (
     <div className="ChapterIntroSpread">
       <div className="ChapterIntroSpreadPage ChapterIntroSpreadLeftPage">
-        <h1 className="hiddenOnScreen chapterIntroLeftTitle">{title}</h1>
+        <h1 className="hiddenOnScreen chapterIntroLeftTitle">Chapter {chapterNumber}</h1>
         <div className="ChapterIntroSpreadPageContent">
           <div className="pageContentText">{leftPageContent}</div>
           <div className="pageContentLogo">
@@ -14,14 +14,13 @@ const ChapterIntroSpread = ({ title, chapterNumber, leftPageContent, rightPageCo
         </div>
       </div>
       <div className="ChapterIntroSpreadPage ChapterIntroSpreadRightPage classified">
-        {/* <h1 className="hiddenOnScreen testdiv">test 2</h1> */}
         <div className="ChapterIntroSpreadPageContent">
           <div className="pageContentLogo">
             <Logomark showLeft={false} />
           </div>
           <div className="pageContentText">{rightPageContent}</div>
         </div>
-        <h1 className="hiddenOnScreen chapterIntroRightTitle">Chapter {chapterNumber}</h1>
+        <h1 className="hiddenOnScreen chapterIntroRightTitle">{title}</h1>
       </div>
     </div>
   );

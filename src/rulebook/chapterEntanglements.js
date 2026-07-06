@@ -790,7 +790,7 @@ function ChapterEntanglements() {
                   </p>
                   <p>
                     Additionally, when your Refract event inflicts the Off Balance or Suppressed state, you may choose
-                    for it to instead inflict Enthralled or Afraid.
+                    for it to instead inflict Distracted or Afraid.
                   </p>
                 </>,
                 <>
@@ -1105,12 +1105,12 @@ function ChapterEntanglements() {
                   risk={"Medium"}
                   effort={"Medium"}
                   allocBonus={"Evocation Style"}
-                  goals={["Power"]}
+                  goals={["Threat"]}
                 />
                 <p>
                   Inducing this is an a medium Risk and Effort Challenge that results in attacking a target you can see
-                  with an explosive torrent of energy. The target is dealt Threat equal to Power and defends with a
-                  Ranged Defense reaction.
+                  with an explosive torrent of energy. The target is dealt Threat equal to the Threat Goal and defends
+                  with a Ranged Defense reaction.
                 </p>
               </>
             }
@@ -1121,7 +1121,7 @@ function ChapterEntanglements() {
               intro={<p>The raw destructive potential of Evoke increases.</p>}
               ranks={[
                 <p>Your Evoke events deal an additional amount of Threat equal to your rank in this Specialization.</p>,
-                <p>The Power metric of your Evoke event has no limit, you can spend any amount of Progress on it.</p>,
+                <p>The Threat Goal of your Evoke event has no limit, you can spend any amount of Progress on it.</p>,
                 <p>Your Evoke events deal an additional amount of Threat equal to your rank in Evocation.</p>,
               ]}
             />
@@ -1209,8 +1209,8 @@ function ChapterEntanglements() {
                   instead of just once.
                 </p>,
                 <p>
-                  Every point of Stress you take from Pushing Yourself while inducing Evoke increases the allocation
-                  bonus of the event by 1.
+                  Every point of Stress you take from Pushing Yourself while inducing Evoke increases any bonus when
+                  allocating metabolisms to the event by 1.
                 </p>,
                 <p>
                   When inducing Evoke, you can willingly reduce a Metabolism capacity to 0 by Pushing Yourself, causing
@@ -1242,19 +1242,19 @@ function ChapterEntanglements() {
                   You can contain the energies from evocation in an object and release them at a controlled rate. As an
                   inhale action, touch a melee weapon, a piece cloth used as a hand wrap, a handful of projectiles, a
                   magazine of ammunition, or other similar objects that could impact a target during a melee, ranged, or
-                  unarmed attack action. This object develops a luminous corona of plasma discharge, and has the
-                  allocation bonus of any attack made with it increased by your Evocation rank. The object can directly
-                  harm entities in hidden space if it strikes them. This state lasts until the scene ends or you lose
-                  line of sight to the object or a person holding the object. You can maintain a number of objects in
-                  this state equal to your evocation rank.
+                  unarmed attack action. This object develops a luminous corona of plasma discharge, and has the bonus
+                  it adds to any attack made with it increased by your Evocation rank. The object can directly harm
+                  entities in hidden space if it strikes them. This state lasts until the scene ends or you lose line of
+                  sight to the object or a person holding the object. You can maintain a number of objects in this state
+                  equal to your evocation rank.
                 </p>,
                 <>
                   <p>
                     As an inhale action, you can create from nothing weapons made of luminous plasma. This acts as a
                     long lasting bladed weapon of any size or as a stack of six size 1 thrown weapons that are destroyed
-                    on impact. Attacks made with these weapons have an allocation bonus increased by your Evocation rank
-                    and can harm entities in hidden space. You can only do this once per scene and the weapons created
-                    can only be used by you.
+                    on impact. Attacks made with these weapons have the bonus they add to attacks increased by your
+                    Evocation rank and can harm entities in hidden space. You can only do this once per scene and the
+                    weapons created can only be used by you.
                   </p>
                   <p>
                     Additionally, when you induce Evoke into an object, you may decide if the object leaving your line
@@ -1555,10 +1555,9 @@ function ChapterEntanglements() {
               ranks={[
                 <p>
                   You may induce Ward as a defense reaction to any incoming attack. This reaction uses same metabolism
-                  pair and allocation bonus as inducing Ward normally, but can only use the a single Goal called
-                  Defense. This Goal has no limit to the Progress you can apply to it and it works the same as the
-                  Defense Goal of any defense reaction, with each point applied to it reducing Threat and or other Goals
-                  dealt by 1.
+                  pair and bonus as inducing Ward normally, but can only use the a single Goal called Defense. This Goal
+                  has no limit to the Progress you can apply to it and it works the same as the Defense Goal of any
+                  defense reaction, with each point applied to it reducing Threat and or other Goals dealt by 1.
                 </p>,
                 <p>
                   When using Ward as a reaction, it emits a repulsive field. Adjacent attackers are repelled by it and
@@ -1737,7 +1736,9 @@ function ChapterEntanglements() {
                   just one or the other.
                 </p>,
                 <p>Your Move action is always Prepared.</p>,
-                <p>Your Move action has a Progress bonus equal to your Mobile style rank.</p>,
+                <p>
+                  Your Move action has a bonus when allocating metabolism points to it equal to your Mobile style rank.
+                </p>,
               ]}
             />
           </Section>
@@ -2283,9 +2284,9 @@ function ChapterEntanglements() {
                   </p>
                 </>,
                 <p>
-                  Anyone inducing a cascade event in your distortion field may add an allocation bonus to the event's
-                  Challenge equal to your Pneumaplegia rank, but each time this happens you take a point of Stress to
-                  Flight or Far.
+                  Anyone inducing a cascade event in your distortion field may add a bonus to amount of Progress they
+                  allocate to the event equal to your Pneumaplegia rank, but each time this happens you take a point of
+                  Stress to Flight or Far.
                 </p>,
               ]}
             />
@@ -2423,8 +2424,8 @@ function ChapterEntanglements() {
               }
               ranks={[
                 <p>
-                  When making a Melee, Ranged, Unarmed, or Ward defense reaction, you may use your Willpower allocation
-                  bonus in instead of the usual allocation bonus.
+                  When making a Melee, Ranged, Unarmed, or Ward defense reaction, you may use your Willpower bonus in
+                  instead of the usual bonus when allocating metabolisms.
                 </p>,
                 <p>
                   As long as you have available points of Focus, when one of your Hidden Metabolism capacities is
@@ -2827,8 +2828,14 @@ function ChapterEntanglements() {
                   an hour examining it. Additionally, you can craft items out of any exotic material you have access to
                   a sufficient amount of.
                 </p>,
-                <p>You can craft trans-physical objects with any hidden architecture and any rank 1 function. </p>,
-                <p>You can craft trans-physical objects with functions of any rank.</p>,
+                <p>
+                  You can craft trans-physical equipment that grants their user the equivalent of Traits. Work with your
+                  GM to design this equipment.
+                </p>,
+                <p>
+                  You can craft trans-physical objects that mimic the properties of other specializations or cascade
+                  events. Work with your GM to design this equipment.
+                </p>,
               ]}
             />
           </Section>
@@ -2909,8 +2916,8 @@ function ChapterEntanglements() {
                 </p>,
                 <p>
                   Your exoproprioception allows you to feel the path an attack follows. When making a Melee, Ranged, or
-                  Unarmed defense reaction, you may use your Intuition allocation bonus in instead of the usual
-                  allocation bonus
+                  Unarmed defense reaction, you may use your Intuition bonus in instead of the usual bonus when
+                  allocating metabolisms.
                 </p>,
                 <p>
                   Your exoproprioception is now sensitive enough that you can blindly engage in combat without penalty
@@ -3083,19 +3090,11 @@ function ChapterEntanglements() {
                     Materials you create can be permanent or evaporate into harmless radiation after a set amount of
                     time.
                   </p>
-                  <p>
-                    Additionally, by taking a point of Stress to Focus and spending an hour in concentration you can
-                    accrete a cubic centimeter of color glass. This material is a single macroscopic hadron and is
-                    effectively indestructible. It is also unworkable and can only be shaped during its creation at a
-                    level of precision determined by your rank in Reshape. When creating this material you may create a
-                    new object or add to an existing one. Weapons or ammunition made of color glass deal an extra point
-                    of Threat and armor made of it has an extra point of defense than it otherwise would.
-                  </p>
                 </>,
               ]}
             />
           </Section>
-          <Section header="Create Pattern" isClassified>
+          <Section header="Recreate Pattern" isClassified>
             <SpecializationDescription
               intro={<p>You can familiarize yourself with objects and recreate them. </p>}
               ranks={[
@@ -3233,7 +3232,7 @@ function ChapterEntanglements() {
                   When you have the Faded state, you may choose to also make your identity unrecognizable. Even
                   recording equipment, facial recognition software, and people the still notice you in this state cannot
                   identify your face. Conversely, you can stand out in a crowd. When you use Manipulate to cause the
-                  Enthralled state, you can target any number of people that can see you.
+                  Distracted state, you can target any number of people that can see you.
                 </p>,
               ]}
             />
@@ -3346,7 +3345,7 @@ function ChapterEntanglements() {
                   risk={"Medium"}
                   effort={"Medium"}
                   allocBonus={"Telethesia Style"}
-                  goals={["Influence", "Range", "Participants"]}
+                  goals={["Influence", "Participants"]}
                 />
                 <p>
                   Select a number of willing Participants within a number of meters equal to Range. For the rest of the
@@ -3357,8 +3356,8 @@ function ChapterEntanglements() {
                 </p>
                 <p>
                   Progress you apply to the Influence Goal may be split up, assigning any portion of it to any targets
-                  within Range you can see. Some specializations within this style grant different uses for Influence.
-                  You may only choose one use for Influence when you induce this event.
+                  you can see. Some specializations within this style grant different uses for Influence. You may only
+                  choose one use for Influence when you induce this event.
                 </p>
                 <p>
                   Even without any Specializations, you can use Influence to make targets suggestible. When you do, any
@@ -3378,17 +3377,20 @@ function ChapterEntanglements() {
               }
               ranks={[
                 <>
-                  <p>The Range goal now measures 10 meter increments. </p>
+                  <p>
+                    You no longer have to see the Participants or targets of Influence when inducing Telepathy. Instead
+                    it can affect anyone within a range of up to a kilometer.
+                  </p>
                   <p>
                     When you induce Telepathy you may now use a Goal called Clairvoyance. If you assign any Progress to
-                    this Goal, you may select a location to scry on. This location must be within Range and you must
+                    this Goal, you may select a location to scry on. This location must be within range and you must
                     have previously seen it before. You and all Participants can see and hear anything that is currently
                     happening within a number of meters equal to Clairvoyance of this location in your minds for the
                     rest of the scene.
                   </p>
                 </>,
                 <>
-                  <p>The Range goal now measures 100 meter increments. </p>
+                  <p>The maximum range of Telepathy or Clairvoyance is now 10 kilometers.</p>
                   <p>
                     When you use Clairvoyance, you may target a person you have met to be the center of the area you
                     scry on, even if you don't know where this person is. Additionally, you can choose to scry with
@@ -3397,7 +3399,7 @@ function ChapterEntanglements() {
                   </p>
                 </>,
                 <>
-                  <p>The Range goal now measures kilometer increments. </p>
+                  <p>The maximum range of Telepathy or Clairvoyance is now 100 kilometers.</p>
                   <p>
                     When you scry, you do not need to have seen the location or met the target before. You can observe
                     the area at any chosen past moment within a number of years equal to Clairvoyance.

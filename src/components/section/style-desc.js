@@ -7,9 +7,7 @@ const StyleDescription = ({ intro, styleName, associatedAction, rank1Bonus }) =>
       ranks={[
         <>
           {rank1Bonus ? <p>{rank1Bonus}</p> : null}
-          {associatedAction ? (
-            <p>You gain an allocation bonus to equal to your rank in this Style to {associatedAction}</p>
-          ) : null}
+          {associatedAction ? <p>You gain a bonus to equal to your rank in this Style to {associatedAction}</p> : null}
           <p>Gain the first rank of a Specialization within the {styleName} style.</p>
         </>,
         <p>Gain the first rank of a Specialization within the {styleName} style.</p>,
