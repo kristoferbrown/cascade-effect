@@ -74,7 +74,7 @@
 
 .section h1.sectionHeader {
   background: linear-gradient(-84deg, var(--hiddenSpace) 68.6px, var(--highlight) 69px);
-  font-size: 33px;
+  font-size: 2.1rem;
   z-index: 40;
 }
 

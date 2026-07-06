@@ -105,5 +105,6 @@
   }
   .ChapterIntroSpreadPage .logomark-svg {
     transform: none;
+    height: 10cm;
   }
 }

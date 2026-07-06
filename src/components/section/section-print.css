@@ -29,9 +29,9 @@
 
   .App .sectionChildren.chapterContent {
     column-count: 2;
-    column-gap: 0.5cm;
+    column-gap: 1cm;
     column-fill: auto;
-    margin: 0 0.5cm;
+    margin: 0 1cm;
   }
 
   .App .section,
