@@ -35,7 +35,7 @@ function App() {
             className="crosslink"
             target="_blank"
             rel="noreferrer"
-            href="https://cascade-effect.com/sheets/char-sheet-2.7.0.pdf"
+            href="https://cascade-effect.com/sheets/char-sheet-2.8.0.pdf"
           >
             Character Sheet (.pdf)
           </a>

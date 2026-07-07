@@ -108,7 +108,7 @@
 }
 .pair-bond:after {
   content: "+";
-  font-size: 20px;
+  font-size: 1.3rem;
   left: -6.8px;
   position: absolute;
   top: -2.2px;
