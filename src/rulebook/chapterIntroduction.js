@@ -127,7 +127,7 @@ function ChapterIntroduction() {
           <Section header="The Hidden Body">
             <p>
               Between every point of the space you're familiar with, exists a second hidden space. This parallel realm,
-              called Hidden Space, is invisible to most. But you've sense an intangible mirror of your physical form
+              called Hidden Space, is invisible to most. But you'ved sense an intangible mirror of your physical form
               embedded in this space, your Hidden Body.
             </p>
           </Section>
@@ -208,7 +208,7 @@ function ChapterIntroduction() {
               of maintaining consciousness. Its normally undetectable, but those who have experienced being separated
               from it have dissociative symptoms that hint at its absence. Despite never understanding its true nature,
               people suspecting the presence of the Hidden Body have given it many names throughout history, such as the
-              soul, the subtle body, the body of light, pneuma, and many others.In the game it is represented by the
+              soul, the subtle body, the body of light, pneuma, and many others. In the game it is represented by the
               <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> of <Metabolism self />,
               <Metabolism near />, and <Metabolism far />.
             </li>
@@ -262,7 +262,8 @@ function ChapterIntroduction() {
           <li>
             An <Crosslink target={linkMap.InhaleAction}>inhale action</Crosslink> and an
             <Crosslink target={linkMap.ExhaleAction}>exhale action</Crosslink> in combat. In dangerous situations, the
-            parallelized mind of an entangled character can do things in the same time a normal human can do one thing.
+            parallelized mind of an entangled character can do two things in the same time a normal human can do one
+            thing.
           </li>
           <li>
             <Crosslink target={linkMap.Entanglements}>Entanglements</Crosslink>. The Hidden Body is more mutable than
@@ -279,6 +280,30 @@ function ChapterIntroduction() {
             physics, transform the body, communicate telepathically, or allow one to traverse Hidden Space.
           </li>
         </ul>
+
+        <Section header="Becoming Entangled">
+          <p>
+            The onset of entanglement is rarely a gentle or quick awakening. Each person's experience of this is
+            different, but there are often some common threads.
+          </p>
+          <p>
+            First, there is the initial dawning of awareness referred to as a hidden origin, often caused by a brush
+            with the supernatural. A person's initial sensations of their hidden body are highly disorienting, often
+            triggering severe almost hallucinatory dissociative episodes. This may manifest as a disorienting
+            superposition of your senses. You proprioception may expand uncomfortably beyond your flesh. Your physical
+            body may feel like a heavy exoskeleton requiring manual effort to pilot. Your immediate surroundings might
+            lose their permanence, appearing as a thin projection on top of a vast invisible depth.
+          </p>
+          <p>
+            However this experience shows itself, the dissociative sensations may last for an extended time. Sometimes
+            even the rest of a lifetime resulting in a person never becoming truly entangled. Those that come out of the
+            other side of this experience as entangled often are forced into it by an inciting incident, a moment of
+            danger, trauma, or supernatural contact that triggers things to finally click into place. The physical brain
+            is forced to integrate with the overwhelming rush of parallel processing, putting an end the extended
+            dissociative experiences. You're no longer just a mind trapped in a physical body, you are a fully
+            actualized being fully in control of the information bridge between two realities.
+          </p>
+        </Section>
       </Section>
       <Section header="Basic Gameplay">
         <p>
@@ -387,7 +412,8 @@ function ChapterIntroduction() {
           </p>
           <p>
             Characters start as ordinary people. Follow the standard character creation steps detailed in the next
-            chapter.
+            chapter. These characters have Hidden Origin that explains how they first sense their Hidden Body, but only
+            become fully entangled after an Inciting Incident that will take place early in the story.
           </p>
         </Section>
         <Section header="The Heroic Story">
@@ -395,8 +421,9 @@ function ChapterIntroduction() {
           <p>
             Characters are already slightly superhuman at the start. Follow the standard character creation steps
             detailed in the next chapter, but their Inciting Incident and the Metabolism increases it grants have
-            already occurred. Your character can start with any weapons legal to civilians. Afterwards, each character
-            gets 3 experience points to spend (or a different amount determined by the
+            already occurred. Therefore, all of your Hidden Metabolism scores should start at 1 before character
+            creation. Your character can start with any weapons legal to civilians. Afterwards, each character gets 3
+            experience points to spend (or a different amount determined by the
             <Crosslink target={linkMap.TheGameMaster}>GM</Crosslink>).
           </p>
         </Section>

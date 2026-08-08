@@ -6,7 +6,6 @@
 }
 
 @media print {
-
   .coverPage {
     page: fullPage;
     position: relative;
@@ -28,7 +27,7 @@
   .contentsPage {
     position: relative;
     display: block;
-    column-count: 2;
+    column-count: 1;
     column-gap: 0.5cm;
     column-fill: auto;
     margin: 0;

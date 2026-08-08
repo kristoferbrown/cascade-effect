@@ -67,37 +67,39 @@ function ChapterCharacters() {
           starting character are Metabolisms, Traits, Styles, and Specializations. You will define these values by
           choosing two Origins.
         </p>
-        <p>
-          Origins represent your character's background. You will choose a Physical Origin describing how your character
-          came to be who they are, and a Hidden Origin that represents how they came to sense their Hidden Body. Each
-          Origin provides prompts and questions to answer that will guide you through choosing your other stats. Keep in
-          mind that Origin prompts are guidelines, not strict rules. If you have a better idea for your character than
-          one presented in a prompt, go with it.
-        </p>
-        <p>
-          Metabolisms are numbers indicating how much effort, attention, and willpower a character can bring to an
-          action.
-        </p>
-        <p>
-          Traits are keywords that flesh out additional details about your character, and they provide a advantages
-          whenever they are relevant to an action. They can be almost anything that your character is able to leverage
-          in a useful way. Generally, skills, social status, relationships, community membership, authority, wealth,
-          possessions, careers, apparent physical traits, fashions, roles you fill, or other advantages are good Traits.
-          Don't think too hard about having perfect or precise Traits, they can be vague during character creation. You
-          will be able to revise them later during play as you get to know the character.
-        </p>
-        <p>
-          The final aspects of character creation are Styles. Styles are the root of your character's supernatural
-          abilities. Each is part of an Entanglement, a permanent pairing of a Physical Metabolism and a Hidden
-          Metabolism. Each Entanglement contains two Styles, one intuitive that provides combat or sensory bonuses, and
-          one esoteric that provides a minor supernatural ability. Later, your Styles determine what Specializations you
-          will have access to.
-        </p>
-        <p>
-          Specializations are supernatural abilities your character can learn as they refine the connection between
-          their physical and hidden bodies. Your Hidden Origin will provide you with one Specialization to choose.
-          Later, you can gain ranks in Specializations by spending experience points you gain after playing a session,
-        </p>
+        <Section header="Parts of a Character">
+          <p>
+            Origins represent your character's background. You will choose a Physical Origin describing how your
+            character came to be who they are, and a Hidden Origin that represents how they came to sense their Hidden
+            Body. Each Origin provides prompts and questions to answer that will guide you through choosing your other
+            stats. Keep in mind that Origin prompts are guidelines, not strict rules. If you have a better idea for your
+            character than one presented in a prompt, go with it.
+          </p>
+          <p>
+            Metabolisms are numbers indicating how much effort, attention, and willpower a character can bring to an
+            action.
+          </p>
+          <p>
+            Traits are keywords that flesh out additional details about your character, and they provide a advantages
+            whenever they are relevant to an action. They can be almost anything that your character is able to leverage
+            in a useful way. Generally, skills, social status, relationships, community membership, authority, wealth,
+            possessions, careers, apparent physical traits, fashions, roles you fill, or other advantages are good
+            Traits. Don't think too hard about having perfect or precise Traits, they can be vague during character
+            creation. You will be able to revise them later during play as you get to know the character.
+          </p>
+          <p>
+            The final aspects of character creation are Styles. Styles are the root of your character's supernatural
+            abilities. Each is part of an Entanglement, a permanent pairing of a Physical Metabolism and a Hidden
+            Metabolism. Each Entanglement contains two Styles, one intuitive that provides combat or sensory bonuses,
+            and one esoteric that provides a minor supernatural ability. Later, your Styles determine what
+            Specializations you will have access to.
+          </p>
+          <p>
+            Specializations are supernatural abilities your character can learn as they refine the connection between
+            their physical and hidden bodies. Your Hidden Origin will provide you with one Specialization to choose.
+            Later, you can gain ranks in Specializations by spending experience points you gain after playing a session,
+          </p>
+        </Section>
         <Section header="Step by Step Characters" isInset>
           <ol>
             <li>
@@ -232,13 +234,19 @@ function ChapterCharacters() {
               Normal humans typically do not have points in the
               <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> and starting characters only
               a single point in one of them. However, this is about to change for your character. Somewhere early after
-              the game has started, usually during the first session, the characters will have their first contact with
+              the game has started, ideally during the first session, the characters will have their first contact with
               the overtly supernatural and this contact will force them to fully realize their connection to their
               Hidden Body.
             </p>
             <p>
-              After this inciting incident occurs, permanently increase all of your
+              At the moment this inciting incident occurs, permanently increase all of your
               <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolism</Crosslink> scores by 1.
+            </p>
+            <p>
+              The inciting incident only occurs if you started the game using the The Origin Story option. If your game
+              uses the other starting point options, the inciting incident and the metabolism increases it causes are
+              already in your character's past. In this case, your Hidden Metabolism scores should start at 1 before
+              character creation instead of increasing by 1 during the story.
             </p>
           </Section>
           <Section header="Revising Traits">
@@ -261,15 +269,15 @@ function ChapterCharacters() {
               quite relevant. Later, you couldn't revise "Rock Climber" into some other athletic pursuit, but perhaps
               you could change it to something even more specific like "Mountaineer", "Alpinist", or "Ice Climber".
             </p>
-            <Section header="Lost Traits">
-              <p>
-                If a Trait represents an physical or social asset, it could potentially be lost during gameplay. The GM
-                should not take Traits away for no reason, only when the character's actions destroy their asset
-                irrevocably. If this occurs, replace the Trait representing the asset with one representing a useful
-                lesson the character learned from the incident. For example, a character with a Trait representing an
-                expensive vehicle may have this Trait replaced with "Careful Driver" if they crash it.
-              </p>
-            </Section>
+          </Section>
+          <Section header="Lost Traits">
+            <p>
+              If a Trait represents an physical or social asset, it could potentially be lost during gameplay. The GM
+              should not take Traits away for no reason, only when the character's actions destroy their asset
+              irrevocably. If this occurs, replace the Trait representing the asset with one representing a useful
+              lesson the character learned from the incident. For example, a character with a Trait representing an
+              expensive vehicle may have this Trait replaced with "Careful Driver" if they crash it.
+            </p>
           </Section>
           <Section header="Leveling Up">
             <p>
@@ -768,7 +776,7 @@ function ChapterCharacters() {
         </p>
         <h5 className="subheader">Hidden Origins and Personal Identity</h5>
         <p>
-          The journey to sensing your Subtle Body is deeply personal. For some characters, this awakening can resonate
+          The journey to sensing your Hidden Body is deeply personal. For some characters, this awakening can resonate
           with real-world experiences of neurodiversity, gender dysphoria, or mental health challenges. Some of the
           Hidden Origins, particularly the ones arising from dissociation, provide a way to explore these themes through
           a supernatural lens, if you choose.
@@ -776,8 +784,8 @@ function ChapterCharacters() {
         <p>
           Hidden Origins are rare and always supernatural in character. They are not the cause or a result of
           neurodiversity, but in your character's experience they may have been intertwined. Your character's awakening
-          to the supernatural could have been a source of trauma or a source or strength, a epiphany of profound clarity
-          or a long journey of self-discovery, or simply a strange new fact of their life.
+          to the supernatural could have been a source of trauma or a source or strength, an epiphany of profound
+          clarity or a long journey of self-discovery, or simply a strange new fact of their life.
         </p>
         <p>
           However you choose to frame your character's origin, these experiences weren't a weakness, they were the
@@ -1185,7 +1193,7 @@ function ChapterCharacters() {
         <Section header="Dissociated Far" topicKey="dissociatedFarOrigin" isClassified>
           <p>
             <strong>You always struggled to relate to other people.</strong> Maybe they always reacted differently than
-            you expected; maybe you couldn't understand socializing seemed to be natural to others; maybe it was
+            you expected; maybe you couldn't understand how socializing seemed to be natural for others; maybe it was
             exhausting to be around other people; maybe other people seemed unnatural to you; or maybe you just felt
             awkward. Whatever the manifestation, you experienced a chronic dissociation of the Far Metabolism, making
             the other people seem inscrutable or illusory. However, this experience led to sensing more concretely the
@@ -1259,7 +1267,7 @@ function ChapterCharacters() {
               <strong>You had strange new abilities.</strong> Gain either the Specialization{" "}
               <SpecializationLink name="Force Push" /> or <SpecializationLink name="Levitation" />.
               <br />
-              <strong>You were aware of things shouldn't be.</strong> Gain either the Specialization{" "}
+              <strong>You were aware of things your shouldn't be.</strong> Gain either the Specialization{" "}
               <SpecializationLink name="Chromaception" /> or <SpecializationLink name="Precognition" />.
             </li>
             <li>

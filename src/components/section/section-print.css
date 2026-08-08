@@ -8,8 +8,9 @@
     counter-reset: page;
   }
   @page {
-    margin: 1cm 0.5cm;
+    margin: 2cm;
     column-fill: auto;
+    overflow: hidden;
     @bottom-center {
       font-size: 1rem;
       font-family: "burlingame", "Helvetica Neue", "Verdana", sans-serif;
@@ -18,6 +19,7 @@
   }
   @page chapterIntroPage {
     margin: 0;
+    overflow: hidden;
     @bottom-center {
       content: none;
     }
@@ -29,9 +31,10 @@
 
   .App .sectionChildren.chapterContent {
     column-count: 2;
-    column-gap: 1cm;
     column-fill: auto;
-    margin: 0 1cm;
+    column-gap: 2cm;
+    /* margin: 0 1cm; */
+    overflow: hidden;
   }
 
   .App .section,
@@ -103,7 +106,7 @@
 
   .App .section.inset,
   .App .section.classified {
-    padding: 1.3cm 0 0.5cm 0;
+    padding: 2cm 0.5cm 1cm;
     margin: 0 0 1cm 0;
     background: none;
     break-inside: avoid;
@@ -115,20 +118,22 @@
     content: "";
     display: block;
     position: absolute;
-    top: 0.4cm;
-    left: -0.2cm;
-    right: -0.2cm;
-    bottom: 0.1cm;
-    transform: skewY(-4deg);
+    top: 0.5cm;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: skewY(-3deg);
     z-index: -1;
   }
   .contentsList.inset:after,
   .section.inset:after {
-    background: var(--contractedSpace);
+    /* background: var(--contractedSpace); */
+    background: linear-gradient(180deg, #dbc1a8 50vh, #dbc1a800 90vh);
   }
   .contentsList.classified:after,
   .section.classified:after {
-    background: var(--hiddenSpace);
+    background: linear-gradient(180deg, #3a3242 50vh, #3a324200 90vh);
+    /* background: var(--hiddenSpace); */
   }
   .App .classified.section .sectionHeader {
     background: none;
