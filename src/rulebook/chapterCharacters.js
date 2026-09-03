@@ -346,7 +346,7 @@ function ChapterCharacters() {
                       or failing to make ends meet. Gain a Trait representing an a skill you use to support yourself
                       despite adversity
                     </li>
-                  </ul>
+                  </ol>
                 </li>
                 <li>
                   <h5 className="subheader">You've avoided the worst aspects of the failing climate. How?</h5>
@@ -366,7 +366,7 @@ function ChapterCharacters() {
                       Gain a Trait representing access to a physical asset, such as a bunker, off grid power sources, or
                       a stockpile that you can use if things go wrong.
                     </li>
-                  </ul>
+                  </ol>
                 </li>
                 <li>
                   <h5 className="subheader">What's your vibe?</h5>
@@ -386,7 +386,7 @@ function ChapterCharacters() {
                       a screen. Gain a Trait representing a sizeable online following or community you have access to,
                       or a field of trivia you've learned while online.
                     </li>
-                  </ul>
+                  </ol>
                 </li>
               </ol>
             }
@@ -443,7 +443,7 @@ function ChapterCharacters() {
                       stability of a community fallen to martial law. Gain a trait representing a skill you used in
                       actively defending your cause or a skill you used in building and organizing it.
                     </li>
-                  </ul>
+                  </ol>
                 </li>
                 <li>
                   <h5 className="subheader">What was your responsibility?</h5>
