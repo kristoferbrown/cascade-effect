@@ -22,6 +22,10 @@ function GlobalToggle() {
             for (let l = 1; l < 12; l++) {
               const currCoord = `${i}.${j}.${k}.${l}`;
               allSections.add(currCoord);
+              for (let m = 1; m < 12; m++) {
+                const currCoord = `${i}.${j}.${k}.${l}.${m}`;
+                allSections.add(currCoord);
+              }
             }
           }
         }

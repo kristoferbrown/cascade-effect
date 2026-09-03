@@ -4,7 +4,7 @@ import "./print-elements.css";
 const Contents = () => {
   return (
     <div className="contentsPage">
-      <h2>Table of Contents</h2>
+      <h1>Table of Contents</h1>
       <ul className="contentsList">
         <li>
           <h3>
@@ -28,7 +28,7 @@ const Contents = () => {
               <span>Creating Characters</span> <span className="pageNumber">9</span>
             </li>
             <li>
-              <span>Physcial Origins</span> <span className="pageNumber">11</span>
+              <span>Physical Origins</span> <span className="pageNumber">11</span>
             </li>
             <li>
               <span>Hidden Origins</span> <span className="pageNumber">14</span>

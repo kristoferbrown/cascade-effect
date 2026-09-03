@@ -513,7 +513,7 @@ function ChapterGameplay() {
               </p>
             </Section>
           </Section>
-          <Section header="Rolling Dice">
+          <Section header="Rolling Dice" topicKey="RollingDiceBasics">
             <p>
               Dice are only needed when the Risk level is medium or high. Roll one die for every Metabolism point used
               on the Challenge. Every die that has a result of 4 or greater increases the Progress by one and any die

@@ -41,7 +41,7 @@ function ChapterActions() {
         ></ChapterIntroSpread>
       }
     >
-      <Section header="Exhale Actions">
+      <Section header="Exhale Actions List">
         <p>
           Exhale actions allow you to attack your enemies and create supernatural effects. Each will involve a Challenge
           that requires the indicated Metabolism pairs and has the indicated Risk and Effort levels, typically medium.
@@ -111,7 +111,7 @@ function ChapterActions() {
         </Section>
       </Section>
 
-      <Section header="Inhale Actions">
+      <Section header="Inhale Actions List">
         <p>
           Basic actions can be done as either your inhale or exhale action, or over the course of a few seconds out of
           combat. These actions often do not require Challenges, so they can be taken without spending any resources.

@@ -151,8 +151,8 @@ function ChapterIntroduction() {
           <Section header="Secret Organizations">
             <p>
               Many nations have secret intelligence agencies, but orchestrating them all is the Schedule and its
-              auditors. Meanwhile, other groups with goals ranging from revealing these secrets to accelerating societal
-              collapse, recruit and manipulate behind the scenes.
+              auditors. Meanwhile, other groups with goals ranging from revealing these secrets, to accelerating
+              societal collapse, recruit and manipulate behind the scenes.
             </p>
           </Section>
           <Section header="Mysterious Phenomena">
@@ -172,47 +172,43 @@ function ChapterIntroduction() {
         </Section>
       </Section>
 
-      <Section header="What is the Cascade Effect?">
+      <Section header="What is the Cascade Effect?" isInset>
         <p>The world and the people within it have a dual nature, split between physical and incorporeal halves.</p>
-        <Section header="Duality of Space" isInset>
-          <ul>
-            <li>
-              <strong>Physical Space</strong> is the physical world and its laws as we normally experience and
-              understand it. As an essential part of everyday experience, it hasn't gained many names throughout
-              history, but researchers studying these topics have taken to calling it Ultraspace.
-            </li>
-            <li>
-              <strong>Hidden Space</strong> is hidden realm running parallel to the physical. It's almost undetectable,
-              but those that have suspected its presence have called it many names depending on their world view,
-              Infraspace, the spirit world, the astral plane, Calabi-Yau space, and many others.
-            </li>
-          </ul>
+        <Section header="Duality of Space">
+          <p>
+            <strong>Physical Space</strong> is the physical world and its laws as we normally experience and understand
+            it. As an essential part of everyday experience, it hasn't gained many names throughout history, but
+            researchers studying these topics have taken to calling it Ultraspace.
+          </p>
+          <p>
+            <strong>Hidden Space</strong> is hidden realm running parallel to the physical. It's almost undetectable,
+            but those that have suspected its presence have called it many names depending on their world view,
+            including Infraspace, the spirit world, the astral plane, Calabi-Yau space, and many others.
+          </p>
           <p>
             Think of the physical Ultraspace as the surface world and the Hidden Infraspace as the underside, like two
             sides of a coin, one tangible, the other invisible, but both equally real.
           </p>
         </Section>
-        <Section header="Duality of Body" isInset>
+        <Section header="Duality of Body">
           <p>The characters themselves also have a split nature.</p>
-          <ul>
-            <li>
-              <strong>The Physical Body</strong> is how we normally navigate the world. It is the mind and the flesh,
-              made of muscle, bone, organs, neurons, chemical reactions, and electric signals. In the game it is
-              represented by the
-              <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolisms</Crosslink> of <Metabolism fight />,{" "}
-              <Metabolism flight />, and <Metabolism focus />
-            </li>
-            <li>
-              <strong>The Hidden Body</strong> is an intangible part of every human and most animals. It is not your
-              mind, personality, or soul, but when paired with its physical analog in the brain, it is a necessary part
-              of maintaining consciousness. Its normally undetectable, but those who have experienced being separated
-              from it have dissociative symptoms that hint at its absence. Despite never understanding its true nature,
-              people suspecting the presence of the Hidden Body have given it many names throughout history, such as the
-              soul, the subtle body, the body of light, pneuma, and many others. In the game it is represented by the
-              <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> of <Metabolism self />,
-              <Metabolism near />, and <Metabolism far />.
-            </li>
-          </ul>
+          <p>
+            <strong>The Physical Body</strong> is how we normally navigate the world. It is the mind and the flesh, made
+            of muscle, bone, organs, neurons, chemical reactions, and electric signals. In the game it is represented by
+            the
+            <Crosslink target={linkMap.PhysicalMetabolisms}>Physical Metabolisms</Crosslink> of <Metabolism fight />,{" "}
+            <Metabolism flight />, and <Metabolism focus />
+          </p>
+          <p>
+            <strong>The Hidden Body</strong> is an intangible part of every human and most animals. It is not your mind,
+            personality, or soul, but when paired with its physical analog in the brain, it is a necessary part of
+            maintaining consciousness. Its normally undetectable, but those who have experienced being separated from it
+            have dissociative symptoms that hint at its absence. Despite never understanding its true nature, people
+            suspecting the presence of the Hidden Body have given it many names throughout history, such as the soul,
+            the subtle body, the body of light, pneuma, and many others. In the game it is represented by the
+            <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> of <Metabolism self />,
+            <Metabolism near />, and <Metabolism far />.
+          </p>
         </Section>
         <Section header="Crossing Over">
           <p>
@@ -227,14 +223,14 @@ function ChapterIntroduction() {
             pulling in more and more information and creating more and more energy.
           </p>
           <p>
-            Information transfer that is sufficiently self-reinforcing to unleash measurable amounts of free energy is
-            known as the <em>Cascade Effect</em>.
+            Information transfer that has become sufficiently self-reinforcing to unleash measurable amounts of free
+            energy is known as the <em>Cascade Effect</em>.
           </p>
         </Section>
         <Section header="Harnessing the Cascade Effect">
           <p>
             Trans-spatial information transfer is typically an uncommon process in nature. However, evolution has found
-            ways to harness it by creating the Hidden Body, an intangible information processing organ that supplements
+            ways to harness it by creating the Hidden Body, an intangible information processing organ which supplements
             the physical brain. In humans, this process is an important part of consciousness and other mental
             faculties.
           </p>
@@ -266,15 +262,15 @@ function ChapterIntroduction() {
             thing.
           </li>
           <li>
-            <Crosslink target={linkMap.Entanglements}>Entanglements</Crosslink>. The Hidden Body is more mutable than
-            the Physical Body, and over time can be modified and improved to increase a character's capabilities. This
+            <Crosslink target={linkMap.Entanglements}>Entanglements</Crosslink> The Hidden Body is more mutable than the
+            Physical Body, and over time can be modified and improved to increase a character's capabilities. This
             process is measured in <Crosslink target={linkMap.Entanglements}>Entanglements</Crosslink>, pairings of one
-            Physical and one Hidden Metabolism that when developed will rapidly increase the
+            Physical and one Hidden Metabolism that, when developed, will rapidly increase the
             <Crosslink target={linkMap.HiddenMetabolisms}>Hidden Metabolisms</Crosslink> and allow for subtle superhuman
             abilities.
           </li>
           <li>
-            <Crosslink target={linkMap.CascadeEvents}>Cascade Events</Crosslink>. True mastery over the Cascade Effect
+            <Crosslink target={linkMap.CascadeEvents}>Cascade Events</Crosslink> True mastery over the Cascade Effect
             allows one to manifest energy outside of the Physical Body, allowing one to create temporary effects that
             circumvent the perceived laws of physical reality. Cascade Events can manipulate the fundamental forces of
             physics, transform the body, communicate telepathically, or allow one to traverse Hidden Space.
@@ -338,12 +334,12 @@ function ChapterIntroduction() {
           <li>
             <Crosslink target={linkMap.CascadeEvents}>Cascade Events</Crosslink>. You character may learn to induce a
             few Cascade Events. These events are treated special Challenges that have{" "}
-            <Crosslink target={linkMap.CascadeEvents}>Metrics</Crosslink> applied to them measuring any supernatural
+            <Crosslink target={linkMap.CascadeEvents}>Metrics</Crosslink> applied to them, measuring any supernatural
             effects they may have. Cascade Events and Metrics are fully described in Chapter 6.
           </li>
           <li>
             <Crosslink target={linkMap.Combat}>Combat</Crosslink>. In the dangerous world Cascade Effect characters are
-            entering into, life or death conflict is inevitable. When combat occurs, gameplay breaks into turns and the
+            entering into, life or death conflict is inevitable. When combat occurs, gameplay breaks into turns, and the
             actions you can take become more rigidly defined. You can take one inhale action and one exhale action each
             turn. Combat is fully described in Chapter 4, and the combat actions you can take are listed in Chapter 5.
           </li>
@@ -353,13 +349,12 @@ function ChapterIntroduction() {
           <p>
             When a Challenge has a normal or higher Risk level, dice are required. The number of dice you roll is
             determined by the specifics of the Effort level and your Metabolism Pairing. Each die you roll is a 6 sided
-            die, a d6.
+            die, also known as a d6.
           </p>
           <p>
-            After rolling, ignore any dice that landed on 3 or lower and count the number of dice that landed on 4 or
-            above. Any die that lands on 6 "explodes" and gets rerolled, and gets counted again if it lands on 4 or
-            above, and even gets rerolled again if it comes up 6 again. After any rerolls are complete, final count
-            total of dice that were 4 or above is the result of the roll.
+            After rolling, any dice that landed on 3 or lower is ignored. Count the number dice that landed on 4s, 5s,
+            and 6s. Any dice that landed on 6 “explode,” and can be rerolled. Any 4s, 5s, and 6s you roll with exploded
+            dice are added to your count. If you roll a 6 on an exploded die, that die explodes again.
           </p>
         </Section>
       </Section>

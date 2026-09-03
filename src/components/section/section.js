@@ -21,6 +21,7 @@ const Section = ({
   metabolized,
   topicKey,
   introContent,
+  headerHiddenInPrint,
 }) => {
   const { openSectionList, setOpenSectionList, isAllForcedOpen, wasAllOpened, setWasAllOpened, topicMap } =
     useContext(RulebookContext);
@@ -105,7 +106,10 @@ const Section = ({
         ref={sectionContainer}
         id={`section${coordinates}`}
       >
-        <Heading onClick={onHeaderClick} className="sectionHeader">
+        <Heading
+          onClick={onHeaderClick}
+          className={classnames("sectionHeader", { hiddenInPrint: headerHiddenInPrint })}
+        >
           {header}
           <div className={"sectionCoordinates"}>{coordinates}</div>
         </Heading>

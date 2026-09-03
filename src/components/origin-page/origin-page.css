@@ -1,0 +1,98 @@
+@import url("../../variables.css");
+
+.originPageContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.originPagePrompts ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media print {
+  .App .originPage {
+    page: originPage;
+    column-span: all;
+    break-after: page;
+    break-before: page;
+    height: 100vh;
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .App .originPage:after {
+    content: "";
+    transform: skewY(-9deg);
+    height: 87.7vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform-origin: bottom left;
+    background: var(--physicalSpace);
+    z-index: -1;
+  }
+
+  .App .classified .originPage:after {
+    content: "";
+    transform: skewY(-9deg);
+    height: 87.7vh;
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform-origin: bottom left;
+    background: var(--hiddenSpace);
+    z-index: -1;
+  }
+
+  .App .originPageContent {
+    padding: 10cm 0 0 0;
+    overflow: visible;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+  }
+
+  .App .originPageContent .originPageTitle {
+    margin: 0 2cm;
+  }
+
+  .App .originPageContent .originPagePreamble {
+    margin: 2cm;
+  }
+
+  .App .originPageContent .originPagePrompts {
+    margin: 0 2cm;
+  }
+
+  .App .section h5 {
+    margin-bottom: 5mm;
+  }
+
+  .App .originPagePrompts ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .App .originPagePrompts ol li {
+    width: 31%;
+    margin: 0;
+    padding: 0;
+  }
+  .App .originPagePrompts ul li {
+    width: 100%;
+    margin: 0 0 5mm 0;
+    padding: 0;
+  }
+}

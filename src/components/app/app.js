@@ -19,7 +19,6 @@ function App() {
       <div className="App">
         <FrontCover />
         <Contents />
-        <GlobalToggle />
         <ChapterIntroduction />
         <ChapterCharacters />
         <ChapterGameplay />
@@ -28,6 +27,7 @@ function App() {
         <ChapterExperience />
         <ChapterEntanglements />
         <BackCover />
+        <GlobalToggle />
 
         {/* <Chapter7 /> */}
         <div className="section depth1 charSheetLink">
