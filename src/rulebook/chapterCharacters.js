@@ -300,46 +300,61 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">How do you feel about this lifestyle?</h5>
+              <ol>
+                <li>
               <strong>It suits me for now.</strong> Maybe you think a few things seem unfair, or maybe not, but you have
               a lifestyle you'd prefer not to lose, gain a Trait representing a career path, position of authority, or
               access to a useful social community.
-              <br />
+              </li>
+                <li>
               <strong>I'm rebelling against it.</strong> While the world falls collapses, you can't stand idly by. You
               work to steer future into a better direction than it seems to be headed currently. Gain a Trait
               representing an membership in an activist or counterculture movement, or skills you use to organize and
               rally such a community.
-              <br />
+              </li>
+                <li>
               <strong>I'm struggling.</strong> You are part of the rapidly growing global precariat, struggling or
               failing to make ends meet. Gain a Trait representing an a skill you use to support yourself despite
-              adversity.
+              adversity.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">You've avoided the worst aspects of the failing climate. How?</h5>
+              <ol>
+                <li>
               <strong>I have money.</strong> The world really hasn't changed much if you can afford to live somewhere
               comfortable. Gain a Trait representing a significant financial asset or skills that got you into a well
               paid career.
-              <br />
+              </li>
+                <li>
               <strong>I got lucky.</strong> Maybe your home region hasn't struggled much or maybe someone else gets you
               access to a better lifestyle. Gain a Trait representing useful knowledge of your home city or region, or a
               social benefactor that somehow allows you to live in a comfortable area.
-              <br />
+              </li>
+                <li>
               <strong>I'm prepared.</strong> You saw this coming and you prepped for the worst case scenario. Gain a
               Trait representing access to a physical asset, such as a bunker, off grid power sources, or a stockpile
-              that you can use if things go wrong.
+              that you can use if things go wrong.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">What's your vibe?</h5>
+              <ol>
+                <li>
               <strong>Mainstream.</strong> Maybe you're fashionable or maybe you just don't think about this too much.
               Gain a Trait representing your ability to fit into a specific social circle or the dominant aspect of your
               appearance, demeanor or fashion.
-              <br />
+              </li>
+                <li>
               <strong>Counterculture.</strong> Are you part of the Frontier movement? An slouch fashionista? A DIY
               ecopunk maker? Choose or invent a near-future subculture you belong to and Gain a Trait representing your
               ability to fit in with it.
-              <br />
+              </li>
+                <li>
               <strong>Extremely online.</strong> You know all the memes and most of you social life is occurs on a
               screen. Gain a Trait representing a sizeable online following or community you have access to, or a field
-              of trivia you've learned while online.
+              of trivia you've learned while online.</li>
+              </ol>
             </li>
             <li>
               Choose a Physical Metabolism and increase it by 1. This is the ability you find yourself leaning into most
@@ -362,60 +377,78 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">Who did you serve under?</h5>
+              <ol>
+                <li>
               <strong>A nation state's military.</strong>You had a role in a traditional military command structure.
               Gain a Trait representing an athletic, technical, or discipline based skill you built while filling or
               training for this role.
-              <br />
+              </li>
+                <li>
               <strong>Private Security.</strong> You served as enforcement or muscle for an enterprise securing its
               resources, a rich family's secured enclave, or individual's bodyguard. Gain a Trait representing an
               athletic, observational, or investigative skill you used in this role, or a Trait representing access to a
               supply of small arms.
-              <br />
+              </li>
+                <li>
               <strong>A regional warlord.</strong> Increasing instances of failing cities, conflicts over basic
               resources like water, and government coups have resulted in regions of martial law under de facto control
               of armed organizations, and you've been in the ranks of one. Gain a Trait representing an athletic or
               survival oriented skill or a Trait representing access to a piece of improvised military hardware.
-              <br />
+              </li>
+                <li>
               <strong>A Social Movement.</strong> You fight for a cause you believe in against the forces of oppression,
               to protect your Frontier community from corporate land grabs, our sustain the stability of a community
               fallen to martial law. Gain a trait representing a skill you used in actively defending your cause or a
-              skill you used in building and organizing it.
+              skill you used in building and organizing it.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">What was your responsibility?</h5>
+              <ol>
+                <li>
               <strong>Combat.</strong> You've seen active duty on the ground in combat. Gain a Trait representing a
               skill needed to survive in a warzone.
-              <br />
+              </li>
+                <li>
               <strong>Personnel.</strong> Whether you were an officer or led a unit in the field, your core duties
               involved managing people. Gain a Trait representing a skill used to lead others or navigate bureaucracy.
-              <br />
+              </li>
+                <li>
               <strong>Hardware.</strong> You spent your time in the cockpit, at the remote control, in the garage, or in
               the factory. Gain a Trait representing skills needed to control, maintain, program, or build a type of
               military hardware.
-              <br />
+              </li>
+                <li>
               <strong>Information.</strong> Whether you were in espionage, IT, hacking, or accounting, your
               responsibility was acquiring or securing information. Gain a Trait representing a social or technical
-              skill you used in this pursuit, or a security clearance you have.
+              skill you used in this pursuit, or a security clearance you have.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">Why can't you return to a conventional life?</h5>
+              <ol>
+                <li>
               <strong>I've seen things.</strong> You've been scarred by atrocities, starving refugees, excessive
               violence, or being forced to contain something you weren't able to explain. Returning to an ordinary life
               seems unthinkable. Gain a Trait representing a skill you developed in the line of duty or as a coping
               strategy afterwards.
-              <br />
+              </li>
+                <li>
               <strong>They have leverage.</strong> Every time you try to get out, they pull you back in. Your career,
               freedom, property, safety, or the safety of those close to you is threatened if you try to leave your
               position. Gain a Trait representing a skill you use to hide information from those with leverage over you.
-              <br />
+              </li>
+                <li>
               <strong>I know too much.</strong> You saw the wrong thing, the true purpose of a liaison operation with
               the Schedule, the civilian casualty report that was buried, the biological agent your company tested.
               You're not a soldier, you're a loose end, and you know they'll tie you off if you try to leave. Gain a
               Trait representing a security clearance or other type of access you have, or a unusual specialist skill.
-              <br />
+              </li>
+                <li>
               <strong>This is just what I'm good at.</strong> You excel at this, at finding the comforting clarity of a
               mission within the frightening chaos of action. Anything else feels like playing pretend. Gain a Trait
-              representing a strong combat or tactically oriented skill.
+              representing a strong combat or tactically oriented skill.</li>
+              </ol>
             </li>
             <li>
               Choose a Physical Metabolism and increase it by 1. This is the ability you rely on when things get tough.
@@ -438,45 +471,61 @@ function ChapterCharacters() {
               <h5 className="subheader">
                 You live under extreme surveillance, your movements could be tracked. How do you feel about this?
               </h5>
+              <ol>
+               <li>
               <strong>It's not so bad.</strong>The RFID system makes things more convenient for you, or at least not
               resisting it does. Gain a Trait representing a vocational or academic skill, position of authority, or
               access to a useful social community.
-              <br />
+              </li>
+               <li>
               <strong>I help enforce it.</strong>You think the RFID system is necessary to keep everyone safe, and work
               to ensure compliance. Gain a Trait representing a skill learned in law enforcement, a type of
               jurisdictional power you have, or access to surveillance data.
-              <br />
+              </li>
+               <li>
               <strong>I'm rebelling against.</strong> The RFID system has triggered a lot of protest, including yours.
               You work from within to subvert or undermine the system. Gain a Trait representing an membership in an
               underground hacker, maker, or activist community, skills you use to interfere with technical or social
-              systems, or knowledge of blind spots, weaknesses, and loopholes in the system.
+              systems, or knowledge of blind spots, weaknesses, and loopholes in the system.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">Why did you end up getting registered with an RFID?</h5>
+              <ol>
+               <li>
               <strong>My city started requiring them recently or I moved to a city that already did.</strong> Gain a
               trait representing your knowledge of your home city or useful social connections within it.
-              <br />
+              </li>
+               <li>
               <strong>My career requires it.</strong> Gain a Trait representing a career in law enforcement, the
               military, politics, or a career that requires a deep background check.
-              <br />
+              </li>
+               <li>
               <strong>It makes international travel easier.</strong> Gain a Trait representing a language or skills
               you've gained while or find useful while outside of your home region, or to fit in while frequently on the
               move.
-              <br />
+              </li>
+               <li>
               <strong>My security clearance requires it.</strong> Gain a Trait representing a security clearance or
-              other access to sensitive information.
+              other access to sensitive information.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">Has your lifestyle been impacted by climate events or political upheaval?</h5>
+              <ol>
+               <li>
               <strong>Not really, I'm doing well.</strong> Gain a Trait representing success in a career, a social
               community, or access to resources.
-              <br />
+              </li>
+               <li>
               <strong>Yes, avoiding it brought me to this RFID enforced region.</strong> Gain a Trait representing a
               skill or useful social connection you needed to cultivate in order to start a new life.
-              <br />
+              </li>
+               <li>
               <strong>Yes, even some large RFID cities are starting to struggle.</strong> Gain a Trait representing a
               skill or physical asset you've needed to cultivate to deal with failures in infrastructure or supply
-              chains.
+              chains.</li>
+              </ol>
             </li>
             <li>
               Choose a Physical Metabolism and increase it by 1. This is the ability you've found most useful in your
@@ -499,78 +548,99 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">What is the nature of your privilege?</h5>
+              <ol>
+                <li>
               <strong>Resources.</strong>Maybe you were born into an old money dynasty, built a thriving business,
               invested in the right thing, or you profited from a global conflict. Choose a Trait representing the
               useful physical asset or liquid financial reserves you gained from this.
-              <br />
+              </li>
+                <li>
               <strong>Connections.</strong> You know the right people, have contacts in high places, or have a seat on
               the board. Gain a Trait representing a powerful person, group, institution, or political entity you can
               contact when you need something, or a Trait representing a social skill you use in high society.
-              <br />
+              </li>
+                <li>
               <strong>Influence.</strong> You are have traditional fame, an online following, diplomatic sway, or
               political power. Gain a Trait representing a group of people you have influence over or an organization
               you have authority within, or a Trait representing skills you use be influential in any situation.
-              <br />
+              </li>
+                <li>
               <strong>Enclave.</strong> A growing trend among the super wealthy, enclaves are secured invite-only
               private luxury communities isolated and fortified from climate disasters and supply chain disruptions. You
               are fortunate enough to have access to one. Gain a Trait representing a property you have access to within
               an enclave.
-              <br />
+              </li>
+                <li>
               <strong>Access.</strong> Knowledge is power, and you have access to information that most people don't.
               Maybe it's a secret security clearance, insider market information, or you just know something you
               shouldn't. Gain a Trait representing a kind of access to hidden information that most people don't have,
-              or a piece of knowledge you already have that is typically off limits to others.
+              or a piece of knowledge you already have that is typically off limits to others.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">What price do you pay for this privilege?</h5>
+              <ol>
+                <li>
               <strong>Dynastic obligations.</strong> Your family's or your company's and expectations are a cage of
               gilded bars. You must maintain a certain reputation and submit to their whims. Gain a Trait representing
               your close ties to your influential family or a powerful organization
-              <br />
+              </li>
+                <li>
               <strong>Public outcry.</strong> You are a polarizing figure and your reputation precedes you. When some
               people hear your name they blame you, accurately or not, for the world's problems. Gain a Trait
               representing your public relations contacts working to fix this problem, or the following you have of
               people who disagree with your detractors.
-              <br />
+              </li>
+                <li>
               <strong>Legal scrutiny.</strong> Perhaps your resources were gained illicitly, or perhaps they have drawn
               the attention of financial auditors. Or worse yet, perhaps you have drawn the attention of the Schedule
               and one of its Auditors. Whatever the circumstance, you actions are being scrutinized, and perhaps even
               under direct surveillance. Gain a Trait representing contacts that help you get away with white collar
               crimes or a skill that helps you avoid unwanted attention.
-              <br />
+              </li>
+                <li>
               <strong>Crippling dependence.</strong> You are dependent on the luxuries of your station, perhaps party
               drugs, your entourage, designer nootropics, bespoke medical care, or simply constant validation. Without
               this bubble, you fear you'd fall apart in days. Gain a Trait representing contacts that can get you access
               to substances regardless of legality or rarity, or a clique of yes-men who support even your worst ideas.
-              <br />
+              </li>
+                <li>
               <strong>Being a target.</strong> You have powerful rivals, or a ladder of people you've trampled on your
               way up, or people view you as a high value target for political violence. Your safety is only maintained
               seclusion or expensive security. Gain a Trait representing your private security team or a secured
-              property.
+              property.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How do relate to the mainstream society you are isolated from?</h5>
+              <ol>
+                <li>
               <strong>I don't.</strong> Your world is the only one that matters. You've fully embraced the oligarchy and
               my position in it. Everyone you engage with is is either another elite or on your payroll. Gain a Trait
               representing a powerful social contact, a skill you use to engage with high society, or hired help such as
               an assistant, bodyguard, driver, or public relations team.
-              <br />
+              </li>
+                <li>
               <strong>It's a resource.</strong> You see the struggling masses as a pool of labor, consumers, or a
               problem to be managed. Your interactions are transactional. Gain a Trait representing an ability that
               helps you do the cold calculus needed to benefit off of others.
-              <br />
+              </li>
+                <li>
               <strong>I have a social life.</strong> Maybe you are frequently spotted on the red carpet, are always
               invited to high class galas, like to indulge in controlled substances at night clubs, or you are just
               highly engaged online. Whatever the case, you know what's happening and are often a part of it. Gain a
               Trait representing your social status or a skill you use to maintain that status.
-              <br />
+              </li>
+                <li>
               <strong>I have hobbies.</strong> You have the time or means to engage in a hobby in a way that most don't,
               or the ability to pursue a hobby at a professional level. Gain a Trait representing an athletic or
               artistic skill that you hone in the pursuit of this activity.
-              <br />
+              </li>
+                <li>
               <strong>I give back.</strong> Through philanthropy, politics, or volunteering, you try to make the world a
               better place, or you at least try to appear as through you do. Gain a Trait representing contacts or
-              skills you made working at this goal.
+              skills you made working at this goal.</li>
+              </ol>
             </li>
             <li>
               Choose a Physical Metabolism and increase it by 1. This is the ability you've felt is your greatest
@@ -592,32 +662,45 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">How do you feel about the Frontier lifestyle?</h5>
+              <ol>
+                <li>
               <strong>I walk the walk and talk the talk.</strong> You live like this because it's important to your
               values. Gain a Trait representing the role you fill in your community.
-              <br />
+              </li>
+                <li>
               <strong>I wouldn't have chosen it, but it's where I am for now.</strong> Circumstances led you here, but
               you'd rather be doing something else. Gain a Trait representing a role you are better suited to fill than
-              the one you find your self filling in your community.
+              the one you find your self filling in your community.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How do you support yourself or your community?</h5>
+              <ol>
+                <li>
               <strong>I work to fulfill physical needs.</strong> Gain a Trait representing a skill that you use to help
               provide food, water, power, data, or some other necessity. This may involve producing it directly or
               siphoning it off from some other source.
-              <br />
+              </li>
+                <li>
               <strong>I work protect the community.</strong> Gain a Trait representing a skill that you use to defend
               the community from danger or coercion.
-              <br />
+              </li>
+                <li>
               <strong>I support community members directly.</strong> Gain a Trait representing a soft skill you use to
-              keep the community together and running smoothly.
+              keep the community together and running smoothly.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How well do you fit in with the culture and politics of your community?</h5>
+              <ol>
+                <li>
               <strong>I'm a respected member of this community.</strong> Gain a Trait describing your ability to fit in
               with the dominant subculture in your community.
-              <br />
+              </li>
+                <li>
               <strong>I'm doing my own thing.</strong> Gain a Trait describing the strongest aspect of your appearance,
-              demeanor or fashion.
+              demeanor or fashion.</li>
+              </ol>
             </li>
             <li>
               Choose a Physical Metabolism and increase it by 1. This ability has proven necessary to support yourself.
@@ -634,40 +717,54 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">What are you running from?</h5>
+              <ol>
+                <li>
               <strong>Law Enforcement or some other official process.</strong> Regardless of whether you are guilty or
               wrongly accused, you can't afford to be caught. Gain a Trait representing a skill or social connection you
               use avoid the heat.
-              <br />
+              </li>
+                <li>
               <strong>An individual or an underground organization.</strong>Gain a Trait representing an underworld
               connection or a skill you use to know when you are being followed or keep your home and loved ones
               concealed.
-              <br />
+              </li>
+                <li>
               <strong>The Schedule.</strong> Somehow you have been flagged as a "Schedule 6 Self-Aware Anomalous
               Entity", or a person of interest in the investigation of a supernatural anomaly. An Auditor working for
               the Schedule is hunting you. Gain a Trait representing something you know about that normal people
               shouldn't or a skill you use to stay hidden from someone with access to mass surveillance over video or
-              online activities.
+              online activities.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How do you avoid your pursuers?</h5>
+              <ol>
+                <li>
               <strong>I lay low.</strong> Gain a Trait representing a skill you use to stay hidden or an asset, such as
               a safe house, you can use to live without being noticed.
-              <br />
+              </li>
+                <li>
               <strong>I keep moving.</strong> Gain a Trait representing a skill you use to repeatedly reinvent your life
               every time you move or a material asset you can use to support staying on the move.
-              <br />
+              </li>
+                <li>
               <strong>I have a new identity.</strong> Gain a Trait representing a skill you use create a new identity or
-              a material asset, such as a fake or stolen RFID, you can use to become someone else.
+              a material asset, such as a fake or stolen RFID, you can use to become someone else.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How do you make ends meet?</h5>
+              <ol>
+                <li>
               <strong>I get paid under the table.</strong> You work a more conventional job but have arranged to be paid
               off the books. Gain a Trait representing a skill needed to work this job or the social connections you
               needed to leverage to arrange it.
-              <br />
+              </li>
+                <li>
               <strong>Illicit activity.</strong> Whatever this activity, it pays the bills as long as you don't get
               caught. Gain a Trait representing the role you play in this racket, a skill you need to do it, or
-              connections you have that make it possible.
+              connections you have that make it possible.</li>
+              </ol>
             </li>
             <li>
               Choose a Physical Metabolism and increase it by 1. This is the ability has proven necessary to support
@@ -689,32 +786,45 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">What happened that separated your home region from society?</h5>
+              <ol>
+                <li>
               <strong>A disaster or a failure of a local resource or supply chain.</strong> Whether it was natural or
               man-made, sudden destruction or a slow collapse, this event has made this region challenging to live in.
               Gain a Trait representing a skill you depend on to stay resourceful amidst the remains of this region.
-              <br />
+              </li>
+                <li>
               <strong>Political upheaval, conflict, or war.</strong> Maybe your region is an active combat zone or maybe
               it's isolated by a blockade, siege or quarantine. Whatever the case, the area is under martial law. Gain a
-              Trait you use to survive and avoid the worst of the danger.
+              Trait you use to survive and avoid the worst of the danger.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">What's your place in this situation?</h5>
+              <ol>
+                <li>
               <strong>I'm actually rather comfortable.</strong> Gain a Trait representing a connection you have to a
               local warlord or the external state that keeps you living reasonably comfortably.
-              <br />
+              </li>
+                <li>
               <strong>I'm struggling to make the most of what I have.</strong> Gain a Trait representing a skill or
               community you depend on to survive without fully functional supply chains and infrastructure.
-              <br />
+              </li>
+                <li>
               <strong>I'm a refugee trying to escape this situation.</strong> Gain a Trait representing a skill or
-              social connection you use while attempting to escape or build a new life somewhere else.
+              social connection you use while attempting to escape or build a new life somewhere else.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How long has it been since you've been able to lead a conventional life?</h5>
+              <ol>
+                <li>
               <strong>Years.</strong> Gain a Trait representing a skill or community you depend on to survive without
               fully functional supply chains and infrastructure.
-              <br />
+              </li>
+                <li>
               <strong>Just a short time.</strong> Gain a Trait representing a role you filled in a career or social
-              circle before your region fell apart.
+              circle before your region fell apart.</li>
+              </ol>
             </li>
             <li>
               Choose a Physical Metabolism and increase it by 1. You depend on this ability to support yourself and
@@ -794,56 +904,73 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">What is your understanding of the fundamental nature of universe?</h5>
+              <ol>
+                <li>
               <strong>Empirical theory.</strong> The the universe is fundamentally knowable. Your abilities are
               predicted by Orthodynamic Field Theory, or a some other conceptual framework, and they cloud be
               experimentally verified if you could get the right tools. Gain either the Specialization{" "}
               <SpecializationLink name="Isolate Signal" /> or <SpecializationLink name="Embed Function" />.
-              <br />
+              </li>
+                <li>
               <strong>Universal algorithm.</strong> The universe is fundamentally software. Regardless of whether this
               quantization happens naturally or as part of a simulation, it has underlying rules you can learn to hack
               or manipulate. Gain either the Specialization <SpecializationLink name="Blink" /> or{" "}
               <SpecializationLink name="Isolation Field" />
               , an ability you use to slip through the gaps in the finite resolution and frame rate of the universe.
-              <br />
+              </li>
+                <li>
               <strong>Consensus praxis.</strong> The universe is created by the beliefs of its inhabitants. The
               aggregate ontological consensus of all sentient beings doesn't arise from natural law, it creates it. If
               you could shape the beliefs of others on a significant scale, you could shape reality. Gain either the
               Specialization <SpecializationLink name="Modulate Signal" /> or{" "}
               <SpecializationLink name="Psychosomatism" />, an ability you use to make the unreal seem real.
-              <br />
+              </li>
+                <li>
               <strong>Paracosmic flow.</strong> A new universe is created for each possible result of a random event.
               All possible universes are equally true, but separated into unique worldlines. You think you can learn to
               alter reality by slipping between worldlines into one where what you desire is true. Gain either the
               Specialization <SpecializationLink name="Control Probability" /> or{" "}
               <SpecializationLink name="Sublime Combat" />, an ability you gain from slipping into worldlines where what
-              you want is true.
+              you want is true.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How did you come to understand this?</h5>
+              <ol>
+                <li>
               <strong>A sudden epiphany.</strong> It came to you all at once. Gain a trait representing an insightful or
-              perceptive skill or personality trait. <br />
+              perceptive skill or personality trait. </li>
+                <li>
               <strong>Extensive research or practice.</strong> You pursued the truth with time and effort. Gain a Trait
               representing a field of academic knowledge, a spiritual practice, or disciplined physical practice.
-              <br />
+              </li>
+                <li>
               <strong>I had a role model.</strong> You followed the footsteps of someone to the truth. Gain a Trait
               representing contact with a mentor with useful skills or access, or subjects you learned from them.
-              <br />
+              </li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How has this understanding changed your place in the world? </h5>
+              <ol>
+                <li>
               <strong>Nihilism.</strong> What's the point of following the world's norms? Gain a Trait representing a
               skill you developed while following your own unusual path.
-              <br />
+              </li>
+                <li>
               <strong>Empathy.</strong> You feel more connected with everyone than ever. Gain a Trait representing a
               social or insight based skill.
-              <br />
+              </li>
+                <li>
               <strong>Isolation.</strong> You are more concerned with following the rabbit holes of your belief system
               to their conclusions than relating to others. Gain a Trait representing an obscure field of study.
-              <br />
+              </li>
+                <li>
               <strong>I went public.</strong> Whether it's a hastily photocopied manifesto, an academic paper, a series
               of social media posts, the lyrics to your music, or a highly produced video, your thoughts about the
               workings of the universe are publicly available. Gain a Trait representing a skill used in the production
-              of this media, or followers it has garnered for you.
+              of this media, or followers it has garnered for you.</li>
+              </ol>
             </li>
             <li>
               Choose one Physical and one Hidden Metabolism and increase them both by 1. These abilities developed
@@ -866,37 +993,52 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">In your youth, what were you?</h5>
+              <ol>
+                <li>
               <strong>A focused prodigy.</strong> You could hyperfocus on topics, ensuring you mastered them. Gain
               either the Specialization <SpecializationLink name="Motivation" /> or{" "}
               <SpecializationLink name="Investigation" />.
-              <br />
+              </li>
+                <li>
               <strong>A prolific dabbler.</strong> You tried everything once and learned to split your focus between
               many things. Gain either the Specialization <SpecializationLink name="Multitask" /> or{" "}
               <SpecializationLink name="Split Autonomy" />.
-              <br />
+              </li>
+                <li>
               <strong>A mimic.</strong> You could do anything anyone else could, sometimes better. Gain either the
               Specialization <SpecializationLink name="Episemiotics" /> or <SpecializationLink name="Mimic" />.
-              <br />
+              </li>
+                <li>
               <strong>Precocious social awareness.</strong> Predicting the motives and thoughts of others came easily
               for you. Gain either the Specialization <SpecializationLink name="Cold Reading" /> or{" "}
-              <SpecializationLink name="Read Mind" />.
+              <SpecializationLink name="Read Mind" />.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">Were your talents...</h5>
+              <ol>
+                <li>
               <strong>Physical.</strong> Gain a Trait representing a type of physical fitness or athletic competition
-              you excel in. <br />
+              you excel in. </li>
+                <li>
               <strong>Academic.</strong> Gain a Trait representing a field of knowledge you know inside and out.
-              <br />
+              </li>
+                <li>
               <strong>Social.</strong> Gain a Trait representing a social skill you're surprised other's don't have or a
               useful social community.
-              <br />
+              </li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How did this affect you socially?</h5>
+              <ol>
+                <li>
               <strong>You stayed humble.</strong> Gain a Trait representing useful social contact, community, or
-              network. These people have your back. <br />
+              network. These people have your back. </li>
+                <li>
               <strong>You knew you were special.</strong> Choose a skill or field of study that came naturally to you
-              and gain a Trait representing it.
+              and gain a Trait representing it.</li>
+              </ol>
             </li>
             <li>
               Choose one Physical and one Hidden Metabolism and increase them both by 1. You were always talented in
@@ -918,66 +1060,85 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">What did you come in contact with??</h5>
+              <ol>
+                <li>
               <strong>A human with supernatural abilities.</strong> You had close contact with a seemingly normal person
               who could do something seemingly impossible. This reframed your own conception of what was possible for
               you. Gain a Trait representing your ongoing social contact with this person or investigative skills you
               used to attempt to find them again or understand how they did what they did.
-              <br />
+              </li>
+                <li>
               <strong>Something that only looks human.</strong> Only you know the truth that it is only mimicking or
               hijacking a human body or bodies. Gain a trait representing skill that helps you know when things aren't
               as they seem.
-              <br />
+              </li>
+                <li>
               <strong>Something truly alien.</strong> You aren't sure what you saw, but it definitely wasn't of this
               earth. Gain a Trait representing a useful reaction you have in response to horror of the unknown, or an
               obscure field of study you pursued to understand what you saw.
-              <br />
+              </li>
+                <li>
               <strong>An incorporeal being.</strong> Maybe it was a human who's mind somehow outlived their physical
               body or transcended it intentionally, or maybe it's something else entirely. Whatever it is, it has
               limited ways of interacting with physical space other than talking to you. Gain a Trait representing a
               sense sharper than normal you use to communicate with this entity, or representing continued contact with
               the entity itself.
-              <br />
+              </li>
+                <li>
               <strong>You don't know.</strong> It only communicates with you via human proxies, bureaucracy, dead drops,
               online, or or other indirect means. Regardless, you are convinced it must be supernatural in origin. Gain
               a Trait representing skill with a type of communication technology or a way to find signals in the noise
-              of everyday life.
+              of everyday life.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">What insight did it leave you with?</h5>
+              <ol>
+                <li>
               <strong>The world is haunted.</strong> It abounds with intangible disembodied minds. Whether you view them
               as spirits of ancestors, theological angels and demons, or Clauda-Yau post-corporeal hidden body entities,
               they speak to you if you know how to listen. In order to interact with these entities, gain the
               Specialization <SpecializationLink name="Commune" />.
-              <br />
+              </li>
+                <li>
               <strong>Everything is alive.</strong> The entity communicated not with words, but by opening your mind to
               the consciousness of everything around you. Panpsychic awareness is a fundamental feature of reality,
               every object contains some measure of it. Gain either the Specialization
               <SpecializationLink name="Empathy" /> or <SpecializationLink name="Detect Sensorium" />.
-              <br />
+              </li>
+                <li>
               <strong>Rituals are key.</strong> You summoned the entity via a ritual or it taught you that ritual imbues
               any practice with meaning and power. Your abilities stem from these rituals whether you create them on the
               fly, perfected them on your own, or adopted them from ancient or contemporary cultures. A ritual you
               practice has granted you either the Specialization <SpecializationLink name="Clairvoyance" /> or{" "}
               <SpecializationLink name="Subtle Ward" />.
-              <br />
+              </li>
+                <li>
               <strong>We're not alone.</strong> The universe contains unknowable multitudes within its unfathomable
               expanse. You and the entire world you experience are but one tiny element in it. If you instinctively
               protect your mind from alien influence, gain the Specialization <SpecializationLink name="Insulation" />
-              or if you let it in and found a way to communicate gain <SpecializationLink name="Group Mind" />.
+              or if you let it in and found a way to communicate gain <SpecializationLink name="Group Mind" />.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How did you encounter this entity?</h5>
+              <ol>
+                <li>
               <strong>I sought it out..</strong> Gain a Trait representing skills you used to investigate and find this
               entity or a practice that forced it to come to you.
-              <br />
+              </li>
+                <li>
               <strong>It sought me out for a reason.</strong> Gain a Trait representing a position of authority or other
               privileges that the entity wanted access to through you.
-              <br />
+              </li>
+                <li>
               <strong>A coincidence.</strong> Gain a Trait representing a everyday skill helpful for leading normal
               life.
-              <br />
+              </li>
+                <li>
               <strong>It has always been with you.</strong> Gain a Trait representing a skill it taught you over time
-              that you wouldn't have learned on your own.
+              that you wouldn't have learned on your own.</li>
+              </ol>
             </li>
             <li>
               Choose one Physical and one Hidden Metabolism and increase them both by 1. You were always talented in
@@ -999,65 +1160,80 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">Who did this to you?</h5>
+              <ol>
+                <li>
               <strong>An individual adversary.</strong> Someone forced you into this process in an attempt to harm you
               or simply assert dominance. Gain a Trait representing skills you developed to compete with a rival or
               extract revenge from a nemesis.
-              <br />
+              </li>
+                <li>
               <strong>An individual ally.</strong> Someone guided you down this path or followed it with you. Gain a
               Trait representing a contact you have with a mentor or peer that has supernatural awareness similar or
               superior to yours.
-              <br />
+              </li>
+                <li>
               <strong>An esoteric institution.</strong> A small number of obscure and selective institutions claiming to
               be schools for gifted youth or paths to enlightenment exist. Most are scams or cults. However, the one you
               joined actually unlocked your true potential. Gain a Trait representing a field of academic or spiritual
               knowledge you studied, a martial discipline you practiced, or ongoing contact with a leader or peer from
               this institution.
-              <br />
+              </li>
+                <li>
               <strong>It's classified.</strong> Whether you know the nature of the organization that that awakened your
               potential or not, the rest of the world definitely doesn't. It could be a research arm of The Schedule, a
               top secret branch of a nation state's intelligence agency, or a secret criminal organization operating in
-              the shadows. Gain a Trait representing knowledge you gained in this time that is normally forbidden.
+              the shadows. Gain a Trait representing knowledge you gained in this time that is normally forbidden.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">What was the nature of this process?</h5>
+              <ol>
+                <li>
               <strong>An intensive personal regimen.</strong> You had to devote all of your energy to following this
               path, whether you wanted to or not. Now, it's finally starting to feel like you're on the verge of
               transcending your limits. Gain a Trait representing a skill requiring intensive focus, discipline, and
-              practice. <br />
+              practice. </li>
+                <li>
               <strong>An esoteric curriculum.</strong> A few institutions focused on developing those with supernatural
               potential operate in hidden corners of the world. Maybe most are grifters or cults, but yours put you on a
               path to that is beginning to feel truly supernatural. Gain a Trait representing an arcane or spiritual
               field of study, or a useful contact at this institution.
-              <br />
+              </li>
+                <li>
               <strong>Experimentation.</strong> Drugs, implants, intentional exposure to dilated spatial conditions, or
               time in the ganzfeld chamber left you truly transformed. You're only just beginning to understand what
               you're capable of afterwards. Gain a Trait representing a useful way your body or senses work differently
-              than they did before.
-              <br />
+              than they did before.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">What did this process leave you with?</h5>
+              <ol>
+                <li>
               <strong>New hardware.</strong> Your body was changed permanently. Maybe this is a biological
               transformation, a modified genome, or an implanted device. Gain either the Specialization{" "}
               <SpecializationLink name="Explosive Strength" /> or <SpecializationLink name="Speed" />
-              .<br />
+              .</li>
+                <li>
               <strong>A crisis paradigm.</strong> You were taught that all phenomena arise from nature seeking balance.
               You've learned to intuitively sense that balance, and have the potential to create metastable imbalances,
               from which you can release tension to create energy. Gain either the Specialization{" "}
               <SpecializationLink name="Reverberation" /> or <SpecializationLink name="Stabilize" />
               .
-              <br />
+              </li>
+                <li>
               <strong>A martial focus.</strong> Only through discipline, meditation, and intensive physical training can
               you understand the true limits of your mind and body. Only then can you overcome them. Gain either the
               Specialization <SpecializationLink name="Martial Artist" /> or <SpecializationLink name="Counter" />
               .
-              <br />
+              </li>
+                <li>
               <strong>A sense of euphoric unity.</strong> Everything is connected, the entire universe is a single
               natural system. Whether you believe in the universal wave function or that the planet is a living
               organism, you are starting to sense the flows of energy or information through the system. Gain either the
               Specialization <SpecializationLink name="Homeostasis" /> or <SpecializationLink name="Regeneration" />
-              .
-              <br />
+              .</li>
+              </ol>
             </li>
             <li>
               Choose one Physical and one Hidden Metabolism and increase them both by 1. Your transformation improved
@@ -1081,40 +1257,54 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">Before this experience peaked, how much did it affect you?</h5>
+              <ol>
+                <li>
               <strong>Things were mostly normal.</strong>Gain a Trait representing a skill or social connection you
               gained during a more conventional part your youth.
-              <br />
+              </li>
+                <li>
               <strong>You've always felt this way.</strong>Gain a Trait representing a skill or knowledge you gained in
-              your youth that was considered outside of the stereotypes for someone who looked like you.
+              your youth that was considered outside of the stereotypes for someone who looked like you.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How did you cope with the most challenging aspects of this experience?</h5>
+              <ol>
+                <li>
               <strong>You turned inward.</strong> Gain a trait representing a creative skill or an uncommon field of
               knowledge you cultivated during this time.
-              <br />
+              </li>
+                <li>
               <strong>You found community.</strong> Gain a trait representing a contact, social group, or online
-              community that supported you during difficult times.
+              community that supported you during difficult times.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How did this separation from your body shape you?</h5>
+              <ol>
+                <li>
               <strong>You eventually learned to embrace what your body can do for you.</strong> You stay active, you got
               fit, you have hobbies that keep you moving. Gain either the Specialization{" "}
               <SpecializationLink name="Lifting Capacity" /> or <SpecializationLink name="Stamina" />
               .
-              <br />
+              </li>
+                <li>
               <strong>You felt a need to transform physically.</strong> Eventually you found a way to become your true
               self or transcend the limits of your body. Gain either the Specialization{" "}
               <SpecializationLink name="Extropy" /> or <SpecializationLink name="Shapeshift" />
               .
-              <br />
+              </li>
+                <li>
               <strong>You wanted to separate from reality entirely.</strong> You found abilities that lessen the burden
               embodiment places on your mind. Gain either the Specialization <SpecializationLink name="Sublime Body" />{" "}
               or <SpecializationLink name="Isolation Field" />
               .
-              <br />
+              </li>
+                <li>
               <strong>You feel like you're mind has split.</strong> However, two minds have their advantages. Gain
               either the Specialization <SpecializationLink name="Ambidexterity" /> or{" "}
-              <SpecializationLink name="Multitask" />.
+              <SpecializationLink name="Multitask" />.</li>
+              </ol>
             </li>
             <li>
               Choose one Physical and one Hidden Metabolism and increase them both by 1. These domains just seemed to
@@ -1138,39 +1328,54 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">Before this experience peaked, how much did it affect you?</h5>
+              <ol>
+                <li>
               <strong>Things mostly seemed normal.</strong> Gain a Trait representing a skill or social connection you
               gained during a more conventional part your youth.
-              <br />
+              </li>
+                <li>
               <strong>It was always a bit like that.</strong> Gain a Trait representing a field of knowledge you
               developed searching for answers to why others didn't seem to notice something that seemed unavoidable to
-              you.
+              you.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">During this experience, how did you cope?</h5>
+              <ol>
+                <li>
               <strong>You sought a medical diagnosis or explanation for why your experience was different.</strong> Gain
               a skill representing knowledge of a field of conventional or alternative medicine, a spiritual practice,
               or an awareness of your true nature that is useful in everyday life.
-              <br />
+              </li>
+                <li>
               <strong>You sought a theory explaining why the world actually was this way.</strong> Gain a Trait
               representing a field of obscure and unusual knowledge or a social connection or community that shares a
-              specific outlook on the world with you.
+              specific outlook on the world with you.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How has a separation from the physical world changed you?</h5>
+              <ol>
+                <li>
               <strong>You tried to shut out the outside world even further.</strong> Gain either the Specialization{" "}
               <SpecializationLink name="Nullify" /> or <SpecializationLink name="Silence" />.
-              <br />
+              </li>
+                <li>
               <strong>You saw the world around you as a playground.</strong> Gain either the Specialization{" "}
               <SpecializationLink name="Speed" /> or <SpecializationLink name="Traversal" />.
-              <br />
+              </li>
+                <li>
               <strong>You wanted to break the rules of the physical world.</strong> Gain either the Specialization{" "}
               <SpecializationLink name="Remote Interaction" /> or <SpecializationLink name="Reshape" />.
-              <br />
+              </li>
+                <li>
               <strong>You honed your senses to take it in more clearly.</strong> Gain either the Specialization{" "}
               <SpecializationLink name="Exoproprioception" /> or <SpecializationLink name="Sharp Senses" />.
-              <br />
+              </li>
+                <li>
               <strong>You wanted to reshape the world as you saw fit.</strong> Gain either the Specialization{" "}
-              <SpecializationLink name="Composite" /> or <SpecializationLink name="Amplify Waveform" />.
+              <SpecializationLink name="Composite" /> or <SpecializationLink name="Amplify Waveform" />.</li>
+              </ol>
             </li>
             <li>
               Choose one Physical and one Hidden Metabolism increase them both by 1. These abilities seemed more natural
@@ -1194,35 +1399,49 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">Before this experience peaked, how much did it affect you?</h5>
+              <ol>
+                <li>
               <strong>Things mostly seemed normal.</strong> Gain a Trait representing a skill or social connection you
               gained before your dissociative experiences.
-              <br />
+              </li>
+                <li>
               <strong>It was always a bit like that.</strong> Gain a Trait representing a skill or field of knowledge
-              that was important to you in your youth.
+              that was important to you in your youth.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">During this experience, how did you cope?</h5>
+              <ol>
+                <li>
               <strong>You learned to mask.</strong> Gain a Trait representing a social skill or connection you've
               cultivated despite the challenges.
-              <br />
+              </li>
+                <li>
               <strong>You pursued other things.</strong> Gain a Trait representing a field of knowledge or creative
-              process you invested yourself in instead.
+              process you invested yourself in instead.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How has the sensation of isolation shaped you?</h5>
+              <ol>
+                <li>
               <strong>You tried to protect yourself.</strong> You've learned to feel how others perceive you or when
               they mean you harm. Gain either the Specialization <SpecializationLink name="Danger Sense" /> or{" "}
               <SpecializationLink name="Detect Sensorium" />.
-              <br />
+              </li>
+                <li>
               <strong>You overcame it.</strong> You learned to understand where others are coming from and how to
               interact with them
               <SpecializationLink name="Charm Person" /> or <SpecializationLink name="Cold Reading" />.
-              <br />
+              </li>
+                <li>
               <strong>You lashed out at others.</strong> Gain either the Specialization{" "}
               <SpecializationLink name="Disentangle" /> or <SpecializationLink name="Rage" />.
-              <br />
+              </li>
+                <li>
               <strong>You taught yourself empathy.</strong> You can practically feel the minds around you. Gain either
-              the Specialization <SpecializationLink name="Read Mind" /> or <SpecializationLink name="Sense Mind" />.
+              the Specialization <SpecializationLink name="Read Mind" /> or <SpecializationLink name="Sense Mind" />.</li>
+              </ol>
             </li>
             <li>
               Choose one Physical and one Hidden Metabolism and increase them both by 1. Your experience helped you
@@ -1244,36 +1463,50 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">How long was this lost period?</h5>
+              <ol>
+                <li>
               <strong>Hours or days.</strong> You weren't gone long, but you came back different. Gain a Trait
               representing a skill you didn't have before, but you do now.
-              <br />
+              </li>
+                <li>
               <strong>Months or years.</strong>Gain the Trait "Unknown Skill". You do not know you have this skill and
               don't recall practicing it. At any later point when you take a Challenge, you can permanently replace this
-              Trait with a relevant skill.
+              Trait with a relevant skill.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How were things different after this event?</h5>
+              <ol>
+                <li>
               <strong>You felt an unexplainable connection to technology.</strong> Gain either the Specialization{" "}
               <SpecializationLink name="Isolate Signal" /> or <SpecializationLink name="Sense Waveform" />.
-              <br />
+              </li>
+                <li>
               <strong>You had strange new abilities.</strong> Gain either the Specialization{" "}
               <SpecializationLink name="Force Push" /> or <SpecializationLink name="Levitation" />.
-              <br />
+              </li>
+                <li>
               <strong>You were aware of things shouldn't be.</strong> Gain either the Specialization{" "}
-              <SpecializationLink name="Chromaception" /> or <SpecializationLink name="Precognition" />.
+              <SpecializationLink name="Chromaception" /> or <SpecializationLink name="Precognition" />.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">Did this period leave any physical evidence?</h5>
+              <ol>
+                <li>
               <strong>Not a trace.</strong> Gain the Trait "Unknown Skill". You do not know you have this skill and
               don't recall practicing it. At any later point when you take a Challenge, you can permanently replace this
               Trait with a relevant skill.
-              <br />
+              </li>
+                <li>
               <strong>An artifact.</strong>Gain a trait representing an object you had when you came to, you didn't
               recognize it. Is it a mundane but useful like a weapon, tool, vehicle, or even property, or is it
               something stranger you don't understand?
-              <br />
+              </li>
+                <li>
               <strong>Social clues.</strong>Gain a Trait representing social connections with other people that had the
-              same experience as you or with someone that knows what happened but cannot tell you.
+              same experience as you or with someone that knows what happened but cannot tell you.</li>
+              </ol>
             </li>
             <li>
               Choose one Physical and one Hidden Metabolism and increase them both by 1. When you came back from your
@@ -1296,37 +1529,52 @@ function ChapterCharacters() {
           <ol>
             <li>
               <h5 className="subheader">What was the threat you perceived from this event?</h5>
+              <ol>
+                <li>
               <strong>Physical safety.</strong> Gain a Trait representing a type of fitness you developed to deal with
               the consequences of this event.
-              <br />
+              </li>
+                <li>
               <strong>Mental integrity.</strong> Gain a Trait representing a type of mental disciple or fortitude that
               you developed to deal with the consequences of this event.
-              <br />
+              </li>
+                <li>
               <strong>Social dignity.</strong> Gain a Trait representing something that helped you escape this situation
-              as fast as possible.
+              as fast as possible.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How fresh is this event in your memory?</h5>
+              <ol>
+                <li>
               <strong>Like it was yesterday.</strong> Gain a Trait representing skills that seemed to manifest in you
               the moment you needed them most during this event.
-              <br />
+              </li>
+                <li>
               <strong>You still discuss it with those close to you.</strong>
               Gain a Trait representing a close friend that would have your back.
-              <br />
+              </li>
+                <li>
               <strong>It is ancient history.</strong>
-              Gain a Trait representing skills or practices you cultivated to ensure this never happens again.
+              Gain a Trait representing skills or practices you cultivated to ensure this never happens again.</li>
+              </ol>
             </li>
             <li>
               <h5 className="subheader">How were you spared from the worst consequences of this event?</h5>
+              <ol>
+                <li>
               <strong>You sprung into action.</strong> You acted fast to protect yourself. Gain either the
               Specialization <SpecializationLink name="Danger Sense" /> or <SpecializationLink name="Evasion" />.
-              <br />
+              </li>
+                <li>
               <strong>You endured.</strong> Gain either the Specialization <SpecializationLink name="Auto-integrity" />{" "}
               or <SpecializationLink name="Diehard" />.
-              <br />
+              </li>
+                <li>
               <strong>Something seemingly supernatural occurred.</strong> In the heat of the moment, you did something
               impossible. Gain either the Specialization <SpecializationLink name="Reflexive Shield" /> or{" "}
-              <SpecializationLink name="Sublime Body" />.
+              <SpecializationLink name="Sublime Body" />.</li>
+              </ol>
             </li>
             <li>
               Choose one Physical and one Hidden Metabolism and increase them both by 1. These abilities seemed to come
