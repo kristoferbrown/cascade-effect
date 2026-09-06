@@ -1,6 +1,6 @@
 // import { useContext } from "react";
 // import { RulebookContext } from "../context/rulebookContext";
-// import Break from "../components/break/break";
+import Break from "../components/break/break";
 import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import Section from "../components/section/section";
 // import Crosslink from "../components/crosslink/crosslink";
@@ -43,13 +43,10 @@ function ChapterActions() {
     >
       <Section header="Exhale Actions List">
         <p>
-          Exhale actions allow you to attack your enemies and create supernatural effects. Each will involve a Challenge
-          that requires the indicated Metabolism pairs and has the indicated Risk and Effort levels, typically medium.
-          They also specify bonuses you can add when allocating Metabolism points, typically equal to a specified
-          Style's rank, and bonuses you can add when counting Progress, typically equal to the Size of the weapon you
-          are using. Each may have multiple Goals, these are typically metric Goals where each point of Progress applied
-          to them increases the potency of an effect. For attacks specifically, they all have the Goal Threat, allowing
-          you to damage your target and a secondary Goal that applies a restrictive state.
+          Exhale actions allow you to attack your enemies or induce cascade effects. Each will involve a Challenge
+          requiring the indicated Metabolism pairs and typically has medium Risk and Effort levels. They also specify
+          bonuses you can add when allocating Metabolism points, typically equal to a specified Style's rank plus the
+          Size of the weapon you are using.
         </p>
         <Section header="Melee Attack">
           <ChallengeParams
@@ -104,9 +101,9 @@ function ChapterActions() {
         </Section>
         <Section header="Induce a Cascade Event">
           <p>
-            Each Entanglement has a Style can grant the ability to create an a supernatural effect by inducing a cascade
-            event. These events are variable, but they're typically done as exhale actions. See the definition of each
-            specific event for further details regarding it.
+            Each Entanglement has a Style that lets you create an a supernatural effect by inducing a cascade event.
+            These events are variable, but they're typically done as exhale actions. See the definition of each specific
+            event for further details.
           </p>
         </Section>
       </Section>
@@ -119,8 +116,10 @@ function ChapterActions() {
         </p>
         <Section header="Aim">
           <p>You take a moment to line up an attack.</p>
-          <p>Your next attack taken this turn against a chosen target is Prepared. </p>
-          <p>If this target is behind full cover, the Prepared attack treats it as partial cover. </p>
+          <p>
+            Choose a target. Your next attack taken this turn against this target is Prepared. If the target is behind
+            full cover, the Prepared attack treats it as partial cover.
+          </p>
         </Section>
         <Section header="Elude">
           <p>You prepare to defend yourself or drop deeper into cover. </p>
@@ -159,13 +158,13 @@ function ChapterActions() {
             one of the following:
           </p>
           <ul>
-            <li>Leverage something about the situation to give yourself or an ally Advantage.</li>
-            <li>Leverage something about the situation to give an enemy Disadvantage.</li>
+            <li>Leverage the situation to give yourself or an ally Advantage.</li>
+            <li>Leverage the situation to give an enemy Disadvantage.</li>
             <li>Apply a Trait you have that is relevant to the situation to give yourself or an ally Advantage.</li>
           </ul>
           <p>
-            When you take the planned action, or the target takes the action you predicted, Advantage or Disadvantage is
-            applied to it. If the predicted action does not occur before your next turn, this benefit is lost.
+            When you or the target take the planned action, Advantage or Disadvantage is applied to it. If the predicted
+            action does not occur before your next turn, this benefit is lost.
           </p>
         </Section>
         <Section header="Interact">
@@ -188,9 +187,8 @@ function ChapterActions() {
           </p>
           <p>
             Pick a target that can hear and see you and make a Focus+Far Challenge that triggers a Low Effort Willpower
-            reaction in the target. If the Reaction's result doesn't exceed your Challenge's result, the target gains a
-            State of your choice between Afraid, Calmed, Distracted, or Taunted with intensity 1 until removed or until
-            the start of your next turn.
+            reaction. If the Reaction's result doesn't exceed your Challenge's result, the target gains a State of your
+            choice between Afraid, Calmed, Distracted, or Taunted with intensity 1 until the start of your next turn.
           </p>
         </Section>
         <Section header="Move">
@@ -344,13 +342,13 @@ function ChapterActions() {
           </p>
         </Section>
       </Section>
-
-      <Section header="Hidden Space Actions" isClassified>
+      <Break />
+      <Section header="Hidden Space Actions">
         <p>
           The following actions and reaction can only be taken if you are in Hidden Space, or when triggered by
           something in Hidden Space.
         </p>
-        <Section header="Hidden Attack">
+        <Section header="Hidden Attack" isClassified>
           <ChallengeParams
             pair={{ variable: true }}
             risk={"Medium"}
@@ -380,7 +378,7 @@ function ChapterActions() {
           </p>
           <p>This attack provokes a Hidden Defense reaction.</p>
         </Section>
-        <Section header="Hidden Defense">
+        <Section header="Hidden Defense" isClassified>
           <ChallengeParams
             pair={{ variable: true }}
             risk={"Low"}
@@ -399,7 +397,7 @@ function ChapterActions() {
             Goal, inflicted by the triggering attack.
           </p>
         </Section>
-        <Section header="Manifest">
+        <Section header="Manifest" isClassified>
           <p>
             You shift your form closer to physical space, attempting to influence it by shifting a portion of your
             energies into it.

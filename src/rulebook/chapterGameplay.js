@@ -1033,7 +1033,7 @@ function ChapterGameplay() {
           </Section>
         </Section>
       </Section>
-      <Section header="Hidden Space" isClassified>
+      <Section header="Hidden Space">
         <p>
           Certain circumstances, such as the Out of Body or Sublimed states, cause your awareness to shift from physical
           space to hidden space. Characters that can induce the Sublime cascade event can do this intentionally. When
@@ -1068,24 +1068,24 @@ function ChapterGameplay() {
             gain the Floating state. At the end of the scene, if you are in hidden space at any depth and don't have the
             Specializations needed to stay there, you fully return to physical space.
           </p>
-          <Section header="Depth 0: Physical Space" isClassified>
+          <Section header="Depth 0: Physical Space">
             <p>The world of your everyday experience. The laws of physics work as you expect them to.</p>
           </Section>
-          <Section header="Depth 1: The Shallows" isClassified>
+          <Section header="Depth 1: The Shallows">
             <p>
               You can share space with dynamic physical objects and entities, including humans, animals, vehicles, and
               doors or other objects that have moved within the last day. While these objects no longer impede your
               movement, you can still sense their positions when they are close enough.
             </p>
           </Section>
-          <Section header="Depth 2: Pelagic Space" isClassified>
+          <Section header="Depth 2: Pelagic Space">
             <p>
               You can share space with static objects, including anything that has moved or been built within the last
               year. You can no longer sense the position of dynamic physical objects. Vibrations from sound arrive to
               you delayed, heavily muted, distorted, and incomprehensible.
             </p>
           </Section>
-          <Section header="Depth 3: Abyssal Space" isClassified>
+          <Section header="Depth 3: Abyssal Space">
             <p>
               You can share space with extremely static objects, including anything that has moved or been built within
               the last century. You can only sense entities that share this level or physical objects old enough to
@@ -1093,7 +1093,7 @@ function ChapterGameplay() {
               level.
             </p>
           </Section>
-          <Section header="Depth ∞: Stygian Space" isClassified>
+          <Section header="Depth ∞: Stygian Space">
             <p>
               This is the interstitial space between nearby worldlines, the nearly parallel timelines radiating outward
               from the big bang. Only extreme and dangerous means can get you here and there are no guarantees you can
@@ -1138,8 +1138,10 @@ function ChapterGameplay() {
               Your unconscious physical body is left behind while your hidden body is still aware and can move freely in
               hidden space.
             </p>
-            <p>If you gain the Sublimed state, you lose the Out of Body state.</p>
-            <p>You can only use Hidden Metabolisms and they are used individually instead of paired.</p>
+            <p>
+              If you gain the Sublimed state, you lose the Out of Body state. You can only use Hidden Metabolisms and
+              they are used individually instead of paired.
+            </p>
             <p>
               You are at the shallowest depth layer of hidden space and you cannot directly interact with or be sensed
               by anything in physical space. The tenuous connection to your physical body blocks you from moving to a
@@ -1173,12 +1175,9 @@ function ChapterGameplay() {
               You are fully in hidden space, leaving no trace behind in the physical world. You cannot interact with or
               be sensed by anything in physical space. You can move about hidden space freely, however the physical
               world casts shadows into the hidden world that impede your movement, depending on what depth layer you are
-              at.
-            </p>
-            <p>
-              Only Hidden Metabolisms and Focus may be used, but Focus can be used in place of any Physical Metabolism.
-              You have both inhale and exhale actions, but they can only be Move, Float, Sink, or the Sublime cascade
-              event.
+              at. Only Hidden Metabolisms and Focus may be used, but Focus can be used in place of any Physical
+              Metabolism. You have both inhale and exhale actions, but they can only be Move, Float, Sink, or the
+              Sublime cascade event.
             </p>
             <p>
               When you return from this State you suddenly appear in whatever location you moved to while in hidden

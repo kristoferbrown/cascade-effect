@@ -1,9 +1,8 @@
 import { useContext } from "react";
 import { RulebookContext } from "../context/rulebookContext";
-// import Break from "../components/break/break";
+import Break from "../components/break/break";
 import ChapterIntroSpread from "../components/chapter-intro-spread/chapter-intro-spread";
 import Section from "../components/section/section";
-// import Logomark from "../svgs/logomark";
 import Crosslink from "../components/crosslink/crosslink";
 import Metabolism from "../components/metabolism/metabolism";
 // import Pair from "../components/metabolism/pair";
@@ -237,7 +236,7 @@ function ChapterCombat() {
           </p>
         </Section>
       </Section>
-
+      <Break />
       <Section header="Attacking & Defending">
         <Section header="Making Attacks">
           <p>
@@ -504,13 +503,13 @@ function ChapterCombat() {
       <Section header="Equipment">
         <Section header="Armor">
           <p>
-            All armor has a Defense value. This value indicates the size of the bonus it adds to the metabolism points
-            allocated to defense reactions. For example, if your armor has a Defense of 2 and you spend 3 Metabolism
-            points on a defense reaction, you've effectively allocated 5 points to the defense.
+            All armor has a Defense value that indicates the size of the bonus it adds to the Metabolism points
+            allocated to defense reactions. For example, if your armor has a Defense of 2 and you spend 3 points on a
+            defense reaction, you've effectively allocated 5 points.
           </p>
           <p>
-            Armor with Defense 1 can be concealed under or worn as casual clothing. Armor with Defense 3 is heavy and
-            slows you down, actions and reactions do not provide free movement while you are wearing it.
+            Armor with Defense 1 can be concealed under or worn as casual clothing. Armor with Defense 3 slows you down,
+            actions and reactions do not provide free movement while wearing it.
           </p>
           <Section header="Types of Armor">
             <table>
@@ -546,22 +545,21 @@ function ChapterCombat() {
             <Metabolism near />, and ranged weapons use <Metabolism far />.
           </p>
           <p>
-            Each weapon has a Size value. This number indicates the bonus the weapon adds to the amount of metabolism
-            points allocated to attacks made with it. It also indicates the minimum amount of Metabolism points that
-            must be spent to attack with the weapon, if you do not have this amount available, you can only use this
-            weapon when the attack is Prepared. For example, if your weapon is size 3, you must spend at least 3
-            Metabolism points to use it if the attack is not prepared, if you chose to spend 5 points on the attack, you
-            would have total points allocated to the attack.
+            Each weapon has a Size value that indicates the bonus the weapon adds to the amount of metabolism points
+            allocated to attacks made with it. It also indicates the minimum amount of Metabolism points that must be
+            spent to attack with the weapon, if you do not have this amount available, you can only use this weapon when
+            the attack is Prepared. For example, if your weapon is size 3, you must spend at least 3 Metabolism points
+            to use it if the attack is not prepared, if you chose to spend 5 points on the attack, you would have total
+            of 8 points allocated to the attack.
           </p>
           <p>
-            Size 1 can be concealed in casual clothing, Size 2 cannot, and Size 3 or above requires both hands. Any
-            weapon Size 4 or above can only be used when Prepared.
+            Size 1 weapons can be concealed in casual clothing and Size 3 or above requires both hands. Any weapon Size
+            4 or above can only be used when Prepared.
           </p>
           <Section header="Improvised Weapons">
             <p>
               If you use an object that is not a dedicated weapon to attack something, it is an improvised weapon.
               Improvised weapons do not have a bonus like blunt or bladed weapons do and have disadvantage on attacks.
-              They may also break after being used if they are fragile.
             </p>
           </Section>
           <Section header="Types of Weapons">
