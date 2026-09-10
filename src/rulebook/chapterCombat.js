@@ -392,7 +392,7 @@ function ChapterCombat() {
               crosses an obstacle that presents a risk of failing to traverse it, such as a slippery climb, then the
               Risk level increases to medium. Similarly, if an obstacle could physically harm you, such as a thorny
               ticket or razor wire fence, the Effort level increases to high. A truly critical and difficult obstacle
-              can even introduce additional fixed Goal to the Challenge that must be met to enter the space.
+              can even introduce additional Goal to the Challenge that must be met to enter the space.
             </p>
           </Section>
         </Section>
@@ -451,8 +451,8 @@ function ChapterCombat() {
               always counts as partial cover for the attack that triggers the reaction, no matter how large it is.
             </p>
             <p>
-              An attacker targeting someone that has partial cover from them has an extra fixed Goal called Cover added
-              to their attack Challenge. If the attacker does not apply 3 or more Progress to this Goal, the target is
+              An attacker targeting someone that has partial cover from them has an extra Goal called Cover added to
+              their attack Challenge. If the attacker does not apply 3 or more Progress to this Goal, the target is
               completely unaffected by the attack.
             </p>
             <p>

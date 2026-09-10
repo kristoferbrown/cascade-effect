@@ -293,8 +293,8 @@ function ChapterActions() {
             during the triggering Challenge.
           </p>
           <p>
-            Otherwise, the GM will assign Goals for this Reaction, often a just simple fixed Goal indicating if you are
-            aware of something or not.
+            Otherwise, the GM will assign Goals for this Reaction, often a just single Goal indicating if you are aware
+            of something or not.
           </p>
         </Section>
         <Section header="Perception">
@@ -315,8 +315,8 @@ function ChapterActions() {
             during the triggering Challenge.
           </p>
           <p>
-            Otherwise, the GM will assign Goals for this Reaction, often a just simple fixed Goal indicating if you are
-            aware of something or not.
+            Otherwise, the GM will assign Goals for this Reaction, often a just single Goal indicating if you are aware
+            of something or not.
           </p>
         </Section>
         <Section header="Willpower">
@@ -337,8 +337,8 @@ function ChapterActions() {
             during the triggering Challenge.
           </p>
           <p>
-            Otherwise, the GM will assign Goals for this Reaction, often a just simple fixed Goal indicating if you
-            resist something or not.
+            Otherwise, the GM will assign Goals for this Reaction, often a just single Goal indicating if you resist
+            something or not.
           </p>
         </Section>
       </Section>

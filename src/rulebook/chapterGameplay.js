@@ -73,8 +73,7 @@ function ChapterGameplay() {
                 <p>
                   Use Self any time you are trying to push your body beyond its normal limits. This includes unarmed
                   combat, a wide range of athletic activities involving power, endurance, or adrenaline, as well as
-                  social activities or mental activities that require willpower, patience, or managing your
-                  emotions.{" "}
+                  social activities or mental activities that require willpower, patience, or managing your emotions.
                 </p>
               </div>
               <div className="metabolism near">
@@ -131,36 +130,47 @@ function ChapterGameplay() {
               A Goal is a desired outcome of the Challenge. When attempting a Challenge you will apply Progress towards
               its Goals to determine the outcome.
             </p>
-            <Section header="Fixed Goals">
+            <p>
+              Typically a Goal is defined by a target number. If you apply enough Progress to the Goal to meet or exceed
+              this target number, you succeed at the Goal and achieve its desired outcome. If you apply less Progress,
+              than the target number you fail the Goal.
+            </p>
+            <p>
+              Typically, the GM will tell you the exact target number for a fixed Goal and give you a clear idea what
+              happens if you succeed or fail at accomplishing it. In this case you can apply exactly the right amount of
+              Progress without wasting any effort. However, if your character has incomplete information about the
+              situation the GM may only give you hints about how difficult it is and the consequences. The less
+              information your character has, the more vague the hints will be. Challenges with incomplete information
+              are much more dangerous, as you can only guess how much Progress you need to apply.
+            </p>
+            <p>
+              For example, if you're trying to jump across a gap, the GM would set a Goal with a target number based on
+              the size and difficulty of the gap. If the GM set this number as 4, you would need to apply 4 Progress to
+              jump across, otherwise you cannot cross. Normally you would know this target number exactly, but if you
+              were attempting this in the dark and unable to see how far the jump is, you would have to do so without
+              this knowledge.
+            </p>
+            <Section header="Granularity of Success">
               <p>
-                Most Goals are <em>fixed</em>, meaning they have a specific fixed target number representing the
-                difficulty of achieving them. If you apply enough Progress to a fixed Goal to meet or exceed this target
-                number, you succeed at the Goal and achieve its desired outcome. If you apply less Progress, than the
-                target number you fail the Goal.
+                A Goal is most often a simple pass or fail gate, but it may also have degrees of success. The GM may
+                decide that if a Goal has is failed by more than a set amount of Progress or exceeded by more than a set
+                amount of Progress, then you critically fail or succeed and receive additional consequences or benefits.
+                Typically missing or exceeding the target by 3 or more is considered a critical failure or success, but
+                the GM may set this threshold differently.
               </p>
               <p>
-                Typically, the GM will tell you the exact target number for a fixed Goal and give you a clear idea what
-                happens if you succeed or fail at accomplishing it. In this case you can apply exactly the right amount
-                of Progress without wasting any effort. However, if your character has incomplete information about the
-                situation the GM may only give you hints about how difficult it is and the consequences. The less
-                information your character has, the more vague the hints will be. Challenges with incomplete information
-                are much more dangerous, as you can only guess how much Progress you need to apply.
+                For example, convincing the fearful townsfolk to evacuate before an unexpected disaster may have a
+                difficulty of 5. On a normal failure they simply don't believe you and stay put, but getting 2 or less
+                is a critical failure causing the people to turn against you and becomes hostile. On a normal success
+                they believe you and start evacuating, but getting 8 or more is a critical success causing part of the
+                crowd to begin actively helping you prepare for the upcoming event.
               </p>
               <p>
-                For example, if you're trying to jump across a gap, the GM would set a Goal with a target number based
-                on the size and difficulty of the gap. If the GM set this number as 4, you would need to apply 4
-                Progress to jump across, otherwise you cannot cross. Normally you would know this target number exactly,
-                but if you were attempting this in the dark and unable to see how far the jump is, you would have to do
-                so without this knowledge.
-              </p>
-            </Section>
-            <Section header="Metric Goals">
-              <p>
-                If a Goal does not have a fixed target number, it is a <em>metric</em> Goal. These goals are not pass or
-                fail thresholds. Instead, they are numeric measurements. The amount of Progress applied to them directly
-                indicates the quality of the outcome. The more Progress applied, the better the result, with no fixed
-                ceiling. These Goals are commonly used in combat or Challenges where you are competing against or being
-                resisted by someone else.
+                Sometimes a Goal may not have a fixed target number at all. These Goals represent numeric measurements
+                instead of pass or fail thresholds. The amount of Progress applied to them directly indicates the
+                quality of the outcome. The more Progress applied, the better the result, with no ceiling. These Goals
+                are commonly used in combat or Challenges where you are competing against or being resisted by someone
+                else.
               </p>
               <p>
                 For example, attacking an opponent in combat is a metric Goal. The amount of Progress you apply directly
@@ -179,23 +189,6 @@ function ChapterGameplay() {
                 For example, gaining access to a secure building may have two Goals, one for getting into the building
                 and one for remaining undetected by security. If you get enough Progress to accomplish one but not the
                 other, you would need to choose which Goal is more important.
-              </p>
-            </Section>
-            <Section header="Critical Success & Failure">
-              <p>
-                Most of the time, a fixed Goal is simply pass or fail, you either get enough Progress to tie or you
-                don't. However, sometimes there may be degrees of success. In this case, a fixed Goal may allow for
-                critical success or critical failure, or both. If it allows for critical failure, there is an additional
-                negative consequence for missing the Goal by 3 or more points. If it allows for critical success, there
-                are additional positive effects if you exceed the Goal by 3 or more points than needed to simply
-                succeed.
-              </p>
-              <p>
-                For example, convincing the fearful townsfolk to evacuate before an unexpected disaster may have a
-                difficulty of 5. On a normal failure they simply don't believe you and stay put, but getting 2 or less
-                is a critical failure causing the people to turn against you and becomes hostile. On a normal success
-                they believe you and start evacuating, but getting 8 or more is a critical success causing part of the
-                crowd to begin actively helping you prepare for the upcoming event.
               </p>
             </Section>
             <Section header="Example Goal Difficulties" isInset>

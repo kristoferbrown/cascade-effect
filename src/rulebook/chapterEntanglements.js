@@ -175,7 +175,7 @@ function ChapterEntanglements() {
                 </p>,
                 <p>
                   The distance you can jump is tripled. Any obstacle that can be jumped over cannot increase the Risk or
-                  add additional fixed Goals to a Move action.
+                  add additional Goals to a Move action.
                 </p>,
                 <p>
                   When you use the free movement from making a Melee or Unarmed Attack, you can move an extra meter as
